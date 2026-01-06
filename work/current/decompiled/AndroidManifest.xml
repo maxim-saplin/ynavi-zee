@@ -843,7 +843,7 @@
             <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/passport_sync_adapter"/>
             <meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@xml/contacts"/>
         </service>
-        <provider android:authorities="@string/passport_sync_adapter_content_authority" android:enabled="true" android:exported="false" android:name="com.yandex.passport.internal.core.sync.SyncProvider" android:process="@string/passport_process_name"/>
+        <provider android:authorities="com.yandex.passport.sync.ru.yandex.yandexnavi" android:enabled="true" android:exported="false" android:name="com.yandex.passport.internal.core.sync.SyncProvider" android:process="@string/passport_process_name"/>
         <receiver android:enabled="true" android:exported="true" android:name="com.yandex.passport.internal.core.announcing.AccountsChangedReceiver" android:process="@string/passport_process_name">
             <intent-filter>
                 <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
