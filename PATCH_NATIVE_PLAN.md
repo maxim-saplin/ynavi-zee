@@ -13,7 +13,7 @@ If the failure is a Java exception about signature mismatch, start with smali pa
 ## Prerequisites
 - macOS host (current setup). Ensure Ghidra or IDA Pro is installed; use Ghidra if unsure.
 - Tools: `ghidraRun` (or IDA), `adb`, `apktool 2.12.1`, `zipalign`, `apksigner` (already in repo), `python3`.
-- Input binary (example): `work/<apk_tag>/decompiled/lib/arm64-v8a/<target_lib>.so`
+- Input binary (example): `src/lib/arm64-v8a/<target_lib>.so`
 - Reference APK (optional): keep the last-known-good signed build for quick reinstall.
 
 ## High-level steps
@@ -56,10 +56,10 @@ If the failure is a Java exception about signature mismatch, start with smali pa
    - Optional: run `file` and `sha1sum` to document the patch.
 
 7. **Drop patched .so into decompiled tree**
-   - Replace `work/<apk_tag>/decompiled/lib/<abi>/<target_lib>.so` with the patched one (keep a backup).
+   - Replace `src/lib/<abi>/<target_lib>.so` with the patched one (keep a backup).
 
 8. **Rebuild APK**
-   - Run build_apk.sh with the same input folder to produce a new signed APK (e.g., `builds/<apk_tag>_nativepatched/out_signed.apk`).
+   - Run build_apk.sh to produce a new signed APK (e.g., `builds/out_signed.apk`).
 
 9. **Test**
    - `adb install -g -r -d <new.apk>`

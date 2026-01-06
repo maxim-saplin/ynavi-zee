@@ -26,11 +26,11 @@ fi
 outputDir=$(dirname "$outputFile")
 mkdir -p "$outputDir"
 
-# Check if the output directory is not empty
-if [ "$(find "$outputDir" -mindepth 1 -print -quit)" ]; then
-  echo "Error: Output directory '$outputDir' is not empty. Halting."
-  exit 1
-fi
+# Fast-iteration mode: allow a fixed output directory by cleaning prior outputs.
+# We only delete the specific artifacts this script creates (output/aligned/signed).
+rm -f "$outputFile" \
+  "${outputFile%.*}_aligned.apk" \
+  "${outputFile%.*}_signed.apk"
 
 # Define paths
 alignedApk="${outputFile%.*}_aligned.apk"

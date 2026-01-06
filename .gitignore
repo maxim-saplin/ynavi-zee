@@ -1,8 +1,7 @@
 # Local iteration artifacts (do not commit)
-builds/current/
+builds/
 
-# APK artifacts (keep small; fingerprints/logs can be committed separately if desired)
-inputs/current/base.apk
+# APK artifacts
 **/*.apk
 
 # Common OS noise

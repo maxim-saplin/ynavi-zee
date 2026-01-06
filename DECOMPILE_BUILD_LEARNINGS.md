@@ -1,21 +1,23 @@
 # Decompile/Build Learnings and SubverAppComponentFactory Notes
 
+> Note: the active editable tree in this repo is now `src/` (apktool decompiled root), and the primary output is `builds/out_signed.apk`. This doc is retained for historical context and troubleshooting patterns.
+
 ## Environment and tooling
 - Host: macOS, apktool 2.12.1 worked; keep 2.9.3 handy if rebuilds fail.
 - Signing: rebuilt APKs use repo test key (androiddebugkey.jks) via build_apk.sh.
 - Target ABI (emulator): arm64-v8a.
 
 ## Decompile/build observations
-- Decompile command used:
+- Decompile command used (historical):
   ```bash
-  apktool d -f -r inputs/<apk_tag>/base.apk -o work/<apk_tag>/decompiled
+  apktool d -f -r <base.apk> -o <decompiled_dir>
   ```
   - `-r` avoids decoding resources; suitable for smali-only edits. If you need to edit resources, drop `-r` and validate with `validate_resources.py`.
 - Build/sign command (from build_apk.sh):
   ```bash
   zsh build_apk.sh -inputFolder <decompiled_dir> -outputFile <out_dir>/yandexnavi_hud.apk
   ```
-  - Script enforces empty output dir; use timestamped subdirs to avoid collisions.
+  - The script now cleans its own prior outputs so you can rebuild into a fixed output path.
 - Installation on emulator succeeds with `adb install -g -r -d <signed.apk>`.
 
 ## Repeatable failure pattern: “re-sign → immediate crash”
@@ -39,10 +41,8 @@ This section is an example from a specific build; class names/paths may differ i
 - Result: patched, re-signed APK launched and stayed up on emulator; main process remained alive and `NavigatorActivity` resumed.
 
 ## Current workspace conventions (single mutable state)
-- Base APK: `inputs/current/base.apk`
-- Decompiled working tree: `work/current/decompiled/`
-- Signed APK: `builds/current/out_signed.apk`
-- Smoke log: `work/current/emulator_smoke.log`
+- Working tree: `src/`
+- Signed APK: `builds/out_signed.apk`
 
 ## SubverAppComponentFactory deep dive
 This is a particularly important *pattern*, even when the exact class name changes between APK versions.

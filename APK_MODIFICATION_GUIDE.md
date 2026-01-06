@@ -30,43 +30,18 @@ This guide explains how to decompile, modify, rebuild, and re-sign APKs in a way
 - `zipalign` - APK alignment binary
 - `apksigner` - APK signing binary
 
-## Recommended folder layout (per APK attempt)
+## Recommended folder layout (fast iteration)
 
-Use a unique `<apk_tag>` per base APK (e.g., `yandexnavi_25.6.2_zeeappstore` or a timestamp).
+This repo is set up for quick iterations on a single working tree:
 
-- `inputs/<apk_tag>/base.apk`
-- `work/<apk_tag>/decompiled/`
-- `builds/<apk_tag>/out.apk` and `builds/<apk_tag>/out_signed.apk`
+- `src/` — **apktool decompiled root** (what you pass to `apktool b`)
+- `builds/out_signed.apk` — the current signed build artifact
 
-## Workflow: Decompile → Modify → Build → Align → Sign
+## Workflow: Modify → Build → Align → Sign
 
-### 1. Decompile the APK
+### 1. Modify the Code/Resources
 
-Decompile the original APK to access its source code (smali files) and resources:
-
-```bash
-apktool d -f <input.apk> -o <output_folder>
-```
-
-**Parameters:**
-- `-f` - Overwrite output folder if it exists
-- `-r` - Avoid decoding resources (useful for smali-only edits; reduces resource-related rebuild errors)
-- `<input.apk>` - Path to your original APK file
-- `<output_folder>` - Output directory for decompiled files
-
-**Example:**
-```bash
-apktool d -f inputs/<apk_tag>/base.apk -o work/<apk_tag>/decompiled
-```
-
-**Smali-only decompile (skip decoding resources):**
-```bash
-apktool d -f -r inputs/<apk_tag>/base.apk -o work/<apk_tag>/decompiled
-```
-
-### 2. Modify the Code/Resources
-
-After decompilation, you'll find:
+In `src/`, you'll find:
 - **Smali files** (`smali/`, `smali_classes2/`, etc.) - Decompiled Java/Dalvik bytecode
 - **Resources** (`res/`) - XML files, strings, drawables, etc.
 
@@ -87,7 +62,7 @@ find <decompiled_folder>/smali_classes2 -name "*.smali" -print0 | xargs -0 sed -
   python validate_resources.py <modded_res_folder> <original_res_folder>
   ```
 
-### 3. Compile the APK
+### 2. Compile the APK
 
 Rebuild the modified source into an APK:
 
@@ -163,7 +138,7 @@ zsh build_apk.sh -inputFolder <decompiled_folder> -outputFile <output.apk>
 
 **Example:**
 ```bash
-zsh build_apk.sh -inputFolder 6.0.5/modded/com.geely.pma.settings -outputFile _output/com.geely.pma.settings_en.apk
+zsh build_apk.sh -inputFolder src -outputFile builds/out.apk
 ```
 
 The script will:
@@ -171,7 +146,7 @@ The script will:
 2. Align with `zipalign`
 3. Sign with `apksigner` using `androiddebugkey.jks`
 
-**Note**: The script checks that the output directory is empty before proceeding.
+**Note**: The script cleans its own prior outputs so you can rebuild into the same path.
 
 ### 6. Install the Signed APK
 
@@ -183,7 +158,7 @@ adb install -g <signed.apk>
 
 **Example:**
 ```bash
-adb install -g modified-signed.apk
+adb install -g -r -d builds/out_signed.apk
 ```
 
 **For system apps or if installation fails:**
@@ -207,5 +182,5 @@ adb install --no-incremental -r -d <signed.apk>
 - Resource modifications must maintain the exact structure of the original (no deleted keys)
 
 ### Backup Recommendation
-Always keep an untouched copy of your base APK (`inputs/<apk_tag>/base.apk`). If something goes wrong, uninstall the modded build and reinstall the base.
+If something goes wrong, uninstall the modded build and reinstall a known-good build.
 
