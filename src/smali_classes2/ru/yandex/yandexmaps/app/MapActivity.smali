@@ -788,11 +788,11 @@
 .end method
 
 .method public final attachBaseContext(Landroid/content/Context;)V
-    .locals 4
+    .locals 5
 
-    invoke-super {p0, p1}, Landroidx/appcompat/app/s;->attachBaseContext(Landroid/content/Context;)V
+    move-object v4, p1
 
-    invoke-static {p1}, Lfd/a;->e(Landroid/content/Context;)Lru/yandex/yandexmaps/app/p2;
+    invoke-static {v4}, Lfd/a;->e(Landroid/content/Context;)Lru/yandex/yandexmaps/app/p2;
 
     move-result-object v0
 
@@ -828,7 +828,7 @@
 
     check-cast v0, Lru/yandex/yandexmaps/common/app/Language;
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -840,7 +840,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lru/yandex/yandexnavi/zee/ZeeUiScale;->applyToConfiguration(Landroid/content/Context;Landroid/content/res/Configuration;)Landroid/content/res/Configuration;
+    invoke-static {v4, p1}, Lru/yandex/yandexnavi/zee/ZeeUiScale;->applyToConfiguration(Landroid/content/Context;Landroid/content/res/Configuration;)Landroid/content/res/Configuration;
 
     move-result-object p1
 
@@ -855,6 +855,8 @@
     :goto_0
 
     :cond_0
+    invoke-super {p0, v4}, Landroidx/appcompat/app/s;->attachBaseContext(Landroid/content/Context;)V
+
     return-void
 .end method
 

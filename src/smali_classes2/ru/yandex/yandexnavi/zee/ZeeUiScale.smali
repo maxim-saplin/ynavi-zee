@@ -89,9 +89,13 @@
 
     if-lez v6, :return_cfg
 
-    iput v6, v5, Landroid/content/res/Configuration;->densityDpi:I
+    int-to-float v7, v6
 
-    return-object v5
+    mul-float/2addr v7, v4
+
+    float-to-int v6, v7
+
+    goto :clamp
 
     :clamp
     if-lez v6, :return_cfg
