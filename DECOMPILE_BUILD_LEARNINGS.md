@@ -8,9 +8,9 @@
 ## Decompile/build observations
 - Decompile command used:
   ```bash
-  apktool d -r -b yandexnavi.hud.apk -o decompiled/yandexnavi_hud_<timestamp>
+  apktool d -f -r inputs/<apk_tag>/base.apk -o work/<apk_tag>/decompiled
   ```
-  - `-r` kept raw manifest/resources; suitable for no-op or smali-only edits. If you need to edit resources, drop `-r` and validate with validate_resources.py.
+  - `-r` avoids decoding resources; suitable for smali-only edits. If you need to edit resources, drop `-r` and validate with `validate_resources.py`.
 - Build/sign command (from build_apk.sh):
   ```bash
   zsh build_apk.sh -inputFolder <decompiled_dir> -outputFile <out_dir>/yandexnavi_hud.apk
@@ -18,27 +18,41 @@
   - Script enforces empty output dir; use timestamped subdirs to avoid collisions.
 - Installation on emulator succeeds with `adb install -g -r -d <signed.apk>`.
 
-## Crash root cause and fixes applied
-- Original rebuilt app crashed on launch with native segfault from libsubver55liadapt and Java `IllegalStateException: Internal error, application signature mismatch` plus a Passport "debug account" guard.
-- Root cause: app signs with `subver` cert and loads native code that enforces signatures; re-signing with AOSP test key triggers both native and Java checks.
-- Fixes applied (smali patches):
-  - Stubbed native factory to avoid loading libsubver55liadapt and delegate to platform defaults: smali_classes14/ru/subver55/SubverAppComponentFactory.smali.
-  - Bypassed Passport runtime signature crash: smali_classes6/com/yandex/passport/internal/a0.smali.
-  - Disabled debug-account-only crash: smali_classes6/com/yandex/passport/internal/d0.smali.
-- Result: Patched, re-signed APK launches and stays up; both main and passport processes run.
+## Repeatable failure pattern: “re-sign → immediate crash”
+When you rebuild and re-sign a vendor APK, you often change the signing certificate. Many apps react in two common ways:
+- Java-side integrity checks throw exceptions (often mentioning “signature mismatch”, “internal error”, “integrity”, “debug only”).
+- Native-side integrity checks crash early (SIGSEGV/abort during `System.loadLibrary` / `JNI_OnLoad`).
+
+The practical takeaway for a *new APK attempt* is: **expect to triage and patch integrity guards before you can do feature mods.**
+
+## Example (from one Yandex Navi build): crash root cause and fixes applied
+This section is an example from a specific build; class names/paths may differ in another APK version.
+
+- Observed failures after rebuild+re-sign:
+  - Native segfault originating from `libsubver55liadapt`
+  - Java `IllegalStateException: Internal error, application signature mismatch`
+  - A Passport “debug account only” guard
+- Root cause (high level): original APK signed with a vendor cert, but rebuilds were signed with this repo’s key; the app contained both native and Java signature checks.
+- Fixes applied (smali patches) in that build:
+  - Stubbed the custom factory to avoid loading the native lib and delegate to platform defaults: `smali_classes14/ru/subver55/SubverAppComponentFactory.smali`.
+  - Bypassed Passport runtime signature crash: `smali_classes6/com/yandex/passport/internal/a0.smali`.
+  - Disabled debug-account-only crash: `smali_classes6/com/yandex/passport/internal/d0.smali`.
+- Result: patched, re-signed APK launched and stayed up; both main and passport processes ran.
 
 ## SubverAppComponentFactory deep dive
-- Location: smali_classes14/ru/subver55/SubverAppComponentFactory.smali (compiled into classes14.dex).
-- Behavior (original):
-  - Static init loads native library `subver55liadapt`.
-  - Overrides `instantiateClassLoader`, `instantiateApplication`, `instantiateActivity` to call native implementations (`instantiate*Native`).
-  - Native lib likely checks the original signing cert and may wire a custom classloader; when signature differs, native code crashes (observed SIGSEGV in libsubver55liadapt).
-- Current patch:
-  - Static init no-op (skips `System.loadLibrary`).
-  - All instantiate methods delegate to superclass (`AppComponentFactory`), removing native hooks.
-- Risks/notes:
-  - If the native lib also performed required runtime setup, stubbing may omit that; so far, app runs without it on emulator.
-  - If you ever want to keep the native path, you would need to spoof the expected cert or re-sign with the original `subver` key (not available) or patch the native library.
+This is a particularly important *pattern*, even when the exact class name changes between APK versions.
+
+- What to look for:
+  - A custom `androidx.core.app.AppComponentFactory` (or similar) under an unfamiliar vendor namespace.
+  - A static initializer (`<clinit>`) that calls `System.loadLibrary(...)`.
+  - Overrides like `instantiateClassLoader`, `instantiateApplication`, `instantiateActivity` that delegate into `*Native` methods.
+- Why it matters:
+  - These hooks run *very early* in app startup and are a common place for native integrity checks and/or custom classloader wiring.
+- Typical “get it launching” patch shape:
+  - Make the static initializer a no-op (skip `System.loadLibrary`).
+  - Delegate instantiate methods to the superclass implementation (removing native hooks).
+- Risk:
+  - If the native lib performs required runtime setup, the app may run but later features could break. In that case, escalate to native patching rather than stubbing.
 
 ## Signing considerations
 - Original APK cert: CN=subver (self-signed). Re-signed with Android test key: CN=Android (AOSP debug). Any first-party integrity checks must be disabled or relaxed, as done above.

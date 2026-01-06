@@ -1,12 +1,20 @@
-# Option 1: Patch libsubver55liadapt.so (ARM64) to disable signature enforcement
+# Native patching plan (escalation path)
 
-Goal: keep the modder’s native behaviors while preventing the signature check/segfault. We will statically patch the native library and rebuild/sign the APK.
+Goal: keep the app’s native behaviors while preventing signature/integrity enforcement from crashing the app after rebuild+re-sign. This is the **escalation path** after smali-only approaches are insufficient.
+
+## When to use this plan
+Use this plan when you observe one or more of:
+- Early `SIGSEGV` / `abort` that correlates with `System.loadLibrary(...)` or `JNI_OnLoad`
+- The app still crashes after stubbing obvious startup hooks (e.g., a custom `AppComponentFactory`)
+- Logcat/tombstone indicates the failure is inside a specific `.so`
+
+If the failure is a Java exception about signature mismatch, start with smali patching first (see `DECOMPILE_BUILD_LEARNINGS.md`).
 
 ## Prerequisites
 - macOS host (current setup). Ensure Ghidra or IDA Pro is installed; use Ghidra if unsure.
 - Tools: `ghidraRun` (or IDA), `adb`, `apktool 2.12.1`, `zipalign`, `apksigner` (already in repo), `python3`.
-- Input binary: decompiled/yandexnavi_hud_20251230_213126/lib/arm64-v8a/libsubver55liadapt.so
-- Reference APK (for quick reinstall): builds/yandexnavi_hud_sigspoof_20251230_214000/yandexnavi_hud_signed.apk
+- Input binary (example): `work/<apk_tag>/decompiled/lib/arm64-v8a/<target_lib>.so`
+- Reference APK (optional): keep the last-known-good signed build for quick reinstall.
 
 ## High-level steps
 1) Reverse-engineer the check in the .so and identify the failure path (likely signature mismatch -> crash/abort/segfault).
@@ -15,7 +23,7 @@ Goal: keep the modder’s native behaviors while preventing the signature check/
 
 ## Detailed plan
 1. **Extract and stage the binary**
-   - Copy libsubver55liadapt.so to a working folder (e.g., /tmp/subver_patch/libsubver55liadapt.so) to avoid accidental corruption of the decompiled tree.
+   - Copy the target `.so` to a working folder (e.g., `/tmp/native_patch/<target_lib>.so`) to avoid accidental corruption of the decompiled tree.
 
 2. **Load into Ghidra (preferred)**
    - Import the ARM64 binary.
@@ -44,19 +52,19 @@ Goal: keep the modder’s native behaviors while preventing the signature check/
 
 6. **Apply patch**
    - Use Ghidra Patch Instruction or export bytes and patch with `dd`/`python` script.
-   - Save patched binary as libsubver55liadapt_patched.so; verify file size unchanged.
+   - Save patched binary as `<target_lib>_patched.so`; verify file size unchanged.
    - Optional: run `file` and `sha1sum` to document the patch.
 
 7. **Drop patched .so into decompiled tree**
-   - Replace decompiled/yandexnavi_hud_20251230_213126/lib/arm64-v8a/libsubver55liadapt.so with the patched one (keep a backup).
+   - Replace `work/<apk_tag>/decompiled/lib/<abi>/<target_lib>.so` with the patched one (keep a backup).
 
 8. **Rebuild APK**
-   - Run build_apk.sh with the same input folder to produce a new signed APK (e.g., builds/yandexnavi_hud_nativepatched_<ts>/yandexnavi_hud_signed.apk).
+   - Run build_apk.sh with the same input folder to produce a new signed APK (e.g., `builds/<apk_tag>_nativepatched/out_signed.apk`).
 
 9. **Test**
    - `adb install -g -r -d <new.apk>`
    - Launch via `adb shell monkey -p ru.yandex.yandexnavi -c android.intent.category.LAUNCHER 1`.
-   - `adb logcat -d | grep -i -E "subver55|signature|IllegalStateException|AndroidRuntime"` and ensure no segfaults.
+   - `adb logcat -d | grep -i -E "signature|IllegalStateException|AndroidRuntime|SIGSEGV|abort|JNI_OnLoad"` and ensure no segfaults.
    - Verify app flows still work (main + passport processes).
 
 10. **Iterate if needed**
@@ -64,6 +72,6 @@ Goal: keep the modder’s native behaviors while preventing the signature check/
     - If signature spoof via Java is unnecessary after patch, we can simplify later, but keep it for safety until confirmed.
 
 ## Deliverables
-- Patched lib: libsubver55liadapt_patched.so (drop-in replacement for arm64-v8a).
+- Patched lib: `<target_lib>_patched.so` (drop-in replacement for the target ABI folder).
 - New signed APK with the patched native library.
 - Notes of patched offsets and instructions for reproducibility.

@@ -1,43 +1,58 @@
 # Iteration Workflow (Edit → Build → Install → Verify)
 
+This is the fast loop for a **new APK attempt** (same app, different version). Use a unique `<apk_tag>` per base APK.
+
+Suggested folders:
+- `inputs/<apk_tag>/base.apk`
+- `work/<apk_tag>/decompiled/`
+- `builds/<apk_tag>/out_signed.apk`
+
 ## 1) Decompile (one-time per base APK)
 ```bash
-apktool d -r -b yandexnavi.hud.apk -o decompiled/yandexnavi_hud_<timestamp>
+apktool d -f -r inputs/<apk_tag>/base.apk -o work/<apk_tag>/decompiled
 ```
 - Use `-r` for smali-only edits; omit `-r` if you need to change resources.
 - Keep the decompiled folder as your working tree for edits.
 
 ## 2) Edit
-- Smali paths live under smali/, smali_classes2/, …; example: smali_classes14/ru/subver55/SubverAppComponentFactory.smali.
+- Smali paths live under `smali/`, `smali_classes2/`, … (multi-dex apps).
 - If editing resources, mirror structure under res/ and validate later.
 
 ## 3) Build, align, sign
 Use the repo script (handles apktool → zipalign → apksigner):
 ```bash
-zsh build_apk.sh -inputFolder <decompiled_dir> -outputFile builds/<tag>/yandexnavi_hud.apk
+zsh build_apk.sh -inputFolder work/<apk_tag>/decompiled -outputFile builds/<apk_tag>/out.apk
 ```
 - Script requires an empty output directory; choose a fresh `<tag>` (e.g., timestamp).
 - Signed artifact will be `<outputFile>` with `_signed.apk` suffix.
 
 ## 4) Install on emulator/device
 ```bash
-adb install -g -r -d builds/<tag>/yandexnavi_hud_signed.apk
+adb install -g -r -d builds/<apk_tag>/out_signed.apk
 ```
 - `-g` grants runtime perms, `-r` replaces, `-d` allows downgrade.
-- If an old build is problematic, `adb uninstall ru.yandex.yandexnavi` first.
+- If an old build is problematic, uninstall the package first:
+  - `adb uninstall <package.name>`
 
 ## 5) Launch and smoke test
 ```bash
-adb shell monkey -p ru.yandex.yandexnavi -c android.intent.category.LAUNCHER 1
+adb shell monkey -p <package.name> -c android.intent.category.LAUNCHER 1
 ```
-- Confirm processes are alive: `adb shell pidof ru.yandex.yandexnavi` and `adb shell pidof ru.yandex.yandexnavi:passport`.
+- Confirm processes are alive (example):
+  - `adb shell pidof <package.name>`
+  - `adb shell pidof <package.name>:passport` (if the app has a passport/auth process)
 
 ## 6) Check logs
 ```bash
-adb logcat -d | egrep -i "AndroidRuntime|FATAL EXCEPTION|signature mismatch|passport"
+adb logcat -d | egrep -i "AndroidRuntime|FATAL EXCEPTION|signature|mismatch|passport|SIGSEGV|abort"
 ```
-- For targeted strings: `adb logcat -d | grep -i yandex | tail -n 200`.
+- For targeted strings: `adb logcat -d | grep -i <keyword> | tail -n 200`.
 - Clear before a run for clean signals: `adb logcat -c`.
+
+## 6.1) Triage guide (what to do next)
+- Native crash early (SIGSEGV/abort): look for a custom loader/hook (often via `AppComponentFactory`) and stub it; if needed escalate to native patching.
+- Java crash about signature mismatch / integrity: patch the guard in smali.
+- Need UI/text changes: decode resources (no `-r`), edit `res/`, validate with `validate_resources.py`, then rebuild.
 
 ## 7) Iterate
 - Make further smali/resource tweaks in the same decompiled dir.

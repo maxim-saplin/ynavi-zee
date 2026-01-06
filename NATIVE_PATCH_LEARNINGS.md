@@ -3,11 +3,31 @@
 ## Goal
 The objective was to disable the signature enforcement mechanism within the native library `libsubver55liadapt.so` (ARM64) to prevent the application from crashing or aborting when modified and re-signed.
 
+## Important: offsets are version-specific
+Everything in this doc that references **instruction offsets** (e.g., `0x14660`) is **an example from one specific APK build**. For a different APK version, expect:
+- different offsets
+- different basic block layouts
+- sometimes different guard logic
+
+The repeatable part is the **methodology**: find the guard, identify the failure path, patch it to “success”.
+
 ## Analysis
 The library was analyzed using `objdump` and `grep` to locate suspicious code patterns.
 - **Entry Point**: `JNI_OnLoad` was identified as the main initialization function.
 - **Pattern**: Multiple calls to `strstr` were found within `JNI_OnLoad`. These calls are often used to check for specific strings (like package names or signature hashes) in `/proc/self/cmdline` or similar system files.
 - **Crash Mechanism**: Failed checks typically led to branches that called `abort` or similar termination functions.
+
+## Methodology (portable to a new APK build)
+1. **Reproduce and classify the crash**
+   - If the app dies before UI: look for `SIGSEGV`, `abort`, `JNI_OnLoad` in logcat/tombstone.
+2. **Locate the guard logic**
+   - Find `JNI_OnLoad` and follow calls made during init.
+   - Look for comparisons against hardcoded strings/hashes, and failure paths calling `abort`, `__assert_fail`, or deliberate crashes.
+3. **Patch minimally**
+   - Prefer the smallest possible change: flip a conditional branch, force a boolean/int “success” return, or NOP out a call that produces the failure condition.
+4. **Verify**
+   - Ensure the patched lib loads and the app stays up on the emulator.
+   - Keep an eye out for “later” failures if the native init also performed setup you now skipped.
 
 ## Findings
 We identified 8 distinct checks in `JNI_OnLoad` that verify the application's integrity.
@@ -26,6 +46,7 @@ The patching strategy involved two main steps for each check:
 2.  **Force Success**: Modify the conditional branch instruction (`b.ne` or `b.eq`) immediately following the check to an unconditional branch (`b`) that jumps to the "success" code path.
 
 ### Applied Patches (ARM64)
+This table is an **example from one build**.
 
 | Check # | Function Offset | Original Instruction | Patch Action | Branch Patch |
 | :--- | :--- | :--- | :--- | :--- |

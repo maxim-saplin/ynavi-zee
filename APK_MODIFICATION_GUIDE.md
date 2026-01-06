@@ -1,8 +1,8 @@
-# APK Modification Guide for Zeekr OS
+# APK Rebuild/Mod Guide (Yandex Navi-focused, emulator-first)
 
-This guide explains how to decompile, modify, and recompile APKs for Zeekr OS (infotainment system from Zeekr 001/007).
+This guide explains how to decompile, modify, rebuild, and re-sign APKs in a way that’s repeatable across **new versions of the same app** (e.g., Yandex Navi). It’s written **emulator-first** so you can iterate quickly before attempting any device/car-specific deployment.
 
-## Preconditions
+## Preconditions / safety notes
 
 ### Hardware/System Requirements
 - **macOS** (commands are for macOS/Linux, can be adapted for Windows)
@@ -13,7 +13,7 @@ This guide explains how to decompile, modify, and recompile APKs for Zeekr OS (i
 - **Apktool**
   - Install on macOS: `brew install apktool`
   - Other platforms: https://ibotpeaches.github.io/Apktool/install/
-  - ⚠️ **Note**: Some apps (e.g., systemui) may require APK Tool 2.9.3 specifically, as newer versions (e.g., 2.10.0) may fail to recompile
+  - ⚠️ **Note**: Some APKs require a specific Apktool version to rebuild. If rebuild fails, try a known-good older version (keep one handy).
   - Alternative: Use APK Studio Editor (GUI tool that bundles APKTool)
 - **Android Platform Tools (ADB)**
 - **Android Build Tools** (provided in repo root):
@@ -21,41 +21,47 @@ This guide explains how to decompile, modify, and recompile APKs for Zeekr OS (i
   - `apksigner` (macOS version from Android SDK)
 - **Python** (optional, for validation scripts)
 
-### Car Setup
-- **Engineering menu enabled** in the car
-  - Zeekr 001/007: Tap the bright orange button at the top center of the screen 10 times
-  - Set ADB to 'Peripheral'
-- **Original APK** obtained from your car (use `backup.sh` script if needed)
+### Important: re-signing may break runtime integrity checks
+- Rebuilt APKs from this repo are re-signed with `androiddebugkey.jks` via `build_apk.sh`.
+- Many apps (including Yandex Navi builds) may enforce signature/integrity at runtime (Java and/or native). If you see crashes like “signature mismatch” or early native segfaults, you will likely need **smali stubs/bypasses** and/or **native patching** (see the learnings docs).
 
 ### Repository Files Required
-- `androiddebugkey.jks` - AOSP test keystore (Zeekr test platform key)
+- `androiddebugkey.jks` - Keystore used by `build_apk.sh` for signing rebuilt APKs
 - `zipalign` - APK alignment binary
 - `apksigner` - APK signing binary
 
-## Workflow: Decompile → Modify → Compile → Sign
+## Recommended folder layout (per APK attempt)
+
+Use a unique `<apk_tag>` per base APK (e.g., `yandexnavi_25.6.2_zeeappstore` or a timestamp).
+
+- `inputs/<apk_tag>/base.apk`
+- `work/<apk_tag>/decompiled/`
+- `builds/<apk_tag>/out.apk` and `builds/<apk_tag>/out_signed.apk`
+
+## Workflow: Decompile → Modify → Build → Align → Sign
 
 ### 1. Decompile the APK
 
 Decompile the original APK to access its source code (smali files) and resources:
 
 ```bash
-apktool d -r -b <input.apk> -o <output_folder>
+apktool d -f <input.apk> -o <output_folder>
 ```
 
 **Parameters:**
-- `-r` - Avoid decoding resources (prevents resource-related rebuild errors)
-- `-b` - Keep Baksmali files (backup of original smali)
+- `-f` - Overwrite output folder if it exists
+- `-r` - Avoid decoding resources (useful for smali-only edits; reduces resource-related rebuild errors)
 - `<input.apk>` - Path to your original APK file
 - `<output_folder>` - Output directory for decompiled files
 
 **Example:**
 ```bash
-apktool d -r -b XCLauncher3-633-orig.apk -o decompiled
+apktool d -f inputs/<apk_tag>/base.apk -o work/<apk_tag>/decompiled
 ```
 
-**Alternative (with resources):**
+**Smali-only decompile (skip decoding resources):**
 ```bash
-apktool d <input.apk> -o <output_folder>
+apktool d -f -r inputs/<apk_tag>/base.apk -o work/<apk_tag>/decompiled
 ```
 
 ### 2. Modify the Code/Resources
@@ -94,7 +100,7 @@ apktool b <decompiled_folder> -o <output.apk>
 apktool b decompiled -o modified-unsigned.apk
 ```
 
-**Note**: For some apps (like the Launcher), you may need to extract only specific `.dex` files and inject them into the original APK to preserve resources. See the Launcher-specific workflow in `LAUNCHER_MOD.md` for details.
+**Note**: Some APKs are fragile to full rebuilds (especially around resources). If you hit rebuild/runtime issues that go away when you keep the original resources, you may need a more surgical approach (e.g., smali-only edits, or limited dex swapping). This repo’s primary workflow remains: rebuild with Apktool → align → sign.
 
 ### 4. Sign the APK
 
@@ -169,7 +175,7 @@ The script will:
 
 ### 6. Install the Signed APK
 
-Install the signed APK on your car:
+Install the signed APK on your emulator/device:
 
 ```bash
 adb install -g <signed.apk>
@@ -192,20 +198,14 @@ adb install --no-incremental -r -d <signed.apk>
 ## Important Notes
 
 ### Keystore Information
-- **Purpose**: Zeekr OS uses AOSP test keys. The `androiddebugkey.jks` ensures standard signatures are retained, allowing apps to be updated in-place.
+- **Purpose (this repo)**: `build_apk.sh` signs with `androiddebugkey.jks`. This does **not** match the original APK’s cert, so apps that enforce integrity may crash until patched.
 - **Location**: Repository root (`androiddebugkey.jks`)
-- **Do NOT use**: Your local Android Studio debug keystore - it won't work for system app updates
+- **Do NOT use**: Your local Android Studio debug keystore unless you fully understand the target environment’s signature requirements.
 
 ### Known Limitations
-- Some apps (e.g., `com.android.systemui`) cannot be recompiled with newer APKTool versions - use APK Tool 2.9.3
-- Some system apps on Zeekr OS 6.x.x (Android 12L) cannot be updated via `adb install` or `adb push` - they reside at `/systems-ext/priv-pp`
+- Some APKs cannot be rebuilt with certain Apktool versions; try an older version if needed.
 - Resource modifications must maintain the exact structure of the original (no deleted keys)
 
 ### Backup Recommendation
-Always backup original APKs from your car before modifying. Use the `backup.sh` script:
-```bash
-./backup.sh
-```
-
-If something goes wrong, you can reinstall the original APK from the backup.
+Always keep an untouched copy of your base APK (`inputs/<apk_tag>/base.apk`). If something goes wrong, uninstall the modded build and reinstall the base.
 
