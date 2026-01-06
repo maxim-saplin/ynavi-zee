@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:enabled="false" android:id="@id/control_music_image" android:contentDescription="@string/accessibility_home_screen_music" app:srcCompat="@drawable/control_music_icon" style="@style/ControlRectImage" />
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="end|bottom" android:id="@id/control_music_badge" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_margin="4.0dip" />
+</merge>

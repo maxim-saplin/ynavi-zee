@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="discovery_blue_rounded_button_retry">@drawable/discovery_blue_rounded_button_background_night_impl</item>
+</resources>

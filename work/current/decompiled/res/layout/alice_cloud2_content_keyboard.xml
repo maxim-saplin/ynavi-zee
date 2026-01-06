@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/alice_cloud2_title_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/alice_cloud2_default_margin" android:layout_marginTop="@dimen/alice_cloud2_text_top_margin" android:layout_marginRight="@dimen/alice_cloud2_text_right_margin" />
+    <Space android:layout_width="wrap_content" android:layout_height="@dimen/alice_cloud2_text_bottom_space_height" />
+    <LinearLayout android:orientation="vertical" android:id="@id/alice_cloud2_div_container" android:paddingLeft="@dimen/alice_cloud2_div_horizontal_margin" android:paddingRight="@dimen/alice_cloud2_div_horizontal_margin" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/alice_cloud2_main_div_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/alice_cloud2_footer_div_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/alice_cloud2_expanding_div_content" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

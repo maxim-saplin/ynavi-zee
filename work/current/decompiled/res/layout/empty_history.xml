@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="64.0dip" android:text="@string/suggest_history_no" style="@style/Text18" />
+    <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:text="@string/empty_history_page_description" android:layout_marginStart="45.0dip" android:layout_marginEnd="45.0dip" style="@style/Text14.Grey" />
+</FrameLayout>

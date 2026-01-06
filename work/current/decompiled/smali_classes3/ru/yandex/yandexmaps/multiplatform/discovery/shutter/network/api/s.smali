@@ -1,0 +1,137 @@
+.class public final Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/u;
+
+
+# instance fields
+.field private final a:Ljava/lang/String;
+
+.field private final b:Lm31/h;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;->a:Ljava/lang/String;
+
+    new-instance p1, Lru/yandex/yandexmaps/multiplatform/discovery/collection/card/android/internal/shutter/items/o;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p1, v0, p0}, Lru/yandex/yandexmaps/multiplatform/discovery/collection/card/android/internal/shutter/items/o;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p1}, Lkotlin/a;->c(Lkotlin/jvm/functions/Function0;)Lm31/h;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;->b:Lm31/h;
+
+    return-void
+.end method
+
+.method public static a(Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;->a:Ljava/lang/String;
+
+    invoke-static {p0}, Lru/yandex/yandexmaps/multiplatform/core/uri/c;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;->b:Lm31/h;
+
+    invoke-interface {v0}, Lm31/h;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/multiplatform/discovery/shutter/network/api/s;->a:Ljava/lang/String;
+
+    const-string v1, "Org(oid="
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lf;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="alice_tab_horizontal_margin">0.0sp</dimen>
+    <dimen name="alice_tab_text_size">16.0sp</dimen>
+    <dimen name="order_screens_circle_button_text_size">13.0sp</dimen>
+    <dimen name="qibla_back_button_font_size">16.0sp</dimen>
+    <dimen name="qibla_back_button_height">48.0dip</dimen>
+    <dimen name="qibla_back_button_padding">16.0dip</dimen>
+    <dimen name="qibla_distance_font_size">16.0sp</dimen>
+    <dimen name="qibla_distance_height">19.0dip</dimen>
+    <dimen name="qibla_turn_direction_font_size">40.0sp</dimen>
+    <dimen name="qibla_turn_direction_height">58.0dip</dimen>
+</resources>

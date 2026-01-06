@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="24.0dip" android:layout_marginStart="16.0dip">
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/point_gp_32" app:tint="@color/yandexmaps_rubrics_fallback_pin" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:src="@drawable/yandexmaps_rubrics_toponym_building_14" app:tint="@color/rubrics_places" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:layout_weight="1.0">
+        <ru.yandex.yandexmaps.common.views.EllipsizingTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/what_is_here_menu_whats_item_title" style="@style/Text14.TextSecondary" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginVertical="4.0dip">
+            <ru.yandex.yandexmaps.common.views.EllipsizingTextView android:id="@id/whats_here" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.TextPrimary" />
+            <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/shimmer" android:background="@color/bg_additional" android:layout_width="fill_parent" android:layout_height="25.0dip" style="@style/CommonShimmer" />
+        </FrameLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:layout_width="8.0dip" android:layout_height="8.0dip" android:src="@drawable/arrow_right_8" android:layout_marginEnd="17.0dip" android:layout_marginVertical="32.5dip" />
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:layout_width="@dimen/map_pin_width" android:layout_height="@dimen/map_pin_height" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/select_on_map_pin_base" android:layout_width="@dimen/map_pin_width" android:layout_height="@dimen/map_pin_height" />
+    <ImageView android:layout_gravity="center" android:id="@id/select_on_map_pin_icon" android:visibility="invisible" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginBottom="6.0dip" />
+    <ImageView android:layout_gravity="center" android:id="@id/select_on_map_pin_fallback_icon" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginBottom="6.0dip" app:srcCompat="@drawable/common_white_oval" />
+    <ImageView android:layout_gravity="center|bottom" android:id="@id/select_on_map_pin_point" android:background="@drawable/common_white_oval" android:layout_width="8.0dip" android:layout_height="8.0dip" />
+</FrameLayout>

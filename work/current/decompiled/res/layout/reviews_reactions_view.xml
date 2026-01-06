@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:id="@id/review_reaction_like" android:background="?selectableItemBackgroundBorderless" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginStart="14.0dip" custom:srcCompat="@drawable/like_outline_24" custom:tint="@color/reviews_reactions_icon_selector" />
+    <TextView android:textColor="@color/reviews_reactions_text_selector" android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/review_reaction_like_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" android:layout_marginStart="6.0dip" style="@style/Text16.Medium.Grey" />
+    <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="18.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/review_reaction_dislike" android:background="?selectableItemBackgroundBorderless" android:layout_width="24.0dip" android:layout_height="24.0dip" custom:srcCompat="@drawable/dislike_outline_24" custom:tint="@color/reviews_reactions_icon_selector" />
+    </FrameLayout>
+    <TextView android:textColor="@color/reviews_reactions_text_selector" android:layout_gravity="center" android:id="@id/review_reaction_dislike_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" android:layout_marginStart="6.0dip" style="@style/Text16.Medium.Grey" />
+</merge>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexnavi.ui.guidance.speed.SpeedLimitView android:id="@id/speedlimitview_guidance" android:clipChildren="false" android:layout_width="@dimen/size_map_speed" android:layout_height="@dimen/size_map_speed"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:layout_gravity="center" android:id="@id/view_speedlimit_alarm" android:background="@drawable/map_speedalarm" android:layout_width="@dimen/size_map_speedanimation" android:layout_height="@dimen/size_map_speedanimation" android:alpha="0.0" />
+    <FrameLayout android:id="@id/view_speedlimit_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.yandex.navilib.widget.NaviTextView android:textSize="@dimen/textsize_map_speedvalue_min" android:textColor="@color/black" android:ellipsize="none" android:gravity="center" android:layout_gravity="center" android:id="@id/text_speedlimit" android:layout_width="wrap_content" android:layout_height="wrap_content" app:fontFamily="@font/ys_text_bold" style="@style/NaviTextBold" />
+</ru.yandex.yandexnavi.ui.guidance.speed.SpeedLimitView>

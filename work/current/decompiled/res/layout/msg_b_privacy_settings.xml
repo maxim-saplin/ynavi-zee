@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messaging_settings_group_privacy" style="@style/Messaging.Settings.Text.Group" />
+    <View android:background="@drawable/msg_divider_settings_group" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/msg_divider_settings_items" android:showDividers="middle">
+        <com.yandex.bricks.BrickSlotView android:id="@id/private_chats" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.yandex.bricks.BrickSlotView android:id="@id/invites" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.yandex.bricks.BrickSlotView android:id="@id/calls" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.yandex.bricks.BrickSlotView android:id="@id/online_statuses" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.yandex.bricks.BrickSlotView android:id="@id/search" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:id="@id/profile_blocked_users" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/blocked_users" style="@style/Messaging.Settings.Item.Text" />
+    </LinearLayout>
+</LinearLayout>

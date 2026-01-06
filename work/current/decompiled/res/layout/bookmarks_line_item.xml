@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="start" android:id="@id/line_type_icon" android:background="@drawable/bookmarks_type_icon_background" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:src="@drawable/bus_16" android:scaleType="center" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:tint="@color/icons_color_bg" />
+    <TextView android:id="@id/line_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="52.0dip" android:layout_marginEnd="40.0dip" style="@style/Text16.Medium" />
+    <ImageView android:layout_gravity="end" android:id="@id/bookmarks_trailing_icon_view" android:background="?selectableItemBackgroundBorderless" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:src="@drawable/more_16" android:importantForAccessibility="no" android:layout_marginEnd="16.0dip" app:tint="@color/icons_secondary" />
+</merge>

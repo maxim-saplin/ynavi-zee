@@ -1,0 +1,182 @@
+{
+    "templates": {
+        "agreement_point": {
+            "type": "container",
+            "items": [
+                {
+                    "type": "text",
+                    "background": [
+                        {
+                            "type": "solid",
+                            "color": "@{isLightTheme ? '#FFEDEFF2' : '#FF393B40'}"
+                        }
+                    ],
+                    "border": {
+                        "corner_radius": 20
+                    },
+                    "font_size": 18,
+                    "font_weight": "medium",
+                    "height": {
+                        "type": "fixed",
+                        "value": 40
+                    },
+                    "margins": {
+                        "right": 12
+                    },
+                    "text_alignment_horizontal": "center",
+                    "text_alignment_vertical": "center",
+                    "text_color": "@{isLightTheme ? '#000000' : '#FFFFFF'}",
+                    "width": {
+                        "type": "fixed",
+                        "value": 40
+                    },
+                    "$text": "number"
+                },
+                {
+                    "type": "text",
+                    "font_size": 18,
+                    "font_weight": "regular",
+                    "text_alignment_vertical": "center",
+                    "text_color": "@{isLightTheme ? '#000000' : '#FFFFFF'}",
+                    "$text": "body"
+                }
+            ],
+            "margins": {
+                "left": 24,
+                "right": 24
+            },
+            "orientation": "horizontal",
+            "paddings": {
+                "bottom": 24
+            }
+        },
+        "action_button": {
+            "type": "text",
+            "background": [
+                {
+                    "type": "solid",
+                    "color": "@{isLightTheme ? '#2E2F33' : '#E1E3E8'}"
+                }
+            ],
+            "border": {
+                "corner_radius": 16
+            },
+            "font_size": 18,
+            "font_weight": "medium",
+            "height": {
+                "type": "fixed",
+                "value": 56
+            },
+            "text_alignment_horizontal": "center",
+            "text_alignment_vertical": "center",
+            "text_color": "@{isLightTheme ? '#FFFFFF' : '#000000'}",
+            "$text": "title"
+        }
+    },
+    "card": {
+        "log_id": "payment_sdk_card",
+        "variables": [
+            {
+                "type": "boolean",
+                "name": "isLightTheme",
+                "value": 1
+            },
+            {
+                "type": "number",
+                "name": "safe_area_inset_top",
+                "value": 0
+            },
+            {
+                "type": "number",
+                "name": "safe_area_inset_bottom",
+                "value": 0
+            },
+            {
+                "type": "number",
+                "name": "safe_area_inset_left",
+                "value": 0
+            },
+            {
+                "type": "number",
+                "name": "safe_area_inset_right",
+                "value": 0
+            }
+        ],
+        "states": [
+            {
+                "state_id": 0,
+                "div": {
+                    "type": "container",
+                    "alignment_vertical": "bottom",
+                    "background": [
+                        {
+                            "type": "solid",
+                            "color": "@{isLightTheme ? '#FFFFFF' : '#333333'}"
+                        }
+                    ],
+                    "border": {
+                        "corners_radius": {
+                            "top-left": 24,
+                            "top-right": 24
+                        }
+                    },
+                    "content_alignment_vertical": "top",
+                    "height": {
+                        "type": "wrap_content"
+                    },
+                    "items": [
+                        {
+                            "type": "text",
+                            "alignment_horizontal": "left",
+                            "font_family": "display",
+                            "font_size": 32,
+                            "font_weight": "medium",
+                            "margins": {
+                                "top": 32,
+                                "bottom": 28,
+                                "left": 24,
+                                "right": 24
+                            },
+                            "text": "legal.agreement.title",
+                            "text_alignment_horizontal": "left",
+                            "text_color": "@{isLightTheme ? '#000000' : '#FFFFFF'}"
+                        },
+                        {
+                            "type": "agreement_point",
+                            "number": "1",
+                            "body": "payment.legal.sbp.agreement.first.point"
+                        },
+                        {
+                            "type": "agreement_point",
+                            "number": "2",
+                            "body": "payment.legal.sbp.agreement.second.point"
+                        },
+                        {
+                            "type": "action_button",
+                            "title": "payment.button.title.close",
+                            "actions": [
+                                {
+                                    "log_id": "payment_sdk_sbp_legal_agreement_view_close_action_button",
+                                    "url": "payment-sdk://close_legal"
+                                }
+                            ],
+                            "margins": {
+                                "top": 20,
+                                "bottom": 8,
+                                "left": 24,
+                                "right": 24
+                            }
+                        }
+                    ],
+                    "orientation": "vertical",
+                    "paddings": {
+                        "top": "@{safe_area_inset_top}",
+                        "bottom": "@{safe_area_inset_bottom}",
+                        "left": "@{safe_area_inset_left}",
+                        "right": "@{safe_area_inset_right}"
+                    }
+                }
+            }
+        ]
+    }
+}

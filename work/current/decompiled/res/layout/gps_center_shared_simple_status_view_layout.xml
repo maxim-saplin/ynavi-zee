@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/gps_center_fast_settings_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Text18.TextPrimary" />
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/gps_center_fast_settings_badge_view" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginStart="16.0dip" android:clipToOutline="false" />
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/gps_center_fast_settings_arrow_view" android:layout_width="8.0dip" android:layout_height="8.0dip" android:src="@drawable/arrow_right_8" android:layout_marginStart="16.0dip" app:tint="@color/icons_additional" />
+</merge>

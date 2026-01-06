@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_gravity="center_vertical" android:id="@id/map_zoom_projected_view" android:focusable="true" android:visibility="visible" android:clickable="false" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/layout_map_zoom" />
+</merge>

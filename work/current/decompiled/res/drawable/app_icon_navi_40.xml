@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="40.0dip" android:width="40.0dip" android:viewportWidth="40.0" android:viewportHeight="40.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="#ffffffff" android:pathData="M0 0h40v40H0z" />
+    <path android:fillColor="@drawable/$app_icon_navi_40__0" android:pathData="M30.8 9.15L5.82 19.58l10.94 4.01l3.9 11.23L30.81 9.15z" android:fillType="evenOdd" />
+    <path android:fillColor="#ffffcc00" android:pathData="M30.8 9.15L16.37 24l4.3 10.83L30.8 9.15z" android:fillType="evenOdd" />
+    <path android:fillColor="#ffeba704" android:pathData="M15.97 24.4l4.68 10.42l-1.56-13.64l-13.28-1.6l10.16 4.81z" android:fillType="evenOdd" />
+</vector>

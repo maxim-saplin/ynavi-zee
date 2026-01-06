@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BankSdk.WidgetTextStyle" parent="@style/Widget.Bank.Text.Body3" />
+    <style name="BankSdk.WidgetTitleStyle" parent="@style/Widget.Bank.Text.Title1" />
+    <style name="BankSdk.WidgetWithButtonDescriptionStyle" parent="@style/Widget.Bank.Text.Body3" />
+    <style name="BankSdk.WidgetWithButtonTitleStyle" parent="@style/Widget.Bank.Text.Headline3" />
+    <style name="BankSdk.WidgetWithSwitchDescriptionStyle" parent="@style/Widget.Bank.Text.Body3" />
+    <style name="BankSdk.WidgetWithSwitchTitleStyle" parent="@style/Widget.Bank.Text.Headline3" />
+</resources>

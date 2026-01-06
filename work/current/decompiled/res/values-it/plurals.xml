@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Avanti di %d secondi</item>
+        <item quantity="one">Avanti di %d secondo</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Indietro di %d secondi</item>
+        <item quantity="one">Indietro di %d secondo</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nuove notifiche</item>
+        <item quantity="one">%d nuova notifica</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Ultime %1$d cifre</item>
+        <item quantity="zero">Ultime %1$d cifre</item>
+        <item quantity="one">Ultima %1$d cifra</item>
+        <item quantity="few">Ultime %1$d cifre</item>
+        <item quantity="many">Ultime %1$d cifre</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"Ora riceverai una chiamata da
+%1$s. Inserisci le ultime %2$d cifre di questo numero."</item>
+        <item quantity="zero">"Ora riceverai una chiamata da
+%1$s. Inserisci le ultime %2$d cifre di questo numero."</item>
+        <item quantity="one">"Ora riceverai una chiamata da
+%1$s. Inserisci le'ultima %2$d cifra di questo numero."</item>
+        <item quantity="few">"Ora riceverai una chiamata da
+%1$s. Inserisci le ultime %2$d cifre di questo numero."</item>
+        <item quantity="many">"Ora riceverai una chiamata da
+%1$s. Inserisci le ultime %2$d cifre di questo numero."</item>
+    </plurals>
+</resources>

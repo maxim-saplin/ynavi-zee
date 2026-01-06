@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="16.0sp" android:textColor="@color/alice_suggest_text_color" android:gravity="center_vertical" android:id="@id/alice_suggest_text" android:background="@drawable/alice_suggest_background" android:paddingLeft="@dimen/alice_suggest_padding_regular" android:paddingTop="@dimen/alice_suggest_padding_small" android:paddingRight="@dimen/alice_suggest_padding_regular" android:paddingBottom="@dimen/alice_suggest_padding_small" android:layout_width="wrap_content" android:layout_height="@dimen/alice_suggest_item_height" android:minWidth="36.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

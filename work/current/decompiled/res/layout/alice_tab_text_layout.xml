@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="6.0dip" android:paddingEnd="6.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/alice_tab_text_size" android:textStyle="normal" android:textColor="@color/alice_tab_text_color" android:id="@id/alice_tab_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/ya_medium" />
+    <View android:layout_gravity="end" android:id="@id/alice_tab_dot" android:background="@drawable/alice_tab_dot_default" android:visibility="gone" android:layout_width="8.0dip" android:layout_height="8.0dip" android:translationX="6.0dip" android:translationY="-2.0dip" />
+</FrameLayout>

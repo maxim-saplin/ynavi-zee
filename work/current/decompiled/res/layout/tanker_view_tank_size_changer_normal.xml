@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/tanker_bg_full_tank_size" android:layout_width="120.0dip" android:layout_height="0.0dip" android:layout_marginTop="@dimen/tanker_basic_padding" android:layout_marginBottom="136.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHeight_max="260.0dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/subtitleTv"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.appcompat.widget.AppCompatImageView android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/tanker_ic_plus_simple" android:scaleType="center" android:tint="@color/tanker_text_primary_selected" />
+        <ru.tankerapp.android.sdk.navigator.view.widgets.pump.PumpControlButton android:id="@id/plusControlNormalView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:paddingLeft="@dimen/tanker_basic_padding" android:paddingRight="@dimen/tanker_basic_padding" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/TankerTextBold">
+        <include android:layout_gravity="center" android:id="@id/litreEditNormalView" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tanker_view_litre_edit" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.appcompat.widget.AppCompatImageView android:textColor="@color/tanker_text_primary_selected" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/tanker_ic_minus" android:scaleType="center" android:tint="@color/tanker_text_primary_selected" />
+        <ru.tankerapp.android.sdk.navigator.view.widgets.pump.PumpControlButton android:id="@id/minusControlNormalView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</LinearLayout>

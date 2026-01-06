@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="224.0dip" android:width="359.0dip" android:viewportWidth="359.0" android:viewportHeight="224.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$bank_sdk_product_plus_background__0" android:pathData="M0,24C0,10.75 10.75,0 24,0H335C348.26,0 359,10.75 359,24V200C359,213.26 348.26,224 335,224H24C10.75,224 0,213.26 0,200V24Z" />
+    <path android:fillColor="#ff988ee5" android:pathData="M0,24C0,10.75 10.75,0 24,0H335C348.26,0 359,10.75 359,24V200C359,213.26 348.26,224 335,224H24C10.75,224 0,213.26 0,200V24Z" android:fillAlpha="0.4" />
+</vector>

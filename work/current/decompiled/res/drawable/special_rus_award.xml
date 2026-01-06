@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="20.0dip" android:width="16.0dip" android:viewportWidth="16.0" android:viewportHeight="20.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <path android:fillColor="@drawable/$special_rus_award__0" android:pathData="M8 0C3.58 0 0 3.58 0 8c0 2.2 0.9 4.2 2.34 5.66C3.8 15.1 7.2 17.2 7.4 19.4C7.43 19.73 7.67 20 8 20c0.33 0 0.57-0.27 0.6-0.6c0.2-2.2 3.61-4.3 5.06-5.74C15.1 12.2 16 10.2 16 8c0-4.42-3.58-8-8-8z" />
+        <path android:fillColor="#ffffffff" android:pathData="M8.92 5.06H8.25c-1.16 0-1.74 0.58-1.74 1.45c0 0.97 0.38 1.45 1.25 2.03l0.68 0.48l-1.93 3H4.96l1.84-2.7C5.74 8.53 5.16 7.85 5.16 6.6C5.16 5.06 6.22 4 8.25 4h2.02v8.02H8.92V5.06z" />
+    </group>
+</vector>

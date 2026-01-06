@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/top_spacer_view" android:background="@color/plus_sdk_transparent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:importantForAccessibility="no" />
+    <com.yandex.plus.home.feature.webviews.internal.layout.RoundCornersLinearLayout android:orientation="vertical" android:id="@id/plus_sdk_webview_simple_root" android:background="?backgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" app:plus_sdk_topLeftRadius="@dimen/plus_sdk_mu_1_5" app:plus_sdk_topRightRadius="@dimen/plus_sdk_mu_1_5">
+        <include layout="@layout/plus_sdk_webview_simple" />
+    </com.yandex.plus.home.feature.webviews.internal.layout.RoundCornersLinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

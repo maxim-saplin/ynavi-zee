@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/compass_calibration_container" android:background="@drawable/background_panel_color_impl" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/compass_calibration_loop_image" android:visibility="gone" android:layout_width="400.0dip" android:layout_height="192.0dip" android:paddingStart="72.0dip" android:paddingEnd="60.0dip" />
+        <ImageView android:layout_gravity="center" android:id="@id/compass_calibration_morph_image" android:layout_width="400.0dip" android:layout_height="192.0dip" android:paddingStart="72.0dip" android:paddingEnd="60.0dip" />
+    </FrameLayout>
+    <TextView android:gravity="center" android:layout_gravity="center" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/compass_calibration_title" style="@style/Text20" />
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/compass_calibration_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="36.0dip" android:paddingEnd="36.0dip" style="@style/Text14.Grey" />
+    <TextView android:textColor="@color/bw_white" android:layout_gravity="center|bottom" android:id="@id/compass_calibration_done_button" android:background="@drawable/common_blue_stadium_background" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" android:text="@string/common_done" android:layout_marginStart="36.0dip" android:layout_marginEnd="36.0dip" style="@style/CommonTextButton" />
+</LinearLayout>

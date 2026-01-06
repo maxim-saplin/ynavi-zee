@@ -1,0 +1,668 @@
+{
+    "templates": {},
+    "card": {
+        "log_id": "payment_sdk_card",
+        "variables": [
+            {
+                "type": "boolean",
+                "name": "promo_method_banner_x_l_selected",
+                "value": 1
+            },
+            {
+                "type": "string",
+                "name": "promo_method_banner_x_l_saleText",
+                "value": ""
+            },
+            {
+                "type": "string",
+                "name": "promo_method_banner_x_l_description",
+                "value": ""
+            },
+            {
+                "type": "string",
+                "name": "promo_method_banner_x_l_state",
+                "value": "open"
+            },
+            {
+                "type": "string",
+                "name": "promo_method_banner_x_l_balance",
+                "value": ""
+            },
+            {
+                "type": "string",
+                "name": "promo_method_banner_x_l_cardName",
+                "value": "Pay card"
+            },
+            {
+                "type": "string",
+                "name": "promo_method_banner_x_l_cardImage",
+                "value": ""
+            },
+            {
+                "type": "string",
+                "name": "promo_method_banner_x_l_openCardText",
+                "value": "Open"
+            },
+            {
+                "type": "string",
+                "name": "promo_method_banner_x_l_topUpCardText",
+                "value": "Top up"
+            },
+            {
+                "type": "string",
+                "name": "promo_method_banner_x_l_handleCardText",
+                "value": "Manage"
+            }
+        ],
+        "variable_triggers": [
+            {
+                "actions": [
+                    {
+                        "log_id": "change_state",
+                        "url": "div-action://set_state?state_id=0/selector/state_unselected"
+                    }
+                ],
+                "condition": "@{promo_method_banner_x_l_selected == false}",
+                "mode": "on_variable"
+            },
+            {
+                "actions": [
+                    {
+                        "log_id": "change_state",
+                        "url": "div-action://set_state?state_id=0/selector/state_selected"
+                    }
+                ],
+                "condition": "@{promo_method_banner_x_l_selected == true}",
+                "mode": "on_variable"
+            },
+            {
+                "actions": [
+                    {
+                        "log_id": "change_description_state",
+                        "url": "div-action://set_state?state_id=0/description_selector/method"
+                    },
+                    {
+                        "log_id": "change_button_state",
+                        "url": "div-action://set_state?state_id=0/buttons_selector/method"
+                    }
+                ],
+                "condition": "@{promo_method_banner_x_l_state == 'method'}",
+                "mode": "on_variable"
+            },
+            {
+                "actions": [
+                    {
+                        "log_id": "change_description_state",
+                        "url": "div-action://set_state?state_id=0/description_selector/open"
+                    },
+                    {
+                        "log_id": "change_button_state",
+                        "url": "div-action://set_state?state_id=0/buttons_selector/open"
+                    }
+                ],
+                "condition": "@{promo_method_banner_x_l_state == 'open'}",
+                "mode": "on_variable"
+            }
+        ],
+        "states": [
+            {
+                "state_id": 0,
+                "div": {
+                    "type": "container",
+                    "background": [
+                        {
+                            "type": "solid",
+                            "color": "@{isLightTheme ? '#FFFFFF' : '#101217'}"
+                        }
+                    ],
+                    "height": {
+                        "type": "wrap_content"
+                    },
+                    "items": [
+                        {
+                            "type": "image",
+                            "alignment_horizontal": "start",
+                            "alignment_vertical": "top",
+                            "height": {
+                                "unit": "dp",
+                                "type": "fixed",
+                                "value": 24
+                            },
+                            "image_url": "@{promo_method_banner_x_l_cardImage}",
+                            "margins": {
+                                "unit": "dp",
+                                "left": 16,
+                                "top": 16,
+                                "right": 16
+                            },
+                            "width": {
+                                "unit": "dp",
+                                "type": "fixed",
+                                "value": 36
+                            }
+                        },
+                        {
+                            "type": "container",
+                            "height": {
+                                "type": "wrap_content"
+                            },
+                            "items": [
+                                {
+                                    "type": "container",
+                                    "height": {
+                                        "type": "wrap_content"
+                                    },
+                                    "items": [
+                                        {
+                                            "type": "container",
+                                            "height": {
+                                                "type": "wrap_content"
+                                            },
+                                            "items": [
+                                                {
+                                                    "type": "container",
+                                                    "items": [
+                                                        {
+                                                            "type": "text",
+                                                            "font_family": "display",
+                                                            "font_size": 16,
+                                                            "font_size_unit": "sp",
+                                                            "font_weight": "bold",
+                                                            "text": "@{promo_method_banner_x_l_cardName}",
+                                                            "text_color": "@{isLightTheme ? '#000000' : '#FFFFFF'}",
+                                                            "width": {
+                                                                "type": "wrap_content",
+                                                                "constrained": 0
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "image",
+                                                            "alignment_vertical": "center",
+                                                            "height": {
+                                                                "unit": "dp",
+                                                                "type": "fixed",
+                                                                "value": 12
+                                                            },
+                                                            "image_url": "@{isLightTheme ? 'local-image://yandexPayBadge_light' : 'local-image://yandexPayBadge_dark'}",
+                                                            "width": {
+                                                                "unit": "dp",
+                                                                "type": "fixed",
+                                                                "value": 12
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "alignment_vertical": "center",
+                                                            "font_family": "display",
+                                                            "font_size": 14,
+                                                            "font_size_unit": "sp",
+                                                            "font_weight": "bold",
+                                                            "text": "@{promo_method_banner_x_l_saleText}",
+                                                            "text_gradient": {
+                                                                "type": "gradient",
+                                                                "angle": 0,
+                                                                "colors": [
+                                                                    "#F45A61",
+                                                                    "#9546DB"
+                                                                ]
+                                                            },
+                                                            "width": {
+                                                                "type": "wrap_content",
+                                                                "constrained": 0
+                                                            }
+                                                        }
+                                                    ],
+                                                    "layout_mode": "wrap",
+                                                    "margins": {
+                                                        "unit": "dp",
+                                                        "top": 12,
+                                                        "bottom": 6,
+                                                        "end": 16
+                                                    },
+                                                    "orientation": "horizontal",
+                                                    "separator": {
+                                                        "show_between": 1,
+                                                        "style": {
+                                                            "type": "shape_drawable",
+                                                            "color": "#00FFFFFF",
+                                                            "shape": {
+                                                                "type": "rounded_rectangle",
+                                                                "item_width": {
+                                                                    "type": "fixed",
+                                                                    "value": 4
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "type": "state",
+                                                    "id": "description_selector",
+                                                    "paddings": {
+                                                        "unit": "dp",
+                                                        "right": 12
+                                                    },
+                                                    "states": [
+                                                        {
+                                                            "state_id": "open",
+                                                            "div": {
+                                                                "type": "container",
+                                                                "items": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "font_size": 14,
+                                                                        "font_size_unit": "sp",
+                                                                        "font_weight": "medium",
+                                                                        "text": "@{promo_method_banner_x_l_description}",
+                                                                        "text_color": "@{isLightTheme ? '#80000000' : '#80FFFFFF'}"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "state_id": "method",
+                                                            "div": {
+                                                                "type": "container",
+                                                                "items": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "font_size": 14,
+                                                                        "font_size_unit": "sp",
+                                                                        "font_weight": "medium",
+                                                                        "text": "@{promo_method_banner_x_l_balance}",
+                                                                        "text_color": "@{isLightTheme ? '#80000000' : '#80FFFFFF'}"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "orientation": "vertical",
+                                            "width": {
+                                                "type": "match_parent"
+                                            }
+                                        },
+                                        {
+                                            "type": "state",
+                                            "default_state_id": "state_unselected",
+                                            "div_id": "selector",
+                                            "height": {
+                                                "type": "fixed",
+                                                "value": 30
+                                            },
+                                            "margins": {
+                                                "unit": "dp",
+                                                "left": 12,
+                                                "top": 12,
+                                                "right": 12,
+                                                "bottom": 12
+                                            },
+                                            "states": [
+                                                {
+                                                    "state_id": "state_selected",
+                                                    "div": {
+                                                        "type": "container",
+                                                        "items": [],
+                                                        "border": {
+                                                            "corner_radius": 20
+                                                        },
+                                                        "height": {
+                                                            "type": "match_parent"
+                                                        },
+                                                        "width": {
+                                                            "type": "match_parent"
+                                                        },
+                                                        "background": [
+                                                            {
+                                                                "type": "solid",
+                                                                "color": "@{isLightTheme ? '#24E37B' : '#24E37B'}"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "state_id": "state_unselected",
+                                                    "div": {
+                                                        "type": "container",
+                                                        "items": [],
+                                                        "border": {
+                                                            "corner_radius": 20
+                                                        },
+                                                        "height": {
+                                                            "type": "match_parent"
+                                                        },
+                                                        "width": {
+                                                            "type": "match_parent"
+                                                        },
+                                                        "background": [
+                                                            {
+                                                                "type": "solid",
+                                                                "color": "@{isLightTheme ? '#F5F5F5' : '#2A2C31'}"
+                                                            }
+                                                        ],
+                                                        "actions": [
+                                                            {
+                                                                "log_id": "change_state",
+                                                                "url": "div-action://set_state?state_id=0/selector/state_selected"
+                                                            },
+                                                            {
+                                                                "log_id": "change_variable",
+                                                                "url": "div-action://set_variable?name=promo_method_banner_x_l_selected&value=true"
+                                                            },
+                                                            {
+                                                                "log_id": "change_state",
+                                                                "url": "promo-sdk://promo_method_banner_x_l/choose_click"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ],
+                                            "visibility": "@{promo_method_banner_x_l_state == 'open' ? 'gone' : 'visible'}",
+                                            "width": {
+                                                "type": "fixed",
+                                                "value": 30
+                                            }
+                                        }
+                                    ],
+                                    "orientation": "horizontal",
+                                    "width": {
+                                        "type": "match_parent"
+                                    }
+                                },
+                                {
+                                    "type": "state",
+                                    "id": "buttons_selector",
+                                    "states": [
+                                        {
+                                            "state_id": "open",
+                                            "div": {
+                                                "type": "container",
+                                                "items": [
+                                                    {
+                                                        "type": "container",
+                                                        "items": [
+                                                            {
+                                                                "type": "container",
+                                                                "background": [
+                                                                    {
+                                                                        "colors": [
+                                                                            "#F45A61",
+                                                                            "#9546DB"
+                                                                        ],
+                                                                        "angle": 0,
+                                                                        "type": "gradient"
+                                                                    }
+                                                                ],
+                                                                "border": {
+                                                                    "corner_radius": 16
+                                                                },
+                                                                "height": {
+                                                                    "type": "wrap_content"
+                                                                },
+                                                                "items": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "action": {
+                                                                            "log_id": "payment_sdk_promo_method_banner_x_l_promo_method_item_banner",
+                                                                            "url": "promo-sdk://promo_method_banner_x_l/open_click"
+                                                                        },
+                                                                        "background": [
+                                                                            {
+                                                                                "type": "solid",
+                                                                                "color": "@{isLightTheme ? '#FFFFFF' : '#101217'}"
+                                                                            }
+                                                                        ],
+                                                                        "border": {
+                                                                            "corner_radius": 15
+                                                                        },
+                                                                        "font_size": 14,
+                                                                        "font_size_unit": "sp",
+                                                                        "font_weight": "bold",
+                                                                        "margins": {
+                                                                            "top": 1,
+                                                                            "bottom": 1,
+                                                                            "left": 1,
+                                                                            "right": 1
+                                                                        },
+                                                                        "paddings": {
+                                                                            "top": 6,
+                                                                            "bottom": 6,
+                                                                            "left": 16,
+                                                                            "right": 16
+                                                                        },
+                                                                        "text": "@{promo_method_banner_x_l_openCardText}",
+                                                                        "text_color": "@{isLightTheme ? '#DB000000' : '#E0FFFFFF'}",
+                                                                        "width": {
+                                                                            "type": "wrap_content"
+                                                                        }
+                                                                    }
+                                                                ],
+                                                                "width": {
+                                                                    "type": "wrap_content"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "width": {
+                                                            "type": "wrap_content"
+                                                        }
+                                                    }
+                                                ],
+                                                "paddings": {
+                                                    "unit": "dp",
+                                                    "right": 12,
+                                                    "left": 12
+                                                },
+                                                "orientation": "horizontal",
+                                                "layout_mode": "wrap",
+                                                "margins": {
+                                                    "unit": "dp",
+                                                    "top": 12,
+                                                    "bottom": 12
+                                                },
+                                                "content_alignment_horizontal": "right",
+                                                "separator": {
+                                                    "show_between": 1,
+                                                    "style": {
+                                                        "type": "shape_drawable",
+                                                        "color": "#00FFFFFF",
+                                                        "shape": {
+                                                            "type": "rounded_rectangle",
+                                                            "item_width": {
+                                                                "type": "fixed",
+                                                                "value": 16
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "state_id": "method",
+                                            "div": {
+                                                "type": "container",
+                                                "items": [
+                                                    {
+                                                        "type": "container",
+                                                        "items": [
+                                                            {
+                                                                "type": "container",
+                                                                "background": [
+                                                                    {
+                                                                        "colors": [
+                                                                            "#F45A61",
+                                                                            "#9546DB"
+                                                                        ],
+                                                                        "angle": 0,
+                                                                        "type": "gradient"
+                                                                    }
+                                                                ],
+                                                                "border": {
+                                                                    "corner_radius": 16
+                                                                },
+                                                                "height": {
+                                                                    "type": "wrap_content"
+                                                                },
+                                                                "items": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "action": {
+                                                                            "log_id": "payment_sdk_promo_method_banner_x_l_promo_method_item_banner",
+                                                                            "url": "promo-sdk://promo_method_banner_x_l/handle_click"
+                                                                        },
+                                                                        "background": [
+                                                                            {
+                                                                                "type": "solid",
+                                                                                "color": "@{isLightTheme ? '#FFFFFF' : '#101217'}"
+                                                                            }
+                                                                        ],
+                                                                        "border": {
+                                                                            "corner_radius": 15
+                                                                        },
+                                                                        "font_size": 14,
+                                                                        "font_size_unit": "sp",
+                                                                        "font_weight": "bold",
+                                                                        "margins": {
+                                                                            "top": 1,
+                                                                            "bottom": 1,
+                                                                            "left": 1,
+                                                                            "right": 1
+                                                                        },
+                                                                        "paddings": {
+                                                                            "top": 6,
+                                                                            "bottom": 6,
+                                                                            "left": 16,
+                                                                            "right": 16
+                                                                        },
+                                                                        "text": "@{promo_method_banner_x_l_handleCardText}",
+                                                                        "text_color": "@{isLightTheme ? '#DB000000' : '#E0FFFFFF'}",
+                                                                        "width": {
+                                                                            "type": "wrap_content"
+                                                                        }
+                                                                    }
+                                                                ],
+                                                                "width": {
+                                                                    "type": "wrap_content"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "width": {
+                                                            "type": "wrap_content"
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "container",
+                                                        "items": [
+                                                            {
+                                                                "type": "container",
+                                                                "background": [
+                                                                    {
+                                                                        "colors": [
+                                                                            "#F45A61",
+                                                                            "#9546DB"
+                                                                        ],
+                                                                        "angle": 0,
+                                                                        "type": "gradient"
+                                                                    }
+                                                                ],
+                                                                "border": {
+                                                                    "corner_radius": 16
+                                                                },
+                                                                "height": {
+                                                                    "type": "wrap_content"
+                                                                },
+                                                                "items": [
+                                                                    {
+                                                                        "type": "text",
+                                                                        "action": {
+                                                                            "log_id": "payment_sdk_promo_method_banner_x_l_promo_method_item_banner",
+                                                                            "url": "promo-sdk://promo_method_banner_x_l/top_up_click"
+                                                                        },
+                                                                        "background": [
+                                                                            {
+                                                                                "type": "solid",
+                                                                                "color": "@{isLightTheme ? '#FFFFFF' : '#101217'}"
+                                                                            }
+                                                                        ],
+                                                                        "border": {
+                                                                            "corner_radius": 15
+                                                                        },
+                                                                        "font_size": 14,
+                                                                        "font_size_unit": "sp",
+                                                                        "font_weight": "bold",
+                                                                        "margins": {
+                                                                            "top": 1,
+                                                                            "bottom": 1,
+                                                                            "left": 1,
+                                                                            "right": 1
+                                                                        },
+                                                                        "paddings": {
+                                                                            "top": 6,
+                                                                            "bottom": 6,
+                                                                            "left": 16,
+                                                                            "right": 16
+                                                                        },
+                                                                        "text": "@{promo_method_banner_x_l_topUpCardText}",
+                                                                        "text_color": "@{isLightTheme ? '#DB000000' : '#E0FFFFFF'}",
+                                                                        "width": {
+                                                                            "type": "wrap_content"
+                                                                        }
+                                                                    }
+                                                                ],
+                                                                "width": {
+                                                                    "type": "wrap_content"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "width": {
+                                                            "type": "wrap_content"
+                                                        }
+                                                    }
+                                                ],
+                                                "paddings": {
+                                                    "unit": "dp",
+                                                    "right": 12,
+                                                    "left": 12
+                                                },
+                                                "orientation": "horizontal",
+                                                "layout_mode": "wrap",
+                                                "margins": {
+                                                    "unit": "dp",
+                                                    "top": 12,
+                                                    "bottom": 12
+                                                },
+                                                "content_alignment_horizontal": "right",
+                                                "separator": {
+                                                    "show_between": 1,
+                                                    "style": {
+                                                        "type": "shape_drawable",
+                                                        "color": "#00FFFFFF",
+                                                        "shape": {
+                                                            "type": "rounded_rectangle",
+                                                            "item_width": {
+                                                                "type": "fixed",
+                                                                "value": 16
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "orientation": "vertical",
+                            "width": {
+                                "type": "match_parent"
+                            }
+                        }
+                    ],
+                    "orientation": "horizontal",
+                    "width": {
+                        "type": "match_parent"
+                    }
+                }
+            }
+        ]
+    }
+}

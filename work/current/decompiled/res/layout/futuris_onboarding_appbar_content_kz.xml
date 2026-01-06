@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/futuris_app_bar_content" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="scroll|snap"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/futuris_help_button_layout" />
+    <LinearLayout android:orientation="vertical" android:id="@id/futuris_onboarding_app_bar_scrollable_bottom" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent">
+        <com.yandex.alice.futuris.modeswitch.FuturisSearchappKzModeSwitch android:layout_gravity="center_horizontal" android:id="@id/futuris_onboarding_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginVertical="16.0dip" app:preselectedMode="neuro" />
+        <FrameLayout android:id="@id/futuris_onboarding_suggest_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include android:id="@id/futuris_onboarding_input" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/futuris_input_searchapp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

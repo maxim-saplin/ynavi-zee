@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="12.0dip" android:width="10.0dip" android:viewportWidth="10.0" android:viewportHeight="12.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@drawable/passport_tv_button_back_text_color" android:pathData="M0.4226,5.4216C0.2029,5.6414 0.2029,6.0076 0.4226,6.2273L5.1589,10.988C5.4031,11.2078 5.7693,11.2078 5.989,10.988L6.5505,10.4265C6.7703,10.2068 6.7703,9.8406 6.5505,9.5964L2.7908,5.8123L6.5505,2.0525C6.7703,1.8083 6.7703,1.4421 6.5505,1.2224L5.989,0.6609C5.7693,0.4412 5.4031,0.4412 5.1589,0.6609L0.4226,5.4216Z" />
+</vector>

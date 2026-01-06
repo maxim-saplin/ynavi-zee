@@ -1,0 +1,46 @@
+.class public final Lcom/yandex/alice/oknyx/animation/a0;
+.super Lcom/yandex/alice/oknyx/animation/b0;
+.source "SourceFile"
+
+
+# instance fields
+.field final synthetic c:Lcom/yandex/alice/oknyx/animation/c0;
+
+
+# direct methods
+.method public constructor <init>(Lcom/yandex/alice/oknyx/animation/c0;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/yandex/alice/oknyx/animation/a0;->c:Lcom/yandex/alice/oknyx/animation/c0;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b(FLcom/yandex/alice/oknyx/animation/c0;Lcom/yandex/alice/oknyx/animation/c0;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final d(Lcom/yandex/alice/oknyx/animation/c0;Lcom/yandex/alice/oknyx/animation/c0;)Z
+    .locals 0
+
+    iget-boolean p1, p1, Lcom/yandex/alice/oknyx/animation/c0;->a:Z
+
+    iget-boolean p2, p2, Lcom/yandex/alice/oknyx/animation/c0;->a:Z
+
+    if-eq p1, p2, :cond_0
+
+    iget-object p1, p0, Lcom/yandex/alice/oknyx/animation/a0;->c:Lcom/yandex/alice/oknyx/animation/c0;
+
+    iput-boolean p2, p1, Lcom/yandex/alice/oknyx/animation/c0;->a:Z
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method

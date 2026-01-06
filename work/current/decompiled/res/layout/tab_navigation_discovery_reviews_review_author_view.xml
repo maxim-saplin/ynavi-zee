@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/profile_container" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip">
+        <ru.yandex.yandexmaps.common.views.RoundedImageView android:id="@id/profile_image" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginBottom="4.0dip" android:scaleType="centerCrop" android:importantForAccessibility="no" android:layout_marginEnd="4.0dip" app:cornerRadius="@dimen/infinite" />
+        <ru.yandex.yandexmaps.tabnavigation.internal.discovery.shutter.review.TabNavigationReviewsReviewSubscriptionBadgeView android:layout_gravity="end|bottom" android:id="@id/subscription_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/profile_author_container" android:background="@drawable/tab_navigation_discover_review_card_ripple_rounded_transparent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:layout_weight="1.0" android:paddingStart="4.0dip" android:paddingEnd="0.0dip" android:layout_marginStart="8.0dip">
+        <TextView android:id="@id/caption_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:maxLines="1" android:singleLine="true" style="@style/Text14.Regular.Secondary" />
+        <TextView android:textColor="@color/text_primary" android:id="@id/title_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/Text16.Medium" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/details_container" android:padding="16.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/details" android:background="?selectableItemBackgroundBorderless" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/more_16" android:tint="@color/icons_additional" android:importantForAccessibility="no" />
+    </FrameLayout>
+</merge>

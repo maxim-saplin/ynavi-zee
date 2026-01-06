@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/reviews_aspect_button_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textDirection="ltr" style="@style/Text14.Medium" />
+        <ImageView android:id="@id/reviews_aspect_button_like_dislike" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/about_16" android:layout_marginStart="4.0dip" />
+    </LinearLayout>
+    <TextView android:id="@id/reviews_aspect_button_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text12" />
+</merge>

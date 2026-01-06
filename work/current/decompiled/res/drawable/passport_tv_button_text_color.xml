@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:color="@color/passport_tv_button_text_focused" />
+    <item android:color="@color/passport_tv_button_text" />
+</selector>

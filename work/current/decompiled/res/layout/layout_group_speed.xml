@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_gravity="center_vertical" android:id="@id/speedview_guidance" android:focusable="true" android:visibility="gone" android:clickable="true" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/layout_map_speed" />
+    <include android:layout_gravity="center_vertical" android:id="@id/speedlimitview_guidance" android:focusable="true" android:visibility="gone" android:clickable="true" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/speed_group_overlap" android:layout_toEndOf="@id/speedview_guidance" layout="@layout/layout_map_speedlimit" />
+</merge>

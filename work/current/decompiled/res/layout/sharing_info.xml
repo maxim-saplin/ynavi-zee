@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="4.0dip">
+        <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/location_stroke_24" app:tint="@color/icons_primary" />
+        <TextView android:textColor="@color/text_primary" android:id="@id/friend_card_as_subscriber_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" style="@style/Text16.Regular" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:paddingVertical="4.0dip">
+        <ru.yandex.yandexmaps.common.views.RoundedImageView android:id="@id/friend_card_avatar" android:layout_width="24.0dip" android:layout_height="24.0dip" app:cornerRadius="12.0dip" />
+        <TextView android:textColor="@color/text_primary" android:id="@id/friend_card_as_subscription_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" style="@style/Text16.Regular.TextPrimaryVariant" />
+    </LinearLayout>
+</merge>

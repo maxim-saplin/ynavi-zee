@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/view_taxi_suggest_item" android:background="@drawable/background_suggest_item" android:paddingTop="12.0dip" android:paddingBottom="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/suggest_item_height" android:paddingStart="12.0dip" android:paddingEnd="8.0dip" android:layout_marginEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="4.0dip">
+        <ru.yandex.yandexmaps.common.views.EllipsizingTextView android:textColor="@color/text_primary" android:id="@id/text_taxi_suggest_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200.0dip" android:minWidth="112.0dip" android:maxLines="2" style="@style/Text16.Medium" />
+        <TextView android:textColor="@color/text_primary" android:id="@id/text_taxi_suggest_eta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" style="@style/Text14" />
+    </LinearLayout>
+    <ru.yandex.yandexmaps.common.views.RoundedImageView android:layout_gravity="start|bottom" android:id="@id/image_taxi_suggest_tariff" android:layout_width="56.0dip" android:layout_height="32.0dip" android:src="@drawable/taxi_tariff_economy" />
+    <FrameLayout android:layout_gravity="end|bottom" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.common.views.RoundedImageView android:id="@id/image_taxi_suggest_pin_background" android:layout_width="41.0dip" android:layout_height="43.0dip" android:src="@drawable/taxi_suggest_pin" />
+        <ru.yandex.yandexmaps.common.views.RoundedImageView android:layout_gravity="center|top" android:id="@id/image_taxi_suggest_pin" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginTop="11.0dip" />
+    </FrameLayout>
+</FrameLayout>

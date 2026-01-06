@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/widgetsTooltipBubbleRoot" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/bubbleHolder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginHorizontal="4.0dip" android:layout_marginVertical="@dimen/bank_sdk_bubble_arrow_height" android:paddingHorizontal="@dimen/bank_sdk_bubble_text_horizontal_padding" android:paddingVertical="@dimen/bank_sdk_bubble_text_vertical_padding">
+        <TextView android:textColor="?bankColor_textIcon_primaryInverted" android:id="@id/bubbleTitleText" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:includeFontPadding="false" style="@style/Widget.Bank.Text.Title2" />
+        <TextView android:textColor="?bankColor_textIcon_primaryInverted" android:id="@id/bubbleSubtitleText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/Widget.Bank.Text.Body3" />
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:id="@id/bubbleLinkHolder" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textColor="?bankColor_textIcon_tetriaryInverted" android:ellipsize="end" android:id="@id/bubbleLinkText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:layout_weight="1.0" style="@style/Widget.Bank.Text.Body3" />
+            <ImageView android:layout_gravity="center" android:id="@id/bubbleLinkImage" android:visibility="gone" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginTop="1.0dip" android:layout_weight="0.0" android:contentDescription="@null" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center|top" android:id="@id/bubbleArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:srcCompat="@drawable/bank_sdk_tooltip_bubble_arrow" />
+</FrameLayout>

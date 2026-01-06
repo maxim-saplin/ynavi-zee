@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="@dimen/bank_sdk_item_transaction_error_height" android:paddingVertical="@dimen/bank_sdk_item_transaction_error_padding_vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:layout_gravity="center" android:layout_width="@dimen/bank_sdk_item_transaction_error_label_width" android:layout_height="wrap_content" android:text="@string/bank_sdk_dashboard_error_view_message" style="@style/Widget.Bank.Text.Title1" />
+    <com.yandex.bank.widgets.common.BankButtonView android:layout_gravity="center_horizontal" android:id="@id/refreshButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bank_sdk_item_transaction_error_button_margin_top" app:bank_sdk_buttonTitle="@string/bank_sdk_dashboard_button_reload" style="@style/BankSdk.Widget.WidgetsCommon.BankButtonView.Primary.M" />
+</LinearLayout>

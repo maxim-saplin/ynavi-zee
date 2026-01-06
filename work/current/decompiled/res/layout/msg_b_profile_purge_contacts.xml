@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Messaging.Settings.Item"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/purge_contacts_title" style="@style/Messaging.Settings.Text" />
+    <TextView android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/purge_contacts_subtitle" android:layout_below="@id/title" style="@style/Messaging.Settings.Text.Secondary" />
+    <com.yandex.alicekit.core.views.FixedProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="10.0dip" android:layout_below="@id/title" android:layout_alignParentStart="true" />
+</RelativeLayout>

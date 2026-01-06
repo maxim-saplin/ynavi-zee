@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@drawable/arrival_points_background_footer_gradient" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/done_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:generalButtonSize="big" app:text="@string/arrival_points_done_button_title" />
+    </FrameLayout>
+</merge>

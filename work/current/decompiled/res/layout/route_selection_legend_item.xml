@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/image_legend_background" android:layout_width="20.0dip" android:layout_height="20.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/image_legend_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <TextView android:layout_gravity="center_vertical" android:id="@id/text_legend_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip" style="@style/Text14.Medium.PrimaryVariant" />
+</merge>

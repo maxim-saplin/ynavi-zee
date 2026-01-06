@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:id="@id/bottomSheetDialogContainer" android:background="?bankColor_background_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+        <com.yandex.bank.widgets.common.ScrollableNestedScrollView android:id="@id/scrollContent" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constrainedHeight="true" app:layout_constraintBottom_toTopOf="@id/bottomSheetButtonsGroup" app:layout_constraintTop_toTopOf="parent">
+            <FrameLayout android:id="@id/bottomSheetContentContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" />
+        </com.yandex.bank.widgets.common.ScrollableNestedScrollView>
+        <include android:id="@id/grip" android:layout_width="@dimen/bank_sdk_grip_width" android:layout_height="@dimen/bank_sdk_grip_height" android:layout_marginTop="@dimen/bank_sdk_grip_margin_top" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/bank_sdk_grip_view" />
+        <Space android:id="@id/space" android:layout_width="0.0dip" android:layout_height="4.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/grip" />
+        <com.yandex.bank.widgets.common.BankButtonViewGroup android:id="@id/bottomSheetButtonsGroup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/scrollContent" app:layout_goneMarginBottom="16.0dip" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

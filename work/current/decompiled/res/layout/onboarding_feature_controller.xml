@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@color/onboarding_feature_screen_background_color" android:paddingBottom="@dimen/onboarding_button_vertical_margin" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="@dimen/onboarding_horizontal_interval">
+        <ru.yandex.yandexmaps.common.views.MaxFitSquareImageView android:layout_gravity="center|bottom" android:id="@id/feature_screen_image" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="24.0dip" android:layout_weight="1.0" />
+        <TextView android:gravity="center" android:id="@id/feature_screen_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" style="@style/OnBoardingTitleStyle" />
+        <TextView android:gravity="center|top" android:id="@id/feature_screen_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/onboarding_button_vertical_margin" style="@style/OnBoardingSubTitleStyle" />
+        <TextView android:id="@id/feature_screen_confirm_button" android:layout_marginBottom="8.0dip" style="@style/OnBoardingButton.Black" />
+        <TextView android:id="@id/feature_screen_decline_button" style="@style/OnBoardingButton.White" />
+    </LinearLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

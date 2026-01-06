@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="?music_sdk_helper_header_gradient_start" android:endColor="?music_sdk_helper_header_gradient_end" android:angle="0.0" android:type="linear" />
+</shape>

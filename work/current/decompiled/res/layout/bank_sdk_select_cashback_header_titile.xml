@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/bank_sdk_widget_view_big_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/cashbackTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.Bank.Text.Headline1" />
+    <TextView android:id="@id/cashbackDescription" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="16.0dip" style="@style/Widget.Bank.Text.Body2" />
+</LinearLayout>

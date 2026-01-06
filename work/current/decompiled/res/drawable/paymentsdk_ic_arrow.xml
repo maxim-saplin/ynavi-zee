@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:autoMirrored="true" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?paymentsdk_navigationArrowColor" android:pathData="M8.7964,16.7931L13.5863,12L8.7964,7.2069C8.406,6.8162 8.4062,6.183 8.7969,5.7927C9.1875,5.4023 9.8207,5.4025 10.2111,5.7931L15.7073,11.2931C16.0975,11.6836 16.0975,12.3164 15.7073,12.7069L10.2111,18.2069C9.8207,18.5975 9.1875,18.5977 8.7969,18.2073C8.4062,17.817 8.406,17.1838 8.7964,16.7931Z" />
+</vector>

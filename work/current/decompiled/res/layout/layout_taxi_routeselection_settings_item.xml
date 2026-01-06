@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:background="@color/bg_primary" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:layout_gravity="start|center" android:id="@id/text_taxi_routeselection_setting_title" android:paddingTop="1.0dip" android:paddingBottom="1.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1.0" android:layout_marginEnd="16.0dip" style="@style/Text16.TextPrimary" />
+        <ImageView android:layout_gravity="end|center" android:id="@id/image_taxi_routeselection_setting" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SettingsTheme" android:layout_gravity="end|center" android:id="@id/switch_taxi_routeselection_setting" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:ellipsize="end" android:id="@id/text_taxi_routeselection_setting_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="2" style="@style/Text14.TextSecondary" />
+</merge>

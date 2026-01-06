@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/plus_sdk_black_alpha_05"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/plus_sdk_mu_2" />
+            <solid android:color="?plus_sdk_buttonBackgroundColor" />
+        </shape>
+    </item>
+</ripple>

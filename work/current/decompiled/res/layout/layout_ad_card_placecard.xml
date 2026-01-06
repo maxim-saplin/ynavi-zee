@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.multiplatform.ad.card.impl.banner.AdBannerView android:id="@id/banner" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/shutter_horizontal_padding" style="@style/ShutterCommonLayoutParams" />
+    <ru.yandex.yandexmaps.uikit.shutter.ShutterView android:id="@id/shutter" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/ShutterCommonLayoutParams" />
+</merge>

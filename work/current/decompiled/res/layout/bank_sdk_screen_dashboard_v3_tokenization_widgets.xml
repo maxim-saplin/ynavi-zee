@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:id="@id/loadingShimmer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.yandex.bank.widgets.common.SkeletonView android:id="@id/skeletonview1" android:layout_width="24.0dip" android:layout_height="24.0dip" app:bank_sdk_cornerRadius="12.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:id="@id/skeletonview2" android:layout_width="233.0dip" android:layout_height="13.0dip" android:layout_marginTop="6.0dip" app:bank_sdk_cornerRadius="7.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:id="@id/skeletonview3" android:layout_width="116.0dip" android:layout_height="13.0dip" android:layout_marginTop="4.0dip" app:bank_sdk_cornerRadius="7.0dip" />
+        </LinearLayout>
+    </com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>
+</merge>

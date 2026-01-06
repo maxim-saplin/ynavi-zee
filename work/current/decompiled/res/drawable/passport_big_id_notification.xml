@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="96.0dip" android:width="96.0dip" android:viewportWidth="48.0" android:viewportHeight="48.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M24,0L24,0A24,24 0,0 1,48 24L48,24A24,24 0,0 1,24 48L24,48A24,24 0,0 1,0 24L0,24A24,24 0,0 1,24 0z" />
+        <path android:fillColor="@color/passport_logout_brand_background" android:pathData="M48,24C48,43.205 43.205,48 24,48C4.795,48 0,43.205 0,24C0,4.795 4.795,0 24,0C43.205,0 48,4.795 48,24Z" />
+        <group>
+            <path android:fillColor="@color/passport_logout_on_brand_background" android:pathData="M16.687,10.307V37.692H11.925V10.307H16.687Z" />
+            <path android:fillColor="@color/passport_logout_on_brand_background" android:pathData="M27.392,10.307C29.198,10.307 30.872,10.536 32.416,11.029C33.959,11.489 35.272,12.277 36.389,13.327C37.505,14.378 38.392,15.79 39.015,17.498C39.672,19.205 39.968,21.339 39.968,23.868C39.968,26.101 39.639,28.071 39.015,29.811C38.359,31.518 37.472,32.963 36.323,34.145C35.174,35.327 33.795,36.214 32.218,36.805C30.642,37.396 28.869,37.725 26.997,37.725H20.989V10.307H27.424H27.392ZM26.604,33.981C27.884,33.981 29.066,33.751 30.117,33.325C31.168,32.898 32.054,32.241 32.81,31.42C33.565,30.566 34.123,29.515 34.55,28.235C34.944,26.954 35.174,25.477 35.174,23.769C35.174,21.93 34.977,20.387 34.583,19.139C34.189,17.892 33.63,16.874 32.908,16.118C32.186,15.363 31.332,14.805 30.314,14.477C29.329,14.148 28.212,13.984 26.997,13.984H25.75V33.948H26.604V33.981Z" />
+        </group>
+    </group>
+</vector>

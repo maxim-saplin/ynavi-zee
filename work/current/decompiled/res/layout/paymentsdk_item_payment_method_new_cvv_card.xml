@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/paymentsdk_item_payment_method" />
+    <FrameLayout android:id="@id/cvn_view" android:layout_width="90.0dip" android:layout_height="wrap_content" android:layout_marginStart="64.0dip" />
+</LinearLayout>

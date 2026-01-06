@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center_horizontal" android:id="@id/image_award_details_badge_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
+        <ImageView android:id="@id/image_award_details_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:id="@id/text_award_year" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="44.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/Text16.Medium.PermanentBlack" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/text_award_details_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" style="@style/Text20.Medium.TextPrimary" />
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/text_award_details_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="center" style="@style/Text16.TextPrimaryVariant" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="center_horizontal" android:id="@id/button_award_details_more_details" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:generalButtonSize="big" app:generalButtonStyle="secondaryBlue" app:text="@string/award_details_dialog_button_more_details" />
+</merge>

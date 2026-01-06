@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="start|center" android:orientation="vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/PaymentSdkPrebuiltTextAppearance.Hint" android:id="@id/paymentsdk_prebuilt_cvn_input_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/paymentsdk_prebuilt_code_input_title" />
+    <EditText android:textAppearance="@style/PaymentSdkPrebuiltTextAppearance.TextInput" android:textColor="?paymentsdk_prebuilt_cardNumberTextColor" android:textColorHint="?paymentsdk_prebuilt_cardNumberPlaceholderColor" android:id="@id/paymentsdk_prebuilt_cvn_input_text" android:background="@android:color/transparent" android:paddingTop="@dimen/paymentsdk_prebuilt_card_input_field_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/paymentsdk_prebuilt_card_cvn_hint" android:inputType="numberPassword" android:imeOptions="actionDone|flagNoExtractUi" android:textCursorDrawable="@drawable/paymentsdk_text_cursor" android:autofillHints="" />
+</merge>

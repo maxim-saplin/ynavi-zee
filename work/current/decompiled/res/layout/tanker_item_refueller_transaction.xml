@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="@dimen/tanker_basic_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="3.0">
+        <TextView android:textSize="@dimen/tanker_small_text_size" android:textColor="@color/tanker_text_primary" android:ellipsize="end" android:id="@id/titleTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" style="@style/TankerTextRegular" />
+        <TextView android:textSize="@dimen/tanker_text_size_13" android:textColor="@color/tanker_textColorAlpha40" android:ellipsize="end" android:id="@id/subtitleTv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:lines="1" style="@style/TankerTextRegular" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/tanker_small_text_size" android:textColor="@color/tanker_text_primary" android:gravity="end" android:id="@id/sumTv" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/TankerTextRegular" />
+        <TextView android:textSize="@dimen/tanker_text_size_13" android:textColor="@color/tanker_textColorAlpha40" android:gravity="end" android:id="@id/commissionTv" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" style="@style/TankerTextRegular" />
+    </LinearLayout>
+</LinearLayout>

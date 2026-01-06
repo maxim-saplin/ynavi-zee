@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bw_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.designsystem.loader.LoaderView android:layout_gravity="center" android:id="@id/loading_progress_view" android:layout_width="48.0dip" android:layout_height="48.0dip" app:ymaps_goneWhenNotInProgress="true" app:ymaps_inProgress="false" app:ymaps_progressSize="large" />
+    <com.bluelinelabs.conductor.ChangeHandlerFrameLayout android:id="@id/main_screen_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.bluelinelabs.conductor.ChangeHandlerFrameLayout android:id="@id/slave_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

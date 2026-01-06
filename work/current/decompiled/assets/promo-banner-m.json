@@ -1,0 +1,182 @@
+{
+    "templates": {},
+    "card": {
+        "log_id": "payment_sdk_card",
+        "variables": [
+            {
+                "type": "string",
+                "name": "promo_banner_m_description",
+                "value": "Откройте карту и оплачивайте топливо со скидкой"
+            },
+            {
+                "type": "string",
+                "name": "promo_banner_m_buttonText",
+                "value": ""
+            },
+            {
+                "type": "string",
+                "name": "promo_banner_m_image",
+                "value": ""
+            },
+            {
+                "type": "string",
+                "name": "promo_banner_m_backgroundImage",
+                "value": ""
+            }
+        ],
+        "states": [
+            {
+                "state_id": 0,
+                "div": {
+                    "type": "container",
+                    "background": [
+                        {
+                            "image_url": "@{promo_banner_m_backgroundImage}",
+                            "type": "image"
+                        }
+                    ],
+                    "border": {
+                        "corner_radius": 16
+                    },
+                    "height": {
+                        "type": "wrap_content"
+                    },
+                    "items": [
+                        {
+                            "type": "image",
+                            "height": {
+                                "unit": "dp",
+                                "type": "fixed",
+                                "value": 40
+                            },
+                            "image_url": "@{promo_banner_m_image}",
+                            "margins": {
+                                "top": 12,
+                                "bottom": 12,
+                                "right": 8,
+                                "left": 12
+                            },
+                            "width": {
+                                "unit": "dp",
+                                "type": "fixed",
+                                "value": 54
+                            }
+                        },
+                        {
+                            "type": "container",
+                            "height": {
+                                "type": "match_parent"
+                            },
+                            "items": [
+                                {
+                                    "type": "text",
+                                    "font_size": 12,
+                                    "font_size_unit": "sp",
+                                    "font_weight": "bold",
+                                    "height": {
+                                        "type": "match_parent"
+                                    },
+                                    "text": "@{promo_banner_m_description}",
+                                    "text_alignment_vertical": "center",
+                                    "text_color": "#fff",
+                                    "width": {
+                                        "type": "match_parent",
+                                        "weight": 3
+                                    }
+                                },
+                                {
+                                    "type": "container",
+                                    "alignment_vertical": "center",
+                                    "items": [
+                                        {
+                                            "type": "container",
+                                            "background": [
+                                                {
+                                                    "colors": [
+                                                        "#9E8CF4",
+                                                        "#775EF1",
+                                                        "#786CF1"
+                                                    ],
+                                                    "angle": 270,
+                                                    "type": "gradient"
+                                                }
+                                            ],
+                                            "border": {
+                                                "corner_radius": 16
+                                            },
+                                            "height": {
+                                                "type": "wrap_content"
+                                            },
+                                            "items": [
+                                                {
+                                                    "type": "text",
+                                                    "action": {
+                                                        "log_id": "payment_sdk_promo_banner_m_promo_banner_m",
+                                                        "url": "promo-sdk://promo_banner_m/open_click"
+                                                    },
+                                                    "background": [
+                                                        {
+                                                            "colors": [
+                                                                "#705df0",
+                                                                "#705df0"
+                                                            ],
+                                                            "angle": 0,
+                                                            "type": "gradient"
+                                                        }
+                                                    ],
+                                                    "border": {
+                                                        "corner_radius": 15
+                                                    },
+                                                    "font_size": 12,
+                                                    "font_size_unit": "sp",
+                                                    "font_weight": "bold",
+                                                    "margins": {
+                                                        "top": 1,
+                                                        "bottom": 1,
+                                                        "left": 1,
+                                                        "right": 1
+                                                    },
+                                                    "paddings": {
+                                                        "top": 8,
+                                                        "bottom": 8,
+                                                        "left": 16,
+                                                        "right": 16
+                                                    },
+                                                    "text": "@{promo_banner_m_buttonText}",
+                                                    "text_color": "#fff",
+                                                    "width": {
+                                                        "type": "wrap_content"
+                                                    }
+                                                }
+                                            ],
+                                            "width": {
+                                                "type": "wrap_content"
+                                            }
+                                        }
+                                    ],
+                                    "margins": {
+                                        "top": 16,
+                                        "bottom": 16,
+                                        "left": 16,
+                                        "right": 16
+                                    },
+                                    "width": {
+                                        "type": "wrap_content"
+                                    }
+                                }
+                            ],
+                            "orientation": "horizontal",
+                            "width": {
+                                "type": "match_parent"
+                            }
+                        }
+                    ],
+                    "orientation": "horizontal",
+                    "width": {
+                        "type": "match_parent"
+                    }
+                }
+            }
+        ]
+    }
+}

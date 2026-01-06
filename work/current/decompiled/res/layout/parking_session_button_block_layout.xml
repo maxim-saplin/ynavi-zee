@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/parking_end_extend_buttons" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/end_session_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="4.0dip" app:generalButtonSize="large" app:generalButtonStyle="transaction" app:text="@string/parking_payment_session_action_finish" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/extend_session_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="4.0dip" app:generalButtonSize="large" app:generalButtonStyle="transaction" app:text="@string/parking_payment_session_action_extend" />
+    </LinearLayout>
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/parking_interaction_button" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:generalButtonSize="large" app:generalButtonStyle="transaction" />
+</merge>

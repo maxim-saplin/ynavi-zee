@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/participants_count_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/channel_info_participants_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/chat_info_participants" style="@style/Messaging.Settings.Item.Text" />
+    <TextView android:textSize="16.0sp" android:textColor="?messagingCommonTextSecondaryColor" android:gravity="center_vertical" android:layout_gravity="right" android:id="@id/channel_info_participants_count" android:layout_width="wrap_content" android:layout_height="@dimen/chat_info_default_item_height" android:layout_marginRight="15.0dip" android:text="@string/chat_info_participants" />
+</FrameLayout>

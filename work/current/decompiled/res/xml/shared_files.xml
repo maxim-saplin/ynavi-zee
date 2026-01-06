@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path name="@string/contact_developers_attachment_filename" path="about/" />
+    <external-files-path name="places" path="Pictures/places/" />
+    <cache-path name="images" path="images/" /> / <root-path name="root" path="." />
+    <external-files-path name="profiler" path="ux_profiler/" />
+    <files-path name="profiler_internal" path="ux_profiler/" />
+</paths>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?tankerBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.tankerapp.android.sdk.navigator.view.widgets.TitleHeaderView android:id="@id/tankerHeaderView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ru.tankerapp.android.sdk.navigator.view.widgets.webview.WebViewWrapper android:id="@id/tankerWebViewWrapper" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/tankerBtnContainer" app:layout_constraintTop_toBottomOf="@id/tankerHeaderView" />
+    <FrameLayout android:id="@id/tankerBtnContainer" android:background="?tankerBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent">
+        <Button android:id="@id/tankerActionBtn" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_margin="@dimen/tanker_basic_padding" style="@style/TankerButtonDarkStyle" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

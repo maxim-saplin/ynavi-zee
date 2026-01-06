@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:id="@id/dialog_feedback" android:title="@string/dialog_toolbar_feedback" />
+        <item android:id="@id/dialog_clear_history" android:title="@string/dialog_toolbar_clear_history" />
+    </group>
+</menu>

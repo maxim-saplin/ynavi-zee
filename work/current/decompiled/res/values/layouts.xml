@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="layout" name="carpark_loading_error">@layout/place_card_searching_error</item>
+</resources>

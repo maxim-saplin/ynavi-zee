@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/simulation_list_item_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.designsystem.items.general.GeneralItemView android:id="@id/simulation_panel_general_item" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="@dimen/eats_collapsed_height">
+        <include android:id="@id/service_logo_container" layout="@layout/eats_part_logo" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="12.0dip">
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/eats_text_size_caption" android:textColor="?textMinor" android:gravity="end" android:id="@id/header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/eats_text_size_caption" android:textColor="?textMinor" android:ellipsize="end" android:gravity="end" android:id="@id/header_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

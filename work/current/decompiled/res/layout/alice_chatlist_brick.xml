@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bricks.BrickSlotView android:id="@id/chat_list_auth_slot" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <com.yandex.bricks.BrickSlotView android:layout_gravity="top" android:id="@id/chat_list_toolbar_slot" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_top_handler_margin" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/chat_list_recycler_view" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/chat_list_toolbar_slot" />
+</RelativeLayout>

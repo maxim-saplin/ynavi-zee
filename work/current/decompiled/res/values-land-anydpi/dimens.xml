@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="media_browser_tech_screen_margin_vertical">@dimen/media_browser_tech_screen_margin_vertical_small</item>
+</resources>

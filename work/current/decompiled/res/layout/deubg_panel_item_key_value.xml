@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/DebugPanelText.Body2" />
+    <TextView android:gravity="center_vertical" android:id="@id/item_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/debug_panel_space_small_extra" style="@style/DebugPanelText.Body1" />
+    <TextView android:id="@id/item_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/DebugPanelText.Body2" />
+</LinearLayout>

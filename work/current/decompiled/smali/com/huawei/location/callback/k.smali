@@ -1,0 +1,210 @@
+.class public final Lcom/huawei/location/callback/k;
+.super Lcom/huawei/location/callback/h;
+.source "SourceFile"
+
+
+# instance fields
+.field private h:Landroid/location/Location;
+
+.field private i:Landroid/location/Location;
+
+
+# direct methods
+.method public constructor <init>(Lcom/huawei/hms/support/api/entity/location/updates/RequestLocationUpdatesRequest;Lcom/huawei/location/callback/j;)V
+    .locals 2
+
+    invoke-direct {p0}, Lcom/huawei/location/callback/h;-><init>()V
+
+    new-instance v0, Ljc/b;
+
+    invoke-direct {v0}, Ljc/b;-><init>()V
+
+    const-string v1, "Location_locationCallback"
+
+    invoke-virtual {v0, v1}, Ljc/b;->h(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/huawei/hms/support/api/entity/location/common/LocationBaseRequest;->getTid()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljc/b;->a(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/huawei/location/callback/h;->e:Ljc/b;
+
+    iput-object p2, p0, Lcom/huawei/location/callback/h;->a:Lcom/huawei/location/callback/j;
+
+    iput-object p1, p0, Lcom/huawei/location/callback/h;->f:Lcom/huawei/hms/support/api/entity/location/updates/RequestLocationUpdatesRequest;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final g(Landroid/os/Bundle;)V
+    .locals 3
+
+    new-instance v0, Ltc/b;
+
+    invoke-direct {v0, p1}, Ltc/b;-><init>(Landroid/os/Bundle;)V
+
+    invoke-virtual {v0}, Ltc/b;->f()Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/huawei/hms/location/HwLocationResult;
+
+    invoke-virtual {p0, p1}, Lcom/huawei/location/callback/h;->a(Lcom/huawei/hms/location/HwLocationResult;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lcom/huawei/hms/location/HwLocationResult;->getLocation()Landroid/location/Location;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "handlerFuesdLocation, location provider is "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/location/Location;->getProvider()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "HwFusedCallback"
+
+    invoke-static {v2, v1}, Lub/b;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/location/Location;->getProvider()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "gps"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Landroid/location/Location;
+
+    invoke-direct {v1, v0}, Landroid/location/Location;-><init>(Landroid/location/Location;)V
+
+    iput-object v1, p0, Lcom/huawei/location/callback/k;->h:Landroid/location/Location;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v1, Landroid/location/Location;
+
+    invoke-direct {v1, v0}, Landroid/location/Location;-><init>(Landroid/location/Location;)V
+
+    iput-object v1, p0, Lcom/huawei/location/callback/k;->i:Landroid/location/Location;
+
+    :goto_0
+    iget-object v0, p0, Lcom/huawei/location/callback/k;->h:Landroid/location/Location;
+
+    iget-object v1, p0, Lcom/huawei/location/callback/k;->i:Landroid/location/Location;
+
+    invoke-static {v0, v1}, Lcom/huawei/location/callback/h;->e(Landroid/location/Location;Landroid/location/Location;)Landroid/location/Location;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/huawei/location/callback/h;->k(Landroid/location/Location;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p1, v0}, Lcom/huawei/hms/location/HwLocationResult;->setLocation(Landroid/location/Location;)V
+
+    invoke-virtual {p0, p1}, Lcom/huawei/location/callback/h;->h(Lcom/huawei/hms/location/HwLocationResult;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public final j(ZZ)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Lcom/huawei/location/callback/h;->i(Z)V
+
+    return-void
+.end method
+
+.method public final onLocationChanged(Landroid/location/Location;)V
+    .locals 2
+
+    const-string v0, "fused gnss location successful"
+
+    const-string v1, "HwFusedCallback"
+
+    invoke-static {v1, v0}, Lub/b;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/huawei/location/callback/h;->f:Lcom/huawei/hms/support/api/entity/location/updates/RequestLocationUpdatesRequest;
+
+    invoke-static {v0}, Lcom/huawei/location/b;->B(Lcom/huawei/hms/support/api/entity/location/updates/RequestLocationUpdatesRequest;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    invoke-static {}, Lcom/huawei/location/logic/d;->e()Lcom/huawei/location/logic/d;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/huawei/location/callback/h;->f:Lcom/huawei/hms/support/api/entity/location/updates/RequestLocationUpdatesRequest;
+
+    invoke-virtual {v0}, Lcom/huawei/hms/support/api/entity/location/updates/RequestLocationUpdatesRequest;->getUuid()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/huawei/location/logic/d;->h(Ljava/lang/String;)V
+
+    const-string p1, "request expiration and remove"
+
+    invoke-static {v1, p1}, Lub/b;->e(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Lcom/huawei/location/lite/common/exception/LocationServiceException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const-string p1, "throw locationServiceException"
+
+    invoke-static {v1, p1}, Lub/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    new-instance v0, Lcom/huawei/hms/location/HwLocationResult;
+
+    invoke-direct {v0}, Lcom/huawei/hms/location/HwLocationResult;-><init>()V
+
+    invoke-virtual {v0, p1}, Lcom/huawei/hms/location/HwLocationResult;->setLocation(Landroid/location/Location;)V
+
+    invoke-virtual {p0, v0}, Lcom/huawei/location/callback/h;->b(Lcom/huawei/hms/location/HwLocationResult;)V
+
+    return-void
+.end method

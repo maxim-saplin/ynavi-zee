@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="@dimen/guidance_menu_item_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/control_traffic_image" android:background="@drawable/guidance_menu_item_background" android:layout_width="64.0dip" android:layout_height="64.0dip" android:scaleType="center" app:srcCompat="@drawable/traffic_off_24" />
+    <TextView android:layout_gravity="center|bottom" android:id="@id/control_traffic_text" android:paddingTop="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/GuidanceMenuItem" />
+</LinearLayout>

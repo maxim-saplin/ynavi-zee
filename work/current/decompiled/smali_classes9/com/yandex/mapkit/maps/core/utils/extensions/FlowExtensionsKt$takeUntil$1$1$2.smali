@@ -1,0 +1,165 @@
+.class final synthetic Lcom/yandex/mapkit/maps/core/utils/extensions/FlowExtensionsKt$takeUntil$1$1$2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlinx/coroutines/flow/i;
+.implements Lkotlin/jvm/internal/h;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/yandex/mapkit/maps/core/utils/extensions/FlowExtensionsKt$takeUntil$1$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1001
+    name = null
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    k = 0x3
+    mv = {
+        0x2,
+        0x0,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic $tmp0:Lkotlinx/coroutines/flow/i;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlinx/coroutines/flow/i;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lkotlinx/coroutines/flow/i;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlinx/coroutines/flow/i;",
+            ")V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/yandex/mapkit/maps/core/utils/extensions/FlowExtensionsKt$takeUntil$1$1$2;->$tmp0:Lkotlinx/coroutines/flow/i;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;",
+            "Lkotlin/coroutines/Continuation<",
+            "-",
+            "Lm31/d0;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/yandex/mapkit/maps/core/utils/extensions/FlowExtensionsKt$takeUntil$1$1$2;->$tmp0:Lkotlinx/coroutines/flow/i;
+
+    invoke-interface {v0, p1, p2}, Lkotlinx/coroutines/flow/i;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Lm31/d0;->a:Lm31/d0;
+
+    return-object p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    instance-of v0, p1, Lkotlinx/coroutines/flow/i;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    instance-of v0, p1, Lkotlin/jvm/internal/h;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p0}, Lkotlin/jvm/internal/h;->getFunctionDelegate()Lm31/f;
+
+    move-result-object v0
+
+    check-cast p1, Lkotlin/jvm/internal/h;
+
+    invoke-interface {p1}, Lkotlin/jvm/internal/h;->getFunctionDelegate()Lm31/f;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    :cond_0
+    return v1
+.end method
+
+.method public final getFunctionDelegate()Lm31/f;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lm31/f;"
+        }
+    .end annotation
+
+    new-instance v7, Lkotlin/jvm/internal/FunctionReferenceImpl;
+
+    iget-object v2, p0, Lcom/yandex/mapkit/maps/core/utils/extensions/FlowExtensionsKt$takeUntil$1$1$2;->$tmp0:Lkotlinx/coroutines/flow/i;
+
+    const/4 v1, 0x2
+
+    const-class v3, Lkotlinx/coroutines/flow/i;
+
+    const-string v4, "emit"
+
+    const-string v5, "emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
+
+    const/4 v6, 0x0
+
+    move-object v0, v7
+
+    invoke-direct/range {v0 .. v6}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    return-object v7
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-interface {p0}, Lkotlin/jvm/internal/h;->getFunctionDelegate()Lm31/f;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method

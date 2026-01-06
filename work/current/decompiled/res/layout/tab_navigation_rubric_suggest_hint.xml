@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="24.0dip" android:paddingBottom="24.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/tab_navigation_rubric_suggest_hint_divider" android:showDividers="middle" android:dividerPadding="1.0dip">
+        <TextView android:textAppearance="@style/Text16.Medium.PermanentWhite" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/onboarding_hint_rubric_suggests" android:layout_weight="1.0" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/tab_naviagtion_rubric_suggest_hint_btn_ok" android:background="@drawable/tab_navigation_rubric_suggest_hint_button_background" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_ok_button" android:textAllCaps="true" android:paddingStart="18.0dip" android:paddingEnd="18.0dip" android:layout_marginStart="6.0dip" android:layout_marginEnd="6.0dip" android:letterSpacing="@dimen/common_text_all_caps_spacing" style="@style/Text16.Medium.PermanentWhite" />
+    </LinearLayout>
+</merge>

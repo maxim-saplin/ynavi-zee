@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/background_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="8.0dip" android:paddingEnd="16.0dip" android:paddingVertical="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Experimental config values" android:maxLines="1" style="@style/Text12.TextSecondary" />
+        <TextView android:ellipsize="end" android:id="@id/debug_panel_experiment_list_item_test_buckets_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" style="@style/Text16.TextPrimary" />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatTextView android:layout_gravity="center_vertical" android:id="@id/debug_panel_experiment_list_item_test_buckets_show_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="8.0dip" android:layout_marginStart="16.0dip" app:drawableEndCompat="@drawable/arrow_right_8" style="@style/Text16.TextSecondary" />
+</LinearLayout>

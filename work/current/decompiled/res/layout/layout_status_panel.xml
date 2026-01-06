@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexnavi.ui.guidance.StatusPanelTextViewImpl android:id="@id/status_panel_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextStatusPanel" />
+    <ru.yandex.yandexnavi.ui.guidance.StatusPanelLineViewImpl android:gravity="center" android:orientation="horizontal" android:id="@id/status_panel_lanes" android:background="@drawable/statuspanel_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="42.0dip" />
+</merge>

@@ -1,0 +1,13 @@
+<!-- Copyright (c) 2022 Yandex LLC. All rights reserved. -->
+<!-- Author: Yaroslav Boyarinov <yboyarinov@yandex-team.ru> -->
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <animateTransform
+            dur="1.6s"
+            type="scale"
+            keyTimes="0;0.4947917;1"
+            values="0.88 0.88;1.04 1.04;0.88 0.88"
+            keySplines="0.333 0 0.667 1;0.333 0 0.667 1" />
+    </defs>
+</svg>

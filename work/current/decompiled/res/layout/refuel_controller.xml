@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:id="@id/refuel_container_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/refuel_container" android:tag="@string/change_handler_bottom_panel_tag" android:background="@drawable/background_white_black_with_top_rounded_corners" android:clickable="true" android:layout_width="@dimen/refuel_card_width" android:layout_height="@dimen/refuel_card_height" android:layout_marginTop="@dimen/refuel_card_margin_top" android:layout_marginStart="@dimen/refuel_card_margin_left" android:elevation="4.0dip" />
+    </FrameLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

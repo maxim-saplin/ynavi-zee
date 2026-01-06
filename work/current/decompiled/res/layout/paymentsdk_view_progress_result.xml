@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_horizontal" android:orientation="vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="start|top" android:id="@id/brand_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" app:srcCompat="?paymentsdk_brandIcon" />
+        <ImageView android:layout_gravity="end|top" android:id="@id/exitButtonView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginEnd="16.0dip" app:srcCompat="?paymentsdk_closeIcon" />
+    </FrameLayout>
+    <ProgressBar android:id="@id/progress_bar" android:layout_width="@dimen/paymentsdk_progress_size" android:layout_height="@dimen/paymentsdk_progress_size" android:layout_marginTop="32.0dip" android:indeterminateDrawable="@drawable/paymentsdk_progress" android:indeterminateTint="?paymentsdk_progressBarColor" android:indeterminateTintMode="src_in" />
+    <ImageView android:id="@id/result_image" android:layout_width="@dimen/paymentsdk_progress_size" android:layout_height="@dimen/paymentsdk_progress_size" android:layout_marginTop="32.0dip" />
+    <TextView android:textSize="20.0sp" android:textColor="?android:textColorPrimary" android:gravity="center" android:layout_gravity="start" android:id="@id/result_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <TextView android:textSize="14.0sp" android:textColor="?android:textColorSecondary" android:gravity="center" android:layout_gravity="start" android:id="@id/result_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <com.yandex.payment.sdk.ui.view.payment.PaymentButtonView android:id="@id/close_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+</merge>

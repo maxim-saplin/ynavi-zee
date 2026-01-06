@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/dropdown_menu_item_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/dropdown_menu_item_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginHorizontal="16.0dip" android:layout_marginVertical="8.0dip" app:tint="@color/icons_primary" />
+        <TextView android:id="@id/dropdown_menu_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="textStart" android:paddingEnd="16.0dip" android:paddingVertical="12.0dip" style="@style/Text14.Medium.TextPrimary" />
+    </LinearLayout>
+</merge>

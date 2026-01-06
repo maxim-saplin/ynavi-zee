@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?bankColor_textIcon_quaternaryInverted" />
+    <corners android:radius="@dimen/bank_sdk_cornerradius_nfc_card_badge_background" />
+</shape>

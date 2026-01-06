@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/futuris_chat_list_item_content" android:background="@drawable/futuris_chat_list_item_text_background" android:padding="8.0dip" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/futuris_chat_list_item_query_container" android:paddingTop="3.0dip" android:paddingBottom="4.0dip" android:focusable="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:paddingStart="8.0dip" app:layout_constraintBottom_toTopOf="@id/futuris_chat_list_item_image_container" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <include layout="@layout/chat_list_text_futuris" />
+        </FrameLayout>
+        <androidx.cardview.widget.CardView android:id="@id/futuris_chat_list_item_image_container" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardCornerRadius="14.0dip" app:cardElevation="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/futuris_chat_list_item_query_container">
+            <ru.yandex.searchplugin.dialog.ui.FixedSizeImageView android:id="@id/futuris_chat_list_item_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerCrop" android:maxWidth="180.0dip" android:maxHeight="180.0dip" android:minWidth="145.0dip" android:minHeight="120.0dip" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

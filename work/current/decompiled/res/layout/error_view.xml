@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageButton android:layout_gravity="start|center" android:id="@id/error_clear" android:background="@null" android:tint="@color/icons_color_bg" app:srcCompat="@drawable/cross_24" style="@style/CommonImageButton" />
+    <TextView android:layout_gravity="center" android:id="@id/error_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_search_error" android:maxLines="2" android:layout_weight="1.0" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" style="@style/Text14.Medium.PermanentWhite" />
+    <ImageButton android:layout_gravity="end|center" android:id="@id/error_retry" android:background="@null" android:tint="@color/icons_color_bg" app:srcCompat="@drawable/reload_24" style="@style/CommonImageButton" />
+</merge>

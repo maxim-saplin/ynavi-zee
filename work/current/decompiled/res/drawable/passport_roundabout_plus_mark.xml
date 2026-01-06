@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="22.0dip" android:width="118.0dip" android:viewportWidth="118.0" android:viewportHeight="22.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$passport_roundabout_plus_mark__0" android:pathData="M0,11C0,4.92 4.92,0 11,0H107C113.07,0 118,4.92 118,11C118,17.08 113.07,22 107,22H11C4.92,22 0,17.08 0,11Z" />
+    <path android:fillColor="#ff262633" android:pathData="M12,16C14.76,16 17,13.76 17,11C17,10.89 17,10.78 16.99,10.68H14.18L13.53,13.76H12.08L12.74,10.68H9.85L10.15,9.35H13.02L13.66,6.28C13.14,6.1 12.58,6 12,6C9.24,6 7,8.24 7,11C7,13.76 9.24,16 12,16ZM14.97,6.98C15.77,7.57 16.39,8.39 16.72,9.35H14.47L14.97,6.98Z" android:fillType="evenOdd" />
+</vector>

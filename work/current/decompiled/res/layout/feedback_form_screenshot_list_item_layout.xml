@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/feedbackFormScreenshotListItemLayout" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView android:theme="@style/Theme.MaterialComponents.Light" android:id="@id/feedbackFormScreenshotListItemCardView" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="12.0dip" android:checkable="true" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" app:cardCornerRadius="24.0dip" app:cardElevation="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="W,1:1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/feedbackFormScreenshotListItemCardViewLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/feedbackFormScreenshotListItemImageView" android:layout_width="0.0dip" android:layout_height="0.0dip" android:scaleType="centerCrop" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@android:drawable/presence_audio_online" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <FrameLayout android:id="@id/feedbackFormScreenshotListItemCloseButton" android:background="@drawable/feedback_round_button" android:layout_width="24.0dip" android:layout_height="24.0dip" android:elevation="8.0dip" android:outlineProvider="none" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/feedbackFormScreenshotListItemCloseButtonIcon" android:layout_width="10.0dip" android:layout_height="10.0dip" app:srcCompat="@drawable/feedback_ic_close_min" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

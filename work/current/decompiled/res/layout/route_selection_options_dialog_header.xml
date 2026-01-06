@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_gravity="center_vertical" android:id="@id/dialog_header_title" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:importantForAccessibility="yes" style="@style/Text20.Medium" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/dialog_header_done_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10.0dip" app:generalButtonSize="small" app:text="@string/common_done" />
+</merge>

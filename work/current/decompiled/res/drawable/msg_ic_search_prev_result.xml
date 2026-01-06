@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:drawable="@drawable/msg_ic_search_prev_result_enabled" />
+    <item android:state_enabled="false" android:drawable="@drawable/msg_ic_search_prev_result_disabled" />
+</selector>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@drawable/background_container" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="56.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/road_events_settings_show_all_preference" android:layout_marginTop="@dimen/settings_top_padding" custom:checked="true" custom:summary="@string/road_events_show_all" style="@style/SingleSwitchPreferenceBlock" />
+        <LinearLayout android:orientation="vertical" android:id="@id/road_events_section" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="bottom" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/settings_road_events_in_all_modes" android:paddingStart="16.0dip" style="@style/Text16.Medium.TextSecondary" />
+            <include layout="@layout/settings_road_events_types" />
+            <TextView android:gravity="bottom" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/settings_road_events_in_navigator_mode" android:paddingStart="16.0dip" style="@style/Text16.Medium.TextSecondary" />
+            <include layout="@layout/settings_road_events_camera_types" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

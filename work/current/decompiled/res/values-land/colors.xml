@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mt_schedule_layout_background">@color/bw_black_alpha0</color>
+    <color name="photo_picker_shutter_background">@color/transparent</color>
+    <color name="settings_card_fade_color">#00000000</color>
+</resources>

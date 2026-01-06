@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.core.design.widget.SlidableCoordinatorLayout android:id="@id/bank_sdk_slideable_modal_view_root" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no">
+        <FrameLayout android:id="@id/bank_sdk_slideable_background_click_receiver" android:background="@color/bank_light_internal_transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/bank_sdk_slideable_modal_view_bottom_sheet_background" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_anchorGravity="bottom" />
+        <FrameLayout android:id="@id/bank_sdk_slideable_modal_view_bottom_sheet" android:background="@drawable/bank_sdk_bg_round_modal_view" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no" app:layout_behavior="com.yandex.bank.core.design.coordinator.AnchorBottomSheetBehavior">
+            <FrameLayout android:id="@id/bank_sdk_slideable_modal_view_card_content_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no" />
+        </FrameLayout>
+    </com.yandex.bank.core.design.widget.SlidableCoordinatorLayout>
+</merge>

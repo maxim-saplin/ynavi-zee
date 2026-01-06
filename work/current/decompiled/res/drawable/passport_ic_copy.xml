@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/passport_copy_button" android:pathData="M17,5.4H13C12.116,5.4 11.4,6.116 11.4,7V7.299H9V7C9,4.791 10.791,3 13,3H17C19.209,3 21,4.791 21,7V11C21,13.209 19.209,15 17,15H16.701V12.6H17C17.884,12.6 18.6,11.884 18.6,11V7C18.6,6.116 17.884,5.4 17,5.4Z" />
+    <path android:fillColor="@color/passport_copy_button" android:pathData="M3,13C3,10.791 4.791,9 7,9H11C13.209,9 15,10.791 15,13V17C15,19.209 13.209,21 11,21H7C4.791,21 3,19.209 3,17V13ZM5.4,13C5.4,12.116 6.116,11.4 7,11.4H11C11.884,11.4 12.6,12.116 12.6,13V17C12.6,17.884 11.884,18.6 11,18.6H7C6.116,18.6 5.4,17.884 5.4,17V13Z" android:fillType="evenOdd" />
+</vector>

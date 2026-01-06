@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.div.legacy.view.DivView android:id="@id/dialog_item_div_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_item_margin_top"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

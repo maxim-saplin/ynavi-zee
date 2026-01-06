@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mapkit_styling_automotive_alternative_same_time_text1">Шул ук</string>
+    <string name="mapkit_styling_automotive_alternative_same_time_text2">вакыт</string>
+    <string name="mapkit_styling_transport_alternative_same_time_text">Шул ук вакыт</string>
+    <string name="mapkit_styling_transport_masstransit_periodical">һәр {}</string>
+</resources>

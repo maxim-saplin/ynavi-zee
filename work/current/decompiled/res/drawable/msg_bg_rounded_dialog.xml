@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="?messagingCommonActionbarColor" />
+            <corners android:topLeftRadius="24.0dip" android:topRightRadius="24.0dip" />
+        </shape>
+    </item>
+    <item android:gravity="center|top" android:height="4.0dip" android:width="32.0dip" android:top="8.0dip">
+        <shape>
+            <corners android:radius="2.0dip" />
+            <solid android:color="?messagingCommonIconsSecondaryColor" />
+        </shape>
+    </item>
+</layer-list>

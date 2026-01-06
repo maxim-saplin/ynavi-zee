@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.shimmer.ShimmerFrameLayout android:layout_gravity="center" android:id="@id/parking_price_button_shimmer_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CommonShimmer">
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/parking_price_action_button" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <ru.yandex.yandexmaps.common.views.EllipsizingTextView android:gravity="center" android:id="@id/parking_price_action_caption" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" style="@style/Text16.Medium" />
+    <ru.yandex.yandexmaps.common.views.EllipsizingTextView android:gravity="center" android:id="@id/parking_price_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="@style/Text14.TextSecondary" />
+</merge>

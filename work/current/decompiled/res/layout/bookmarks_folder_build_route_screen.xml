@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bw_black_alpha40" android:focusable="true" android:clickable="true" android:layout_width="@dimen/shutter_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.uikit.shutter.ShutterView android:id="@id/bookmarks_folder_build_route_shutter_view" android:tag="@string/change_handler_bottom_panel_tag" style="@style/ShutterCommonLayoutParams" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="bottom" android:id="@id/bookmarks_folder_build_route_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:translationY="100.0dip" android:layout_marginHorizontal="16.0dip" app:generalButtonSize="large" app:text="@string/common_done" />
+</FrameLayout>

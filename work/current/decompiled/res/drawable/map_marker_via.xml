@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="6.0dip" />
+            <solid android:color="@color/routes_waypoint_pin_via_border" />
+            <size android:height="24.0dip" android:width="24.0dip" />
+        </shape>
+    </item>
+    <item android:left="2.0dip" android:top="2.0dip" android:right="2.0dip" android:bottom="2.0dip">
+        <shape android:shape="rectangle">
+            <corners android:radius="4.0dip" />
+            <solid android:color="@color/routes_waypoint_pin_via_background" />
+        </shape>
+    </item>
+</layer-list>

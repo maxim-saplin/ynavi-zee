@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/aux_buttons_panel" android:layout_width="fill_parent" android:layout_height="@dimen/attach_send_button_heigth" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/id_aux_send" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/attach_send_button_heigth" android:layout_weight="1.0" style="@style/AttachmentsSendButton.Aux" />
+    <Button android:id="@id/id_send" android:layout_width="0.0dip" android:layout_height="@dimen/attach_send_button_heigth" android:text="@string/attachments_common_button_send_selected" android:layout_weight="1.0" style="@style/AttachmentsSendButton" />
+</LinearLayout>

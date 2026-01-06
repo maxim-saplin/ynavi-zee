@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/menu_make_text_bold" android:title="@string/messaging_text_popup_menu_bold" />
+    <item android:id="@id/menu_make_text_italic" android:title="@string/messaging_text_popup_menu_italic" />
+    <item android:id="@id/menu_make_text_underline" android:title="@string/messaging_text_popup_menu_underline" />
+    <item android:id="@id/menu_make_text_strikethrough" android:title="@string/messaging_text_popup_menu_strikethrough" />
+    <item android:id="@id/menu_make_text_mono" android:title="@string/messaging_text_popup_menu_mono" /> /> <item android:id="@id/menu_make_link" android:title="@string/messaging_text_popup_menu_link" /> /> </menu>

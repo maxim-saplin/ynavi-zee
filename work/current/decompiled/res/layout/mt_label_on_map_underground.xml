@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/mt_label_on_map_underground_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:layout_marginStart="2.0dip" android:layout_marginEnd="2.0dip" />
+    <TextView android:textColor="@color/bw_white" android:gravity="center" android:layout_gravity="center" android:id="@id/mt_label_on_map_underground_num" android:background="@drawable/mt_rounded_grey_background_radius_6" android:layout_width="wrap_content" android:layout_height="20.0dip" android:minWidth="20.0dip" android:lines="1" android:textAlignment="center" android:layout_marginStart="2.0dip" android:paddingHorizontal="4.0dip" style="@style/Text12.Medium" />
+</LinearLayout>

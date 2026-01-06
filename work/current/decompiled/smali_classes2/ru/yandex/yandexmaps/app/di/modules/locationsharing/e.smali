@@ -1,0 +1,100 @@
+.class public final Lru/yandex/yandexmaps/app/di/modules/locationsharing/e;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ldagger/internal/e;
+
+
+# instance fields
+.field private final a:Lz21/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lz21/a;"
+        }
+    .end annotation
+.end field
+
+.field private final b:Lz21/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lz21/a;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lz21/a;Lz21/a;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lru/yandex/yandexmaps/app/di/modules/locationsharing/e;->a:Lz21/a;
+
+    iput-object p2, p0, Lru/yandex/yandexmaps/app/di/modules/locationsharing/e;->b:Lz21/a;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/app/di/modules/locationsharing/e;->a:Lz21/a;
+
+    invoke-interface {v0}, Lz21/a;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/yandex/yandexmaps/app/di/components/a;
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/app/di/modules/locationsharing/e;->b:Lz21/a;
+
+    invoke-interface {v1}, Lz21/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lru/yandex/yandexmaps/app/di/modules/locationsharing/a;
+
+    sget-object v2, Lru/yandex/yandexmaps/app/di/modules/locationsharing/d;->Companion:Lru/yandex/yandexmaps/app/di/modules/locationsharing/c;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast v1, Lru/yandex/yandexmaps/app/di/modules/locationsharing/h;
+
+    invoke-virtual {v1}, Lru/yandex/yandexmaps/app/di/modules/locationsharing/h;->a()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-object v1, Lru/yandex/yandexmaps/multiplatform/location/sharing/background/service/android/api/di/c;->Companion:Lru/yandex/yandexmaps/multiplatform/location/sharing/background/service/android/api/di/b;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lru/yandex/yandexmaps/multiplatform/location/sharing/background/service/android/internal/di/k;->Companion:Lru/yandex/yandexmaps/multiplatform/location/sharing/background/service/android/internal/di/j;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lru/yandex/yandexmaps/multiplatform/location/sharing/background/service/android/internal/di/f;
+
+    invoke-direct {v1, v0}, Lru/yandex/yandexmaps/multiplatform/location/sharing/background/service/android/internal/di/f;-><init>(Lru/yandex/yandexmaps/app/di/components/a;)V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lru/yandex/yandexmaps/multiplatform/location/sharing/background/service/android/api/di/c;->Companion:Lru/yandex/yandexmaps/multiplatform/location/sharing/background/service/android/api/di/b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lru/yandex/yandexmaps/multiplatform/location/sharing/background/service/android/api/di/b;->a()Lru/yandex/yandexmaps/multiplatform/location/sharing/background/service/android/api/di/c;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-static {v1}, Lf72/a;->c(Ljava/lang/Object;)V
+
+    return-object v1
+.end method

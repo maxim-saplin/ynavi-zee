@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip" android:paddingVertical="8.0dip" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/placecard_last_mile_entrances" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" app:generalButtonStyle="secondaryBlue" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/placecard_last_mile_car_parking" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" app:generalButtonStyle="secondaryBlue" app:text="@string/layers_carparks" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/placecard_last_mile_taxi" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</merge>

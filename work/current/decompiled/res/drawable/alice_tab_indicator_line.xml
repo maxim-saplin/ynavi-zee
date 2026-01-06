@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="2.0dip" android:width="122.0dip" android:viewportWidth="122.0" android:viewportHeight="2.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <clip-path android:pathData="M0 0H122V2H0V0Z" />
+        <path android:fillColor="@color/oknyx_spirit_color" android:pathData="M0 0V2H122V0" />
+    </group>
+</vector>

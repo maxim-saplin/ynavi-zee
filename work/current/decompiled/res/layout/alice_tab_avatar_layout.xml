@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/alice_accessibility_profile"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:id="@id/alice_tab_avatar_plus" android:visibility="gone" android:layout_width="34.0dip" android:layout_height="34.0dip" app:srcCompat="@drawable/alice_tab_avatar_plus" />
+    <com.google.android.material.imageview.ShapeableImageView android:layout_gravity="center" android:id="@id/alice_tab_avatar" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_margin="0.0dip" app:shapeAppearanceOverlay="@style/Alice.TabbarAvatar" />
+</FrameLayout>

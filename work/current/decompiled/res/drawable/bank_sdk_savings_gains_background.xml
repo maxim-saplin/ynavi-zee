@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?bankColor_fill_color7_400" />
+    <corners android:radius="@dimen/bank_sdk_widget_view_corner_radius" />
+</shape>

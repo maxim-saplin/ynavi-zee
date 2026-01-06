@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_margin="@dimen/control_rect_padding" style="@style/ControlRoundImage">
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/control_rect_padding" android:layoutDirection="locale" app:srcCompat="@drawable/back_48" app:tint="@color/icons_primary" />
+        <TextView android:gravity="center" android:layout_gravity="end|top" android:id="@id/control_back_badge" android:background="@drawable/control_back_badge_background" android:layout_width="24.0dip" android:layout_height="24.0dip" android:includeFontPadding="false" android:translationX="6.0dip" android:translationY="-6.0dip" style="@style/Text12.Medium.PermanentWhite" />
+    </FrameLayout>
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:tint="@color/monetization_ads_internal_call_to_action_background_color_blue" android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#ff2f7df5" />
+    <corners android:radius="@dimen/monetization_ads_internal_call_to_action_radius" />
+</shape>

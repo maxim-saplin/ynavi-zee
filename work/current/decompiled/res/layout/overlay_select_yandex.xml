@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/overlay_root" android:background="@drawable/assistant_select_yandex_background" android:elevation="16.0dip" style="@style/Assistant.Container"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:layout_margin="@dimen/assistant_select_margin" app:srcCompat="@drawable/select_assistant_logo" style="@style/Assistant.Icon.Big" />
+    <TextView android:textSize="@dimen/assistant_text_size" android:layout_gravity="center" android:id="@id/assistant_overlay_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/assistant_select_margin" android:layout_marginBottom="@dimen/assistant_select_margin" android:text="@string/assistant_select_yandex_v2" android:layout_weight="1.0" style="@style/Assistant.Text" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/assistant_close_icon_margin" app:srcCompat="@drawable/assistant_close" />
+</LinearLayout>

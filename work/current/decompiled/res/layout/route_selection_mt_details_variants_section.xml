@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/mt_details_variants_type_name" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.Medium.PrimaryVariant" />
+    <ru.yandex.yandexmaps.common.views.FlowLayout android:orientation="horizontal" android:id="@id/mt_details_variants_nums_flow" android:layout_width="wrap_content" android:layout_height="wrap_content" app:horizontalSpacing="4.0dip" app:verticalSpacing="4.0dip" />
+</LinearLayout>

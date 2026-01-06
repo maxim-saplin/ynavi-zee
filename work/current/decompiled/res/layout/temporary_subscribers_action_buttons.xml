@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:background="@color/bg_primary" android:paddingHorizontal="16.0dip" android:paddingVertical="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="center" android:id="@id/subscribers_first_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="4.0dip" app:generalButtonSize="big" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="center" android:id="@id/subscribers_second_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="4.0dip" app:generalButtonSize="big" />
+</merge>

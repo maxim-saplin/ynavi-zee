@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/debug_panel_corner_radius_medium" />
+    <solid android:color="@color/debug_panel_white" />
+</shape>

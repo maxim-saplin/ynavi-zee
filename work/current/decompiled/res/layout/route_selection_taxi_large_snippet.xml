@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="@drawable/common_clickable_panel_background_no_border_impl"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="16.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/wrapped_snippet_title_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/wrapped_snippet_route_icon" android:padding="4.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="centerInside" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip" />
+            <RelativeLayout android:orientation="horizontal" android:id="@id/wrapped_snippet_title_text_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:id="@id/wrapped_snippet_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" style="@style/Text16.Medium.BlackWhite" />
+                <TextView android:id="@id/wrapped_snippet_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:layout_alignBaseline="@id/wrapped_snippet_title" android:layout_marginStart="4.0dip" android:layout_toEndOf="@id/wrapped_snippet_title" style="@style/Text16.Medium.BlackWhite" />
+                <TextView android:ellipsize="end" android:id="@id/wrapped_snippet_price_with_discount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:layout_alignBaseline="@id/wrapped_snippet_price" android:layout_marginStart="4.0dip" android:layout_toEndOf="@id/wrapped_snippet_price" style="@style/Text14.Medium.TextSecondary" />
+            </RelativeLayout>
+            <Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:gravity="center" android:id="@id/wrapped_snippet_time" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium.Blue" />
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:id="@id/wrapped_snippet_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" android:lineSpacingExtra="2.0sp" android:layout_marginStart="48.0dip" style="@style/Text14.Grey" />
+        <TextView android:id="@id/choose_tariff_button" android:background="@drawable/rounded_flat_button_background" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" android:layout_marginStart="40.0dip" style="@style/Text14.Medium.TextActions" />
+    </LinearLayout>
+    <View android:id="@id/mt_summary_selection" android:background="@color/icons_actions" android:layout_width="4.0dip" android:layout_height="fill_parent" />
+</merge>

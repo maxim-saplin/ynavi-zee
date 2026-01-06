@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_checked="true">
+        <ripple android:color="@color/ui_yellow">
+            <item android:drawable="@drawable/the_new_filters_rounded_item_checked" />
+        </ripple>
+    </item>
+    <item>
+        <ripple android:color="@color/background_panel_pressed">
+            <item android:drawable="@drawable/the_new_filters_dialog_bool_item_unchecked" />
+        </ripple>
+    </item>
+</selector>

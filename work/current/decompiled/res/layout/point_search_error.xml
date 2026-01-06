@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:paddingBottom="56.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_network_error" style="@style/Text16.Medium" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="center_horizontal" android:id="@id/point_search_retry_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:generalButtonStyle="primary" app:text="@string/search_list_info_error_retry" />
+    </LinearLayout>
+</merge>

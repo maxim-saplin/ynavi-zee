@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/traffic_very_hard" />
+            <stroke android:width="@dimen/size_map_speedborder" android:color="@color/icons_alert" />
+        </shape>
+    </item>
+</transition>

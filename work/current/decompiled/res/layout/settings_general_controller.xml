@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonSettingsContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout style="@style/SettingsCommonSection">
+            <ru.yandex.maps.appkit.customview.LinkPreference android:id="@id/settings_general_night_mode_selections" custom:title="@string/settings_night_mode" style="@style/SettingsLinkPreference" />
+            <ru.yandex.maps.appkit.customview.LinkPreference android:id="@id/settings_general_distance_units" custom:title="@string/settings_general_distance_units" style="@style/SettingsLinkPreference" />
+            <ru.yandex.maps.appkit.customview.LinkPreference android:id="@id/settings_general_language" custom:title="@string/debug_panel_language" style="@style/SettingsLinkPreference" />
+            <ru.yandex.maps.appkit.customview.LinkPreference android:id="@id/settings_general_widget" custom:title="@string/settings_general_widget" style="@style/SettingsLinkPreference" />
+            <ru.yandex.maps.appkit.customview.LinkPreference android:id="@id/settings_general_alice" custom:title="@string/settings_general_alice" style="@style/SettingsLinkPreference" />
+        </LinearLayout>
+        <include android:id="@id/settings_switch_container" layout="@layout/settings_notifications_section" />
+    </LinearLayout>
+</ScrollView>

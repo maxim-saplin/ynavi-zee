@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/tankerRootView" android:saveEnabled="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/tankerNavigationContainer" android:saveEnabled="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.tankerapp.android.sdk.navigator.view.views.fuel.FuelFlowNavigationContainer android:id="@id/tankerNavigationView" android:saveEnabled="true" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/tankerServiceFeeContainer" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <FrameLayout android:id="@id/tankerServiceFeeContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="60.0dip" app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ru.tankerapp.android.sdk.navigator.view.views.LoadingView android:id="@id/loadView" android:background="@color/tanker_backgroundColorNew" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ru.tankerapp.android.sdk.navigator.view.views.ErrorView android:id="@id/tankerFuelFlowErrorView" android:background="@color/tanker_backgroundColorNew" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:align="center" />
+    <FrameLayout android:layout_gravity="end|top" android:id="@id/closeView" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_margin="@dimen/tanker_basic_padding_half">
+        <ImageView android:layout_gravity="center" android:id="@id/closeBtn" style="@style/TankerCloseButton" />
+    </FrameLayout>
+</FrameLayout>

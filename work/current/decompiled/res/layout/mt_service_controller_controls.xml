@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:layout_width="fill_parent" android:layout_height="fill_parent" app:overland_fleets_ids="@string/controls_default_overland_fleets_ids"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.controls.views.MapControlsServiceNameView android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="80.0dip" android:text="@string/mt_service_title" android:paddingStart="30.0dip" android:paddingEnd="30.0dip" app:layout_fleet_id="2" app:layout_floating="drifting_up" app:layout_heaviness="0" />
+    <include layout="@layout/control_chunk_profile" />
+    <include layout="@layout/control_chunk_speedometer" />
+    <include layout="@layout/control_chunk_ruler" />
+    <include layout="@layout/control_chunk_layers_menu" />
+    <include layout="@layout/control_chunk_traffic_priority" />
+    <include layout="@layout/control_chunk_carparks" />
+    <include layout="@layout/control_chunk_panorama" />
+    <include layout="@layout/control_chunk_weather" />
+    <include layout="@layout/control_chunk_tilt_toggle" />
+    <include layout="@layout/control_chunk_zoom" />
+    <include layout="@layout/control_chunk_back_service" />
+    <include layout="@layout/control_chunk_position" />
+    <include layout="@layout/control_chunk_panorama_stub" />
+</ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>

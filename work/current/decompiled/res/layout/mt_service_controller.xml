@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:id="@id/mt_service_paddington_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr">
+        <FrameLayout android:id="@id/mt_service_fluid_container_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/mt_service_controller_controls" />
+        </FrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <FrameLayout android:layout_gravity="start|bottom" android:id="@id/mt_service_order_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ru.yandex.yandexmaps.common.views.controls.MapControlsLinearLayoutRect android:layout_gravity="center|bottom" android:orientation="horizontal" android:id="@id/mt_service_alert" android:padding="4.0dip" android:visibility="gone" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="72.0dip" android:divider="@drawable/routes_select_summaries_alert_divider" android:showDividers="middle" android:dividerPadding="16.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+        <TextView android:textAppearance="@style/Text16.Medium" android:id="@id/mt_service_alert_text" android:padding="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textAppearance="@style/Text16.Medium.TextSecondary" android:gravity="center" android:layout_gravity="center" android:id="@id/mt_service_alert_ok" android:background="@drawable/rounded_grey_flat_button_background" android:padding="10.0dip" android:clickable="true" android:layout_width="47.0dip" android:layout_height="wrap_content" android:text="@string/common_ok_button" android:layout_marginStart="6.0dip" android:layout_marginEnd="6.0dip" />
+    </ru.yandex.yandexmaps.common.views.controls.MapControlsLinearLayoutRect>
+    <include layout="@layout/mt_service_suggest_container" />
+    <com.bluelinelabs.conductor.ChangeHandlerFrameLayout android:id="@id/main_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.bluelinelabs.conductor.ChangeHandlerFrameLayout android:id="@id/slave_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

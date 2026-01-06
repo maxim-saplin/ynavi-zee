@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:focusable="true" android:focusableInTouchMode="true" android:clickable="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/player_container" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.exoplayer2.ui.PlayerView android:id="@id/video_player" android:layout_width="fill_parent" android:layout_height="fill_parent" app:surface_type="texture_view" />
+        <ImageView android:id="@id/video_thumb" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/play_position" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.35" />
+        <ImageView android:id="@id/video_play_button" android:layout_width="76.0dip" android:layout_height="76.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/play_position" app:srcCompat="@drawable/attach_video_play" /> /> </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

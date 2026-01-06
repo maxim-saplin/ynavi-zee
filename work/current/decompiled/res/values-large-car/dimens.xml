@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="pay_sdk_mobile_content_scale_factor">1.75</item>
+</resources>

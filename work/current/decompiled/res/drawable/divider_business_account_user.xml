@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/tanker_divider" />
+    <size android:height="0.5dip" />
+    <padding android:left="@dimen/tanker_basic_padding" />
+</shape>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/intro_trucks_animation_view" android:layout_width="fill_parent" android:layout_height="128.0dip" android:layout_marginTop="32.0dip" android:layout_marginHorizontal="32.0dip" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/intro_trucks_animation" app:lottie_repeatMode="restart" />
+    <TextView android:textColor="@color/text_primary" android:gravity="center" android:id="@id/intro_trucks_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/trucks_intro_title" android:maxLines="2" android:layout_marginHorizontal="32.0dip" style="@style/Text20.Medium" />
+    <TextView android:textColor="@color/text_primary_variant" android:gravity="center" android:id="@id/intro_trucks_description" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:text="@string/trucks_intro_description" android:layout_marginHorizontal="32.0dip" style="@style/Text16.BlackWhite" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="bottom" android:id="@id/intro_trucks_action_button" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginHorizontal="32.0dip" android:layout_marginVertical="24.0dip" app:generalButtonSize="large" app:generalButtonStyle="primary" app:text="@string/trucks_intro_action_button" />
+</merge>

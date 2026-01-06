@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageButton android:id="@id/navigation_bar_back_button" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:tint="@color/icons_secondary" android:contentDescription="@string/accessibility_common_back" android:layout_marginStart="4.0dip" app:srcCompat="@drawable/arrow_back_24" style="@style/CommonBarButton" />
+    <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/navigation_bar_caption" android:focusable="true" android:layout_width="0.0dip" android:layout_height="@dimen/navigation_bar_height" android:lines="1" android:layout_weight="1.0" android:importantForAccessibility="yes" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/NavBarCaptionTextAppearance" />
+    <ImageButton android:id="@id/navigation_bar_action_button" android:padding="12.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:tint="@color/icons_secondary" android:layout_marginStart="4.0dip" app:srcCompat="@drawable/arrow_back_24" style="@style/CommonBarButton" />
+</merge>

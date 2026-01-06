@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dialog_item_human_imitate" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dialog_item_margin_big_horizontal" android:layout_marginTop="@dimen/dialog_item_margin_top" android:layout_marginRight="@dimen/dialog_item_margin_horizontal" android:minHeight="@dimen/dialog_item_imitate_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.alicekit.core.views.TightTextView android:textColor="@color/dialog_item_text_color_human_imitate" android:layout_gravity="right|bottom" android:id="@id/allou_dialog_text" android:background="@drawable/allou_dialog_item_background_human_imitate" android:paddingRight="@dimen/dialog_item_imitate_right_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/dialog_item_max_width" style="@style/Alice.Text.Dialog" />
+    <ImageView android:layout_gravity="end|bottom" android:id="@id/allou_dialog_cancel" android:padding="@dimen/dialog_item_cancel_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:srcCompat="@drawable/ic_cancel_human_imitate" />
+</FrameLayout>

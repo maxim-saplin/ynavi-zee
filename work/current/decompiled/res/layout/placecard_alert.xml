@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:background="@drawable/alert_orange_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:minHeight="52.0dip" android:paddingStart="4.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/placecard_alert_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" app:srcCompat="@drawable/card_alert_16" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:layout_marginStart="12.0dip" android:layout_marginEnd="14.0dip">
+        <TextView android:id="@id/placecard_alert_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" style="@style/Text12.Medium" />
+        <TextView android:id="@id/placecard_alert_text" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text12.Earth" />
+        <Button android:textAppearance="@style/Text14.Medium.Attention" android:id="@id/placecard_alert_button" android:background="@drawable/alert_orange_button_background" android:layout_width="wrap_content" android:layout_height="32.0dip" android:layout_marginTop="8.0dip" android:paddingHorizontal="12.0dip" />
+    </LinearLayout>
+</merge>

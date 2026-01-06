@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatImageView android:id="@id/simulation_route_builder_car_type" android:background="@drawable/common_blue_button_background_small_radius" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" android:backgroundTint="@color/background_panel"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="@color/alicekit_palette_text_and_icon_primary" android:id="@id/futuris_chat_list_item_heading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="9" android:includeFontPadding="false" android:layout_marginEnd="24.0dip" />
+    <ImageView android:layout_gravity="end|center" android:id="@id/futuris_chat_list_item_arrow" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/futuris_chat_list_item_arrow" android:importantForAccessibility="no" />
+</merge>

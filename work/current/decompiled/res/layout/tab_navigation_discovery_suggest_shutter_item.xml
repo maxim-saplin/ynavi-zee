@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:background="@drawable/tab_navigation_discovery_suggest_container_background" android:layout_width="fill_parent" android:layout_height="@dimen/tab_navigation_discovery_suggest_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.suggest.floating.FloatingSuggestView android:layout_gravity="center_vertical" android:id="@id/tab_navigation_bottom_search_line_suggest" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" app:suggest_animate_items_changes="true" app:suggest_buttons_style="transparent" app:suggest_horizontal_offset="12.0dip" app:suggest_icon_shape="round_rect" app:suggest_search_category_icon_background_color="@color/yandexmaps_rubrics_fallback_pin" />
+</merge>

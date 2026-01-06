@@ -1,0 +1,404 @@
+{
+    "templates": {
+        "header_button": {
+            "type": "image",
+            "height": {
+                "type": "fixed",
+                "value": 24
+            },
+            "margins": {
+                "top": 8,
+                "bottom": 8,
+                "left": 8,
+                "right": 8
+            },
+            "width": {
+                "type": "fixed",
+                "value": 24
+            },
+            "$image_url": "imageURL"
+        },
+        "bank_cell": {
+            "type": "container",
+            "actions": [
+                {
+                    "log_id": "select_bank",
+                    "$url": "selectBankURL"
+                }
+            ],
+            "content_alignment_vertical": "center",
+            "height": {
+                "type": "wrap_content"
+            },
+            "items": [
+                {
+                    "type": "image",
+                    "border": {
+                        "corner_radius": 32
+                    },
+                    "height": {
+                        "type": "fixed",
+                        "value": 32
+                    },
+                    "margins": {
+                        "top": 4,
+                        "bottom": 4,
+                        "left": 4,
+                        "right": 4
+                    },
+                    "scale": "fill",
+                    "width": {
+                        "type": "fixed",
+                        "value": 32
+                    },
+                    "$image_url": "logoURL"
+                },
+                {
+                    "type": "container",
+                    "items": [
+                        {
+                            "type": "container",
+                            "content_alignment_vertical": "center",
+                            "items": [
+                                {
+                                    "type": "text",
+                                    "font_family": "text",
+                                    "font_size": 14,
+                                    "font_weight": "medium",
+                                    "height": {
+                                        "type": "fixed",
+                                        "value": 60
+                                    },
+                                    "line_height": 18,
+                                    "text_alignment_vertical": "center",
+                                    "text_color": "@{isLightTheme ? '#DB000000' : '#E0FFFFFF'}",
+                                    "$text": "bankName"
+                                },
+                                {
+                                    "type": "image",
+                                    "height": {
+                                        "type": "fixed",
+                                        "value": 20
+                                    },
+                                    "image_url": "local-image://arrow_short_forward",
+                                    "margins": {
+                                        "left": 8,
+                                        "right": 4
+                                    },
+                                    "tint_color": "@{isLightTheme ? '#4D000000' : '#59FFFFFF'}",
+                                    "width": {
+                                        "type": "fixed",
+                                        "value": 20
+                                    }
+                                }
+                            ],
+                            "orientation": "horizontal"
+                        },
+                        {
+                            "type": "separator",
+                            "delimiter_style": {
+                                "color": "@{isLightTheme ? '#14000000' : '#14FFFFFF'}"
+                            },
+                            "width": {
+                                "type": "match_parent"
+                            },
+                            "$visibility": "delimeterVisibility"
+                        }
+                    ],
+                    "margins": {
+                        "left": 8
+                    },
+                    "orientation": "vertical"
+                }
+            ],
+            "orientation": "horizontal",
+            "paddings": {
+                "left": "@{safe_area_inset_left}",
+                "right": "@{safe_area_inset_right}"
+            },
+            "transition_in": {
+                "type": "fade",
+                "duration": 500,
+                "start_delay": 0,
+                "interpolator": "linear"
+            },
+            "transition_triggers": [
+                "visibility_change"
+            ],
+            "$visibility": "visibilityExpression"
+        }
+    },
+    "card": {
+        "log_id": "payment_sdk_card",
+        "variables": [
+            {
+                "type": "string",
+                "name": "select_bank_screen_bank_name_filter",
+                "value": ""
+            },
+            {
+                "type": "string",
+                "name": "select_bank_screen_last_bank_name",
+                "value": ""
+            },
+            {
+                "type": "boolean",
+                "name": "select_bank_screen_headerBackButtonVisible",
+                "value": 0
+            },
+            {
+                "type": "boolean",
+                "name": "isLightTheme",
+                "value": 1
+            },
+            {
+                "type": "number",
+                "name": "safe_area_inset_top",
+                "value": 0
+            },
+            {
+                "type": "number",
+                "name": "safe_area_inset_bottom",
+                "value": 0
+            },
+            {
+                "type": "number",
+                "name": "safe_area_inset_left",
+                "value": 0
+            },
+            {
+                "type": "number",
+                "name": "safe_area_inset_right",
+                "value": 0
+            }
+        ],
+        "states": [
+            {
+                "state_id": 0,
+                "div": {
+                    "type": "container",
+                    "background": [
+                        {
+                            "type": "solid",
+                            "color": "@{isLightTheme ? '#FFFFFF' : '#121214'}"
+                        }
+                    ],
+                    "height": {
+                        "type": "match_parent"
+                    },
+                    "items": [
+                        {
+                            "type": "container",
+                            "height": {
+                                "type": "wrap_content"
+                            },
+                            "items": [
+                                {
+                                    "type": "container",
+                                    "content_alignment_horizontal": "space-between",
+                                    "content_alignment_vertical": "center",
+                                    "height": {
+                                        "type": "fixed",
+                                        "value": 40
+                                    },
+                                    "items": [
+                                        {
+                                            "type": "header_button",
+                                            "imageURL": "@{isLightTheme ? 'local-image://navbar_back_light' : 'local-image://navbar_back_dark'}",
+                                            "actions": [
+                                                {
+                                                    "log_id": "payment_sdk_select_bank_screen_header_view_header_back",
+                                                    "url": "payment-sdk://back"
+                                                }
+                                            ],
+                                            "visibility": "@{select_bank_screen_headerBackButtonVisible ? 'visible' : 'gone'}",
+                                            "accessibility": {
+                                                "type": "button",
+                                                "description": "payment.button.title.back"
+                                            }
+                                        },
+                                        {
+                                            "type": "container",
+                                            "content_alignment_horizontal": "center",
+                                            "content_alignment_vertical": "center",
+                                            "items": [
+                                                {
+                                                    "type": "container",
+                                                    "content_alignment_horizontal": "center",
+                                                    "content_alignment_vertical": "center",
+                                                    "items": [
+                                                        {
+                                                            "type": "text",
+                                                            "font_family": "text",
+                                                            "font_size": 18,
+                                                            "font_weight": "medium",
+                                                            "line_height": 20,
+                                                            "max_lines": 1,
+                                                            "text": "SBP_SCREEN_TITLE",
+                                                            "text_color": "@{isLightTheme ? '#DB000000' : '#E0FFFFFF'}",
+                                                            "width": {
+                                                                "type": "wrap_content",
+                                                                "constrained": 1
+                                                            }
+                                                        }
+                                                    ],
+                                                    "orientation": "horizontal",
+                                                    "separator": {
+                                                        "style": {
+                                                            "type": "shape_drawable",
+                                                            "color": "#00FFFFFF",
+                                                            "shape": {
+                                                                "type": "rounded_rectangle",
+                                                                "item_width": {
+                                                                    "type": "fixed",
+                                                                    "value": 12
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "actions": [
+                                                        {
+                                                            "log_id": "payment_sdk_select_bank_screen_header_view_subtitle_action",
+                                                            "url": "payment-sdk://show_legal"
+                                                        }
+                                                    ],
+                                                    "font_family": "text",
+                                                    "font_size": 13,
+                                                    "font_weight": "medium",
+                                                    "visibility": "SBP_LEGAL_VISIBILITY",
+                                                    "images": [
+                                                        {
+                                                            "height": {
+                                                                "type": "fixed",
+                                                                "value": 12
+                                                            },
+                                                            "width": {
+                                                                "type": "fixed",
+                                                                "value": 12
+                                                            },
+                                                            "start": 31,
+                                                            "preload_required": 0,
+                                                            "url": "local-image://arrow_short_forward",
+                                                            "tint_color": "@{isLightTheme ? '#80000000' : '#80FFFFFF'}",
+                                                            "tint_mode": "normal"
+                                                        }
+                                                    ],
+                                                    "line_height": 16,
+                                                    "max_lines": 1,
+                                                    "text": "SBP_SCREEN_SUBTITLE",
+                                                    "text_color": "@{isLightTheme ? '#80000000' : '#80FFFFFF'}",
+                                                    "width": {
+                                                        "type": "wrap_content",
+                                                        "constrained": 1
+                                                    }
+                                                }
+                                            ],
+                                            "orientation": "vertical"
+                                        },
+                                        {
+                                            "type": "header_button",
+                                            "imageURL": "@{isLightTheme ? 'local-image://close_light' : 'local-image://close_dark'}",
+                                            "actions": [
+                                                {
+                                                    "log_id": "payment_sdk_select_bank_screen_header_view_header_close",
+                                                    "url": "payment-sdk://close"
+                                                }
+                                            ],
+                                            "visibility": "@{false ? 'visible' : 'invisible'}",
+                                            "accessibility": {
+                                                "type": "button",
+                                                "description": "payment.button.title.close"
+                                            }
+                                        }
+                                    ],
+                                    "margins": {
+                                        "top": 10,
+                                        "bottom": 10,
+                                        "left": 16,
+                                        "right": 16
+                                    },
+                                    "orientation": "horizontal"
+                                },
+                                {
+                                    "type": "custom",
+                                    "custom_type": "search_field",
+                                    "height": {
+                                        "type": "fixed",
+                                        "value": 68
+                                    },
+                                    "margins": {
+                                        "left": 16,
+                                        "right": 16
+                                    },
+                                    "width": {
+                                        "type": "match_parent"
+                                    }
+                                }
+                            ],
+                            "orientation": "vertical",
+                            "paddings": {
+                                "top": 16,
+                                "bottom": 16
+                            }
+                        },
+                        {
+                            "type": "container",
+                            "height": {
+                                "type": "match_parent"
+                            },
+                            "items": [
+                                {
+                                    "type": "text",
+                                    "font_size": 16,
+                                    "height": {
+                                        "type": "fixed",
+                                        "value": 84
+                                    },
+                                    "line_height": 20,
+                                    "text": "BANK_NOT_FOUND",
+                                    "text_alignment_horizontal": "center",
+                                    "text_alignment_vertical": "center",
+                                    "text_color": "@{isLightTheme ? '#80000000' : '#80FFFFFF'}"
+                                },
+                                {
+                                    "type": "gallery",
+                                    "background": [
+                                        {
+                                            "type": "solid",
+                                            "color": "@{isLightTheme ? '#FFFFFF' : '#121214'}"
+                                        }
+                                    ],
+                                    "extensions": [
+                                        {
+                                            "id": "id_extension_for_list",
+                                            "params": {
+                                                "id": "banks_recycler_view"
+                                            }
+                                        }
+                                    ],
+                                    "height": {
+                                        "type": "wrap_content",
+                                        "constrained": 0
+                                    },
+                                    "id": "banks_recycler_view",
+                                    "item_spacing": 0,
+                                    "items": [],
+                                    "orientation": "vertical"
+                                }
+                            ],
+                            "orientation": "overlap",
+                            "paddings": {
+                                "left": 16,
+                                "right": 16
+                            }
+                        }
+                    ],
+                    "orientation": "vertical"
+                }
+            }
+        ]
+    }
+}

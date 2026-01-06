@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="22.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/mt_guidance_label_ground_container" android:background="@drawable/mt_guidance_label_background" android:layout_width="wrap_content" android:layout_height="22.0dip" android:minWidth="22.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/mt_guidance_label_ground_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/bus_20" android:tint="@color/icons_color_bg" android:paddingStart="1.0dip" android:paddingEnd="2.0dip" />
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@id/mt_guidance_label_ground_num" android:layout_width="wrap_content" android:layout_height="22.0dip" android:maxWidth="85.0dip" android:maxLines="1" android:paddingEnd="4.0dip" style="@style/Text14.Medium.TextColorBg" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/mt_guidance_transport_variants" android:layout_width="wrap_content" android:layout_height="22.0dip" android:src="@drawable/transit_snippet_more_20" android:scaleType="fitXY" android:tint="@color/icons_additional" android:layout_marginStart="-3.0dip" />
+</LinearLayout>

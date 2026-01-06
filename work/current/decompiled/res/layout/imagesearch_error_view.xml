@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/error_root_view" android:background="@color/fade_background_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/error_view_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="54.0dip" android:layout_marginRight="54.0dip" android:layout_marginBottom="32.0dip" />
+    <Button android:textSize="14.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/error_view_retry_button" android:background="@drawable/retry_button_background" android:layout_width="260.0dip" android:layout_height="48.0dip" android:text="@string/error_view_retry" android:textAllCaps="false" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/offline_cache_dialog_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="24.0dip" style="@style/Text20" />
+    <TextView android:id="@id/offline_cache_dialog_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:paddingStart="24.0dip" android:paddingEnd="24.0dip" style="@style/Text16.Grey" />
+    <TextView android:id="@id/offline_cache_dialog_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:paddingStart="24.0dip" android:paddingEnd="24.0dip" style="@style/Text16.Grey" />
+    <TextView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" style="@style/ErrorText.Dialog" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/control_music_active_anim"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target android:name="leftStick" android:animation="@anim/control_music_left_stick_anim" />
+    <target android:name="centerStick" android:animation="@anim/control_music_center_stick_anim" />
+    <target android:name="rightStick" android:animation="@anim/control_music_right_stick_anim" />
+</animated-vector>

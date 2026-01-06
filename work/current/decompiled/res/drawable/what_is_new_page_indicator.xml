@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="@dimen/whats_new_indicator_size" android:width="@dimen/whats_new_indicator_shape_size" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item android:left="@dimen/whats_new_indicator_padding" android:right="@dimen/whats_new_indicator_padding">
+        <selector>
+            <item android:state_selected="true">
+                <shape android:shape="oval">
+                    <solid android:color="@color/ui_yellow" />
+                    <size android:height="@dimen/whats_new_indicator_size" android:width="@dimen/whats_new_indicator_size" />
+                </shape>
+            </item>
+            <item android:drawable="@drawable/what_is_new_page_indicator_icon" />
+        </selector>
+    </item>
+</layer-list>

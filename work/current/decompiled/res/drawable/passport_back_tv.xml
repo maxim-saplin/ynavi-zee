@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/passport_back_tv_oval" />
+    <item android:gravity="center" android:drawable="@drawable/passport_back_tv_arrow" />
+</layer-list>

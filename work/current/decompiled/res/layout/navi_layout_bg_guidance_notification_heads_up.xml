@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/notification_root_view" android:background="@drawable/drawable_navi_layout_bg_guidance_notification" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/navi_layout_bg_guidance_notification_maneuver_block" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="@dimen/notification_eta_block_left_margin" layout="@layout/navi_layout_bg_guidance_notification_eta_block" />
+</LinearLayout>

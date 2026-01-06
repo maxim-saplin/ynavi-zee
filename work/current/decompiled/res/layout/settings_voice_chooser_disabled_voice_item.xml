@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/settings_voice_choose_recycler" android:background="@drawable/common_clickable_panel_background_no_border_impl" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/text_settings_disabled" android:id="@id/settings_voice_chooser_disabled_voice_item_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="56.0dip" style="@style/Text16" />
+</LinearLayout>

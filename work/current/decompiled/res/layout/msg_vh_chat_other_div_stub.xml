@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="12.0dip" android:paddingEnd="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.alicekit.core.views.RoundedCornersWithStrokeLayout android:layout_width="@dimen/timeline_message_div_width" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" app:roundedCornersLayoutCornerColor="@android:color/white" app:roundedCornersLayoutCornerRadius="8.0dip" app:roundedCornersLayoutStrokeColor="@color/timeline_message_div_border_color" app:roundedCornersLayoutStrokeWidth="1.0dip">
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="14.0sp" android:textColor="?messagingCommonTextSecondaryColor" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/unsupported_message_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="4.0sp" android:paddingVertical="7.0dip" />
+    </com.yandex.alicekit.core.views.RoundedCornersWithStrokeLayout>
+</LinearLayout>

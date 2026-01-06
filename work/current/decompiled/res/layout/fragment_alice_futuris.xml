@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/alice_fragment_root_view" android:background="@color/alicekit_palette_background_primary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.searchplugin.dialog.AliceDialogContainer android:id="@id/alice_dialog_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/alice_control_buttons_container" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/alice_toolbar" layout="@layout/alice_dialog" />
+        <include android:id="@id/alice_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_top_handler_margin" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/dialog_toolbar_futuris" />
+        <FrameLayout android:id="@id/alice_control_buttons_container" android:clipChildren="false" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent">
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" layout="@layout/dialog_input_futuris" />
+            <include android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/alice_control_buttons" />
+        </FrameLayout>
+        <ViewStub android:id="@id/stop_streaming_button_stub" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/alice_control_buttons_container" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    </ru.yandex.searchplugin.dialog.AliceDialogContainer>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

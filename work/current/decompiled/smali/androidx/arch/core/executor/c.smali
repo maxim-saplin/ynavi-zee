@@ -1,0 +1,68 @@
+.class public final Landroidx/arch/core/executor/c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
+
+
+# static fields
+.field private static final d:Ljava/lang/String; = "arch_disk_io_"
+
+
+# instance fields
+.field private final b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field final synthetic c:Landroidx/arch/core/executor/e;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/arch/core/executor/e;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/arch/core/executor/c;->c:Landroidx/arch/core/executor/e;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p1, p0, Landroidx/arch/core/executor/c;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 2
+
+    new-instance v0, Ljava/lang/Thread;
+
+    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v1, "arch_disk_io_"
+
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Landroidx/arch/core/executor/c;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+
+    return-object v0
+.end method

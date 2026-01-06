@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="150" android:drawable="@drawable/bank_sdk_ic_anim_firework_frame_2" />
+    <item android:duration="150" android:drawable="@drawable/bank_sdk_ic_anim_firework_frame_1" />
+    <item android:duration="150" android:drawable="@drawable/bank_sdk_ic_anim_firework_frame_3" />
+</animation-list>

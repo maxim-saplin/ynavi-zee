@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/transfersDashboardFragmentsContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="center|bottom" android:orientation="horizontal" android:id="@id/transfersDashboardButtonsContainer" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.yandex.bank.feature.transfer.version2.internal.screens.dashboard.presentation.TransfersDashboardSlideableView android:id="@id/transfersDashboardBottomSheet" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:behavior_fitToContents="false" app:behavior_halfExpandedRatio="0.5" app:behavior_hideable="false" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" />
+        <com.yandex.bank.widgets.common.bottombar.BottomBarNavigation android:layout_gravity="bottom" android:id="@id/transfersDashboardBottomBar" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

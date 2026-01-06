@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="40.0dip" android:paddingHorizontal="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.search.internal.results.filters.panel.buttons.elements.FilterButtonShimmerableImageView android:layout_gravity="center_vertical" android:id="@id/filter_button_with_button_shimmerable_image_left" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginEnd="8.0dip" android:elevation="3.0dip" />
+    <TextView android:gravity="center" android:id="@id/filter_panel_button_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.Medium" />
+    <ru.yandex.yandexmaps.search.internal.results.filters.panel.buttons.elements.FilterButtonShimmerableImageView android:layout_gravity="center_vertical" android:id="@id/filter_button_with_button_shimmerable_image_right" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginStart="8.0dip" android:elevation="3.0dip" />
+    <ru.yandex.yandexmaps.search.internal.results.filters.panel.buttons.elements.FilterButtonEnumIndicatorView android:id="@id/filter_panel_button_enum_indicator" android:layout_width="wrap_content" android:layout_height="24.0dip" android:layout_marginStart="8.0dip" />
+</merge>

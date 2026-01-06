@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/root" android:background="?bankColor_background_primary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ViewSwitcher android:id="@id/switcher" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.yandex.bank.widgets.common.OperationProgressOverlayDialog android:id="@id/progress" android:paddingTop="@dimen/bank_sdk_root_card_inset_height" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.yandex.bank.widgets.common.communication.CommunicationFullScreenView android:id="@id/communicationView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </ViewSwitcher>
+    <com.yandex.bank.widgets.common.ToolbarView android:id="@id/toolbarView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bank_sdk_root_card_inset_height" app:bank_sdk_closeIconVisible="true" app:bank_sdk_transparentBackground="true" />
+</FrameLayout>

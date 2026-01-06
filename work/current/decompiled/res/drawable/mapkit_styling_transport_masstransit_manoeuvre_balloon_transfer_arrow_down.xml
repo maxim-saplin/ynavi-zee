@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="8.0dip" android:width="8.0dip" android:viewportWidth="8.0" android:viewportHeight="8.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/mapkit_styling_transport_masstransit_manoeuvre_balloon_transfer_arrow_color" android:pathData="M7.3776,1.8496C7.6581,1.3804 7.4398,1 6.8934,1H1.1064C0.5584,1 0.3428,1.3822 0.6222,1.8496L3.4919,6.6488C3.7725,7.118 4.2284,7.1161 4.5079,6.6488L7.3776,1.8496Z" android:fillType="evenOdd" />
+</vector>

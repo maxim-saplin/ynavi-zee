@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/tanker_tanker_header_text_size" android:textColor="@color/tanker_textColorAlpha100" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="@string/tanker_filter_default" android:maxLines="2" style="@style/TankerTextMedium"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

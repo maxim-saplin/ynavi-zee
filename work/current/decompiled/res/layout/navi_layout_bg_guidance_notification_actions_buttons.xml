@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/notification_actions_block" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/firstActionButton" android:background="@drawable/bg_guidance_notifications_actions_ripple" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/notification_action_buttons_padding_horizontal" android:paddingVertical="@dimen/notification_action_buttons_padding_vertical">
+        <ImageView android:layout_gravity="top" android:id="@id/firstActionImage" android:layout_width="16.0dip" android:layout_height="16.0dip" android:tint="@color/text_body_white" />
+        <TextView android:textSize="@dimen/notification_action_buttons_text_size" android:textColor="@color/text_body_white" android:layout_gravity="top" android:id="@id/firstActionButtonText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="false" android:layout_marginStart="8.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/secondActionButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="24.0dip" android:paddingHorizontal="@dimen/notification_action_buttons_padding_horizontal" android:paddingVertical="@dimen/notification_action_buttons_padding_vertical">
+        <ImageView android:layout_gravity="top" android:id="@id/secondActionImage" android:layout_width="16.0dip" android:layout_height="16.0dip" android:tint="@color/text_body_white" />
+        <TextView android:textSize="@dimen/notification_action_buttons_text_size" android:textColor="@color/text_body_white" android:layout_gravity="top" android:id="@id/secondActionButtonText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="false" android:layout_marginStart="8.0dip" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="@dimen/pay_sdk_margin_large"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="?pay_sdk_primaryTextColor" android:id="@id/payment_methods_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PaySDK.TextAppearance.Title5" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/payment_methods_recycler" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginVertical="@dimen/pay_sdk_margin_middle" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

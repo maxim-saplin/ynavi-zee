@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/alice_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.alice.views.VerticalRecyclerView android:id="@id/alice_dialog_list" android:paddingBottom="12.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/alice_suggests_container" android:paddingBottom="@dimen/dialog_item_margin_vertical" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <com.yandex.alice.ui.suggest.AliceSuggestsView android:layout_gravity="bottom" android:id="@id/alice_suggests_view" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="@dimen/alice_suggest_item_height" android:overScrollMode="never" />
+    </FrameLayout>
+    <ViewStub android:layout_gravity="top" android:id="@id/alice_ad_stub" android:layout="@layout/dialog_item_ad_pinned" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_ad_height" />
+</FrameLayout>

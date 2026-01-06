@@ -29,15 +29,20 @@ The practical takeaway for a *new APK attempt* is: **expect to triage and patch 
 This section is an example from a specific build; class names/paths may differ in another APK version.
 
 - Observed failures after rebuild+re-sign:
-  - Native segfault originating from `libsubver55liadapt`
-  - Java `IllegalStateException: Internal error, application signature mismatch`
-  - A Passport “debug account only” guard
-- Root cause (high level): original APK signed with a vendor cert, but rebuilds were signed with this repo’s key; the app contained both native and Java signature checks.
-- Fixes applied (smali patches) in that build:
-  - Stubbed the custom factory to avoid loading the native lib and delegate to platform defaults: `smali_classes14/ru/subver55/SubverAppComponentFactory.smali`.
-  - Bypassed Passport runtime signature crash: `smali_classes6/com/yandex/passport/internal/a0.smali`.
-  - Disabled debug-account-only crash: `smali_classes6/com/yandex/passport/internal/d0.smali`.
-- Result: patched, re-signed APK launched and stayed up; both main and passport processes ran.
+  - Runtime UI inflate crash when rebuilt from a **smali-only `-r`** decompile (resources kept “raw”): `InflateException` / `Error inflating class vector`.
+  - Java crash: `IllegalStateException: Internal error, application signature mismatch` (Passport runtime check).
+- Root cause (high level): original APK is signed with Yandex’s cert, but rebuilds are signed with this repo’s key (`androiddebugkey.jks`). The app contains Java-side integrity guards that must be bypassed for re-signed builds.
+- Fixes applied for the 27.0.2 baseline:
+  - Use a **full decode** (no `-r`) for this version to avoid the runtime inflate crash.
+  - Bypass the Passport runtime signature crash by short-circuiting `com.yandex.passport.internal.a0.a(...)` (method name `a` in smali):
+    - `smali_classes10/com/yandex/passport/internal/a0.smali`
+- Result: patched, re-signed APK launched and stayed up on emulator; main process remained alive and `NavigatorActivity` resumed.
+
+## Current workspace conventions (single mutable state)
+- Base APK: `inputs/current/base.apk`
+- Decompiled working tree: `work/current/decompiled/`
+- Signed APK: `builds/current/out_signed.apk`
+- Smoke log: `work/current/emulator_smoke.log`
 
 ## SubverAppComponentFactory deep dive
 This is a particularly important *pattern*, even when the exact class name changes between APK versions.

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="36.0dip" android:viewportWidth="36.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="#ffffffff" android:pathData="M18 1a11 11 0 1 0 0 22a11 11 0 1 0 0-22z" />
+    <path android:fillColor="@drawable/$payment_plus_ball_24__0" android:pathData="M29 12c0 6.08-4.92 11-11 11S7 18.08 7 12S11.92 1 18 1c1.19 0 2.33 0.19 3.4 0.54l-2.5 7.71h-7.33L10.67 12H18l-2.14 6.6h3.02l2.15-6.6H29zm-0.35-2.75h-6.73l2.1-6.46c2.26 1.48 3.94 3.77 4.63 6.46z" android:fillType="evenOdd" />
+</vector>

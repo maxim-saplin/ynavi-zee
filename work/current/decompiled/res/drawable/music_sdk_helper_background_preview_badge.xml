@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="?music_sdk_helper_icon_ripple"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/music_sdk_helper_preview_badge_corner" />
+            <solid android:color="?music_sdk_helper_background" />
+            <stroke android:width="@dimen/music_sdk_helper_preview_badge_border" android:color="?music_sdk_helper_preview_badge" />
+        </shape>
+    </item>
+</ripple>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.navilib.widget.NaviConstraintLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/indent_one_and_half"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.navilib.widget.NaviTextView android:id="@id/text_alternativeballoon_diff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/indent" android:layout_marginBottom="@dimen/indent" android:includeFontPadding="false" android:layout_marginStart="@dimen/indent_one_and_half" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/AlternativeBalloonText" />
+    <com.yandex.navilib.widget.NaviImageView android:id="@id/image_alternativeballoon_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/indent_half" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/text_alternativeballoon_diff" app:layout_constraintTop_toTopOf="parent" />
+</com.yandex.navilib.widget.NaviConstraintLayout>

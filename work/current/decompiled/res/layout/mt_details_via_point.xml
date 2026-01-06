@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="32.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/text_white_black" android:gravity="center" android:id="@id/mt_details_via_point_number" android:background="@drawable/mt_rounded_grey_background" android:layout_width="20.0dip" android:layout_height="20.0dip" android:importantForAccessibility="no" style="@style/Text10.Bold" />
+    <View android:id="@id/mt_details_via_point_ellipse" android:background="@drawable/mt_details_waypoint_ellipse" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_marginStart="10.0dip" />
+    <TextView android:layout_gravity="center" android:id="@id/mt_details_via_point_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:lineSpacingExtra="4.0sp" android:layout_marginStart="14.0dip" style="@style/Text16.Medium" />
+    <TextView android:id="@id/mt_details_via_point_arrival_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" style="@style/Text12.Grey" />
+</LinearLayout>

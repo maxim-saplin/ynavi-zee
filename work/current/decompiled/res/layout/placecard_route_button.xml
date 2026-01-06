@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/placecard_route_loading_shimmer" android:background="@drawable/common_stub_element_background" android:layout_width="140.0dip" android:layout_height="18.0dip" style="@style/CommonShimmer" />
+    <TextView android:textSize="?placecardRouteButtonTextSize" android:textColor="?placecardRouteButtonColor" android:gravity="end|center" android:id="@id/placecard_route_right" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minHeight="18.0dip" android:text="@string/map_menu_route_to" android:includeFontPadding="false" android:drawablePadding="4.0dip" style="@style/Text14.TextSecondary" />
+</merge>

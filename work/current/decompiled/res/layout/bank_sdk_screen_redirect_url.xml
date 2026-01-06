@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.OperationProgressView android:id="@id/progress_view" android:layout_width="80.0dip" android:layout_height="80.0dip" app:bank_sdk_initialSpinnerWidth="4.0dip" app:bank_sdk_spinnerRadiusPercent="1.0" app:layout_constraintBottom_toTopOf="@id/progress_text" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.4" app:layout_constraintVertical_chainStyle="packed" />
+    <TextView android:textColor="?android:textColorPrimary" android:gravity="center" android:id="@id/progress_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/bank_sdk_common_loading_wait_a_second" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/progress_view" style="@style/Widget.Bank.Text.Headline2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

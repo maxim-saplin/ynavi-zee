@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/primaryIcon" android:layout_width="@dimen/redesign_notification_maneuver_image_size" android:layout_height="@dimen/redesign_notification_maneuver_image_size" android:scaleType="center" />
+    <ImageView android:id="@id/primaryIconTinted" android:layout_width="@dimen/redesign_notification_maneuver_image_size" android:layout_height="@dimen/redesign_notification_maneuver_image_size" android:tint="@color/text_primary" />
+    <ImageView android:id="@id/secondaryIcon" android:visibility="gone" android:layout_width="@dimen/redesign_notification_maneuver_image_size" android:layout_height="@dimen/redesign_notification_maneuver_image_size" />
+    <ImageView android:id="@id/secondaryIconTinted" android:visibility="gone" android:layout_width="@dimen/redesign_notification_maneuver_image_size" android:layout_height="@dimen/redesign_notification_maneuver_image_size" android:tint="@color/text_primary" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip">
+        <TextView android:textSize="@dimen/redesign_notification_title_text_size" android:textStyle="bold" android:textColor="@color/text_primary" android:id="@id/titleView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.0dip" style="@style/NaviTextMedium" />
+        <TextView android:textSize="@dimen/redesign_notification_description_text_size" android:textColor="@color/text_primary_variant" android:id="@id/descriptionView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.0dip" style="@style/NaviTextRegular" />
+    </LinearLayout>
+    <include layout="@layout/traffic_light_notification_view" />
+</LinearLayout>

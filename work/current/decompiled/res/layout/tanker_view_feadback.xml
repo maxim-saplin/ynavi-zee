@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/tanker_basic_padding_24" android:paddingBottom="@dimen/tanker_basic_padding_24" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/tanker_basic_text_size" android:textColor="@color/tanker_text_secondary" android:gravity="center_horizontal" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tanker_feadback_title" android:layout_marginStart="@dimen/tanker_basic_padding" android:layout_marginEnd="@dimen/tanker_basic_padding" style="@style/TankerTextRegular" />
+    <ru.tankerapp.android.sdk.navigator.view.views.RatingView android:layout_gravity="center_horizontal" android:id="@id/ratingBar" android:layout_width="280.0dip" android:layout_height="56.0dip" android:layout_marginTop="8.0dip" android:progressDrawable="@drawable/tanker_rating_star" app:starSize="56.0dip" app:startCount="5" />
+</LinearLayout>

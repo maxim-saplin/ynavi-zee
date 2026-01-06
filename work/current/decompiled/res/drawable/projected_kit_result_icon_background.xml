@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/projected_kit_result_icon_background_color" />
+    <size android:height="@dimen/projected_result_icon_size" android:width="@dimen/projected_result_icon_size" />
+</shape>

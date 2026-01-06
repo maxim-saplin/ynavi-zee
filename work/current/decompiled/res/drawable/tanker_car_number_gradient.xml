@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="@color/tanker_gradientStart" android:endColor="@color/tanker_car_number_backgroundColor_light" android:angle="0.0" android:type="linear" />
+</shape>

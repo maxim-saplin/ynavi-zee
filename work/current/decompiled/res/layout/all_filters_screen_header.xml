@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/all_filters_screen_textview" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/filters_dialog_title" android:layout_weight="1.0" android:importantForAccessibility="yes" android:layout_marginStart="16.0dip" android:layout_marginEnd="8.0dip" android:accessibilityTraversalAfter="@id/close_filters_view" style="@style/Text20.Medium" />
+    <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:id="@id/close_filters_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16.0dip" android:accessibilityTraversalBefore="@id/all_filters_screen_textview" />
+</merge>

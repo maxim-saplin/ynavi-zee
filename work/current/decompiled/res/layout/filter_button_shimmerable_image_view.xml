@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="24.0dip" android:layout_height="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/filter_button_shimmer" android:background="@drawable/shimmer_background" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonShimmer" />
+    <ImageView android:id="@id/filter_button_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+</merge>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_loading">正在加载…</string>
+    <string name="common_minutes_sign">分钟</string>
+    <string name="super_app_error_screen_hide_button">取消</string>
+    <string name="super_app_error_screen_reload_button">重载</string>
+    <string name="super_app_error_screen_subtitle">重载有时会有帮助</string>
+    <string name="super_app_error_screen_title">错误</string>
+    <string name="super_app_no_authorization_auth_button">输入号码</string>
+    <string name="super_app_no_authorization_cancel_button">隐藏</string>
+    <string name="super_app_no_authorization_subtitle">如需下单，请输入您的电话号码</string>
+</resources>

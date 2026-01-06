@@ -1,0 +1,61 @@
+.class public final Lru/yandex/yandexmaps/search/internal/results/qa;
+.super Lru/yandex/yandexmaps/search/internal/results/xa;
+.source "SourceFile"
+
+
+# static fields
+.field public static final a:Lru/yandex/yandexmaps/search/internal/results/qa;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lru/yandex/yandexmaps/search/internal/results/qa;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lru/yandex/yandexmaps/search/internal/results/qa;->a:Lru/yandex/yandexmaps/search/internal/results/qa;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lru/yandex/yandexmaps/search/internal/results/qa;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0xcc45421
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "OnRoute"
+
+    return-object v0
+.end method

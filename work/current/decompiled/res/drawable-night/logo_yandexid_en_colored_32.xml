@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="32.0dip" android:width="78.0dip" android:viewportWidth="78.0" android:viewportHeight="32.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <path android:fillColor="#ffffffff" android:pathData="M16 0h46c8.84 0 16 7.16 16 16s-7.16 16-16 16H16C7.16 32 0 24.84 0 16S7.16 0 16 0zm0 1.41C7.94 1.41 1.41 7.94 1.41 16c0 8.06 6.53 14.59 14.59 14.59h46c8.06 0 14.59-6.53 14.59-14.59c0-8.06-6.53-14.59-14.59-14.59H16z" android:fillType="evenOdd" />
+        <path android:fillColor="#fffc3f1d" android:pathData="M7.07 15.91c0-5.37 4.35-9.72 9.72-9.72h0.01c5.37 0 9.72 4.35 9.72 9.72v0.01c0 2.58-1.02 5.05-2.85 6.87-1.82 1.82-4.3 2.85-6.87 2.85h-0.01c-5.37 0-9.72-4.35-9.72-9.72z" />
+        <path android:fillColor="#ffffffff" android:pathData="M17.06 16.92c0.57 1.24 0.76 1.67 0.76 3.17v1.98h-2.03v-3.34l-3.83-8.33h2.12l2.98 6.52zm2.5-6.52l-2.48 5.64h2.06l2.5-5.64h-2.08z" />
+        <path android:fillColor="#ffffffff" android:pathData="M54.97 22.98V8.5h-2.82v14.48h2.82z" />
+        <path android:fillColor="#ffffffff" android:pathData="M60.3 22.97v0.01h-2.84V8.5h4.39c1.15 0 2.21 0.12 3.17 0.37c0.97 0.25 1.8 0.66 2.53 1.2c0.71 0.56 1.28 1.3 1.68 2.21c0.4 0.92 0.6 2.05 0.6 3.38c0 1.58-0.35 2.91-1.06 4c-0.7 1.07-1.68 1.9-2.9 2.47c-1.24 0.56-2.63 0.84-4.18 0.84H60.3zm0-2.12V10.62h1.3c1.03 0 1.96 0.15 2.76 0.46c0.8 0.3 1.44 0.83 1.9 1.56c0.45 0.74 0.68 1.73 0.68 2.98c0 1.16-0.23 2.12-0.7 2.9c-0.46 0.78-1.1 1.36-1.94 1.75c-0.83 0.4-1.8 0.58-2.9 0.58h-1.1z" android:fillType="evenOdd" />
+        <path android:fillColor="#ffffffff" android:pathData="M27.85 15.91c0-4.64 3.25-8.52 7.6-9.49l0.44 2c-3.43 0.76-6 3.82-6 7.5c0 4.23 3.44 7.67 7.68 7.67s7.68-3.44 7.68-7.68h2.04c0 5.37-4.35 9.73-9.72 9.73c-5.37 0-9.72-4.36-9.72-9.73z" />
+        <path android:fillColor="#ffffffff" android:pathData="M37.57 6.19v2.04c3.67 0 6.73 2.57 7.5 6l2-0.44c-0.98-4.35-4.86-7.6-9.5-7.6z" />
+        <path android:fillColor="#ffffffff" android:pathData="M37.57 21.66c2.37 0 4.4-1.43 5.28-3.47l-1.87-0.82c-0.57 1.32-1.88 2.25-3.41 2.25c-1.51 0-2.81-0.9-3.39-2.2l-1.87 0.81c0.89 2.02 2.9 3.43 5.26 3.43z" />
+    </group>
+</vector>

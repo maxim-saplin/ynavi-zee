@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="60.0dip">
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="34.0dip" android:layout_marginTop="10.0dip" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" app:bank_sdk_cornerRadius="4.0dip" />
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="12.0dip" android:layout_marginBottom="16.0dip" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" app:bank_sdk_cornerRadius="4.0dip" />
+        <include layout="@layout/bank_sdk_account_details_shimmer_item" />
+        <include layout="@layout/bank_sdk_account_details_shimmer_item" />
+        <include layout="@layout/bank_sdk_account_details_shimmer_item" />
+        <include layout="@layout/bank_sdk_account_details_shimmer_item" />
+        <include layout="@layout/bank_sdk_account_details_shimmer_item" />
+        <include layout="@layout/bank_sdk_account_details_shimmer_item" />
+        <include layout="@layout/bank_sdk_account_details_shimmer_item" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <com.yandex.bank.widgets.common.SkeletonView android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginBottom="8.0dip" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" app:bank_sdk_cornerRadius="16.0dip" />
+</com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>

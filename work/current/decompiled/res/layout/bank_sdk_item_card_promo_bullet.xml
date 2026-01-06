@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingTop="@dimen/bank_sdk_card_promo_point_padding_vertical" android:paddingBottom="@dimen/bank_sdk_card_promo_point_padding_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/image" android:layout_width="@dimen/bank_sdk_number_option_icon_view_width" android:layout_height="@dimen/bank_sdk_number_option_icon_view_width" android:contentDescription="@null" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:id="@id/imageShimmer" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/image" app:layout_constraintEnd_toEndOf="@id/image" app:layout_constraintStart_toStartOf="@id/image" app:layout_constraintTop_toTopOf="@id/image">
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="fill_parent" android:layout_height="fill_parent" android:shape="oval" />
+    </com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>
+    <TextView android:layout_gravity="center_vertical" android:id="@id/text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" android:layout_marginEnd="@dimen/bank_sdk_screen_horizontal_space_small" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/image" app:layout_constraintTop_toTopOf="parent" style="@style/Widget.Bank.Text.Body2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1 @@
+(theme #FFEDEFF2,#FF393B40 20.0p (padded 14.0p 24.0p 24.0p 24.0p (col 100.0% (padded 0.0p 29.0% (bone 100.0% 20.0p 4.0p)) (space 30.0p) (bone 100.0% 48.0p 24.0p) (space 16.0p) (bone 100.0% 88.0p 24.0p))))

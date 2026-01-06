@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@id/mt_schedule_header_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="start" android:id="@id/mt_schedule_header_date_button" android:background="@drawable/common_borderless_ripple_background" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mt_schedule_choose_date_button_today" style="@style/Text14.Medium.TextActions" />
+    <TextView android:layout_gravity="end" android:id="@id/mt_schedule_header_reset_filter_button" android:background="@drawable/common_borderless_ripple_background" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mt_schedule_reset_button" style="@style/Text14.Medium.TextActions" />
+</merge>

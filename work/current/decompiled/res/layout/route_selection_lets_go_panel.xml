@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/lets_go_panel_height" android:paddingStart="8.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.bottompanel.letsgo.LetsGoOptionsButton android:layout_gravity="center" android:id="@id/time_options_button" android:layout_width="@dimen/lets_go_panel_button_width" android:layout_height="@dimen/lets_go_panel_button_height" />
+    <FrameLayout android:layout_gravity="center" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_weight="1.0" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+        <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/lets_go_button_shimmer" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonShimmer" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/lets_go_button_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/lets_go_button" android:layout_width="fill_parent" android:layout_height="fill_parent" app:generalButtonSize="big" app:text="@string/routes_goto_directions" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/buttons_divider" android:layout_width="8.0dip" android:layout_height="wrap_content" />
+            <FrameLayout android:id="@id/go_steps_button_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/go_steps_button" android:layout_width="fill_parent" android:layout_height="fill_parent" app:generalButtonSize="big" app:text="По шагам" />
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:gravity="center" android:id="@id/lets_go_button_warning_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Text14.Medium.TextSecondary" />
+    </FrameLayout>
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.bottompanel.letsgo.LetsGoOptionsButton android:layout_gravity="center" android:id="@id/route_options_button" android:layout_width="@dimen/lets_go_panel_button_width" android:layout_height="@dimen/lets_go_panel_button_height" />
+</merge>

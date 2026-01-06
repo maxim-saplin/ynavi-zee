@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:gravity="center" android:id="@id/placecard_action_sheet_list_title_item_text" android:background="@drawable/background_panel_color_impl" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:importantForAccessibility="yes" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/Text14.Medium.Grey"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.SwitchPreference android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" app:checked="false" app:details="@string/bookmarks_share_link_preference_subtitle" app:summary="@string/bookmarks_share_link_preference_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

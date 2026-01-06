@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="96.0dip" android:layout_height="96.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.video.player.api.MapsBasicVideoPlayerView android:id="@id/snippet_gallery_basic_video_player_view" android:background="@color/buttons_secondary" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ru.yandex.maps.uikit.atomicviews.snippet.image.SnippetImageView android:id="@id/snippet_gallery_thumbnail_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:layout_gravity="end|top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:src="@drawable/play_16" app:tint="@color/bw_white" />
+</merge>

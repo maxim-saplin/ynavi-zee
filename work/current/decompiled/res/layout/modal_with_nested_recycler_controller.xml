@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/modal_header" />
+    <ru.yandex.yandexmaps.common.views.MaxHeightSupportedRecyclerView android:id="@id/modal_nested_recycler" android:paddingTop="@dimen/common_border_thickness" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="@dimen/modal_with_nested_recycler_height" />
+</LinearLayout>

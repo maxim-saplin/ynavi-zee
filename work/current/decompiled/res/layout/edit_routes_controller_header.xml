@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/background_panel" android:paddingTop="16.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_gravity="start|center" android:id="@id/edit_routes_header_title" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/routes_setup_title" android:importantForAccessibility="yes" style="@style/Text20.Medium" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="end|center" android:id="@id/edit_routes_ready_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:generalButtonSize="small" app:generalButtonStyle="primary" app:paddings="12.0dip" app:text="@string/edit_routes_ready" />
+</FrameLayout>

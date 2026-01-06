@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="69.0dip" android:layout_marginHorizontal="@dimen/bank_sdk_margin_upgrade_screen_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:background="@drawable/bank_sdk_skeleton_background_4" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginBottom="18.0dip" android:layout_marginEnd="70.0dip" app:bank_sdk_shimmer_auto_start="true" app:layout_constraintBottom_toTopOf="@id/underline" />
+    <View android:id="@id/underline" android:background="?bankColor_other_separator" android:layout_width="fill_parent" android:layout_height="1.0dip" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

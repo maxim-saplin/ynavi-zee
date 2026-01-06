@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:weightSum="2.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/gallery_tab_double_placement_left_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ru.yandex.yandexmaps.common.views.ProportionalImageView android:id="@id/gallery_tab_double_placement_left" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:paddingEnd="2.0dip" app:heightRatio="1.0" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/gallery_tab_double_placement_right_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ru.yandex.yandexmaps.common.views.ProportionalImageView android:id="@id/gallery_tab_double_placement_right" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:paddingStart="2.0dip" app:heightRatio="1.0" />
+    </FrameLayout>
+</merge>

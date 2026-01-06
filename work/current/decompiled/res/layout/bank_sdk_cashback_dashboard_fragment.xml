@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.dashboard.DashboardViewLayout android:id="@id/dashboardView" android:background="?bankColor_background_primary" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.yandex.bank.widgets.common.dashboard.DashboardCollapsingBalanceView android:id="@id/linearLayout" android:paddingLeft="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.yandex.bank.widgets.common.DashboardDrawableTextView android:id="@id/cashbackTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/cashbackBalanceView" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="1.0" app:layout_constraintVertical_chainStyle="packed" />
+            <com.yandex.bank.widgets.common.DashboardBalanceTextView android:textColor="?bankColor_textIcon_primary" android:gravity="center_vertical" android:id="@id/cashbackBalanceView" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bank_sdk_dashboard_account_balance_top_margin" android:maxLines="1" android:lineSpacingExtra="0.0sp" app:layout_constraintBottom_toTopOf="@id/cashbackDescription" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/cashbackTitle" style="@style/Widget.Bank.Text.Numbers2" />
+            <TextView android:textColor="?bankColor_textIcon_primary" android:gravity="center_vertical" android:id="@id/cashbackDescription" android:tag="@string/bank_sdk_tag_dashboard_middle_container_footer" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:lineSpacingExtra="0.0sp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/Widget.Bank.Text.Body3" />
+        </com.yandex.bank.widgets.common.dashboard.DashboardCollapsingBalanceView>
+    </com.yandex.bank.widgets.common.dashboard.DashboardViewLayout>
+    <com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:id="@id/shimmer" android:background="?bankColor_background_primary" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/bank_sdk_cashback_skeleton_item" />
+    </com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>
+    <com.yandex.bank.widgets.common.ErrorView android:id="@id/errorView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

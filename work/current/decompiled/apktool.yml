@@ -1,0 +1,31 @@
+version: 2.12.1
+apkFileName: base.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 26
+  targetSdkVersion: 35
+packageInfo:
+  forcedPackageId: 127
+versionInfo:
+  versionCode: 738798690
+  versionName: 27.0.2
+doNotCompress:
+- arsc
+- gif
+- jpg
+- mp3
+- ogg
+- png
+- webp
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
+- res/raw/com_android_billingclient_heterodyne_info
+- res/raw/com_android_billingclient_registration_info.binarypb
+- res/raw/paymentsdk_bindings_key_debug.der
+- res/raw/paymentsdk_bindings_key_localdebug.der
+- res/raw/paymentsdk_bindings_key_release.der
+- res/raw/truck_large.glb
+- res/raw/truck_medium.glb
+- res/raw/truck_small.glb

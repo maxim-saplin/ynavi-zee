@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="@color/background_panel"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.common.views.EllipsizingTextView android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:drawablePadding="8.0dip" android:layout_weight="1.0" android:layout_marginStart="16.0dip" style="@style/Text24.Bold" />
+    <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:id="@id/close_button" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="8.0dip" />
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="26.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/requisiteRadioButton" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_marginStart="@dimen/bank_sdk_screen_horizontal_space" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:id="@id/requisiteRadioButtonLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" android:layout_marginEnd="@dimen/bank_sdk_screen_horizontal_space" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toEndOf="@id/requisiteRadioButton" app:layout_constraintTop_toTopOf="parent" style="@style/Widget.Bank.Text.Body1.Secondary" />
+</androidx.constraintlayout.widget.ConstraintLayout>

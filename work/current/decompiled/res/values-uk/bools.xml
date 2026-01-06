@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="passport_is_vk_popular">true</bool>
+</resources>

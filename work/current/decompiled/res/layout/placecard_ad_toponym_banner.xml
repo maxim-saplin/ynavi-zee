@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/placecard_toponym_ad_outline" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16.0dip" android:layout_marginVertical="8.0dip">
+        <View android:id="@id/toponym_ad_preview" android:background="@drawable/placecard_toponym_ad_bg" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_margin="1.0dip" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/toponym_ad_loader" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+        <FrameLayout android:id="@id/toponym_ad_layout" android:background="@drawable/placecard_toponym_ad_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="1.0dip">
+            <com.yandex.mobile.ads.banner.BannerAdView android:id="@id/toponym_ad_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </FrameLayout>
+</merge>

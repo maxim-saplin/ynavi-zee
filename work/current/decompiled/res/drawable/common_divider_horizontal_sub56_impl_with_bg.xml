@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/background_panel_color_impl">
+        <shape>
+            <size android:height="@dimen/common_border_thickness" android:width="56.0dip" />
+            <solid android:color="@color/background_panel" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/common_divider" android:left="56.0dip" />
+</layer-list>

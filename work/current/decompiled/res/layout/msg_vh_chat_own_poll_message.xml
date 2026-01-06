@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.messaging.internal.view.chat.ChatItemLinearLayout android:gravity="end|center" android:layout_gravity="end" android:orientation="horizontal" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" layout="@layout/msg_chat_error_icon_layout" />
+    <LinearLayout android:orientation="vertical" android:id="@id/timeline_message_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewStub android:id="@id/reply" android:layout="@layout/msg_reply_layout" android:inflatedId="@id/reply" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="12.0dip" />
+        <ViewStub android:textColor="?messagingIncomingSecondaryColor" android:id="@id/forwarded_message" android:layout="@layout/msg_forwarded_message" android:inflatedId="@id/forwarded_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:paddingStart="10.0dip" android:paddingEnd="12.0dip" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/message_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="18.0dip" android:paddingHorizontal="12.0dip">
+                <androidx.appcompat.widget.AppCompatTextView android:id="@id/poll_message_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" style="@style/Messaging.PollMessage.Title" />
+                <com.yandex.bricks.BrickSlotView android:id="@id/poll_message_votes_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/poll_message_options" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                <include android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="8.0dip" layout="@layout/msg_poll_vote_btn" />
+                <androidx.appcompat.widget.AppCompatTextView android:textSize="14.0sp" android:gravity="center" android:id="@id/poll_show_results" android:paddingTop="8.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messenger_poll_results_btn_text" />
+                <View android:id="@id/poll_show_results_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="12.0dip" />
+            </LinearLayout>
+            <include android:layout_gravity="end|bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="9.0dip" android:layout_marginEnd="12.0dip" layout="@layout/msg_message_status_and_time" />
+        </FrameLayout>
+    </LinearLayout>
+</com.yandex.messaging.internal.view.chat.ChatItemLinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font android:font="@font/ys_text_regular" android:fontWeight="400" android:fontStyle="normal" app:font="@font/ys_text_regular" app:fontStyle="normal" app:fontWeight="400" />
+    <font android:font="@font/ys_text_regular_italic" android:fontWeight="400" android:fontStyle="italic" app:font="@font/ys_text_regular_italic" app:fontStyle="italic" app:fontWeight="400" />
+    <font android:font="@font/ys_text_bold" android:fontWeight="700" android:fontStyle="normal" app:font="@font/ys_text_bold" app:fontStyle="normal" app:fontWeight="700" />
+    <font android:font="@font/ys_text_medium" android:fontWeight="500" android:fontStyle="normal" app:font="@font/ys_text_medium" app:fontStyle="normal" app:fontWeight="500" />
+</font-family>

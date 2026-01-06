@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bricks.BrickSlotView android:id="@id/chat_create_toolbar_slot" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/chat_create_coordinator" android:background="?messagingCommonBackgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="start|top" android:orientation="vertical" android:id="@id/collapsing_button_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/border" android:background="?messagingCommonDividerColor" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/create_group_chat_btn" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="36.0dip" android:layout_height="36.0dip" app:srcCompat="@drawable/msg_ic_create_group" />
+                <TextView android:textSize="16.0sp" android:textColor="?messagingCommonAccentTextColor" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/create_group_chat" android:fontFamily="@font/ya_medium" />
+            </LinearLayout>
+            <View android:id="@id/border2" android:background="?messagingCommonDividerColor" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/create_channel_btn" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="36.0dip" android:layout_height="36.0dip" app:srcCompat="@drawable/msg_ic_create_channel" />
+                <TextView android:textSize="16.0sp" android:textColor="?messagingCommonAccentTextColor" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/create_channel" android:fontFamily="@font/ya_medium" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.yandex.bricks.BrickSlotView android:id="@id/user_list_slot" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

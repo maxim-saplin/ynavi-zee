@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/horizontal_snippet_background_wrapper" />
+    <corners android:topRightRadius="@dimen/rounded_horizontal_snippet_selected_background_wrapper_corner_radius" android:bottomRightRadius="@dimen/rounded_horizontal_snippet_selected_background_wrapper_corner_radius" />
+</shape>

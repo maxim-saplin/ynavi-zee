@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.taxi.widget.NotificationsScrollView android:id="@id/notifications_scroll_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+        <FrameLayout android:id="@id/notifications_items_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ru.yandex.taxi.widget.NotificationsScrollView>
+    <ru.yandex.taxi.design.ListItemComponent android:id="@id/notifications_collapse_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:component_no_background="true" app:component_title_gravity="center_horizontal" app:component_title_text_color="@color/white" />
+</merge>

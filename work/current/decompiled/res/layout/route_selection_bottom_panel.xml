@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.bottompanel.common.PanelBorder android:layout_gravity="bottom" android:id="@id/route_bottom_panel_border" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.bottompanel.letsgo.LetsGoPanel android:layout_gravity="bottom" android:id="@id/lets_go_panel" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/lets_go_panel_height" />
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.bottompanel.options.RouteOptionsPanel android:layout_gravity="bottom" android:id="@id/route_options_panel" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/route_options_panel_height" />
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.bottompanel.guidancelauncer.AutomaticGuidanceLauncherPanel android:layout_gravity="bottom" android:id="@id/automatic_guidance_launcher_panel" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/automatic_guidance_launcher_panel_height" />
+</merge>

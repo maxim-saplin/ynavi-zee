@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/container" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/webview_curtain" android:background="@drawable/passport_bg_webview_curtain" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+    <com.yandex.passport.common.ui.view.FancyProgressBar android:layout_gravity="center" android:id="@id/progress" android:layout_width="5.0dip" android:layout_height="5.0dip" />
+    <TextView android:gravity="center" android:id="@id/error_text" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <Button android:id="@id/button_retry" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/passport_reg_try_again" />
+</androidx.constraintlayout.widget.ConstraintLayout>

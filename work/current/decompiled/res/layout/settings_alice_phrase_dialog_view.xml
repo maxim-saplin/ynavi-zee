@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/common_divider_horizontal_sub56_impl" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/settings_alice_phrase_alice" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_alice_voice_activation_phrase_alice" style="@style/SettingRadioButton" />
+    <RadioButton android:id="@id/settings_alice_phrase_yandex" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_alice_voice_activation_phrase_yandex" style="@style/SettingRadioButton" />
+</RadioGroup>

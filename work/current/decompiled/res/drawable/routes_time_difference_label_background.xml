@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="28.0dip" />
+    <solid android:color="@color/routes_time_difference_label_color" />
+    <corners android:topRightRadius="14.0dip" android:bottomLeftRadius="14.0dip" android:bottomRightRadius="14.0dip" />
+</shape>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher android:id="@id/layers_add_region_switcher" android:background="@drawable/background_panel_color_impl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inAnimation="@android:anim/fade_in" android:outAnimation="@android:anim/fade_out" android:elevation="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/add_region_main" />
+    <include layout="@layout/add_region_thanks" />
+</ViewSwitcher>

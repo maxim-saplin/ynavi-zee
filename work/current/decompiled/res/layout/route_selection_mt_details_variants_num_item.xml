@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:ellipsize="end" android:gravity="center" android:id="@id/mt_details_ground_transport_info_num" android:background="@drawable/mt_transport_icon_background" android:layout_width="wrap_content" android:layout_height="20.0dip" android:minWidth="20.0dip" android:maxLines="1" android:paddingHorizontal="4.0dip" style="@style/Text12.Medium.PermanentWhite"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

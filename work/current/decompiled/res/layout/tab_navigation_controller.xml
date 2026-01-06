@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:id="@id/tab_navigation_controller_paddington" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ru.yandex.yandexmaps.suggest.floating.FloatingSuggestView android:id="@id/tab_navigation_suggest_main" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" app:layout_constraintBottom_toTopOf="@id/tab_navigation_order_ghost" />
+            <ViewStub android:id="@id/tab_navigation_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+            <ru.yandex.yandexmaps.common.views.DimmingBlockerView android:id="@id/tab_navigation_order_dimming" android:background="@color/bw_black_alpha40" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <FrameLayout android:id="@id/tab_navigation_track_order_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/tab_navigation_layout" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <FrameLayout android:id="@id/tab_navigation_track_order_top_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="0.0dip" android:paddingHorizontal="12.0dip" app:layout_constraintBottom_toTopOf="@id/tab_navigation_layout" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <Space android:id="@id/tab_navigation_order_ghost" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/tab_navigation_layout" />
+            <View android:id="@id/tab_navigation_touch_interceptor" android:layout_width="0.0dip" android:layout_height="0.0dip" android:elevation="100.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <View android:id="@id/animated_pixel" android:layout_width="1.0px" android:layout_height="1.0px" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+</FrameLayout>

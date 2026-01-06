@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:id="@id/edit_route_container" android:background="@color/bw_black_alpha70" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.uikit.shutter.ShutterView android:id="@id/edit_routes_shutter" android:tag="@string/change_handler_bottom_panel_tag" style="@style/ShutterCommonLayoutParams" />
+    <ru.yandex.yandexmaps.routes.internal.editroute.shutter.views.RouteOptimizationPanelView android:layout_gravity="bottom" android:id="@id/route_optimization_panel" android:tag="@string/change_handler_bottom_panel_tag" android:layout_height="@dimen/route_optimization_panel_height" style="@style/ShutterBoundLayoutParams" />
+    <ru.yandex.yandexmaps.routes.internal.editroute.shutter.views.OptimizationProgressView android:layout_gravity="bottom" android:id="@id/optimization_progress_view" android:visibility="gone" android:layout_height="fill_parent" android:outlineProvider="background" app:ymaps_goneWhenNotInProgress="false" app:ymaps_progressSize="large" style="@style/ShutterBoundLayoutParams" />
+    <com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:id="@id/fix_last_point_dialog_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/feedbackFormEmailLayout" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView android:gravity="center_horizontal" android:id="@id/feedbackFormEmailStarTextView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="16.0dip" android:text="@string/feedback_star" />
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/feedbackFormEmailTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="16.0dip" android:lineSpacingExtra="8.0dip" android:layout_marginStart="6.0dip" />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatEditText android:id="@id/feedbackFormEmailEditText" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/feedback_set_email" android:maxLines="1" android:inputType="text" android:imeOptions="actionDone" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/feedbackFormEmailErrorTextView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/feedback_email_is_incorrect" />
+</LinearLayout>

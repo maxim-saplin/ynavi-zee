@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="logo_splash_bitmap">@drawable/logo_splashscreen_bitmap_tablet</item>
+    <item type="drawable" name="logo_text_splash">@drawable/logo_text_80</item>
+    <item type="drawable" name="logo_text_splash_bitmap">@drawable/logo_text_bitmap_80</item>
+</resources>

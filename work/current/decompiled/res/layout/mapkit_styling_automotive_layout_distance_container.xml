@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/distance_container" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/mapkit_styling_automotive_textsize_manoeuvre_balloon_distance" android:textColor="@color/mapkit_styling_automotive_white" android:id="@id/text_balloon_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/MapkitCarTextMedium" />
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/mapkit_styling_automotive_textsize_manoeuvre_balloon_metrics" android:textColor="@color/mapkit_styling_automotive_white" android:id="@id/text_balloon_metrics" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" app:layout_constraintBaseline_toBaselineOf="@id/text_balloon_distance" app:layout_constraintStart_toEndOf="@id/text_balloon_distance" style="@style/MapkitCarTextMedium" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/settings_container" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/settings_card_fade" android:background="@color/settings_card_fade_color" android:layout_width="@dimen/shutter_width" android:layout_height="fill_parent" />
+    <ru.yandex.yandexmaps.uikit.shutter.ShutterView android:id="@id/settings_shutter_view" android:tag="@string/change_handler_bottom_panel_tag" android:layout_marginLeft="0.0dip" style="@style/ShutterCommonLayoutParams" />
+</FrameLayout>

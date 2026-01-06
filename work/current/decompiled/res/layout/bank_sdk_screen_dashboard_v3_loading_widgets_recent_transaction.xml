@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip" android:paddingHorizontal="@dimen/bank_sdk_screen_horizontal_space"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.SkeletonView android:layout_width="40.0dip" android:layout_height="40.0dip" app:bank_sdk_cornerRadius="20.0dip" />
+    <com.yandex.bank.widgets.common.SkeletonView android:layout_width="0.0dip" android:layout_height="20.0dip" android:layout_weight="1.0" android:layout_marginStart="12.0dip" app:bank_sdk_cornerRadius="6.0dip" />
+    <com.yandex.bank.widgets.common.SkeletonView android:layout_width="64.0dip" android:layout_height="20.0dip" android:layout_marginStart="12.0dip" app:bank_sdk_cornerRadius="6.0dip" />
+</LinearLayout>

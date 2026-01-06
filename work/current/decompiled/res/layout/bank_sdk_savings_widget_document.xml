@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/savingsWidgetDocumentContainer" android:background="@drawable/bank_sdk_savings_widget_background" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/bank_sdk_savings_account_widget_margin_horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView android:ellipsize="end" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="20.0dip" android:maxLines="1" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" style="@style/Widget.Bank.Text.Headline3" />
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/buttonsContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</androidx.appcompat.widget.LinearLayoutCompat>

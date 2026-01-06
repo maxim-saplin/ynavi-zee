@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:id="@id/errorText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bank_sdk_transfer_loading_error" app:layout_constraintBottom_toTopOf="@id/buttonRetry" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" style="@style/Widget.Bank.Text.Title2" />
+    <com.yandex.bank.widgets.common.BankButtonView android:id="@id/buttonRetry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" app:bank_sdk_buttonTitle="@string/bank_sdk_transfer_button_reload" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/errorText" style="@style/BankSdk.Widget.WidgetsCommon.BankButtonView.Primary.L" />
+</merge>

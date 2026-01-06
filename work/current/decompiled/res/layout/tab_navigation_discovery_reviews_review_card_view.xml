@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.tabnavigation.internal.discovery.shutter.review.TabNavigationReviewsReviewAuthorHeaderView android:id="@id/author_header_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ru.yandex.yandexmaps.tabnavigation.internal.discovery.shutter.review.TabNavigationReviewsReviewGalleryView android:id="@id/gallery_view" android:layout_width="fill_parent" android:layout_height="172.0dip" android:layout_marginTop="8.0dip" />
+    <ru.yandex.yandexmaps.tabnavigation.internal.discovery.shutter.review.TabNavigationReviewsReviewUserReviewView android:id="@id/user_review_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" />
+    <ru.yandex.yandexmaps.tabnavigation.internal.discovery.shutter.review.TabNavigationReviewsReviewOrgInfoView android:id="@id/org_info_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="16.0dip" />
+</merge>

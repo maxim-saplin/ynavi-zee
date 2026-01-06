@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/messaging_toolbar_avatar" android:background="@drawable/msg_threadlist_toolbar_icon_bg" android:layout_width="36.0dip" android:layout_height="36.0dip" android:scaleType="center" app:srcCompat="@drawable/msg_threadlist_toolbar_icon" />
+    <LinearLayout android:orientation="vertical" android:id="@id/status_title_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="6.0dip" android:layout_toEndOf="@id/messaging_toolbar_avatar">
+        <com.yandex.messaging.views.AppCompatEmojiTextView android:id="@id/messaging_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chat_threadlist_title" android:drawablePadding="12.0dip" style="@style/MessagingToolbar.Text" />
+        <TextView android:id="@id/messaging_toolbar_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chat_threadlist_status_empty" style="@style/MessagingToolbar.Status" />
+    </LinearLayout>
+</LinearLayout>

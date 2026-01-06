@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/bubble_background" android:background="@drawable/bubble_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/bubble_arrow_height">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.yandex.alicekit.core.views.TightTextView android:id="@id/bubble_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/bubble_close_icon_size" android:maxWidth="328.0dip" android:includeFontPadding="false" style="@style/Bubble.Widget.TextView.Message" />
+            <ImageView android:layout_gravity="end" android:id="@id/bubble_close" android:padding="8.0dip" android:layout_width="@dimen/bubble_close_icon_size" android:layout_height="@dimen/bubble_close_icon_size" app:srcCompat="@drawable/bubbles_close" />
+        </FrameLayout>
+        <View android:id="@id/bubble_divider" android:background="@color/bubble_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <LinearLayout android:gravity="end" android:orientation="horizontal" android:id="@id/bubble_layout_buttons" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/bubble_negative" android:layout_width="wrap_content" android:layout_height="40.0dip" style="@style/Bubble.Widget.Button.Negative" />
+            <Button android:id="@id/bubble_positive" android:layout_width="wrap_content" android:layout_height="40.0dip" style="@style/Bubble.Widget.Button" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="start|top" android:id="@id/bubble_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/bubble_arrow" />
+</FrameLayout>

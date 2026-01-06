@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/filters_button_all_filters_image" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginEnd="1.0dip" app:srcCompat="@drawable/filters_select_24" app:tint="@color/text_primary_variant" />
+    <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:layout_gravity="center" android:id="@id/filters_button_all_filters_badge" android:background="@color/icons_actions" android:layout_width="6.0dip" android:layout_height="6.0dip" android:layout_marginBottom="5.0dip" android:layout_marginStart="9.0dip" app:cornerRadius="3.0dip" />
+</merge>

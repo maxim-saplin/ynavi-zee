@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <EditText android:id="@id/paymentsdk_cvv_fake_edittext" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="1.0dip" android:layout_height="1.0dip" android:inputType="numberPassword" android:imeOptions="actionDone" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/paymentsdk_container_for_numbers" android:background="@drawable/paymentsdk_bg_challenger_input" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="?paymentsdk_cvv_input_background" android:paddingHorizontal="15.0dip" android:paddingVertical="20.0dip" />
+        <androidx.cardview.widget.CardView android:id="@id/paymentsdk_cvv_blur_container" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" app:cardBackgroundColor="#00000000" app:cardCornerRadius="16.0dip" app:cardElevation="0.0dip" app:layout_constraintBottom_toBottomOf="@id/paymentsdk_container_for_numbers" app:layout_constraintEnd_toEndOf="@id/paymentsdk_container_for_numbers" app:layout_constraintStart_toStartOf="@id/paymentsdk_container_for_numbers" app:layout_constraintTop_toTopOf="@id/paymentsdk_container_for_numbers">
+            <View android:id="@id/paymentsdk_cvv_blur" android:background="@drawable/paymentsdk_divkit_cvv_loading_blur" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.9" android:backgroundTint="?paymentsdk_cvv_input_blur_color" app:layout_constraintWidth_percent="2.0" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/image_search_progress" android:background="@color/fade_background_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.alicekit.core.views.FixedProgressBar android:layout_gravity="center" android:layout_width="48.0dip" android:layout_height="48.0dip" android:indeterminate="true" android:indeterminateDrawable="@drawable/spinner_progress" style="android:Widget.Holo.ProgressBar.Small" />
+</FrameLayout>

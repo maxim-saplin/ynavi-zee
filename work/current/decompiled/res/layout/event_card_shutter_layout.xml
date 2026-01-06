@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/shutter_width" android:layout_height="fill_parent" android:layout_marginStart="@dimen/shutter_left_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/event_card_sample_textView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.uikit.shutter.ShutterView android:id="@id/event_card_shutter" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</FrameLayout>

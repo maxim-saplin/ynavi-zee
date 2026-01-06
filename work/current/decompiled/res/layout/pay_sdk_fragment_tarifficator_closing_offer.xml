@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/closing_root" android:background="?pay_sdk_primaryPageColor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.plus.pay.ui.core.internal.tarifficator.ui.closing.content.ClosingOfferContentView android:id="@id/closing_offer_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.yandex.plus.pay.ui.common.api.ui.view.ProgressView android:layout_gravity="center" android:id="@id/closing_progress_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

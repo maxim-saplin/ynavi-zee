@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/container" android:paddingTop="32.0dip" android:paddingBottom="@dimen/bank_sdk_screen_footer_space" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.BankButtonView android:id="@id/buttonLogout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bank_sdk_buttonTitle="@string/bank_sdk_dashboard_menu_logout" style="@style/BankSdk.Widget.WidgetsCommon.BankButtonView.Secondary.L" />
+</FrameLayout>

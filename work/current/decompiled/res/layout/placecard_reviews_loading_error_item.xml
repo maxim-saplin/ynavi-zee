@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center" android:orientation="vertical" android:background="@color/bg_primary" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reviews_place_reviews_error" style="@style/Text14.Grey" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/retry" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" app:generalButtonSize="big" app:generalButtonStyle="primary" app:text="@string/reviews_place_reviews_retry" />
+</merge>

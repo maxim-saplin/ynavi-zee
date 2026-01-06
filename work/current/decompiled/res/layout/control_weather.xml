@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayoutRect style="@style/ControlRoundImage">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageButton android:layout_gravity="center|top" android:id="@id/control_weather_image" android:background="@null" android:clickable="false" android:layout_width="@dimen/control_weather_image_rect_size" android:layout_height="@dimen/control_weather_image_rect_size" android:scaleType="center" android:importantForAccessibility="no" />
+            <TextView android:layout_gravity="center|bottom" android:id="@id/control_weather_text" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" style="@style/Text14.Medium.TextPrimary" />
+        </LinearLayout>
+    </ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayoutRect>
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/background_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/comment_container_view" android:background="@color/background_panel" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/road_events_add_description_offset" android:layout_marginBottom="@dimen/road_events_add_description_offset" android:minHeight="56.0dip" android:paddingHorizontal="16.0dip">
+        <EditText android:textSize="16.0sp" android:textColorHint="@color/common_hint" android:gravity="center_vertical" android:id="@id/view_add_road_event_description" android:background="@drawable/add_road_event_user_input_background" android:paddingTop="16.0dip" android:paddingBottom="20.0dip" android:saveEnabled="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/road_events_comment" android:singleLine="true" android:maxLength="100" android:layout_weight="1.0" android:inputType="textCapSentences" style="@style/Text18" />
+        <ImageButton android:layout_gravity="center|bottom" android:id="@id/input_voice_button" android:focusable="true" android:visibility="visible" android:layout_marginBottom="4.0dip" android:tint="@color/icons_secondary" android:layout_marginStart="12.0dip" app:srcCompat="@drawable/mic_24" style="@style/CommonImageButton" />
+    </LinearLayout>
+</LinearLayout>

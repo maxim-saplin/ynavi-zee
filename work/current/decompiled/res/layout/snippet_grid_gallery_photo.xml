@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.RoundedImageView android:id="@id/grid_gallery_photo_image" android:background="@color/background_panel" android:layout_width="188.0dip" android:layout_height="188.0dip" android:scaleType="centerCrop" android:contentDescription="@string/accessibility_placecard_photo" app:cornerRadius="@dimen/common_card_photo_corners_radius"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

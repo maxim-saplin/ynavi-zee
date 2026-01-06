@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/bank_sdk_savings_account_theme_card_background_radius" />
+    <stroke android:width="1.0dip" android:color="?bankColor_button_primaryNormal" />
+</shape>

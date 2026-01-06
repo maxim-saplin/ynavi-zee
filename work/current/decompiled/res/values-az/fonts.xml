@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="font" name="font_bold">@font/yango_text_bold</item>
+    <item type="font" name="font_logo">@font/yango_headline</item>
+    <item type="font" name="font_medium">@font/yango_medium</item>
+    <item type="font" name="font_regular">@font/yango_regular</item>
+</resources>

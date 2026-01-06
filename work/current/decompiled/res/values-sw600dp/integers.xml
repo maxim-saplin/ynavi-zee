@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="design_snackbar_text_max_lines">1</integer>
+    <item type="integer" name="gallery_span_count">@integer/gallery_span_count_tablet_portrait</item>
+    <integer name="me_min_screen_width_bucket">2</integer>
+</resources>

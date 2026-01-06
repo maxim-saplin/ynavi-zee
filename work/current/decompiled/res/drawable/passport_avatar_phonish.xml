@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="84.0dip" android:width="84.0dip" android:viewportWidth="84.0" android:viewportHeight="84.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?passportPhoneIconColor" android:pathData="M42,42m-42,0a42,42 0,1 1,84 0a42,42 0,1 1,-84 0" android:strokeColor="#00000000" android:strokeWidth="1.0" />
+    <path android:fillColor="#ffffffff" android:pathData="M38.79,34.88L32.7,26C25.94,27.63 26.01,33.39 26.01,33.39C26.01,33.39 25.75,37.87 28.15,41.46C30.55,45.04 31.57,46.62 34.52,49.56C37.46,52.5 39.01,53.48 42.61,55.87C46.21,58.26 50.69,57.99 50.69,57.99C50.69,57.99 56.25,58 58.08,51.3L49.3,45.28C49.3,45.28 47.15,48.27 46.8,48.84C46.4,49.49 45.43,50.19 44.37,49.55C43.31,48.9 41.27,47.68 38.84,45.25C36.41,42.82 35.14,40.76 34.5,39.71C33.85,38.65 34.63,37.63 35.17,37.25C35.71,36.87 38.79,34.88 38.79,34.88" android:strokeColor="#00000000" android:strokeWidth="1.0" />
+</vector>

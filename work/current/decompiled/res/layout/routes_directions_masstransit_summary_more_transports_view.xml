@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center_vertical" android:id="@id/hidden_count_text_view" android:background="@drawable/routes_directions_masstransit_summary_more_transports_background_impl" android:layout_width="wrap_content" android:layout_height="@dimen/masstransit_common_icon_size" android:singleLine="true" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" style="@style/Text16.Grey" />
+</FrameLayout>

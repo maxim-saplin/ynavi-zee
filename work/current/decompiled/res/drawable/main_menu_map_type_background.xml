@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <ripple android:color="@color/buttons_primary">
+            <item android:drawable="@drawable/main_menu_map_type_background_checked" />
+        </ripple>
+    </item>
+    <item>
+        <ripple android:color="@color/buttons_secondary">
+            <item android:drawable="@drawable/main_menu_map_type_background_unchecked" />
+        </ripple>
+    </item>
+</selector>

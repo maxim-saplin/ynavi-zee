@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?tankerBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.google.android.material.appbar.AppBarLayout android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+            <LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/tanker_basic_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_scrollFlags="scroll">
+                <TextView android:textSize="@dimen/tanker_small_text_size" android:textColor="@color/tanker_textColorAlpha100" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tanker_basic_padding_two" android:text="@string/tanker_remains_to_pay" android:layout_marginStart="@dimen/tanker_basic_padding" style="@style/TankerTextRegular" />
+                <TextView android:textSize="@dimen/tanker_tanker_extra_large_text_size" android:textColor="@color/tanker_textColorAlpha100" android:id="@id/totalSumTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginStart="@dimen/tanker_basic_padding" style="@style/TankerTextBold" />
+                <TextView android:textSize="@dimen/tanker_small_text_size" android:textColor="@color/tanker_textColorAlpha100" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tanker_basic_padding_half" android:text="@string/tanker_next_payment" android:layout_marginStart="@dimen/tanker_basic_padding" style="@style/TankerTextRegular" />
+                <TextView android:textSize="@dimen/tanker_small_text_size" android:textColor="@color/tanker_textColorAlpha100" android:id="@id/nextPayTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginStart="@dimen/tanker_basic_padding" style="@style/TankerTextBold" />
+            </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:paddingBottom="@dimen/tanker_basic_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/tanker_basic_padding" android:paddingEnd="@dimen/tanker_basic_padding" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/loadingView" android:background="?tankerBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="32.0dip" android:layout_marginStart="@dimen/tanker_basic_padding">
+        <ru.tankerapp.ui.TankerSkeletonView android:layout_width="142.0dip" android:layout_height="19.0dip" />
+        <ru.tankerapp.ui.TankerSkeletonView android:layout_width="188.0dip" android:layout_height="56.0dip" android:layout_marginTop="4.0dip" />
+    </LinearLayout>
+    <ru.tankerapp.android.sdk.navigator.view.views.ErrorView android:id="@id/retryView" android:background="?tankerBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" app:align="center" />
+</FrameLayout>

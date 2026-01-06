@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="GuidanceAdBanner">
+        <item name="android:layout_width">320.0dip</item>
+    </style>
+    <style name="MapControlsToolbar">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">@dimen/control_toolbar_padding_start</item>
+        <item name="android:paddingBottom">@dimen/control_toolbar_padding_end</item>
+        <item name="android:layout_width">@dimen/control_toolbar_height</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:layout_marginTop">@dimen/control_toolbar_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/control_toolbar_margin_bottom</item>
+        <item name="android:paddingStart">@dimen/control_toolbar_padding_top</item>
+        <item name="android:paddingEnd">@dimen/control_toolbar_padding_bottom</item>
+        <item name="android:layout_marginStart">@dimen/control_toolbar_margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/control_toolbar_margin_end</item>
+    </style>
+    <style name="MapControlsToolbarSpace">
+        <item name="android:layout_width">1.0dip</item>
+        <item name="android:layout_height">0.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="OfflineSuggestionStyle">
+        <item name="android:layout_width">@dimen/shutter_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/shutter_left_margin</item>
+    </style>
+    <style name="TabNavigationContentStyle">
+        <item name="android:layout_width">320.0dip</item>
+        <item name="android:layout_marginStart">8.0dip</item>
+    </style>
+    <style name="Widget.Design.TabLayout" parent="@style/Base.Widget.Design.TabLayout">
+        <item name="tabGravity">center</item>
+        <item name="tabMode">fixed</item>
+    </style>
+    <style name="Widget.Design.YandexCoreIndicatorTabLayout" parent="@style/Base.Widget.Design.YandexCoreIndicatorTabLayout">
+        <item name="tabGravity">center</item>
+        <item name="tabMode">fixed</item>
+    </style>
+    <style name="Widget.MaterialComponents.MaterialCalendar.HeaderSelection" parent="@style/Widget.AppCompat.TextView">
+        <item name="android:textAppearance">?textAppearanceHeadline6</item>
+        <item name="android:textColor">?colorOnPrimary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">start|top</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">@integer/mtrl_calendar_selection_text_lines</item>
+    </style>
+    <style name="Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton" parent="@style/Base.Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton">
+        <item name="android:layout_gravity">start|bottom</item>
+    </style>
+    <style name="DiscoveryCard">
+        <item name="android:clipToPadding">false</item>
+        <item name="android:paddingStart">4.0dip</item>
+        <item name="android:paddingEnd">4.0dip</item>
+    </style>
+</resources>

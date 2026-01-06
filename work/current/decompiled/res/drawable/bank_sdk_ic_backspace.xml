@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="28.0dip" android:width="29.0dip" android:viewportWidth="29.0" android:viewportHeight="28.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0.167,0h28v28h-28z" />
+        <path android:fillColor="?bankColor_textIcon_primary" android:pathData="M17.9496,10.2621C18.3042,9.9074 18.8793,9.9074 19.234,10.2621C19.5887,10.6168 19.5887,11.1919 19.234,11.5465L16.7844,13.9961L19.234,16.4456C19.5887,16.8003 19.5887,17.3754 19.234,17.7301C18.8793,18.0848 18.3042,18.0848 17.9496,17.7301L15.5,15.2805L13.0504,17.7301C12.6958,18.0848 12.1207,18.0848 11.766,17.7301C11.4113,17.3754 11.4113,16.8003 11.766,16.4456L14.2156,13.9961L11.766,11.5465C11.4113,11.1919 11.4113,10.6168 11.766,10.2621C12.1207,9.9074 12.6958,9.9074 13.0504,10.2621L15.5,12.7117L17.9496,10.2621Z" />
+        <path android:fillColor="?bankColor_internal_transparent" android:pathData="M7.7555,6.1003C8.3252,5.4039 9.1775,5 10.0773,5H21.4545C23.1114,5 24.4545,6.3432 24.4545,8V20C24.4545,21.6569 23.1114,23 21.4545,23H10.0773C9.1775,23 8.3252,22.5961 7.7555,21.8997L1.8102,14.6332C1.5088,14.2649 1.5088,13.7351 1.8102,13.3668L7.7555,6.1003Z" android:strokeColor="?bankColor_textIcon_primary" android:strokeWidth="2.0" />
+    </group>
+</vector>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/bookmarks_list_fragment" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bookmarks_folders_view_empty_list_add_place" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="96.0dip" android:layout_height="104.0dip" app:srcCompat="@drawable/my_places_bookmarks_placeholder_112" />
+        <TextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="@string/bookmarks_view_empty_bookmarks_list" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" style="@style/Text16.Grey" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/bookmarks_folders_view_add_place_button" android:layout_width="192.0dip" android:layout_height="wrap_content" android:layout_marginTop="64.0dip" app:generalButtonSize="large" app:generalButtonStyle="primary" app:text="@string/bookmarks_add_place_button_text" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bookmarks_folders_view_empty_list_login" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="96.0dip" android:layout_height="104.0dip" app:srcCompat="@drawable/settings_userpic_72" />
+        <TextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="@string/bookmarks_view_login_invitation_text" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" style="@style/Text16.Grey" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/bookmarks_folders_view_login_button" android:layout_width="192.0dip" android:layout_height="wrap_content" android:layout_marginTop="64.0dip" app:generalButtonSize="large" app:generalButtonStyle="primary" app:text="@string/yandexmaps_bookmarks_login_button" />
+    </LinearLayout>
+</FrameLayout>

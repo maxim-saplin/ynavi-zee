@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="10.0dip" />
+    <solid android:color="@color/alicekit_palette_background_primary" />
+    <stroke android:width="6.0dip" android:color="@android:color/transparent" />
+</shape>

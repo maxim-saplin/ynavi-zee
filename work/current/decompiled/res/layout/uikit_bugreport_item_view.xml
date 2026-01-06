@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" app:srcCompat="@drawable/org_info_24" app:tint="@color/uikit_bugreport_icon_tint" />
+    <TextView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/transport_bugreport" android:maxLines="1" android:singleLine="true" android:layout_marginStart="56.0dip" style="@style/Text14.Medium.PermanentBlueNight" />
+</merge>

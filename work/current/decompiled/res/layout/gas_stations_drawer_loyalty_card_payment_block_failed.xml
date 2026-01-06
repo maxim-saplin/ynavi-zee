@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:background="@color/bg_additional" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/gas_stations_drawer_card_payment_and_loyalty_block_top_margin" android:layout_marginBottom="@dimen/gas_stations_drawer_card_payment_and_loyalty_block_bottom_margin" android:minHeight="@dimen/gas_stations_drawer_subblock_height" android:layout_marginHorizontal="@dimen/gas_stations_drawer_horizontal_padding" android:paddingHorizontal="@dimen/gas_stations_drawer_card_payment_and_loyalty_block_horizontal_padding" android:paddingVertical="@dimen/gas_stations_drawer_card_payment_and_loyalty_block_vertical_padding" app:cornerRadius="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:id="@id/fail_description" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text16.Medium" />
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/fail_action" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/gas_stations_drawer_card_payment_and_loyalty_block_failed_vertical_spacing" style="@style/Text16.Medium.TextActions" />
+    </LinearLayout>
+</ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>

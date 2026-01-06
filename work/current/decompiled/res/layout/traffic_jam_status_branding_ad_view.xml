@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/ad_container" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/image" android:layout_width="132.0dip" android:layout_height="92.0dip" app:layout_constraintBottom_toTopOf="@id/message_container" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:id="@id/message_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="24.0dip" android:paddingVertical="16.0dip" app:cornerRadius="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <TextView android:ellipsize="end" android:id="@id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Text16" />
+    </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

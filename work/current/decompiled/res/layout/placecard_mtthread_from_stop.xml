@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:minHeight="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/placecard_mtthread_from_stop_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="15.0dip" />
+    <TextView android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/placecard_mtthread_from_stop_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_weight="1.0" android:layout_marginStart="16.0dip" style="@style/Text14.TextPrimary" />
+    <ru.yandex.maps.uikit.atomicviews.arrivaltime.ArrivalTimeView android:layout_gravity="end|center" android:id="@id/placecard_mtthread_from_stop_arrival_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" />
+    <ImageView android:layout_gravity="end|center" android:id="@id/placecard_mtthread_from_stop_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/icons_secondary" android:layout_marginEnd="16.0dip" android:layout_marginVertical="16.0dip" app:srcCompat="@drawable/arrow_down_8" />
+</merge>

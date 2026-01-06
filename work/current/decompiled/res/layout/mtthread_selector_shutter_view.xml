@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.placecard.mtthread.internal.dialog.MtThreadDialogShutterView android:tag="@string/change_handler_bottom_panel_tag" style="@style/ShutterCommonLayoutParams"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

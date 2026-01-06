@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:clipChildren="true" android:clipToPadding="true" android:layout_width="60.0dip" android:layout_height="60.0dip" app:cardCornerRadius="10.0dip" app:cardElevation="0.0dip" app:cardMaxElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/selected_item_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <View android:id="@id/selected_item_selection" android:background="@drawable/attach_selected_list_item_border" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textSize="13.0dip" android:textColor="#ffffffff" android:layout_gravity="end|bottom" android:id="@id/selected_item_duration" android:layout_width="44.0dip" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:shadowColor="#a6000000" android:shadowDx="0.0" android:shadowDy="4.0" android:shadowRadius="4.0" android:textAlignment="viewEnd" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+</androidx.cardview.widget.CardView>

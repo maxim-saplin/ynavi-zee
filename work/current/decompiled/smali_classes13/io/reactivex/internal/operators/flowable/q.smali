@@ -1,0 +1,206 @@
+.class public final Lio/reactivex/internal/operators/flowable/q;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lio/reactivex/j;
+.implements Lj51/c;
+
+
+# instance fields
+.field final b:Lj51/b;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lj51/b;"
+        }
+    .end annotation
+.end field
+
+.field final c:Lf21/g;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lf21/g;"
+        }
+    .end annotation
+.end field
+
+.field final d:Lf21/p;
+
+.field final e:Lf21/a;
+
+.field f:Lj51/c;
+
+
+# direct methods
+.method public constructor <init>(Lj51/b;Lf21/g;Lf21/p;Lf21/a;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/q;->b:Lj51/b;
+
+    iput-object p2, p0, Lio/reactivex/internal/operators/flowable/q;->c:Lf21/g;
+
+    iput-object p4, p0, Lio/reactivex/internal/operators/flowable/q;->e:Lf21/a;
+
+    iput-object p3, p0, Lio/reactivex/internal/operators/flowable/q;->d:Lf21/p;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final cancel()V
+    .locals 2
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/q;->f:Lj51/c;
+
+    sget-object v1, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->CANCELLED:Lio/reactivex/internal/subscriptions/SubscriptionHelper;
+
+    if-eq v0, v1, :cond_0
+
+    iput-object v1, p0, Lio/reactivex/internal/operators/flowable/q;->f:Lj51/c;
+
+    :try_start_0
+    iget-object v1, p0, Lio/reactivex/internal/operators/flowable/q;->e:Lf21/a;
+
+    invoke-interface {v1}, Lf21/a;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    invoke-static {v1}, Lio/grpc/internal/fb;->o(Ljava/lang/Throwable;)V
+
+    invoke-static {v1}, Lio/reactivex/plugins/a;->p(Ljava/lang/Throwable;)V
+
+    :goto_0
+    invoke-interface {v0}, Lj51/c;->cancel()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onComplete()V
+    .locals 2
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/q;->f:Lj51/c;
+
+    sget-object v1, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->CANCELLED:Lio/reactivex/internal/subscriptions/SubscriptionHelper;
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/q;->b:Lj51/b;
+
+    invoke-interface {v0}, Lj51/b;->onComplete()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/q;->f:Lj51/c;
+
+    sget-object v1, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->CANCELLED:Lio/reactivex/internal/subscriptions/SubscriptionHelper;
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/q;->b:Lj51/b;
+
+    invoke-interface {v0, p1}, Lj51/b;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Lio/reactivex/plugins/a;->p(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public final onNext(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/q;->b:Lj51/b;
+
+    invoke-interface {v0, p1}, Lj51/b;->onNext(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final onSubscribe(Lj51/c;)V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/q;->c:Lf21/g;
+
+    invoke-interface {v0, p1}, Lf21/g;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/q;->f:Lj51/c;
+
+    invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->validate(Lj51/c;Lj51/c;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/q;->f:Lj51/c;
+
+    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/q;->b:Lj51/b;
+
+    invoke-interface {p1, p0}, Lj51/b;->onSubscribe(Lj51/c;)V
+
+    :cond_0
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lio/grpc/internal/fb;->o(Ljava/lang/Throwable;)V
+
+    invoke-interface {p1}, Lj51/c;->cancel()V
+
+    sget-object p1, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->CANCELLED:Lio/reactivex/internal/subscriptions/SubscriptionHelper;
+
+    iput-object p1, p0, Lio/reactivex/internal/operators/flowable/q;->f:Lj51/c;
+
+    iget-object p1, p0, Lio/reactivex/internal/operators/flowable/q;->b:Lj51/b;
+
+    invoke-static {v0, p1}, Lio/reactivex/internal/subscriptions/EmptySubscription;->error(Ljava/lang/Throwable;Lj51/b;)V
+
+    return-void
+.end method
+
+.method public final request(J)V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/q;->d:Lf21/p;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lio/grpc/internal/fb;->o(Ljava/lang/Throwable;)V
+
+    invoke-static {v0}, Lio/reactivex/plugins/a;->p(Ljava/lang/Throwable;)V
+
+    :goto_0
+    iget-object v0, p0, Lio/reactivex/internal/operators/flowable/q;->f:Lj51/c;
+
+    invoke-interface {v0, p1, p2}, Lj51/c;->request(J)V
+
+    return-void
+.end method

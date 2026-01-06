@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/emoji_header_title_size" android:textColor="@color/messenger_common_light_gray" android:gravity="start|center" android:layout_width="fill_parent" android:layout_height="@dimen/emoji_header_height" android:fontFamily="@font/ya_regular" android:textAlignment="viewStart" android:paddingStart="@dimen/emoji_header_padding_start" android:paddingEnd="@dimen/emoji_header_padding_start"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

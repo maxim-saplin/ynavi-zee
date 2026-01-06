@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:orientation="vertical" android:id="@id/car_snippet_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/snippet_view" />
+    <include android:orientation="vertical" android:id="@id/duration_snippet_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="20.0dip" layout="@layout/snippet_view" />
+    <include android:orientation="vertical" android:id="@id/cost_snippet_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="20.0dip" layout="@layout/snippet_view" />
+</merge>

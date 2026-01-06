@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="com.yandex.android.appmetrica.is_offline">false</bool>
+    <bool name="com.yandex.android.appmetrica.ndk.enable">true</bool>
+    <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
+    <bool name="dark_mode_enabled">false</bool>
+    <bool name="day">true</bool>
+    <bool name="enable_system_alarm_service_default">false</bool>
+    <bool name="enable_system_foreground_service_default">true</bool>
+    <bool name="enable_system_job_service_default">true</bool>
+    <bool name="full_route_suggest_enabled">false</bool>
+    <bool name="io.appmetrica.analytics.is_offline">false</bool>
+    <bool name="io.appmetrica.analytics.ndk.enable">true</bool>
+    <bool name="isTablet">false</bool>
+    <bool name="is_tablet">false</bool>
+    <bool name="landscape">false</bool>
+    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <bool name="music_sdk_helper_orientation_landscape">false</bool>
+    <bool name="music_sdk_helper_orientation_portrait">true</bool>
+    <bool name="night">false</bool>
+    <bool name="passport_accounts_remove_allowed">false</bool>
+    <bool name="passport_is_vk_popular">false</bool>
+    <bool name="paymentsdk_is_tablet">false</bool>
+    <bool name="portrait">true</bool>
+    <bool name="tablet">false</bool>
+    <bool name="tanker_is_landscape">false</bool>
+    <bool name="tanker_is_tablet">false</bool>
+    <bool name="videoPlayer_isTablet">false</bool>
+    <bool name="workmanager_test_configuration">false</bool>
+    <bool name="yandex_live_data_open_promo_on_click">false</bool>
+    <bool name="ysk_is_tablet">false</bool>
+</resources>

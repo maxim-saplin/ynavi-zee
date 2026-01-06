@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bw_black_alpha40" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.ShutterImitationFrameLayout android:id="@id/bookmarks_folder_input_dialog_shutter_view" android:tag="@string/change_handler_bottom_panel_tag" android:paddingLeft="@dimen/shutter_horizontal_padding" android:paddingRight="@dimen/shutter_horizontal_padding" android:focusable="false" android:clickable="true" app:drawableTopMargin="12.0dip" app:includeGrip="false" app:shutterConsumeInsets="true" style="@style/ShutterCommonLayoutParams">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/shutter_top_padding">
+            <ru.yandex.yandexmaps.bookmarks.sharedcomponents.HeaderView android:id="@id/bookmarks_folder_input_dialog_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <EditText android:textColorHint="@color/common_hint" android:id="@id/bookmarks_folder_input_dialog_text" android:background="@drawable/bookmarks_edit_text_shape" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:hint="@string/bookmarks_create_folder_input_title" android:height="48.0dip" android:inputType="textCapSentences|textMultiLine" android:imeOptions="actionDone|flagNoExtractUi" android:textCursorDrawable="@drawable/blue_cursor" android:layout_marginHorizontal="16.0dip" android:paddingHorizontal="12.0dip" android:paddingVertical="16.0dip" style="@style/Text14" />
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/bookmarks_folder_input_dialog_save_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginHorizontal="16.0dip" app:generalButtonSize="large" app:text="@string/bookmarks_folder_save" />
+        </LinearLayout>
+    </ru.yandex.yandexmaps.common.views.ShutterImitationFrameLayout>
+</FrameLayout>

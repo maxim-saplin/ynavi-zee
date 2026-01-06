@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:id="@id/sbpAccountInfoShimmerLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="20.0dip">
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="293.0dip" android:layout_height="34.0dip" app:bank_sdk_cornerRadius="17.0dip" />
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="223.0dip" android:layout_height="34.0dip" android:layout_marginTop="20.0dip" app:bank_sdk_cornerRadius="10.0dip" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="68.0dip">
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="77.0dip" android:layout_height="48.0dip" android:layout_marginHorizontal="8.0dip" app:bank_sdk_cornerRadius="24.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="77.0dip" android:layout_height="48.0dip" android:layout_marginHorizontal="8.0dip" app:bank_sdk_cornerRadius="24.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="77.0dip" android:layout_height="48.0dip" android:layout_marginHorizontal="8.0dip" app:bank_sdk_cornerRadius="24.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="77.0dip" android:layout_height="48.0dip" android:layout_marginHorizontal="8.0dip" app:bank_sdk_cornerRadius="24.0dip" />
+        </LinearLayout>
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_marginTop="34.0dip" android:layout_marginBottom="16.0dip" app:bank_sdk_cornerRadius="8.0dip" />
+    </LinearLayout>
+</com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>

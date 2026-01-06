@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="?tankerBackground" android:paddingBottom="72.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.tankerapp.ui.TankerToolbar android:id="@id/tankerToolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tankerToolbar_title="@string/tanker_receipts" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</androidx.appcompat.widget.LinearLayoutCompat>

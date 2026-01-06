@@ -1,0 +1,3 @@
+.class public interface abstract Lcom/yandex/payment/sdk/ui/challenger/r;
+.super Ljava/lang/Object;
+.source "SourceFile"

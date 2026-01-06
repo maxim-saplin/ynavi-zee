@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.routes.internal.guidance.mt.ui.views.SingleLineFlowLayout android:id="@id/routes_directions_masstransit_summary_transports_panel_container_view" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:hiddenCountLayout="@layout/routes_directions_masstransit_summary_more_transports_view" custom:horizontalSpacing="8.0dip" />
+</merge>

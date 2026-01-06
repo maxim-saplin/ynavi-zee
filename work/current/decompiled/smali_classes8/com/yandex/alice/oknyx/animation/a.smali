@@ -1,0 +1,91 @@
+.class public final Lcom/yandex/alice/oknyx/animation/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
+
+
+# instance fields
+.field final synthetic b:Landroid/view/View;
+
+.field final synthetic c:J
+
+
+# direct methods
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/yandex/alice/oknyx/animation/a;->b:Landroid/view/View;
+
+    const-wide/16 v0, 0x2710
+
+    iput-wide v0, p0, Lcom/yandex/alice/oknyx/animation/a;->c:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 5
+
+    iget-object v0, p0, Lcom/yandex/alice/oknyx/animation/a;->b:Landroid/view/View;
+
+    invoke-static {v0}, Landroidx/lifecycle/m;->d(Landroid/view/View;)Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Landroidx/lifecycle/LifecycleOwner;->getLifecycle()Landroidx/lifecycle/w;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroidx/lifecycle/m;->f(Landroidx/lifecycle/w;)Landroidx/lifecycle/z;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    new-instance v2, Lcom/yandex/alice/oknyx/animation/AnimationUtilsKt$repeatWithDelay$1$1;
+
+    iget-wide v3, p0, Lcom/yandex/alice/oknyx/animation/a;->c:J
+
+    invoke-direct {v2, p1, v3, v4, v1}, Lcom/yandex/alice/oknyx/animation/AnimationUtilsKt$repeatWithDelay$1$1;-><init>(Landroid/animation/Animator;JLkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    invoke-static {v0, v1, v1, v2, p1}, Lkotlinx/coroutines/h0;->G(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/i;Lkotlinx/coroutines/CoroutineStart;Lv31/d;I)Lkotlinx/coroutines/l2;
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method

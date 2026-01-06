@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/plus_sdk_daily_top_layout" android:visibility="gone" layout="@layout/plus_sdk_daily_top_layout" />
+    <include android:id="@id/plus_sdk_daily_bottom_layout" android:visibility="gone" layout="@layout/plus_sdk_daily_bottom_layout" />
+</LinearLayout>

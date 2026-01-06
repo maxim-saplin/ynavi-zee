@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/view_music_sdk_control_dislike" android:src="?music_sdk_helper_ic_dislike" android:layout_centerVertical="true" android:layout_marginStart="@dimen/music_sdk_helper_control_margin_side" style="@style/music_sdk_helper_control_icon" />
+    <ImageButton android:id="@id/view_music_sdk_control_previous" android:src="?music_sdk_helper_ic_previous" android:layout_centerVertical="true" android:layout_toStartOf="@id/view_music_sdk_control_play_pause" style="@style/music_sdk_helper_control_icon" />
+    <ImageButton android:id="@id/view_music_sdk_control_play_pause" android:background="@drawable/music_sdk_helper_background_control_play_pause" android:padding="@dimen/music_sdk_helper_control_play_pause_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/music_sdk_helper_control_play_pause_offset" android:layout_marginBottom="@dimen/music_sdk_helper_control_play_pause_offset" android:src="?music_sdk_helper_ic_play" android:layout_centerInParent="true" android:layout_marginStart="@dimen/music_sdk_helper_control_play_pause_margin" android:layout_marginEnd="@dimen/music_sdk_helper_control_play_pause_margin" />
+    <ImageButton android:id="@id/view_music_sdk_control_next" android:src="?music_sdk_helper_ic_next" android:layout_centerVertical="true" android:layout_toEndOf="@id/view_music_sdk_control_play_pause" style="@style/music_sdk_helper_control_icon" />
+    <ImageButton android:id="@id/view_music_sdk_control_like" android:src="?music_sdk_helper_ic_like" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/music_sdk_helper_control_margin_side" android:layout_alignParentEnd="true" style="@style/music_sdk_helper_control_icon" />
+</merge>

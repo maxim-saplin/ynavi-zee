@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:gravity="center" android:height="140.0dip" android:width="140.0dip" android:viewportWidth="1400.0" android:viewportHeight="1400.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:name="background">
+        <path android:fillColor="#ff196dff" android:pathData="M1400,700 A700,700 0 0,0 0,700 A700,700 0 0,0 1400,700 Z" />
+    </group>
+    <group android:name="leftStickContainer">
+        <path android:name="leftStick" android:fillColor="#ffffffff" android:pathData="M400,600L400,800" android:strokeColor="#ffffffff" android:strokeWidth="200.0" android:strokeLineCap="round" />
+    </group>
+    <group android:name="centerStickContainer">
+        <path android:name="centerStick" android:fillColor="#ffffffff" android:pathData="M700,700L700,700" android:strokeColor="#ffffffff" android:strokeWidth="200.0" android:strokeLineCap="round" />
+    </group>
+    <group android:name="rightStickContainer">
+        <path android:name="rightStick" android:fillColor="#ffffffff" android:pathData="M1000,500L1000,900" android:strokeColor="#ffffffff" android:strokeWidth="200.0" android:strokeLineCap="round" />
+    </group>
+</vector>

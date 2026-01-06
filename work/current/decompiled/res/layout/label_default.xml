@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/label_background" android:paddingTop="@dimen/label_padding_vertical" android:paddingBottom="@dimen/label_padding_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layoutDirection="locale" android:paddingStart="@dimen/label_padding_pin" android:paddingEnd="@dimen/label_padding_side"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/name_rating" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/search_result_title" android:ellipsize="end" android:gravity="start|top" android:id="@id/name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" style="@style/Text14.Medium" />
+        <TextView android:textColor="@color/search_result_title" android:gravity="start|top" android:id="@id/rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:paddingStart="4.0dip" style="@style/Text14.Medium" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/info_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/social_label_avatars_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="4.0dip">
+            <ru.yandex.yandexmaps.common.views.RoundedImageView android:layout_gravity="center_vertical" android:id="@id/social_label_second_account_image_view" android:visibility="gone" android:layout_width="14.0dip" android:layout_height="14.0dip" android:scaleType="centerCrop" android:layout_marginStart="11.0dip" app:cornerRadius="15.0dip" />
+            <View android:layout_gravity="center_vertical" android:id="@id/social_label_second_account_ring" android:background="@drawable/label_social_avatar_foreground" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginStart="10.0dip" />
+            <ru.yandex.yandexmaps.common.views.RoundedImageView android:layout_gravity="center_vertical" android:id="@id/social_label_first_account_image_view" android:visibility="gone" android:layout_width="14.0dip" android:layout_height="14.0dip" android:scaleType="centerCrop" android:layout_marginStart="1.0dip" app:cornerRadius="15.0dip" />
+            <View android:layout_gravity="center_vertical" android:id="@id/social_label_first_account_ring" android:background="@drawable/label_social_avatar_foreground" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" />
+        </FrameLayout>
+        <ru.yandex.yandexmaps.common.views.TightTextView android:textColor="@color/search_result_subtitle" android:gravity="start|top" android:id="@id/info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/label_detailed_spacing" android:maxWidth="@dimen/label_max_width" android:maxLines="1" android:includeFontPadding="false" style="@style/Text12.Medium" />
+    </LinearLayout>
+</LinearLayout>

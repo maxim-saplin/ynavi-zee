@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:background="@drawable/alice_cloud2_suggest_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="18.0dip" android:paddingVertical="14.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/alice_cloud2_suggest_text_size" android:textColor="@color/alicekit_palette_text_and_icon_primary" android:id="@id/alice_cloud2_suggest_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/ya_medium" />
+    <View android:id="@id/alice_cloud2_suggest_stub" android:background="@drawable/alice_cloud2_suggest_stub" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_alignLeft="@id/alice_cloud2_suggest_text" android:layout_alignTop="@id/alice_cloud2_suggest_text" android:layout_alignRight="@id/alice_cloud2_suggest_text" android:layout_alignBottom="@id/alice_cloud2_suggest_text" />
+</RelativeLayout>

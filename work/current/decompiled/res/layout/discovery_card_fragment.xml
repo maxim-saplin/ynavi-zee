@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/discovery_card_root" android:background="@color/bw_black_alpha30" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.discovery.card.DiscoveryShutterView android:id="@id/discovery_card_recycler" android:tag="@string/change_handler_bottom_panel_tag" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/DiscoveryCard" />
+    </FrameLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

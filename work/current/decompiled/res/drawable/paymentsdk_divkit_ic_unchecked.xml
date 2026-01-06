@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="26.0dip" android:width="26.0dip" android:viewportWidth="26.0" android:viewportHeight="26.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?paymentsdk_prebuilt_uncheckedColor" android:pathData="M13,0L13,0A13,13 0,0 1,26 13L26,13A13,13 0,0 1,13 26L13,26A13,13 0,0 1,0 13L0,13A13,13 0,0 1,13 0z" />
+    <path android:fillColor="?paymentsdk_prebuilt_uncheckedColor" android:pathData="M11.199,16.445L7.963,12.85C7.64,12.491 7.086,12.461 6.727,12.785C6.368,13.108 6.339,13.661 6.662,14.02L10.6,18.395C10.965,18.801 11.608,18.777 11.942,18.345L19.38,8.72C19.675,8.338 19.605,7.788 19.222,7.493C18.84,7.197 18.291,7.268 17.995,7.65L11.199,16.445Z" />
+</vector>

@@ -1,0 +1,47 @@
+.class public final Lio/opentelemetry/sdk/metrics/internal/aggregator/s;
+.super Lio/opentelemetry/sdk/metrics/internal/aggregator/a;
+.source "SourceFile"
+
+
+# instance fields
+.field private final b:Ljava/util/function/Supplier;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/function/Supplier<",
+            "Lio/opentelemetry/sdk/metrics/internal/exemplar/c;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lx11/e;Lio/opentelemetry/sdk/metrics/internal/view/d;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lio/opentelemetry/sdk/metrics/internal/aggregator/a;-><init>(Lx11/e;)V
+
+    iput-object p2, p0, Lio/opentelemetry/sdk/metrics/internal/aggregator/s;->b:Ljava/util/function/Supplier;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lio/opentelemetry/sdk/metrics/internal/aggregator/h;
+    .locals 2
+
+    new-instance v0, Lio/opentelemetry/sdk/metrics/internal/aggregator/r;
+
+    iget-object v1, p0, Lio/opentelemetry/sdk/metrics/internal/aggregator/s;->b:Ljava/util/function/Supplier;
+
+    invoke-interface {v1}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lio/opentelemetry/sdk/metrics/internal/exemplar/c;
+
+    invoke-direct {v0, v1}, Lio/opentelemetry/sdk/metrics/internal/aggregator/r;-><init>(Lio/opentelemetry/sdk/metrics/internal/exemplar/c;)V
+
+    return-object v0
+.end method

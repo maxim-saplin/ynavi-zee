@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fragment_music_sdk_gap" android:layout_width="fill_parent" android:layout_height="@dimen/music_sdk_helper_gap_height">
+        <View android:layout_gravity="center_horizontal" android:background="@drawable/music_sdk_helper_background_gap" android:layout_width="@dimen/music_sdk_helper_scroll_indicator_width" android:layout_height="@dimen/music_sdk_helper_scroll_indicator_height" android:layout_marginTop="@dimen/music_sdk_helper_scroll_indicator_margin_top" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/fragment_music_sdk_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/music_sdk_helper_gap_height">
+        <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/fragment_music_sdk_views_list" android:background="?music_sdk_helper_background" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/fragment_music_sdk_fixed_control_container" android:background="@drawable/music_sdk_helper_background_fixed_control" android:paddingTop="@dimen/music_sdk_helper_fixed_control_padding_top" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/music_sdk_helper_fixed_control_elevation">
+            <com.yandex.music.sdk.helper.ui.searchapp.views.title.SearchTitleView android:id="@id/fragment_music_sdk_fixed_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/music_sdk_helper_fixed_title_margin_bottom" />
+            <com.yandex.music.sdk.helper.ui.searchapp.views.control.SearchControlView android:id="@id/fragment_music_sdk_fixed_control" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.yandex.music.sdk.helper.ui.views.banner.SmallBannerView android:id="@id/fragment_music_sdk_small_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

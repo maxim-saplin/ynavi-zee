@@ -1,0 +1,62 @@
+.class public final Lcom/yandex/alice/futuris/onboarding/bro/animator/f;
+.super Landroidx/transition/TransitionListenerAdapter;
+.source "SourceFile"
+
+
+# instance fields
+.field final synthetic b:Lcom/yandex/alice/futuris/onboarding/bro/animator/g;
+
+
+# direct methods
+.method public constructor <init>(Lcom/yandex/alice/futuris/onboarding/bro/animator/g;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/yandex/alice/futuris/onboarding/bro/animator/f;->b:Lcom/yandex/alice/futuris/onboarding/bro/animator/g;
+
+    invoke-direct {p0}, Landroidx/transition/TransitionListenerAdapter;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final k(Landroidx/transition/Transition;)V
+    .locals 1
+
+    iget-object p1, p0, Lcom/yandex/alice/futuris/onboarding/bro/animator/f;->b:Lcom/yandex/alice/futuris/onboarding/bro/animator/g;
+
+    invoke-static {p1}, Lcom/yandex/alice/futuris/onboarding/bro/animator/g;->e(Lcom/yandex/alice/futuris/onboarding/bro/animator/g;)Lcom/yandex/alice/futuris/onboarding/bro/e;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/yandex/alice/futuris/onboarding/bro/e;->o()Landroid/view/View;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p0, Lcom/yandex/alice/futuris/onboarding/bro/animator/f;->b:Lcom/yandex/alice/futuris/onboarding/bro/animator/g;
+
+    invoke-static {p1}, Lcom/yandex/alice/futuris/onboarding/bro/animator/g;->c(Lcom/yandex/alice/futuris/onboarding/bro/animator/g;)Lcom/yandex/alice/futuris/onboarding/bro/animator/b;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/yandex/alice/futuris/onboarding/bro/animator/b;->e()V
+
+    iget-object p1, p0, Lcom/yandex/alice/futuris/onboarding/bro/animator/f;->b:Lcom/yandex/alice/futuris/onboarding/bro/animator/g;
+
+    invoke-static {p1}, Lcom/yandex/alice/futuris/onboarding/bro/animator/g;->d(Lcom/yandex/alice/futuris/onboarding/bro/animator/g;)Lcom/yandex/alice/futuris/onboarding/bro/animator/c;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    check-cast p1, Lid/a;
+
+    invoke-virtual {p1}, Lid/a;->r()V
+
+    :cond_0
+    return-void
+.end method

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.button.MaterialButton android:id="@id/error_primary_button" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PaySDK.Button.Primary" />
+    <com.google.android.material.button.MaterialButton android:id="@id/error_secondary_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/pay_sdk_margin_xsmall" style="@style/PaySDK.Button.Text" />
+</androidx.appcompat.widget.LinearLayoutCompat>

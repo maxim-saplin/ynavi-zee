@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="32.0dip" android:layout_marginBottom="16.0dip" android:text="@string/tab_navigation_discovery_loading_error_text" style="@style/Text14.Regular.TextPrimary" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/discovery_loading_error_reload_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="32.0dip" app:text="@string/tab_navigation_discovery_loading_error_reload_button_text" />
+</merge>

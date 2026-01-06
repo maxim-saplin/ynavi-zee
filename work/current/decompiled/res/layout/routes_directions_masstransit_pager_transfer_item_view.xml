@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/background_panel_color_impl" android:layout_width="fill_parent" android:layout_height="143.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="27.0sp" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:paddingStart="16.0dip">
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="35.0dip">
+            <ru.yandex.yandexmaps.routes.internal.guidance.mt.ui.views.TransportImageView android:id="@id/routes_directions_masstransit_summary_transfer_section_from_transport_view" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:showName="false" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/icons_primary" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" custom:srcCompat="@drawable/arrow_right_8" />
+            <ru.yandex.yandexmaps.routes.internal.guidance.mt.ui.views.TransportsPanelView android:id="@id/routes_directions_masstransit_summary_transfer_section_to_transports_panel_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:gravity="start|top" android:id="@id/routes_directions_masstransit_summary_pager_item_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="@integer/routes_directions_masstransit_summary_pager_item_description_max_lines_count" style="@style/Text16.Grey" />
+    </LinearLayout>
+</LinearLayout>

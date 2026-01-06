@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/passport_button_gray_light_pressed" />
+            <corners android:radius="@dimen/passport_tv_button_corner_radius" />
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/passport_white" />
+            <corners android:radius="@dimen/passport_tv_button_corner_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/passport_tv_back_button" />
+            <corners android:radius="@dimen/passport_tv_button_corner_radius" />
+        </shape>
+    </item>
+</selector>

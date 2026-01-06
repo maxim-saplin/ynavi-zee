@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="1.0dip" android:color="?messagingCommonDividerColor" />
+    <solid android:color="@android:color/white" />
+    <corners android:topLeftRadius="0.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="@dimen/timeline_message_corner_radius_medium" android:bottomRightRadius="@dimen/timeline_message_corner_radius_medium" />
+</shape>

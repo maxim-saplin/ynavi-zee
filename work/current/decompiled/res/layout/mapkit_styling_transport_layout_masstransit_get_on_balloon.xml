@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/mapkit_styling_transport_masstransit_manoeuvre_balloon_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/masstransit_get_on_table" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/mapkit_styling_transport_layout_masstransit_get_on_table" />
+    <com.yandex.mapkit.styling.transportnavigation.StrokeTextView android:textColor="@color/mapkit_styling_transport_balloon_text_primary_day_color" android:id="@id/masstransit_point_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxWidth="160.0dip" app:strokeColor="@color/mapkit_styling_transport_balloon_floating_day_color" app:strokeWidth="2.0dip" style="@style/MapkitTransportNewMasstransitManeuverTimeText" />
+</LinearLayout>

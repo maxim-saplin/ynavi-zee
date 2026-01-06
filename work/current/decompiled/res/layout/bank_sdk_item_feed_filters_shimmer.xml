@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.yandex.bank.widgets.common.SkeletonView android:id="@id/titleSkeleton" android:layout_width="0.0dip" android:layout_height="32.0dip" android:layout_marginTop="6.0dip" android:layout_marginHorizontal="24.0dip" app:bank_sdk_cornerRadius="8.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_max="218.0dip" />
+        <com.yandex.bank.widgets.common.SkeletonView android:id="@id/filterSkeleton1" android:layout_width="120.0dip" android:layout_height="48.0dip" android:layout_marginTop="24.0dip" android:layout_marginBottom="24.0dip" android:layout_marginStart="24.0dip" app:bank_sdk_cornerRadius="48.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/titleSkeleton" />
+        <com.yandex.bank.widgets.common.SkeletonView android:id="@id/filterSkeleton2" android:layout_width="120.0dip" android:layout_height="48.0dip" android:layout_marginStart="8.0dip" app:bank_sdk_cornerRadius="48.0dip" app:layout_constraintStart_toEndOf="@id/filterSkeleton1" app:layout_constraintTop_toTopOf="@id/filterSkeleton1" />
+        <com.yandex.bank.widgets.common.SkeletonView android:id="@id/filterSkeleton3" android:layout_width="120.0dip" android:layout_height="48.0dip" android:layout_marginStart="8.0dip" app:bank_sdk_cornerRadius="48.0dip" app:layout_constraintStart_toEndOf="@id/filterSkeleton2" app:layout_constraintTop_toTopOf="@id/filterSkeleton2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="104.0dip" android:width="414.0dip" android:viewportWidth="414.0" android:viewportHeight="104.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <path android:fillColor="#ff242528" android:pathData="M0 0h414v104H0z" />
+        <path android:fillColor="#ff484a51" android:pathData="M0 0h414v104H0z" />
+        <path android:fillColor="#ffd9d9f2" android:pathData="M241.75 13.7c3.57 0 6.46-2.9 6.46-6.46c0-1.33-0.4-2.57-1.1-3.6c2.72 0.76 4.71 3.26 4.71 6.22c0 3.56-2.89 6.45-6.45 6.45c-2.24 0-4.2-1.13-5.37-2.85c0.56 0.15 1.15 0.24 1.75 0.24z" android:fillType="evenOdd" />
+        <path android:fillColor="#ff54575f" android:pathData="M208.95 37.04h-52.73V30.1h28.36v-4.63c0-5.24 4.25-9.5 9.5-9.5c5.24 0 9.49 4.26 9.49 9.5v5.18h0.16c3.2 0 5.8 2.6 5.8 5.8c0 0.32-0.26 0.58-0.58 0.58z" />
+        <path android:fillColor="#ff54575f" android:pathData="M239.53 23.11H209.3c-0.5 0-0.91-0.4-0.91-0.91c0-2.54 2.05-4.6 4.59-4.6h6.57v-0.97c0-4.19 3.4-7.58 7.58-7.58c4.2 0 7.59 3.4 7.59 7.58v0.98h1.13c2.53 0 4.58 2.05 4.58 4.59c0 0.5-0.4 0.91-0.91 0.91z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__0" android:pathData="M201 52h12v10h-12z" />
+        <path android:fillColor="#ffd9d9f2" android:pathData="M202 53h1v2h-1z" />
+        <path android:fillColor="#ffd9d9f2" android:pathData="M204 59h1v2h-1z" />
+        <path android:fillColor="#ffd9d9f2" android:pathData="M208 56h1v2h-1z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__1" android:pathData="M194 65.8l7-1.8V40l-7-9.3v35.1z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__2" android:pathData="M194 65.8h-4.88V30.7h4.87v35.1z" />
+        <path android:fillColor="#ffd9d9f2" android:pathData="M189.13 38.66v5H191v-5h-1.87z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__3" android:pathData="M189.13 38.66v5H191v-5h-1.87z" />
+        <path android:fillColor="#ffd9d9f2" android:pathData="M189.12 55.66v5H191v-5h-1.88z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__4" android:pathData="M189.12 55.66v5H191v-5h-1.88z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__5" android:pathData="M189.12 67.05L149 77.33V0h22l18.12 24.15v42.9z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__6" android:pathData="M151.13-15.81L188 27.28v3L151.13-3.64v-12.17z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__7" android:pathData="M188 34.63L151.13 8.92v9.78L188 37.63v-3z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__8" android:pathData="M150.96 28.8l37.03 13.12v3l-37.03-7.95V28.8z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__9" android:pathData="M150.96 45.39l37.03 3.85v3h-37.03v-6.85z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__10" android:pathData="M188 57.49l-37.04 1.29v7.02l37.03-5.31v-3z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__11" android:pathData="M188 27.28l-36.87-43.1v12.2L188 30.28v-3z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__12" android:pathData="M0 0h149v77.34L45 104H0V0z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__13" android:pathData="M0 52h125.93v27.3L0 104V52z" />
+        <path android:fillColor="#ff000000" android:pathData="M109.39 52h2v52h-2z" />
+        <path android:fillColor="#ff000000" android:pathData="M79.58 52h3v52h-3z" />
+        <path android:fillColor="#ff000000" android:pathData="M32.2 52h4v52h-4z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__14" android:pathData="M125.92 52h15.41v27.3h-15.4V52z" />
+        <path android:fillColor="#ff242629" android:pathData="M134 7.98l7 2.02v12l-7-1.4V7.97z" />
+        <path android:fillColor="#ff242629" android:pathData="M126 5.68l-12-3.45v14.35l12 2.4V5.69z" />
+        <path android:fillColor="#ff242629" android:pathData="M126 32.18l-12-1.45v14.25l12 0.45V32.18z" />
+        <path android:fillColor="#ff242629" android:pathData="M134 45.73l7 0.27V34l-7-0.85v12.58z" />
+        <path android:fillColor="#ff242629" android:pathData="M104 44.6V29.52L89 27.7v16.33l15 0.57z" />
+        <path android:fillColor="#ff242629" android:pathData="M75 43.5V26l-22-2.67v19.34l22 0.83z" />
+        <path android:fillColor="#ff242629" android:pathData="M34 41.95V21.03L9 18v23l25 0.95z" />
+        <path android:fillColor="#ff242629" android:pathData="M53 4.33V0h51v14.57l-15-3V0H75v8.75L53 4.33z" />
+        <path android:fillColor="#ff000000" android:pathData="M53 0.58h19.7v7.7L75 8.76V0H53v0.58z" />
+        <path android:fillColor="#ff000000" android:pathData="M104 0H89v0.58h12.7v13.53l2.3 0.46V0z" />
+        <path android:fillColor="#ff000000" android:pathData="M114 2.23l12 3.45v13.3l-2.3-0.45V6.27l-9.7-2.8V2.24z" />
+        <path android:fillColor="#ff000000" android:pathData="M141 10l-7-2.02v1.25l4.7 1.35v10.96L141 22V10z" />
+        <path android:fillColor="#ff000000" android:pathData="M126 32.18l-12-1.45v0.86l9.7 1.18v12.57l2.3 0.1V32.17z" />
+        <path android:fillColor="#ff000000" android:pathData="M134 34.02l4.7 0.56v11.33L141 46V34l-7-0.85v0.87z" />
+        <path android:fillColor="#ff000000" android:pathData="M104 44.6V29.52L89 27.7v0.86l12.7 1.54V44.5l2.3 0.09z" />
+        <path android:fillColor="#ff000000" android:pathData="M75 26v17.5l-2.3-0.09V26.58L53 24.2v-0.87L75 26z" />
+        <path android:fillColor="#ff000000" android:pathData="M34 41.95V21.03L9 18v0.86l22.7 2.75v20.25l2.3 0.09z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__15" android:pathData="M0 52h125.93v15.1H0V52z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__16" android:pathData="M213 64h-12l-7 1.8h-4.88v1.25L141.34 79.3h-15.43L0 104h368l-99-25.55V66.02l-14-1.76v2.84h-29.97L213 64z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__17" android:pathData="M212 64h-10l-87 40h184l-87-40z" />
+        <path android:fillColor="#ff242528" android:pathData="M201 62h12v2h-12z" android:fillAlpha="0.9" />
+        <path android:fillColor="#ff484b51" android:pathData="M209 104l-2-40l-2 40h4z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__18" android:pathData="M414 0H273.6l-24.02 22.18v41.41L414 84.22V0z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__19" android:pathData="M225 67.1V43.33L213 50v14l12 3.1z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__20" android:pathData="M225 67.1V43.33h30V67.1h-30z" />
+        <path android:fillColor="#ffd9d9f2" android:pathData="M227 51v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M231 51v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M235 51v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M239 51v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M243 51v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M247 51v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M251 51v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M227 57.91v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M231 57.91v-5h2v5h-2z" />
+        <path android:fillColor="#ffd9d9f2" android:pathData="M235 57.91v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M239 57.91v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M243 57.91v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M247 57.91v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M251 57.91v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M227 64.91v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M231 64.91v-5h2v5h-2z" />
+        <path android:fillColor="#ffd9d9f2" android:pathData="M235 64.91v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M239 64.91v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M243 64.91v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M247 64.91v-5h2v5h-2z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M251 64.91v-5h2v5h-2z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__21" android:pathData="M214.76 50.3l-1.15 0.53v12.25l1.15 0.22v-13z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__22" android:pathData="M215.57 63.45V49.9l1.46-0.68v14.49l-1.46-0.27z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__23" android:pathData="M218.15 63.92l1.84 0.34V47.83l-1.84 0.87v15.22z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__24" android:pathData="M221.37 47.18v17.34l2.11 0.39V46.18l-2.1 1z" />
+        <path android:fillColor="#ffd9d9f2" android:pathData="M214.76 50.3l-1.15 0.53v12.25l1.15 0.22v-13z" />
+        <path android:fillColor="#ffd9d9f2" android:pathData="M215.57 63.45V49.9l1.46-0.68v14.49l-1.46-0.27z" />
+        <path android:fillColor="#ff000000" android:pathData="M253 52h2v20.5c0 0.28-0.22 0.5-0.5 0.5h-1c-0.28 0-0.5-0.22-0.5-0.5V52z" />
+        <path android:fillColor="#ff000000" android:pathData="M247 50h2v20.5c0 0.28-0.22 0.5-0.5 0.5h-1c-0.28 0-0.5-0.22-0.5-0.5V50z" />
+        <path android:fillColor="#ff000000" android:pathData="M243 48h2v20.5c0 0.28-0.22 0.5-0.5 0.5h-1c-0.28 0-0.5-0.22-0.5-0.5V48z" />
+        <path android:fillColor="#ff000000" android:pathData="M258 51h3v20.5c0 0.28-0.22 0.5-0.5 0.5h-2c-0.28 0-0.5-0.22-0.5-0.5V51z" />
+        <path android:fillColor="#ff000000" android:pathData="M264 56h3v20.5c0 0.28-0.22 0.5-0.5 0.5h-2c-0.28 0-0.5-0.22-0.5-0.5V56z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__25" android:pathData="M306.09 58c12.89 0 23.34-10.45 23.34-23.34c0-12.9-10.45-23.35-23.34-23.35c-10.38 0-19.18 6.78-22.21 16.15c-0.37-0.06-0.75-0.09-1.14-0.09c-1.09 0-2.13 0.24-3.06 0.67c-2.95-4.08-7.75-6.74-13.16-6.74c-6.31 0-11.78 3.6-14.47 8.87c-0.88-0.38-1.84-0.59-2.86-0.59c-4 0-7.23 3.24-7.23 7.23v0.03c-5.01 0.38-8.96 4.56-8.96 9.67c0 5.35 4.34 9.69 9.7 9.69c0.72 0 1.42-0.08 2.1-0.23c1.4 3.13 4.55 5.31 8.2 5.31c2.87 0 5.43-1.34 7.07-3.44c1.2 0.88 2.67 1.4 4.27 1.4c3.66 0 6.69-2.73 7.16-6.27c5.1-1.64 9.1-5.73 10.6-10.89c0.21 0.02 0.42 0.03 0.64 0.03c0.4 0 0.8-0.03 1.19-0.1C287 51.31 295.77 58 306.09 58z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__26" android:pathData="M414 0h-40.79l-104.2 36.82v41.63L368 104h46V0z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__27" android:pathData="M391.13 2.4L414-4.44v51.42l-22.87 0.74V2.4z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__28" android:pathData="M381.13 5.4L341.5 17.24v32.07l39.63-1.28V5.39z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__29" android:pathData="M381.13 62.43l-39.63-1.7v24.04l39.63 7.17V62.43z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__30" android:pathData="M391.13 93.75l22.8 4.13V63.83l-22.8-0.98v30.9z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__31" android:pathData="M335.5 83.68v-23.2l-26.9-1.15v19.48v9.86l26.9 6.94V83.68z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__32" android:pathData="M304.6 78.08V59.16l-18.72-0.8V74.7l18.71 3.4z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__33" android:pathData="M282.88 74.15V58.23L271 57.73V72l11.88 2.15z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__34" android:pathData="M285.88 51.1l18.71-0.6V28.28l-18.71 5.6v17.23z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__35" android:pathData="M282.88 34.78V51.2L271 51.6V38.33l11.88-3.55z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__36" android:pathData="M308.6 27.09v23.29l26.9-0.87V19.04l-26.9 8.05z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M414-4.44L391.13 2.4v45.32l2-0.07V3L414-3.17v-1.27z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M341.5 17.25l39.63-11.86v1.14l-37.63 11.1v31.62l-2 0.07V17.25z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M343.5 60.82l-2-0.08v24.03l39.63 7.17V91l-37.63-6.73V60.82z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M413.93 97.88l-22.8-4.13v-30.9l2 0.09v30.19l20.8 3.72v1.03z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M310.6 59.42v28.7l10.9 2.77v-31l1.55 0.06v31.33l12.45 3.17v1.16l-26.9-6.94V59.33l2 0.09z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M304.6 77.31v0.77l-18.72-3.39V58.36l2 0.09v15.87l16.71 2.99z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M282.88 73.43v0.72L271 72V57.73l2 0.08v13.85l9.88 1.77z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M287.88 51.04l-2 0.07V33.88l18.71-5.6v0.84l-16.71 4.93v17z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M273 51.52V38.44l9.88-2.91v-0.75L271 38.33v13.26l2-0.07z" />
+        <path android:fillColor="#ff0c0c0d" android:pathData="M308.6 50.38v-23.3l26.9-8.04V20l-24.9 7.35V50.3l-2 0.06z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__37" android:pathData="M285.88 51.1l18.71-0.6V28.28l-18.71 5.6v17.23z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__38" android:pathData="M282.88 34.78V51.2L271 51.6V38.33l11.88-3.55z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__39" android:pathData="M285.88 51.1l18.71-0.6V38.33h-18.71v12.78z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__40" android:pathData="M282.88 38.33V51.2L271 51.6V38.33h11.88z" />
+        <path android:fillColor="#ffa0a0df" android:pathData="M287.88 51.04l-2 0.07V33.88l18.71-5.6v0.84l-16.71 4.93v17z" />
+        <path android:fillColor="#ffa0a0df" android:pathData="M273 51.52V38.44l9.88-2.91v-0.75L271 38.33v13.26l2-0.07z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__41" android:pathData="M269 54h145v23H269V54z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__42" android:pathData="M258 54l156 3V47l-156 5v2z" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__43" android:pathData="M304.59 50.5L414 47V24L304.59 39.43v11.08z" android:fillAlpha="0.75" />
+        <path android:fillColor="@drawable/$place_card_panorama_placeholder_414x104__44" android:pathData="M258 52l46.6-1.49V39.43L258 46v6z" android:fillAlpha="0.5" />
+    </group>
+</vector>

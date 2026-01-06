@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingLeft="@dimen/tanker_basic_padding" android:paddingRight="@dimen/tanker_basic_padding" android:layout_width="fill_parent" android:layout_height="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.tankerapp.ui.TankerSkeletonView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="20.0dip" />
+</FrameLayout>

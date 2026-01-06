@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/taxi_order_card_bottom_panel_shimmer" android:focusable="true" android:visibility="visible" android:clickable="true" android:layout_width="0.0dip" android:layout_height="64.0dip" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.shimmer.ShimmerFrameLayout android:layout_gravity="center" android:background="@drawable/background_bottom_panel_shimmer" android:layout_width="48.0dip" android:layout_height="40.0dip" android:scaleType="center" style="@style/CommonShimmer" />
+    <com.facebook.shimmer.ShimmerFrameLayout android:layout_gravity="center" android:background="@drawable/background_bottom_panel_shimmer" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="1.0" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" style="@style/CommonShimmer" />
+    <com.facebook.shimmer.ShimmerFrameLayout android:layout_gravity="center" android:id="@id/taxi_order_card_expand_button" android:background="@drawable/background_bottom_panel_shimmer" android:layout_width="48.0dip" android:layout_height="40.0dip" android:scaleType="center" style="@style/CommonShimmer" />
+</LinearLayout>

@@ -1,0 +1,93 @@
+.class final Lcom/yandex/music/shared/local/queue/domain/LocalDataStore$clearEntityParams$1;
+.super Lkotlin/coroutines/jvm/internal/ContinuationImpl;
+.source "SourceFile"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    k = 0x3
+    mv = {
+        0x2,
+        0x0,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation runtime Lp31/c;
+    c = "com.yandex.music.shared.local.queue.domain.LocalDataStore"
+    f = "LocalDataStore.kt"
+    l = {
+        0x7e,
+        0x7f,
+        0x80,
+        0x81,
+        0x82,
+        0x83,
+        0x84,
+        0x85,
+        0x86,
+        0x87,
+        0x88,
+        0x89,
+        0x8a,
+        0x8b,
+        0x8c,
+        0x8d,
+        0x8e,
+        0x8f
+    }
+    m = "clearEntityParams"
+.end annotation
+
+
+# instance fields
+.field L$0:Ljava/lang/Object;
+
+.field L$1:Ljava/lang/Object;
+
+.field L$2:Ljava/lang/Object;
+
+.field label:I
+
+.field synthetic result:Ljava/lang/Object;
+
+.field final synthetic this$0:Lcom/yandex/music/shared/local/queue/domain/b;
+
+
+# direct methods
+.method public constructor <init>(Lcom/yandex/music/shared/local/queue/domain/b;Lkotlin/coroutines/jvm/internal/ContinuationImpl;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/yandex/music/shared/local/queue/domain/LocalDataStore$clearEntityParams$1;->this$0:Lcom/yandex/music/shared/local/queue/domain/b;
+
+    invoke-direct {p0, p2}, Lkotlin/coroutines/jvm/internal/ContinuationImpl;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lcom/yandex/music/shared/local/queue/domain/LocalDataStore$clearEntityParams$1;->result:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/yandex/music/shared/local/queue/domain/LocalDataStore$clearEntityParams$1;->label:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lcom/yandex/music/shared/local/queue/domain/LocalDataStore$clearEntityParams$1;->label:I
+
+    iget-object p1, p0, Lcom/yandex/music/shared/local/queue/domain/LocalDataStore$clearEntityParams$1;->this$0:Lcom/yandex/music/shared/local/queue/domain/b;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, v0, p0}, Lcom/yandex/music/shared/local/queue/domain/b;->b(Lcom/yandex/music/shared/local/queue/domain/b;Landroidx/datastore/preferences/core/b;Ljava/lang/String;Lkotlin/coroutines/jvm/internal/ContinuationImpl;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

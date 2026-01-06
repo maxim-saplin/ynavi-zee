@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/alice_cloud_ui_container" android:clipChildren="false" android:layout_width="332.0dip" android:layout_height="fill_parent" android:layout_marginStart="@dimen/shutter_left_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

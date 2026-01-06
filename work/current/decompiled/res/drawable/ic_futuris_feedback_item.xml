@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="16.0dip" android:width="16.0dip" android:viewportWidth="24.0" android:viewportHeight="25.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/alicekit_palette_futuris_text_90" android:pathData="M10.249 17.423l0.896 0.052C11.425 17.492 11.71 17.5 12 17.5c2.474 0 4.517-0.601 5.886-1.61C19.185 14.933 20 13.53 20 11.5s-0.815-3.433-2.114-4.39C16.517 6.101 14.474 5.5 12 5.5S7.483 6.101 6.114 7.11C4.815 8.067 4 9.47 4 11.5c0 2.365 1.112 3.938 2.937 4.905L8 16.968V20l2.249-2.577zm0.779 2.049C11.348 19.491 11.672 19.5 12 19.5c5.527 0 10-2.667 10-8s-4.473-8-10-8-10 2.667-10 8c0 3.16 1.57 5.384 4 6.672V22.5h2l3.028-3.028z" android:fillType="evenOdd" />
+</vector>

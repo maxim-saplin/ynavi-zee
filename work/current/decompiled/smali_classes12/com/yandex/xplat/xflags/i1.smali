@@ -1,0 +1,52 @@
+.class public final Lcom/yandex/xplat/xflags/i1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/yandex/xplat/xflags/y;
+
+
+# instance fields
+.field private final a:I
+
+
+# direct methods
+.method public constructor <init>(I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lcom/yandex/xplat/xflags/i1;->a:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/util/Map;)Lcom/yandex/xplat/xflags/i2;
+    .locals 2
+
+    new-instance p1, Lcom/yandex/xplat/common/q2;
+
+    sget-object v0, Lcom/yandex/xplat/xflags/i2;->b:Lcom/yandex/xplat/xflags/h2;
+
+    iget v1, p0, Lcom/yandex/xplat/xflags/i1;->a:I
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lcom/yandex/xplat/xflags/h1;
+
+    invoke-direct {v0, v1}, Lcom/yandex/xplat/xflags/h1;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, v1}, Lcom/yandex/xplat/common/q2;-><init>(Ljava/lang/Object;Lcom/yandex/xplat/common/YSError;)V
+
+    invoke-virtual {p1}, Lcom/yandex/xplat/common/q2;->f()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/yandex/xplat/xflags/i2;
+
+    return-object p1
+.end method

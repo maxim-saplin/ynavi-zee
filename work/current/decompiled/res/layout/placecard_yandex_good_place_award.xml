@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/placecard_yandex_good_place_award_container" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/placecard_yandex_good_place_award_pin" />
+    <com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/placecard_yandex_good_place_award" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" style="@style/Text10.LightGrey" />
+        <ImageView android:layout_gravity="start|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/special_olive_tree" />
+        <ImageView android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/special_olive_tree" android:rotationY="180.0" />
+    </com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout>
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/placecard_yandex_good_place_award_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text10.Grey" />
+</LinearLayout>

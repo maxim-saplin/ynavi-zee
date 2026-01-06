@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="integer" name="bank_sdk_qr_error_view_vertical_bias">0.34</item>
+</resources>

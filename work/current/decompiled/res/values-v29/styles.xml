@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.SplashScreen" parent="@android:style/Theme.DeviceDefault.DayNight">
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+    <style name="Base.Theme.SplashScreen.Light" parent="@style/Base.Theme.SplashScreen" />
+    <style name="CommonAppTheme" parent="@style/Platform.V29.CommonAppTheme" />
+    <style name="FullScreenActivity" parent="@style/TankerTheme.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="Messaging.Activity" parent="@style/Messaging.Activity.V29" />
+    <style name="Messaging.Activity.V21" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:textAppearance">@style/Messaging.TextAppearance</item>
+        <item name="android:textColorPrimary">?messagingCommonTextPrimaryColor</item>
+        <item name="android:textColorSecondary">?messagingCommonTextSecondaryColor</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:popupMenuStyle">@style/Messaging.PopupMenu</item>
+        <item name="android:alertDialogTheme">@style/Messaging.AlertDialog</item>
+        <item name="android:statusBarColor">?messagingStatusBarColor</item>
+        <item name="android:isLightTheme">?messagingIsLightTheme</item>
+        <item name="alertDialogTheme">@style/Messaging.AlertDialog</item>
+        <item name="bottomSheetDialogTheme">@style/Messaging.Theme.BottomSheetDialog</item>
+        <item name="colorControlHighlight">?messagingCommonRipple</item>
+        <item name="isLightTheme">?messagingIsLightTheme</item>
+        <item name="messagingToolbarCornerRadius">0.0dip</item>
+    </style>
+    <style name="Messaging.AlertDialog" parent="@style/Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:colorBackground">?messagingCommonActionbarColor</item>
+        <item name="android:textColorPrimary">?messagingCommonTextPrimaryColor</item>
+        <item name="android:windowBackground">?messagingCommonActionbarColor</item>
+        <item name="android:textColor">?messagingCommonAccentTextColor</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/msg_checkbox_selector</item>
+        <item name="android:textColorAlertDialogListItem">?messagingCommonTextPrimaryColor</item>
+        <item name="android:colorPrimary">?messagingCommonAccentTextColor</item>
+        <item name="android:colorPrimaryDark">?messagingCommonAccentTextColor</item>
+        <item name="android:isLightTheme">?messagingIsLightTheme</item>
+        <item name="colorPrimary">?messagingCommonAccentTextColor</item>
+        <item name="colorPrimaryDark">?messagingCommonAccentTextColor</item>
+        <item name="isLightTheme">?messagingIsLightTheme</item>
+        <item name="textColorAlertDialogListItem">?messagingCommonTextPrimaryColor</item>
+    </style>
+    <style name="MonetizationAdsInternal.AdActivity" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="PlusSDK.Theme.Base.Home" parent="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:progressBarStyle">@style/PlusSDK.Widget.ProgressBar</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="plus_sdk_shimmerWidth">@dimen/plus_sdk_mu_20</item>
+        <item name="progressBarStyle">@style/PlusSDK.Widget.ProgressBar</item>
+    </style>
+    <style name="TankerTheme" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:textColorPrimary">@color/tanker_textColorAlpha80</item>
+        <item name="android:windowBackground">@color/tanker_backgroundColor</item>
+        <item name="android:textViewStyle">@style/TankerText</item>
+        <item name="android:textColor">@color/tanker_textColorAlpha80</item>
+        <item name="android:actionMenuTextAppearance">@style/TankerTheme.MenuTextAppearance</item>
+        <item name="android:actionMenuTextColor">@color/tanker_textColorAccent</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="actionBarTheme">@style/TankerTheme.AppBarOverlay</item>
+        <item name="actionMenuTextAppearance">@style/TankerTheme.MenuTextAppearance</item>
+        <item name="actionMenuTextColor">@color/tanker_textColorAccent</item>
+        <item name="colorAccent">@color/tanker_buttonColorAccent</item>
+        <item name="colorControlNormal">@color/tanker_backgroundColor</item>
+        <item name="colorPrimary">@color/tanker_backgroundColor</item>
+        <item name="colorPrimaryDark">@color/tanker_backgroundColor</item>
+        <item name="tankerBackground">@drawable/tanker_background_card</item>
+        <item name="tankerBackgroundColor">@color/tanker_backgroundColor</item>
+        <item name="tankerBackgroundNew">@drawable/tanker_background_card_new</item>
+        <item name="tankerContentBackground">@color/tanker_contentBackground</item>
+        <item name="tankerPanelColor">@color/tanker_panelColor</item>
+        <item name="tankerPromocodeBackground">@drawable/tanker_bg_poromocode</item>
+        <item name="tankerRadioChecked">@drawable/tanker_radio_checked</item>
+        <item name="tankerShopBackground">@drawable/tanker_background_card_panel</item>
+        <item name="tankerShopProductColor">@color/tanker_shopProductColor</item>
+    </style>
+    <style name="TankerTransparentTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:textColorPrimary">@color/tanker_textColorAlpha80</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textViewStyle">@style/TankerText</item>
+        <item name="android:textColor">@color/tanker_textColorAlpha80</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:actionMenuTextColor">@color/tanker_textColorAccent</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="actionMenuTextColor">@color/tanker_textColorAccent</item>
+        <item name="colorAccent">@color/tanker_buttonColorAccent</item>
+        <item name="colorControlNormal">@color/tanker_divider</item>
+        <item name="colorPrimary">@color/tanker_backgroundColor</item>
+        <item name="colorPrimaryDark">@color/tanker_backgroundColor</item>
+        <item name="tankerBackground">@drawable/tanker_background_card</item>
+        <item name="tankerBackgroundColor">@color/tanker_backgroundColor</item>
+        <item name="tankerContentBackground">@color/tanker_contentBackground</item>
+        <item name="tankerPanelColor">@color/tanker_panelColor</item>
+        <item name="tankerPromocodeBackground">@drawable/tanker_bg_poromocode</item>
+        <item name="tankerRadioChecked">@drawable/tanker_radio_checked</item>
+    </style>
+    <style name="Theme.Bank.Widgets.Common" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="bank_sdk_widgetsCommon_codesInput">@style/BankSdk.Widget.WidgetsCommon.CodesInput</item>
+        <item name="bank_sdk_widgetsCommon_numbersInput">@style/BankSdk.Widget.WidgetsCommon.NumbersInput</item>
+    </style>
+    <style name="Messaging.Activity.V29" parent="@style/Messaging.Activity.V27">
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="Platform.V29.CommonAppTheme" parent="@style/Platform.CommonAppTheme">
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:isLightTheme">true</item>
+    </style>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.monetization.ads.nativeads.video.view.CorePlaybackControlsContainer android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:layout_gravity="left|bottom" android:id="@id/video_mute_control" android:tag="video_mute_control" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginLeft="10.0dip" android:layout_marginBottom="20.0dip" android:button="@drawable/monetization_ads_internal_mute_checkable_default" />
+    <ProgressBar android:layout_gravity="bottom" android:id="@id/video_progress_control" android:layout_width="fill_parent" android:layout_height="2.0dip" android:progressDrawable="@drawable/monetization_ads_instream_internal_progress_display" style="?android:progressBarStyleHorizontal" />
+</com.monetization.ads.nativeads.video.view.CorePlaybackControlsContainer>

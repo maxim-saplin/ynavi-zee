@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="@drawable/bank_sdk_savings_widget_interest_month_background" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="@dimen/bank_sdk_savings_account_interest_month_height" android:minWidth="110.0dip" android:paddingHorizontal="12.0dip" android:paddingVertical="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/label" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.Bank.Text.Caption1.PrimaryColor" />
+    <com.yandex.bank.core.design.spoiler.SpoilerTextView android:id="@id/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" app:bank_sdk_spoiler_height="24.0dip" app:bank_sdk_spoiler_width="68.0dip" style="@style/Widget.Bank.Text.Title2" />
+</androidx.appcompat.widget.LinearLayoutCompat>

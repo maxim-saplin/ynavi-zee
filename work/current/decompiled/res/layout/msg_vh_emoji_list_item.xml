@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.messaging.internal.view.input.emojipanel.EmojiView android:layout_gravity="center" android:id="@id/emoji_view" android:background="@drawable/msg_emoji_circle_background" android:padding="@dimen/emoji_view_padding" android:layout_width="@dimen/emoji_view_size" android:layout_height="@dimen/emoji_view_size"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

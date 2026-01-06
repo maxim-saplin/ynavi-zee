@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView android:textSize="13.0sp" android:textColor="@color/plus_sdk_white" android:gravity="center" android:layout_gravity="center" android:id="@id/count" android:background="@drawable/plus_sdk_ic_counter_circle" android:layout_width="@dimen/plus_sdk_mu_2_5" android:layout_height="@dimen/plus_sdk_mu_2_5" android:importantForAccessibility="yes" app:fontFamily="?plus_sdk_fontFamily_regular"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

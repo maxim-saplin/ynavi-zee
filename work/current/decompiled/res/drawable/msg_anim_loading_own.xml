@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$msg_anim_loading_own__0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target android:name="spinner_rotate" android:animation="@drawable/$msg_anim_loading_own__1" />
+</animated-vector>

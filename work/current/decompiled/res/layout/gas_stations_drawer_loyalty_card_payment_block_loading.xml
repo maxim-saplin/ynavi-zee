@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/gas_stations_drawer_subblock_height" android:layout_marginTop="@dimen/gas_stations_drawer_card_payment_and_loyalty_block_top_margin" android:layout_marginBottom="@dimen/gas_stations_drawer_card_payment_and_loyalty_block_bottom_margin" android:layout_marginHorizontal="@dimen/gas_stations_drawer_horizontal_padding" app:cornerRadius="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.shimmer.ShimmerFrameLayout android:background="@color/bg_additional" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonShimmer" />
+</ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>

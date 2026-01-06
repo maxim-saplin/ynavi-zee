@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/mt_schedule_card_controller_container_id" android:background="@color/mt_schedule_layout_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.common.views.ShutterImitationFrameLayout android:focusable="false" android:clickable="true" android:layout_marginTop="@dimen/shutter_top_padding" android:paddingStart="@dimen/shutter_horizontal_padding" android:paddingEnd="@dimen/shutter_horizontal_padding" style="@style/ShutterCommonLayoutParams">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ru.yandex.yandexmaps.placecard.items.header.HeaderItemView android:id="@id/mt_schedule_header_layout_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/mt_schedule_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <View android:id="@id/mt_schedule_header_separator" android:background="@drawable/background_container" android:layout_width="fill_parent" android:layout_height="8.0dip" app:layout_constraintTop_toTopOf="parent" />
+                    <FrameLayout android:id="@id/mt_schedule_header_buttons" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/mt_schedule_header_separator">
+                        <TextView android:layout_gravity="start" android:id="@id/mt_schedule_header_date_button" android:background="@drawable/common_borderless_ripple_background" android:padding="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mt_schedule_choose_date_button_today" android:layout_marginStart="8.0dip" android:layout_marginVertical="4.0dip" style="@style/Text14.Medium.TextActions" />
+                        <TextView android:layout_gravity="end" android:id="@id/mt_schedule_header_reset_filter_button" android:background="@drawable/common_borderless_ripple_background" android:padding="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mt_schedule_reset_button" android:layout_marginEnd="8.0dip" android:layout_marginVertical="4.0dip" style="@style/Text14.Medium.TextActions" />
+                    </FrameLayout>
+                    <ru.yandex.yandexmaps.placecard.controllers.mtschedule.common.views.MtScheduleFilterLineView android:orientation="horizontal" android:id="@id/mt_schedule_header_filters" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/mt_schedule_header_buttons" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/mt_schedule_current_stop_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/mt_schedule_header_filters">
+                        <View android:background="@color/bg_separator" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                        <ru.yandex.yandexmaps.placecard.items.mt.MtThreadClosestStopItemView android:id="@id/mt_schedule_current_stop" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                        <View android:layout_gravity="top" android:background="@color/bg_separator" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+                    </LinearLayout>
+                    <ru.yandex.yandexmaps.placecard.controllers.mtschedule.internal.views.MtScheduleEmptyItemView android:gravity="center" android:id="@id/mt_schedule_empty_view" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/mt_schedule_card_controller_schedule_view_id" app:layout_constraintTop_toBottomOf="@id/mt_schedule_current_stop_container" />
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/mt_schedule_card_controller_schedule_view_id" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/mt_schedule_empty_view" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <ru.yandex.yandexmaps.designsystem.loader.LoaderView android:layout_gravity="center" android:id="@id/mt_schedule_card_controller_tab_loading_view_id" android:layout_width="wrap_content" android:layout_height="wrap_content" app:ymaps_goneWhenNotInProgress="true" app:ymaps_progressSize="large" />
+            <ru.yandex.yandexmaps.placecard.tabs.TabErrorView android:layout_gravity="center" android:id="@id/mt_schedule_card_controller_tab_error_view_id" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </ru.yandex.yandexmaps.common.views.ShutterImitationFrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+</FrameLayout>

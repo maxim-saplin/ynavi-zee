@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/paymentsdk_bg_challenger_input" android:layout_width="fill_parent" android:layout_height="68.0dip" android:backgroundTint="?paymentsdk_cvv_input_background">
+        <com.google.android.material.textfield.TextInputLayout android:theme="@style/PaymentSdkPrebuiltTextInputLayoutAppearance.TextInput" android:id="@id/bankInputLayout" android:paddingTop="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/paymentsdk_dk_sbp_search_hint" android:layout_marginStart="16.0dip" android:layout_marginEnd="48.0dip" app:boxBackgroundColor="#00000000" app:boxBackgroundMode="outline" app:boxCollapsedPaddingTop="-14.0dip" app:boxStrokeColor="#00000000" app:boxStrokeWidth="0.0dip" app:boxStrokeWidthFocused="0.0dip" app:expandedHintEnabled="true" app:hintTextAppearance="@style/PaymentSdkPrebuiltTextInputLayoutAppearance.Hint" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.textfield.TextInputEditText android:textSize="18.0sp" android:textColor="?paymentsdk_prebuilt_divkitCardNumberTextColor" android:id="@id/bankInputEditText" android:background="#00000000" android:paddingTop="8.0dip" android:paddingBottom="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="@font/ya_regular" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView android:id="@id/clearInputButton" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/paymentsdk_ic_clear" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

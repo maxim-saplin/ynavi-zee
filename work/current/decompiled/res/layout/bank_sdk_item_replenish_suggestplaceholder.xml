@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bank_sdk_background_replenish_suggestplaceholder" android:layout_width="@dimen/bank_sdk_width_replenish_suggestplaceholder" android:layout_height="@dimen/bank_sdk_height_replenish_suggestplacholder" android:layout_marginTop="@dimen/bank_sdk_margin_replenish_suggestplacehlodertop" android:layout_marginEnd="@dimen/bank_sdk_margin_replenish_suggestplaceholderend"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/bank_sdk_loadable_input_background_radius" />
+    <solid android:color="?bankColor_fill_default_100" />
+</shape>

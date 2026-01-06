@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.controls.hack.ObservableStubControl android:id="@id/control_stub_for_promo_object" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_clearance_bottom="0.0dip" app:layout_clearance_top="0.0dip" app:layout_fleet_id="@integer/control_fleet_id_stub_for_promo_object" app:layout_floating="drifting_up" app:layout_heaviness="@integer/control_heaviness_stub_for_promo_object"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

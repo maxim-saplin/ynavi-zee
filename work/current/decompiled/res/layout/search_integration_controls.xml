@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:id="@id/search_integration_controller_map_buttons" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr" app:overland_fleets_ids="@string/controls_default_overland_fleets_ids" app:wall_shore_tags="@string/filters_shore_tag"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/control_chunk_speedometer" />
+    <include layout="@layout/control_chunk_online_org" />
+    <include layout="@layout/control_chunk_indoor" />
+    <include layout="@layout/control_chunk_indoor_dock" />
+    <include layout="@layout/control_chunk_ruler" />
+    <include layout="@layout/control_chunk_layers_menu" />
+    <include layout="@layout/control_chunk_traffic" />
+    <include layout="@layout/control_chunk_carparks" />
+    <include layout="@layout/control_chunk_panorama" />
+    <include layout="@layout/control_chunk_weather" />
+    <include layout="@layout/control_chunk_tilt_toggle" />
+    <include layout="@layout/control_chunk_zoom" />
+    <include layout="@layout/control_chunk_position" />
+    <include layout="@layout/control_chunk_panorama_stub" />
+</ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>

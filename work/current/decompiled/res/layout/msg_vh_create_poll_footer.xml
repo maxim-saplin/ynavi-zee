@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.messaging.views.TextSwitchView android:id="@id/anonymous_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tsvLabel="@string/messenger_create_poll_is_anonymous_caption" style="@style/Messaging.PollCreate.Switch" />
+    <com.yandex.messaging.views.TextSwitchView android:id="@id/multiselect_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tsvLabel="@string/messenger_create_poll_is_multiselect_caption" style="@style/Messaging.PollCreate.Switch" />
+    <com.yandex.messaging.views.TextSwitchView android:id="@id/starred_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tsvDescription="@string/messenger_create_poll_is_starred_desc" app:tsvLabel="@string/messenger_create_poll_is_starred_caption" style="@style/Messaging.PollCreate.Switch" />
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="16.0dip">
+        <androidx.constraintlayout.helper.widget.Flow android:layout_width="0.0dip" android:layout_height="wrap_content" app:constraint_referenced_ids="placecard_features_bool_block_left,placecard_features_bool_block_right" app:flow_horizontalBias="0.0" app:flow_horizontalGap="16.0dip" app:flow_horizontalStyle="packed" app:flow_verticalGap="8.0dip" app:flow_wrapMode="chain" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <ru.yandex.yandexmaps.placecard.items.feature.block.FeaturesBoolBlockPartView android:id="@id/placecard_features_bool_block_left" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ru.yandex.yandexmaps.placecard.items.feature.block.FeaturesBoolBlockPartView android:id="@id/placecard_features_bool_block_right" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

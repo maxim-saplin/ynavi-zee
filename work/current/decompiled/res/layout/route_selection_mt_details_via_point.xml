@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:gravity="center" android:id="@id/mt_details_via_point_number" android:background="@drawable/mt_rounded_grey_background_radius_8" android:layout_width="24.0dip" android:layout_height="24.0dip" android:importantForAccessibility="no" style="@style/Text14.Medium.WhiteBlack" />
+    </FrameLayout>
+    <TextView android:gravity="center_vertical" android:id="@id/mt_details_via_point_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="24.0dip" android:layout_weight="1.0" android:lineSpacingExtra="4.0sp" android:layout_marginStart="14.0dip" style="@style/Text16.Medium" />
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="8.0dip">
+        <TextView android:id="@id/mt_details_via_point_arrival_time" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/Text14.Medium.PrimaryVariant" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/passport_next_horizontal_divider_light" />
+    <size android:height="@dimen/passport_next_divider_size" />
+</shape>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/common_clickable_panel_background_no_border_impl" android:layout_width="fill_parent" android:layout_height="@dimen/bookmarks_list_item_view_height" android:elevation="1.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBox android:id="@id/bookmarks_edit_bookmark_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" />
+    <TextView android:ellipsize="end" android:id="@id/yandexmaps_bookmarks_edit_bookmark_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" style="@style/Text16" />
+    <ImageView android:id="@id/bookmarks_edit_bookmark_edit_button" android:padding="@dimen/bookmarks_default_margin" android:tint="@color/icons_secondary" app:srcCompat="@drawable/edit_nofill_24" style="@style/CommonImageButton" />
+    <ImageView android:id="@id/bookmarks_edit_bookmark_drag_button" android:padding="@dimen/bookmarks_default_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/icons_secondary" app:srcCompat="@drawable/reorder_24" />
+</LinearLayout>

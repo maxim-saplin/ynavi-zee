@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/adtune_background_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.monetization.ads.fullscreen.template.view.ExtendedViewContainer android:layout_gravity="center|bottom" android:id="@id/adtune_content_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="13.0" />
+                <FrameLayout android:id="@id/adtune_drag_view_container" android:paddingLeft="20.0dip" android:paddingTop="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="8.0">
+                    <View android:background="@drawable/monetization_ads_internal_adtune_control_shape_white" android:layout_width="fill_parent" android:layout_height="4.0dip" />
+                </FrameLayout>
+                <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="13.0" />
+            </LinearLayout>
+            <com.monetization.ads.fullscreen.template.view.ExtendedViewContainer android:id="@id/adtune_webview_container" android:background="@drawable/monetization_ads_internal_adtune_webview_container_shape_white" android:layout_width="fill_parent" android:layout_height="fill_parent" app:monetization_internal_top_left_corner_radius="@dimen/monetization_ads_internal_adtune_corner_radius" app:monetization_internal_top_right_corner_radius="@dimen/monetization_ads_internal_adtune_corner_radius" />
+        </LinearLayout>
+    </com.monetization.ads.fullscreen.template.view.ExtendedViewContainer>
+</FrameLayout>

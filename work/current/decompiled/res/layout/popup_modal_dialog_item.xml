@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/popup_dialog_linear_container" android:background="@color/background_panel" android:paddingTop="24.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="32.0dip" android:paddingEnd="32.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/popup_dialog_title_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/popup_dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" style="@style/Text20.Medium.TextPrimary" />
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/popup_dialog_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:textAlignment="center" style="@style/Text16.TextPrimaryVariant" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/popup_dialog_primary_action" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:generalButtonSize="big" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/popup_dialog_close" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" app:generalButtonSize="big" app:generalButtonStyle="transparent" />
+    </LinearLayout>
+</LinearLayout>

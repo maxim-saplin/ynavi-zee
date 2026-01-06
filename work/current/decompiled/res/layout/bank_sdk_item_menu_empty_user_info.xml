@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/emptyUserInfo" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bank_sdk_menu_user_photo_margin_top"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.bank.widgets.common.SkeletonView android:layout_width="@dimen/bank_sdk_menu_user_photo_size" android:layout_height="@dimen/bank_sdk_menu_user_photo_size" android:shape="oval" android:contentDescription="@null" />
+    <View android:background="@drawable/bank_sdk_skeleton_background_4" android:layout_width="240.0dip" android:layout_height="24.0dip" android:layout_marginTop="@dimen/bank_sdk_menu_user_name_margin_top" />
+    <View android:background="@drawable/bank_sdk_skeleton_background_4" android:layout_width="180.0dip" android:layout_height="20.0dip" android:layout_marginTop="8.0dip" />
+</LinearLayout>

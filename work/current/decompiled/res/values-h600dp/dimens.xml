@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="messaging_onboarding_feature_bottom_margin">28.0dip</dimen>
+    <dimen name="messaging_onboarding_feature_image_size">360.0dip</dimen>
+    <dimen name="messaging_onboarding_feature_pager_height">364.0dip</dimen>
+    <dimen name="messaging_onboarding_pager_bottom_padding">126.0dip</dimen>
+</resources>

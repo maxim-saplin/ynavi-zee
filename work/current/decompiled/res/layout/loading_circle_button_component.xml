@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="@dimen/circle_buttons_frame_size" android:layout_height="@dimen/circle_buttons_frame_size">
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:layout_width="@dimen/circle_buttons_circle_size" android:layout_height="@dimen/circle_buttons_circle_size" android:layout_marginBottom="@dimen/go_design_s_space" android:src="@drawable/oval_shape" android:tint="@color/component_gray_100" />
+    </FrameLayout>
+    <View android:layout_gravity="center_horizontal" android:background="@drawable/icon_bubble" android:layout_width="80.0dip" android:layout_height="@dimen/go_design_m_space" android:layout_marginTop="72.0dip" />
+</merge>

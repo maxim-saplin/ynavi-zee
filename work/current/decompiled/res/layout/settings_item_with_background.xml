@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.designsystem.items.general.GeneralItemView android:id="@id/item" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="@dimen/plus_sdk_button_height" android:layout_marginHorizontal="@dimen/plus_sdk_mu_2" android:layout_marginVertical="@dimen/plus_sdk_mu_2_75" style="@style/PlusSDK.Widget.RetryButton"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/plus_sdk_retry_button_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PlusSDK.Widget.RetryButton.Title" />
+    <TextView android:id="@id/plus_sdk_retry_button_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/PlusSDK.Widget.RetryButton.Subtitle" />
+</LinearLayout>

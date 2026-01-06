@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexnavi.ui.guidance.jams.ProgressView android:layout_gravity="center_horizontal" android:id="@id/progressview_guidance" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="@dimen/height_contextprogress_arrow"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.navilib.widget.NaviEmptyView android:background="@drawable/contextprogress_background" android:layout_width="fill_parent" android:layout_height="@dimen/height_map_progress" android:layout_centerVertical="true" />
+    <com.yandex.navilib.widget.NaviEmptyView android:id="@id/view_progress_jams" android:layout_width="fill_parent" android:layout_height="@dimen/height_map_progress" android:layout_centerVertical="true" android:alpha="0.0" />
+    <com.yandex.navilib.widget.NaviEmptyView android:id="@id/view_progress_shade" android:background="@drawable/contextprogress_background" android:layout_width="0.0dip" android:layout_height="@dimen/height_map_progress" android:layout_centerVertical="true" />
+    <com.yandex.navilib.widget.NaviImageView android:id="@id/imageview_progress_arrow" android:layout_width="@dimen/width_contextprogress_arrow" android:layout_height="@dimen/height_contextprogress_arrow" android:layout_centerVertical="true" android:alpha="0.0" android:layout_marginStart="12.0dip" app:srcCompat="@drawable/progress_arrow" />
+</ru.yandex.yandexnavi.ui.guidance.jams.ProgressView>

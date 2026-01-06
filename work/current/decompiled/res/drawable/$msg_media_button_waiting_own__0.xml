@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="40.0dip" android:width="40.0dip" android:viewportWidth="40.0" android:viewportHeight="40.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <clip-path android:pathData="M0 0H40V40H0V0Z" />
+        <path android:fillColor="?messagingOutgoingButtonColor" android:pathData="M20 0.000183105C25.3043 0.000183105 30.3914 2.10732 34.1421 5.85805C37.8929 9.60878 40 14.6959 40 20.0002C40 25.3045 37.8929 30.3916 34.1421 34.1423C30.3914 37.893 25.3043 40.0002 20 40.0002C14.6957 40.0002 9.60859 37.893 5.85786 34.1423C2.10714 30.3916 0 25.3045 0 20.0002H0C0 14.6959 2.10714 9.60878 5.85786 5.85805C9.60859 2.10732 14.6957 0.000183105 20 0.000183105V0.000183105Z" />
+        <group android:name="spinner_rotate" android:pivotX="20.0" android:pivotY="20.0">
+            <path android:fillColor="?messagingOutgoingSecondaryColor" android:pathData="M20 7C12.8203 7 7 12.8203 7 20C7 27.1797 12.8203 33 20 33C27.1797 33 33 27.1797 33 20C33 19.4477 33.4477 19 34 19C34.5523 19 35 19.4477 35 20C35 28.2843 28.2843 35 20 35C11.7157 35 5 28.2843 5 20C5 11.7157 11.7157 5 20 5C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7Z" android:fillType="evenOdd" />
+        </group>
+        <path android:fillColor="?messagingOutgoingSecondaryColor" android:pathData="M15.2929 16.7071C14.9024 16.3166 14.9024 15.6834 15.2929 15.2929C15.6834 14.9024 16.3166 14.9024 16.7071 15.2929L20 18.5858L23.2929 15.2929C23.6834 14.9024 24.3166 14.9024 24.7071 15.2929C25.0976 15.6834 25.0976 16.3166 24.7071 16.7071L21.4142 20L24.7071 23.2929C25.0976 23.6834 25.0976 24.3166 24.7071 24.7071C24.3166 25.0976 23.6834 25.0976 23.2929 24.7071L20 21.4142L16.7071 24.7071C16.3166 25.0976 15.6834 25.0976 15.2929 24.7071C14.9024 24.3166 14.9024 23.6834 15.2929 23.2929L18.5858 20L15.2929 16.7071Z" android:fillType="evenOdd" />
+    </group>
+</vector>

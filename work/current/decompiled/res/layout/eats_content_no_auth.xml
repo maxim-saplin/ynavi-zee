@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/no_auth_layout" android:background="?bgMain" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="72.0dip">
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="24.0sp" android:textColor="?textMain" android:gravity="center" android:id="@id/auth_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/ya_bold" />
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="16.0sp" android:textColor="?textMain" android:ellipsize="end" android:gravity="center" android:id="@id/auth_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/super_app_no_authorization_subtitle" android:fontFamily="@font/ya_regular" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip">
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="16.0sp" android:textColor="?textMain" android:gravity="center" android:id="@id/auth" android:background="@drawable/bg_button_control" android:layout_width="fill_parent" android:layout_height="@dimen/eats_button_height" android:text="@string/super_app_no_authorization_auth_button" android:fontFamily="@font/ya_medium" />
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="16.0sp" android:textColor="?textMain" android:gravity="center" android:id="@id/auth_hide" android:background="@drawable/bg_button_minor" android:layout_width="fill_parent" android:layout_height="@dimen/eats_button_height" android:layout_marginTop="8.0dip" android:text="@string/super_app_no_authorization_cancel_button" android:fontFamily="@font/ya_regular" />
+    </LinearLayout>
+</FrameLayout>

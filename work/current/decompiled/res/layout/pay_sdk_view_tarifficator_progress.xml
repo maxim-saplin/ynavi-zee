@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxWidth="@dimen/pay_sdk_progress_bar_size" android:maxHeight="@dimen/pay_sdk_progress_bar_size" android:indeterminate="true" android:indeterminateDrawable="@drawable/pay_sdk_progress_drawable" android:paddingVertical="@dimen/pay_sdk_margin_middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

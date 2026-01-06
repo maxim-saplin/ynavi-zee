@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.taxi.design.ListItemSideContainer android:layout_gravity="start|center" android:id="@id/lead_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/center" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ru.yandex.taxi.widget.ShimmeringRobotoTextView android:textSize="@dimen/component_text_size_body" android:textColor="@color/component_black" android:id="@id/top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" app:robotoFontStyle="regular" />
+        <ru.yandex.taxi.widget.ShimmeringRobotoTextView android:textSize="@dimen/component_text_size_caption" android:textColor="@color/component_gray_300" android:ellipsize="end" android:id="@id/bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" app:robotoFontStyle="regular" />
+    </LinearLayout>
+    <ru.yandex.taxi.design.ListItemSideContainer android:layout_gravity="end|center" android:id="@id/trail_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</merge>

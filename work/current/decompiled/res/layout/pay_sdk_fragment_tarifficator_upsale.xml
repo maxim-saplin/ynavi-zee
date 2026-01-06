@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?pay_sdk_primaryBlockColor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.plus.pay.ui.core.internal.tarifficator.ui.upsale.UpsaleContentView android:id="@id/upsale_content_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.yandex.plus.pay.ui.core.internal.tarifficator.ui.common.BottomSheetLoadingView android:layout_gravity="bottom" android:id="@id/upsale_loading_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.yandex.plus.webview.api.WebViewContainer android:id="@id/upsale_webview_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.yandex.plus.pay.ui.common.api.ui.view.ProgressView android:layout_gravity="center" android:id="@id/upsale_progress_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

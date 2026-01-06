@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:background="@drawable/common_clickable_background_no_border_impl" android:paddingTop="@dimen/bookmarks_default_margin" android:paddingBottom="@dimen/bookmarks_default_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" style="@style/Text16"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

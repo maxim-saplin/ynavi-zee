@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/offline_cache_downloads_section_title_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="16.0dip" style="@style/Text16.Medium.TextSecondary" />
+    <TextView android:layout_gravity="end|center" android:id="@id/offline_cache_downloads_section_action_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16.0dip" style="@style/Text14.Medium.TextActions" />
+</merge>

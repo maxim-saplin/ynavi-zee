@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="80.0dip" android:width="80.0dip" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <path android:fillColor="#ffffffff" android:pathData="M40 50c-5.52 0-10-4.48-10-10s4.48-10 10-10s10 4.48 10 10s-4.48 10-10 10z" />
+    </group>
+    <path android:fillColor="#ff737ce6" android:pathData="M40 47c3.87 0 7-3.13 7-7s-3.13-7-7-7s-7 3.13-7 7s3.13 7 7 7z" />
+    <path android:fillColor="#66000000" android:pathData="M35.1 35c1.26-1.24 2.99-2 4.9-2c1.91 0 3.64 0.76 4.9 2c-1.26 1.24-2.99 2-4.9 2c-1.91 0-3.64-0.76-4.9-2z" android:fillType="evenOdd" />
+</vector>

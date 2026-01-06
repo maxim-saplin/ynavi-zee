@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="passport_bottom_sheet_margin_horizontal">56.0dip</dimen>
+</resources>

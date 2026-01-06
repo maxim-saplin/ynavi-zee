@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/variant_balloon_vertical_flag_icon_spacing" android:width="0.0dip" />
+</shape>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/background_panel" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:ellipsize="end" android:id="@id/bookmarks_select_folder_header_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/bookmarks_select_folder_header_title_text" android:maxLines="1" android:layout_weight="1.0" style="@style/Text20.Medium" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/bookmarks_select_folder_header_done_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:generalButtonSize="small" app:text="@string/common_done" />
+    <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:id="@id/bookmarks_select_folder_header_close_button" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+</LinearLayout>

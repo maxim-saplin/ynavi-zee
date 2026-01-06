@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="FEET_SHORT">
+        <item quantity="other">фути</item>
+        <item quantity="zero">футів</item>
+        <item quantity="one">фут</item>
+        <item quantity="few">фути</item>
+        <item quantity="many">футів</item>
+    </plurals>
+    <plurals name="MILES_SHORT">
+        <item quantity="other">милі</item>
+        <item quantity="zero">миль</item>
+        <item quantity="one">миля</item>
+        <item quantity="few">милі</item>
+        <item quantity="many">миль</item>
+    </plurals>
+    <plurals name="PlusPay.Consumable.SpendPoints.Description">
+        <item quantity="other">Витратити &lt;point> балів</item>
+        <item quantity="zero">Витратити &lt;point> балів</item>
+        <item quantity="one">Витратити &lt;point> бал</item>
+        <item quantity="few">Витратити &lt;point> бали</item>
+        <item quantity="many">Витратити &lt;point> балів</item>
+    </plurals>
+    <plurals name="accessibility_n_items">
+        <item quantity="other">%d елементи</item>
+        <item quantity="zero">0 елементів</item>
+        <item quantity="one">%d елемент</item>
+        <item quantity="few">%d елементи</item>
+        <item quantity="many">%d елементів</item>
+    </plurals>
+    <plurals name="accessibility_n_variants">
+        <item quantity="other">%d варіанти</item>
+        <item quantity="zero">0 варіантів</item>
+        <item quantity="one">%d варіант</item>
+        <item quantity="few">%d варіанти</item>
+        <item quantity="many">%d варіантів</item>
+    </plurals>
+    <plurals name="accessibility_review_dislike_count">
+        <item quantity="other">%d дизлайка</item>
+        <item quantity="one">%d дизлайк</item>
+        <item quantity="few">%d дизлайка</item>
+        <item quantity="many">%d дизлайков</item>
+    </plurals>
+    <plurals name="accessibility_review_like_count">
+        <item quantity="other">%d лайка</item>
+        <item quantity="one">%d лайк</item>
+        <item quantity="few">%d лайка</item>
+        <item quantity="many">%d лайков</item>
+    </plurals>
+    <plurals name="accessibility_routes_intermediate_stops_count">
+        <item quantity="other">%d промежуточные остановки</item>
+        <item quantity="one">%d промежуточная остановка</item>
+        <item quantity="few">%d промежуточные остановки</item>
+        <item quantity="many">%d промежуточных остановок</item>
+    </plurals>
+    <plurals name="accessibility_routes_options_count">
+        <item quantity="other">%d активные настройки</item>
+        <item quantity="one">%d активная настройка</item>
+        <item quantity="few">%d активные настройки</item>
+        <item quantity="many">%d активных настроек</item>
+    </plurals>
+    <plurals name="accessibility_weather_title">
+        <item quantity="other">Зараз %d градуси</item>
+        <item quantity="zero">Зараз %d градусів</item>
+        <item quantity="one">Зараз %d градус</item>
+        <item quantity="few">Зараз %d градуси</item>
+        <item quantity="many">Зараз %d градусів</item>
+    </plurals>
+    <plurals name="active_orders_number">
+        <item quantity="other">%d активні замовлення</item>
+        <item quantity="one">%d активне замовлення</item>
+        <item quantity="few">%d активні замовлення</item>
+        <item quantity="many">%d активних замовлень</item>
+    </plurals>
+    <plurals name="active_orders_number_and_music">
+        <item quantity="other">%d активні замовлення і Музика</item>
+        <item quantity="zero">%d активних замовлень і Музика</item>
+        <item quantity="one">%d активне замовлення і Музика</item>
+        <item quantity="few">%d активні замовлення і Музика</item>
+        <item quantity="many">%d активних замовлень і Музика</item>
+    </plurals>
+    <plurals name="ask_disk_space_files_count">
+        <item quantity="other">%1$d файли</item>
+        <item quantity="one">%1$d файл</item>
+        <item quantity="few">%1$d файли</item>
+        <item quantity="many">%1$d файлів</item>
+    </plurals>
+    <plurals name="bike_route_stairs_count">
+        <item quantity="other">%d сходів</item>
+        <item quantity="zero">%d сходів</item>
+        <item quantity="one">%d сходи</item>
+        <item quantity="few">%d сходів</item>
+        <item quantity="many">%d сходів</item>
+    </plurals>
+    <plurals name="bike_route_stairs_with_ramps_count">
+        <item quantity="other">%d сходів із пандусом</item>
+        <item quantity="zero">%d сходів із пандусом</item>
+        <item quantity="one">%d сходи з пандусом</item>
+        <item quantity="few">%d сходів із пандусом</item>
+        <item quantity="many">%d сходів із пандусом</item>
+    </plurals>
+    <plurals name="bookmarks_folder_places_count">
+        <item quantity="other">%d місце</item>
+        <item quantity="zero">%d місць</item>
+        <item quantity="one">%d місць</item>
+        <item quantity="few">%d місце</item>
+        <item quantity="many">%d місця</item>
+    </plurals>
+    <plurals name="bookmarks_top_bar_selected_elements">
+        <item quantity="other">Вибрано %d</item>
+        <item quantity="one">Вибрано %d</item>
+        <item quantity="few">Вибрано %d</item>
+        <item quantity="many">Вибрано %d</item>
+    </plurals>
+    <plurals name="business_card_electric_charging_station_connectors_unfold">
+        <item quantity="other">Ще %d конектори</item>
+        <item quantity="zero">Ще %d конекторів</item>
+        <item quantity="one">Ще %d конектор</item>
+        <item quantity="few">Ще %d конектори</item>
+        <item quantity="many">Ще %d конекторів</item>
+    </plurals>
+    <plurals name="calls_feedback_show_all_reasons_button_text">
+        <item quantity="other">Ще %d причини …</item>
+        <item quantity="one">Ще %d причина …</item>
+        <item quantity="few">Ще %d причини …</item>
+        <item quantity="many">Ще %d причин …</item>
+    </plurals>
+    <plurals name="car_route_count_retrictions">
+        <item quantity="other">%d обмеження</item>
+        <item quantity="one">%d обмеження</item>
+        <item quantity="few">%d обмеження</item>
+        <item quantity="many">%d обмежень</item>
+    </plurals>
+    <plurals name="card_geochats_unseen_messages">
+        <item quantity="other">%1$s нових повідомлення</item>
+        <item quantity="one">%1$s нове повідомлення</item>
+        <item quantity="few">%1$s нових повідомлення</item>
+        <item quantity="many">%1$s нових повідомлень</item>
+    </plurals>
+    <plurals name="carpark_free_seats">
+        <item quantity="other">%d місця</item>
+        <item quantity="one">%d місце</item>
+        <item quantity="few">%d місця</item>
+        <item quantity="many">%d місць</item>
+    </plurals>
+    <plurals name="chains_show_all_button">
+        <item quantity="other">Усі %d філії</item>
+        <item quantity="zero">Усі %d філій</item>
+        <item quantity="one">%d філія</item>
+        <item quantity="few">Усі %d філії</item>
+        <item quantity="many">Усі %d філій</item>
+    </plurals>
+    <plurals name="channel_subscribers_plural">
+        <item quantity="other">%1$d підписники</item>
+        <item quantity="one">%1$d підписник</item>
+        <item quantity="few">%1$d підписники</item>
+        <item quantity="many">%1$d підписників</item>
+    </plurals>
+    <plurals name="chat_attach_confirm_no_size">
+        <item quantity="other">Відправити %1$d зображення</item>
+        <item quantity="one">Відправити %1$d зображення</item>
+        <item quantity="few">Відправити %1$d зображення</item>
+        <item quantity="many">Відправити %1$d зображень</item>
+    </plurals>
+    <plurals name="chat_attach_send_files">
+        <item quantity="other">Надіслати %1$d файли</item>
+        <item quantity="one">Надіслати файл</item>
+        <item quantity="few">Надіслати %1$d файли</item>
+        <item quantity="many">Надіслати %1$d файлів</item>
+    </plurals>
+    <plurals name="chat_attach_send_gif">
+        <item quantity="other">Надіслати %1$d картинки</item>
+        <item quantity="one">Надіслати картинку</item>
+        <item quantity="few">Надіслати %1$d картинки</item>
+        <item quantity="many">Надіслати %1$d картинок</item>
+    </plurals>
+    <plurals name="chat_attach_send_images">
+        <item quantity="other">Надіслати %1$d зображення</item>
+        <item quantity="one">Надіслати зображення</item>
+        <item quantity="few">Надіслати %1$d зображення</item>
+        <item quantity="many">Надіслати %1$d зображень</item>
+    </plurals>
+    <plurals name="chat_members_plural">
+        <item quantity="other">%1$d учасники</item>
+        <item quantity="one">%1$d учасник</item>
+        <item quantity="few">%1$d учасники</item>
+        <item quantity="many">%1$d учасників</item>
+    </plurals>
+    <plurals name="chat_status_typing_many">
+        <item quantity="other">%d друкують</item>
+        <item quantity="one">%d друкує</item>
+        <item quantity="few">%d друкують</item>
+        <item quantity="many">%d друкують</item>
+    </plurals>
+    <plurals name="chat_threadlist_status">
+        <item quantity="other">Ви підписані на %1$d треди</item>
+        <item quantity="one">Ви підписані на %1$d тред</item>
+        <item quantity="few">Ви підписані на %1$d треди</item>
+        <item quantity="many">Ви підписані на %1$d тредів</item>
+    </plurals>
+    <plurals name="common_date_time_n_days_ago">
+        <item quantity="other">%s дні тому</item>
+        <item quantity="one">%s день тому</item>
+        <item quantity="few">%s дні тому</item>
+        <item quantity="many">%s днів тому</item>
+    </plurals>
+    <plurals name="common_date_time_n_minutes_ago">
+        <item quantity="other">%s хвилини тому</item>
+        <item quantity="one">%s хвилину тому</item>
+        <item quantity="few">%s хвилини тому</item>
+        <item quantity="many">%s хвилин тому</item>
+    </plurals>
+    <plurals name="common_days_count">
+        <item quantity="other">%d дні</item>
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дні</item>
+        <item quantity="many">%d днів</item>
+    </plurals>
+    <plurals name="common_hours">
+        <item quantity="other">%d години</item>
+        <item quantity="zero">%d годин</item>
+        <item quantity="one">%d година</item>
+        <item quantity="few">%d години</item>
+        <item quantity="many">%d годин</item>
+    </plurals>
+    <plurals name="common_minutes">
+        <item quantity="other">%d хвилини</item>
+        <item quantity="zero">%d хвилин</item>
+        <item quantity="one">%d хвилина</item>
+        <item quantity="few">%d хвилини</item>
+        <item quantity="many">%d хвилин</item>
+    </plurals>
+    <plurals name="common_time_frequency_days_format">
+        <item quantity="other">кожні %d дн</item>
+        <item quantity="zero">кожні %d дн</item>
+        <item quantity="one">кожний %d дн</item>
+        <item quantity="few">кожні %d дн</item>
+        <item quantity="many">кожні %d дн</item>
+    </plurals>
+    <plurals name="common_time_frequency_hours_format">
+        <item quantity="other">кожні %d г</item>
+        <item quantity="zero">кожні %d г</item>
+        <item quantity="one">кожну %d г</item>
+        <item quantity="few">кожні %d г</item>
+        <item quantity="many">кожні %d г</item>
+    </plurals>
+    <plurals name="common_time_frequency_minutes_format">
+        <item quantity="other">кожні %d хв</item>
+        <item quantity="zero">кожні %d хв</item>
+        <item quantity="one">кожну %d хв</item>
+        <item quantity="few">кожні %d хв</item>
+        <item quantity="many">кожні %d хв</item>
+    </plurals>
+    <plurals name="discovery_card_place_count">
+        <item quantity="other">Список з %d місць</item>
+        <item quantity="one">Список з %d місця</item>
+        <item quantity="few">Список з %d місць</item>
+        <item quantity="many">Список з %d місць</item>
+    </plurals>
+    <plurals name="discovery_card_preview_photo_count">
+        <item quantity="other">%d фото</item>
+        <item quantity="one">%d фото</item>
+        <item quantity="few">%d фото</item>
+        <item quantity="many">%d фото</item>
+    </plurals>
+    <plurals name="discovery_collection_places_count">
+        <item quantity="other">Добірка · %d місця</item>
+        <item quantity="zero">Добірка · 0 місць</item>
+        <item quantity="one">Добірка · %d місце</item>
+        <item quantity="few">Добірка · %d місця</item>
+        <item quantity="many">Добірка · %d місць</item>
+    </plurals>
+    <plurals name="discovery_entries_expand_cell_title_count">
+        <item quantity="other">Ще %d добірки</item>
+        <item quantity="zero">Ще %d добірок</item>
+        <item quantity="one">Ще %d добірка</item>
+        <item quantity="few">Ще %d добірки</item>
+        <item quantity="many">Ще %d добірок</item>
+    </plurals>
+    <plurals name="discovery_place_votes_number">
+        <item quantity="other">(%d отзыва)</item>
+        <item quantity="one">(%d отзыв)</item>
+        <item quantity="few">(%d отзыва)</item>
+        <item quantity="many">(%d отзывов)</item>
+    </plurals>
+    <plurals name="discovery_places_count">
+        <item quantity="other">%d місце</item>
+        <item quantity="zero">%d місць</item>
+        <item quantity="one">%d місць</item>
+        <item quantity="few">%d місце</item>
+        <item quantity="many">%d місця</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">На %d часа</item>
+        <item quantity="one">На %d час</item>
+        <item quantity="few">На %d часа</item>
+        <item quantity="many">На %d часов</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">На %d минуты</item>
+        <item quantity="one">На %d минуту</item>
+        <item quantity="few">На %d минуты</item>
+        <item quantity="many">На %d минут</item>
+    </plurals>
+    <plurals name="eco_route_calories">
+        <item quantity="other">%d калорії</item>
+        <item quantity="zero">%d калорій</item>
+        <item quantity="one">%d калорія</item>
+        <item quantity="few">%d калорії</item>
+        <item quantity="many">%d калорій</item>
+    </plurals>
+    <plurals name="edit_my_transport_selected">
+        <item quantity="other">%d вибрано</item>
+        <item quantity="one">%d вибраний</item>
+        <item quantity="few">%d вибрано</item>
+        <item quantity="many">%d вибрано</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Перемотати вперед на %d секунди</item>
+        <item quantity="one">Перемотати вперед на %d секунду</item>
+        <item quantity="few">Перемотати вперед на %d секунди</item>
+        <item quantity="many">Перемотати вперед на %d секунд</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Перемотати назад на %d секунди</item>
+        <item quantity="one">Перемотати назад на %d секунду</item>
+        <item quantity="few">Перемотати назад на %d секунди</item>
+        <item quantity="many">Перемотати назад на %d секунд</item>
+    </plurals>
+    <plurals name="format_distance_ft">
+        <item quantity="other">%d фути</item>
+        <item quantity="zero">%d футів</item>
+        <item quantity="one">%d фут</item>
+        <item quantity="few">%d фути</item>
+        <item quantity="many">%d футів</item>
+    </plurals>
+    <plurals name="format_distance_mi">
+        <item quantity="other">%s милі</item>
+        <item quantity="one">%s миля</item>
+        <item quantity="few">%s милі</item>
+        <item quantity="many">%s миль</item>
+    </plurals>
+    <plurals name="format_speed_mph">
+        <item quantity="other">%s милі/год</item>
+        <item quantity="one">%s миля/год</item>
+        <item quantity="few">%s милі/год</item>
+        <item quantity="many">%s миль/год</item>
+    </plurals>
+    <plurals name="forward_messages_text">
+        <item quantity="other">Переслати %1$s повідомлення</item>
+        <item quantity="one">Переслати %1$s повідомлення</item>
+        <item quantity="few">Переслати %1$s повідомлення</item>
+        <item quantity="many">Переслати %1$s повідомлень</item>
+    </plurals>
+    <plurals name="group_call_participants_count_text">
+        <item quantity="other">%d учасники</item>
+        <item quantity="one">%d учасник</item>
+        <item quantity="few">%d учасники</item>
+        <item quantity="many">%d учасників</item>
+    </plurals>
+    <plurals name="guidance_menu_traffic_level">
+        <item quantity="other">%d бали</item>
+        <item quantity="one">%d бал</item>
+        <item quantity="few">%d бали</item>
+        <item quantity="many">%d балів</item>
+    </plurals>
+    <plurals name="international.PlusPay.Consumable.SpendPoints.Description">
+        <item quantity="other">Витратити &lt;point> балів</item>
+        <item quantity="zero">Витратити &lt;point> балів</item>
+        <item quantity="one">Витратити &lt;point> бал</item>
+        <item quantity="two">Витратити &lt;point> бали</item>
+        <item quantity="few">Витратити &lt;point> бали</item>
+        <item quantity="many">Витратити &lt;point> балів</item>
+    </plurals>
+    <plurals name="kartograph_gallery_category_photo_count">
+        <item quantity="other">%d фото</item>
+        <item quantity="zero">%d фото</item>
+        <item quantity="one">%d фото</item>
+        <item quantity="few">%d фото</item>
+        <item quantity="many">%d фото</item>
+    </plurals>
+    <plurals name="kartograph_gallery_category_video_count">
+        <item quantity="other">%d видео</item>
+        <item quantity="zero">%d видео</item>
+        <item quantity="one">%d видео</item>
+        <item quantity="few">%d видео</item>
+        <item quantity="many">%d видео</item>
+    </plurals>
+    <plurals name="kartograph_notification_capture_stopped_subtitle">
+        <item quantity="other">Зроблено %d фотографії</item>
+        <item quantity="zero">Зроблено %d фотографій</item>
+        <item quantity="one">Зроблено %d фотографію</item>
+        <item quantity="few">Зроблено %d фотографії</item>
+        <item quantity="many">Зроблено %d фотографій</item>
+    </plurals>
+    <plurals name="kartograph_ride_upload_in_progress_text">
+        <item quantity="other">%d маршрути вивантажуються…</item>
+        <item quantity="one">%d маршрут вивантажується…</item>
+        <item quantity="few">%d маршрути вивантажуються…</item>
+        <item quantity="many">%d маршрутів вивантажуються…</item>
+    </plurals>
+    <plurals name="kartograph_ride_upload_waiting_text">
+        <item quantity="other">%d маршрути очікують вивантаження</item>
+        <item quantity="one">%d маршрут очікує вивантаження</item>
+        <item quantity="few">%d маршрути очікують вивантаження</item>
+        <item quantity="many">%d маршрутів очікують вивантаження</item>
+    </plurals>
+    <plurals name="location_sharing_user_card_subscribers_count">
+        <item quantity="other">%d особи</item>
+        <item quantity="zero">%d осіб</item>
+        <item quantity="one">%d особа</item>
+        <item quantity="few">%d особи</item>
+        <item quantity="many">%d осіб</item>
+    </plurals>
+    <plurals name="masstransit_schedule_not_operating_lines">
+        <item quantity="other">%d маршрути зараз не працюють</item>
+        <item quantity="one">%d маршрут зараз не працює</item>
+        <item quantity="few">%d маршрути зараз не працюють</item>
+        <item quantity="many">%d маршрутів зараз не працює</item>
+    </plurals>
+    <plurals name="menu_confirm_delete_messages_plural">
+        <item quantity="other">Видалити %1$d повідомлення</item>
+        <item quantity="one">Видалити %1$d повідомлення</item>
+        <item quantity="few">Видалити %1$d повідомлення</item>
+        <item quantity="many">Видалити %1$d повідомлень</item>
+    </plurals>
+    <plurals name="menu_reactions">
+        <item quantity="other">%s реакции</item>
+        <item quantity="one">%s реакция</item>
+        <item quantity="few">%s реакции</item>
+        <item quantity="many">%s реакций</item>
+    </plurals>
+    <plurals name="messaging_chat_search_result">
+        <item quantity="other">%1$d з %2$d збігів</item>
+        <item quantity="one">%1$d з %2$d збігу</item>
+        <item quantity="few">%1$d з %2$d збігів</item>
+        <item quantity="many">%1$d з %2$d збігів</item>
+    </plurals>
+    <plurals name="messaging_online_minutes_ago">
+        <item quantity="other">заходив(ла) %d хвилини тому</item>
+        <item quantity="one">заходив(ла) %d хвилину тому</item>
+        <item quantity="few">заходив(ла) %d хвилини тому</item>
+        <item quantity="many">заходив(ла) %d хвилин тому</item>
+    </plurals>
+    <plurals name="messaging_removed_messages_group_plural">
+        <item quantity="other">%d повідомлення видалено</item>
+        <item quantity="one">%d повідомлення видалено</item>
+        <item quantity="few">%d повідомлення видалено</item>
+        <item quantity="many">%d повідомлень видалено</item>
+    </plurals>
+    <plurals name="messaging_thread_counter_label">
+        <item quantity="other">%1$d відповіді</item>
+        <item quantity="one">%1$d відповідь</item>
+        <item quantity="few">%1$d відповіді</item>
+        <item quantity="many">%1$d відповідей</item>
+    </plurals>
+    <plurals name="messenger_count_recent_voters">
+        <item quantity="other">%d голоси</item>
+        <item quantity="one">%d голос</item>
+        <item quantity="few">%d голоси</item>
+        <item quantity="many">%d голосів</item>
+    </plurals>
+    <plurals name="messenger_create_poll_max_answers_warn">
+        <item quantity="other">Можна додати ще %d відповіді</item>
+        <item quantity="one">Можна додати ще %d відповідь</item>
+        <item quantity="few">Можна додати ще %d відповіді</item>
+        <item quantity="many">Можна додати ще %d відповідей</item>
+    </plurals>
+    <plurals name="messenger_poll_answers_count">
+        <item quantity="other">%d відповіді</item>
+        <item quantity="one">%d відповідь</item>
+        <item quantity="few">%d відповіді</item>
+        <item quantity="many">%d відповідей</item>
+    </plurals>
+    <plurals name="mirrors_preview_button_text">
+        <item quantity="other">Переглянути %d знімки</item>
+        <item quantity="zero">Переглянути %d знімків</item>
+        <item quantity="one">Переглянути %d знімок</item>
+        <item quantity="few">Переглянути %d знімки</item>
+        <item quantity="many">Переглянути %d знімків</item>
+    </plurals>
+    <plurals name="mirrors_upload_button_text">
+        <item quantity="other">Завантажити %d знімки</item>
+        <item quantity="zero">Завантажити %d знімків</item>
+        <item quantity="one">Завантажити %d знімок</item>
+        <item quantity="few">Завантажити %d знімки</item>
+        <item quantity="many">Завантажити %d знімків</item>
+    </plurals>
+    <plurals name="more_routes_count">
+        <item quantity="other">еще %d варианта маршрута</item>
+        <item quantity="one">еще %d вариант маршрута</item>
+        <item quantity="few">еще %d варианта маршрута</item>
+        <item quantity="many">еще %d вариантов маршрута</item>
+    </plurals>
+    <plurals name="mt_guidance_header_title_stations">
+        <item quantity="other">%d станції</item>
+        <item quantity="zero">%d станцій</item>
+        <item quantity="one">%d станція</item>
+        <item quantity="few">%d станції</item>
+        <item quantity="many">%d станцій</item>
+    </plurals>
+    <plurals name="mt_guidance_header_title_stops">
+        <item quantity="other">%d зупинки</item>
+        <item quantity="zero">$d зупинок</item>
+        <item quantity="one">%d зупинка</item>
+        <item quantity="few">%d зупинки</item>
+        <item quantity="many">%d зупинок</item>
+    </plurals>
+    <plurals name="mt_snippet_transfers">
+        <item quantity="other">%d пересадки</item>
+        <item quantity="zero">%d пересадок</item>
+        <item quantity="one">%d пересадка</item>
+        <item quantity="few">%d пересадки</item>
+        <item quantity="many">%d пересадок</item>
+    </plurals>
+    <plurals name="mt_snippet_via_points">
+        <item quantity="other">Точки</item>
+        <item quantity="zero">Точок</item>
+        <item quantity="one">Точка</item>
+        <item quantity="few">Точки</item>
+        <item quantity="many">Точок</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d нового сповіщення</item>
+        <item quantity="one">%d нове сповіщення</item>
+        <item quantity="few">%d нові сповіщення</item>
+        <item quantity="many">%d нових сповіщень</item>
+    </plurals>
+    <plurals name="mtthreadcard_title_stops_count">
+        <item quantity="other">%d зупинки</item>
+        <item quantity="zero">%d зупинок</item>
+        <item quantity="one">%d зупинка</item>
+        <item quantity="few">%d зупинки</item>
+        <item quantity="many">%d зупинок</item>
+    </plurals>
+    <plurals name="my_transport_more_lines_collapsed_text">
+        <item quantity="other">Ще %d маршруту</item>
+        <item quantity="zero">Ще %d маршрутів</item>
+        <item quantity="one">Ще %d маршрут</item>
+        <item quantity="few">Ще %d маршруту</item>
+        <item quantity="many">Ще %d маршрутів</item>
+    </plurals>
+    <plurals name="new_comments_count">
+        <item quantity="other">%d нові</item>
+        <item quantity="one">%d новий</item>
+        <item quantity="few">%d нові</item>
+        <item quantity="many">%d нових</item>
+    </plurals>
+    <plurals name="notification_chat_title_plural">
+        <item quantity="other">%1$s: %2$s нових повідомлень</item>
+        <item quantity="one">%1$s: %2$s нове повідомлення</item>
+        <item quantity="few">%1$s: %2$s нових повідомлень</item>
+        <item quantity="many">%1$s: %2$s нових повідомлень</item>
+    </plurals>
+    <plurals name="notification_new_messages_count">
+        <item quantity="other">%d нових повідомлення</item>
+        <item quantity="one">%d нове повідомлення</item>
+        <item quantity="few">%d нових повідомлення</item>
+        <item quantity="many">%d нових повідомлень</item>
+    </plurals>
+    <plurals name="parking_payment_session_extension_details_template_count">
+        <item quantity="other">Паркування можна буде продовжити через %d хвилини</item>
+        <item quantity="zero">Паркування можна буде продовжити через %d хвилин</item>
+        <item quantity="one">Паркування можна буде продовжити через %d хвилину</item>
+        <item quantity="few">Паркування можна буде продовжити через %d хвилини</item>
+        <item quantity="many">Паркування можна буде продовжити через %d хвилин</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Останні %1$d цифри</item>
+        <item quantity="zero">Останні %1$d цифр</item>
+        <item quantity="one">Останню %1$d цифру</item>
+        <item quantity="few">Останні %1$d цифри</item>
+        <item quantity="many">Останні %1$d цифр</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"Зараз до вас надійде дзвінок з номера
+%1$s. Введіть останні %2$d цифри номера"</item>
+        <item quantity="zero">"Зараз до вас надійде дзвінок з номера
+%1$s. Введіть останні %2$d цифр номера"</item>
+        <item quantity="one">"Зараз до вас надійде дзвінок з номера
+%1$s. Введіть останню %2$d цифру номера"</item>
+        <item quantity="few">"Зараз до вас надійде дзвінок з номера
+%1$s. Введіть останні %2$d цифри номера"</item>
+        <item quantity="many">"Зараз до вас надійде дзвінок з номера
+%1$s. Введіть останні %2$d цифр номера"</item>
+    </plurals>
+    <plurals name="pedestrian_route_fitness_steps">
+        <item quantity="other">%d кроки</item>
+        <item quantity="zero">0 кроків</item>
+        <item quantity="one">%d крок</item>
+        <item quantity="few">%d кроки</item>
+        <item quantity="many">%d кроків</item>
+    </plurals>
+    <plurals name="photo_picker_add_multiple_photos_and_multiple_videos">
+        <item quantity="other">Додати %1$d фото та %2$d відео</item>
+        <item quantity="zero">Додати %1$d фото та %2$d відео</item>
+        <item quantity="one">Додати %1$d фото та %2$d відео</item>
+        <item quantity="few">Додати %1$d фото та %2$d відео</item>
+        <item quantity="many">Додати %1$d фото та %2$d відео</item>
+    </plurals>
+    <plurals name="photo_picker_add_multiple_photos_and_single_video">
+        <item quantity="other">Додавши %d фото та 1 відео</item>
+        <item quantity="zero">Додавши %d фото та 1 відео</item>
+        <item quantity="one">Додавши %d фото та 1 відео</item>
+        <item quantity="few">Додавши %d фото та 1 відео</item>
+        <item quantity="many">Додавши %d фото та 1 відео</item>
+    </plurals>
+    <plurals name="photo_picker_add_photos_and_videos_plural">
+        <item quantity="other">Додати %1$d фото та %2$d відео</item>
+        <item quantity="zero">Додати %1$d фото та %2$d відео</item>
+        <item quantity="one">Додати %1$d фото та %2$d відео</item>
+        <item quantity="few">Додати %1$d фото та %2$d відео</item>
+        <item quantity="many">Додати %1$d фото та %2$d відео</item>
+    </plurals>
+    <plurals name="photo_picker_add_photos_plural">
+        <item quantity="other">Додати %d фото</item>
+        <item quantity="zero">Додати %d фото</item>
+        <item quantity="one">Додати %d фото</item>
+        <item quantity="few">Додати %d фото</item>
+        <item quantity="many">Додати %d фото</item>
+    </plurals>
+    <plurals name="photo_picker_add_single_photo_and_multiple_videos">
+        <item quantity="other">Додати 1 фото та %d відео</item>
+        <item quantity="zero">Додати 1 фото та %d відео</item>
+        <item quantity="one">Додати 1 фото та %d відео</item>
+        <item quantity="few">Додати 1 фото та %d відео</item>
+        <item quantity="many">Додати 1 фото та %d відео</item>
+    </plurals>
+    <plurals name="photo_picker_add_videos_plural">
+        <item quantity="other">Додати %d відео</item>
+        <item quantity="zero">Додати %d відео</item>
+        <item quantity="one">Додати %d відео</item>
+        <item quantity="few">Додати %d відео</item>
+        <item quantity="many">Додати %d відео</item>
+    </plurals>
+    <plurals name="photos_photo_count">
+        <item quantity="other">%d фото</item>
+        <item quantity="one">%d фото</item>
+        <item quantity="few">%d фото</item>
+        <item quantity="many">%d фото</item>
+    </plurals>
+    <plurals name="place_card_accessibility_rating_count">
+        <item quantity="other">Залишено %d оцінки</item>
+        <item quantity="zero">Залишено %d оцінок</item>
+        <item quantity="one">Залишено %d оцінку</item>
+        <item quantity="few">Залишено %d оцінки</item>
+        <item quantity="many">Залишено %d оцінок</item>
+    </plurals>
+    <plurals name="place_nearby_organizations">
+        <item quantity="other">Поруч %d організації</item>
+        <item quantity="one">Поруч %d організація</item>
+        <item quantity="few">Поруч %d організації</item>
+        <item quantity="many">Поруч %d організацій</item>
+    </plurals>
+    <plurals name="place_rating_count">
+        <item quantity="other">%d оцінки</item>
+        <item quantity="one">%d оцінка</item>
+        <item quantity="few">%d оцінки</item>
+        <item quantity="many">%d оцінок</item>
+    </plurals>
+    <plurals name="place_reviews_count_format">
+        <item quantity="other">%d відгуки</item>
+        <item quantity="one">%d відгук</item>
+        <item quantity="few">%d відгуки</item>
+        <item quantity="many">%d відгуків</item>
+    </plurals>
+    <plurals name="place_upload_photo_status">
+        <item quantity="other">Завантаження %2$d фото… %1$d %%</item>
+        <item quantity="one">Завантаження… %1$d %%</item>
+        <item quantity="few">Завантаження %2$d фото… %1$d %%</item>
+        <item quantity="many">Завантаження %2$d фото… %1$d %%</item>
+    </plurals>
+    <plurals name="placecard_booking_guests_amount">
+        <item quantity="other">%d гостя</item>
+        <item quantity="one">%d гість</item>
+        <item quantity="few">%d гостя</item>
+        <item quantity="many">%d гостей</item>
+    </plurals>
+    <plurals name="placecard_booking_nights_format">
+        <item quantity="other">%d ночі</item>
+        <item quantity="one">%d ніч</item>
+        <item quantity="few">%d ночі</item>
+        <item quantity="many">%d ночей</item>
+    </plurals>
+    <plurals name="placecard_electric_connectors_show_more_connectors">
+        <item quantity="other">Ще %d конектори</item>
+        <item quantity="one">Ще %d конектор</item>
+        <item quantity="few">Ще %d конектори</item>
+        <item quantity="many">Ще %d конекторів</item>
+    </plurals>
+    <plurals name="placecard_gallery_more_photos">
+        <item quantity="other">Ще %d фотографії</item>
+        <item quantity="one">Ще %d фотографія</item>
+        <item quantity="few">Ще %d фотографії</item>
+        <item quantity="many">Ще %d фотографій</item>
+    </plurals>
+    <plurals name="placecard_hotels_booking_widget_adults_count">
+        <item quantity="other">%d дорослих</item>
+        <item quantity="zero">%d дорослих</item>
+        <item quantity="one">%d дорослий</item>
+        <item quantity="few">%d дорослих</item>
+        <item quantity="many">%d дорослих</item>
+    </plurals>
+    <plurals name="placecard_hotels_booking_widget_children_count">
+        <item quantity="other">%d дитини</item>
+        <item quantity="zero">%d дітей</item>
+        <item quantity="one">%d дитина</item>
+        <item quantity="few">%d дитини</item>
+        <item quantity="many">%d дітей</item>
+    </plurals>
+    <plurals name="placecard_hotels_booking_widget_nights_count">
+        <item quantity="other">%d ночі</item>
+        <item quantity="zero">%d ночей</item>
+        <item quantity="one">%d ніч</item>
+        <item quantity="few">%d ночі</item>
+        <item quantity="many">%d ночей</item>
+    </plurals>
+    <plurals name="placecard_owner_widgets_content_update_photos_sub">
+        <item quantity="other">"Останнє оновлення:
+%d місяці тому"</item>
+        <item quantity="zero">"Останнє оновлення:
+%d місяців тому"</item>
+        <item quantity="one">"Останнє оновлення:
+%d місяць тому"</item>
+        <item quantity="few">"Останнє оновлення:
+%d місяці тому"</item>
+        <item quantity="many">"Останнє оновлення:
+%d місяців тому"</item>
+    </plurals>
+    <plurals name="placecard_owner_widgets_reviews_new">
+        <item quantity="other">+ %d нові</item>
+        <item quantity="zero">+ %d нових</item>
+        <item quantity="one">+ %d новий</item>
+        <item quantity="few">+ %d нові</item>
+        <item quantity="many">+ %d нових</item>
+    </plurals>
+    <plurals name="placecard_reviews_count_format">
+        <item quantity="other">%d відгуки</item>
+        <item quantity="zero">%d відгуків</item>
+        <item quantity="one">%d відгук</item>
+        <item quantity="few">%d відгуки</item>
+        <item quantity="many">%d відгуків</item>
+    </plurals>
+    <plurals name="placecard_selections_block_show_more_discoveries">
+        <item quantity="other">Ще %d добірки</item>
+        <item quantity="one">Ще %d добірка</item>
+        <item quantity="few">Ще %d добірки</item>
+        <item quantity="many">Ще %d добірок</item>
+    </plurals>
+    <plurals name="review_show_comments">
+        <item quantity="other">Подивитися %d коментарі</item>
+        <item quantity="zero">Подивитися %d коментарів</item>
+        <item quantity="one">Подивитися %d коментар</item>
+        <item quantity="few">Подивитися %d коментарі</item>
+        <item quantity="many">Подивитися %d коментарів</item>
+    </plurals>
+    <plurals name="reviews_card_rating_voices">
+        <item quantity="other">%d оцінки</item>
+        <item quantity="one">%d оцінка</item>
+        <item quantity="few">%d оцінки</item>
+        <item quantity="many">%d оцінок</item>
+    </plurals>
+    <plurals name="reviews_create_choose_photos_send">
+        <item quantity="other">Надіслати %d фото</item>
+        <item quantity="zero">Надіслати %d фото</item>
+        <item quantity="one">Надіслати %d фото</item>
+        <item quantity="few">Надіслати %d фото</item>
+        <item quantity="many">Надіслати %d фото</item>
+    </plurals>
+    <plurals name="reviews_place_reviews_all">
+        <item quantity="other">Переглянути всі %d відгуки</item>
+        <item quantity="one">Переглянути %d відгук</item>
+        <item quantity="few">Переглянути всі %d відгуки</item>
+        <item quantity="many">Переглянути всі %d відгуків</item>
+    </plurals>
+    <plurals name="reviews_place_reviews_more">
+        <item quantity="other">Ще %d відгуки</item>
+        <item quantity="one">Ще %d відгук</item>
+        <item quantity="few">Ще %d відгуки</item>
+        <item quantity="many">Ще %d відгуків</item>
+    </plurals>
+    <plurals name="road_events_comments_count">
+        <item quantity="other">%d коментарі</item>
+        <item quantity="one">%d коментар</item>
+        <item quantity="few">%d коментарі</item>
+        <item quantity="many">%d коментарів</item>
+    </plurals>
+    <plurals name="route_snippets_amount_of_flags">
+        <item quantity="other">На маршруті %d обмеження</item>
+        <item quantity="one">На маршруті %d обмеження</item>
+        <item quantity="few">На маршруті %d обмеження</item>
+        <item quantity="many">На маршруті %d обмежень</item>
+    </plurals>
+    <plurals name="routes_directions_masstransit_details_stations_count">
+        <item quantity="other">%d станції</item>
+        <item quantity="zero">%d станцій</item>
+        <item quantity="one">%d станція</item>
+        <item quantity="few">%d станції</item>
+        <item quantity="many">%d станцій</item>
+    </plurals>
+    <plurals name="routes_directions_masstransit_details_stops_count">
+        <item quantity="other">%d зупинки</item>
+        <item quantity="zero">%d зупинок</item>
+        <item quantity="one">%d зупинка</item>
+        <item quantity="few">%d зупинки</item>
+        <item quantity="many">%d зупинок</item>
+    </plurals>
+    <plurals name="routes_directions_masstransit_time_and_number_of_stops">
+        <item quantity="other">%1$s / %2$d зупинки</item>
+        <item quantity="one">%1$s / %2$d зупинка</item>
+        <item quantity="few">%1$s / %2$d зупинки</item>
+        <item quantity="many">%1$s / %2$d зупинок</item>
+    </plurals>
+    <plurals name="routes_masstransit_transfers_count">
+        <item quantity="other">%d пересадки</item>
+        <item quantity="zero">%d пересадок</item>
+        <item quantity="one">%d пересадка</item>
+        <item quantity="few">%d пересадки</item>
+        <item quantity="many">%d пересадок</item>
+    </plurals>
+    <plurals name="routes_select_destination_waypoints_count">
+        <item quantity="other">%d місця</item>
+        <item quantity="zero">%d місць</item>
+        <item quantity="one">%d місце</item>
+        <item quantity="few">%d місця</item>
+        <item quantity="many">%d місць</item>
+    </plurals>
+    <plurals name="routes_select_via_description_multiple">
+        <item quantity="other">Через %d точки</item>
+        <item quantity="one">Через %d точку</item>
+        <item quantity="few">Через %d точки</item>
+        <item quantity="many">Через %d точок</item>
+    </plurals>
+    <plurals name="routes_select_via_waypoints_count">
+        <item quantity="other">%d точки</item>
+        <item quantity="one">%d точка</item>
+        <item quantity="few">%d точки</item>
+        <item quantity="many">%d точек</item>
+    </plurals>
+    <plurals name="routes_select_waypoints_limit_exceeded_template">
+        <item quantity="other">На маршруті може бути тільки %d точки</item>
+        <item quantity="zero">На маршруті може бути тільки %d точок</item>
+        <item quantity="one">На маршруті може бути тільки %d точка</item>
+        <item quantity="few">На маршруті може бути тільки %d точки</item>
+        <item quantity="many">На маршруті може бути тільки %d точок</item>
+    </plurals>
+    <plurals name="routes_selection_taxi_eta">
+        <item quantity="other">Подача протягом %d хвилин</item>
+        <item quantity="one">Подача протягом %d хвилини</item>
+        <item quantity="few">Подача протягом %d хвилин</item>
+        <item quantity="many">Подача протягом %d хвилин</item>
+    </plurals>
+    <plurals name="scooters_order_damage_uploaded_number_subtitle">
+        <item quantity="other">Загружено %d фотографии</item>
+        <item quantity="zero">Загружено %d фотографий</item>
+        <item quantity="one">Загружена %d фотография</item>
+        <item quantity="few">Загружено %d фотографии</item>
+        <item quantity="many">Загружено %d фотографий</item>
+    </plurals>
+    <plurals name="scooters_payment_method_plus_subtitle">
+        <item quantity="other">Баланс %d бали</item>
+        <item quantity="zero">Баланс %d балів</item>
+        <item quantity="one">Баланс %d бал</item>
+        <item quantity="few">Баланс %d бали</item>
+        <item quantity="many">Баланс %d балів</item>
+    </plurals>
+    <plurals name="search_filters_chains_count_plural">
+        <item quantity="other">+%d мережі</item>
+        <item quantity="zero">+%d мереж</item>
+        <item quantity="one">+%d мережа</item>
+        <item quantity="few">+%d мережі</item>
+        <item quantity="many">+%d мереж</item>
+    </plurals>
+    <plurals name="search_line_map_download_hint">
+        <item quantity="other">%d міста</item>
+        <item quantity="one">%d місто</item>
+        <item quantity="few">%d міста</item>
+        <item quantity="many">%d міст</item>
+    </plurals>
+    <plurals name="search_list_info_found">
+        <item quantity="other">Знайдено %d місця</item>
+        <item quantity="one">Знайдено %d місце</item>
+        <item quantity="few">Знайдено %d місця</item>
+        <item quantity="many">Знайдено %d місць</item>
+    </plurals>
+    <plurals name="settings_voice_chooser_selected_count">
+        <item quantity="other">Вибрано %d</item>
+        <item quantity="zero">Вибрано %d</item>
+        <item quantity="one">Вибрано %d</item>
+        <item quantity="few">Вибрано %d</item>
+        <item quantity="many">Вибрано %d</item>
+    </plurals>
+    <plurals name="showcase_rubrics_place_count">
+        <item quantity="other">%d місце</item>
+        <item quantity="zero">%d місць</item>
+        <item quantity="one">%d місць</item>
+        <item quantity="few">%d місце</item>
+        <item quantity="many">%d місця</item>
+    </plurals>
+    <plurals name="snippet_gallery_more_photo">
+        <item quantity="other">Ещё %d фото</item>
+        <item quantity="one">Ещё %d фото</item>
+        <item quantity="few">Ещё %d фото</item>
+        <item quantity="many">Ещё %d фото</item>
+    </plurals>
+    <plurals name="snippet_plus_offer_amount">
+        <item quantity="other">%d бали на Плюс</item>
+        <item quantity="one">%d бал на Плюс</item>
+        <item quantity="few">%d бали на Плюс</item>
+        <item quantity="many">%d балів на Плюс</item>
+    </plurals>
+    <plurals name="snippet_price_list_more_similar">
+        <item quantity="other">Схожі: ще %d</item>
+        <item quantity="zero">Схожі: ще %d</item>
+        <item quantity="one">Схожі: ще %d</item>
+        <item quantity="few">Схожі: ще %d</item>
+        <item quantity="many">Схожі: ще %d</item>
+    </plurals>
+    <plurals name="stars_rating_prices_count">
+        <item quantity="other">%d оцінки</item>
+        <item quantity="zero">%d оцінок</item>
+        <item quantity="one">%d оцінка</item>
+        <item quantity="few">%d оцінки</item>
+        <item quantity="many">%d оцінок</item>
+    </plurals>
+    <plurals name="tanker_plural_test_key">
+        <item quantity="other">test_few</item>
+        <item quantity="one">test_one</item>
+        <item quantity="few">test_few</item>
+        <item quantity="many">test_many</item>
+    </plurals>
+    <plurals name="thread_route_stops">
+        <item quantity="other">%d зупинки на маршруті</item>
+        <item quantity="one">%d зупинка на маршруті</item>
+        <item quantity="few">%d зупинки на маршруті</item>
+        <item quantity="many">%d зупинок на маршруті</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">%d дні тому</item>
+        <item quantity="one">%d день тому</item>
+        <item quantity="few">%d дні тому</item>
+        <item quantity="many">%d днів тому</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%d хвилини тому</item>
+        <item quantity="one">%d хвилину тому</item>
+        <item quantity="few">%d хвилини тому</item>
+        <item quantity="many">%d хвилин тому</item>
+    </plurals>
+    <plurals name="toll_pass_notification_multiple_toll_title">
+        <item quantity="other">%d проїзди по платних дорогах</item>
+        <item quantity="zero">%d проїздів по платних дорогах</item>
+        <item quantity="one">%d проїзд по платних дорогах</item>
+        <item quantity="few">%d проїзди по платних дорогах</item>
+        <item quantity="many">%d проїздів по платних дорогах</item>
+    </plurals>
+    <plurals name="traffic_level_lock_screen_widget">
+        <item quantity="other">%d бали</item>
+        <item quantity="zero">%d балів</item>
+        <item quantity="one">%d бал</item>
+        <item quantity="few">%d бали</item>
+        <item quantity="many">%d балів</item>
+    </plurals>
+    <plurals name="transit_item_expand_threads">
+        <item quantity="other">Ще %d рейса</item>
+        <item quantity="one">Ще %d рейс</item>
+        <item quantity="few">Ще %d рейса</item>
+        <item quantity="many">Ще %d рейсів</item>
+    </plurals>
+    <plurals name="trucks_settings_amount_of_axles">
+        <item quantity="other">%d осі</item>
+        <item quantity="one">%d вісь</item>
+        <item quantity="few">%d осі</item>
+        <item quantity="many">%d осей</item>
+    </plurals>
+    <plurals name="user_in_groups">
+        <item quantity="other">групах %s</item>
+        <item quantity="one">групі %s</item>
+        <item quantity="few">групах %s</item>
+        <item quantity="many">групах %s</item>
+    </plurals>
+    <plurals name="user_in_groups_count">
+        <item quantity="other">%d групах</item>
+        <item quantity="one">%d групі</item>
+        <item quantity="few">%d групах</item>
+        <item quantity="many">%d групах</item>
+    </plurals>
+    <plurals name="voice_timelimit_minutes_plural">
+        <item quantity="other">%1$d хвилин.</item>
+        <item quantity="one">%1$d хвилини.</item>
+        <item quantity="few">%1$d хвилин.</item>
+        <item quantity="many">%1$d хвилин.</item>
+    </plurals>
+    <plurals name="widget_update_period_minutes">
+        <item quantity="other">%d хвилини</item>
+        <item quantity="one">%d хвилина</item>
+        <item quantity="few">%d хвилини</item>
+        <item quantity="many">%d хвилин</item>
+    </plurals>
+</resources>

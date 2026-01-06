@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="20.0dip" android:paddingVertical="20.0dip">
+        <TextView android:gravity="center" android:background="@drawable/background_panel_color_impl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/offline_caches_settings" android:maxLines="1" style="@style/Text20.Medium.TextPrimary" />
+        <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end|center" android:id="@id/offline_caches_settings_header_close_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <View android:background="@color/bg_additional" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+</merge>

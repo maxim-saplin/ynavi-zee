@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/background_panel" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/profile_with_ugc_error_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="32.0dip" android:paddingVertical="48.0dip">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="128.0dip" android:layout_height="128.0dip" android:contentDescription="@null" app:srcCompat="@drawable/nowifi_128" app:tint="@color/icons_additional" />
+        <TextView android:ellipsize="end" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="26.0dip" android:text="@string/profile_with_ugc_error_item_title" android:maxLines="1" style="@style/Text20.Medium" />
+        <TextView android:ellipsize="end" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/profile_with_ugc_error_item_subtitle" android:maxLines="2" style="@style/Text16.Grey" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/profile_with_ugc_repeat_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:generalButtonSize="big" app:generalButtonStyle="primary" app:text="@string/profile_with_ugc_error_item_button" />
+    </LinearLayout>
+</ScrollView>

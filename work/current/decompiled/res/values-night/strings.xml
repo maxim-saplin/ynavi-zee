@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="refuel_link_feedback_ru">https://yandex.ru/promo/navi/feedback/app/form-benzin?night_mode=true</string>
+    <string name="refuel_link_help_en">https://yandex.com/promo/navi/help/app-gas-stations?night_mode=true</string>
+    <string name="refuel_link_help_ru">https://yandex.ru/promo/navi/help/app-gas-stations?night_mode=true</string>
+    <string name="refuel_link_legal_ru">https://yandex.ru/legal/zapravki_termsofuse/?night_mode=true</string>
+</resources>

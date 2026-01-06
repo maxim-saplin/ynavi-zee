@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.controls.ControlsRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/search_line_margin" app:layout_clearance="@dimen/control_default_clearance" app:layout_fleet_id="1" app:layout_floating="drifting_up" app:layout_heaviness="0" app:layout_shadow_size_to_ignore="@dimen/control_default_shadow_size_to_ignore"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.controls.profile.ControlProfile android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <include layout="@layout/control_chunk_business" />
+</ru.yandex.yandexmaps.controls.ControlsRow>

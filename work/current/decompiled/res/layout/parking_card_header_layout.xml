@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_weight="1.0">
+        <ru.yandex.yandexmaps.common.views.EllipsizingTextView android:id="@id/parking_card_header_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Text20.Medium" />
+        <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="center_vertical" android:id="@id/parking_card_header_close_button" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+    </LinearLayout>
+    <TextView android:id="@id/parking_card_subtitle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="@style/Text16.GreyDarkGrey" />
+</merge>

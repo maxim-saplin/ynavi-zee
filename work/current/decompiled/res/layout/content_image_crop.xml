@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/image_crop_root_view" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textStyle="normal" android:textColor="@android:color/white" android:gravity="center" android:id="@id/image_crop_explanation" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:text="@string/image_crop_give_more_details" android:layout_alignParentTop="true" />
+    <ViewStub android:id="@id/image_crop_crop_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/image_crop_apply_btn" android:layout_below="@id/image_crop_explanation" android:layout_centerInParent="true" />
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/image_crop_apply_btn" android:background="@color/crop_view_apply_button_color" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="@string/image_crop_apply_btn" android:layout_alignParentBottom="true" />
+</RelativeLayout>

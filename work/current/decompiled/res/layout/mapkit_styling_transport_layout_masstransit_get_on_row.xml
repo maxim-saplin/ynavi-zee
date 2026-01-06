@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/mapkit_styling_transport_layout_masstransit_line_image_with_outline" />
+    <View android:id="@id/masstransit_schedule_dot" android:background="@drawable/mapkit_styling_transport_estimated_schedule_dot" android:layout_width="4.0dip" android:layout_height="4.0dip" android:layout_marginStart="@dimen/mapkit_styling_transport_masstransit_manoeuvre_get_on_time_text_start_margin" />
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/masstransit_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/mapkit_styling_transport_masstransit_manoeuvre_get_on_time_text_start_margin" style="@style/MapkitTransportNewMasstransitManeuverTimeText" />
+</LinearLayout>

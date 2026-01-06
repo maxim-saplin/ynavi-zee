@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="16.0dip" android:width="16.0dip" android:viewportWidth="16.0" android:viewportHeight="16.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <clip-path android:pathData="M0.682,2.282C0,3.409 0,4.94 0,8C0,11.06 0,12.59 0.682,13.718C1.078,14.373 1.627,14.922 2.282,15.318C3.409,16 4.94,16 8,16C11.06,16 12.59,16 13.718,15.318C14.373,14.922 14.922,14.373 15.318,13.718C16,12.59 16,11.06 16,8C16,4.94 16,3.409 15.318,2.282C14.922,1.627 14.373,1.078 13.718,0.682C12.59,0 11.06,0 8,0C4.94,0 3.409,0 2.282,0.682C1.627,1.078 1.078,1.627 0.682,2.282Z" android:fillType="evenOdd" />
+        <path android:fillColor="@drawable/$bank_sdk_ic_yandex_logo_sqare_16__0" android:pathData="M0,0h16v16h-16z" />
+        <path android:fillColor="#ffffffff" android:pathData="M9.127,12.808H10.799V3.208H8.368C5.923,3.208 4.638,4.465 4.638,6.316C4.638,7.794 5.342,8.664 6.599,9.562L4.417,12.808H6.226L8.658,9.175L7.815,8.609C6.793,7.918 6.296,7.38 6.296,6.219C6.296,5.197 7.014,4.506 8.381,4.506H9.127V12.808Z" android:fillAlpha="0.98" />
+    </group>
+</vector>

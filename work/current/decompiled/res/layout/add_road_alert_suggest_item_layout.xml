@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/add_road_alert_suggest_item_text" android:background="@drawable/add_road_alert_suggest_item_background" android:layout_width="wrap_content" android:layout_height="48.0dip" android:paddingHorizontal="16.0dip" style="@style/Text16.Medium.TextPrimaryVariant" />
+</merge>

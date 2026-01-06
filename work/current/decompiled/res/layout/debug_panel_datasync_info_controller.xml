@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:background="@color/ui_yellow_alpha10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Базы данных, на которые держим ссылки" android:paddingVertical="12.0dip" style="@style/Text14.Bold" />
+    <LinearLayout android:orientation="vertical" android:id="@id/debug_panel_datasync_databases" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="100.0dip" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:background="@color/ui_blue_alpha10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Активные миграции" android:paddingVertical="12.0dip" style="@style/Text14.Bold" />
+            <LinearLayout android:orientation="vertical" android:id="@id/debug_panel_datasync_migrations" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="50.0dip" />
+            <TextView android:gravity="center" android:background="@color/ui_red_alpha10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Отслеживаемые коллекции" android:paddingVertical="12.0dip" style="@style/Text14.Bold" />
+            <LinearLayout android:orientation="vertical" android:id="@id/debug_panel_datasync_bindings" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:gravity="center" android:layout_gravity="center" android:id="@id/debug_panel_datasync_update_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:generalButtonSize="big" app:generalButtonStyle="primary" app:text="Обновить" />
+</LinearLayout>

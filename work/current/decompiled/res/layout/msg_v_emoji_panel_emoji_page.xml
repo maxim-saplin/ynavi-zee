@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/emoji_viewpager" android:background="?messagingCommonActionbarColor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/emoji_view_padding" android:layout_marginRight="@dimen/emoji_view_padding" android:layout_marginBottom="@dimen/emoji_strip_height" android:layout_marginStart="@dimen/emoji_view_padding" />
+    <View android:layout_gravity="top" android:id="@id/emoji_divider" android:background="?messagingCommonDividerColor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <FrameLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/emoji_strip_height">
+        <androidx.recyclerview.widget.RecyclerView android:layout_gravity="bottom" android:id="@id/emoji_tab_layout" android:background="?messagingCommonActionbarColor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginEnd="56.0dip" />
+        <ImageButton android:layout_gravity="end" android:id="@id/backspace_button" android:background="?messagingCommonActionbarColor" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="56.0dip" android:layout_height="fill_parent" app:srcCompat="@drawable/msg_ic_emoji_backspace" />
+        <View android:layout_gravity="end" android:background="@drawable/msg_bg_emoji_backspace_shadow_left" android:focusable="false" android:clickable="false" android:layout_width="12.0dip" android:layout_height="fill_parent" android:layout_marginEnd="56.0dip" />
+    </FrameLayout>
+    <View android:layout_gravity="bottom" android:background="?messagingCommonBackgroundSecondaryColor" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/emoji_strip_height" />
+</FrameLayout>

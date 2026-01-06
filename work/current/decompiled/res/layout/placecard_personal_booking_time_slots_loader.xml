@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:layout_width="137.0dip" android:layout_height="24.0dip" app:cornerRadius="8.0dip">
+            <com.facebook.shimmer.ShimmerFrameLayout android:background="@color/buttons_secondary" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonShimmer" />
+        </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+        <Space android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:layout_gravity="end" android:layout_width="137.0dip" android:layout_height="24.0dip" app:cornerRadius="8.0dip">
+            <com.facebook.shimmer.ShimmerFrameLayout android:background="@color/buttons_secondary" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonShimmer" />
+        </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+    </LinearLayout>
+    <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="16.0dip" app:cornerRadius="16.0dip">
+        <com.facebook.shimmer.ShimmerFrameLayout android:background="@color/buttons_secondary" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonShimmer" />
+    </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+</merge>

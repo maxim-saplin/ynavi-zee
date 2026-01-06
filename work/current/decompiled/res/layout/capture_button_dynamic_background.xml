@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="@dimen/capture_button_container_size" android:layout_height="@dimen/capture_button_container_size"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/flare_purple" android:layout_width="@dimen/capture_button_flare_size" android:layout_height="@dimen/capture_button_flare_size" android:src="@drawable/purple_flare" android:layout_centerInParent="true" android:contentDescription="@null" />
+    <ImageView android:id="@id/flare_violet" android:layout_width="@dimen/capture_button_flare_size" android:layout_height="@dimen/capture_button_flare_size" android:src="@drawable/violet_flare" android:layout_centerInParent="true" android:contentDescription="@null" />
+    <ImageView android:id="@id/flare_blue" android:layout_width="@dimen/capture_button_flare_size" android:layout_height="@dimen/capture_button_flare_size" android:src="@drawable/blue_flare" android:layout_centerInParent="true" android:contentDescription="@null" />
+</RelativeLayout>

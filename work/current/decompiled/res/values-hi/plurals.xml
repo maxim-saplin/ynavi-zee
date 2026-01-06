@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">वीडियो को %d सेकंड आगे बढ़ाएं</item>
+        <item quantity="one">वीडियो को %d सेकंड आगे बढ़ाएं</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">वीडियो को %d सेकंड पीछे ले जाएं</item>
+        <item quantity="one">वीडियो को %d सेकंड पीछे ले जाएं</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d नई सूचनाएं</item>
+        <item quantity="one">%d नई सूचनाएं</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">आखिरी %1$d अंक</item>
+        <item quantity="zero">आखिरी %1$d अंक</item>
+        <item quantity="one">आखिरी %1$d अंक</item>
+        <item quantity="few">आखिरी %1$d अंक</item>
+        <item quantity="many">आखिरी %1$d अंक</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"अब आपको
+%1$s से कॉल आएगा। इस नंबर के अंतिम %2$d अंक डालें।"</item>
+        <item quantity="zero">"अब आपको
+%1$s से कॉल आएगा। इस नंबर के अंतिम %2$d अंक डालें।"</item>
+        <item quantity="one">"अब आपको
+%1$s से कॉल आएगा। इस नंबर का अंतिम %2$d अंक डालें।"</item>
+        <item quantity="few">"अब आपको
+%1$s से कॉल आएगा। इस नंबर के अंतिम %2$d अंक डालें।"</item>
+        <item quantity="many">"अब आपको
+%1$s से कॉल आएगा। इस नंबर के अंतिम %2$d अंक डालें।"</item>
+    </plurals>
+</resources>

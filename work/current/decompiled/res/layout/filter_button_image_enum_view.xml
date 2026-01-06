@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.search.internal.results.filters.panel.buttons.elements.FilterButtonView android:id="@id/filter_button_image_enum_button_view" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="start|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="4.0dip">
+        <ru.yandex.yandexmaps.search.internal.results.filters.panel.buttons.elements.FilterButtonImageEnumImageView android:id="@id/filter_image_view_first" android:layout_width="@dimen/filter_image_view_image_size" android:layout_height="@dimen/filter_image_view_image_size" android:layout_marginStart="@dimen/filter_image_view_first_padding" />
+        <ru.yandex.yandexmaps.search.internal.results.filters.panel.buttons.elements.FilterButtonImageEnumImageView android:id="@id/filter_image_view_second" android:layout_width="@dimen/filter_image_view_image_size" android:layout_height="@dimen/filter_image_view_image_size" android:layout_marginStart="@dimen/filter_image_view_second_padding" />
+        <ru.yandex.yandexmaps.search.internal.results.filters.panel.buttons.elements.FilterButtonImageEnumImageView android:id="@id/filter_image_view_third" android:layout_width="@dimen/filter_image_view_image_size" android:layout_height="@dimen/filter_image_view_image_size" android:layout_marginStart="@dimen/filter_image_view_third_padding" />
+    </FrameLayout>
+</merge>

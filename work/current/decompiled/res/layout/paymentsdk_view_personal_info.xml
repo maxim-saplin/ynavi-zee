@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.textfield.TextInputLayout android:theme="@style/PaymentsdkTextInput" android:textColorHint="?android:textColorSecondary" android:id="@id/first_name_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" app:hintTextAppearance="@style/PaymentsdkTextAppearance.Payments.Hint" app:layout_constraintEnd_toStartOf="@id/last_name_layout" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.textfield.TextInputEditText android:textSize="16.0sp" android:id="@id/first_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/paymentsdk_first_name" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:theme="@style/PaymentsdkTextInput" android:textColorHint="?android:textColorSecondary" android:id="@id/last_name_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" app:hintTextAppearance="@style/PaymentsdkTextAppearance.Payments.Hint" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/first_name_layout" app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.textfield.TextInputEditText android:textSize="16.0sp" android:id="@id/last_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/paymentsdk_last_name" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:theme="@style/PaymentsdkTextInput" android:textColorHint="?android:textColorSecondary" android:id="@id/phone_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" app:errorTextColor="?paymentsdk_errorInputColor" app:hintTextAppearance="@style/PaymentsdkTextAppearance.Payments.Hint" app:layout_constraintTop_toBottomOf="@id/first_name_layout">
+        <com.google.android.material.textfield.TextInputEditText android:textSize="16.0sp" android:id="@id/phone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/paymentsdk_phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.yandex.payment.sdk.ui.view.EmailView android:id="@id/email_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" app:layout_constraintTop_toBottomOf="@id/phone_layout" />
+</merge>

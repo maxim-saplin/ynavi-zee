@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.alicekit.core.views.BackHandlingLinearLayout android:orientation="vertical" android:id="@id/chat_message_menu" android:background="?messagingCommonActionbarColor" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView android:ellipsize="end" android:id="@id/popup_dialog_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:maxLines="1" android:singleLine="true" android:drawablePadding="2.0dip" android:layout_marginHorizontal="16.0dip" style="@style/Messaging.MessagePopupText" />
+    <androidx.appcompat.widget.AppCompatTextView android:ellipsize="end" android:id="@id/popup_dialog_details" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_marginHorizontal="16.0dip" style="@style/Messaging.StatusDescriptionText" />
+    <View android:background="?messagingCommonDividerColor" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="12.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/actions_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.yandex.alicekit.core.views.BackHandlingLinearLayout>

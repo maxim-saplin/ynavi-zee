@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/viewPager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.yandex.bank.widgets.common.segmented.SegmentedControlView android:layout_gravity="bottom" android:id="@id/tabView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/bank_sdk_qr_container_tabview_bottom_margin" />
+</FrameLayout>

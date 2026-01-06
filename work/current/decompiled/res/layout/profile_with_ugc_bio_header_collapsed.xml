@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:baselineAligned="true" android:layout_marginHorizontal="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="32.0dip" android:layout_height="32.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/profile_with_ugc_account_avatar_plus_outline" android:layout_width="32.0dip" android:layout_height="32.0dip" android:scaleType="centerCrop" android:contentDescription="@null" app:srcCompat="@drawable/profile_plus_32" />
+        <ImageView android:layout_gravity="center" android:id="@id/profile_with_ugc_account_avatar" android:layout_width="24.0dip" android:layout_height="24.0dip" android:scaleType="centerCrop" android:contentDescription="@null" app:srcCompat="@drawable/settings_userpic_72" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip">
+        <TextView android:ellipsize="end" android:id="@id/profile_with_ugc_account_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:maxLines="1" style="@style/Text20.Medium" />
+        <ImageButton android:layout_gravity="center_vertical" android:background="@null" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dropdown_16" android:importantForAccessibility="no" android:layout_marginStart="4.0dip" app:tint="@color/icons_primary" style="@style/Text20.Medium" />
+    </LinearLayout>
+</LinearLayout>

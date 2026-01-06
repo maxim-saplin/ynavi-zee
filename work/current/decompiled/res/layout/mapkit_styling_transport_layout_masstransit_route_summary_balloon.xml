@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/mapkit_styling_transport_route_summary_balloon_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/mapkit_styling_transport_route_summary_min_width" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/textview_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/MapkitTransportRouteSummaryBalloonText" />
+    <Space android:id="@id/space" android:layout_width="wrap_content" android:layout_height="@dimen/mapkit_styling_transport_route_summary_balloon_distance_top_padding" />
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/textview_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/MapkitTransportRouteSummaryBalloonText" />
+</LinearLayout>

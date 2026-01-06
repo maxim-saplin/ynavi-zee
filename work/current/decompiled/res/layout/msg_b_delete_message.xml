@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:background="?messagingCommonActionbarColor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="?messagingCommonTextSecondaryColor" android:layout_gravity="left|center" android:id="@id/messaging_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:fontFamily="@font/ya_medium" />
+    <com.yandex.alicekit.core.views.FixedProgressBar android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:indeterminate="true" style="@android:style/Widget.ProgressBar.Small" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/view_navi_catalog_login_wall_regular_frame" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/view_navi_catalog_login_wall_block" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="20.0dip" android:paddingEnd="20.0dip">
+        <TextView android:textSize="32.0sp" android:textColor="?music_sdk_helper_text_color_primary" android:gravity="center_horizontal" android:id="@id/view_navi_catalog_login_wall_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:maxWidth="456.0dip" android:fontFamily="@font/ys_text_bold" />
+        <Button android:textSize="18.0sp" android:textColor="@color/music_sdk_helper_black_70" android:id="@id/view_navi_catalog_login_wall_button" android:background="@drawable/music_sdk_helper_background_catalog_login_wall_login" android:layout_width="274.0dip" android:layout_height="48.0dip" android:layout_margin="20.0dip" android:textAllCaps="false" android:fontFamily="@font/ys_text_medium" />
+        <TextView android:textSize="14.0sp" android:textColor="?music_sdk_helper_text_color_secondary" android:gravity="center_horizontal" android:id="@id/view_navi_catalog_login_wall_hide_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_sdk_helper_navi_catalog_login_wall_hide_button" android:fontFamily="@font/ys_text_regular" />
+    </LinearLayout>
+</ScrollView>

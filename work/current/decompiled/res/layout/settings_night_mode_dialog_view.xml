@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:id="@id/settings_night_mode_radio_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:showDividers="none">
+        <RadioButton android:id="@id/settings_night_mode_on_radio_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_night_mode_on_short" style="@style/SettingRadioButton" />
+        <View android:background="@drawable/common_divider_horizontal_sub56_impl" android:layout_width="fill_parent" android:layout_height="@dimen/common_border_thickness" />
+        <RadioButton android:id="@id/settings_night_mode_off_radio_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_night_mode_off_short" style="@style/SettingRadioButton" />
+        <View android:background="@drawable/common_divider_horizontal_sub56_impl" android:layout_width="fill_parent" android:layout_height="@dimen/common_border_thickness" />
+        <RadioButton android:id="@id/settings_night_mode_auto_radio_button" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_night_mode_auto_short" style="@style/SettingRadioButton" />
+        <TextView android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_night_mode_auto_description" android:paddingStart="56.0dip" android:paddingEnd="18.0dip" style="@style/Text16.Grey" />
+        <View android:background="@drawable/common_divider_horizontal_sub56_impl" android:layout_width="fill_parent" android:layout_height="@dimen/common_border_thickness" />
+        <RadioButton android:id="@id/settings_night_mode_system_radio_button" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_night_mode_system" style="@style/SettingRadioButton" />
+        <TextView android:id="@id/settings_night_mode_system_description" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_night_mode_system_description" android:paddingStart="56.0dip" android:paddingEnd="18.0dip" style="@style/Text16.Grey" />
+    </RadioGroup>
+</ScrollView>

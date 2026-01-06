@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="34.0dip" android:width="34.0dip" android:viewportWidth="34.0" android:viewportHeight="34.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$alice_tab_avatar_plus__0" android:pathData="M17 32.2c8.395 0 15.2-6.805 15.2-15.2S25.395 1.8 17 1.8 1.8 8.605 1.8 17 8.605 32.2 17 32.2zm0 1.8c9.389 0 17-7.611 17-17S26.389 0 17 0 0 7.611 0 17s7.611 17 17 17z" android:fillType="evenOdd" />
+</vector>

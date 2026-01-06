@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="FEET_SHORT">
+        <item quantity="other">أقدام</item>
+        <item quantity="zero">قدم</item>
+        <item quantity="one">قدم</item>
+        <item quantity="few">أقدام</item>
+        <item quantity="many">قدمًا</item>
+    </plurals>
+    <plurals name="MILES_SHORT">
+        <item quantity="other">أميال</item>
+        <item quantity="zero">ميل</item>
+        <item quantity="one">ميل</item>
+        <item quantity="few">أميال</item>
+        <item quantity="many">ميلًا</item>
+    </plurals>
+    <plurals name="PlusPay.Consumable.SpendPoints.Description">
+        <item quantity="other">استعمال &lt;point> نقاط مكافأة</item>
+        <item quantity="zero">استعمال &lt;point> نقاط مكافأة</item>
+        <item quantity="one">استعمال &lt;point> نقطة مكافأة</item>
+        <item quantity="few">استعمال &lt;point> نقاط مكافأة</item>
+        <item quantity="many">استعمال &lt;point> نقاط مكافأة</item>
+    </plurals>
+    <plurals name="accessibility_n_items">
+        <item quantity="other">%d عناصر</item>
+        <item quantity="zero">0 عناصر</item>
+        <item quantity="one">%d عنصر</item>
+        <item quantity="few">%d عناصر</item>
+        <item quantity="many">%d عناصر</item>
+    </plurals>
+    <plurals name="accessibility_n_variants">
+        <item quantity="other">%d خيارات</item>
+        <item quantity="zero">0 خيار</item>
+        <item quantity="one">%d خيار</item>
+        <item quantity="few">%d خيارات</item>
+        <item quantity="many">%d خيار</item>
+    </plurals>
+    <plurals name="accessibility_review_dislike_count">
+        <item quantity="other">%d عدم إعجاب</item>
+        <item quantity="zero">%d عدم إعجاب</item>
+        <item quantity="one">%d عدم إعجاب</item>
+        <item quantity="few">%d عدم إعجاب</item>
+        <item quantity="many">%d عدم إعجاب</item>
+    </plurals>
+    <plurals name="accessibility_review_like_count">
+        <item quantity="other">%d إعجابات</item>
+        <item quantity="zero">%d إعجاب</item>
+        <item quantity="one">%d إعجاب</item>
+        <item quantity="few">%d إعجابات</item>
+        <item quantity="many">%d إعجابًا</item>
+    </plurals>
+    <plurals name="accessibility_weather_title">
+        <item quantity="other">الآن %d درجات</item>
+        <item quantity="zero">الآن %d درجة</item>
+        <item quantity="one">الآن %d درجة</item>
+        <item quantity="few">الآن %d درجات</item>
+        <item quantity="many">الآن %d درجة</item>
+    </plurals>
+    <plurals name="active_orders_number">
+        <item quantity="other">%d أوامر نشطة</item>
+        <item quantity="zero">%d أمر نشط</item>
+        <item quantity="one">%d أمر نشط</item>
+        <item quantity="few">%d أوامر نشطة</item>
+        <item quantity="many">%d أمرًا نشطًا</item>
+    </plurals>
+    <plurals name="active_orders_number_and_music">
+        <item quantity="other">%dالطلبات النشطة و الموسيقى</item>
+        <item quantity="zero">%dالطلبات النشطة و الموسيقى</item>
+        <item quantity="one">%dالطلب النشط والموسيقى</item>
+        <item quantity="few">%dالطلبات النشطة و الموسيقى</item>
+        <item quantity="many">%dالطلبات النشطة و الموسيقى</item>
+    </plurals>
+    <plurals name="bike_route_stairs_count">
+        <item quantity="other">%d أدراج</item>
+        <item quantity="zero">%d درج</item>
+        <item quantity="one">%d درج</item>
+        <item quantity="few">%d أدراج</item>
+        <item quantity="many">%d درجًا</item>
+    </plurals>
+    <plurals name="bike_route_stairs_with_ramps_count">
+        <item quantity="other">%d درجات مزودة بمصاطب مائلة</item>
+        <item quantity="zero">%d درجة مزودة بمصاطب مائلة</item>
+        <item quantity="one">%d درجة مزودة بمصاطب مائلة</item>
+        <item quantity="few">%d درجات مزودة بمصاطب مائلة</item>
+        <item quantity="many">%d درجةً مزودة بمصاطب مائلة</item>
+    </plurals>
+    <plurals name="bookmarks_folder_places_count">
+        <item quantity="other">%d أماكن</item>
+        <item quantity="zero">%d مكان</item>
+        <item quantity="one">%d مكان</item>
+        <item quantity="few">%d أماكن</item>
+        <item quantity="many">%d مكانًا</item>
+    </plurals>
+    <plurals name="bookmarks_top_bar_selected_elements">
+        <item quantity="other">%d تم تحديدها</item>
+        <item quantity="zero">%d تم تحديدها</item>
+        <item quantity="one">%d تم تحديدها</item>
+        <item quantity="few">%d تم تحديدها</item>
+        <item quantity="many">%d تم تحديدها</item>
+    </plurals>
+    <plurals name="business_card_electric_charging_station_connectors_unfold">
+        <item quantity="other">%d موصلات إضافية</item>
+        <item quantity="zero">%d موصل إضافي</item>
+        <item quantity="one">%d موصل إضافي</item>
+        <item quantity="few">%d موصلات إضافية</item>
+        <item quantity="many">%d موصلًا إضافيًا</item>
+    </plurals>
+    <plurals name="car_route_count_retrictions">
+        <item quantity="other">%d قيود</item>
+        <item quantity="zero">%d قيد</item>
+        <item quantity="one">%d قيد</item>
+        <item quantity="few">%d قيود</item>
+        <item quantity="many">%d قيدًا</item>
+    </plurals>
+    <plurals name="carpark_free_seats">
+        <item quantity="other">%d أماكن</item>
+        <item quantity="zero">%d مكان</item>
+        <item quantity="one">%d مكان</item>
+        <item quantity="few">%d أماكن</item>
+        <item quantity="many">%d مكانًا</item>
+    </plurals>
+    <plurals name="chains_show_all_button">
+        <item quantity="other">جميع الفروع %d</item>
+        <item quantity="zero">%d فرع</item>
+        <item quantity="one">%d فرع</item>
+        <item quantity="few">جميع الفروع %d</item>
+        <item quantity="many">جميع الفروع %d</item>
+    </plurals>
+    <plurals name="common_date_time_n_days_ago">
+        <item quantity="other">منذ %s أيام</item>
+        <item quantity="zero">منذ %s يوم</item>
+        <item quantity="one">منذ %s يوم</item>
+        <item quantity="few">منذ %s أيام</item>
+        <item quantity="many">منذ %s يومًا</item>
+    </plurals>
+    <plurals name="common_date_time_n_minutes_ago">
+        <item quantity="other">منذ %s دقائق</item>
+        <item quantity="zero">منذ %s دقيقة</item>
+        <item quantity="one">منذ %s دقيقة</item>
+        <item quantity="few">منذ %s دقائق</item>
+        <item quantity="many">منذ %s دقيقةً</item>
+    </plurals>
+    <plurals name="common_days_count">
+        <item quantity="other">%d أيام</item>
+        <item quantity="zero">%d يوم</item>
+        <item quantity="one">%d يوم</item>
+        <item quantity="few">%d أيام</item>
+        <item quantity="many">%d يومًا</item>
+    </plurals>
+    <plurals name="common_hours">
+        <item quantity="other">%d ساعات</item>
+        <item quantity="zero">%d ساعة</item>
+        <item quantity="one">%d ساعة</item>
+        <item quantity="few">%d ساعات</item>
+        <item quantity="many">%d ساعة</item>
+    </plurals>
+    <plurals name="common_minutes">
+        <item quantity="other">%d دقائق</item>
+        <item quantity="zero">%d دقيقة</item>
+        <item quantity="one">%d دقيقة</item>
+        <item quantity="few">%d دقائق</item>
+        <item quantity="many">%d دقيقة</item>
+    </plurals>
+    <plurals name="common_time_frequency_days_format">
+        <item quantity="other">كل %d أيام</item>
+        <item quantity="zero">كل %d يوم</item>
+        <item quantity="one">كل %d يوم</item>
+        <item quantity="few">كل %d أيام</item>
+        <item quantity="many">كل %d يومًا</item>
+    </plurals>
+    <plurals name="common_time_frequency_hours_format">
+        <item quantity="other">كل %d ساعات</item>
+        <item quantity="zero">كل %d ساعة</item>
+        <item quantity="one">كل %d ساعة</item>
+        <item quantity="few">كل %d ساعات</item>
+        <item quantity="many">كل %d ساعةً</item>
+    </plurals>
+    <plurals name="common_time_frequency_minutes_format">
+        <item quantity="other">كل %d دقائق</item>
+        <item quantity="zero">كل %d دقيقة</item>
+        <item quantity="one">كل %d دقيقة</item>
+        <item quantity="few">كل %d دقائق</item>
+        <item quantity="many">كل %d دقيقةً</item>
+    </plurals>
+    <plurals name="discovery_card_place_count">
+        <item quantity="other">قائمة من %d أماكن</item>
+        <item quantity="zero">قائمة من %d مكان</item>
+        <item quantity="one">قائمة من %d مكان</item>
+        <item quantity="few">قائمة من %d أماكن</item>
+        <item quantity="many">قائمة من %d مكانًا</item>
+    </plurals>
+    <plurals name="discovery_collection_places_count">
+        <item quantity="other">اختيار · %d أماكن</item>
+        <item quantity="zero">اختيار · 0 أماكن</item>
+        <item quantity="one">اختيار · %d مكان</item>
+        <item quantity="few">اختيار · %d أماكن</item>
+        <item quantity="many">اختيار · %d أماكن</item>
+    </plurals>
+    <plurals name="eco_route_calories">
+        <item quantity="other">%d سعرات حرارية</item>
+        <item quantity="zero">%d سعرة حرارية</item>
+        <item quantity="one">%d سعرة حرارية</item>
+        <item quantity="few">%d سعرات حرارية</item>
+        <item quantity="many">%d سعرة حرارية</item>
+    </plurals>
+    <plurals name="edit_my_transport_selected">
+        <item quantity="other">%d تم تحديدها</item>
+        <item quantity="zero">%d تم تحديدها</item>
+        <item quantity="one">%d تم تحديدها</item>
+        <item quantity="few">%d تم تحديدها</item>
+        <item quantity="many">%d تم تحديدها</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">تقديم سريع للفيديو بمقدار %d ثانية</item>
+        <item quantity="zero">تقديم سريع للفيديو بمقدار %d ثانية</item>
+        <item quantity="one">تقديم سريع للفيديو بمقدار ثانية واحدة (%d)</item>
+        <item quantity="two">تقديم سريع للفيديو بمقدار ثانيتَين (%d)</item>
+        <item quantity="few">تقديم سريع للفيديو بمقدار %d ثوانٍ</item>
+        <item quantity="many">تقديم سريع للفيديو بمقدار %d ثانية</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">ترجيع الفيديو بمقدار %d ثانية</item>
+        <item quantity="zero">ترجيع الفيديو بمقدار %d ثانية</item>
+        <item quantity="one">ترجيع الفيديو بمقدار ثانية واحدة (%d)</item>
+        <item quantity="two">ترجيع الفيديو بمقدار ثانيتَين (%d)</item>
+        <item quantity="few">ترجيع الفيديو بمقدار %d ثوانٍ</item>
+        <item quantity="many">ترجيع الفيديو بمقدار %d ثانية</item>
+    </plurals>
+    <plurals name="format_distance_ft">
+        <item quantity="other">%d أقدام</item>
+        <item quantity="zero">%d قدم</item>
+        <item quantity="one">%d قدم</item>
+        <item quantity="few">%d أقدام</item>
+        <item quantity="many">%d قدمًا</item>
+    </plurals>
+    <plurals name="format_distance_mi">
+        <item quantity="other">%s أميال</item>
+        <item quantity="zero">%s ميل</item>
+        <item quantity="one">%s ميل</item>
+        <item quantity="few">%s أميال</item>
+        <item quantity="many">%s ميلًا</item>
+    </plurals>
+    <plurals name="guidance_menu_traffic_level">
+        <item quantity="other">%d نقاط</item>
+        <item quantity="zero">%d نقطة</item>
+        <item quantity="one">%d نقطة</item>
+        <item quantity="few">%d نقاط</item>
+        <item quantity="many">%d نقطةً</item>
+    </plurals>
+    <plurals name="international.PlusPay.Consumable.SpendPoints.Description">
+        <item quantity="other">استعمال &lt;point> نقاط مكافأة</item>
+        <item quantity="zero">استعمال &lt;point> نقاط مكافأة</item>
+        <item quantity="one">استعمال &lt;point> نقطة مكافأة</item>
+        <item quantity="few">استعمال &lt;point> نقاط مكافأة</item>
+        <item quantity="many">استعمال &lt;point> نقاط مكافأة</item>
+    </plurals>
+    <plurals name="kartograph_gallery_category_photo_count">
+        <item quantity="other">%d صور</item>
+        <item quantity="zero">%d صورة</item>
+        <item quantity="one">%d صورة</item>
+        <item quantity="few">%d صور</item>
+        <item quantity="many">%d صورةً</item>
+    </plurals>
+    <plurals name="kartograph_gallery_category_video_count">
+        <item quantity="other">%d فيديوهات</item>
+        <item quantity="zero">%d فيديو</item>
+        <item quantity="one">%d فيديو</item>
+        <item quantity="few">%d فيديوهات</item>
+        <item quantity="many">%d فيديو</item>
+    </plurals>
+    <plurals name="kartograph_notification_capture_stopped_subtitle">
+        <item quantity="other">%d صور تم التقاطها</item>
+        <item quantity="zero">%d صورة تم التقاطها</item>
+        <item quantity="one">%d صورة تم التقاطها</item>
+        <item quantity="few">%d صور تم التقاطها</item>
+        <item quantity="many">%d صورةً تم التقاطها</item>
+    </plurals>
+    <plurals name="kartograph_ride_upload_waiting_text">
+        <item quantity="other">%d مسارات جاهزة للإرسال</item>
+        <item quantity="zero">%d مسار جاهز للإرسال</item>
+        <item quantity="one">%d مسار جاهز للإرسال</item>
+        <item quantity="few">%d مسارات جاهزة للإرسال</item>
+        <item quantity="many">%d مسارًا جاهزًا للإرسال</item>
+    </plurals>
+    <plurals name="location_sharing_user_card_subscribers_count">
+        <item quantity="other">%d أشخاص</item>
+        <item quantity="zero">%d شخص</item>
+        <item quantity="one">%d شخص</item>
+        <item quantity="few">%d أشخاص</item>
+        <item quantity="many">%d شخص</item>
+    </plurals>
+    <plurals name="masstransit_schedule_not_operating_lines">
+        <item quantity="other">%d مسارات غير متوفرة حاليًا</item>
+        <item quantity="zero">%d مسار غير متوفر حاليًا</item>
+        <item quantity="one">%d مسار غير متوفر حاليًا</item>
+        <item quantity="few">%d مسارات غير متوفرة حاليًا</item>
+        <item quantity="many">%d مسارًا غير متوفر حاليًا</item>
+    </plurals>
+    <plurals name="mirrors_preview_button_text">
+        <item quantity="other">عرض %d لقطات</item>
+        <item quantity="zero">عرض %d لقطة</item>
+        <item quantity="one">عرض %d لقطة</item>
+        <item quantity="few">عرض %d لقطات</item>
+        <item quantity="many">عرض %d لقطةً</item>
+    </plurals>
+    <plurals name="mirrors_upload_button_text">
+        <item quantity="other">تحميل %d لقطات</item>
+        <item quantity="zero">تحميل %d لقطة</item>
+        <item quantity="one">تحميل %d لقطة</item>
+        <item quantity="few">تحميل %d لقطات</item>
+        <item quantity="many">تحميل %d لقطةً</item>
+    </plurals>
+    <plurals name="mt_guidance_header_title_stations">
+        <item quantity="other">%d محطات</item>
+        <item quantity="zero">%d محطات</item>
+        <item quantity="one">%d محطة</item>
+        <item quantity="few">%d محطات</item>
+        <item quantity="many">%d محطات</item>
+    </plurals>
+    <plurals name="mt_guidance_header_title_stops">
+        <item quantity="other">%d مواقف</item>
+        <item quantity="zero">$d موقف</item>
+        <item quantity="one">%d موقف</item>
+        <item quantity="few">%d مواقف</item>
+        <item quantity="many">%d موقفًا</item>
+    </plurals>
+    <plurals name="mt_snippet_transfers">
+        <item quantity="other">%d تحويلات</item>
+        <item quantity="zero">%d تحويلة</item>
+        <item quantity="one">%d تحويلة</item>
+        <item quantity="few">%d تحويلات</item>
+        <item quantity="many">%d تحويلةً</item>
+    </plurals>
+    <plurals name="mt_snippet_via_points">
+        <item quantity="other">نقاط</item>
+        <item quantity="zero">نقطة</item>
+        <item quantity="one">نقطة</item>
+        <item quantity="few">نقاط</item>
+        <item quantity="many">نقطةً</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d إشعار جديد</item>
+        <item quantity="zero">%d إشعار جديد</item>
+        <item quantity="one">إشعار جديد واحد (%d)</item>
+        <item quantity="two">إشعاران جديدان (%d)</item>
+        <item quantity="few">%d إشعارات جديدة</item>
+        <item quantity="many">%d إشعارًا جديدًا</item>
+    </plurals>
+    <plurals name="mtthreadcard_title_stops_count">
+        <item quantity="other">%d مواقف</item>
+        <item quantity="zero">%d موقف</item>
+        <item quantity="one">%d موقف</item>
+        <item quantity="few">%d مواقف</item>
+        <item quantity="many">%d موقفًا</item>
+    </plurals>
+    <plurals name="my_transport_more_lines_collapsed_text">
+        <item quantity="other">%d مسارات أخرى</item>
+        <item quantity="zero">%d مسار آخر</item>
+        <item quantity="one">%d مسار آخر</item>
+        <item quantity="few">%d مسارات أخرى</item>
+        <item quantity="many">%d مسارًا آخرًا</item>
+    </plurals>
+    <plurals name="new_comments_count">
+        <item quantity="other">%d جديد</item>
+        <item quantity="one">%d جديد</item>
+        <item quantity="few">%d جديد</item>
+    </plurals>
+    <plurals name="parking_payment_session_extension_details_template_count">
+        <item quantity="other">يمكن تمديد مدة وقوف السيارات بعد %d دقائق</item>
+        <item quantity="zero">يمكن تمديد مدة وقوف السيارات بعد %d دقيقة</item>
+        <item quantity="one">يمكن تمديد مدة وقوف السيارات بعد %d دقيقة</item>
+        <item quantity="few">يمكن تمديد مدة وقوف السيارات بعد %d دقائق</item>
+        <item quantity="many">يمكن تمديد مدة وقوف السيارات بعد %d دقيقةً</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">آخر %1$d رقمين</item>
+        <item quantity="zero">آخر %1$d أرقام</item>
+        <item quantity="one">آخر %1$d رقم</item>
+        <item quantity="few">آخر %1$d رقمين</item>
+        <item quantity="many">آخر %1$d أرقام</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"ستتلقّى الآن مكالمة من 
+%1$s. أدخِل آخر %2$d رقمين من هذا الرقم."</item>
+        <item quantity="zero">"ستتلقّى الآن مكالمة من 
+%1$s. أدخِل آخر %2$d أرقام من هذا الرقم."</item>
+        <item quantity="one">"ستتلقّى الآن مكالمة من 
+%1$s. أدخِل آخر %2$d رقم من هذا الرقم."</item>
+        <item quantity="few">"ستتلقّى الآن مكالمة من 
+%1$s. أدخِل آخر %2$d رقمين من هذا الرقم."</item>
+        <item quantity="many">"ستتلقّى الآن مكالمة من 
+%1$s. أدخِل آخر %2$d أرقام من هذا الرقم."</item>
+    </plurals>
+    <plurals name="pedestrian_route_fitness_steps">
+        <item quantity="other">%d خطوات</item>
+        <item quantity="zero">0 خطوة</item>
+        <item quantity="one">%d خطوة</item>
+        <item quantity="few">%d خطوات</item>
+        <item quantity="many">%d خطوةً</item>
+    </plurals>
+    <plurals name="photo_picker_add_multiple_photos_and_multiple_videos">
+        <item quantity="other">إضافة %1$d صور و %2$d فيديوهات</item>
+        <item quantity="zero">إضافة %1$d صورة و %2$d فيديو</item>
+        <item quantity="one">إضافة %1$d صورة و %2$d فيديو</item>
+        <item quantity="few">إضافة %1$d صور و %2$d فيديوهات</item>
+        <item quantity="many">إضافة %1$d صورةً و %2$d فيديو</item>
+    </plurals>
+    <plurals name="photo_picker_add_multiple_photos_and_single_video">
+        <item quantity="other">إضافة %d صور وفيديو واحد</item>
+        <item quantity="zero">إضافة %d صورة وفيديو واحد</item>
+        <item quantity="one">إضافة %d صورة وفيديو واحد</item>
+        <item quantity="few">إضافة %d صور وفيديو واحد</item>
+        <item quantity="many">إضافة %d صورةً وفيديو واحد</item>
+    </plurals>
+    <plurals name="photo_picker_add_photos_and_videos_plural">
+        <item quantity="other">إضافة %1$d صور و %2$d فيديوهات</item>
+        <item quantity="zero">إضافة %1$d صورة و %2$d فيديو</item>
+        <item quantity="one">إضافة %1$d صورة و %2$d فيديو</item>
+        <item quantity="few">إضافة %1$d صور و %2$d فيديوهات</item>
+        <item quantity="many">إضافة %1$d صورةً و %2$d فيديو</item>
+    </plurals>
+    <plurals name="photo_picker_add_photos_plural">
+        <item quantity="other">إضافة %d صور</item>
+        <item quantity="zero">إضافة %d صورة</item>
+        <item quantity="one">إضافة %d صورة</item>
+        <item quantity="few">إضافة %d صور</item>
+        <item quantity="many">إضافة %d صورةً</item>
+    </plurals>
+    <plurals name="photo_picker_add_single_photo_and_multiple_videos">
+        <item quantity="other">إضافة صورة واحدة و %d فيديوهات</item>
+        <item quantity="zero">إضافة صورة واحدة و %d فيديو</item>
+        <item quantity="one">إضافة صورة واحدة و %d فيديو</item>
+        <item quantity="few">إضافة صورة واحدة و %d فيديوهات</item>
+        <item quantity="many">إضافة صورة واحدة و %d فيديو</item>
+    </plurals>
+    <plurals name="photo_picker_add_videos_plural">
+        <item quantity="other">إضافة %d فيديوهات</item>
+        <item quantity="zero">إضافة %d فيديو</item>
+        <item quantity="one">إضافة %d فيديو</item>
+        <item quantity="few">إضافة %d فيديوهات</item>
+        <item quantity="many">إضافة %d فيديو</item>
+    </plurals>
+    <plurals name="photos_photo_count">
+        <item quantity="other">%d صور</item>
+        <item quantity="zero">%d صورة</item>
+        <item quantity="one">%d صورة</item>
+        <item quantity="few">%d صور</item>
+        <item quantity="many">%d صورةً</item>
+    </plurals>
+    <plurals name="place_card_accessibility_rating_count">
+        <item quantity="other">%d تقييمات متبقية</item>
+        <item quantity="zero">%d تقييمات متبقية</item>
+        <item quantity="one">%d تقييم متبقي</item>
+        <item quantity="few">%d تقييمات متبقية</item>
+        <item quantity="many">%d تقييمات متبقية</item>
+    </plurals>
+    <plurals name="place_nearby_organizations">
+        <item quantity="other">%d مؤسسات قريبة</item>
+        <item quantity="zero">%d مؤسسة قريبة</item>
+        <item quantity="one">%d مؤسسة قريبة</item>
+        <item quantity="few">%d مؤسسات قريبة</item>
+        <item quantity="many">%d مؤسسةً قريبة</item>
+    </plurals>
+    <plurals name="place_rating_count">
+        <item quantity="other">%d تقييمات</item>
+        <item quantity="zero">%d تقييم</item>
+        <item quantity="one">%d تقييم</item>
+        <item quantity="few">%d تقييمات</item>
+        <item quantity="many">%d تقييمًا</item>
+    </plurals>
+    <plurals name="place_reviews_count_format">
+        <item quantity="other">%d مراجعات</item>
+        <item quantity="zero">%d مراجعة</item>
+        <item quantity="one">%d مراجعة</item>
+        <item quantity="few">%d مراجعات</item>
+        <item quantity="many">%d مراجعةً</item>
+    </plurals>
+    <plurals name="place_upload_photo_status">
+        <item quantity="other">جارٍ تحميل %2$d صور… %1$d %%</item>
+        <item quantity="zero">جارٍ التحميل... %1$d %%</item>
+        <item quantity="one">جارٍ التحميل... %1$d %%</item>
+        <item quantity="few">جارٍ تحميل %2$d صور… %1$d %%</item>
+        <item quantity="many">جارٍ تحميل %2$d صورةً… %1$d %%</item>
+    </plurals>
+    <plurals name="placecard_booking_guests_amount">
+        <item quantity="other">%d زوار</item>
+        <item quantity="zero">%d زائر</item>
+        <item quantity="one">%d زائر</item>
+        <item quantity="few">%d زوار</item>
+        <item quantity="many">%d زائرًا</item>
+    </plurals>
+    <plurals name="placecard_booking_nights_format">
+        <item quantity="other">%d ليالٍ</item>
+        <item quantity="zero">%d ليلة</item>
+        <item quantity="one">%d ليلة</item>
+        <item quantity="few">%d ليالٍ</item>
+        <item quantity="many">%d ليلةً</item>
+    </plurals>
+    <plurals name="placecard_electric_connectors_show_more_connectors">
+        <item quantity="other">%d موصلات إضافية</item>
+        <item quantity="zero">%d موصل إضافي</item>
+        <item quantity="one">%d موصل إضافي</item>
+        <item quantity="few">%d موصلات إضافية</item>
+        <item quantity="many">%d موصلًا إضافيًا</item>
+    </plurals>
+    <plurals name="placecard_gallery_more_photos">
+        <item quantity="other">%d صور أخرى</item>
+        <item quantity="zero">%d صورة أخرى</item>
+        <item quantity="one">%d صورة أخرى</item>
+        <item quantity="few">%d صور أخرى</item>
+        <item quantity="many">%d صورًا أخرى</item>
+    </plurals>
+    <plurals name="placecard_hotels_booking_widget_adults_count">
+        <item quantity="other">%d بالغين</item>
+        <item quantity="zero">%d بالغ</item>
+        <item quantity="one">%d بالغ</item>
+        <item quantity="few">%d بالغين</item>
+        <item quantity="many">%d بالغًا</item>
+    </plurals>
+    <plurals name="placecard_hotels_booking_widget_children_count">
+        <item quantity="other">%d أطفال</item>
+        <item quantity="zero">%d طفل</item>
+        <item quantity="one">%d طفل</item>
+        <item quantity="few">%d أطفال</item>
+        <item quantity="many">%d طفلًا</item>
+    </plurals>
+    <plurals name="placecard_hotels_booking_widget_nights_count">
+        <item quantity="other">%d ليالٍ</item>
+        <item quantity="zero">%d ليلة</item>
+        <item quantity="one">%d ليلة</item>
+        <item quantity="few">%d ليالٍ</item>
+        <item quantity="many">%d ليلةً</item>
+    </plurals>
+    <plurals name="placecard_owner_widgets_content_update_photos_sub">
+        <item quantity="other">"آخر تحديث: منذ 
+%d أشهر"</item>
+        <item quantity="zero">"آخر تحديث: منذ 
+%d أشهر"</item>
+        <item quantity="one">"آخر تحديث: منذ 
+%d أشهر"</item>
+        <item quantity="few">"آخر تحديث: منذ 
+%d أشهر"</item>
+        <item quantity="many">"آخر تحديث: منذ 
+%d أشهر"</item>
+    </plurals>
+    <plurals name="placecard_owner_widgets_reviews_new">
+        <item quantity="other">+ %d جديد</item>
+        <item quantity="zero">+ %d جديد</item>
+        <item quantity="one">+ %d جديد</item>
+        <item quantity="few">+ %d جديد</item>
+        <item quantity="many">+ %d جديد</item>
+    </plurals>
+    <plurals name="placecard_reviews_count_format">
+        <item quantity="other">%d مراجعات</item>
+        <item quantity="zero">%d مراجعة</item>
+        <item quantity="one">%d مراجعة</item>
+        <item quantity="few">%d مراجعات</item>
+        <item quantity="many">%d مراجعةً</item>
+    </plurals>
+    <plurals name="placecard_selections_block_show_more_discoveries">
+        <item quantity="other">%d مجموعات أخرى</item>
+        <item quantity="zero">%d مجموعة أخرى</item>
+        <item quantity="one">%d مجموعة أخرى</item>
+        <item quantity="few">%d مجموعات أخرى</item>
+        <item quantity="many">%d مجموعةً أخرى</item>
+    </plurals>
+    <plurals name="review_show_comments">
+        <item quantity="other">عرض %d تعليقات</item>
+        <item quantity="zero">عرض %d تعليق</item>
+        <item quantity="one">عرض %d تعليق</item>
+        <item quantity="few">عرض %d تعليقات</item>
+        <item quantity="many">عرض %d تعليقًا</item>
+    </plurals>
+    <plurals name="reviews_card_rating_voices">
+        <item quantity="other">%d تقييمات</item>
+        <item quantity="zero">%d تقييم</item>
+        <item quantity="one">%d تقييم</item>
+        <item quantity="few">%d تقييمات</item>
+        <item quantity="many">%d تقييمًا</item>
+    </plurals>
+    <plurals name="reviews_create_choose_photos_send">
+        <item quantity="other">إرسال %d صور</item>
+        <item quantity="zero">إرسال %d صورة</item>
+        <item quantity="one">إرسال %d صورة</item>
+        <item quantity="few">إرسال %d صور</item>
+        <item quantity="many">إرسال %d صورةً</item>
+    </plurals>
+    <plurals name="reviews_place_reviews_all">
+        <item quantity="other">عرض جميع المراجعات الـ %d</item>
+        <item quantity="zero">عرض %d مراجعة</item>
+        <item quantity="one">عرض %d مراجعة</item>
+        <item quantity="few">عرض جميع المراجعات الـ %d</item>
+        <item quantity="many">عرض جميع المراجعات الـ %d</item>
+    </plurals>
+    <plurals name="reviews_place_reviews_more">
+        <item quantity="other">%d مراجعات أخرى</item>
+        <item quantity="zero">%d مراجعة أخرى</item>
+        <item quantity="one">%d مراجعة أخرى</item>
+        <item quantity="few">%d مراجعات أخرى</item>
+        <item quantity="many">%d مراجعةً أخرى</item>
+    </plurals>
+    <plurals name="road_events_comments_count">
+        <item quantity="other">%d تعليقات</item>
+        <item quantity="zero">%d تعليق</item>
+        <item quantity="one">%d تعليق</item>
+        <item quantity="few">%d تعليقات</item>
+        <item quantity="many">%d تعليقًا</item>
+    </plurals>
+    <plurals name="route_snippets_amount_of_flags">
+        <item quantity="other">%d قيود على المسار</item>
+        <item quantity="zero">%d قيد على المسار</item>
+        <item quantity="one">%d قيد على المسار</item>
+        <item quantity="few">%d قيود على المسار</item>
+        <item quantity="many">%d قيدًا على المسار</item>
+    </plurals>
+    <plurals name="routes_directions_masstransit_details_stations_count">
+        <item quantity="other">%d محطات</item>
+        <item quantity="zero">%d محطة</item>
+        <item quantity="one">%d محطة</item>
+        <item quantity="few">%d محطات</item>
+        <item quantity="many">%d محطةً</item>
+    </plurals>
+    <plurals name="routes_directions_masstransit_details_stops_count">
+        <item quantity="other">%d مواقف</item>
+        <item quantity="zero">%d موقف</item>
+        <item quantity="one">%d موقف</item>
+        <item quantity="few">%d مواقف</item>
+        <item quantity="many">%d موقفًا</item>
+    </plurals>
+    <plurals name="routes_directions_masstransit_time_and_number_of_stops">
+        <item quantity="other">%1$s / %2$d مواقف</item>
+        <item quantity="zero">%1$s / %2$d موقف</item>
+        <item quantity="one">%1$s / %2$d موقف</item>
+        <item quantity="few">%1$s / %2$d مواقف</item>
+        <item quantity="many">%1$s / %2$d موقفًا</item>
+    </plurals>
+    <plurals name="routes_masstransit_transfers_count">
+        <item quantity="other">%d تحويلات</item>
+        <item quantity="zero">%d تحويلة</item>
+        <item quantity="one">%d تحويلة</item>
+        <item quantity="few">%d تحويلات</item>
+        <item quantity="many">%d تحويلة</item>
+    </plurals>
+    <plurals name="routes_select_destination_waypoints_count">
+        <item quantity="other">%d أماكن</item>
+        <item quantity="zero">%d مكان</item>
+        <item quantity="one">%d مكان</item>
+        <item quantity="few">%d أماكن</item>
+        <item quantity="many">%d مكانًا</item>
+    </plurals>
+    <plurals name="routes_select_via_description_multiple">
+        <item quantity="other">عبر %d نقاط</item>
+        <item quantity="zero">عبر %d نقطة</item>
+        <item quantity="one">عبر %d نقطة</item>
+        <item quantity="few">عبر %d نقاط</item>
+        <item quantity="many">عبر %d نقطةً</item>
+    </plurals>
+    <plurals name="routes_select_via_waypoints_count">
+        <item quantity="other">%d نقاط</item>
+        <item quantity="zero">%d نقطة</item>
+        <item quantity="one">%d نقطة</item>
+        <item quantity="few">%d نقاط</item>
+        <item quantity="many">%d نقطةً</item>
+    </plurals>
+    <plurals name="routes_select_waypoints_limit_exceeded_template">
+        <item quantity="other">لا يمكنك تعيين أكثر من %d نقاط على المسار</item>
+        <item quantity="zero">لا يمكنك تعيين أكثر من %d نقطة على المسار</item>
+        <item quantity="one">لا يمكنك تعيين أكثر من %d نقطة على المسار</item>
+        <item quantity="few">لا يمكنك تعيين أكثر من %d نقاط على المسار</item>
+        <item quantity="many">لا يمكنك تعيين أكثر من %d نقطةً على المسار</item>
+    </plurals>
+    <plurals name="routes_selection_taxi_eta">
+        <item quantity="other">إرسال خلال %d دقائق</item>
+        <item quantity="zero">إرسال خلال %d دقيقة</item>
+        <item quantity="one">إرسال خلال %d دقيقة</item>
+        <item quantity="few">إرسال خلال %d دقائق</item>
+        <item quantity="many">إرسال خلال %d دقيقةً</item>
+    </plurals>
+    <plurals name="scooters_payment_method_plus_subtitle">
+        <item quantity="other">رصيد %d نقاط</item>
+        <item quantity="zero">رصيد %d نقطة</item>
+        <item quantity="one">رصيد %d نقطة</item>
+        <item quantity="few">رصيد %d نقاط</item>
+        <item quantity="many">رصيد %d نقطةً</item>
+    </plurals>
+    <plurals name="search_filters_chains_count_plural">
+        <item quantity="other">+%d سلاسل</item>
+        <item quantity="zero">+%d سلسلة</item>
+        <item quantity="one">+%d سلسلة</item>
+        <item quantity="few">+%d سلاسل</item>
+        <item quantity="many">+%d سلسلةً</item>
+    </plurals>
+    <plurals name="search_line_map_download_hint">
+        <item quantity="other">%d مدن</item>
+        <item quantity="zero">%d مدينة</item>
+        <item quantity="one">%d مدينة</item>
+        <item quantity="few">%d مدن</item>
+        <item quantity="many">%d مدينةً</item>
+    </plurals>
+    <plurals name="search_list_info_found">
+        <item quantity="other">تم العثور على %d أماكن</item>
+        <item quantity="zero">تم العثور على %d مكان</item>
+        <item quantity="one">تم العثور على %d مكان</item>
+        <item quantity="few">تم العثور على %d أماكن</item>
+        <item quantity="many">تم العثور على %d مكانًا</item>
+    </plurals>
+    <plurals name="settings_voice_chooser_selected_count">
+        <item quantity="other">%d تم تحديدها</item>
+        <item quantity="zero">%d تم تحديدها</item>
+        <item quantity="one">%d تم تحديدها</item>
+        <item quantity="few">%d تم تحديدها</item>
+        <item quantity="many">%d تم تحديدها</item>
+    </plurals>
+    <plurals name="snippet_gallery_more_photo">
+        <item quantity="other">%d صور أخرى</item>
+        <item quantity="zero">%d صورة أخرى</item>
+        <item quantity="one">%d صورة أخرى</item>
+        <item quantity="few">%d صور أخرى</item>
+        <item quantity="many">%d صورةً أخرى</item>
+    </plurals>
+    <plurals name="snippet_plus_offer_amount">
+        <item quantity="other">%d نقاط إضافية</item>
+        <item quantity="zero">%d نقطة إضافية</item>
+        <item quantity="one">%d نقطة إضافية</item>
+        <item quantity="few">%d نقاط إضافية</item>
+        <item quantity="many">%d نقطةً إضافية</item>
+    </plurals>
+    <plurals name="snippet_price_list_more_similar">
+        <item quantity="other">%d خدمات مماثلة أخرى</item>
+        <item quantity="zero">%d خدمة مماثلة أخرى</item>
+        <item quantity="one">%d خدمة مماثلة أخرى</item>
+        <item quantity="few">%d خدمات مماثلة أخرى</item>
+        <item quantity="many">%d خدمةً مماثلة أخرى</item>
+    </plurals>
+    <plurals name="stars_rating_prices_count">
+        <item quantity="other">%d تقييمات</item>
+        <item quantity="zero">%d تقييم</item>
+        <item quantity="one">%d تقييم</item>
+        <item quantity="few">%d تقييمات</item>
+        <item quantity="many">%d تقييمًا</item>
+    </plurals>
+    <plurals name="tanker_plural_test_key">
+        <item quantity="other">test_few</item>
+        <item quantity="one">test_one</item>
+        <item quantity="few">test_few</item>
+        <item quantity="many">test_many</item>
+    </plurals>
+    <plurals name="thread_route_stops">
+        <item quantity="other">%d مواقف على المسار</item>
+        <item quantity="zero">%d موقف على المسار</item>
+        <item quantity="one">%d موقف على المسار</item>
+        <item quantity="few">%d مواقف على المسار</item>
+        <item quantity="many">%d موقفًا على المسار</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">منذ %d أيام</item>
+        <item quantity="zero">منذ %d يوم</item>
+        <item quantity="one">منذ %d يوم</item>
+        <item quantity="few">منذ %d أيام</item>
+        <item quantity="many">منذ %d يومًا</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">منذ %d دقائق</item>
+        <item quantity="zero">منذ %d دقيقة</item>
+        <item quantity="one">منذ %d دقيقة</item>
+        <item quantity="few">منذ %d دقائق</item>
+        <item quantity="many">منذ %d دقيقةً</item>
+    </plurals>
+    <plurals name="toll_pass_notification_multiple_toll_title">
+        <item quantity="other">%d رحلة على طرق برسوم مرور</item>
+        <item quantity="zero">%d رحلة على طرق برسوم مرور</item>
+        <item quantity="one">%d رحلة على طرق برسوم مرور</item>
+        <item quantity="few">%d رحلة على طرق برسوم مرور</item>
+        <item quantity="many">%d رحلات على طرق برسوم مرور</item>
+    </plurals>
+    <plurals name="traffic_level_lock_screen_widget">
+        <item quantity="other">%d نقاط</item>
+        <item quantity="zero">%d نقطة</item>
+        <item quantity="one">%d نقطة</item>
+        <item quantity="few">%d نقاط</item>
+        <item quantity="many">%d نقطةً</item>
+    </plurals>
+    <plurals name="transit_item_expand_threads">
+        <item quantity="other">%d خيارات أخرى</item>
+        <item quantity="zero">%d خيار آخر</item>
+        <item quantity="one">%d خيار آخر</item>
+        <item quantity="few">%d خيارات أخرى</item>
+        <item quantity="many">%d خيارًا آخرًا</item>
+    </plurals>
+    <plurals name="trucks_settings_amount_of_axles">
+        <item quantity="other">%d محاور</item>
+        <item quantity="zero">%d محور</item>
+        <item quantity="one">%d محور</item>
+        <item quantity="few">%d محاور</item>
+        <item quantity="many">%d محورًا</item>
+    </plurals>
+    <plurals name="widget_update_period_minutes">
+        <item quantity="other">%d دقائق</item>
+        <item quantity="zero">%d دقيقة</item>
+        <item quantity="one">%d دقيقة</item>
+        <item quantity="few">%d دقائق</item>
+        <item quantity="many">%d دقيقةً</item>
+    </plurals>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scrollView" android:background="?tankerBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:isScrollContainer="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/rootContainer" android:layout_width="fill_parent" android:layout_height="0.0dip">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/loading" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tanker_basic_padding_two" android:layout_marginTop="@dimen/tanker_basic_padding_two" android:layout_marginRight="@dimen/tanker_basic_padding_two" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <TextView android:textSize="@dimen/tanker_tanker_header_text_size" android:textColor="@color/tanker_textColorAlpha80" android:gravity="center_horizontal" android:id="@id/status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tanker_basic_padding_two" style="@style/TankerTextRegular" />
+                <LinearLayout android:orientation="vertical" android:id="@id/loading_placeholder" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <View android:background="@drawable/tanker_placeholder" android:layout_width="fill_parent" android:layout_height="55.0dip" />
+                    <View android:background="@drawable/tanker_placeholder" android:layout_width="fill_parent" android:layout_height="65.0dip" android:layout_marginLeft="60.0dip" android:layout_marginTop="@dimen/tanker_basic_padding" android:layout_marginRight="60.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintTop_toTopOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/algorithm_3ds" android:background="@drawable/tanker_background_card_white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ru.tankerapp.android.sdk.navigator.view.widgets.webview.WebViewWrapper android:id="@id/webview" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/tanker_basic_padding" android:minHeight="1000.0dip" android:isScrollContainer="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/button_cancel_3ds" />
+                <ImageButton android:id="@id/button_cancel_3ds" android:background="@drawable/tanker_button_close_light" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="@dimen/tanker_basic_padding" android:src="@drawable/tanker_ic_close" android:scaleType="center" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </FrameLayout>
+</ScrollView>

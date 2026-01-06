@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.messaging.internal.view.chat.ChatItemLinearLayout android:orientation="horizontal" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="end|bottom" android:orientation="vertical" android:id="@id/timeline_message_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewStub android:id="@id/reply" android:layout="@layout/msg_reply_layout" android:inflatedId="@id/reply" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="12.0dip" />
+        <ViewStub android:textColor="?messagingIncomingSecondaryColor" android:id="@id/forwarded_message" android:paddingLeft="10.0dip" android:paddingRight="12.0dip" android:layout="@layout/msg_forwarded_message" android:inflatedId="@id/forwarded_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+        <FrameLayout android:id="@id/message_content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="8.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <androidx.appcompat.widget.AppCompatImageButton android:id="@id/dialog_file_button" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" app:srcCompat="@drawable/msg_ic_file_own" />
+                <androidx.appcompat.widget.AppCompatTextView android:id="@id/dialog_file_size" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            </FrameLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="56.0dip">
+                <com.yandex.messaging.views.WaveformView android:id="@id/waveform" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="4.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="12.0dip" app:wv_fillcolor="?messagingOtherVoiceMessageFillColor" app:wv_progress_color="?messagingOtherVoiceMessageProgressColor" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+                    <androidx.appcompat.widget.AppCompatTextView android:textSize="12.0sp" android:textStyle="italic" android:textColor="?messagingIncomingSecondaryColor" android:layout_gravity="start" android:id="@id/duration" android:layout_width="50.0dip" android:layout_height="wrap_content" android:fontFamily="@font/ya_regular" android:layout_marginStart="8.0dip" />
+                    <View android:layout_gravity="start|center" android:id="@id/listened_indicator" android:layout_width="4.0dip" android:layout_height="4.0dip" android:layout_marginStart="4.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <include android:layout_gravity="end|bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_marginEnd="12.0dip" layout="@layout/msg_message_status_and_time" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/recognizing_group" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="12.0dip" android:paddingEnd="12.0dip">
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="16.0sp" android:textColor="?messagingIncomingSecondaryColor" android:gravity="center" android:id="@id/recognizing" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messaging_recognizing" android:fontFamily="@font/ya_regular" />
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="16.0sp" android:textColor="?messagingIncomingPrimaryColor" android:id="@id/recognized_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="@font/ya_regular" />
+        </FrameLayout>
+    </LinearLayout>
+    <include layout="@layout/msg_chat_error_icon_layout" />
+</com.yandex.messaging.internal.view.chat.ChatItemLinearLayout>

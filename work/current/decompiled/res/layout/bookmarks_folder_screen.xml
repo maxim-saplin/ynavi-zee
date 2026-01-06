@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:tag="@string/change_handler_bottom_panel_tag" android:focusable="true" android:focusableInTouchMode="true" style="@style/ShutterCommonLayoutParams"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.uikit.shutter.ShutterView android:id="@id/shutter_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/bookmarks_folder_header_title_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/bookmarks_folder_header_title_text_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/shutter_horizontal_padding">
+            <TextView android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/bookmarks_header_collapsed_title_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:maxLines="1" android:includeFontPadding="false" android:layout_marginHorizontal="54.0dip" style="@style/Text20.Medium.TextPrimary" />
+        </FrameLayout>
+        <View android:id="@id/bookmarks_header_separator" android:background="@drawable/bookmarks_folder_header_separator" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="4.0dip" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/bookmarks_folder_header_buttons_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/shutter_horizontal_padding">
+        <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:layout_gravity="center_horizontal" android:background="@color/icons_additional" android:layout_width="24.0dip" android:layout_height="4.0dip" app:cornerRadius="2.0dip" />
+        <ImageView android:layout_gravity="start" android:id="@id/bookmarks_folder_more_button" android:tag="@string/summary_clickable_tag" android:background="@drawable/common_ripple_radius_40" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/other_24" app:tint="@color/icons_additional" />
+        <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end" android:id="@id/bookmarks_folder_close_button" android:tag="@string/summary_clickable_tag" android:background="@drawable/common_ripple_radius_40" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <ru.yandex.yandexmaps.designsystem.popup.PopupDialogView android:layout_gravity="center" android:id="@id/bookmarks_folder_error_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout>

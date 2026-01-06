@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/tanker_panelColor" />
+    <corners android:topLeftRadius="@dimen/tanker_contanier_radius" android:topRightRadius="@dimen/tanker_contanier_radius" />
+</shape>

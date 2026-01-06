@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/ui_yellow_alpha40" />
+    <stroke android:width="2.0dip" android:color="@color/map_objects_vegetation_stroke" />
+</shape>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="16.0dip" android:insetRight="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <selector>
+        <item android:state_window_focused="false" android:state_checked="true" android:drawable="@drawable/attach_select_checked" />
+        <item android:state_window_focused="false" android:state_checked="false" android:drawable="@drawable/attach_select_empty" />
+        <item android:state_enabled="true" android:state_checked="false" android:drawable="@drawable/attach_select_empty" />
+        <item android:state_enabled="true" android:state_checked="true" android:drawable="@drawable/attach_select_checked" />
+    </selector>
+</inset>

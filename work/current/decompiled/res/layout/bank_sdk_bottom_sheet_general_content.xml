@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/dialogTopImage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+    <TextView android:id="@id/dialogTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" style="@style/Widget.Bank.Text.Headline1" />
+    <TextView android:id="@id/dialogDescription" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" style="@style/Widget.Bank.Text.Body2" />
+    <ImageView android:id="@id/dialogBottomImage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:scaleType="centerCrop" />
+</LinearLayout>

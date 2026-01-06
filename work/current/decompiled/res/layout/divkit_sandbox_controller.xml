@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:background="@drawable/background_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <EditText android:textSize="13.0sp" android:textColor="@color/text_black" android:textColorHint="@color/common_hint" android:id="@id/divkit_sandbox_url" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="https://10.0.2.2/sample/dsl-demo" android:layout_weight="1.0" android:inputType="textUri" android:imeOptions="actionDone" android:fontFamily="monospace" android:importantForAutofill="no" />
+                <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/divkit_sandbox_load" android:layout_width="wrap_content" android:layout_height="wrap_content" app:generalButtonSize="small" app:generalButtonStyle="primary" app:text="Load" />
+            </LinearLayout>
+            <FrameLayout android:background="@color/text_black_white" android:padding="1.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="4.0dip">
+                <FrameLayout android:id="@id/divkit_sandbox_container" android:background="@drawable/background_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <TextView android:textSize="12.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/divkit_sandbox_informer" android:background="@drawable/background_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Loading..." android:fontFamily="monospace" />
+            </FrameLayout>
+        </LinearLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+</com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">%d 秒早送り</item>
+        <item quantity="one">%d 秒早送り</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">%d 秒巻き戻し</item>
+        <item quantity="one">%d 秒巻き戻し</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d 件の新しい通知</item>
+        <item quantity="one">%d 件の新しい通知</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">最後の%1$d桁</item>
+        <item quantity="zero">最後の%1$d桁</item>
+        <item quantity="one">最後の%1$d桁</item>
+        <item quantity="few">最後の%1$d桁</item>
+        <item quantity="many">最後の%1$d桁</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"
+%1$sから電話がかかってきます。この番号の下%2$d桁を入力してください。"</item>
+        <item quantity="zero">"
+%1$sから電話がかかってきます。この番号の下%2$d桁を入力してください。"</item>
+        <item quantity="one">"
+%1$sから電話がかかってきます。この番号の下%2$d桁を入力してください。"</item>
+        <item quantity="few">"
+%1$sから電話がかかってきます。この番号の下%2$d桁を入力してください。"</item>
+        <item quantity="many">"
+%1$sから電話がかかってきます。この番号の下%2$d桁を入力してください。"</item>
+    </plurals>
+</resources>

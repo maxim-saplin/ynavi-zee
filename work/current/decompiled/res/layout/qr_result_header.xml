@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/qr_result_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/TextAppearance.Qr" android:textSize="14.0sp" android:textColor="#80000000" android:gravity="center_vertical" android:id="@id/qr_result_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="4" />
+    <TextView android:textAppearance="@style/TextAppearance.Qr" android:id="@id/qr_primary_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="8" android:fontFamily="@font/ya_medium" />
+    <TextView android:textAppearance="@style/TextAppearance.Qr" android:id="@id/qr_secondary_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="12" />
+</LinearLayout>

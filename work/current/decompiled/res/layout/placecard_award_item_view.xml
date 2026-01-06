@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_award_item_image" android:paddingTop="12.0dip" android:paddingBottom="16.0dip" android:layout_width="56.0dip" android:layout_height="72.0dip">
+        <ImageView android:id="@id/image_award_item_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textColor="@color/text_secondary" android:id="@id/text_award_item_year" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" style="@style/Text12.Regular" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16.0dip">
+        <TextView android:id="@id/text_award_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text14.Medium.TextPrimary" />
+        <TextView android:id="@id/text_award_item_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text14.Regular.Secondary" />
+    </LinearLayout>
+</merge>

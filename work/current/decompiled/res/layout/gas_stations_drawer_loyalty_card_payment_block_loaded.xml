@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/gas_stations_drawer_card_payment_and_loyalty_block_top_margin" android:layout_marginBottom="@dimen/gas_stations_drawer_card_payment_and_loyalty_block_bottom_margin" android:layout_marginHorizontal="@dimen/gas_stations_drawer_horizontal_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="@dimen/match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="fill_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <include android:id="@id/loyalty_cards" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@layout/gas_stations_drawer_loyalty_cards" />
+            <include android:id="@id/discounts_and_bonuses" android:layout_width="130.0dip" android:layout_height="fill_parent" android:layout_marginStart="8.0dip" layout="@layout/gas_stations_drawer_discounts_and_bonuses" />
+        </LinearLayout>
+        <include android:id="@id/payment_method" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" layout="@layout/gas_stations_drawer_payment_method" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/root_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.roadevents.add.internal.views.AddRoadEventShutterView android:layout_gravity="bottom" android:id="@id/view_add_road_event_shutter_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/view_add_road_event_send_button_container" android:background="@color/bg_primary" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/view_add_road_event_send_button" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:generalButtonSize="large" app:generalButtonStyle="primary" app:text="@string/road_events_add_event" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/road_event_icon" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/event_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/pin_alerts_accident" />
+        <ImageView android:id="@id/fake_icon" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

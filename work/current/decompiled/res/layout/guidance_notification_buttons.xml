@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/guidance_notification_divider" android:layout_width="fill_parent" android:layout_height="@dimen/common_border_thickness" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="6.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="46.0dip" android:paddingStart="8.0dip" android:paddingEnd="8.0dip">
+        <LinearLayout android:gravity="center" android:id="@id/guidance_notification_sound_button" android:background="@drawable/rounded_flat_button_background" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip">
+            <ImageView android:id="@id/guidance_notification_sound_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/icons_actions" android:layout_marginEnd="8.0dip" />
+            <TextView android:gravity="center" android:id="@id/guidance_notification_sound_text" android:background="@null" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/guidance_menu_sound_on" android:fontFamily="sans-serif-medium" style="@style/RoundedFlatButton" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:id="@id/guidance_notification_complete_button" android:background="@drawable/rounded_flat_button_background" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/guidance_notification_complete_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/icons_actions" android:layout_marginEnd="8.0dip" />
+            <TextView android:id="@id/guidance_notification_complete_text" android:background="@null" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/guidance_complete" android:fontFamily="sans-serif-medium" style="@style/RoundedFlatButton" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@drawable/appshortcuts_home_48" android:enabled="true" android:shortcutId="route_to_home" android:shortcutShortLabel="@string/shortcuts_route_to_home_short" android:shortcutLongLabel="@string/shortcuts_route_to_home">
+        <intent android:targetPackage="ru.yandex.yandexnavi" android:action="ru.yandex.yandexmaps.action.ROUTE_TO_HOME_SHORTCUT" android:targetClass="ru.yandex.yandexmaps.app.MapActivity" />
+    </shortcut>
+    <shortcut android:icon="@drawable/appshortcuts_office_48" android:enabled="true" android:shortcutId="route_to_work" android:shortcutShortLabel="@string/shortcuts_route_to_work_short" android:shortcutLongLabel="@string/shortcuts_route_to_work">
+        <intent android:targetPackage="ru.yandex.yandexnavi" android:action="ru.yandex.yandexmaps.action.ROUTE_TO_WORK_SHORTCUT" android:targetClass="ru.yandex.yandexmaps.app.MapActivity" />
+    </shortcut>
+    <shortcut android:icon="@drawable/appshortcuts_places_48" android:enabled="true" android:shortcutId="bookmarks" android:shortcutShortLabel="@string/shortcuts_bookmarks" android:shortcutLongLabel="@string/shortcuts_bookmarks">
+        <intent android:targetPackage="ru.yandex.yandexnavi" android:action="ru.yandex.yandexmaps.action.SHOW_BOOKMARKS_SHORTCUT" android:targetClass="ru.yandex.yandexmaps.app.MapActivity" />
+    </shortcut>
+    <shortcut android:icon="@drawable/appshortcuts_search_48" android:enabled="true" android:shortcutId="search_nearby" android:shortcutShortLabel="@string/shortcuts_search_nearby_short" android:shortcutLongLabel="@string/shortcuts_search_nearby">
+        <intent android:targetPackage="ru.yandex.yandexnavi" android:action="ru.yandex.yandexmaps.action.SEARCH_NEARBY_SHORTCUT" android:targetClass="ru.yandex.yandexmaps.app.MapActivity" />
+    </shortcut>
+</shortcuts>

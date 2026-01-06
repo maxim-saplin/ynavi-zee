@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/routes_container_buttons" layout="@layout/routes_select_integration_controls" />
+    <FrameLayout android:id="@id/route_selection_integration_controller_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

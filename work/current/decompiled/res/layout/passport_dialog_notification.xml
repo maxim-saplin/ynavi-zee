@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="16.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:contentDescription="@string/passport_silent_push_description"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center_vertical" android:layout_width="44.0dip" android:layout_height="44.0dip" android:contentDescription="@string/passport_yandex_logo" app:srcCompat="?passport_id_logo" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="24.0sp" android:textColor="?android:textColorPrimary" android:id="@id/passport_notification_first_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:lineSpacingExtra="2.0sp" android:textIsSelectable="true" android:fontFamily="@font/ya_medium" />
+            <ImageView android:id="@id/passport_notification_copy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/passport_ic_copy" android:contentDescription="@string/passport_copy_to_clipboard_description" android:layout_marginStart="4.0dip" app:tint="?passportCopyButtonColor" />
+        </LinearLayout>
+        <TextView android:textSize="14.0sp" android:textColor="?android:textColorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/passport_dialog_notification_otp" android:lineSpacingExtra="2.0sp" android:importantForAccessibility="no" android:fontFamily="@font/ya_regular" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/passport_notification_close" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/passport_roundabout_close" android:contentDescription="@string/passport_close_dialog_description" app:tint="?android:textColorPrimary" />
+</LinearLayout>

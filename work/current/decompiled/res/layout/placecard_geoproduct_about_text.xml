@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:id="@id/placecard_geoproduct_about_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="12.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/Text14" />
+    <TextView android:id="@id/placecard_geoproduct_about_more" android:background="@drawable/common_clickable_background_no_border_impl" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-10.0dip" android:layout_marginBottom="4.0dip" android:text="@string/placecard_geoproduct_about_expand" android:textAllCaps="false" android:fontFamily="@font/font_medium" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:layout_marginStart="4.0dip" style="@style/Text14.Blue" />
+</merge>

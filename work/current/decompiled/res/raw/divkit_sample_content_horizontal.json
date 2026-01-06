@@ -1,0 +1,119 @@
+{
+  "templates": {
+    "text_block": {
+      "type": "text",
+      "$text": "header",
+      "width": {
+        "type": "fixed",
+        "value": 244
+      },
+      "height": {
+        "type": "fixed",
+        "value": 240
+      },
+      "border": {
+        "corner_radius": 6
+      },
+      "background": [
+        {
+          "type": "solid",
+          "color": "@{getColorFromDict(palette, app_theme, 'background_color')}"
+        }
+      ],
+      "font_size": 20,
+      "text_alignment_vertical": "center",
+      "text_alignment_horizontal": "center",
+      "text_color": "@{getColorFromDict(palette, app_theme, 'text_color')}"
+    }
+  },
+  "card": {
+    "log_id": "card",
+    "variables": [
+      {
+        "name": "palette",
+        "type": "dict",
+        "value": {
+          "light": {
+            "text_color": "#000000",
+            "background_color": "#dadada"
+          },
+          "dark": {
+            "text_color": "#ffffff",
+            "background_color": "#6a6a6a"
+          }
+        }
+      }
+    ],
+    "states": [
+      {
+        "state_id": 0,
+        "div": {
+          "type": "container",
+          "orientation": "vertical",
+          "items": [
+            {
+              "type": "text",
+              "text": "DivKit view, theme = @{app_theme}",
+              "paddings": {
+                "left": 18,
+                "top": 16
+              },
+              "text_color": "@{getColorFromDict(palette, app_theme, 'text_color')}",
+              "font_size": 24
+            },
+            {
+              "type": "gallery",
+              "width": {
+                "type": "match_parent"
+              },
+              "height": {
+                "type": "wrap_content"
+              },
+              "paddings": {
+                "left": 16,
+                "top": 16,
+                "right": 16,
+                "bottom": 16
+              },
+              "restrict_parent_scroll": 0,
+              "items": [
+                {
+                  "type": "text_block",
+                  "header": "Item 1"
+                },
+                {
+                  "type": "text_block",
+                  "header": "Item 2"
+                },
+                {
+                  "type": "text_block",
+                  "header": "Item 3"
+                },
+                {
+                  "type": "text_block",
+                  "header": "Item 4"
+                },
+                {
+                  "type": "text_block",
+                  "header": "Item 5"
+                },
+                {
+                  "type": "text_block",
+                  "header": "Item 6"
+                },
+                {
+                  "type": "text_block",
+                  "header": "Item 7"
+                },
+                {
+                  "type": "text_block",
+                  "header": "Item 8"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

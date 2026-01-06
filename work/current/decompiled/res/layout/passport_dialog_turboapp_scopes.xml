@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.passport.internal.widget.BoundedFrameLayout android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:passport_maxWidth="@dimen/passport_screen_max_width"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@drawable/passport_bg_turboapp_scopes" android:fitsSystemWindows="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="32.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/layout_content" android:padding="16.0dip" android:focusable="true" android:clickable="true" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center" android:id="@id/text_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:fontFamily="@font/ya_bold" android:lineHeight="21.0sp" />
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/layout_account" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="16.0dip">
+                <de.hdodenhof.circleimageview.CircleImageView android:layout_gravity="center_horizontal" android:id="@id/image_avatar" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginRight="16.0dip" />
+                <TextView android:textSize="20.0sp" android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center" android:id="@id/text_primary_display_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/ya_medium" android:lineHeight="26.0sp" />
+            </LinearLayout>
+            <TextView android:textSize="16.0sp" android:textColor="#99000000" android:gravity="center" android:layout_gravity="center" android:id="@id/text_scopes" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip" android:fontFamily="@font/ya_regular" android:lineHeight="26.0sp" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/layout_buttons" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/button_decline" android:layout_width="0.0dip" android:layout_height="48.0dip" android:text="@string/passport_sdk_ask_access_deny_button" android:layout_weight="1.0" style="@style/Passport.Widget.Button.TurboApp.Secondary" />
+                <View android:layout_width="8.0dip" android:layout_height="0.0dip" />
+                <Button android:id="@id/button_accept" android:layout_width="0.0dip" android:layout_height="48.0dip" android:text="@string/passport_sdk_ask_access_allow_button" android:layout_weight="1.0" style="@style/Passport.Widget.Button.TurboApp.Primary" />
+            </LinearLayout>
+            <Button android:id="@id/button_retry" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/passport_reg_try_again" style="@style/Passport.Widget.Button.TurboApp.Primary" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/progress_with_account" android:visibility="gone" android:layout_marginTop="24.0dip" android:layout_marginBottom="24.0dip" style="@style/Passport.Widget.Progress.TurboApp" />
+        </LinearLayout>
+        <androidx.cardview.widget.CardView android:layout_gravity="center|top" android:id="@id/layout_app_icon" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="-24.0dip" app:cardCornerRadius="13.0dip" app:cardElevation="4.0dip">
+            <ImageView android:id="@id/image_app_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</com.yandex.passport.internal.widget.BoundedFrameLayout>

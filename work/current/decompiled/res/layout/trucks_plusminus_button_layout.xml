@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.multiplatform.trucks.ui.internal.main.components.PlusMinusImageView android:id="@id/minus_button" android:padding="12.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/zoom_out_24" android:tint="@color/icons_primary" />
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:layout_width="1.0dip" android:layout_height="24.0dip" android:src="@drawable/plus_minus_button_separator" />
+    <ru.yandex.yandexmaps.multiplatform.trucks.ui.internal.main.components.PlusMinusImageView android:id="@id/plus_button" android:padding="12.0dip" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/zoom_in_24" android:tint="@color/icons_primary" />
+</LinearLayout>

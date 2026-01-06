@@ -1,0 +1,29 @@
+.class public final Lcom/yandex/messaging/core/db/messages/n;
+.super Landroidx/room/d1;
+.source "SourceFile"
+
+
+# instance fields
+.field final synthetic d:Lcom/yandex/messaging/core/db/messages/o;
+
+
+# direct methods
+.method public constructor <init>(Lcom/yandex/messaging/core/db/messages/o;Lcom/yandex/messaging/internal/storage/AppDatabaseRoom_Impl;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/yandex/messaging/core/db/messages/n;->d:Lcom/yandex/messaging/core/db/messages/o;
+
+    invoke-direct {p0, p2}, Landroidx/room/d1;-><init>(Landroidx/room/r0;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final c()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "UPDATE messages SET message_prev_history_id = 0 WHERE chat_internal_id = ? AND message_history_id = ? AND message_prev_history_id <= ?"
+
+    return-object v0
+.end method

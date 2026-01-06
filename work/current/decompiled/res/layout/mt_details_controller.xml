@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/routes_panel_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="noHideDescendants" android:layoutDirection="ltr">
+        <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/control_chunk_indoor" />
+            <include layout="@layout/control_chunk_ruler" />
+            <include layout="@layout/control_chunk_layers_menu" />
+            <include layout="@layout/control_chunk_transport_priority" />
+            <include layout="@layout/control_chunk_traffic" />
+            <include layout="@layout/control_chunk_carparks" />
+            <include layout="@layout/control_chunk_panorama" />
+            <include layout="@layout/control_chunk_weather" />
+            <include layout="@layout/control_chunk_tilt_toggle" />
+            <include layout="@layout/control_chunk_zoom" />
+            <include layout="@layout/control_chunk_position" />
+        </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <ru.yandex.maps.uikit.slidingpanel.SlidingRecyclerView android:id="@id/mt_details_controller_recycler" android:tag="@string/change_handler_bottom_panel_tag" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/mt_details_header" />
+        </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+        <View android:background="@drawable/common_divider_horizontal_impl" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <Space android:id="@id/mt_details_controller_map_controls_anchor" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/mt_details_controller_dialog_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:translationZ="5.0dip" />
+</FrameLayout>

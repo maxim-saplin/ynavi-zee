@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_gravity="center_vertical" android:id="@id/dscvr_contents_places_count" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip" android:layout_marginEnd="8.0dip" style="@style/Text14.Grey" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/dscvr_contents_share_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" app:buttonIcon="@drawable/share_24" app:generalButtonSize="medium" app:generalButtonStyle="transparent" app:text="@string/dscvr_header_share" />
+</LinearLayout>

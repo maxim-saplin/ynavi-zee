@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/tabs_content_slot" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <View android:background="?messagingCommonDividerColor" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <LinearLayout android:layout_gravity="center|bottom" android:orientation="horizontal" android:id="@id/navbar_buttons_container" android:background="?messagingAttachmentsNavigationBarColorResource" android:layout_width="fill_parent" android:layout_height="50.0dip" android:baselineAligned="false">
+        <com.yandex.messaging.views.NavTabView android:id="@id/chats_tab" app:ntvDrawable="@drawable/msg_ic_chats_selector" app:ntvText="@string/nav_item_chats" style="@style/Messaging.NavTab" />
+        <com.yandex.messaging.views.NavTabView android:id="@id/threads_tab" app:ntvDrawable="@drawable/msg_ic_thread_selector" app:ntvText="@string/nav_item_threads" style="@style/Messaging.NavTab" />
+        <com.yandex.messaging.views.NavTabView android:id="@id/profile_tab" app:ntvDrawable="@drawable/msg_ic_profile_selector" app:ntvText="@string/nav_item_profile" style="@style/Messaging.NavTab" />
+    </LinearLayout>
+</LinearLayout>

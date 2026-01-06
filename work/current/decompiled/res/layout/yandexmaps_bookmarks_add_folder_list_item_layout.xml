@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="60.0dip" android:paddingHorizontal="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="32.0dip" android:layout_height="32.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/bookmarks_folder_list_icon_view" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/plus_outline_24" android:tint="@color/icons_actions" />
+    </FrameLayout>
+    <TextView android:ellipsize="end" android:id="@id/bookmarks_folder_list_item_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/yandexmaps_create_folder_title" android:maxLines="1" android:layout_weight="1.0" android:layout_marginHorizontal="16.0dip" style="@style/Text16" />
+</LinearLayout>

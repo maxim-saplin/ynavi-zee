@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:tag="@string/change_handler_bottom_panel_tag" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/widget_configuration_background_image" android:background="@color/bg_additional_only_dark" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/widget_configuration_preview_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:scaleType="center" />
+            <LinearLayout android:orientation="vertical" android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/widget_configuration_items" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="center|bottom" android:id="@id/widget_configuration_add_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" app:generalButtonSize="big" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@id/widget_configuration_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

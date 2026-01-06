@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.taxi.widget.ShimmeringBar android:id="@id/first_shimmering_bar" android:layout_width="fill_parent" android:layout_height="@dimen/go_design_m_space" android:layout_marginTop="12.0dip" android:layout_marginStart="@dimen/go_design_m_space" android:layout_marginEnd="88.0dip" app:scrolledHorizontally="true" />
+    <ru.yandex.taxi.widget.ShimmeringBar android:id="@id/second_shimmering_bar" android:layout_width="fill_parent" android:layout_height="12.0dip" android:layout_marginTop="32.0dip" android:layout_marginStart="@dimen/go_design_m_space" android:layout_marginEnd="200.0dip" app:scrolledHorizontally="true" />
+</merge>

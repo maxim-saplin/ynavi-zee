@@ -1,0 +1,202 @@
+{
+    "templates": {
+        "pay_button": {
+            "type": "container",
+            "background": [
+                {
+                    "type": "solid",
+                    "$color": "colorForBackground"
+                }
+            ],
+            "border": {
+                "corner_radius": 16
+            },
+            "items": [
+                {
+                    "type": "text",
+                    "alignment_vertical": "bottom",
+                    "font_size": 20,
+                    "font_weight": "medium",
+                    "text_alignment_horizontal": "center",
+                    "$text": "buttonText",
+                    "$text_color": "colorForText",
+                    "$visibility": "isShowButtonText"
+                },
+                {
+                    "type": "custom",
+                    "alignment_horizontal": "center",
+                    "alignment_vertical": "center",
+                    "custom_type": "apply_button_progress",
+                    "height": {
+                        "type": "fixed",
+                        "value": 24
+                    },
+                    "width": {
+                        "type": "fixed",
+                        "value": 24
+                    },
+                    "$visibility": "isShowLoading"
+                }
+            ],
+            "orientation": "overlap",
+            "paddings": {
+                "top": 16,
+                "bottom": 16
+            },
+            "$actions": "clickActions"
+        }
+    },
+    "card": {
+        "log_id": "payment_sdk_card",
+        "variables": [
+            {
+                "type": "string",
+                "name": "cvv_confirm_fragment_currentState",
+                "value": "disabled"
+            },
+            {
+                "type": "string",
+                "name": "screen_title",
+                "value": ""
+            },
+            {
+                "type": "string",
+                "name": "card_title",
+                "value": ""
+            },
+            {
+                "type": "string",
+                "name": "enableButtonText",
+                "value": "Confirm"
+            },
+            {
+                "type": "string",
+                "name": "disableButtonText",
+                "value": "Confirm"
+            }
+
+        ],
+        "variable_triggers": [
+            {
+                "actions": [
+                    {
+                        "log_id": "payment_sdk_cvv_confirm_fragment_pay_button_enabled",
+                        "url": "div-action://set_state?state_id=0/pay_button_state/@{cvv_confirm_fragment_currentState}"
+                    }
+                ],
+                "condition": "@{cvv_confirm_fragment_currentState != ''}",
+                "mode": "on_variable"
+            }
+        ],
+        "states": [
+            {
+                "state_id": 0,
+                "div": {
+                    "type": "container",
+                    "background": [
+                        {
+                            "type": "solid",
+                            "color": "@{isLightTheme ? '#FFFFFF' : '#000000'}"
+                        }
+                    ],
+                    "height": {
+                        "type": "match_parent"
+                    },
+                    "items": [
+                        {
+                            "type": "container",
+                            "items": [
+                                {
+                                    "type": "text",
+                                    "font_family": "display",
+                                    "font_size": 34,
+                                    "font_weight": "medium",
+                                    "letter_spacing": -0.4,
+                                    "text": "@{screen_title}",
+                                    "text_color": "@{isLightTheme ? '#000000' : '#FFFFFF'}"
+                                },
+                                {
+                                    "type": "text",
+                                    "font_size": 16,
+                                    "margins": {
+                                        "top": 12
+                                    },
+                                    "text": "@{card_title}",
+                                    "text_color": "@{isLightTheme ? '#000000' : '#FFFFFF'}"
+                                },
+                                {
+                                    "type": "custom",
+                                    "custom_type": "cvv_confirm_fragment_cvv_input_type",
+                                    "margins": {
+                                        "top": 16
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "text",
+                            "height": {
+                                "type": "match_parent",
+                                "weight": 1
+                            },
+                            "text": "1",
+                            "visibility": "invisible"
+                        },
+                        {
+                            "type": "state",
+                            "default_state_id": "enabled",
+                            "id": "pay_button_state",
+                            "states": [
+                                {
+                                    "state_id": "enabled",
+                                    "div": {
+                                        "type": "pay_button",
+                                        "isShowButtonText": "@{cvv_confirm_fragment_currentState == 'loading' ? 'invisible' : 'visible' }",
+                                        "isShowLoading": "@{cvv_confirm_fragment_currentState == 'loading' ? 'visible' : 'gone' }",
+                                        "clickActions": [
+                                            {
+                                                "log_id": "payment_sdk_cvv_confirm_fragment_apply_cvv",
+                                                "url": "div-action://set_variable?name=apply_cvv&value=1"
+                                            }
+                                        ],
+                                        "buttonText": "@{enableButtonText}",
+                                        "colorForText": "@{isLightTheme ? '#FFFFFF' : '#000000'}",
+                                        "colorForBackground": "@{isLightTheme ? '#2E2F33' : '#E1E3E8'}"
+                                    }
+                                },
+                                {
+                                    "state_id": "disabled",
+                                    "div": {
+                                        "type": "pay_button",
+                                        "isShowLoading": "@{cvv_confirm_fragment_currentState == 'loading' ? 'visible' : 'gone' }",
+                                        "buttonText": "@{disableButtonText}",
+                                        "isShowButtonText": "@{cvv_confirm_fragment_currentState == 'loading' ? 'invisible' : 'visible' }",
+                                        "colorForText": "@{isLightTheme ? '#33000000' : '#40FFFFFF'}",
+                                        "colorForBackground": "@{isLightTheme ? '#F5F7F9' : '#2E2F33'}"
+                                    }
+                                },
+                                {
+                                    "state_id": "loading",
+                                    "div": {
+                                        "type": "pay_button",
+                                        "isShowButtonText": "@{cvv_confirm_fragment_currentState == 'loading' ? 'invisible' : 'visible' }",
+                                        "isShowLoading": "@{cvv_confirm_fragment_currentState == 'loading' ? 'visible' : 'gone' }",
+                                        "buttonText": "@{activeButtonText}",
+                                        "colorForText": "@{isLightTheme ? '#FFFFFF' : '#000000'}",
+                                        "colorForBackground": "@{isLightTheme ? '#2E2F33' : '#E1E3E8'}"
+                                    }
+                                }
+                            ]
+                        }
+                    ],
+                    "orientation": "vertical",
+                    "paddings": {
+                        "right": 16,
+                        "left": 16,
+                        "bottom": 16
+                    }
+                }
+            }
+        ]
+    }
+}

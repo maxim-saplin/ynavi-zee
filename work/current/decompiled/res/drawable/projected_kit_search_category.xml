@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/projected_kit_search_category_background" android:drawable="@drawable/projected_kit_search_category_background" />
+    <item android:id="@id/projected_kit_search_category_icon" android:drawable="@drawable/projected_kit_search_category_icon_stub" />
+</layer-list>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="?messagingCommonBackgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.yandex.bricks.BrickSlotView android:id="@id/chat_info_header_slot" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/msg_divider_settings_items" android:showDividers="middle">
+                <com.yandex.bricks.BrickSlotView android:id="@id/chat_info_notifications_slot" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:id="@id/chat_info_find_in_history_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:drawableStartCompat="@drawable/msg_ic_search_black" style="@style/Messaging.Settings.Item.Text" />
+                <com.yandex.bricks.BrickSlotView android:id="@id/chat_info_edit_slot" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.yandex.bricks.BrickSlotView android:id="@id/chat_info_invite_link_slot" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.yandex.bricks.BrickSlotView android:id="@id/chat_info_participants_button_slot" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:id="@id/media_browser" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messenger_user_info_media_browser_title" app:drawableStartCompat="@drawable/msg_ic_attach" app:drawableTint="?messagingCommonIconsPrimaryColor" style="@style/Messaging.Settings.Item.Text" />
+                <com.yandex.bricks.BrickSlotView android:id="@id/chat_info_starred_list_slot" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.yandex.bricks.BrickSlotView android:id="@id/chat_info_update_organization_slot" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.yandex.bricks.BrickSlotView android:id="@id/chat_info_report_slot" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <com.yandex.bricks.BrickSlotView android:id="@id/chat_info_exit_slot" android:layout_width="fill_parent" android:layout_height="@dimen/chat_info_default_item_height" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

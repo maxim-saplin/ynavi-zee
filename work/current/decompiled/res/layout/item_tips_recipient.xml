@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/tanker_basic_padding" android:paddingEnd="@dimen/tanker_basic_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/avatarIv" android:layout_width="44.0dip" android:layout_height="44.0dip" android:src="@drawable/tanker_avatar_placeholder" />
+    <ru.tankerapp.ui.ListItemComponent android:id="@id/listItem" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:id="@id/tab_navigation_paddington" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:id="@id/tab_navigation_controls" android:paddingBottom="@dimen/map_controls_bottom_offset" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="yes" android:accessibilityTraversalAfter="@id/search_line_view" app:overland_fleets_ids="@string/controls_default_overland_fleets_ids">
+            <include layout="@layout/control_chunk_pin_user_location" />
+            <include layout="@layout/control_chunk_profile_business" />
+            <include layout="@layout/control_chunk_speedometer" />
+            <include layout="@layout/control_chunk_stub_for_promo_object" />
+            <include layout="@layout/control_chunk_indoor" />
+            <include layout="@layout/control_chunk_indoor_dock" />
+            <include layout="@layout/control_chunk_ruler" />
+            <include layout="@layout/control_chunk_layers_menu" />
+            <include layout="@layout/control_chunk_traffic_priority" />
+            <include layout="@layout/control_chunk_carparks" />
+            <include layout="@layout/control_chunk_panorama" />
+            <include layout="@layout/control_chunk_weather" />
+            <include layout="@layout/control_chunk_qibla" />
+            <include layout="@layout/control_chunk_tilt_toggle" />
+            <include layout="@layout/control_chunk_zoom" />
+            <include layout="@layout/control_chunk_position" />
+            <include layout="@layout/control_chunk_panorama_stub" />
+        </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+    </FrameLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

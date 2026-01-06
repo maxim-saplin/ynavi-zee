@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="14.0dip" android:paddingRight="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:stateListAnimator="@animator/alpha_state_list_anim"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.messaging.internal.avatar.AvatarImageView android:id="@id/carousel_contact_avatar" android:layout_width="56.0dip" android:layout_height="56.0dip" app:avatarPadding="0.0dip" app:avatarTextSize="20.0sp" app:placeholderBackground="@drawable/msg_bg_search_item_avatar_placeholder" />
+    <TextView android:textSize="11.0sp" android:textColor="?messagingCommonTextPrimaryColor" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/carousel_contact_name" android:layout_width="56.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="2" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/onboarding_horizontal_interval">
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/onboarding_location_permission_request_title" style="@style/OnBoardingTitleStyle" />
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/onboarding_location_permission_request_description" style="@style/OnBoardingSubTitleStyle" />
+            <TextView android:id="@id/allow_location_button" android:text="@string/onboarding_location_permission_accept_button" android:layout_marginVertical="@dimen/onboarding_button_vertical_margin" style="@style/OnBoardingButton.Black" />
+        </LinearLayout>
+    </FrameLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

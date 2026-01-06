@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/gallery_buttons" android:background="@color/attach_image_preview_buttons_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="start" android:id="@id/gallery_close" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/attachments_chooser_gallery_close" android:drawableLeft="@drawable/attach_gallery_close" android:layout_weight="1.0" android:drawableStart="@drawable/attach_gallery_close" style="@style/GalleryAction" />
+    <TextView android:gravity="end" android:id="@id/gallery_attach" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/attachments_gallery_attach" android:drawableRight="@drawable/attach_gallery_add" android:layout_weight="1.0" android:drawableEnd="@drawable/attach_gallery_add" style="@style/GalleryAction" />
+</LinearLayout>

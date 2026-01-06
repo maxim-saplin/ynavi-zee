@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/tanker_bg_shift_timeline_dot_active" />
+    <item android:drawable="@drawable/tanker_bg_shift_timeline_dot_inactive" />
+</selector>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.Light" android:id="@id/toolbar" android:background="@color/passport_alto" android:layout_width="fill_parent" android:layout_height="wrap_content" android:titleTextColor="@color/passport_white" app:navigationIcon="@drawable/passport_back_light_redesign" />
+    <ScrollView android:paddingTop="16.0dip" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginBottom="12.0dip" app:layout_constraintBottom_toTopOf="@id/show_notification" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <EditText android:id="@id/input_passp_am_proto" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:hint="push_service" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <EditText android:id="@id/input_push_service" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:hint="event_name" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <EditText android:id="@id/input_event_name" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:hint="push_id" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <EditText android:id="@id/input_push_id" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <CheckBox android:id="@id/input_is_silent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="is silent" android:layout_marginStart="16.0dip" />
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:hint="uid" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <EditText android:id="@id/input_uid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:hint="min_am_version" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <EditText android:id="@id/input_min_am_version" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:hint="title" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <EditText android:id="@id/input_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:hint="body" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <EditText android:id="@id/input_body" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:hint="subtitle" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <EditText android:id="@id/input_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:hint="webview_url" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <EditText android:id="@id/input_webview_url" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <CheckBox android:id="@id/input_require_web_auth" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="require_web_auth" android:layout_marginStart="16.0dip" />
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:hint="body_include_code" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <EditText android:id="@id/input_body_include_code" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:hint="track_id" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+                <EditText android:id="@id/input_track_id" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <CheckBox android:id="@id/input_show_code" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="show_code_in_notification" android:layout_marginStart="16.0dip" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@id/show_notification" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginRight="32.0dip" android:layout_marginBottom="12.0dip" android:text="Show notification" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

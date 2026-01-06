@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/reviews_create_rating_image_view" android:layout_width="fill_parent" android:layout_height="132.0dip" android:layout_marginTop="8.0dip" android:scaleType="centerCrop" />
+    <LinearLayout android:orientation="vertical" android:id="@id/reviews_create_rating_container" android:background="@drawable/reviews_create_block_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+        <TextView android:id="@id/reviews_create_rating_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="Text" style="@style/Text16.Medium" />
+        <TextView android:id="@id/reviews_create_rating_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="Subtitle" style="@style/Text14.TextSecondary" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/reviews_create_rating_stars_container" android:focusable="true" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:importantForAccessibility="yes">
+            <include android:id="@id/reviews_create_rating_star_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/reviews_create_rating_star_margin" layout="@layout/rating_star" />
+            <include android:id="@id/reviews_create_rating_star_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/reviews_create_rating_star_margin" layout="@layout/rating_star" />
+            <include android:id="@id/reviews_create_rating_star_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/reviews_create_rating_star_margin" layout="@layout/rating_star" />
+            <include android:id="@id/reviews_create_rating_star_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/reviews_create_rating_star_margin" layout="@layout/rating_star" />
+            <include android:id="@id/reviews_create_rating_star_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/reviews_create_rating_star_margin" layout="@layout/rating_star" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?messagingCommonBackgroundColor" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.bricks.BrickSlotView android:id="@id/chat_create_chooser_toolbar_slot" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:id="@id/border" android:background="?messagingCommonDividerColor" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <com.yandex.bricks.BrickSlotView android:id="@id/user_carousel_slot" android:layout_width="fill_parent" android:layout_height="100.0dip" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.yandex.bricks.BrickSlotView android:id="@id/user_list_slot" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/chat_create_chooser_bottom_margin" />
+        <View android:layout_gravity="bottom" android:id="@id/user_list_bottom_gradient" android:background="@drawable/msg_bg_user_list_bottom" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="@dimen/chat_create_chooser_bottom_margin" />
+        <Button android:textSize="14.0sp" android:textColor="?messagingCommonAccentFgColor" android:layout_gravity="bottom" android:id="@id/create_group_chat_button" android:background="@drawable/msg_bg_accent_btn" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="24.0dip" android:layout_marginRight="24.0dip" android:layout_marginBottom="16.0dip" android:text="@string/btn_create_info_ready" android:textAllCaps="false" android:fontFamily="@font/ya_medium" android:translationZ="1.0dip" android:elevation="3.0dip" />
+    </FrameLayout>
+</LinearLayout>

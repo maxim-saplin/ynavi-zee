@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/masstransit_common_transport_image_view" android:layout_width="@dimen/masstransit_common_icon_size" android:layout_height="@dimen/masstransit_common_icon_size" android:scaleType="center" android:tint="@color/icons_color_bg" />
+    <TextView android:textColor="@color/bw_white" android:gravity="center_vertical" android:id="@id/masstransit_common_transport_image_text_view" android:layout_width="wrap_content" android:layout_height="@dimen/masstransit_common_icon_size" android:singleLine="true" android:paddingEnd="8.0dip" style="@style/Text16" />
+</merge>

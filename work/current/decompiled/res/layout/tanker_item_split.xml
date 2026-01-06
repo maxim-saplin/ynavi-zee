@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/progressView" android:background="@drawable/tanker_bg_split_progress_inactive" android:layout_width="fill_parent" android:layout_height="8.0dip" />
+    <TextView android:textSize="@dimen/tanker_basic_text_size" android:textColor="@color/tanker_selector_text_primary" android:ellipsize="end" android:id="@id/dateTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="Сегодня" android:lines="1" style="@style/TankerTextRegular" />
+    <TextView android:textSize="@dimen/tanker_small_text_size" android:textColor="@color/tanker_selector_text_primary" android:ellipsize="end" android:id="@id/sumTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="300 ₽" android:lines="1" style="@style/TankerTextBold" />
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="@color/bg_primary" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textColorHint="@color/common_hint" android:id="@id/bookmarks_new_folder_bookmark_title" android:background="@drawable/bookmarks_edit_text_shape" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/bookmarks_create_folder_input_title" android:height="48.0dip" android:singleLine="true" android:maxLength="140" android:imeOptions="actionDone|flagNoExtractUi" android:textCursorDrawable="@drawable/blue_cursor" android:layout_marginHorizontal="16.0dip" android:paddingHorizontal="12.0dip" android:paddingVertical="16.0dip" style="@style/Text14" />
+</merge>

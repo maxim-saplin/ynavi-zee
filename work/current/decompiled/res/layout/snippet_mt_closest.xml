@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/snippet_mt_closest_icons" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/snippet_mt_closest_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="2.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/snippet_mt_closest_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/snippet_mt_closest_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="4.0dip" style="@style/Text14.Medium.PermanentWhite" />
+    </LinearLayout>
+    <TextView android:layout_gravity="center_vertical" android:id="@id/snippet_mt_closest_closest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/masstransit_schedule_closest" android:layout_marginEnd="2.0dip" style="@style/Text14" />
+    <ru.yandex.maps.uikit.atomicviews.arrivaltime.ArrivalTimeView android:layout_gravity="center_vertical" android:id="@id/snippet_mt_closest_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" />
+</merge>

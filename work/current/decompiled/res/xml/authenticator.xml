@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator android:label="@string/passport_authenticator_name" android:icon="@drawable/passport_icon_yandex_big" android:accountType="@string/passport_account_type" android:smallIcon="@drawable/passport_icon_yandex_small"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

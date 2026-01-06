@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/bottomSheetView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.tankerapp.ui.uimode.TankerImageView android:layout_gravity="top" android:id="@id/locationView" android:background="@drawable/map_button_round" android:layout_width="@dimen/tanker_menu_location_btn_size" android:layout_height="@dimen/tanker_menu_location_btn_size" android:layout_margin="@dimen/tanker_basic_padding" android:src="@drawable/tanker_ic_location" android:scaleType="centerInside" android:tint="@color/tanker_icon" android:translationY="-16.0dip" app:layout_anchor="@id/recyclerView" app:layout_anchorGravity="end|top" />
+        <View android:id="@id/divider" android:translationY="-8.0dip" app:layout_anchor="@id/recyclerView" app:layout_anchorGravity="center|top" style="@style/TankerDividerView" />
+        <ru.tankerapp.ui.uimode.TankerFrameLayout android:id="@id/bottomSheetContent" android:background="@color/tanker_menuBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:behavior_hideable="false" app:behavior_peekHeight="80.0dip" app:layout_behavior="ru.tankerapp.ui.LockedBottomSheetBehavior">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            <FrameLayout android:id="@id/logoContainer" android:background="@color/tanker_backgroundColorNew" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ru.tankerapp.ui.uimode.TankerImageView android:layout_gravity="center|top" android:id="@id/logoIv" android:layout_width="wrap_content" android:layout_height="28.0dip" android:layout_marginTop="@dimen/tanker_basic_padding" app:srcCompat="@drawable/tanker_menu_icon" />
+            </FrameLayout>
+        </ru.tankerapp.ui.uimode.TankerFrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

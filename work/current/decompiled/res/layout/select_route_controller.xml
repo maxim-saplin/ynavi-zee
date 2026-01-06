@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:id="@id/select_route_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/select_route_background" android:background="@color/bw_black_alpha30" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="start|bottom" android:id="@id/bppm_ad_container" android:paddingTop="16.0dip" android:focusable="false" android:clipChildren="false" android:clipToPadding="false" android:layout_height="wrap_content" android:importantForAccessibility="noHideDescendants" style="@style/ShutterBoundLayoutParams" />
+    <ru.yandex.yandexmaps.uikit.shutter.TwoAxesSlidingRecyclerView android:id="@id/select_route_shutter" android:tag="@string/change_handler_bottom_panel_tag" android:descendantFocusability="beforeDescendants" style="@style/ShutterCommonLayoutParams" />
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.bottompanel.BottomPanel android:layout_gravity="start|bottom" android:id="@id/bottom_panel" android:layout_height="@dimen/bottom_panel_height" style="@style/ShutterBoundLayoutParams" />
+    <com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:id="@id/dialog_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/transition_onboarding_black_screen" android:background="#4d000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ru.yandex.yandexmaps.uikit.shutter.ShutterView android:id="@id/guidance_transition_shutter" android:tag="@string/change_handler_bottom_panel_tag" style="@style/ShutterCommonLayoutParams" />
+</com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:background="@drawable/common_white_oval" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="center" android:tint="@color/icons_color_bg" android:layout_alignParentTop="true" android:backgroundTint="@color/icons_actions" app:srcCompat="@drawable/settings_24" />
+    <TextView android:id="@id/channel_blocked_request_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/channel_blocked_message" android:layout_marginStart="64.0dip" style="@style/Text16" />
+</FrameLayout>

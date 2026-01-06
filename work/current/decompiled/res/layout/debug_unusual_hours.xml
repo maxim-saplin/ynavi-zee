@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="unusual_hours:" />
+    <TextView android:id="@id/debug_unusual_hours_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Button android:layout_gravity="center_horizontal" android:id="@id/debug_unusual_hours_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Добавить праздник" />
+    <TextView android:paddingTop="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="valid_schedule:" />
+    <TextView android:id="@id/debug_valid_hours_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <Button android:layout_gravity="center_horizontal" android:id="@id/debug_valid_hours_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Добавить верифицированный день" />
+    <Button android:layout_gravity="center_horizontal" android:id="@id/debug_unusual_hours_clear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Очистить" />
+</LinearLayout>

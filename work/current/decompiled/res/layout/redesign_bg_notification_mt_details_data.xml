@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/notification_mt_details_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="12.0dip" android:src="@color/bg_separator" android:scaleType="fitXY" android:contentDescription="@null" />
+    <ImageView android:id="@id/notification_mt_details_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:scaleType="centerCrop" android:adjustViewBounds="true" android:minHeight="22.0dip" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/debug_footer_frame" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/debug_close_success" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="close#success" android:layout_weight="1.0" android:textAllCaps="false" style="?buttonStyle" />
+    <Button android:id="@id/debug_close_settings" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="close#settings" android:layout_weight="1.0" android:textAllCaps="false" style="?buttonStyle" />
+    <Button android:id="@id/debug_close_already_premium" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="close#already-premium" android:layout_weight="1.0" android:textAllCaps="false" style="?buttonStyle" />
+    <Button android:id="@id/debug_close" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="close (just)" android:layout_weight="1.0" android:textAllCaps="false" style="?buttonStyle" />
+</LinearLayout>

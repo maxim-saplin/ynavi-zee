@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/placecard_mtthread_closest_stop_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="15.0dip" />
+        <TextView android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/placecard_mtthread_closest_stop_route_description" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:layout_weight="1.0" android:layout_marginStart="16.0dip" style="@style/Text14.TextPrimary" />
+        <TextView android:layout_gravity="end|center" android:id="@id/placecard_mtthread_closest_stop_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" style="@style/Text14.Medium.DarkerGrey" />
+        <ImageView android:layout_gravity="end|center" android:id="@id/placecard_mtthread_closest_stop_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/icons_secondary" android:layout_marginEnd="16.0dip" android:layout_marginVertical="16.0dip" app:srcCompat="@drawable/arrow_down_8" />
+    </LinearLayout>
+    <TextView android:textColor="@color/text_alert" android:id="@id/placecard_mtthread_closest_stop_no_boarding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/transit_item_no_boarding" android:layout_marginStart="55.0dip" style="@style/Text14.Medium" />
+</merge>

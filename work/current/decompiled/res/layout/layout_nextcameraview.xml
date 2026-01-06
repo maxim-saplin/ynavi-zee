@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.navilib.widget.NaviLinearLayout android:orientation="horizontal" android:paddingTop="@dimen/next_camera_vertical_padding" android:paddingBottom="@dimen/next_camera_vertical_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/next_camera_left_padding" android:paddingEnd="@dimen/indent_one_and_half"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.navilib.widget.NaviImageView android:id="@id/cameraIcon" android:layout_width="@dimen/next_camera_icon_size" android:layout_height="@dimen/next_camera_icon_size" app:srcCompat="@drawable/road_alerts_camera_32" />
+    <com.yandex.navilib.widget.NaviTextView android:textSize="@dimen/textsize_H1" android:textColor="@color/mapbutton_next_camera_textcolor" android:layout_gravity="center_vertical" android:id="@id/distanceToCamera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/next_camera_icon_to_text_margin" style="@style/NaviTextMedium" />
+</com.yandex.navilib.widget.NaviLinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="48.0dip" android:width="48.0dip" android:viewportWidth="48.0" android:viewportHeight="48.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="#ff1a1a1a" android:pathData="M24 0a24 24 0 1 0 0 48a24 24 0 1 0 0-48z" />
+    <group>
+        <path android:fillColor="#ffffffff" android:pathData="M35.21 15.43h-11.1v4.35h11.1v-4.35z" />
+        <path android:fillColor="@drawable/$gas_search_rubrics_new_branding_exp_48__0" android:pathData="M35.21 15.43h-11.1v4.35h11.1v-4.35z" />
+        <path android:fillColor="@drawable/$gas_search_rubrics_new_branding_exp_48__1" android:pathData="M35.21 15.43h-11.1v4.35h11.1v-4.35z" />
+        <path android:fillColor="#ffffffff" android:pathData="M24.12 31.19c-4.35 0-7.88-3.54-7.88-7.88c0-4.35 3.53-7.88 7.88-7.88c4.34 0 7.87 3.53 7.87 7.88c0 4.34-3.53 7.88-7.87 7.88zm0-11.4c-0.94 0-1.84 0.37-2.5 1.03c-0.66 0.66-1.03 1.55-1.03 2.49c0 0.93 0.37 1.83 1.03 2.49c0.66 0.66 1.56 1.03 2.5 1.03c0.93 0 1.83-0.37 2.49-1.03c0.66-0.66 1.03-1.56 1.03-2.5c0-0.93-0.37-1.82-1.03-2.48c-0.66-0.66-1.56-1.04-2.5-1.04z" />
+        <path android:fillColor="#ff42ff98" android:pathData="M24.12 31.19c-4.35 0-7.88-3.54-7.88-7.88c0-4.35 3.53-7.88 7.88-7.88c4.34 0 7.87 3.53 7.87 7.88c0 4.34-3.53 7.88-7.87 7.88zm0-11.4c-0.94 0-1.84 0.37-2.5 1.03c-0.66 0.66-1.03 1.55-1.03 2.49c0 0.93 0.37 1.83 1.03 2.49c0.66 0.66 1.56 1.03 2.5 1.03c0.93 0 1.83-0.37 2.49-1.03c0.66-0.66 1.03-1.56 1.03-2.5c0-0.93-0.37-1.82-1.03-2.48c-0.66-0.66-1.56-1.04-2.5-1.04z" />
+        <path android:fillColor="@drawable/$gas_search_rubrics_new_branding_exp_48__2" android:pathData="M17.07 26.83c1.3 2.58 3.97 4.36 7.05 4.36v-4.36c-0.94 0-1.84-0.37-2.5-1.03c-0.66-0.66-1.03-1.56-1.03-2.5l-3.52 3.53z" />
+        <path android:fillColor="@drawable/$gas_search_rubrics_new_branding_exp_48__3" android:pathData="M17.07 26.83c1.3 2.58 3.97 4.36 7.05 4.36v-4.36c-0.94 0-1.84-0.37-2.5-1.03c-0.66-0.66-1.03-1.56-1.03-2.5l-3.52 3.53z" />
+        <path android:fillColor="#ffffffff" android:pathData="M16.23 38.24h4.36V23.3h-4.36v14.93z" />
+        <path android:fillColor="@drawable/$gas_search_rubrics_new_branding_exp_48__4" android:pathData="M16.23 38.24h4.36V23.3h-4.36v14.93z" />
+    </group>
+</vector>

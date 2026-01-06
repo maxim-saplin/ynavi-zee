@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <cache-path name="messaging_cache" path="." />
+    <external-cache-path name="messaging_external_cache" path="." />
+    <external-cache-path name="shared_media" path="." />
+    <external-cache-path name="share_photo" path="." />
+    <external-path name="downloads" path="Download/" />
+</paths>

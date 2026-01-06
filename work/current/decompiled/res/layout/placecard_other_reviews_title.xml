@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextSwitcher android:layout_gravity="center_vertical" android:id="@id/placecard_other_reviews_title_label" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no" style="@style/Text16.Medium" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no" style="@style/Text16.Medium" />
+    </TextSwitcher>
+    <ru.yandex.yandexmaps.reviews.views.ranking.RankingSelectorView android:layout_gravity="center_vertical" android:id="@id/placecard_other_reviews_title_ranking_selector" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+</merge>

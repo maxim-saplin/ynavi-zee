@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.SkeletonView android:id="@id/skeletonImage" android:layout_width="@dimen/bank_sdk_item_image_size" android:layout_height="@dimen/bank_sdk_item_image_size" app:bank_sdk_cornerRadius="@dimen/bank_sdk_image_skeleton_radius" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.yandex.bank.widgets.common.SkeletonView android:id="@id/skeletonText" android:layout_width="160.0dip" android:layout_height="20.0dip" android:layout_marginStart="12.0dip" app:bank_sdk_cornerRadius="@dimen/bank_sdk_text_skeleton_radius" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/skeletonImage" app:layout_constraintTop_toTopOf="parent" />
+    <com.yandex.bank.widgets.common.SkeletonView android:id="@id/skeletonPercent" android:layout_width="62.0dip" android:layout_height="20.0dip" app:bank_sdk_cornerRadius="@dimen/bank_sdk_text_skeleton_radius" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

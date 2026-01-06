@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/nextManeuverViewTinted" android:layout_width="@dimen/notification_maneuver_image_size" android:layout_height="@dimen/notification_maneuver_image_size" android:tint="@color/text_body_white" />
+    <ImageView android:id="@id/nextManeuverView" android:visibility="gone" android:layout_width="@dimen/notification_maneuver_image_size" android:layout_height="@dimen/notification_maneuver_image_size" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip">
+        <TextView android:textSize="@dimen/notification_title_text_size" android:textStyle="bold" android:textColor="@color/text_body_white" android:id="@id/titleView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.0dip" style="@style/NaviTextBold" />
+        <TextView android:textSize="@dimen/notification_description_text_size" android:textColor="@color/text_body_white" android:id="@id/descriptionView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-2.0dip" style="@style/NaviTextRegular" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="36.0dip" android:viewportWidth="36.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$bank_sdk_ic_yandex_wallet__0" android:pathData="M0,6.4C0,4.16 0,3.04 0.436,2.184C0.819,1.431 1.431,0.819 2.184,0.436C3.04,0 4.16,0 6.4,0H29.6C31.84,0 32.96,0 33.816,0.436C34.569,0.819 35.181,1.431 35.564,2.184C36,3.04 36,4.16 36,6.4V17.6C36,19.84 36,20.96 35.564,21.816C35.181,22.569 34.569,23.181 33.816,23.564C32.96,24 31.84,24 29.6,24H6.4C4.16,24 3.04,24 2.184,23.564C1.431,23.181 0.819,22.569 0.436,21.816C0,20.96 0,19.84 0,17.6V6.4Z" />
+    <path android:fillColor="#ffffffff" android:pathData="M19.549,6.782H18.441C16.408,6.782 15.339,7.811 15.339,9.329C15.339,11.045 16.078,11.85 17.596,12.88L18.85,13.725L15.246,19.11H12.554L15.788,14.292C13.927,12.959 12.884,11.665 12.884,9.474C12.884,6.729 14.798,4.854 18.427,4.854H22.031V19.097H19.549V6.782Z" />
+</vector>

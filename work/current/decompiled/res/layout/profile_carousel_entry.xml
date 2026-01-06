@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_horizontal" android:clipChildren="false" android:clipToPadding="false" android:layout_width="56.0dip" android:layout_height="56.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/profile_carousel_entry_image" android:background="@drawable/profile_carousel_entry_background" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerInside" />
+        <ImageView android:layout_gravity="end|top" android:id="@id/profile_carousel_entry_dot" android:layout_width="12.0dip" android:layout_height="12.0dip" android:contentDescription="@null" android:translationX="2.0dip" android:translationY="-2.0dip" />
+    </FrameLayout>
+    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/profile_carousel_entry_text" android:layout_width="72.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="2" style="@style/Text12.Medium" />
+</merge>

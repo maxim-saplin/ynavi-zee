@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/container_shimmer_item" android:background="@drawable/common_clickable_panel_background_no_border_impl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/shimmer_image" android:background="@drawable/background_payment_method_image_shimmer" android:clickable="false" android:layout_width="36.0dip" android:layout_height="24.0dip" android:layout_marginStart="16.0dip" style="@style/CommonShimmer" />
+    <com.facebook.shimmer.ShimmerFrameLayout android:background="@drawable/background_payment_method_shimmer" android:clickable="false" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="56.0dip" style="@style/CommonShimmer" />
+</LinearLayout>

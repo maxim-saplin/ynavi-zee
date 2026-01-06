@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">%1$d рақамҳои охир</item>
+        <item quantity="zero">%1$d рақамҳои охир</item>
+        <item quantity="one">%1$d рақами охирро</item>
+        <item quantity="few">%1$d рақамҳои охир</item>
+        <item quantity="many">%1$d рақамҳои охир</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"Ҳозир ба шумо занг аз рақами 
+%1$s ворид мешавад. %2$d адади охири рақамро ворид кунед"</item>
+        <item quantity="zero">"Ҳозир ба шумо занг аз рақами 
+%1$s ворид мешавад. %2$d адади охири рақамро ворид кунед"</item>
+        <item quantity="one">"Ҳозир ба шумо занг аз рақами 
+%1$s ворид мешавад. %2$d адади охири рақамро ворид кунед"</item>
+        <item quantity="few">"Ҳозир ба шумо занг аз рақами 
+%1$s ворид мешавад. %2$d адади охири рақамро ворид кунед"</item>
+        <item quantity="many">"Ҳозир ба шумо занг аз рақами 
+%1$s ворид мешавад. %2$d адади охири рақамро ворид кунед"</item>
+    </plurals>
+</resources>

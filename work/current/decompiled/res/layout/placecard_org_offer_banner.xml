@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/org_offer_banner_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+    <TextView android:id="@id/org_offer_banner_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginHorizontal="12.0dip" style="@style/Text14.TextPrimary" />
+    <ImageView android:layout_width="8.0dip" android:layout_height="8.0dip" android:src="@drawable/arrow_right_8" app:tint="@color/icons_additional" />
+</merge>

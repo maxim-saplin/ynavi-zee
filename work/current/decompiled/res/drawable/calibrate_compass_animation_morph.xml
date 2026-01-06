@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/illustration_loop_main_morph"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target android:name="phone_bezier" android:animation="@anim/compass_calibration_phone_morph_reset" />
+    <target android:name="phone_wrap" android:animation="@anim/compass_calibration_phone_move_while_morph_reset" />
+    <target android:name="phone_bezier" android:animation="@anim/compass_calibration_phone_morph_to_middle" />
+    <target android:name="phone_bezier" android:animation="@anim/compass_calibration_phone_morph_to_min" />
+    <target android:name="phone_wrap" android:animation="@anim/compass_calibration_phone_move_while_morph_x" />
+    <target android:name="phone_wrap" android:animation="@anim/compass_calibration_phone_move_while_morph_y" />
+    <target android:name="phone_dots_bezier" android:animation="@anim/compass_calibration_phone_dots_fade_out" />
+    <target android:name="phone_dots_bezier" android:animation="@anim/compass_calibration_phone_dots_fade_out_reset" />
+</animated-vector>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.ExpandableTextViewWithToggle android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:captionToHide="@string/reviews_expansion_toggle_hide" custom:captionToShow="@string/reviews_expansion_toggle_show" custom:collapseToLinesCount="10" custom:textViewResource="@layout/reviews_card_user_review_text" custom:toggleTextViewResource="@layout/reviews_card_user_review_expandable_toggle_text_view" style="@style/Text14.TextPrimary"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto" />

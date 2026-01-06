@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:baselineAligned="false">
+        <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:id="@id/parking_payment_process_car_snippet" android:background="@color/buttons_secondary" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" app:cornerRadius="12.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:layout_width="63.0dip" android:layout_height="wrap_content" android:src="@drawable/parking_payment_car" android:scaleType="center" android:layout_marginStart="12.0dip" />
+                <androidx.appcompat.widget.AppCompatTextView android:gravity="end|center" android:layout_gravity="center_vertical" android:id="@id/parking_payment_process_car_snippet_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="16.0dip" style="@style/Text16.Medium" />
+            </LinearLayout>
+        </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+        <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:id="@id/parking_payment_process_balance_snippet" android:background="@color/buttons_secondary" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="8.0dip" app:cornerRadius="12.0dip">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingHorizontal="16.0dip" android:paddingVertical="12.0dip">
+                <androidx.appcompat.widget.AppCompatImageView android:id="@id/parking_payment_payment_icon" android:layout_width="24.0dip" android:layout_height="36.0dip" android:layout_marginEnd="8.0dip" />
+                <androidx.appcompat.widget.AppCompatTextView android:layout_gravity="center_vertical" android:id="@id/parking_payment_process_balance_snippet_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium" />
+            </LinearLayout>
+        </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+    </LinearLayout>
+</merge>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/mt_snippet_transport_micro_transport_icon" android:focusable="true" android:layout_width="20.0dip" android:layout_height="fill_parent" android:scaleType="centerInside" />
+    <TextView android:textColor="@color/bw_white" android:gravity="center" android:id="@id/mt_snippet_transport_micro_transport_number" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="20.0dip" android:lines="1" android:textDirection="inherit" android:layout_marginStart="4.0dip" android:paddingHorizontal="4.0dip" style="@style/Text12.Medium" />
+    <ImageView android:id="@id/mt_snippet_transport_micro_other" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.3" android:layout_marginStart="-3.0dip" app:srcCompat="@drawable/transit_snippet_more_20" />
+</LinearLayout>

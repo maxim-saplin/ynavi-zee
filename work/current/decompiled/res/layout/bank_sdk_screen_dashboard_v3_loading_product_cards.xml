@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.yandex.bank.widgets.common.SkeletonView android:id="@id/card" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" app:bank_sdk_cornerRadius="@dimen/bank_sdk_product_card_corner_radius" app:layout_constraintDimensionRatio="@dimen/bank_sdk_product_card_view_ratio" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>

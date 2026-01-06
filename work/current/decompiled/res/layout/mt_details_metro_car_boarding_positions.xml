@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="68.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="36.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:srcCompat="@drawable/train_start_24" app:tint="@color/icons_additional" />
+        <ImageView android:id="@id/mt_details_metro_car_boarding_positions_segment_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:srcCompat="@drawable/train_car_24" app:tint="@color/icons_additional" />
+        <ImageView android:id="@id/mt_details_metro_car_boarding_positions_segment_near_the_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:srcCompat="@drawable/train_car_24" app:tint="@color/icons_additional" />
+        <ImageView android:id="@id/mt_details_metro_car_boarding_positions_segment_middle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:srcCompat="@drawable/train_car_24" app:tint="@color/icons_additional" />
+        <ImageView android:id="@id/mt_details_metro_car_boarding_positions_segment_near_the_last" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:srcCompat="@drawable/train_car_active_24" />
+        <ImageView android:id="@id/mt_details_metro_car_boarding_positions_segment_last" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:srcCompat="@drawable/train_car_24" app:tint="@color/icons_additional" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:srcCompat="@drawable/train_end_24" app:tint="@color/icons_additional" />
+    </LinearLayout>
+    <TextView android:ellipsize="end" android:id="@id/mt_details_metro_car_boarding_positions_text" android:paddingTop="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/Text14.TextSecondary" />
+</LinearLayout>

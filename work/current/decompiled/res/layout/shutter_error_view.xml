@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/shutter_error_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" style="@style/Text16.Medium.TextPrimary" />
+    <TextView android:gravity="center" android:id="@id/shutter_error_message" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text16.TextPrimaryVariant" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/shutter_error_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+</merge>

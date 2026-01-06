@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="28.0dip" android:width="28.0dip" android:viewportWidth="28.0" android:viewportHeight="28.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?passportNextSocialIconFacebookColor" android:pathData="M15.958762 26l0 -12.506281 3.607212 0 0.367537 -3.426636 -3.974394 0 0 -3.0689565c0 -1.1121039 0.721964 -1.6802792 1.641571 -1.6802792L20 5.3178473 20 2.014033 16.504801 2c-3.40131 0 -4.940859 2.0071387 -4.940859 4.736556l0 3.326435 -2.563942 0 0 3.430728 2.563942 0 0 12.506281 4.39482 0z" />
+</vector>

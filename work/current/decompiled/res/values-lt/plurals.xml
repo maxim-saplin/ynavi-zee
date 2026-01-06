@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Prasukti pirmyn %d sekundžių</item>
+        <item quantity="one">Prasukti pirmyn %d sekundę</item>
+        <item quantity="few">Prasukti pirmyn %d sekundes</item>
+        <item quantity="many">Prasukti pirmyn %d sekundės</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Atsukti atgal %d sekundžių</item>
+        <item quantity="one">Atsukti atgal %d sekundę</item>
+        <item quantity="few">Atsukti atgal %d sekundes</item>
+        <item quantity="many">Atsukti atgal %d sekundės</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d naujų pranešimų</item>
+        <item quantity="one">%d naujas pranešimas</item>
+        <item quantity="few">%d nauji pranešimai</item>
+        <item quantity="many">%d naujo pranešimo</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Paskutiniai %1$d skaitmenys</item>
+        <item quantity="zero">Paskutiniai %1$d skaitmenų</item>
+        <item quantity="one">Paskutinis %1$d skaitmuo</item>
+        <item quantity="few">Paskutiniai %1$d skaitmenys</item>
+        <item quantity="many">Paskutiniai %1$d skaitmenų</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"Dabar Jums paskambins iš numerio
+%1$s. Įveskite paskutinius %2$d numerio skaitmenis"</item>
+        <item quantity="zero">"Dabar Jums paskambins iš numerio
+%1$s. Įveskite paskutinius %2$d numerio skaitmenis"</item>
+        <item quantity="one">"Dabar Jums paskambins iš numerio
+%1$s. Įveskite paskutinį %2$d numerio skaitmenį"</item>
+        <item quantity="few">"Dabar Jums paskambins iš numerio
+%1$s. Įveskite paskutinius %2$d numerio skaitmenis"</item>
+        <item quantity="many">"Dabar Jums paskambins iš numerio
+%1$s. Įveskite paskutinius %2$d numerio skaitmenis"</item>
+    </plurals>
+</resources>

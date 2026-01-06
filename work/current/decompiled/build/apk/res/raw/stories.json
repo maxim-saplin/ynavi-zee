@@ -1,0 +1,3275 @@
+{
+  "stories": [
+
+    {
+      "id": "story_collection_46",
+      "title": "Главные выставки июля",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_46/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_46_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/glavnije-vystavki-mesyaca/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_46/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_46/1x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_46_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/glavnije-vystavki-mesyaca/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_46/2.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_46/2x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_46_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/glavnije-vystavki-mesyaca/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_46/3.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_46/3x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_46_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/glavnije-vystavki-mesyaca/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_46/4.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_46/4x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_46_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/glavnije-vystavki-mesyaca/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_46/5.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_46/5x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_46_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/glavnije-vystavki-mesyaca/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_46/6.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_46/6x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_46_story_7",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/glavnije-vystavki-mesyaca/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_46/7.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_46/7x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_45",
+      "title": "Где есть холодные супы",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_45/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_45_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/holodnye-supyi",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_45/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_45/1x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_45_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/holodnye-supyi",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_45/2.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_45/2x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_45_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/holodnye-supyi",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_45/3.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_45/3x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_45_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/holodnye-supyi",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_45/4.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_45/4x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_45_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/holodnye-supyi",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_45/5.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_45/5x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_44",
+      "title": "Первая IKEA в пределах МКАД",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_44/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_44_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/ikea_dizayn_studiya/110840742343/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_44/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_44/1x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_41",
+      "title": "Чем заняться в выходные",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_41/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_41_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moscow-weekend-plans/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_41/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_41/1x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_41_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moscow-weekend-plans/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_41/2.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_41/2x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_41_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moscow-weekend-plans/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_41/3.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_41/3x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_41_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moscow-weekend-plans/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_41/4.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_41/4x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_41_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moscow-weekend-plans/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_41/5.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_41/5x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_41_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moscow-weekend-plans/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_41/6.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_41/6x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_41_story_7",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moscow-weekend-plans/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_41/7.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_41/7x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_43",
+      "title": "Выходные в Коломне",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_43/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_43_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/chto-posmotret-v-kolomne",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_43/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_43/1x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_43_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/chto-posmotret-v-kolomne",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_43/2.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_43/2x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_43_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/chto-posmotret-v-kolomne",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_43/3.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_43/3x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_43_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/chto-posmotret-v-kolomne",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_43/4.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_43/4x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_43_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/chto-posmotret-v-kolomne",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_43/5.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_43/5x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_43_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/chto-posmotret-v-kolomne",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_43/6.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_43/6x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_43_story_7",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/chto-posmotret-v-kolomne",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_43/7.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_43/7x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_42",
+      "title": "Новое место: Ra'men",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_42/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_42_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/ra_men/216318179518",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_42/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_42/1x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_42_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/ra_men/216318179518",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_42/2.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_42/2x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_42_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/ra_men/216318179518",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_42/3.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_42/3x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_42_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/ra_men/216318179518",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_42/4.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_42/4x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_42_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/ra_men/216318179518",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_42/5.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_42/5x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_42_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/ra_men/216318179518",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_42/6.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_42/6x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_40",
+      "title": "Что нового в кино?",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_40/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_40_story_1",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_40/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_40/1x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_40_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://open_url?url=https://www.kinopoisk.ru/film/1009739/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_40/2.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_40/2x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_40_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://open_url?url=https://www.kinopoisk.ru/film/sobachya-zhizn-2-2019-1122114/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_40/3.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_40/3x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_40_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://open_url?url=https://www.kinopoisk.ru/film/1044281/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_40/4.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_40/4x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_40_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://open_url?url=https://www.kinopoisk.ru/film/684983/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_40/5.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_40/5x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_39",
+      "title": "Главные фестивали лета",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_39/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_39_story_1",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_39/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_39/1x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_39_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://open_url?url=https://afisha.yandex.ru/moscow/festival/bosco-fresh-fest-2019",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_39/2.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_39/2x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_39_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://open_url?url=https://afisha.yandex.ru/moscow/festival/bol-2019",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_39/3.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_39/3x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_39_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://open_url?url=https://afisha.yandex.ru/moscow/festival/park-live-2019",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_39/4.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_39/4x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_39_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://open_url?url=https://afisha.yandex.ru/moscow/festival/piknik-afishi-2019",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_39/5.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_39/5x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_38",
+      "title": "Куда пойти в выходные",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_38/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_38_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moscow-weekend-plans/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_38/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_38/1x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_38_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moscow-weekend-plans/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_38/2.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_38/2x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_38_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moscow-weekend-plans/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_38/3.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_38/3x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_38_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moscow-weekend-plans/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_38/4.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_38/4x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_38_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moscow-weekend-plans/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_38/5.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_38/5x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_36",
+      "title": "Где кататься на лодках",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_36/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_36_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-pokatatsa-na-katamaranah-msk",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_36/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_36/1x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_36_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-pokatatsa-na-katamaranah-msk",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_36/2.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_36/2x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_36_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-pokatatsa-na-katamaranah-msk",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_36/3.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_36/3x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_36_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/ggde-pokatatsa-na-katamaranah-msk",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_36/4.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_36/4x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_36_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-pokatatsa-na-katamaranah-msk",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_36/5.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_36/5x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_35",
+      "title": "Что нового в кино?",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_35/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_35_story_1",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_35/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_35/1x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_35_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://open_url?url=https://www.kinopoisk.ru/film/846824/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_35/2.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_35/2x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_35_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://open_url?url=https://www.kinopoisk.ru/film/1179256/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_35/3.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_35/3x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_35_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://open_url?url=https://www.kinopoisk.ru/film/ylda-2019-1221042/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_35/4.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_35/4x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_35_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://open_url?url=https://www.kinopoisk.ru/film/1067645/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_35/5.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_35/5x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_33",
+      "title": "Необычное мороженое",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_33/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_33_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-est-neobychnoe-morozhenoe",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_33/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_33/1x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_33_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-est-neobychnoe-morozhenoe",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_33/2.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_33/2x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_33_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-est-neobychnoe-morozhenoe",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_33/3.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_33/3x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_33_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-est-neobychnoe-morozhenoe",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_33/4.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_33/4x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_33_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-est-neobychnoe-morozhenoe",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_33/5.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_33/5x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_33_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-est-neobychnoe-morozhenoe",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_33/6.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_33/6x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_34",
+      "title": "Выходные в Сергиевом Посаде",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_34/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_34_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gchto-posmotret-v-sergievom-posade",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_34/1.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_34/1x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_34_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/chto-posmotret-v-sergievom-posade",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_34/2.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_34/2x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_34_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/chto-posmotret-v-sergievom-posade",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_34/3.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_34/3x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_34_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/chto-posmotret-v-sergievom-posade",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_34/4.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_34/4x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_34_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/chto-posmotret-v-sergievom-posade",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_34/5.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_34/5x.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_34_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/chto-posmotret-v-sergievom-posade",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_34/6.mp4"
+            },
+            {
+              "resolution": {
+                "width": 1124,
+                "height": 2436
+              },
+
+              "url": "https://mobile-maps-common.s3.yandex.net/staging/v1/stories/story_collection_34/6x.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_30",
+      "title": "Зачем ехать в глэмпинг",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_30/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_30_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/glamping",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_30/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_30_story_2",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_30/2.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_30_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/161806532113/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_30/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_30_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/161806532113/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_30/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_30_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/161806532113/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_30/5.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_30_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/161806532113/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_30/6.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_30_story_7",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/glamping",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_30/7.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_29",
+      "title": "Новый бар «Ровесник»",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_29/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_29_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/168523045237/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_29/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_29_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/168523045237/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_29/2.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_29_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/168523045237/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_29/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_29_story_4",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/168523045237/",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_29/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_29_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/168523045237/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_29/5.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_29_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/168523045237/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_29/6.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_28",
+      "title": "Где купаться в Москве",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_28/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_28_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-kupatsya-v-moskve",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_28/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_28_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-kupatsya-v-moskve",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_28/2.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_28_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/191057611269/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_28/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_28_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/1009641976/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_28/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_28_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-kupatsya-v-moskve",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_28/5.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_26",
+      "title": "Новый ресторан Blanc",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_26/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_26_story_1",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_26/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_26_story_2",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_26/2.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_26_story_3",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_26/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_26_story_4",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_26/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_26_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/org/200805773509/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_26/5.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_25",
+      "title": "Панды в городе",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_25/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_24_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=1110600521",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_25/1.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_24",
+      "title": "Летние веранды",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_24/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_24_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/verandy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_24/1.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_22",
+      "title": "Новые рюмочные",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_22/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_22_story_1",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_22/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_22_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moskovskie-rumochnie",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_22/2.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_22_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moskovskie-rumochnie",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_22/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_22_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moskovskie-rumochnie",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_22/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_22_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moskovskie-rumochnie",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_22/5.mp4"
+            }
+          ]
+        },
+
+        {
+          "id": "story_collection_22_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/moskovskie-rumochnie",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_22/6.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_21",
+      "title": "Необычные детские площадки",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_21/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_21_story_1",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_21/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_21_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/neobychnye-detskye-ploshadky",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_21/2.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_21_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/neobychnye-detskye-ploshadky",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_21/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_21_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/neobychnye-detskye-ploshadky",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_21/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_21_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/neobychnye-detskye-ploshadky",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_21/5.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_21_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/neobychnye-detskye-ploshadky",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_21/6.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_21_story_7",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/neobychnye-detskye-ploshadky",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_21/7.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_17",
+      "title": "Новый ресторан Cameo",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_17/preview.png",
+      "elements": [
+        {
+          "id": "story_collection_17_story_1",
+          "duration": 8,
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=216640143719",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_17/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_17_story_2",
+          "duration": 8,
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=216640143719",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_17/2.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_17_story_3",
+          "duration": 8,
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=216640143719",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_17/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_17_story_4",
+          "duration": 8,
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=216640143719",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_17/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_17_story_5",
+          "duration": 8,
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=216640143719",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_17/5.mp4"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "story_collection_15",
+      "title": "Как начать разбираться в архитектуре",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_15/preview.jpg",
+      "elements": [
+        {
+          "id": "story_collection_15_story_1",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_15/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_15_story_2",
+          "asset_type": "photo",
+          "asset": [
+            {
+              "resolution": {
+                "width": 2160,
+                "height": 3840
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_15/2.png"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_15_story_3",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_15/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_15_story_4",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_15/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_15_story_5",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_15/5.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_15_story_6",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_15/6.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_15_story_7",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_15/7.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_15_story_8",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_15/8.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_15_story_9",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_15/9.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_15_story_10",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_15/10.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_15_story_11",
+          "asset_type": "photo",
+          "asset": [
+            {
+              "resolution": {
+                "width": 2160,
+                "height": 3840
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_15/11.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_1",
+      "title": "Полюбуйтесь «Криком» Мунка",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_1/preview.jpg",
+      "elements": [
+        {
+          "id": "story_collection_1_story_1",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_1/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_1_story_2",
+          "duration": 15,
+          "asset_type": "photo",
+          "asset": [
+            {
+              "resolution": {
+                "width": 2160,
+                "height": 3840
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_1/2.png"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_1_story_3",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_1/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_1_story_4",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_1/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_1_story_5",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_1/5.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_1_story_6",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_1/6.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_1_story_7",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=21117108341",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_1/7.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_3",
+      "title": "Транспорт в картах",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_3/preview.jpg",
+      "elements": [
+        {
+          "id": "story_collection_3_story_1",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_3/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_3_story_2",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_3/2.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_3_story_3",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_3/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_3_story_4",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_3/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_3_story_5",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_3/5.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_3_story_6",
+          "asset_type": "video",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_3/6.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_6",
+      "title": "Кафе, куда можно пойти с пёселем",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_6/preview.jpg",
+      "elements": [
+        {
+          "id": "story_collection_6_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/mesta-s-sobakamy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_6/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_6_story_2",
+          "asset_type": "photo",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/mesta-s-sobakamy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 2160,
+                "height": 3840
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_6/2.png"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_6_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/mesta-s-sobakamy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_6/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_6_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/mesta-s-sobakamy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_6/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_6_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/mesta-s-sobakamy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_6/5.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_6_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/mesta-s-sobakamy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_6/6.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_6_story_7",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/mesta-s-sobakamy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_6/7.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_6_story_8",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/mesta-s-sobakamy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_6/8.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_7",
+      "title": "Новый красивый бар «Котельная»",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_7/preview.jpg",
+      "elements": [
+        {
+          "id": "story_collection_7_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=184162874272",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_7/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_7_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=184162874272",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_7/2.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_7_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=184162874272",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_7/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_7_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=184162874272",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_7/5.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_12",
+      "title": "Недорогой туризм: выходные в Туле",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_12/preview.jpg",
+      "elements": [
+        {
+          "id": "story_collection_12_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/tula-top-places/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_12/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_12_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/tula-top-places/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_12/2.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_12_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/tula-top-places/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_12/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_12_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/tula-top-places/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_12/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_12_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/tula-top-places/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_12/5.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_12_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/tula-top-places/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_12/6.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_12_story_7",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/tula-top-places/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_12/7.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_9",
+      "title": "Танцуйте до утра в клубе Mutabor",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_9/preview.jpg",
+      "elements": [
+        {
+          "id": "story_collection_9_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=235594855021",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_9/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_9_story_2",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=235594855021",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_9/2.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_9_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=235594855021",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_9/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_9_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=235594855021",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_9/4.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_2",
+      "title": "Как продлить жизнь своим кроссовкам",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_2/preview.jpg",
+      "elements": [
+        {
+          "id": "story_collection_2_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/himchistky-obuvy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_2/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_2_story_2",
+          "asset_type": "photo",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/himchistky-obuvy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 2160,
+                "height": 3840
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_2/2.png"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_2_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/himchistky-obuvy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_2/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_2_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/himchistky-obuvy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_2/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_2_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/himchistky-obuvy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_2/6.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_2_story_7",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/himchistky-obuvy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_2/7.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_5",
+      "title": "Где есть буузы. Что? Да!",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_5/preview.jpg",
+      "elements": [
+        {
+          "id": "story_collection_5_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-est-buuzy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_5/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_5_story_2",
+          "asset_type": "photo",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-est-buuzy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 2160,
+                "height": 3840
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_5/2.png"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_5_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-est-buuzy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_5/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_5_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-est-buuzy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_5/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_5_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-est-buuzy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_5/5.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_5_story_6",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://yandex.ru/maps/discovery/gde-est-buuzy/",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_5/6.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "story_collection_4",
+      "title": "Как мусорить меньше: Zero Waste Shop",
+      "preview_image": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_4/preview.jpg",
+      "elements": [
+        {
+          "id": "story_collection_4_story_1",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=77709441667",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_4/1.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_4_story_2",
+          "asset_type": "photo",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=77709441667",
+          "asset": [
+            {
+              "resolution": {
+                "width": 2160,
+                "height": 3840
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_4/2.png"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_4_story_3",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=77709441667",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_4/3.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_4_story_4",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=77709441667",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_4/4.mp4"
+            }
+          ]
+        },
+        {
+          "id": "story_collection_4_story_5",
+          "asset_type": "video",
+          "forwarding_link": "yandexmaps://maps.yandex.ru/?ol=biz&oid=77709441667",
+          "asset": [
+            {
+              "resolution": {
+                "width": 1080,
+                "height": 1920
+              },
+              "url": "https://mobile-maps-common.s3.yandex.net/v1/stories/story_collection_4/5.mp4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "region_to_stories_mapping": {
+    "213": [
+      "story_collection_46",
+      "story_collection_45",
+      "story_collection_44",
+      "story_collection_43",
+      "story_collection_42",
+      "story_collection_36",
+      "story_collection_33",
+      "story_collection_34",
+      "story_collection_30",
+      "story_collection_29",
+      "story_collection_28",
+      "story_collection_26",
+      "story_collection_24",
+      "story_collection_22",
+      "story_collection_21"
+    ]
+  }
+}

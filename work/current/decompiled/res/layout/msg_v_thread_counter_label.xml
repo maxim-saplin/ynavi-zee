@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:paddingTop="8.0dip" android:paddingBottom="4.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="4.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="11.0sp" android:textColor="?messagingCommonAccentTextColor" android:gravity="center_vertical" android:id="@id/counter" android:background="@drawable/msg_reactions_shadow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="24.0dip" android:text="1 ответ" android:drawableRight="@drawable/msg_ic_thread_mention" android:drawablePadding="4.0dip" android:textAllCaps="true" android:fontFamily="@font/ya_bold" android:paddingStart="10.0dip" android:paddingEnd="2.0dip" android:elevation="2.0dip" app:drawableEndCompat="@drawable/msg_ic_thread_mention" />
+    <View android:layout_gravity="end|top" android:id="@id/dot" android:background="@drawable/msg_thread_counter_dot" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_marginTop="-2.0dip" android:layout_marginEnd="-2.0dip" android:elevation="2.0dip" />
+</FrameLayout>

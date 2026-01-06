@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="14.0dip" android:width="14.0dip" android:viewportWidth="14.0" android:viewportHeight="14.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:name="minutes" android:pivotX="7.0" android:pivotY="7.0" android:rotation="0.0">
+        <path android:pathData="M 7,7 L 7,4.5" android:strokeColor="?messagingCommonTextSecondaryColor" android:strokeWidth="1.0" android:strokeLineCap="round" />
+    </group>
+    <group android:name="seconds" android:pivotX="7.0" android:pivotY="7.0" android:rotation="0.0">
+        <path android:pathData="M 7,7 L 7,4" android:strokeColor="?messagingCommonTextSecondaryColor" android:strokeWidth="1.0" android:strokeLineCap="round" />
+    </group>
+    <path android:pathData="M7,7         m-4.5,0         a4.5,4.5 0,1 1,9 0         a4.5,4.5 0,1 1,-9 0" android:strokeColor="?messagingCommonTextSecondaryColor" android:strokeWidth="1.0" />
+</vector>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/contentContainer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.yandex.bank.widgets.common.ToolbarView android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.yandex.bank.feature.divkit.api.ui.BankDivView android:id="@id/divView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <com.yandex.bank.widgets.common.FullscreenStatusView android:id="@id/statusView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:bank_sdk_progress_visible="true" />
+    <com.yandex.bank.widgets.common.ErrorView android:id="@id/error" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

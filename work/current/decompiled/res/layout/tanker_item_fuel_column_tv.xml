@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/tanker_text_11" android:textColor="@color/tanker_textColorAlpha100" android:gravity="center" android:background="@drawable/tanker_background_fuel_column" android:layout_width="wrap_content" android:layout_height="18.0dip" android:minWidth="18.0dip" android:paddingStart="@dimen/tanker_basic_padding_4" android:paddingEnd="@dimen/tanker_basic_padding_4" android:layout_marginStart="@dimen/tanker_basic_padding_4" style="@style/TankerTextRegular"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

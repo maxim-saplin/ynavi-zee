@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/futuris_help_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/futuris_help_text"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/futuris_help_button_text_color" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/futuris_help_text" android:fontFamily="@font/ys_text_regular" android:layout_marginEnd="12.0dip" style="@style/Futuris.DialogText" />
+    <TextView android:textSize="20.0dip" android:textColor="@color/futuris_help_button_text_color" android:gravity="center" android:background="@drawable/ic_futuris_help_background" android:layout_width="32.0dip" android:layout_height="32.0dip" android:text="@string/futuris_help_button_text" android:importantForAccessibility="no" android:fontFamily="@font/ys_text_regular" />
+</LinearLayout>

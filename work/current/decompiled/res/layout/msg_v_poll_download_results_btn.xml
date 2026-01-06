@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:background="@drawable/msg_bg_poll_message_vote" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/poll_download_results_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:contentDescription="@null" android:layout_marginHorizontal="8.0dip" app:srcCompat="@drawable/msg_ic_poll_results_file" />
+    <TextView android:id="@id/poll_download_results_btn_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/messenger_poll_results_download" style="@style/Messaging.PollResults.DownloadButton" />
+</LinearLayout>

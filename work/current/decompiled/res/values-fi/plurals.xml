@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Siirry eteenpäin %d sekuntia</item>
+        <item quantity="one">Siirry eteenpäin %d sekunti</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Siirry taaksepäin %d sekuntia</item>
+        <item quantity="one">Siirry taaksepäin %d sekunti</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d uutta ilmoitusta</item>
+        <item quantity="one">%d uusi ilmoitus</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Viimeiset %1$d numeroa</item>
+        <item quantity="zero">Viimeiset %1$d numeroa</item>
+        <item quantity="one">Viimeinen %1$d numero</item>
+        <item quantity="few">Viimeiset %1$d numeroa</item>
+        <item quantity="many">Viimeiset %1$d numeroa</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"Saat nyt puhelun numerosta
+%1$s. Syötä puhelinnumeron viimeiset %2$d numeroa."</item>
+        <item quantity="zero">"Saat nyt puhelun numerosta
+%1$s. Syötä puhelinnumeron viimeiset %2$d numeroa."</item>
+        <item quantity="one">"Saat nyt puhelun numerosta
+%1$s. Syötä puhelinnumeron viimeiset %2$d numeroa."</item>
+        <item quantity="few">"Saat nyt puhelun numerosta
+%1$s. Syötä puhelinnumeron viimeiset %2$d numeroa."</item>
+        <item quantity="many">"Saat nyt puhelun numerosta
+%1$s. Syötä puhelinnumeron viimeiset %2$d numeroa."</item>
+    </plurals>
+</resources>

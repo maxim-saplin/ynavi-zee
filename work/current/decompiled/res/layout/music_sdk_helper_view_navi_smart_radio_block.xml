@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.music.sdk.helper.ui.navigator.catalog.radio.TouchWavesView android:id="@id/navi_catalog_view_waves" android:layout_width="fill_parent" android:layout_height="fill_parent" android:stateListAnimator="@anim/music_sdk_helper_elevation_flat" app:music_sdk_helper_initialState="paused" app:music_sdk_helper_maxAlpha="20" app:music_sdk_helper_rippleColor="@color/music_sdk_helper_white" app:music_sdk_helper_waveInitialInset="32.0dip" app:music_sdk_helper_waveSize="50.0dip" app:music_sdk_helper_wavesNumber="5">
+        <androidx.recyclerview.widget.RecyclerView android:layout_gravity="bottom" android:id="@id/navi_catalog_view_radio_stations_recycler" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageButton android:layout_gravity="center" android:id="@id/navi_catalog_view_radio_play_button" android:background="@null" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="156.0dip" android:layout_height="156.0dip" android:src="@drawable/music_sdk_helper_ic_play_dark_full" />
+        <ProgressBar android:layout_gravity="center" android:id="@id/navi_catalog_view_radio_loader" android:layout_width="28.0dip" android:layout_height="28.0dip" android:indeterminateTint="@color/music_sdk_helper_white" />
+    </com.yandex.music.sdk.helper.ui.navigator.catalog.radio.TouchWavesView>
+</merge>

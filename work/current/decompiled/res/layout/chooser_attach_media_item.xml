@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/attach_item_container" android:clipChildren="true" android:clipToPadding="true" android:layout_width="@dimen/attach_preview_tile_width" android:layout_height="@dimen/attach_preview_tile_height" android:foreground="?android:selectableItemBackground" app:cardCornerRadius="@dimen/attach_image_radius" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/attach_item_image" android:layout_width="@dimen/attach_preview_tile_width" android:layout_height="@dimen/attach_preview_tile_height" android:scaleType="centerCrop" android:contentDescription="@null" />
+    <TextView android:textSize="@dimen/attach_item_checkbox_text_size_small" android:gravity="center" android:layout_gravity="end|top" android:id="@id/attach_item_checkbox" android:background="@drawable/attach_checkbox_multi_bg" android:padding="@dimen/attach_offset_medium" android:paddingBottom="2.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:maxLines="1" android:contentDescription="@null" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/attach_footer" android:background="@drawable/attach_bg_panel_footer" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="32.0dip">
+        <ImageView android:layout_gravity="start" android:layout_width="16.0dip" android:layout_height="16.0dip" android:contentDescription="@null" app:srcCompat="@drawable/attach_play_filled" />
+        <TextView android:textSize="13.0sp" android:textColor="#ffffffff" android:layout_gravity="end" android:id="@id/attach_item_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/attach_item_border" android:background="@drawable/attach_border" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:layout_gravity="start|bottom" android:id="@id/attach_item_gif_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_marginStart="5.0dip" app:srcCompat="@drawable/attach_gif_indicator" />
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/alicekit_palette_background_color_v2" />
+    <stroke android:width="@dimen/alice_v2_input_field_stroke_width" android:color="@color/alicekit_palette_stroke_color_v2" />
+    <corners android:radius="12.0dip" />
+</shape>

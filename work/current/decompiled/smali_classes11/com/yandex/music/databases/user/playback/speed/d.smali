@@ -1,0 +1,107 @@
+.class public final Lcom/yandex/music/databases/user/playback/speed/d;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
+
+# instance fields
+.field final synthetic b:Landroidx/room/a1;
+
+.field final synthetic c:Lcom/yandex/music/databases/user/playback/speed/e;
+
+
+# direct methods
+.method public constructor <init>(Lcom/yandex/music/databases/user/playback/speed/e;Landroidx/room/a1;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/yandex/music/databases/user/playback/speed/d;->c:Lcom/yandex/music/databases/user/playback/speed/e;
+
+    iput-object p2, p0, Lcom/yandex/music/databases/user/playback/speed/d;->b:Landroidx/room/a1;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .locals 5
+
+    iget-object v0, p0, Lcom/yandex/music/databases/user/playback/speed/d;->c:Lcom/yandex/music/databases/user/playback/speed/e;
+
+    invoke-static {v0}, Lcom/yandex/music/databases/user/playback/speed/e;->a(Lcom/yandex/music/databases/user/playback/speed/e;)Landroidx/room/r0;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/yandex/music/databases/user/playback/speed/d;->b:Landroidx/room/a1;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroidx/room/r0;->C(Lw2/m;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    :try_start_0
+    const-string v1, "albumId"
+
+    invoke-static {v0, v1}, Lad2/d;->h(Landroid/database/Cursor;Ljava/lang/String;)I
+
+    move-result v1
+
+    const-string v3, "playbackSpeed"
+
+    invoke-static {v0, v3}, Lad2/d;->h(Landroid/database/Cursor;Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v3}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v2
+
+    new-instance v3, Lcom/yandex/music/databases/user/playback/speed/PlaybackSpeedDbRow;
+
+    invoke-direct {v3, v1, v2}, Lcom/yandex/music/databases/user/playback/speed/PlaybackSpeedDbRow;-><init>(Ljava/lang/String;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-object v2, v3
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    iget-object v0, p0, Lcom/yandex/music/databases/user/playback/speed/d;->b:Landroidx/room/a1;
+
+    invoke-virtual {v0}, Landroidx/room/a1;->d()V
+
+    return-object v2
+
+    :goto_1
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    iget-object v0, p0, Lcom/yandex/music/databases/user/playback/speed/d;->b:Landroidx/room/a1;
+
+    invoke-virtual {v0}, Landroidx/room/a1;->d()V
+
+    throw v1
+.end method

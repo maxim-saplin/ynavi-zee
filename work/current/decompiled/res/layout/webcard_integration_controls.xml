@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:id="@id/webcard_integration_paddington" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.map.tabs.TranslationSpyView android:id="@id/search_line_ghost_view" android:layout_width="@dimen/shutter_width" android:layout_height="@dimen/search_line_height" android:layout_margin="@dimen/search_line_margin" />
+        <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:id="@id/webcard_integration_controls" android:paddingBottom="@dimen/map_controls_bottom_offset" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="yes" android:accessibilityTraversalAfter="@id/search_line_view" app:overland_fleets_ids="@string/controls_default_overland_fleets_ids">
+            <include layout="@layout/control_chunk_ruler" />
+            <include layout="@layout/control_chunk_layers_menu" />
+            <include layout="@layout/control_chunk_traffic_priority" />
+            <include layout="@layout/control_chunk_carparks" />
+            <include layout="@layout/control_chunk_panorama" />
+            <include layout="@layout/control_chunk_weather" />
+            <include layout="@layout/control_chunk_tilt_toggle" />
+            <include layout="@layout/control_chunk_zoom" />
+            <include layout="@layout/control_chunk_position" />
+        </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+    </FrameLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

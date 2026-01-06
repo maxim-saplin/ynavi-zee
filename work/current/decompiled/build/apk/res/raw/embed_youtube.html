@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            overflow: hidden;
+            position: fixed;
+        }
+
+    </style>
+
+    <head>
+        <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <script src="https://www.youtube.com/iframe_api"></script>
+    </head>
+
+    <body>
+        <div id="youTubePlayerDOM"></div>
+    </body>
+
+    <script type="text/javascript">
+
+        var UNSTARTED = "UNSTARTED";
+        var ENDED = "ENDED";
+        var PLAYING = "PLAYING";
+        var PAUSED = "PAUSED";
+        var BUFFERING = "BUFFERING";
+        var CUED = "CUED";
+
+        var PlayerBridge = window.YouTubePlayerBridge;
+        var player;
+
+        var timerId;
+
+        function onYouTubeIframeAPIReady() {
+
+            PlayerBridge.notifyApiReady();
+
+            player = new YT.Player('youTubePlayerDOM', {
+
+                height: '100%',
+                width: '100%',
+
+                videoId: '<<videoId>>',
+
+                events: {
+                    onReady: function(event) { PlayerBridge.notifyPlayerReady() },
+                    onStateChange: function(event) { onPlayerStateChange(event.data) },
+                    onError: function(error) { PlayerBridge.notifyOnError(JSON.stringify(error), error.data) }
+                },
+
+                playerVars: <<playerOptions>>
+
+            });
+        }
+
+        function onPlayerStateChange(playerState) {
+            clearTimeout(timerId);
+
+            switch (playerState) {
+                case YT.PlayerState.UNSTARTED:
+                    notifyStateChange(UNSTARTED);
+                    return;
+
+                case YT.PlayerState.ENDED:
+                    notifyStateChange(ENDED);
+                    return;
+
+                case YT.PlayerState.PLAYING:
+                    notifyStateChange(PLAYING);
+
+                    startSendCurrentTimeInterval();
+                    notifyVideoData(player);
+                    return;
+
+                case YT.PlayerState.PAUSED:
+                    notifyStateChange(PAUSED);
+                    return;
+
+                case YT.PlayerState.BUFFERING:
+                    notifyStateChange(BUFFERING);
+                    return;
+
+                case YT.PlayerState.CUED:
+                    notifyStateChange(CUED);
+                    return;
+            }
+
+            function notifyVideoData(player) {
+                var videoDuration = player.getDuration();
+
+                PlayerBridge.notifyVideoDuration(videoDuration);
+            }
+
+            function notifyStateChange(newState) {
+                PlayerBridge.notifyStateChange(newState);
+            }
+
+            function startSendCurrentTimeInterval() {
+                timerId = setInterval(function() {
+                    PlayerBridge.notifyVideoCurrentTime( player.getCurrentTime() )
+                    PlayerBridge.notifyVideoLoadedPercent( player.getVideoLoadedFraction() )
+                }, 100 );
+            }
+        }
+
+        // JAVA to WEB functions
+
+        function seekTo(startSeconds) {
+            player.seekTo(startSeconds, true);
+        }
+
+        function pauseVideo() {
+            player.pauseVideo();
+        }
+
+        function playVideo() {
+            player.playVideo();
+        }
+
+        function loadVideo(videoId, startSeconds) {
+            player.loadVideoById(videoId, startSeconds);
+        }
+
+        function cueVideo(videoId, startSeconds) {
+            player.cueVideoById(videoId, startSeconds);
+        }
+
+        function mute() {
+            player.mute();
+        }
+
+        function unMute() {
+            player.unMute();
+        }
+
+        function setVolume(volumePercent) {
+            player.setVolume(volumePercent);
+        }
+
+
+    </script>
+</html>
+

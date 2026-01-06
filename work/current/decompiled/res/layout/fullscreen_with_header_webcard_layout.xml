@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/webcard_fullscreen_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/webcard_header_with_icon_height" android:paddingStart="16.0dip" android:paddingEnd="8.0dip">
+                <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/webcard_header_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginEnd="8.0dip" />
+                <ru.yandex.yandexmaps.common.views.VectorTintableCompoundsTextView android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/webcard_header_caption" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:drawablePadding="8.0dip" android:layout_weight="1.0" style="@style/Text16.Medium" />
+                <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="center_vertical" android:id="@id/fullscreen_webcard_close_button" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/fullscreen_webcard_controllers_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/webcard_header_with_icon_height" app:topLeftCornerRadius="20.0dip" app:topRightCornerRadius="20.0dip">
+                    <ru.yandex.yandexmaps.webcard.internal.recycler.blocks.web.WebContentFrameLayout android:id="@id/fullscreen_webcard_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+</FrameLayout>

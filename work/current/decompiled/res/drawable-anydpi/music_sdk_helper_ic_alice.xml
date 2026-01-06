@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="38.0dip" android:width="38.0dip" android:viewportWidth="38.0" android:viewportHeight="38.0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@drawable/$music_sdk_helper_ic_alice__0" android:pathData="M19,0L19,0A19,19 0,0 1,38 19L38,19A19,19 0,0 1,19 38L19,38A19,19 0,0 1,0 19L0,19A19,19 0,0 1,19 0z" />
+    <path android:fillColor="#ffffffff" android:pathData="M10.2998,24.7924C11.6638,26.1497 15.2971,26.9647 19,26.979C22.7027,26.9647 26.3361,26.1497 27.7001,24.7924C31.089,21.4202 22.8513,8.5008 19.0042,8.4821C15.1486,8.5008 6.911,21.4202 10.2998,24.7924Z" android:fillType="evenOdd" />
+</vector>

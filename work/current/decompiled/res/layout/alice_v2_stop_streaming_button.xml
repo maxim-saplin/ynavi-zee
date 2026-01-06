@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textColor="@color/alicekit_palette_button_text_color_v2" android:id="@id/stop_streaming_button" android:background="@drawable/stop_streaming_button_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stop_streaming_button_text" android:fontFamily="@font/ya_medium" android:paddingHorizontal="14.0dip" android:paddingVertical="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

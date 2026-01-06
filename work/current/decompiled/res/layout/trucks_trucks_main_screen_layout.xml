@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/trucks_fade" android:background="@color/bw_black_alpha30" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ru.yandex.yandexmaps.uikit.shutter.ShutterView android:id="@id/trucks_main_screen_shutter" android:tag="@string/change_handler_bottom_panel_tag" style="@style/ShutterCommonLayoutParams" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/layout_action_view" android:background="@color/bg_primary" android:layout_width="@dimen/trucks_main_screen_actions_panel_width" android:layout_height="wrap_content" android:layout_marginStart="@dimen/trucks_main_screen_actions_panel_left_margin" style="@style/ShutterCommonLayoutParams">
+        <View android:layout_gravity="top" android:background="@color/bg_separator" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <ru.yandex.yandexmaps.multiplatform.trucks.ui.internal.main.components.MainScreenActionView android:layout_gravity="center|bottom" android:id="@id/view_main_screen_action" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+</com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView style="@style/ShutterCommonLayoutParams"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@color/background_panel" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/offline_cache_search_line" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <androidx.viewpager.widget.ViewPager android:id="@id/offline_cache_regions_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.google.android.material.tabs.TabLayout android:id="@id/offline_cache_regions_tabs" android:fadingEdge="horizontal" android:fadingEdgeLength="32.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:requiresFadingEdge="horizontal" app:tabContentStart="16.0dip" style="@style/CommonShutterTabLayout.MediumTabTextAppearance" />
+            </androidx.viewpager.widget.ViewPager>
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/offline_cache_results_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/offline_cache_empty_results" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="64.0dip">
+                <TextView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/offline_cache_suggest_empty_message" style="@style/Text16.Medium.BlackWhite" />
+                <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/offline_cache_suggest_empty_message_summary" style="@style/Text14.TextSecondary" />
+                <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/offline_cache_add_city_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" app:generalButtonSize="medium" app:generalButtonStyle="primary" app:text="@string/offline_cache_add_city" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

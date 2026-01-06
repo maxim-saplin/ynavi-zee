@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="alicenger_navigation_bar_color">@color/alicekit_palette_background_overflow</color>
+</resources>

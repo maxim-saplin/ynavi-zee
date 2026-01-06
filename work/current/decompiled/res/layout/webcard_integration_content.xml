@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ru.yandex.yandexmaps.controls.search.SearchLineView android:id="@id/search_line_view" android:layout_width="@dimen/shutter_width" android:layout_height="@dimen/search_line_height" android:layout_margin="@dimen/search_line_margin" android:importantForAccessibility="no" app:menuButtonEnabled="true" />
+        </com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <include layout="@layout/webcard_integration_controls" />
+</FrameLayout>

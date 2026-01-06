@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/mapkit_styling_transport_balloon_new_blue" />
+    <corners android:radius="@dimen/mapkit_styling_transport_corner_radius_manoeuvre_balloon" />
+</shape>

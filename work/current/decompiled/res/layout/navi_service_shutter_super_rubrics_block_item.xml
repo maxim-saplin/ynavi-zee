@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_marginHorizontal="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.services.navi.service_shutter.delegates.views.NaviServiceShutterSuperRubricView android:id="@id/navi_service_shutter_refuel_super_rubric" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <ru.yandex.yandexmaps.services.navi.service_shutter.delegates.views.NaviServiceShutterSuperRubricView android:id="@id/navi_service_shutter_car_washes_super_rubric" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+    <ru.yandex.yandexmaps.services.navi.service_shutter.delegates.views.NaviServiceShutterSuperRubricView android:id="@id/navi_service_shutter_parking_super_rubric" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+</LinearLayout>

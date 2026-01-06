@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/search_history_header_title" android:includeFontPadding="false" android:layout_weight="1.0" android:paddingStart="16.0dip" android:paddingVertical="8.0dip" style="@style/Text16.Medium.TextPrimaryVariant" />
+    <androidx.appcompat.widget.AppCompatTextView android:layout_gravity="center_vertical" android:id="@id/more" android:background="@drawable/rounded_grey_flat_button_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_history_header_more" android:includeFontPadding="false" android:paddingHorizontal="16.0dip" android:paddingVertical="8.0dip" style="@style/Text16.Medium.TextActions" />
+</merge>

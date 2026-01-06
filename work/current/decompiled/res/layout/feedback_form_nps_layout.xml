@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/feedbackFormNpsLayout" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView android:gravity="center_horizontal" android:id="@id/feedbackFormNpsStarTextView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="16.0dip" android:text="@string/feedback_star" />
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/feedbackFormNpsTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="6.0dip" />
+    </LinearLayout>
+    <include android:id="@id/feedbackFormNpsWidgetLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/feedback_form_nps_widget_layout" />
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/feedbackFormNpsErrorTextView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

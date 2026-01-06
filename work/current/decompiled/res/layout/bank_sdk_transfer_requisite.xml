@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.ToolbarView android:id="@id/requisiteToolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bank_sdk_closeIconVisible="true" app:bank_sdk_title="@string/bank_sdk_transfer_requisite_toolbar_title" app:layout_constraintTop_toTopOf="parent" />
+    <com.yandex.bank.widgets.common.tabview.TabView android:id="@id/requisiteTabView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="30.0dip" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" app:layout_constraintTop_toBottomOf="@id/requisiteToolbar" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/requisiteForm" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="14.0dip" android:layout_marginBottom="23.0dip" android:overScrollMode="never" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/requisiteTabView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

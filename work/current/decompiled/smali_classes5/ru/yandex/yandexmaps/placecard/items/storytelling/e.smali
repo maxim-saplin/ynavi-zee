@@ -1,0 +1,435 @@
+.class public final Lru/yandex/yandexmaps/placecard/items/storytelling/e;
+.super Lru/yandex/yandexmaps/placecard/j0;
+.source "SourceFile"
+
+# interfaces
+.implements Lru/yandex/yandexmaps/multiplatform/placecard/uxtrace/b;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lru/yandex/yandexmaps/placecard/items/storytelling/e;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final k:I = 0x8
+
+
+# instance fields
+.field private final c:Lxj1/s;
+
+.field private final d:Lxj1/s;
+
+.field private final e:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final f:Ljava/lang/String;
+
+.field private final g:Ldg2/c;
+
+.field private final h:Ldg2/c;
+
+.field private final i:Lpr2/f;
+
+.field private final j:Lru/yandex/yandexmaps/multiplatform/ux/trace/views/api/UXTraceDataLoadingState$State;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lru/yandex/yandexmaps/placecard/items/selections/b;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lru/yandex/yandexmaps/placecard/items/selections/b;-><init>(I)V
+
+    sput-object v0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lxj1/s;Lxj1/s;Ljava/util/List;Ljava/lang/String;Ldg2/c;Ldg2/c;Lpr2/f;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->c:Lxj1/s;
+
+    iput-object p2, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->d:Lxj1/s;
+
+    iput-object p3, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->e:Ljava/util/List;
+
+    iput-object p4, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->f:Ljava/lang/String;
+
+    iput-object p5, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->g:Ldg2/c;
+
+    iput-object p6, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->h:Ldg2/c;
+
+    iput-object p7, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->i:Lpr2/f;
+
+    sget-object p1, Lru/yandex/yandexmaps/multiplatform/ux/trace/views/api/UXTraceDataLoadingState$State;->Loaded:Lru/yandex/yandexmaps/multiplatform/ux/trace/views/api/UXTraceDataLoadingState$State;
+
+    iput-object p1, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->j:Lru/yandex/yandexmaps/multiplatform/ux/trace/views/api/UXTraceDataLoadingState$State;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()Lru/yandex/yandexmaps/multiplatform/ux/trace/views/api/UXTraceDataLoadingState$State;
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->j:Lru/yandex/yandexmaps/multiplatform/ux/trace/views/api/UXTraceDataLoadingState$State;
+
+    return-object v0
+.end method
+
+.method public final d()Lpr2/f;
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->i:Lpr2/f;
+
+    return-object v0
+.end method
+
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lru/yandex/yandexmaps/placecard/items/storytelling/e;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lru/yandex/yandexmaps/placecard/items/storytelling/e;
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->c:Lxj1/s;
+
+    iget-object v3, p1, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->c:Lxj1/s;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->d:Lxj1/s;
+
+    iget-object v3, p1, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->d:Lxj1/s;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->e:Ljava/util/List;
+
+    iget-object v3, p1, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->e:Ljava/util/List;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->f:Ljava/lang/String;
+
+    iget-object v3, p1, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->f:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->g:Ldg2/c;
+
+    iget-object v3, p1, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->g:Ldg2/c;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->h:Ldg2/c;
+
+    iget-object v3, p1, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->h:Ldg2/c;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->i:Lpr2/f;
+
+    iget-object p1, p1, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->i:Lpr2/f;
+
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
+.end method
+
+.method public final f()Ldg2/c;
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->h:Ldg2/c;
+
+    return-object v0
+.end method
+
+.method public final getTitle()Lxj1/s;
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->c:Lxj1/s;
+
+    return-object v0
+.end method
+
+.method public final h()Lxj1/s;
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->d:Lxj1/s;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->c:Lxj1/s;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->d:Lxj1/s;
+
+    invoke-static {v2, v0, v1}, Lru/yandex/yandexmaps/app/di/components/i3;->d(Lxj1/s;II)I
+
+    move-result v0
+
+    iget-object v2, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->e:Ljava/util/List;
+
+    invoke-static {v0, v1, v2}, Lcom/yandex/bank/widgets/common/z3;->d(IILjava/util/List;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->f:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Landroidx/compose/foundation/t0;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->g:Ldg2/c;
+
+    invoke-static {v2, v0, v1}, Ld/a;->c(Ldg2/c;II)I
+
+    move-result v0
+
+    iget-object v2, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->h:Ldg2/c;
+
+    invoke-static {v2, v0, v1}, Ld/a;->c(Ldg2/c;II)I
+
+    move-result v0
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->i:Lpr2/f;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final i()Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->e:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public final j()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->f:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final k()Ldg2/c;
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->g:Ldg2/c;
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 9
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->c:Lxj1/s;
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->d:Lxj1/s;
+
+    iget-object v2, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->e:Ljava/util/List;
+
+    iget-object v3, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->f:Ljava/lang/String;
+
+    iget-object v4, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->g:Ldg2/c;
+
+    iget-object v5, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->h:Ldg2/c;
+
+    iget-object v6, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->i:Lpr2/f;
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    const-string v8, "StorytellingItem(title="
+
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", description="
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", imageUrlTemplates="
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", oid="
+
+    const-string v1, ", showAction="
+
+    invoke-static {v0, v3, v1, v7, v2}, Landroidx/compose/foundation/t0;->B(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/util/List;)V
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", clickAction="
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", uxTraceDataFeatureStage="
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-static {v7, v6, v0}, Ln81/b;->m(Ljava/lang/StringBuilder;Lpr2/f;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->c:Lxj1/s;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->d:Lxj1/s;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->e:Ljava/util/List;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->f:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->g:Ldg2/c;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->h:Ldg2/c;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/placecard/items/storytelling/e;->i:Lpr2/f;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    return-void
+.end method

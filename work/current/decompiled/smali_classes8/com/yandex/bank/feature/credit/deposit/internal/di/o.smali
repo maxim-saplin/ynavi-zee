@@ -1,0 +1,56 @@
+.class public final Lcom/yandex/bank/feature/credit/deposit/internal/di/o;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ldagger/internal/k;
+
+
+# instance fields
+.field private final a:Lmn/b;
+
+
+# direct methods
+.method public constructor <init>(Lpu/a;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/yandex/bank/feature/credit/deposit/internal/di/o;->a:Lmn/b;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lcom/yandex/bank/feature/credit/deposit/internal/di/o;->a:Lmn/b;
+
+    check-cast v0, Lpu/c;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lcom/yandex/bank/sdk/di/modules/features/x6;->a:Lcom/yandex/bank/sdk/di/modules/features/x6;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Ljt/d;->a:Ljt/d;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lcom/yandex/bank/feature/web3ds/internal/di/c;->a:Lcom/yandex/bank/feature/web3ds/internal/di/b;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lcom/yandex/bank/feature/web3ds/internal/di/a;
+
+    invoke-direct {v1, v0}, Lcom/yandex/bank/feature/web3ds/internal/di/a;-><init>(Lpu/c;)V
+
+    invoke-virtual {v1}, Lcom/yandex/bank/feature/web3ds/internal/di/a;->a()Lkt/a;
+
+    move-result-object v0
+
+    return-object v0
+.end method

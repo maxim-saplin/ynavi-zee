@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/background_panel" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/mt_details_choice_transport_select_marker" android:background="@color/bw_grey30" android:layout_width="6.0dip" android:layout_height="fill_parent" />
+    <ImageView android:layout_gravity="center" android:id="@id/mt_details_choice_transport_icon" android:background="@drawable/mt_transport_icon_background" android:layout_width="20.0dip" android:layout_height="20.0dip" android:scaleType="center" android:tint="@color/icons_color_bg" android:layout_marginStart="16.0dip" />
+    <TextView android:ellipsize="end" android:layout_gravity="center" android:id="@id/mt_details_choice_transport_num" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/Text16.Medium" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/mt_details_choice_transport_arrival_dot" android:visibility="gone" android:layout_width="14.0dip" android:layout_height="14.0dip" />
+    <TextView android:textColor="@color/masstransit_arrival" android:gravity="end|center" android:layout_gravity="center_vertical" android:id="@id/mt_details_choice_transport_schedule" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16.0dip" style="@style/Text16.Medium" />
+</LinearLayout>

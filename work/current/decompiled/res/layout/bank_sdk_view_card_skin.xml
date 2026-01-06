@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:id="@id/cardShimmer" android:layout_width="fill_parent" android:layout_height="fill_parent" app:bank_sdk_shimmer_auto_start="false" app:bank_sdk_shimmer_hardware_layer="false">
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/cardImage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/bank_sdk_card_skeleton" android:contentDescription="@null" />
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/samsungPayLayer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@null" />
+    </com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>
+</merge>

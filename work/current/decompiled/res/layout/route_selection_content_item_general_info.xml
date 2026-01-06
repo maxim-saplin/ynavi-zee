@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="@color/bg_primary" android:paddingTop="16.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/loading_content" android:visibility="gone" layout="@layout/route_selection_content_item_general_info_loading" />
+    <include android:id="@id/ready_content" layout="@layout/route_selection_content_item_general_info_ready" />
+</merge>

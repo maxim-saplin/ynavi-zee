@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="start|bottom" android:id="@id/picture_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/picture" android:layout_width="43.0dip" android:layout_height="43.0dip" />
+    </FrameLayout>
+    <ImageView android:layout_gravity="end|top" android:id="@id/cut" android:layout_width="19.0dip" android:layout_height="19.0dip" />
+    <ImageView android:layout_gravity="end|top" android:id="@id/badge" android:layout_width="17.0dip" android:layout_height="17.0dip" android:layout_marginTop="1.0dip" android:layout_marginEnd="1.0dip" />
+</merge>

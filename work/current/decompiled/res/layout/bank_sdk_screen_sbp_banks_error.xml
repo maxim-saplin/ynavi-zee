@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="?bankColor_background_primary" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:id="@id/errorNotFoundText" android:layout_width="327.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/errorRetryButtonCentral" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Widget.Bank.Text.Title2" />
+    <com.yandex.bank.widgets.common.BankButtonView android:id="@id/errorRetryButtonCentral" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginHorizontal="80.0dip" app:bank_sdk_buttonTitle="@string/bank_sdk_common_error_retry" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/errorText" style="@style/BankSdk.Widget.WidgetsCommon.BankButtonView.Primary.L" />
+</merge>

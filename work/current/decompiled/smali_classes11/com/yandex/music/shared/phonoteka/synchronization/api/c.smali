@@ -1,0 +1,74 @@
+.class public final Lcom/yandex/music/shared/phonoteka/synchronization/api/c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/yandex/music/shared/phonoteka/synchronization/api/i;
+
+
+# static fields
+.field public static final a:Lcom/yandex/music/shared/phonoteka/synchronization/api/c;
+
+.field private static final b:Ljava/lang/String; = "LikedArtists"
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/yandex/music/shared/phonoteka/synchronization/api/c;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/yandex/music/shared/phonoteka/synchronization/api/c;->a:Lcom/yandex/music/shared/phonoteka/synchronization/api/c;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lcom/yandex/music/shared/phonoteka/synchronization/api/c;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final getKey()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/yandex/music/shared/phonoteka/synchronization/api/c;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x15c96a3f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "LikedArtists"
+
+    return-object v0
+.end method

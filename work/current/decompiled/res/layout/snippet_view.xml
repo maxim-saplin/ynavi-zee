@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.multiplatform.parking.payment.android.internal.parking_session.components.SnippetView android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/description_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Text14.Grey" />
+    <TextView android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text16.Medium" />
+</ru.yandex.yandexmaps.multiplatform.parking.payment.android.internal.parking_session.components.SnippetView>

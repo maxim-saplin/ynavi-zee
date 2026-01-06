@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.tankerapp.android.sdk.navigator.view.views.LoadingView android:id="@id/tankerLoadingView" android:background="@color/tanker_backgroundColorNew" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ru.tankerapp.android.sdk.navigator.view.views.ErrorView android:id="@id/tankerStationErrorView" android:background="@color/tanker_backgroundColorNew" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:align="top" />
+</FrameLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="@color/music_sdk_helper_radio_flow_selector" android:layout_gravity="bottom" android:id="@id/music_sdk_helper_radio_station_label" android:paddingLeft="12.0dip" android:paddingTop="@dimen/music_sdk_helper_view_navi_catalog_radio_flow_top_margin" android:paddingRight="12.0dip" android:paddingBottom="@dimen/music_sdk_helper_view_navi_catalog_radio_flow_bottom_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/ys_text_regular" />
+</FrameLayout>

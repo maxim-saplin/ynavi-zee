@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/overlay_root" android:background="@drawable/assistant_select_yandex_background_caller" android:padding="@dimen/assistant_select_margin_caller" style="@style/Assistant.Container"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/assistant_overlay_icon" android:layout_alignParentTop="true" android:layout_alignParentStart="true" app:srcCompat="@drawable/assistant_yandex" style="@style/Assistant.Icon.Small" />
+    <TextView android:textSize="@dimen/assistant_text_size" android:id="@id/assistant_overlay_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/assistant_on_selected_caller_id" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/assistant_select_margin_caller" android:layout_marginEnd="@dimen/assistant_select_margin_caller" android:layout_toEndOf="@id/assistant_overlay_icon" style="@style/Assistant.Text.Caller" />
+    <Button android:id="@id/assistant_overlay_button" android:background="@drawable/assistant_button_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/assistant_select_margin_caller" android:text="@string/assistant_return_caller_id" android:layout_below="@id/assistant_overlay_text" android:textAllCaps="false" style="@style/Assistant.Text.Caller" />
+</RelativeLayout>

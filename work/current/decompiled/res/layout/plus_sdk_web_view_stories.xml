@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/stories_container" android:background="?backgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.yandex.plus.webview.api.WebViewContainer android:id="@id/stories_web_view_contracts_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/plus_sdk_stories_host_pay_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include android:layout_gravity="bottom" android:id="@id/plus_sdk_stories_native_pay_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/plus_sdk_native_pay_button" />
+        <FrameLayout android:id="@id/stories_loading" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:layout_gravity="center" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/web_stories_view_error_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/PlusSDK.Widget.WebViewError" />
+    </FrameLayout>
+</merge>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.textfield.TextInputLayout android:theme="@style/PaymentSdkPrebuiltCvnTextInput" android:textColorHint="?android:textColorSecondary" android:id="@id/paymentsdk_prebuilt_cvn_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:errorTextColor="?paymentsdk_errorInputColor" app:hintTextAppearance="@style/PaymentSdkPrebuiltCvnTextInput.Hint">
+        <com.google.android.material.textfield.TextInputEditText android:textSize="16.0sp" android:id="@id/paymentsdk_prebuilt_cvn_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="88.0dip" android:hint="@string/paymentsdk_prebuilt_cvv_input_title" android:inputType="numberPassword" android:imeOptions="actionDone|flagNoExtractUi" />
+    </com.google.android.material.textfield.TextInputLayout>
+</merge>

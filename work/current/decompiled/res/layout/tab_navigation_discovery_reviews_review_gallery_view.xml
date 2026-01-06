@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/image_first_shimmer" android:layout_width="0.0dip" android:layout_height="@dimen/tab_navigation_reviews_carousel_review_image_height" android:layout_weight="0.7" app:cornerRadius="8.0dip">
+        <ru.yandex.yandexmaps.common.views.RoundedImageView android:id="@id/image_first" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:importantForAccessibility="no" app:compatForeground="@drawable/tab_navigation_discovery_review_review_ripple_background" app:cornerRadius="16.0dip" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/right_section" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.3" android:layout_marginStart="4.0dip">
+        <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/image_second_shimmer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ru.yandex.yandexmaps.common.views.RoundedImageView android:id="@id/image_second" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:importantForAccessibility="no" app:compatForeground="@drawable/tab_navigation_discovery_review_review_ripple_background" app:cornerRadius="16.0dip" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
+        <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/image_third_shimmer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="4.0dip" android:layout_weight="1.0">
+            <ru.yandex.yandexmaps.common.views.RoundedImageView android:id="@id/image_third" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:importantForAccessibility="no" app:compatForeground="@drawable/tab_navigation_discovery_review_review_ripple_background" app:cornerRadius="16.0dip" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </LinearLayout>
+</merge>

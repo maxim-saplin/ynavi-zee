@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <set android:ordering="together">
+            <objectAnimator android:interpolator="@anim/bank_sdk_interpolator_operation_icon_scale_decrease" android:duration="@integer/bank_sdk_state_animation_duration" android:valueTo="@dimen/bank_sdk_product_layout_product_translation_y_on_touch" android:valueType="floatType" android:propertyName="translationY" />
+        </set>
+    </item>
+    <item android:state_pressed="false">
+        <set android:ordering="together">
+            <objectAnimator android:interpolator="@anim/bank_sdk_interpolator_operation_icon_scale_decrease" android:duration="@integer/bank_sdk_state_animation_duration" android:valueTo="0" android:valueType="floatType" android:propertyName="translationY" />
+        </set>
+    </item>
+</selector>

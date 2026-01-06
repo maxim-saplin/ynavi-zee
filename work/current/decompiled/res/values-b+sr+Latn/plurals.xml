@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="FEET_SHORT">
+        <item quantity="other">stope</item>
+        <item quantity="zero">stopa</item>
+        <item quantity="one">stopa</item>
+        <item quantity="few">stope</item>
+        <item quantity="many">stopa</item>
+    </plurals>
+    <plurals name="MILES_SHORT">
+        <item quantity="other">milje</item>
+        <item quantity="zero">milja</item>
+        <item quantity="one">milja</item>
+        <item quantity="few">milje</item>
+        <item quantity="many">milja</item>
+    </plurals>
+    <plurals name="accessibility_n_items">
+        <item quantity="other">%d stavke</item>
+        <item quantity="zero">0 stavki</item>
+        <item quantity="one">%d stavka</item>
+        <item quantity="few">%d stavke</item>
+        <item quantity="many">%d stavki</item>
+    </plurals>
+    <plurals name="accessibility_n_variants">
+        <item quantity="other">%d opcije</item>
+        <item quantity="zero">0 opcija</item>
+        <item quantity="one">%d opcija</item>
+        <item quantity="few">%d opcije</item>
+        <item quantity="many">%d opcija</item>
+    </plurals>
+    <plurals name="accessibility_review_dislike_count">
+        <item quantity="other">%d dislikes</item>
+        <item quantity="one">%d dislike</item>
+        <item quantity="few">%d dislikes</item>
+        <item quantity="many">%d dislikes</item>
+    </plurals>
+    <plurals name="accessibility_review_like_count">
+        <item quantity="other">%d likes</item>
+        <item quantity="one">%d like</item>
+        <item quantity="few">%d likes</item>
+        <item quantity="many">%d likes</item>
+    </plurals>
+    <plurals name="accessibility_routes_intermediate_stops_count">
+        <item quantity="other">%d промежуточные остановки</item>
+        <item quantity="one">%d промежуточная остановка</item>
+        <item quantity="few">%d промежуточные остановки</item>
+    </plurals>
+    <plurals name="accessibility_routes_options_count">
+        <item quantity="other">%d активные настройки</item>
+        <item quantity="one">%d активная настройка</item>
+        <item quantity="few">%d активные настройки</item>
+    </plurals>
+    <plurals name="accessibility_weather_title">
+        <item quantity="other">Sada je %d stepena</item>
+        <item quantity="zero">Sada je %d stepeni</item>
+        <item quantity="one">Sada je %d stepen</item>
+        <item quantity="few">Sada je %d stepena</item>
+        <item quantity="many">Sada je %d stepeni</item>
+    </plurals>
+    <plurals name="active_orders_number">
+        <item quantity="other">%d aktivne narudžbine</item>
+        <item quantity="one">%d aktivna narudžbina</item>
+        <item quantity="few">%d aktivne narudžbine</item>
+        <item quantity="many">%d aktivnih narudžbina</item>
+    </plurals>
+    <plurals name="active_orders_number_and_music">
+        <item quantity="other">%d aktivne narudžbine i Muzika</item>
+        <item quantity="zero">%d aktivne narudžbine i Muzika</item>
+        <item quantity="one">%d aktivna narudžbina i Muzika</item>
+        <item quantity="few">%d aktivne narudžbine i Muzika</item>
+        <item quantity="many">%d aktivne narudžbine i Muzika</item>
+    </plurals>
+    <plurals name="bike_route_stairs_count">
+        <item quantity="other">%d stepeništa</item>
+        <item quantity="zero">%d stepeništa</item>
+        <item quantity="one">%d stepenište</item>
+        <item quantity="few">%d stepeništa</item>
+        <item quantity="many">%d stepeništa</item>
+    </plurals>
+    <plurals name="bike_route_stairs_with_ramps_count">
+        <item quantity="other">%d stepeništa sa rampama za invalidska kolica</item>
+        <item quantity="zero">%d stepeništa sa rampama za invalidska kolica</item>
+        <item quantity="one">%d stepenište sa rampama za invalidska kolica</item>
+        <item quantity="few">%d stepeništa sa rampama za invalidska kolica</item>
+        <item quantity="many">%d stepeništa sa rampama za invalidska kolica</item>
+    </plurals>
+    <plurals name="bookmarks_folder_places_count">
+        <item quantity="other">%d mesta</item>
+        <item quantity="zero">%d mesta</item>
+        <item quantity="one">%d mesto</item>
+        <item quantity="few">%d mesta</item>
+        <item quantity="many">%d mesta</item>
+    </plurals>
+    <plurals name="bookmarks_top_bar_selected_elements">
+        <item quantity="other">%d izabrano</item>
+        <item quantity="one">%d izabran</item>
+        <item quantity="few">%d izabrano</item>
+        <item quantity="many">%d izabrano</item>
+    </plurals>
+    <plurals name="business_card_electric_charging_station_connectors_unfold">
+        <item quantity="other">%d više konektora</item>
+        <item quantity="zero">%d više konektora</item>
+        <item quantity="one">%d još konektor</item>
+        <item quantity="few">%d više konektora</item>
+        <item quantity="many">%d više konektora</item>
+    </plurals>
+    <plurals name="car_route_count_retrictions">
+        <item quantity="other">%d ograničenja</item>
+        <item quantity="one">%d ograničenje</item>
+        <item quantity="few">%d ograničenja</item>
+        <item quantity="many">%d ograničenja</item>
+    </plurals>
+    <plurals name="carpark_free_seats">
+        <item quantity="other">%d mesta</item>
+        <item quantity="one">%d mesto</item>
+        <item quantity="few">%d mesta</item>
+        <item quantity="many">%d mesta</item>
+    </plurals>
+    <plurals name="chains_show_all_button">
+        <item quantity="other">Sve %d filijale</item>
+        <item quantity="one">Sve %d filijala</item>
+        <item quantity="few">Sve %d filijale</item>
+        <item quantity="many">Sve %d filijala</item>
+    </plurals>
+    <plurals name="common_date_time_n_days_ago">
+        <item quantity="other">pre %s dana</item>
+        <item quantity="one">pre %s dan</item>
+        <item quantity="few">pre %s dana</item>
+        <item quantity="many">pre %s dana</item>
+    </plurals>
+    <plurals name="common_date_time_n_minutes_ago">
+        <item quantity="other">pre %s minuta</item>
+        <item quantity="one">pre %s minute</item>
+        <item quantity="few">pre %s minuta</item>
+        <item quantity="many">pre %s minuta</item>
+    </plurals>
+    <plurals name="common_days_count">
+        <item quantity="other">%d dana</item>
+        <item quantity="one">%d dan</item>
+        <item quantity="few">%d dana</item>
+        <item quantity="many">%d dana</item>
+    </plurals>
+    <plurals name="common_hours">
+        <item quantity="other">%d sata</item>
+        <item quantity="zero">%d sati</item>
+        <item quantity="one">%d sat</item>
+        <item quantity="few">%d sata</item>
+        <item quantity="many">%d sati</item>
+    </plurals>
+    <plurals name="common_minutes">
+        <item quantity="other">%d minuta</item>
+        <item quantity="zero">%d minuta</item>
+        <item quantity="one">%d minut</item>
+        <item quantity="few">%d minuta</item>
+        <item quantity="many">%d minuta</item>
+    </plurals>
+    <plurals name="common_time_frequency_days_format">
+        <item quantity="other">every %d days</item>
+        <item quantity="zero">every %d days</item>
+        <item quantity="one">every %d day</item>
+        <item quantity="few">every %d days</item>
+        <item quantity="many">every %d days</item>
+    </plurals>
+    <plurals name="common_time_frequency_hours_format">
+        <item quantity="other">na svaka %d sati</item>
+        <item quantity="zero">na svakih %d sati</item>
+        <item quantity="one">na svaki %d sat</item>
+        <item quantity="few">na svaka %d sati</item>
+        <item quantity="many">na svakih %d sati</item>
+    </plurals>
+    <plurals name="common_time_frequency_minutes_format">
+        <item quantity="other">na svaka %d minuta</item>
+        <item quantity="zero">na svakih %d minuta</item>
+        <item quantity="one">na svaki %d minuta</item>
+        <item quantity="few">na svaka %d minuta</item>
+        <item quantity="many">na svakih %d minuta</item>
+    </plurals>
+    <plurals name="discovery_card_place_count">
+        <item quantity="other">Lista od %d mesta</item>
+        <item quantity="one">Lista od %d mesta</item>
+        <item quantity="few">Lista od %d mesta</item>
+        <item quantity="many">Lista od %d mesta</item>
+    </plurals>
+    <plurals name="discovery_card_preview_photo_count">
+        <item quantity="other">fotografije%d</item>
+        <item quantity="one">fotografije%d</item>
+        <item quantity="few">fotografije%d</item>
+        <item quantity="many">fotografije%d</item>
+    </plurals>
+    <plurals name="discovery_collection_places_count">
+        <item quantity="other">Izbor · %d mesta</item>
+        <item quantity="zero">Izbor · 0 mesta</item>
+        <item quantity="one">Izbor · %d mesto</item>
+        <item quantity="few">Izbor · %d mesta</item>
+        <item quantity="many">Izbor · %d mesta</item>
+    </plurals>
+    <plurals name="discovery_entries_expand_cell_title_count">
+        <item quantity="other">Još %d kolekcije</item>
+        <item quantity="zero">Još %d kolekcija</item>
+        <item quantity="one">Još %d kolekcija</item>
+        <item quantity="few">Još %d kolekcije</item>
+        <item quantity="many">Još %d kolekcija</item>
+    </plurals>
+    <plurals name="discovery_place_votes_number">
+        <item quantity="other">(%d recenzije)</item>
+        <item quantity="one">(%d recenzija)</item>
+        <item quantity="few">(%d recenzije)</item>
+        <item quantity="many">(%d recenzija)</item>
+    </plurals>
+    <plurals name="discovery_places_count">
+        <item quantity="other">%d mesta</item>
+        <item quantity="one">%d mesto</item>
+        <item quantity="few">%d mesta</item>
+        <item quantity="many">%d mesta</item>
+    </plurals>
+    <plurals name="eco_route_calories">
+        <item quantity="other">%d kalorije</item>
+        <item quantity="zero">%d kalorije</item>
+        <item quantity="one">%d kalorija</item>
+        <item quantity="few">%d kalorije</item>
+        <item quantity="many">%d kalorije</item>
+    </plurals>
+    <plurals name="edit_my_transport_selected">
+        <item quantity="other">%d selected</item>
+        <item quantity="one">%d selected</item>
+        <item quantity="few">%d selected</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Premotajte %d sekundi unapred</item>
+        <item quantity="one">Premotajte %d sekundu unapred</item>
+        <item quantity="few">Premotajte %d sekunde unapred</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Premotajte %d sekundi unazad</item>
+        <item quantity="one">Premotajte %d sekundu unazad</item>
+        <item quantity="few">Premotajte %d sekunde unazad</item>
+    </plurals>
+    <plurals name="format_distance_ft">
+        <item quantity="other">%d fita</item>
+        <item quantity="zero">%d fita</item>
+        <item quantity="one">%d fita</item>
+        <item quantity="few">%d fita</item>
+        <item quantity="many">%d fita</item>
+    </plurals>
+    <plurals name="format_distance_mi">
+        <item quantity="other">%s milja</item>
+        <item quantity="one">%s milja</item>
+        <item quantity="few">%s milja</item>
+        <item quantity="many">%s milja</item>
+    </plurals>
+    <plurals name="format_speed_mph">
+        <item quantity="other">%s milja/h</item>
+        <item quantity="one">%s milja/h</item>
+        <item quantity="few">%s milja/h</item>
+        <item quantity="many">%s milja/h</item>
+    </plurals>
+    <plurals name="guidance_menu_traffic_level">
+        <item quantity="other">%d poena</item>
+        <item quantity="one">%d poen</item>
+        <item quantity="few">%d poena</item>
+        <item quantity="many">%d poena</item>
+    </plurals>
+    <plurals name="kartograph_gallery_category_photo_count">
+        <item quantity="other">fotografije%d</item>
+        <item quantity="zero">fotografije%d</item>
+        <item quantity="one">fotografije%d</item>
+        <item quantity="few">fotografije%d</item>
+        <item quantity="many">fotografije%d</item>
+    </plurals>
+    <plurals name="kartograph_gallery_category_video_count">
+        <item quantity="other">%d video</item>
+        <item quantity="zero">%d video</item>
+        <item quantity="one">%d video</item>
+        <item quantity="few">%d video</item>
+        <item quantity="many">%d video</item>
+    </plurals>
+    <plurals name="kartograph_notification_capture_stopped_subtitle">
+        <item quantity="other">Snimljeno je %d slike</item>
+        <item quantity="zero">Snimljeno je %d slika</item>
+        <item quantity="one">%d slika je snimljena</item>
+        <item quantity="few">Snimljeno je %d slike</item>
+        <item quantity="many">Snimljeno je %d slika</item>
+    </plurals>
+    <plurals name="kartograph_ride_upload_in_progress_text">
+        <item quantity="other">%d rute se šalje…</item>
+        <item quantity="one">%d ruta se šalje…</item>
+        <item quantity="few">%d rute se šalje…</item>
+        <item quantity="many">%d ruta se šalju…</item>
+    </plurals>
+    <plurals name="kartograph_ride_upload_waiting_text">
+        <item quantity="other">%d rute čekaju da budu poslane</item>
+        <item quantity="one">%d ruta čeka da bude poslana</item>
+        <item quantity="few">%d rute čekaju da budu poslane</item>
+        <item quantity="many">%d ruta čekaju da budu poslane</item>
+    </plurals>
+    <plurals name="location_sharing_user_card_subscribers_count">
+        <item quantity="other">%d čoveka</item>
+        <item quantity="zero">%d ljudi</item>
+        <item quantity="one">%d čovek</item>
+        <item quantity="few">%d čoveka</item>
+        <item quantity="many">%d ljudi</item>
+    </plurals>
+    <plurals name="masstransit_schedule_not_operating_lines">
+        <item quantity="other">%d routes currently unavailable</item>
+        <item quantity="one">%d route currently unavailable</item>
+        <item quantity="few">%d routes currently unavailable</item>
+        <item quantity="many">%d routes currently unavailable</item>
+    </plurals>
+    <plurals name="mirrors_preview_button_text">
+        <item quantity="other">Pogledajte %d snimka</item>
+        <item quantity="zero">Pogledajte %d snimaka</item>
+        <item quantity="one">Pogledajte %d snimak</item>
+        <item quantity="few">Pogledajte %d snimka</item>
+        <item quantity="many">Pogledajte %d snimaka</item>
+    </plurals>
+    <plurals name="mirrors_upload_button_text">
+        <item quantity="other">Otpremiti %d slike</item>
+        <item quantity="zero">Otpremiti %d slika</item>
+        <item quantity="one">Otpremiti %d sliku</item>
+        <item quantity="few">Otpremiti %d slike</item>
+        <item quantity="many">Otpremiti %d slika</item>
+    </plurals>
+    <plurals name="mt_guidance_header_title_stations">
+        <item quantity="other">%d stanice</item>
+        <item quantity="zero">%d stanice</item>
+        <item quantity="one">%d stanica</item>
+        <item quantity="few">%d stanice</item>
+        <item quantity="many">%d stanice</item>
+    </plurals>
+    <plurals name="mt_guidance_header_title_stops">
+        <item quantity="other">%d stanice</item>
+        <item quantity="zero">$d stanica</item>
+        <item quantity="one">%d stanica</item>
+        <item quantity="few">%d stanice</item>
+        <item quantity="many">%d stanica</item>
+    </plurals>
+    <plurals name="mt_snippet_transfers">
+        <item quantity="other">%d prelaska</item>
+        <item quantity="zero">%d presedanja</item>
+        <item quantity="one">%d presedanje</item>
+        <item quantity="few">%d prelaska</item>
+        <item quantity="many">%d presedanja</item>
+    </plurals>
+    <plurals name="mt_snippet_via_points">
+        <item quantity="other">Tačke</item>
+        <item quantity="zero">Tački</item>
+        <item quantity="one">Tačka</item>
+        <item quantity="few">Tačke</item>
+        <item quantity="many">Tački</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d novih obaveštenja</item>
+        <item quantity="one">%d novo obaveštenje</item>
+        <item quantity="few">%d nova obaveštenja</item>
+    </plurals>
+    <plurals name="mtthreadcard_title_stops_count">
+        <item quantity="other">%d stanice</item>
+        <item quantity="one">%d stanica</item>
+        <item quantity="few">%d stanice</item>
+        <item quantity="many">%d stanica</item>
+    </plurals>
+    <plurals name="my_transport_more_lines_collapsed_text">
+        <item quantity="other">Još %d rute</item>
+        <item quantity="one">Još %d ruta</item>
+        <item quantity="few">Još %d rute</item>
+        <item quantity="many">Još %d ruta</item>
+    </plurals>
+    <plurals name="new_comments_count">
+        <item quantity="other">%d novih</item>
+        <item quantity="one">%d novi</item>
+        <item quantity="few">%d novih</item>
+        <item quantity="many">%d novih</item>
+    </plurals>
+    <plurals name="parking_payment_session_extension_details_template_count">
+        <item quantity="other">Parkiranje se može produžiti nakon %d minute</item>
+        <item quantity="zero">Parkiranje se može produžiti nakon %d minuta</item>
+        <item quantity="one">Parkiranje se može produžiti nakon %d minute</item>
+        <item quantity="few">Parkiranje se može produžiti nakon %d minute</item>
+        <item quantity="many">Parkiranje se može produžiti nakon %d minuta</item>
+    </plurals>
+    <plurals name="pedestrian_route_fitness_steps">
+        <item quantity="other">%d koraka</item>
+        <item quantity="zero">0 koraka</item>
+        <item quantity="one">%d korak</item>
+        <item quantity="few">%d koraka</item>
+        <item quantity="many">%d koraka</item>
+    </plurals>
+    <plurals name="photo_picker_add_multiple_photos_and_multiple_videos">
+        <item quantity="other">Dodati %1$d fotografiju i %2$d video snimak</item>
+        <item quantity="zero">Dodati %1$d fotografiju i %2$d video snimak</item>
+        <item quantity="one">Dodati %1$d fotografiju i %2$d video snimak</item>
+        <item quantity="few">Dodati %1$d fotografiju i %2$d video snimak</item>
+        <item quantity="many">Dodati %1$d fotografiju i %2$d video snimak</item>
+    </plurals>
+    <plurals name="photo_picker_add_multiple_photos_and_single_video">
+        <item quantity="other">Dodati %d fotografiju i 1 video snimak</item>
+        <item quantity="zero">Dodati %d fotografiju i 1 video snimak</item>
+        <item quantity="one">Dodati %d fotografiju i 1 video snimak</item>
+        <item quantity="few">Dodati %d fotografiju i 1 video snimak</item>
+        <item quantity="many">Dodati %d fotografiju i 1 video snimak</item>
+    </plurals>
+    <plurals name="photo_picker_add_photos_and_videos_plural">
+        <item quantity="other">Dodati %1$d fotografiju i %2$d video snimak</item>
+        <item quantity="zero">Dodati %1$d fotografiju i %2$d video snimak</item>
+        <item quantity="one">Dodati %1$d fotografiju i %2$d video snimak</item>
+        <item quantity="few">Dodati %1$d fotografiju i %2$d video snimak</item>
+        <item quantity="many">Dodati %1$d fotografiju i %2$d video snimak</item>
+    </plurals>
+    <plurals name="photo_picker_add_photos_plural">
+        <item quantity="other">Dodati %d fotografiju</item>
+        <item quantity="zero">Dodati %d fotografiju</item>
+        <item quantity="one">Dodati %d fotografiju</item>
+        <item quantity="few">Dodati %d fotografiju</item>
+        <item quantity="many">Dodati %d fotografiju</item>
+    </plurals>
+    <plurals name="photo_picker_add_single_photo_and_multiple_videos">
+        <item quantity="other">Dodati 1 fotografiju i %d video snimak</item>
+        <item quantity="zero">Dodati 1 fotografiju i %d video snimak</item>
+        <item quantity="one">Dodati 1 fotografiju i %d video snimak</item>
+        <item quantity="few">Dodati 1 fotografiju i %d video snimak</item>
+        <item quantity="many">Dodati 1 fotografiju i %d video snimak</item>
+    </plurals>
+    <plurals name="photo_picker_add_videos_plural">
+        <item quantity="other">Dodati %d video snimak</item>
+        <item quantity="zero">Dodati %d video snimak</item>
+        <item quantity="one">Dodati %d video snimak</item>
+        <item quantity="few">Dodati %d video snimak</item>
+        <item quantity="many">Dodati %d video snimak</item>
+    </plurals>
+    <plurals name="photos_photo_count">
+        <item quantity="other">%d foto</item>
+        <item quantity="one">%d foto</item>
+        <item quantity="few">%d foto</item>
+        <item quantity="many">%d foto</item>
+    </plurals>
+    <plurals name="place_card_accessibility_rating_count">
+        <item quantity="other">%d ocene ostale</item>
+        <item quantity="zero">%d ocena ostalo</item>
+        <item quantity="one">%d ocena ostala</item>
+        <item quantity="few">%d ocene ostale</item>
+        <item quantity="many">%d ocena ostalo</item>
+    </plurals>
+    <plurals name="place_nearby_organizations">
+        <item quantity="other">Pored %d organizacije</item>
+        <item quantity="one">Pored %d organizacija</item>
+        <item quantity="few">Pored %d organizacije</item>
+        <item quantity="many">Pored %d organizacija</item>
+    </plurals>
+    <plurals name="place_rating_count">
+        <item quantity="other">%d ocene</item>
+        <item quantity="one">%d ocena</item>
+        <item quantity="few">%d ocene</item>
+        <item quantity="many">%d ocena</item>
+    </plurals>
+    <plurals name="place_reviews_count_format">
+        <item quantity="other">%d recenzije</item>
+        <item quantity="one">%d recenzija</item>
+        <item quantity="few">%d recenzije</item>
+        <item quantity="many">%d recenzija</item>
+    </plurals>
+    <plurals name="place_upload_photo_status">
+        <item quantity="other">Učitavanje %2$d foto… %1$d %%</item>
+        <item quantity="one">Učitavanje… %1$d %%</item>
+        <item quantity="few">Učitavanje %2$d foto… %1$d %%</item>
+        <item quantity="many">Učitavanje %2$d foto… %1$d %%</item>
+    </plurals>
+    <plurals name="placecard_booking_guests_amount">
+        <item quantity="other">%d guests</item>
+        <item quantity="one">%d guest</item>
+        <item quantity="few">%d guests</item>
+        <item quantity="many">%d guests</item>
+    </plurals>
+    <plurals name="placecard_booking_nights_format">
+        <item quantity="other">%d nights</item>
+        <item quantity="one">%d night</item>
+        <item quantity="few">%d nights</item>
+        <item quantity="many">%d nights</item>
+    </plurals>
+    <plurals name="placecard_electric_connectors_show_more_connectors">
+        <item quantity="other">%d više konektora</item>
+        <item quantity="one">%d još konektor</item>
+        <item quantity="few">%d više konektora</item>
+        <item quantity="many">%d više konektora</item>
+    </plurals>
+    <plurals name="placecard_gallery_more_photos">
+        <item quantity="other">Još %d slike</item>
+        <item quantity="one">Još %d slika</item>
+        <item quantity="few">Još %d slike</item>
+        <item quantity="many">Još %d slika</item>
+    </plurals>
+    <plurals name="placecard_hotels_booking_widget_adults_count">
+        <item quantity="other">%d odasla</item>
+        <item quantity="zero">%d odrasli</item>
+        <item quantity="one">%d odrasli</item>
+        <item quantity="few">%d odasla</item>
+        <item quantity="many">%d odaslih</item>
+    </plurals>
+    <plurals name="placecard_hotels_booking_widget_children_count">
+        <item quantity="other">%d deteta</item>
+        <item quantity="zero">%d dece</item>
+        <item quantity="one">%d dete</item>
+        <item quantity="few">%d deteta</item>
+        <item quantity="many">%d dece</item>
+    </plurals>
+    <plurals name="placecard_hotels_booking_widget_nights_count">
+        <item quantity="other">%d noći</item>
+        <item quantity="zero">%d noći</item>
+        <item quantity="one">%d noć</item>
+        <item quantity="few">%d noći</item>
+        <item quantity="many">%d noći</item>
+    </plurals>
+    <plurals name="placecard_owner_widgets_content_update_photos_sub">
+        <item quantity="other">"Poslednje ažuriranje: Pre 
+%d meseci"</item>
+        <item quantity="zero">"Poslednje ažuriranje: Pre 
+%d meseci"</item>
+        <item quantity="one">"Poslednje ažuriranje: Pre 
+%d meseci"</item>
+        <item quantity="few">"Poslednje ažuriranje: Pre 
+%d meseci"</item>
+        <item quantity="many">"Poslednje ažuriranje: Pre 
+%d meseci"</item>
+    </plurals>
+    <plurals name="placecard_owner_widgets_reviews_new">
+        <item quantity="other">+ %d novo</item>
+        <item quantity="zero">+ %d novo</item>
+        <item quantity="one">+ %d novo</item>
+        <item quantity="few">+ %d novo</item>
+        <item quantity="many">+ %d novo</item>
+    </plurals>
+    <plurals name="placecard_reviews_count_format">
+        <item quantity="other">%d recenzije</item>
+        <item quantity="zero">%d recenzija</item>
+        <item quantity="one">%d recenzija</item>
+        <item quantity="few">%d recenzije</item>
+        <item quantity="many">%d recenzija</item>
+    </plurals>
+    <plurals name="placecard_selections_block_show_more_discoveries">
+        <item quantity="other">Još %d kolekcije</item>
+        <item quantity="one">Još %d kolekcija</item>
+        <item quantity="few">Još %d kolekcije</item>
+        <item quantity="many">Još %d kolekcija</item>
+    </plurals>
+    <plurals name="review_show_comments">
+        <item quantity="other">Videti %d komentara</item>
+        <item quantity="zero">Videti %d komentara</item>
+        <item quantity="one">Videti %d komentar</item>
+        <item quantity="few">Videti %d komentara</item>
+        <item quantity="many">Videti %d komentara</item>
+    </plurals>
+    <plurals name="reviews_card_rating_voices">
+        <item quantity="other">%d ocene</item>
+        <item quantity="one">%d ocena</item>
+        <item quantity="few">%d ocene</item>
+        <item quantity="many">%d ocena</item>
+    </plurals>
+    <plurals name="reviews_create_choose_photos_send">
+        <item quantity="other">Send %d photos</item>
+        <item quantity="one">Send %d photo</item>
+        <item quantity="few">Send %d photos</item>
+    </plurals>
+    <plurals name="reviews_place_reviews_all">
+        <item quantity="other">Pregledaj sve %d recenzije</item>
+        <item quantity="one">Pregledaj %d recenziju</item>
+        <item quantity="few">Pregledaj sve %d recenzije</item>
+        <item quantity="many">Pregledaj sve %d recenzije</item>
+    </plurals>
+    <plurals name="reviews_place_reviews_more">
+        <item quantity="other">Još %d recenzije</item>
+        <item quantity="one">Još %d recenzija</item>
+        <item quantity="few">Još %d recenzije</item>
+        <item quantity="many">Još %d recenzija</item>
+    </plurals>
+    <plurals name="road_events_comments_count">
+        <item quantity="other">%d komentara</item>
+        <item quantity="one">%d komentar</item>
+        <item quantity="few">%d komentara</item>
+        <item quantity="many">%d komentara</item>
+    </plurals>
+    <plurals name="route_snippets_amount_of_flags">
+        <item quantity="other">Na ruti %d ograničenja</item>
+        <item quantity="one">Na ruti %d ograničenje</item>
+        <item quantity="few">Na ruti %d ograničenja</item>
+        <item quantity="many">Na ruti %d ograničenja</item>
+    </plurals>
+    <plurals name="routes_directions_masstransit_details_stations_count">
+        <item quantity="other">%d stanice</item>
+        <item quantity="one">%d stanica</item>
+        <item quantity="few">%d stanice</item>
+        <item quantity="many">%d stanica</item>
+    </plurals>
+    <plurals name="routes_directions_masstransit_details_stops_count">
+        <item quantity="other">%d stanice</item>
+        <item quantity="one">%d stanica</item>
+        <item quantity="few">%d stanice</item>
+        <item quantity="many">%d stanica</item>
+    </plurals>
+    <plurals name="routes_directions_masstransit_time_and_number_of_stops">
+        <item quantity="other">%1$s / %2$d stajališta</item>
+        <item quantity="one">%1$s / %2$d stajalište</item>
+        <item quantity="few">%1$s / %2$d stajališta</item>
+        <item quantity="many">%1$s / %2$d stajališta</item>
+    </plurals>
+    <plurals name="routes_masstransit_transfers_count">
+        <item quantity="other">%d presedanja</item>
+        <item quantity="zero">%d presedanja</item>
+        <item quantity="one">%d presedanje</item>
+        <item quantity="few">%d presedanja</item>
+        <item quantity="many">%d presedanja</item>
+    </plurals>
+    <plurals name="routes_select_destination_waypoints_count">
+        <item quantity="other">%d mesta</item>
+        <item quantity="zero">%d mesta</item>
+        <item quantity="one">%d mesto</item>
+        <item quantity="few">%d mesta</item>
+        <item quantity="many">%d mesta</item>
+    </plurals>
+    <plurals name="routes_select_via_description_multiple">
+        <item quantity="other">Via %d points</item>
+        <item quantity="one">Via %d point</item>
+        <item quantity="few">Via %d points</item>
+    </plurals>
+    <plurals name="routes_select_via_waypoints_count">
+        <item quantity="other">%d точки</item>
+        <item quantity="one">%d точка</item>
+        <item quantity="few">%d точки</item>
+    </plurals>
+    <plurals name="routes_select_waypoints_limit_exceeded_template">
+        <item quantity="other">Na ruti mogu biti samo %d tačke</item>
+        <item quantity="zero">Na ruti može biti samo %d tačaka</item>
+        <item quantity="one">Na ruti može biti samo %d tačka</item>
+        <item quantity="few">Na ruti mogu biti samo %d tačke</item>
+        <item quantity="many">Na ruti može biti samo %d tačaka</item>
+    </plurals>
+    <plurals name="routes_selection_taxi_eta">
+        <item quantity="other">Ukrcavanje u toku %d minuta</item>
+        <item quantity="one">Ukrcavanje u toku %d minute</item>
+        <item quantity="few">Ukrcavanje u toku %d minuta</item>
+        <item quantity="many">Ukrcavanje u toku %d minuta</item>
+    </plurals>
+    <plurals name="scooters_payment_method_plus_subtitle">
+        <item quantity="other">Stanje %d poena</item>
+        <item quantity="zero">Stanje %d poena</item>
+        <item quantity="one">Stanje %d poen</item>
+        <item quantity="few">Stanje %d poena</item>
+        <item quantity="many">Stanje %d poena</item>
+    </plurals>
+    <plurals name="search_filters_chains_count_plural">
+        <item quantity="other">+%d lanca</item>
+        <item quantity="zero">+%d lanaca</item>
+        <item quantity="one">+%d lanac</item>
+        <item quantity="few">+%d lanca</item>
+        <item quantity="many">+%d lanaca</item>
+    </plurals>
+    <plurals name="search_line_map_download_hint">
+        <item quantity="other">%d grada</item>
+        <item quantity="one">%d grad</item>
+        <item quantity="few">%d grada</item>
+        <item quantity="many">%d gradova</item>
+    </plurals>
+    <plurals name="search_list_info_found">
+        <item quantity="other">Nađeno %d mesta</item>
+        <item quantity="one">Nađeno %d mesto</item>
+        <item quantity="few">Nađeno %d mesta</item>
+        <item quantity="many">Nađeno %d mesta</item>
+    </plurals>
+    <plurals name="settings_voice_chooser_selected_count">
+        <item quantity="other">%d izabrani</item>
+        <item quantity="one">%d izabran</item>
+        <item quantity="few">%d izabrani</item>
+        <item quantity="many">%d izabrani</item>
+    </plurals>
+    <plurals name="showcase_rubrics_place_count">
+        <item quantity="other">%d mesta</item>
+        <item quantity="one">%d mesto</item>
+        <item quantity="few">%d mesta</item>
+        <item quantity="many">%d mesta</item>
+    </plurals>
+    <plurals name="snippet_gallery_more_photo">
+        <item quantity="other">Više %d fotografija</item>
+        <item quantity="one">Više %d fotografija</item>
+        <item quantity="few">Više %d fotografija</item>
+        <item quantity="many">Više %d fotografija</item>
+    </plurals>
+    <plurals name="snippet_plus_offer_amount">
+        <item quantity="other">%d poena na Plus</item>
+        <item quantity="one">%d poen na Plus</item>
+        <item quantity="few">%d poena na Plus</item>
+        <item quantity="many">%d poena na Plus</item>
+    </plurals>
+    <plurals name="snippet_price_list_more_similar">
+        <item quantity="other">Slični: još %d</item>
+        <item quantity="zero">Slični: još %d</item>
+        <item quantity="one">Slični: još %d</item>
+        <item quantity="few">Slični: još %d</item>
+        <item quantity="many">Slični: još %d</item>
+    </plurals>
+    <plurals name="stars_rating_prices_count">
+        <item quantity="other">%d ocene</item>
+        <item quantity="one">%d ocena</item>
+        <item quantity="few">%d ocene</item>
+        <item quantity="many">%d ocena</item>
+    </plurals>
+    <plurals name="thread_route_stops">
+        <item quantity="other">%d stanice na ruti</item>
+        <item quantity="one">%d stanica na ruti</item>
+        <item quantity="few">%d stanice na ruti</item>
+        <item quantity="many">%d stanica na ruti</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">pre %d dana</item>
+        <item quantity="one">pre %d dan</item>
+        <item quantity="few">pre %d dana</item>
+        <item quantity="many">pre %d dana</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">pre %d minute</item>
+        <item quantity="one">pre %d minutu</item>
+        <item quantity="few">pre %d minute</item>
+        <item quantity="many">pre %d minuta</item>
+    </plurals>
+    <plurals name="toll_pass_notification_multiple_toll_title">
+        <item quantity="other">%d puta na putu sa putarinom</item>
+        <item quantity="zero">%d puteva na putu sa putarinom</item>
+        <item quantity="one">%d put na putu sa putarinom</item>
+        <item quantity="few">%d puta na putu sa putarinom</item>
+        <item quantity="many">%d puteva na putu sa putarinom</item>
+    </plurals>
+    <plurals name="traffic_level_lock_screen_widget">
+        <item quantity="other">%d poena</item>
+        <item quantity="zero">%d poena</item>
+        <item quantity="one">%d poen</item>
+        <item quantity="few">%d poena</item>
+        <item quantity="many">%d poena</item>
+    </plurals>
+    <plurals name="transit_item_expand_threads">
+        <item quantity="other">Još %d leta/linije</item>
+        <item quantity="one">Još %d let/linija</item>
+        <item quantity="few">Još %d leta/linije</item>
+        <item quantity="many">Još %d letova/linija</item>
+    </plurals>
+    <plurals name="trucks_settings_amount_of_axles">
+        <item quantity="other">%d osovine</item>
+        <item quantity="one">%d osovina</item>
+        <item quantity="few">%d osovine</item>
+        <item quantity="many">%d osovina</item>
+    </plurals>
+    <plurals name="widget_update_period_minutes">
+        <item quantity="other">%d minuta</item>
+        <item quantity="one">%d minut</item>
+        <item quantity="few">%d minuta</item>
+        <item quantity="many">%d minuta</item>
+    </plurals>
+</resources>

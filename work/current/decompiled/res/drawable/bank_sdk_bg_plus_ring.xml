@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="86.0dip" android:width="87.0dip" android:viewportWidth="87.0" android:viewportHeight="86.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="#00000000" android:pathData="M43.5,43m-41,0a41,41 0,1 1,82 0a41,41 0,1 1,-82 0" android:strokeColor="@drawable/$bank_sdk_bg_plus_ring__0" android:strokeWidth="4.0" />
+</vector>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/transit_item_root_layout" android:background="@drawable/common_ripple_with_transparent_background" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+        <FrameLayout android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="top" android:id="@id/transit_item_line_icon" android:background="@drawable/masstransit_common_generic_transport_background" android:layout_width="20.0dip" android:layout_height="20.0dip" android:scaleType="center" android:tint="@color/icons_color_bg" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:layout_gravity="top" android:id="@id/transit_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="16.0dip" android:layout_marginEnd="8.0dip" style="@style/Text16.Medium" />
+            <TextView android:ellipsize="end" android:id="@id/transit_item_subtitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="8.0dip" style="@style/Text14.TextSecondary" />
+            <TextView android:textColor="@color/text_alert" android:ellipsize="end" android:id="@id/transit_item_no_boarding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/transit_item_no_boarding" android:maxLines="1" android:layout_marginStart="16.0dip" android:layout_marginEnd="8.0dip" style="@style/Text14.Medium" />
+            <ru.yandex.yandexmaps.common.views.VectorTintableCompoundsTextView android:textColor="@color/text_secondary" android:ellipsize="end" android:gravity="center" android:id="@id/transit_item_expand_button" android:padding="12.0dip" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" android:drawablePadding="4.0dip" android:layout_marginStart="4.0dip" style="@style/Text14.Medium" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ru.yandex.maps.uikit.atomicviews.arrivaltime.ArrivalTimeView android:layout_gravity="end" android:id="@id/transit_item_arrival_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:layout_gravity="end" android:id="@id/transit_item_info_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" style="@style/Text14.TextPrimary" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

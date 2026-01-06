@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/accessibility_serp_rating" android:layout_marginStart="-2.0dip" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@id/stars_rating_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="8.0dip" style="@style/Text14.Medium" />
+    <TextView android:textColor="@color/text_grey" android:id="@id/stars_rating_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="4.0dip" style="@style/Text14" />
+    <TextView android:textColor="@color/text_grey" android:id="@id/stars_rating_count_long" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="6.0dip" style="@style/Text14" />
+    <TextView android:textColor="@color/text_grey" android:id="@id/stars_rating_no_rate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/place_rating_count_zero" android:maxLines="1" style="@style/Text14" />
+</merge>

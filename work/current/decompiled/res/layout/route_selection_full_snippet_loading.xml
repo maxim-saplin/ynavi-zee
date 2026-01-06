@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="144.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.shimmer.ShimmerFrameLayout android:background="@drawable/mt_rounded_shimmer_background" android:visibility="visible" android:layout_width="113.0dip" android:layout_height="20.0dip" android:layout_marginBottom="8.0dip" style="@style/CommonShimmer" />
+    <com.facebook.shimmer.ShimmerFrameLayout android:background="@drawable/mt_rounded_shimmer_background" android:visibility="visible" android:layout_width="323.0dip" android:layout_height="20.0dip" android:layout_marginBottom="8.0dip" style="@style/CommonShimmer" />
+    <com.facebook.shimmer.ShimmerFrameLayout android:background="@drawable/mt_rounded_shimmer_background" android:visibility="visible" android:layout_width="323.0dip" android:layout_height="20.0dip" android:layout_marginBottom="8.0dip" style="@style/CommonShimmer" />
+    <com.facebook.shimmer.ShimmerFrameLayout android:background="@drawable/mt_rounded_shimmer_background" android:visibility="visible" android:layout_width="143.0dip" android:layout_height="20.0dip" style="@style/CommonShimmer" />
+</merge>

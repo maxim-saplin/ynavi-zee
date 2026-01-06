@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.SplashScreen" parent="@style/Base.v27.Theme.SplashScreen" />
+    <style name="Base.Theme.SplashScreen.Light" parent="@style/Base.v27.Theme.SplashScreen.Light" />
+    <style name="FullScreenDialog" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="Messaging.Activity" parent="@style/Messaging.Activity.V27" />
+    <style name="Messaging.MessengerImagePreviewTheme" parent="@style/Messaging.MessengerImagePreviewBaseTheme">
+        <item name="android:statusBarColor">@color/messenger_absolute_black</item>
+        <item name="android:navigationBarColor">@color/messenger_absolute_black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+    <style name="Messaging.Theme.BottomSheetDialog" parent="@style/Messaging.Theme.BottomSheetDialog.V27" />
+    <style name="TransparentChooserActivityTheme" parent="@style/Base.TransparentChooserActivityTheme">
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <style name="ViewerActivityTheme" parent="@style/Base.ViewerActivityTheme">
+        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
+    </style>
+    <style name="Base.v27.Theme.SplashScreen" parent="@style/Base.v21.Theme.SplashScreen">
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <style name="Base.v27.Theme.SplashScreen.Light" parent="@style/Base.v21.Theme.SplashScreen.Light">
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <style name="Messaging.Activity.V27" parent="@style/Messaging.Activity.V23">
+        <item name="android:navigationBarColor">?messagingCommonActionbarColor</item>
+        <item name="android:windowLightNavigationBar">?messagingIsLightTheme</item>
+    </style>
+    <style name="Messaging.Theme.BottomSheetDialog.V27" parent="@style/Messaging.Theme.BottomSheetDialog.V23">
+        <item name="android:navigationBarColor">?messagingCommonActionbarColor</item>
+        <item name="android:windowLightNavigationBar">?messagingIsLightTheme</item>
+    </style>
+</resources>

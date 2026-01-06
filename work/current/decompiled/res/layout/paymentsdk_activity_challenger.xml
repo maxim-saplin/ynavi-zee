@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/rootView" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/container_layout" android:background="?android:colorBackground" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <FrameLayout android:id="@id/fragmentContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/snackBarLayout" android:background="@drawable/paymentsdk_bg_challenger_snackbar" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toTopOf="parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/paymentsdk_ic_alert_outline" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/paymentsdk_white" android:id="@id/snackbarTextView" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:alpha="0.98" android:fontFamily="@font/ya_regular" android:layout_marginStart="12.0dip" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View android:id="@id/blurView" android:background="#66000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/exitFrame" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="@id/container_layout" app:layout_constraintStart_toStartOf="@id/container_layout" app:layout_constraintTop_toBottomOf="parent">
+        <include android:id="@id/confirmExitContainer" layout="@layout/paymentsdk_layout_confirm_exit" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

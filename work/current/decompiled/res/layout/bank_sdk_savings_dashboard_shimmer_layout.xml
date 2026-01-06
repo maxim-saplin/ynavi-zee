@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Constraints android:id="@id/horizontalLineBalance" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.4" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="24.0dip" app:layout_constraintBottom_toBottomOf="@id/horizontalLineBalance">
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="109.0dip" android:layout_height="18.0dip" app:bank_sdk_cornerRadius="6.0dip" />
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="218.0dip" android:layout_height="46.0dip" android:layout_marginTop="7.0dip" app:bank_sdk_cornerRadius="12.0dip" />
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="273.0dip" android:layout_height="18.0dip" android:layout_marginTop="18.0dip" app:bank_sdk_cornerRadius="6.0dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginHorizontal="16.0dip" app:layout_constraintTop_toBottomOf="@id/horizontalLineBalance">
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="164.0dip" android:layout_height="@dimen/bank_sdk_savings_account_cell_height" android:layout_weight="1.0" app:bank_sdk_cornerRadius="24.0dip" />
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="164.0dip" android:layout_height="@dimen/bank_sdk_savings_account_cell_height" android:layout_weight="1.0" android:layout_marginStart="8.0dip" app:bank_sdk_cornerRadius="24.0dip" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

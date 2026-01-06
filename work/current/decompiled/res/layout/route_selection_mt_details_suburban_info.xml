@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.FlowLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:horizontalSpacing="4.0dip" app:verticalSpacing="4.0dip">
+        <ru.yandex.yandexmaps.common.views.TightTextView android:id="@id/route_chip" android:background="@drawable/route_selection_mt_details_suburban_info_background" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.Medium.TextColorBg" />
+        <ru.yandex.yandexmaps.common.views.TightTextView android:id="@id/platform_chip" android:background="@drawable/route_selection_mt_details_suburban_info_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="@color/bg_suggest" style="@style/Text14.Medium.TextColorBg" />
+        <ru.yandex.yandexmaps.common.views.TightTextView android:id="@id/path_chip" android:background="@drawable/route_selection_mt_details_suburban_info_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="@color/bg_suggest" style="@style/Text14.Medium.TextColorBg" />
+    </ru.yandex.yandexmaps.common.views.FlowLayout>
+    <RelativeLayout android:id="@id/alert" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip">
+        <ImageView android:id="@id/alert_icon" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/about_16" android:tint="@color/text_attention" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+        <TextView android:gravity="center_vertical" android:id="@id/alert_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="8.0dip" android:layout_toEndOf="@id/alert_icon" style="@style/Text14.Medium.TextPrimaryVariant" />
+    </RelativeLayout>
+</LinearLayout>

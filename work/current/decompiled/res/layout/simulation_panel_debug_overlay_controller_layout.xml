@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.multiplatform.simulation.panel.internal.ui.debug_overlay.DebugOverlayDraggableView android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:background="@color/icons_additional" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/speed_controls" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" app:tint="@color/icons_primary">
+                <androidx.appcompat.widget.AppCompatImageView android:id="@id/minus_icon" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/zoom_out_24" app:tint="@color/icons_actions" />
+                <TextView android:textColor="@color/text_primary" android:layout_gravity="center" android:id="@id/current_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginHorizontal="8.0dip" style="@style/Text16.Bold" />
+                <androidx.appcompat.widget.AppCompatImageView android:id="@id/plus_icon" android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/zoom_in_24" app:tint="@color/icons_actions" />
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/pause_play_button" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="8.0dip" android:layout_below="@id/speed_controls" android:layout_centerHorizontal="true" app:tint="@color/icons_actions" />
+        </RelativeLayout>
+    </ru.yandex.yandexmaps.multiplatform.simulation.panel.internal.ui.debug_overlay.DebugOverlayDraggableView>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

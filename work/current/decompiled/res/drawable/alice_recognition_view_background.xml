@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="top">
+        <shape android:shape="rectangle">
+            <size android:height="@dimen/alice_recognition_view_bg_gradient_height" />
+            <gradient android:startColor="#ffffffff" android:endColor="#00ffffff" android:angle="90.0" />
+        </shape>
+    </item>
+    <item android:top="@dimen/alice_recognition_view_bg_gradient_height">
+        <shape android:shape="rectangle">
+            <size android:height="10.0dip" />
+            <solid android:color="#ffffffff" />
+        </shape>
+    </item>
+</layer-list>

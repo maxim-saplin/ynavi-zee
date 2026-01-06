@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="72.0dip" android:drawable="@color/background_panel" />
+    <item android:drawable="@drawable/common_divider" android:left="72.0dip" />
+</layer-list>

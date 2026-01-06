@@ -1,0 +1,59 @@
+.class public final Le13/f;
+.super Le13/h;
+.source "SourceFile"
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Le13/f;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final b:Le13/f;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Le13/f;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Le13/f;->b:Le13/f;
+
+    new-instance v0, Ldn2/c0;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Ldn2/c0;-><init>(I)V
+
+    sput-object v0, Le13/f;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
+.end method

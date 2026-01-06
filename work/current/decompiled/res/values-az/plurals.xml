@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="FEET_SHORT">
+        <item quantity="other">fut</item>
+        <item quantity="zero">fut</item>
+        <item quantity="one">fut</item>
+        <item quantity="few">fut</item>
+        <item quantity="many">fut</item>
+    </plurals>
+    <plurals name="MILES_SHORT">
+        <item quantity="other">mil</item>
+        <item quantity="zero">mil</item>
+        <item quantity="one">mil</item>
+        <item quantity="few">mil</item>
+        <item quantity="many">mil</item>
+    </plurals>
+    <plurals name="PlusPay.Consumable.SpendPoints.Description">
+        <item quantity="other">Balı&lt;point> xərclə</item>
+        <item quantity="zero">Balı&lt;point> xərclə</item>
+        <item quantity="one">Balı&lt;point> xərclə</item>
+        <item quantity="few">Balı&lt;point> xərclə</item>
+        <item quantity="many">Balı&lt;point> xərclə</item>
+    </plurals>
+    <plurals name="accessibility_n_items">
+        <item quantity="other">%d element</item>
+        <item quantity="zero">0 element</item>
+        <item quantity="one">%d element</item>
+        <item quantity="few">%d element</item>
+        <item quantity="many">%d element</item>
+    </plurals>
+    <plurals name="accessibility_n_variants">
+        <item quantity="other">%d variant</item>
+        <item quantity="zero">0 variant</item>
+        <item quantity="one">%d variant</item>
+        <item quantity="few">%d variant</item>
+        <item quantity="many">%d variant</item>
+    </plurals>
+    <plurals name="accessibility_review_dislike_count">
+        <item quantity="other">%d bəyənməmə</item>
+        <item quantity="one">%d bəyənməmə</item>
+        <item quantity="few">%d bəyənməmə</item>
+        <item quantity="many">%d bəyənməmə</item>
+    </plurals>
+    <plurals name="accessibility_review_like_count">
+        <item quantity="other">%d bəyənmə</item>
+        <item quantity="one">%d bəyənmə</item>
+        <item quantity="few">%d bəyənmə</item>
+        <item quantity="many">%d bəyənmə</item>
+    </plurals>
+    <plurals name="accessibility_routes_intermediate_stops_count">
+        <item quantity="other">%d ara dayanacaq</item>
+        <item quantity="one">%d ara dayanacaq</item>
+        <item quantity="few">%d ara dayanacaq</item>
+        <item quantity="many">%d ara dayanacaq</item>
+    </plurals>
+    <plurals name="accessibility_routes_options_count">
+        <item quantity="other">%d aktiv tənzimləmə</item>
+        <item quantity="one">%d aktiv tənzimləmə</item>
+        <item quantity="few">%d aktiv tənzimləmə</item>
+        <item quantity="many">%d aktiv tənzimləmə</item>
+    </plurals>
+    <plurals name="accessibility_weather_title">
+        <item quantity="other">Hazırda %d dərəcədir</item>
+        <item quantity="zero">Hazırda %d dərəcədir</item>
+        <item quantity="one">Hazırda %d dərəcədir</item>
+        <item quantity="few">Hazırda %d dərəcədir</item>
+        <item quantity="many">Hazırda %d dərəcədir</item>
+    </plurals>
+    <plurals name="active_orders_number">
+        <item quantity="other">%d aktiv sifariş</item>
+        <item quantity="one">%d aktiv sifariş</item>
+        <item quantity="few">%d aktiv sifariş</item>
+        <item quantity="many">%d aktiv sifariş</item>
+    </plurals>
+    <plurals name="active_orders_number_and_music">
+        <item quantity="other">%d aktiv sifariş və Music</item>
+        <item quantity="zero">%d aktiv sifariş və Music</item>
+        <item quantity="one">%d aktiv sifariş və Music</item>
+        <item quantity="few">%d aktiv sifariş və Music</item>
+        <item quantity="many">%d aktiv sifariş və Music</item>
+    </plurals>
+    <plurals name="ask_disk_space_files_count">
+        <item quantity="other">%1$d fayl</item>
+        <item quantity="one">%1$d fayl</item>
+        <item quantity="few">%1$d fayl</item>
+    </plurals>
+    <plurals name="bike_route_stairs_count">
+        <item quantity="other">%d pilləkən</item>
+        <item quantity="zero">%d pilləkən</item>
+        <item quantity="one">%d pilləkən</item>
+        <item quantity="few">%d pilləkən</item>
+        <item quantity="many">%d pilləkən</item>
+    </plurals>
+    <plurals name="bike_route_stairs_with_ramps_count">
+        <item quantity="other">Panduslu %d pilləkən</item>
+        <item quantity="zero">Panduslu %d pilləkən</item>
+        <item quantity="one">Panduslu %d pilləkən</item>
+        <item quantity="few">Panduslu %d pilləkən</item>
+        <item quantity="many">Panduslu %d pilləkən</item>
+    </plurals>
+    <plurals name="bookmarks_folder_places_count">
+        <item quantity="other">%d yer</item>
+        <item quantity="zero">%d yer</item>
+        <item quantity="one">%d yer</item>
+        <item quantity="few">%d yer</item>
+        <item quantity="many">%d yer</item>
+    </plurals>
+    <plurals name="bookmarks_top_bar_selected_elements">
+        <item quantity="other">%d seçilib</item>
+        <item quantity="one">%d seçilib</item>
+        <item quantity="few">%d seçilib</item>
+        <item quantity="many">%d seçilib</item>
+    </plurals>
+    <plurals name="business_card_electric_charging_station_connectors_unfold">
+        <item quantity="other">Daha %d konnektor</item>
+        <item quantity="zero">Daha %d konnektor</item>
+        <item quantity="one">Daha %d konnektor</item>
+        <item quantity="few">Daha %d konnektor</item>
+        <item quantity="many">Daha %d konnektor</item>
+    </plurals>
+    <plurals name="calls_feedback_show_all_reasons_button_text">
+        <item quantity="other">Daha %d səbəb…</item>
+        <item quantity="one">Daha %d səbəb…</item>
+        <item quantity="few">Daha %d səbəb…</item>
+    </plurals>
+    <plurals name="car_route_count_retrictions">
+        <item quantity="other">%d məhdudiyyət</item>
+        <item quantity="one">%d məhdudiyyət</item>
+        <item quantity="few">%d məhdudiyyət</item>
+        <item quantity="many">%d məhdudiyyət</item>
+    </plurals>
+    <plurals name="carpark_free_seats">
+        <item quantity="other">%d yer</item>
+        <item quantity="one">%d yer</item>
+        <item quantity="few">%d yer</item>
+        <item quantity="many">%d yer</item>
+    </plurals>
+    <plurals name="chains_show_all_button">
+        <item quantity="other">%d filialın hamısı</item>
+        <item quantity="one">%d filialın hamısı</item>
+        <item quantity="few">%d filialın hamısı</item>
+        <item quantity="many">%d filialın hamısı</item>
+    </plurals>
+    <plurals name="channel_subscribers_plural">
+        <item quantity="other">%1$d abunəçi</item>
+        <item quantity="one">%1$d abunəçi</item>
+        <item quantity="few">%1$d abunəçi</item>
+    </plurals>
+    <plurals name="chat_attach_send_files">
+        <item quantity="other">%1$d fayl göndər</item>
+        <item quantity="one">Fayl göndər</item>
+        <item quantity="few">%1$d fayl göndər</item>
+    </plurals>
+    <plurals name="chat_attach_send_gif">
+        <item quantity="other">%1$d şəkil göndər</item>
+        <item quantity="one">Şəkil göndər</item>
+        <item quantity="few">%1$d şəkil göndər</item>
+    </plurals>
+    <plurals name="chat_attach_send_images">
+        <item quantity="other">%1$d görüntü göndər</item>
+        <item quantity="one">Görüntü göndər</item>
+        <item quantity="few">%1$d görüntü göndər</item>
+    </plurals>
+    <plurals name="chat_members_plural">
+        <item quantity="other">%1$d iştirakçı</item>
+        <item quantity="one">%1$d iştirakçı</item>
+        <item quantity="few">%1$d iştirakçı</item>
+    </plurals>
+    <plurals name="chat_status_typing_many">
+        <item quantity="other">%d yazır</item>
+        <item quantity="one">%d yazır</item>
+        <item quantity="few">%d yazır</item>
+    </plurals>
+    <plurals name="chat_threadlist_status">
+        <item quantity="other">Siz %1$d tredə abunəsiniz</item>
+        <item quantity="one">Siz %1$d tredə abunəsiniz</item>
+        <item quantity="few">Siz %1$d tredə abunəsiniz</item>
+    </plurals>
+    <plurals name="common_date_time_n_days_ago">
+        <item quantity="other">%s gün əvvəl</item>
+        <item quantity="one">%s gün əvvəl</item>
+        <item quantity="few">%s gün əvvəl</item>
+        <item quantity="many">%s gün əvvəl</item>
+    </plurals>
+    <plurals name="common_date_time_n_minutes_ago">
+        <item quantity="other">%s dəqiqə əvvəl</item>
+        <item quantity="one">%s dəqiqə əvvəl</item>
+        <item quantity="few">%s dəqiqə əvvəl</item>
+        <item quantity="many">%s dəqiqə əvvəl</item>
+    </plurals>
+    <plurals name="common_days_count">
+        <item quantity="other">%d gün</item>
+        <item quantity="one">%d gün</item>
+        <item quantity="few">%d gün</item>
+        <item quantity="many">%d gün</item>
+    </plurals>
+    <plurals name="common_hours">
+        <item quantity="other">%d saat</item>
+        <item quantity="zero">%d saat</item>
+        <item quantity="one">%d saat</item>
+        <item quantity="few">%d saat</item>
+        <item quantity="many">%d saat</item>
+    </plurals>
+    <plurals name="common_minutes">
+        <item quantity="other">%d dəqiqə</item>
+        <item quantity="zero">%d dəqiqə</item>
+        <item quantity="one">%d dəqiqə</item>
+        <item quantity="few">%d dəqiqə</item>
+        <item quantity="many">%d dəqiqə</item>
+    </plurals>
+    <plurals name="common_time_frequency_days_format">
+        <item quantity="other">%d gündən bir</item>
+        <item quantity="zero">%d gündən bir</item>
+        <item quantity="one">%d gündən bir</item>
+        <item quantity="few">%d gündən bir</item>
+        <item quantity="many">%d gündən bir</item>
+    </plurals>
+    <plurals name="common_time_frequency_hours_format">
+        <item quantity="other">hər %d saatdan bir</item>
+        <item quantity="zero">hər %d saatdan bir</item>
+        <item quantity="one">hər %d saatdan bir</item>
+        <item quantity="few">hər %d saatdan bir</item>
+        <item quantity="many">hər %d saatdan bir</item>
+    </plurals>
+    <plurals name="common_time_frequency_minutes_format">
+        <item quantity="other">%d dəqiqədən bir</item>
+        <item quantity="zero">%d dəqiqədən bir</item>
+        <item quantity="one">%d dəqiqədən bir</item>
+        <item quantity="few">%d dəqiqədən bir</item>
+        <item quantity="many">%d dəqiqədən bir</item>
+    </plurals>
+    <plurals name="discovery_card_place_count">
+        <item quantity="other">Siyahı, %d yer</item>
+        <item quantity="one">Siyahı, %d yer</item>
+        <item quantity="few">Siyahı, %d yer</item>
+        <item quantity="many">Siyahı, %d yer</item>
+    </plurals>
+    <plurals name="discovery_card_preview_photo_count">
+        <item quantity="other">%d foto</item>
+        <item quantity="one">%d foto</item>
+        <item quantity="few">%d foto</item>
+        <item quantity="many">%d foto</item>
+    </plurals>
+    <plurals name="discovery_collection_places_count">
+        <item quantity="other">Kolleksiya · %d yer</item>
+        <item quantity="zero">Kolleksiya · 0 yer</item>
+        <item quantity="one">Kolleksiya · %d yer</item>
+        <item quantity="few">Kolleksiya · %d yer</item>
+        <item quantity="many">Kolleksiya · %d yer</item>
+    </plurals>
+    <plurals name="discovery_entries_expand_cell_title_count">
+        <item quantity="other">Daha %d seçmə</item>
+        <item quantity="zero">Daha %d seçmə</item>
+        <item quantity="one">Daha %d seçmə</item>
+        <item quantity="few">Daha %d seçmə</item>
+        <item quantity="many">Daha %d seçmə</item>
+    </plurals>
+    <plurals name="discovery_place_votes_number">
+        <item quantity="other">(%d rəy)</item>
+        <item quantity="one">(%d rəy)</item>
+        <item quantity="few">(%d rəy)</item>
+        <item quantity="many">(%d rəy)</item>
+    </plurals>
+    <plurals name="discovery_places_count">
+        <item quantity="other">%d yer</item>
+        <item quantity="one">%d yer</item>
+        <item quantity="few">%d yer</item>
+        <item quantity="many">%d yer</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d saatlıq</item>
+        <item quantity="one">%d saatlıq</item>
+        <item quantity="few">%d saatlıq</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d dəqiqəlik</item>
+        <item quantity="one">%d dəqiqəlik</item>
+        <item quantity="few">%d dəqiqəlik</item>
+    </plurals>
+    <plurals name="eco_route_calories">
+        <item quantity="other">%d kalori</item>
+        <item quantity="zero">%d kalori</item>
+        <item quantity="one">%d kalori</item>
+        <item quantity="few">%d kalori</item>
+        <item quantity="many">%d kalori</item>
+    </plurals>
+    <plurals name="edit_my_transport_selected">
+        <item quantity="other">%d seçilib</item>
+        <item quantity="one">%d seçilib</item>
+        <item quantity="few">%d seçilib</item>
+        <item quantity="many">%d seçilib</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">%d saniyə irəli çəkin</item>
+        <item quantity="one">%d saniyə irəli çəkin</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">%d saniyə geri çəkin</item>
+        <item quantity="one">%d saniyə geri çəkin</item>
+    </plurals>
+    <plurals name="format_distance_ft">
+        <item quantity="other">%d fut</item>
+        <item quantity="one">%d fut</item>
+        <item quantity="few">%d fut</item>
+        <item quantity="many">%d fut</item>
+    </plurals>
+    <plurals name="format_distance_mi">
+        <item quantity="other">%s mil</item>
+        <item quantity="one">%s mil</item>
+        <item quantity="few">%s mil</item>
+        <item quantity="many">%s mil</item>
+    </plurals>
+    <plurals name="format_speed_mph">
+        <item quantity="other">%s mil/saat</item>
+        <item quantity="one">%s mil/saat</item>
+        <item quantity="few">%s mil/saat</item>
+        <item quantity="many">%s mil/saat</item>
+    </plurals>
+    <plurals name="forward_messages_text">
+        <item quantity="other">%1$s mesajı yönləndir</item>
+        <item quantity="one">%1$s mesajı yönləndir</item>
+        <item quantity="few">%1$s mesajı yönləndir</item>
+    </plurals>
+    <plurals name="group_call_participants_count_text">
+        <item quantity="other">%d iştirakçı</item>
+        <item quantity="one">%d iştirakçı</item>
+        <item quantity="few">%d iştirakçı</item>
+    </plurals>
+    <plurals name="guidance_menu_traffic_level">
+        <item quantity="other">%d bal</item>
+        <item quantity="one">%d bal</item>
+        <item quantity="few">%d bal</item>
+        <item quantity="many">%d bal</item>
+    </plurals>
+    <plurals name="international.PlusPay.Consumable.SpendPoints.Description">
+        <item quantity="other">Balı&lt;point> xərclə</item>
+        <item quantity="zero">Balı&lt;point> xərclə</item>
+        <item quantity="one">Balı&lt;point> xərclə</item>
+        <item quantity="two">Balı&lt;point> xərclə</item>
+        <item quantity="few">Balı&lt;point> xərclə</item>
+        <item quantity="many">Balı&lt;point> xərclə</item>
+    </plurals>
+    <plurals name="kartograph_gallery_category_photo_count">
+        <item quantity="other">%d foto</item>
+        <item quantity="zero">%d foto</item>
+        <item quantity="one">%d foto</item>
+        <item quantity="few">%d foto</item>
+        <item quantity="many">%d foto</item>
+    </plurals>
+    <plurals name="kartograph_gallery_category_video_count">
+        <item quantity="other">%d video</item>
+        <item quantity="zero">%d video</item>
+        <item quantity="one">%d video</item>
+        <item quantity="few">%d video</item>
+        <item quantity="many">%d video</item>
+    </plurals>
+    <plurals name="kartograph_notification_capture_stopped_subtitle">
+        <item quantity="other">%d foto çəkilib</item>
+        <item quantity="zero">%d foto çəkilib</item>
+        <item quantity="one">%d foto çəkilib</item>
+        <item quantity="few">%d foto çəkilib</item>
+        <item quantity="many">%d foto çəkilib</item>
+    </plurals>
+    <plurals name="kartograph_ride_upload_in_progress_text">
+        <item quantity="other">%d marşrut göndərilir...</item>
+        <item quantity="one">%d marşrut göndərilir...</item>
+        <item quantity="few">%d marşrut göndərilir...</item>
+        <item quantity="many">%d marşrut göndərilir...</item>
+    </plurals>
+    <plurals name="kartograph_ride_upload_waiting_text">
+        <item quantity="other">%d marşrut göndərilməni gözləyir</item>
+        <item quantity="one">%d marşrut göndərilməni gözləyir</item>
+        <item quantity="few">%d marşrut göndərilməni gözləyir</item>
+        <item quantity="many">%d marşrut göndərilməni gözləyir</item>
+    </plurals>
+    <plurals name="location_sharing_user_card_subscribers_count">
+        <item quantity="other">%d nəfər</item>
+        <item quantity="zero">%d nəfər</item>
+        <item quantity="one">%d nəfər</item>
+        <item quantity="few">%d nəfər</item>
+        <item quantity="many">%d nəfər</item>
+    </plurals>
+    <plurals name="masstransit_schedule_not_operating_lines">
+        <item quantity="other">%d marşrut indi işləmir</item>
+        <item quantity="one">%d marşrut indi işləmir</item>
+        <item quantity="few">%d marşrut indi işləmir</item>
+        <item quantity="many">%d marşrut indi işləmir</item>
+    </plurals>
+    <plurals name="menu_confirm_delete_messages_plural">
+        <item quantity="other">%1$d mesajı sil</item>
+        <item quantity="one">%1$d mesajı sil</item>
+        <item quantity="few">%1$d mesajı sil</item>
+    </plurals>
+    <plurals name="menu_reactions">
+        <item quantity="other">%s reaksiya</item>
+        <item quantity="one">%s reaksiya</item>
+        <item quantity="few">%s reaksiya</item>
+    </plurals>
+    <plurals name="messaging_chat_search_result">
+        <item quantity="other">%1$d/%2$d uyğun nəticə</item>
+        <item quantity="one">%1$d/%2$d uyğun nəticə</item>
+        <item quantity="few">%1$d/%2$d uyğun nəticə</item>
+    </plurals>
+    <plurals name="messaging_online_minutes_ago">
+        <item quantity="other">bu vaxt burada olub: %d dəqiqə əvvəl</item>
+        <item quantity="one">bu vaxt burada olub: %d dəqiqə əvvəl</item>
+        <item quantity="few">bu vaxt burada olub: %d dəqiqə əvvəl</item>
+    </plurals>
+    <plurals name="messaging_removed_messages_group_plural">
+        <item quantity="other">%d mesaj silinib</item>
+        <item quantity="one">%d mesaj silinib</item>
+        <item quantity="few">%d mesaj silinib</item>
+    </plurals>
+    <plurals name="messaging_thread_counter_label">
+        <item quantity="other">%1$d cavab</item>
+        <item quantity="one">%1$d cavab</item>
+        <item quantity="few">%1$d cavab</item>
+    </plurals>
+    <plurals name="messenger_count_recent_voters">
+        <item quantity="other">%d səs</item>
+        <item quantity="one">%d səs</item>
+        <item quantity="few">%d səs</item>
+    </plurals>
+    <plurals name="messenger_create_poll_max_answers_warn">
+        <item quantity="other">Daha %d cavab əlavə etmək olar</item>
+        <item quantity="one">Daha %d cavab əlavə etmək olar</item>
+        <item quantity="few">Daha %d cavab əlavə etmək olar</item>
+    </plurals>
+    <plurals name="messenger_poll_answers_count">
+        <item quantity="other">%d cavab</item>
+        <item quantity="one">%d cavab</item>
+        <item quantity="few">%d cavab</item>
+    </plurals>
+    <plurals name="mirrors_preview_button_text">
+        <item quantity="other">%d şəklə bax</item>
+        <item quantity="zero">%d şəklə bax</item>
+        <item quantity="one">%d şəklə bax</item>
+        <item quantity="few">%d şəklə bax</item>
+        <item quantity="many">%d şəklə bax</item>
+    </plurals>
+    <plurals name="mirrors_upload_button_text">
+        <item quantity="other">%d şəkil yüklə</item>
+        <item quantity="zero">%d şəkil yüklə</item>
+        <item quantity="one">%d şəkil yüklə</item>
+        <item quantity="few">%d şəkil yüklə</item>
+        <item quantity="many">%d şəkil yüklə</item>
+    </plurals>
+    <plurals name="more_routes_count">
+        <item quantity="other">еще %d варианта маршрута</item>
+        <item quantity="one">еще %d вариант маршрута</item>
+        <item quantity="few">еще %d варианта маршрута</item>
+        <item quantity="many">еще %d вариантов маршрута</item>
+    </plurals>
+    <plurals name="mt_guidance_header_title_stations">
+        <item quantity="other">%d stansiya</item>
+        <item quantity="zero">%d stansiya</item>
+        <item quantity="one">%d stansiya</item>
+        <item quantity="few">%d stansiya</item>
+        <item quantity="many">%d stansiya</item>
+    </plurals>
+    <plurals name="mt_guidance_header_title_stops">
+        <item quantity="other">%d dayanacaq</item>
+        <item quantity="zero">$d dayanacaq</item>
+        <item quantity="one">%d dayanacaq</item>
+        <item quantity="few">%d dayanacaq</item>
+        <item quantity="many">%d dayanacaq</item>
+    </plurals>
+    <plurals name="mt_snippet_transfers">
+        <item quantity="other">%d dəyişmə</item>
+        <item quantity="zero">%d dəyişmə</item>
+        <item quantity="one">%d dəyişmə</item>
+        <item quantity="few">%d dəyişmə</item>
+        <item quantity="many">%d dəyişmə</item>
+    </plurals>
+    <plurals name="mt_snippet_via_points">
+        <item quantity="other">Nöqtələr</item>
+        <item quantity="zero">Nöqtələr</item>
+        <item quantity="one">Nöqtə</item>
+        <item quantity="few">Nöqtələr</item>
+        <item quantity="many">Nöqtələr</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d yeni bildiriş</item>
+        <item quantity="one">%d yeni bildiriş</item>
+    </plurals>
+    <plurals name="mtthreadcard_title_stops_count">
+        <item quantity="other">%d dayanacaq</item>
+        <item quantity="one">%d dayanacaq</item>
+        <item quantity="few">%d dayanacaq</item>
+        <item quantity="many">%d dayanacaq</item>
+    </plurals>
+    <plurals name="my_transport_more_lines_collapsed_text">
+        <item quantity="other">Daha %d marşrut</item>
+        <item quantity="one">Daha %d marşrut</item>
+        <item quantity="few">Daha %d marşrut</item>
+        <item quantity="many">Daha %d marşrut</item>
+    </plurals>
+    <plurals name="new_comments_count">
+        <item quantity="other">%d yeni</item>
+        <item quantity="one">%d yeni</item>
+        <item quantity="few">%d yeni</item>
+        <item quantity="many">%d yeni</item>
+    </plurals>
+    <plurals name="notification_chat_title_plural">
+        <item quantity="other">%1$s: %2$s yeni mesaj</item>
+        <item quantity="one">%1$s: %2$s yeni mesaj</item>
+        <item quantity="few">%1$s: %2$s yeni mesaj</item>
+    </plurals>
+    <plurals name="notification_new_messages_count">
+        <item quantity="other">%d yeni mesaj</item>
+        <item quantity="one">%d yeni mesaj</item>
+        <item quantity="few">%d yeni mesaj</item>
+    </plurals>
+    <plurals name="parking_payment_session_extension_details_template_count">
+        <item quantity="other">Parklanmanı %d dəqiqədən sonra uzatmaq olar</item>
+        <item quantity="zero">Parklanmanı %d dəqiqədən sonra uzatmaq olar</item>
+        <item quantity="one">Parklanmanı %d dəqiqədən sonra uzatmaq olar</item>
+        <item quantity="few">Parklanmanı %d dəqiqədən sonra uzatmaq olar</item>
+        <item quantity="many">Parklanmanı %d dəqiqədən sonra uzatmaq olar</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Son %1$d rəqəmi</item>
+        <item quantity="zero">Son %1$d rəqəmi</item>
+        <item quantity="one">Son %1$d rəqəmi</item>
+        <item quantity="few">Son %1$d rəqəmi</item>
+        <item quantity="many">Son %1$d rəqəmi</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"İndi sizə 
+%1$s nömrəsindən zəng gələcək. Nömrənin son %2$d rəqəmlərini daxil edin"</item>
+        <item quantity="zero">"İndi sizə 
+%1$s nömrəsindən zəng gələcək. Nömrənin son %2$d rəqəmlərini daxil edin"</item>
+        <item quantity="one">"İndi sizə 
+%1$s nömrəsindən zəng gələcək. Nömrənin son %2$d rəqəmini daxil edin"</item>
+        <item quantity="few">"İndi sizə 
+%1$s nömrəsindən zəng gələcək. Nömrənin son %2$d rəqəmlərini daxil edin"</item>
+        <item quantity="many">"İndi sizə 
+%1$s nömrəsindən zəng gələcək. Nömrənin son %2$d rəqəmlərini daxil edin"</item>
+    </plurals>
+    <plurals name="pedestrian_route_fitness_steps">
+        <item quantity="other">%d addım</item>
+        <item quantity="zero">0 addım</item>
+        <item quantity="one">%d addım</item>
+        <item quantity="few">%d addım</item>
+        <item quantity="many">%d addım</item>
+    </plurals>
+    <plurals name="photo_picker_add_multiple_photos_and_multiple_videos">
+        <item quantity="other">%1$d foto və %2$d video əlavə et</item>
+        <item quantity="zero">%1$d foto və %2$d video əlavə et</item>
+        <item quantity="one">%1$d foto və %2$d video əlavə et</item>
+        <item quantity="few">%1$d foto və %2$d video əlavə et</item>
+        <item quantity="many">%1$d foto və %2$d video əlavə et</item>
+    </plurals>
+    <plurals name="photo_picker_add_multiple_photos_and_single_video">
+        <item quantity="other">%d foto və 1 video əlavə et</item>
+        <item quantity="zero">%d foto və 1 video əlavə et</item>
+        <item quantity="one">%d foto və 1 video əlavə et</item>
+        <item quantity="few">%d foto və 1 video əlavə et</item>
+        <item quantity="many">%d foto və 1 video əlavə et</item>
+    </plurals>
+    <plurals name="photo_picker_add_photos_and_videos_plural">
+        <item quantity="other">%1$d foto və %2$d video əlavə et</item>
+        <item quantity="zero">%1$d foto və %2$d video əlavə et</item>
+        <item quantity="one">%1$d foto və %2$d video əlavə et</item>
+        <item quantity="few">%1$d foto və %2$d video əlavə et</item>
+        <item quantity="many">%1$d foto və %2$d video əlavə et</item>
+    </plurals>
+    <plurals name="photo_picker_add_photos_plural">
+        <item quantity="other">%d foto əlavə et</item>
+        <item quantity="zero">%d foto əlavə et</item>
+        <item quantity="one">%d foto əlavə et</item>
+        <item quantity="few">%d foto əlavə et</item>
+        <item quantity="many">%d foto əlavə et</item>
+    </plurals>
+    <plurals name="photo_picker_add_single_photo_and_multiple_videos">
+        <item quantity="other">1 foto və %d video əlavə et</item>
+        <item quantity="zero">1 foto və %d video əlavə et</item>
+        <item quantity="one">1 foto və %d video əlavə et</item>
+        <item quantity="few">1 foto və %d video əlavə et</item>
+        <item quantity="many">1 foto və %d video əlavə et</item>
+    </plurals>
+    <plurals name="photo_picker_add_videos_plural">
+        <item quantity="other">%d video əlavə et</item>
+        <item quantity="zero">%d video əlavə et</item>
+        <item quantity="one">%d video əlavə et</item>
+        <item quantity="few">%d video əlavə et</item>
+        <item quantity="many">%d video əlavə et</item>
+    </plurals>
+    <plurals name="photos_photo_count">
+        <item quantity="other">%d foto</item>
+        <item quantity="one">%d foto</item>
+        <item quantity="few">%d foto</item>
+        <item quantity="many">%d foto</item>
+    </plurals>
+    <plurals name="place_card_accessibility_rating_count">
+        <item quantity="other">%d qiymət verilib</item>
+        <item quantity="zero">%d qiymət verilib</item>
+        <item quantity="one">%d qiymət verilib</item>
+        <item quantity="few">%d qiymət verilib</item>
+        <item quantity="many">%d qiymət verilib</item>
+    </plurals>
+    <plurals name="place_nearby_organizations">
+        <item quantity="other">Yaxınlıqda %d təşkilat var</item>
+        <item quantity="one">Yaxınlıqda %d təşkilat var</item>
+        <item quantity="few">Yaxınlıqda %d təşkilat var</item>
+        <item quantity="many">Yaxınlıqda %d təşkilat var</item>
+    </plurals>
+    <plurals name="place_rating_count">
+        <item quantity="other">%d qiymətləndirmə</item>
+        <item quantity="one">%d qiymətləndirmə</item>
+        <item quantity="few">%d qiymətləndirmə</item>
+        <item quantity="many">%d qiymətləndirmə</item>
+    </plurals>
+    <plurals name="place_reviews_count_format">
+        <item quantity="other">%d rəy</item>
+        <item quantity="one">%d rəy</item>
+        <item quantity="few">%d rəy</item>
+        <item quantity="many">%d rəy</item>
+    </plurals>
+    <plurals name="place_upload_photo_status">
+        <item quantity="other">%2$d foto yüklənir… %1$d %%</item>
+        <item quantity="one">Yüklənir… %1$d %%</item>
+        <item quantity="few">%2$d foto yüklənir… %1$d %%</item>
+        <item quantity="many">%2$d foto yüklənir… %1$d %%</item>
+    </plurals>
+    <plurals name="placecard_booking_guests_amount">
+        <item quantity="other">%d qonaq</item>
+        <item quantity="one">%d qonaq</item>
+        <item quantity="few">%d qonaq</item>
+        <item quantity="many">%d qonaq</item>
+    </plurals>
+    <plurals name="placecard_booking_nights_format">
+        <item quantity="other">%d gecə</item>
+        <item quantity="one">%d gecə</item>
+        <item quantity="few">%d gecə</item>
+        <item quantity="many">%d gecə</item>
+    </plurals>
+    <plurals name="placecard_electric_connectors_show_more_connectors">
+        <item quantity="other">Daha %d konnektor</item>
+        <item quantity="one">Daha %d konnektor</item>
+        <item quantity="few">Daha %d konnektor</item>
+        <item quantity="many">Daha %d konnektor</item>
+    </plurals>
+    <plurals name="placecard_gallery_more_photos">
+        <item quantity="other">Daha %d foto</item>
+        <item quantity="one">Daha %d foto</item>
+        <item quantity="few">Daha %d foto</item>
+        <item quantity="many">Daha %d foto</item>
+    </plurals>
+    <plurals name="placecard_hotels_booking_widget_adults_count">
+        <item quantity="other">%d böyük</item>
+        <item quantity="zero">%d böyük</item>
+        <item quantity="one">%d böyük</item>
+        <item quantity="few">%d böyük</item>
+        <item quantity="many">%d böyük</item>
+    </plurals>
+    <plurals name="placecard_hotels_booking_widget_children_count">
+        <item quantity="other">%d uşaq</item>
+        <item quantity="zero">%d uşaq</item>
+        <item quantity="one">%d uşaq</item>
+        <item quantity="few">%d uşaq</item>
+        <item quantity="many">%d uşaq</item>
+    </plurals>
+    <plurals name="placecard_hotels_booking_widget_nights_count">
+        <item quantity="other">%d gecə</item>
+        <item quantity="zero">%d gecə</item>
+        <item quantity="one">%d gecə</item>
+        <item quantity="few">%d gecə</item>
+        <item quantity="many">%d gecə</item>
+    </plurals>
+    <plurals name="placecard_owner_widgets_content_update_photos_sub">
+        <item quantity="other">"Son yeniləmə:
+%d ay əvvəl"</item>
+        <item quantity="zero">"Son yeniləmə:
+%d ay əvvəl"</item>
+        <item quantity="one">"Son yeniləmə:
+%d ay əvvəl"</item>
+        <item quantity="few">"Son yeniləmə:
+%d ay əvvəl"</item>
+        <item quantity="many">"Son yeniləmə:
+%d ay əvvəl"</item>
+    </plurals>
+    <plurals name="placecard_owner_widgets_reviews_new">
+        <item quantity="other">+ %d yeni</item>
+        <item quantity="zero">+ %d yeni</item>
+        <item quantity="one">+ %d yeni</item>
+        <item quantity="few">+ %d yeni</item>
+        <item quantity="many">+ %d yeni</item>
+    </plurals>
+    <plurals name="placecard_reviews_count_format">
+        <item quantity="other">%d rəy</item>
+        <item quantity="zero">%d rəy</item>
+        <item quantity="one">%d rəy</item>
+        <item quantity="few">%d rəy</item>
+        <item quantity="many">%d rəy</item>
+    </plurals>
+    <plurals name="placecard_selections_block_show_more_discoveries">
+        <item quantity="other">Daha %d seçmə</item>
+        <item quantity="one">Daha %d seçmə</item>
+        <item quantity="few">Daha %d seçmə</item>
+        <item quantity="many">Daha %d seçmə</item>
+    </plurals>
+    <plurals name="review_show_comments">
+        <item quantity="other">%d şərhə bax</item>
+        <item quantity="zero">%d şərhə bax</item>
+        <item quantity="one">%d şərhə bax</item>
+        <item quantity="few">%d şərhə bax</item>
+        <item quantity="many">%d şərhə bax</item>
+    </plurals>
+    <plurals name="reviews_card_rating_voices">
+        <item quantity="other">%d qiymətləndirmə</item>
+        <item quantity="one">%d qiymətləndirmə</item>
+        <item quantity="few">%d qiymətləndirmə</item>
+        <item quantity="many">%d qiymətləndirmə</item>
+    </plurals>
+    <plurals name="reviews_create_choose_photos_send">
+        <item quantity="other">%d fotonu göndər</item>
+        <item quantity="one">%d fotonu göndər</item>
+        <item quantity="few">%d fotonu göndər</item>
+        <item quantity="many">%d fotonu göndər</item>
+    </plurals>
+    <plurals name="reviews_place_reviews_all">
+        <item quantity="other">%d rəyin hamısına bax</item>
+        <item quantity="one">%d rəyə bax</item>
+        <item quantity="few">%d rəyin hamısına bax</item>
+        <item quantity="many">%d rəyin hamısına bax</item>
+    </plurals>
+    <plurals name="reviews_place_reviews_more">
+        <item quantity="other">Daha %d rəy</item>
+        <item quantity="one">Daha %d rəy</item>
+        <item quantity="few">Daha %d rəy</item>
+        <item quantity="many">Daha %d rəy</item>
+    </plurals>
+    <plurals name="road_events_comments_count">
+        <item quantity="other">%d şərh</item>
+        <item quantity="one">%d şərh</item>
+        <item quantity="few">%d şərh</item>
+        <item quantity="many">%d şərh</item>
+    </plurals>
+    <plurals name="route_snippets_amount_of_flags">
+        <item quantity="other">Marşrutda %d məhdudiyyət var</item>
+        <item quantity="one">Marşrutda %d məhdudiyyət var</item>
+        <item quantity="few">Marşrutda %d məhdudiyyət var</item>
+        <item quantity="many">Marşrutda %d məhdudiyyət var</item>
+    </plurals>
+    <plurals name="routes_directions_masstransit_details_stations_count">
+        <item quantity="other">%d stansiya</item>
+        <item quantity="one">%d stansiya</item>
+        <item quantity="few">%d stansiya</item>
+        <item quantity="many">%d stansiya</item>
+    </plurals>
+    <plurals name="routes_directions_masstransit_details_stops_count">
+        <item quantity="other">%d dayanacaq</item>
+        <item quantity="one">%d dayanacaq</item>
+        <item quantity="few">%d dayanacaq</item>
+        <item quantity="many">%d dayanacaq</item>
+    </plurals>
+    <plurals name="routes_directions_masstransit_time_and_number_of_stops">
+        <item quantity="other">%1$s/%2$d dayanacaq</item>
+        <item quantity="one">%1$s/%2$d dayanacaq</item>
+        <item quantity="few">%1$s/%2$d dayanacaq</item>
+        <item quantity="many">%1$s/%2$d dayanacaq</item>
+    </plurals>
+    <plurals name="routes_masstransit_transfers_count">
+        <item quantity="other">%d dəyişmə</item>
+        <item quantity="zero">%d dəyişmə</item>
+        <item quantity="one">%d dəyişmə</item>
+        <item quantity="few">%d dəyişmə</item>
+        <item quantity="many">%d dəyişmə</item>
+    </plurals>
+    <plurals name="routes_select_destination_waypoints_count">
+        <item quantity="other">%d yer</item>
+        <item quantity="zero">%d yer</item>
+        <item quantity="one">%d yer</item>
+        <item quantity="few">%d yer</item>
+        <item quantity="many">%d yer</item>
+    </plurals>
+    <plurals name="routes_select_via_description_multiple">
+        <item quantity="other">%d nöqtədən sonra</item>
+        <item quantity="one">%d nöqtədən sonra</item>
+        <item quantity="few">%d nöqtədən sonra</item>
+        <item quantity="many">%d nöqtədən sonra</item>
+    </plurals>
+    <plurals name="routes_select_via_waypoints_count">
+        <item quantity="other">%d nöqtə</item>
+        <item quantity="one">%d nöqtə</item>
+        <item quantity="few">%d nöqtə</item>
+        <item quantity="many">%d nöqtə</item>
+    </plurals>
+    <plurals name="routes_select_waypoints_limit_exceeded_template">
+        <item quantity="other">Marşrutda yalnız %d nöqtə ola bilər</item>
+        <item quantity="zero">Marşrutda yalnız %d nöqtə ola bilər</item>
+        <item quantity="one">Marşrutda yalnız %d nöqtə ola bilər</item>
+        <item quantity="few">Marşrutda yalnız %d nöqtə ola bilər</item>
+        <item quantity="many">Marşrutda yalnız %d nöqtə ola bilər</item>
+    </plurals>
+    <plurals name="routes_selection_taxi_eta">
+        <item quantity="other">%d dəqiqə ərzində təqdim ediləcək</item>
+        <item quantity="one">%d dəqiqə ərzində təqdim ediləcək</item>
+        <item quantity="few">%d dəqiqə ərzində təqdim ediləcək</item>
+        <item quantity="many">%d dəqiqə ərzində təqdim ediləcək</item>
+    </plurals>
+    <plurals name="scooters_order_damage_uploaded_number_subtitle">
+        <item quantity="other">Загружено %d фотографии</item>
+        <item quantity="zero">Загружено %d фотографий</item>
+        <item quantity="one">Загружена %d фотография</item>
+        <item quantity="few">Загружено %d фотографии</item>
+        <item quantity="many">Загружено %d фотографий</item>
+    </plurals>
+    <plurals name="scooters_payment_method_plus_subtitle">
+        <item quantity="other">Balans %d bal</item>
+        <item quantity="zero">Balans %d bal</item>
+        <item quantity="one">Balans %d bal</item>
+        <item quantity="few">Balans %d bal</item>
+        <item quantity="many">Balans %d bal</item>
+    </plurals>
+    <plurals name="search_filters_chains_count_plural">
+        <item quantity="other">+%d şəbəkə</item>
+        <item quantity="zero">+%d şəbəkə</item>
+        <item quantity="one">+%d şəbəkə</item>
+        <item quantity="few">+%d şəbəkə</item>
+        <item quantity="many">+%d şəbəkə</item>
+    </plurals>
+    <plurals name="search_line_map_download_hint">
+        <item quantity="other">%d şəhər</item>
+        <item quantity="one">%d şəhər</item>
+        <item quantity="few">%d şəhər</item>
+        <item quantity="many">%d şəhər</item>
+    </plurals>
+    <plurals name="search_list_info_found">
+        <item quantity="other">%d yer tapıldı</item>
+        <item quantity="one">%d yer tapıldı</item>
+        <item quantity="few">%d yer tapıldı</item>
+        <item quantity="many">%d yer tapıldı</item>
+    </plurals>
+    <plurals name="settings_voice_chooser_selected_count">
+        <item quantity="other">%d seçilib</item>
+        <item quantity="one">%d seçilib</item>
+        <item quantity="few">%d seçilib</item>
+        <item quantity="many">%d seçilib</item>
+    </plurals>
+    <plurals name="showcase_rubrics_place_count">
+        <item quantity="other">%d yer</item>
+        <item quantity="one">%d yer</item>
+        <item quantity="few">%d yer</item>
+        <item quantity="many">%d yer</item>
+    </plurals>
+    <plurals name="snippet_gallery_more_photo">
+        <item quantity="other">Daha %d foto</item>
+        <item quantity="one">Daha %d foto</item>
+        <item quantity="few">Daha %d foto</item>
+        <item quantity="many">Daha %d foto</item>
+    </plurals>
+    <plurals name="snippet_plus_offer_amount">
+        <item quantity="other">Plus-da %d bal</item>
+        <item quantity="one">Plus-da %d bal</item>
+        <item quantity="few">Plus-da %d bal</item>
+        <item quantity="many">Plus-da %d bal</item>
+    </plurals>
+    <plurals name="snippet_price_list_more_similar">
+        <item quantity="other">Bənzər: daha %d</item>
+        <item quantity="zero">Bənzər: daha %d</item>
+        <item quantity="one">Bənzər: daha %d</item>
+        <item quantity="few">Bənzər: daha %d</item>
+        <item quantity="many">Bənzər: daha %d</item>
+    </plurals>
+    <plurals name="stars_rating_prices_count">
+        <item quantity="other">%d qiymətləndirmə</item>
+        <item quantity="one">%d qiymətləndirmə</item>
+        <item quantity="few">%d qiymətləndirmə</item>
+        <item quantity="many">%d qiymətləndirmə</item>
+    </plurals>
+    <plurals name="tanker_plural_test_key">
+        <item quantity="other">test_few</item>
+        <item quantity="one">test_one</item>
+        <item quantity="few">test_few</item>
+        <item quantity="many">test_many</item>
+    </plurals>
+    <plurals name="thread_route_stops">
+        <item quantity="other">marşrutda %d dayanacaq var</item>
+        <item quantity="one">marşrutda %d dayanacaq var</item>
+        <item quantity="few">marşrutda %d dayanacaq var</item>
+        <item quantity="many">marşrutda %d dayanacaq var</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="other">%d gün əvvəl</item>
+        <item quantity="one">%d gün əvvəl</item>
+        <item quantity="few">%d gün əvvəl</item>
+        <item quantity="many">%d gün əvvəl</item>
+    </plurals>
+    <plurals name="time_minutes_ago">
+        <item quantity="other">%d dəqiqə əvvəl</item>
+        <item quantity="one">%d dəqiqə əvvəl</item>
+        <item quantity="few">%d dəqiqə əvvəl</item>
+        <item quantity="many">%d dəqiqə əvvəl</item>
+    </plurals>
+    <plurals name="toll_pass_notification_multiple_toll_title">
+        <item quantity="other">%d ödənişli yoldan keçid</item>
+        <item quantity="zero">%d ödənişli yoldan keçid</item>
+        <item quantity="one">%d ödənişli yoldan keçid</item>
+        <item quantity="few">%d ödənişli yoldan keçid</item>
+        <item quantity="many">%d ödənişli yoldan keçid</item>
+    </plurals>
+    <plurals name="traffic_level_lock_screen_widget">
+        <item quantity="other">%d bal</item>
+        <item quantity="zero">%d bal</item>
+        <item quantity="one">%d bal</item>
+        <item quantity="few">%d bal</item>
+        <item quantity="many">%d bal</item>
+    </plurals>
+    <plurals name="transit_item_expand_threads">
+        <item quantity="other">Daha %d reys</item>
+        <item quantity="one">Daha %d reys</item>
+        <item quantity="few">Daha %d reys</item>
+        <item quantity="many">Daha %d reys</item>
+    </plurals>
+    <plurals name="trucks_settings_amount_of_axles">
+        <item quantity="other">%d ox</item>
+        <item quantity="one">%d ox</item>
+        <item quantity="few">%d ox</item>
+        <item quantity="many">%d ox</item>
+    </plurals>
+    <plurals name="user_in_groups">
+        <item quantity="other">%s qrupları</item>
+        <item quantity="one">%s qrupu</item>
+        <item quantity="few">%s qrupları</item>
+    </plurals>
+    <plurals name="user_in_groups_count">
+        <item quantity="other">%d qrup</item>
+        <item quantity="one">%d qrup</item>
+        <item quantity="few">%d qrup</item>
+    </plurals>
+    <plurals name="voice_timelimit_minutes_plural">
+        <item quantity="other">%1$d dəqiqə.</item>
+        <item quantity="one">%1$d dəqiqə.</item>
+        <item quantity="few">%1$d dəqiqə.</item>
+    </plurals>
+    <plurals name="widget_update_period_minutes">
+        <item quantity="other">%d dəqiqə</item>
+        <item quantity="one">%d dəqiqə</item>
+        <item quantity="few">%d dəqiqə</item>
+        <item quantity="many">%d dəqiqə</item>
+    </plurals>
+</resources>

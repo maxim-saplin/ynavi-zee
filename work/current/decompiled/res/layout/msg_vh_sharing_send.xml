@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/msg_bg_sharing_item" android:padding="@dimen/messaging_sharing_item_padding" android:layout_width="wrap_content" android:layout_height="@dimen/messaging_sharing_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/sharing_item_icon" android:layout_width="@dimen/messaging_sharing_chat_item_icon_size" android:layout_height="@dimen/messaging_sharing_chat_item_icon_size" android:layout_margin="@dimen/messaging_sharing_chat_item_icon_margin" android:scaleType="fitCenter" />
+    <com.yandex.alicekit.core.views.AutoCeilTextView android:ellipsize="end" android:id="@id/sharing_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="12.0dip" android:maxWidth="94.0dip" android:maxLines="2" android:layout_marginStart="2.0dip" android:layout_marginEnd="12.0dip" style="@style/Messaging.SharingView" />
+</LinearLayout>

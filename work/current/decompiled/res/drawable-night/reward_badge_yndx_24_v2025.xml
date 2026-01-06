@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="42.0dip" android:viewportWidth="42.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <path android:fillColor="@drawable/$reward_badge_yndx_24_v2025__0" android:pathData="M29.39 21.95c1.33-1.42 5.01-3.72 9.02-0.22c-2.15 2.4-5.84 3.2-9.02 0.22z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_24_v2025__1" android:pathData="M33.78 18.2c1.08-3.46 4.66-4.62 7.54-2.9c-0.76 3-4.33 4.86-7.54 2.9z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_24_v2025__2" android:pathData="M36.5 13.76c-0.47-4.06 2.14-6.27 5.32-6.07c0.74 3.57-1.94 6.22-5.32 6.07z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_24_v2025__3" android:pathData="M36.71 8.5c-2.28-3.18-1.84-5.91 1.34-8.2c2.29 3.18 1.84 5.91-1.34 8.2z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_24_v2025__4" android:pathData="M12.61 21.95c-1.33-1.42-5.01-3.72-9.02-0.22c2.15 2.4 5.84 3.2 9.02 0.22z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_24_v2025__5" android:pathData="M8.22 18.2c-1.08-3.46-4.66-4.62-7.54-2.9c0.76 3 4.33 4.86 7.54 2.9z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_24_v2025__6" android:pathData="M5.5 13.76C5.97 9.7 3.36 7.49 0.18 7.69c-0.74 3.57 1.94 6.22 5.32 6.07z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_24_v2025__7" android:pathData="M5.29 8.5c2.28-3.18 1.84-5.91-1.34-8.2C1.66 3.48 2.11 6.2 5.29 8.5z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_24_v2025__8" android:pathData="M21 1c-4.97 0-9 4.03-9 9c0 2.48 1 4.73 2.63 6.36s5.47 3.99 5.7 6.47c0.03 0.37 0.3 0.67 0.67 0.67c0.37 0 0.64-0.3 0.67-0.67c0.23-2.48 4.06-4.83 5.7-6.46C28.98 14.73 30 12.48 30 10c0-4.97-4.03-9-9-9z" />
+        <path android:fillColor="#ffffffff" android:pathData="M21 13.08c-1.7 0-3.08-1.38-3.08-3.08c0-1.7 1.38-3.08 3.08-3.08c1.7 0 3.08 1.38 3.08 3.08c0 1.7-1.38 3.08-3.08 3.08z" />
+    </group>
+</vector>

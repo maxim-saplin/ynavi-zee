@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="48.0dip" android:width="48.0dip" android:viewportWidth="48.0" android:viewportHeight="48.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#ffffffff" android:pathData="M2 13c0-6.08 4.92-11 11-11h22c6.08 0 11 4.92 11 11v22c0 6.08-4.92 11-11 11h-22c-6.08 0-11-4.92-11-11z" />
+    <path android:pathData="M24 33l-8 12" android:strokeColor="#ff333333" android:strokeWidth="3.0" />
+    <path android:pathData="M24 33l8 12" android:strokeColor="#ff333333" android:strokeWidth="3.0" />
+    <path android:pathData="M24 33v10" android:strokeColor="#ff333333" android:strokeWidth="3.0" />
+    <path android:fillColor="#ff333333" android:pathData="M10 17c0-2.76 2.24-5 5-5h18c2.76 0 5 2.24 5 5v12c0 2.76-2.24 5-5 5h-18c-2.76 0-5-2.24-5-5z" android:strokeColor="#ffffffff" android:strokeWidth="2.0" />
+    <path android:fillColor="#ffffffff" android:pathData="M16 16a2 2 0 1 0 0 4a2 2 0 1 0 0-4z" />
+    <path android:pathData="M27 18a5 5 0 1 0 0 10a5 5 0 1 0 0-10z" android:strokeColor="#ffffffff" android:strokeWidth="2.0" />
+    <path android:pathData="M3.5 13c0-5.25 4.25-9.5 9.5-9.5h22c5.25 0 9.5 4.25 9.5 9.5v22c0 5.25-4.25 9.5-9.5 9.5h-22c-5.25 0-9.5-4.25-9.5-9.5z" android:strokeColor="#ff4d4d4d" android:strokeWidth="3.0" />
+</vector>

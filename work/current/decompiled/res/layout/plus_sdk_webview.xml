@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/plus_webview_toolbar_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent" />
+    <com.yandex.plus.webview.core.VerticalNestedWebView android:id="@id/plus_webview" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/plus_webview_toolbar_container" />
+    <FrameLayout android:id="@id/plus_webview_footer_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" />
+    <FrameLayout android:id="@id/plus_webview_full_size_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/plus_webview_toolbar_container" />
+</merge>

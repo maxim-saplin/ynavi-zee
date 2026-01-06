@@ -1,0 +1,74 @@
+.class public final synthetic Lru/yandex/yandexmaps/integrations/placecard/place/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# instance fields
+.field public final synthetic b:Lru/yandex/yandexmaps/integrations/placecard/place/MyPlacePlacecardController;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lru/yandex/yandexmaps/integrations/placecard/place/MyPlacePlacecardController;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lru/yandex/yandexmaps/integrations/placecard/place/a;->b:Lru/yandex/yandexmaps/integrations/placecard/place/MyPlacePlacecardController;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    check-cast p1, Lcom/yandex/mapkit/maps/core/geometry/Point;
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/integrations/placecard/place/a;->b:Lru/yandex/yandexmaps/integrations/placecard/place/MyPlacePlacecardController;
+
+    iget-object v1, v0, Lru/yandex/yandexmaps/integrations/placecard/place/MyPlacePlacecardController;->s:Lgq1/p;
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    new-instance v2, Lru/yandex/yandexmaps/bookmarks/onmap/b;
+
+    invoke-virtual {v0}, Lru/yandex/yandexmaps/integrations/placecard/place/MyPlacePlacecardController;->V0()Lru/yandex/yandexmaps/integrations/placecard/place/c;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lru/yandex/yandexmaps/integrations/placecard/place/c;->d()Lru/yandex/yandexmaps/multiplatform/datasync/wrapper/places/ImportantPlace;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Lru/yandex/yandexmaps/bookmarks/onmap/b;-><init>(Lru/yandex/yandexmaps/multiplatform/datasync/wrapper/places/ImportantPlace;)V
+
+    check-cast v1, Lgq1/q;
+
+    invoke-virtual {v1, p1, v2}, Lgq1/q;->b(Lcom/yandex/mapkit/maps/core/geometry/Point;Lju1/d;)Lio/reactivex/disposables/b;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lio/reactivex/disposables/b;
+
+    const/4 v2, 0x0
+
+    aput-object p1, v1, v2
+
+    invoke-virtual {v0, v1}, Lru/yandex/yandexmaps/slavery/controller/SlaveController;->r0([Lio/reactivex/disposables/b;)V
+
+    sget-object p1, Lm31/d0;->a:Lm31/d0;
+
+    return-object p1
+.end method

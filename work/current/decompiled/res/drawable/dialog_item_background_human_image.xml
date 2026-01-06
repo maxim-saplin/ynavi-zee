@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="172.0dip" android:width="172.0dip" />
+            <solid android:color="@color/dialog_item_text_color_human_image" />
+            <corners android:topLeftRadius="@dimen/dialog_item_corner_radius_big" android:topRightRadius="@dimen/dialog_item_corner_radius_big" android:bottomLeftRadius="@dimen/dialog_item_corner_radius_big" android:bottomRightRadius="@dimen/dialog_item_corner_radius_small" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/empty_img" />
+    </item>
+</layer-list>

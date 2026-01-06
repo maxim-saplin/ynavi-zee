@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.shutter.content.EcoReliefLegendsHorizontalItemView android:id="@id/eco_relief_legend_horizontal_item_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.common.ReliefGraphView android:id="@id/eco_relief_graph" android:layout_width="fill_parent" android:layout_height="96.0dip" android:layout_marginTop="16.0dip" android:layout_marginHorizontal="16.0dip" />
+</merge>

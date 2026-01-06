@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Futuris.AuthRequestDialog" parent="@style/Futuris.AuthRequestDialogBase">
+        <item name="android:windowMinWidthMinor">@dimen/futuris_auth_dialog_max_width</item>
+    </style>
+</resources>

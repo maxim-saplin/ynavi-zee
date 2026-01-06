@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center" android:orientation="vertical" android:background="@color/bg_primary" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.designsystem.loader.LoaderView android:id="@id/spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:ymaps_goneWhenNotInProgress="true" custom:ymaps_inProgress="true" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/reviews_place_reviews_fetching" style="@style/Text14.Grey" />
+</merge>

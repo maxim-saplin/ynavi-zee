@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="16.0dip" android:width="10.0dip" android:viewportWidth="10.0" android:viewportHeight="16.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0,0h10v16h-10z" />
+        <path android:fillColor="?bankColor_textIcon_secondary" android:pathData="M2.529,3.805C2.268,3.544 2.268,3.122 2.529,2.862C2.789,2.602 3.211,2.602 3.471,2.862L7.902,7.293C8.293,7.683 8.293,8.317 7.902,8.707L3.471,13.138C3.211,13.399 2.789,13.399 2.529,13.138C2.268,12.878 2.268,12.456 2.529,12.195L6.724,8L2.529,3.805Z" />
+    </group>
+</vector>

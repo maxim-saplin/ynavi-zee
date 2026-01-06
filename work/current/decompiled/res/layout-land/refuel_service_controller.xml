@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:layout_width="fill_parent" android:layout_height="fill_parent" app:overland_fleets_ids="@string/controls_default_overland_fleets_ids">
+                <ru.yandex.yandexmaps.controls.views.MapControlsServiceNameView android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/refuel_control_service_name" android:layout_width="wrap_content" android:layout_height="80.0dip" android:text="@string/refuel_service_title" android:paddingStart="30.0dip" android:paddingEnd="30.0dip" app:layout_fleet_id="2" app:layout_floating="drifting_up" app:layout_heaviness="0" />
+                <include layout="@layout/control_chunk_profile" />
+                <include layout="@layout/control_chunk_speedometer" />
+                <include layout="@layout/control_chunk_ruler" />
+                <ru.yandex.yandexmaps.controls.layers.menu.ControlLayersMenu android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" app:layout_clearance="@dimen/control_default_clearance" app:layout_fleet_id="0" app:layout_floating="drifting_up" app:layout_heaviness="0" app:layout_shadow_size_to_ignore="@dimen/control_default_shadow_size_to_ignore" />
+                <include layout="@layout/control_chunk_traffic" />
+                <include layout="@layout/control_chunk_weather" />
+                <include layout="@layout/control_chunk_tilt_toggle" />
+                <include layout="@layout/control_chunk_zoom" />
+                <include layout="@layout/control_chunk_back_service" />
+                <include layout="@layout/control_chunk_back_simple" />
+                <include layout="@layout/control_chunk_position" />
+            </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+        </FrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:id="@id/slave_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:id="@id/main_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

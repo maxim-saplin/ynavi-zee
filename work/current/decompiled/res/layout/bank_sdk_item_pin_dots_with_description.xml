@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.PinCodeDotsView android:layout_gravity="center" android:id="@id/dots" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bank_sdk_margin_vertical_card_pin_dots" app:bank_sdk_useAsEditText="false" />
+    <TextView android:gravity="center" android:id="@id/textPinDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bank_sdk_margin_vertical_card_pin_description" android:lines="2" android:alpha="0.5" android:layout_marginHorizontal="@dimen/bank_sdk_margin_horizontal_card_pin_description" style="@style/Widget.Bank.Text.Body2" />
+</LinearLayout>

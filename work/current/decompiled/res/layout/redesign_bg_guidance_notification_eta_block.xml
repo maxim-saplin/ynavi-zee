@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/notificationEtaBlock" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/etaProgressImage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/etaProgressData" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/redesign_notification_eta_text_size" android:textColor="@color/text_primary_variant" android:id="@id/remainingDistanceView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/redesign_notification_eta_text_size" android:textColor="@color/text_primary_variant" android:gravity="center" android:id="@id/timeOfArrivalView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/redesign_notification_eta_text_size" android:textColor="@color/text_primary_variant" android:gravity="end" android:id="@id/remainingTimeView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="15.0dip" android:layout_marginVertical="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/files_browser_item_image_skeleton" android:layout_width="32.0dip" android:layout_height="32.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/msg_bg_files_browser_item_skeleton" />
+    <ImageView android:layout_width="238.0dip" android:layout_height="20.0dip" android:layout_marginStart="7.0dip" app:layout_constraintStart_toEndOf="@id/files_browser_item_image_skeleton" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/msg_bg_files_browser_item_skeleton" />
+    <ImageView android:layout_width="205.0dip" android:layout_height="8.0dip" android:layout_marginTop="5.0dip" android:layout_marginStart="7.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/files_browser_item_image_skeleton" app:srcCompat="@drawable/msg_bg_files_browser_item_skeleton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/bank_sdk_item_settings_loading_title" />
+        <include layout="@layout/bank_sdk_item_settings_loading_body" />
+        <include layout="@layout/bank_sdk_item_settings_loading_body" />
+    </LinearLayout>
+</com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/tanker_station_item_width_v2" android:layout_height="@dimen/tanker_item_station_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/tanker_background_station" android:padding="@dimen/tanker_basic_padding_half" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textColor="@color/tanker_textColorAlpha100" android:gravity="center" android:layout_gravity="center" android:id="@id/titleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/TankerTextBold" />
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/locationIv" android:visibility="gone" android:layout_width="10.0dip" android:layout_height="10.0dip" android:layout_margin="@dimen/tanker_basic_padding_half" android:src="@drawable/tanker_ic_location_column" android:scaleType="fitCenter" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintRight_toRightOf="parent" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/pumpsView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toBottomOf="@id/titleTv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

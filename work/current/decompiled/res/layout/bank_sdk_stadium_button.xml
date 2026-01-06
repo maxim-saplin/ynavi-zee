@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bank_sdk_stadium_button_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="68.0dip" android:importantForAccessibility="yes"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/stadiumButtonContent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/stadium_button_left_part" android:background="@drawable/bank_sdk_circle_button_background" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="60.0dip" android:layout_marginRight="60.0dip" android:importantForAccessibility="yes">
+            <TextView android:id="@id/stadium_button_text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.Bank.Text.Body1" />
+            <com.yandex.bank.core.design.spoiler.SpoilerTextView android:ellipsize="end" android:id="@id/stadium_button_text_secondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" app:bank_sdk_spoiler_height="12.0dip" app:bank_sdk_spoiler_vertical_gravity="center" app:bank_sdk_spoiler_width="52.0dip" style="@style/Widget.Bank.Text.Caption1.SecondaryColor" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="right" android:id="@id/stadium_button_right_container" android:focusable="true" android:layout_width="48.0dip" android:layout_height="48.0dip" android:importantForAccessibility="yes">
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/stadium_button_right_part" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/button_validation_progress" android:layout_width="24.0dip" android:layout_height="24.0dip" android:indeterminate="true" android:indeterminateTint="?bankColor_background_primary" />
+        </FrameLayout>
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/Passport.Widget.Domik.ScrollView">
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/passport_domik_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <TextView android:id="@id/text_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/passport_space_24" android:layout_marginRight="@dimen/passport_space_24" android:text="@string/passport_fio_text" style="@style/Passport.Widget.TextView.Message" />
+            <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/passport_space_20" android:layout_marginTop="@dimen/passport_space_16" android:layout_marginRight="@dimen/passport_space_20" android:hint="@string/passport_fio_name_placeholder" style="@style/Passport.Widget.TextInputLayout">
+                <com.yandex.passport.internal.ui.PassportTextInputEditText android:id="@id/edit_first_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textPersonName" android:imeOptions="actionNext" android:nextFocusForward="@id/edit_last_name" android:autofillHints="given-name" android:importantForAutofill="yes" style="@style/Passport.Widget.EditText.Login" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView android:id="@id/text_error_first_name" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/passport_space_24" android:layout_marginRight="@dimen/passport_space_24" android:layout_marginBottom="@dimen/passport_space_16" style="@style/Passport.Widget.TextView.Error" />
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/passport_space_20" android:layout_marginTop="@dimen/passport_space_16" android:layout_marginRight="@dimen/passport_space_20" android:hint="@string/passport_fio_surname_placeholder" style="@style/Passport.Widget.TextInputLayout">
+                <com.yandex.passport.internal.ui.PassportTextInputEditText android:id="@id/edit_last_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textPersonName" android:imeOptions="actionDone" style="@style/Passport.Widget.EditText.Login" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView android:id="@id/text_error_last_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/passport_space_24" android:layout_marginRight="@dimen/passport_space_24" android:layout_marginBottom="@dimen/passport_space_16" style="@style/Passport.Widget.TextView.Error" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@id/button_next" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/passport_space_20" android:layout_marginRight="@dimen/passport_space_20" android:text="@string/passport_reg_next" style="@style/Passport.Widget.Button.Primary" />
+    <ProgressBar android:id="@id/progress" style="@style/Passport.Widget.Progress" />
+</LinearLayout>

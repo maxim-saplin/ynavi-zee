@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/layout_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/passport_activity_horizontal_margin" android:layout_marginRight="@dimen/passport_activity_horizontal_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/text_error_message" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Passport.Widget.TextView.Message" />
+    <Button android:id="@id/button_retry" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/passport_button_horizontal_margin" android:layout_marginTop="@dimen/passport_margin_16" android:layout_marginRight="@dimen/passport_button_horizontal_margin" android:text="@string/passport_reg_try_again" style="@style/Passport.Widget.Button.Primary" />
+</LinearLayout>

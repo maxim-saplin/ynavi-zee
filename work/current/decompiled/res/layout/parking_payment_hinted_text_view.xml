@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/hinted_text_view_heading_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true" style="@style/Text16.Medium" />
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+        <TextView android:textColor="@color/text_secondary" android:gravity="end" android:id="@id/hinted_view_hint_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" style="@style/Text16.Medium" />
+        <EditText android:textColorHint="@color/text_secondary" android:gravity="start" android:id="@id/hinted_view_edit_text_view" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:lines="1" android:maxLength="24" style="@style/Text16.Medium" />
+    </FrameLayout>
+</merge>

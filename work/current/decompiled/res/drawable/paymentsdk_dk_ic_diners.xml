@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="36.0dip" android:viewportWidth="36.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?paymentsdk_iconDinnersPrimaryColor" android:pathData="M19.181,21C24.053,21.024 28.5,16.988 28.5,12.078C28.5,6.709 24.053,2.998 19.181,3H14.988C10.058,2.998 6,6.71 6,12.078C6,16.989 10.058,21.024 14.988,21H19.181Z" />
+    <path android:fillColor="?paymentsdk_iconDinnersSecondaryColor" android:pathData="M15.008,3.744C10.503,3.746 6.852,7.433 6.851,11.984C6.852,16.534 10.503,20.222 15.008,20.223C19.514,20.222 23.166,16.534 23.167,11.984C23.166,7.433 19.514,3.746 15.008,3.744ZM9.838,11.984C9.842,9.76 11.217,7.864 13.157,7.11V16.857C11.217,16.104 9.842,14.208 9.838,11.984ZM16.859,16.859V7.11C18.799,7.862 20.177,9.759 20.18,11.984C20.177,14.21 18.799,16.106 16.859,16.859Z" />
+    <path android:fillColor="?paymentsdk_iconDinnersPrimaryColor" android:pathData="M20.06,21C25.257,21.024 30,16.988 30,12.078C30,6.709 25.257,2.998 20.06,3H15.588C10.329,2.998 6,6.71 6,12.078C6,16.989 10.329,21.024 15.588,21H20.06Z" />
+    <path android:fillColor="?paymentsdk_iconDinnersSecondaryColor" android:pathData="M14.999,5C11.134,5.001 8.001,8.134 8,12C8.001,15.866 11.134,18.999 14.999,19C18.866,18.999 22,15.866 22,12C21.999,8.134 18.866,5.001 14.999,5ZM10.563,12C10.566,10.111 11.747,8.5 13.411,7.86V16.14C11.747,15.5 10.566,13.89 10.563,12ZM16.587,16.142V7.859C18.252,8.498 19.434,10.11 19.437,12C19.434,13.891 18.252,15.502 16.587,16.142Z" />
+</vector>

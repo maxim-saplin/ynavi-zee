@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/bank_sdk_bank_button_background_opacity_static" />
+    <padding android:left="@dimen/bank_sdk_bank_button_start_padding" android:top="@dimen/bank_sdk_bank_button_top_padding" android:right="@dimen/bank_sdk_bank_button_end_padding" android:bottom="@dimen/bank_sdk_bank_button_bottom_padding" />
+</shape>

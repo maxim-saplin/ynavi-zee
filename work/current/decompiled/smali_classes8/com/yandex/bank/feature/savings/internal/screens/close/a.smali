@@ -1,0 +1,225 @@
+.class public final Lcom/yandex/bank/feature/savings/internal/screens/close/a;
+.super Lcom/yandex/bank/core/mvp/c;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/yandex/bank/core/navigation/k;
+
+
+# instance fields
+.field private final p:Lcom/yandex/bank/feature/savings/internal/screens/close/h;
+
+
+# direct methods
+.method public constructor <init>(Lcom/yandex/bank/feature/savings/internal/screens/close/h;)V
+    .locals 7
+
+    const/4 v4, 0x0
+
+    const-class v5, Lcom/yandex/bank/feature/savings/internal/screens/close/i;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/16 v6, 0xf
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v6}, Lcom/yandex/bank/core/mvp/c;-><init>(Ljava/lang/Boolean;Ljava/lang/Integer;Lcom/yandex/bank/core/utils/i;Lcom/yandex/bank/core/navigation/s;Ljava/lang/Class;I)V
+
+    iput-object p1, p0, Lcom/yandex/bank/feature/savings/internal/screens/close/a;->p:Lcom/yandex/bank/feature/savings/internal/screens/close/h;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final X()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final f0(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Lz2/a;
+    .locals 8
+
+    sget v0, Lir/d;->bank_sdk_screen_savings_account_close:I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    new-instance p2, Lkr/r;
+
+    check-cast p1, Lcom/yandex/bank/widgets/common/communication/CommunicationFullScreenView;
+
+    invoke-direct {p2, p1}, Lkr/r;-><init>(Lcom/yandex/bank/widgets/common/communication/CommunicationFullScreenView;)V
+
+    invoke-virtual {p2}, Lkr/r;->u()Lcom/yandex/bank/widgets/common/communication/CommunicationFullScreenView;
+
+    move-result-object p1
+
+    new-instance v7, Lcom/yandex/bank/feature/savings/internal/screens/close/SavingsAccountCloseFragment$getViewBinding$1$1;
+
+    invoke-virtual {p0}, Lcom/yandex/bank/core/mvp/c;->u0()Lcom/yandex/bank/core/mvp/g;
+
+    move-result-object v2
+
+    const-string v5, "onPrimaryButtonClick()V"
+
+    const/4 v6, 0x0
+
+    const/4 v1, 0x0
+
+    const-class v3, Lcom/yandex/bank/feature/savings/internal/screens/close/i;
+
+    const-string v4, "onPrimaryButtonClick"
+
+    move-object v0, v7
+
+    invoke-direct/range {v0 .. v6}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    invoke-virtual {p1, v7}, Lcom/yandex/bank/widgets/common/communication/CommunicationFullScreenView;->setPrimaryButtonOnClickListener(Lkotlin/jvm/functions/Function0;)V
+
+    invoke-virtual {p2}, Lkr/r;->u()Lcom/yandex/bank/widgets/common/communication/CommunicationFullScreenView;
+
+    move-result-object p1
+
+    new-instance v7, Lcom/yandex/bank/feature/savings/internal/screens/close/SavingsAccountCloseFragment$getViewBinding$1$2;
+
+    invoke-virtual {p0}, Lcom/yandex/bank/core/mvp/c;->u0()Lcom/yandex/bank/core/mvp/g;
+
+    move-result-object v2
+
+    const-string v5, "onSecondaryButtonClick()V"
+
+    const/4 v6, 0x0
+
+    const/4 v1, 0x0
+
+    const-class v3, Lcom/yandex/bank/feature/savings/internal/screens/close/i;
+
+    const-string v4, "onSecondaryButtonClick"
+
+    move-object v0, v7
+
+    invoke-direct/range {v0 .. v6}, Lkotlin/jvm/internal/FunctionReference;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    invoke-virtual {p1, v7}, Lcom/yandex/bank/widgets/common/communication/CommunicationFullScreenView;->setSecondaryButtonClickListener(Lkotlin/jvm/functions/Function0;)V
+
+    invoke-virtual {p2}, Lkr/r;->u()Lcom/yandex/bank/widgets/common/communication/CommunicationFullScreenView;
+
+    move-result-object p1
+
+    new-instance v0, Lcom/yandex/attachments/common/ui/k0;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1, p1}, Lcom/yandex/attachments/common/ui/k0;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p1, v0}, Lcom/yandex/bank/core/utils/ext/view/j;->n(Landroid/view/ViewGroup;Landroidx/core/view/i0;)V
+
+    return-object p2
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "rootView"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    .locals 1
+
+    invoke-super {p0, p1, p2}, Lcom/yandex/bank/core/mvp/c;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+
+    new-instance p1, Lvk/e;
+
+    new-instance p2, Lcom/yandex/bank/core/utils/h;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, v0}, Lcom/yandex/bank/core/utils/h;-><init>(I)V
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p2, v0}, Lvk/e;-><init>(Lcom/yandex/bank/core/utils/i;Lxk/c;)V
+
+    invoke-virtual {p0, p1}, Lcom/yandex/bank/core/presentation/d;->p0(Lvk/e;)V
+
+    return-void
+.end method
+
+.method public final s0(Lcom/yandex/bank/core/mvp/h;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final t0()Lcom/yandex/bank/core/mvp/g;
+    .locals 2
+
+    iget-object v0, p0, Lcom/yandex/bank/feature/savings/internal/screens/close/a;->p:Lcom/yandex/bank/feature/savings/internal/screens/close/h;
+
+    invoke-static {p0}, Lcom/yandex/bank/core/navigation/l;->a(Landroidx/fragment/app/k0;)Lcom/yandex/bank/core/navigation/q;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/yandex/bank/feature/savings/internal/screens/close/c;
+
+    check-cast v0, Lcom/yandex/bank/feature/savings/internal/screens/close/k;
+
+    invoke-virtual {v0, v1}, Lcom/yandex/bank/feature/savings/internal/screens/close/k;->a(Lcom/yandex/bank/feature/savings/internal/screens/close/c;)Lcom/yandex/bank/feature/savings/internal/screens/close/i;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final v0(Ljava/lang/Object;)V
+    .locals 2
+
+    check-cast p1, Lcom/yandex/bank/feature/savings/internal/screens/close/l;
+
+    invoke-virtual {p0}, Lcom/yandex/bank/core/presentation/d;->Z()Lz2/a;
+
+    move-result-object v0
+
+    check-cast v0, Lkr/r;
+
+    invoke-virtual {v0}, Lkr/r;->u()Lcom/yandex/bank/widgets/common/communication/CommunicationFullScreenView;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lcom/yandex/bank/feature/savings/internal/screens/close/l;->a()Lcom/yandex/bank/widgets/common/communication/t;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/yandex/bank/widgets/common/communication/CommunicationFullScreenView;->l(Lcom/yandex/bank/widgets/common/communication/t;)V
+
+    new-instance v0, Lvk/e;
+
+    invoke-virtual {p1}, Lcom/yandex/bank/feature/savings/internal/screens/close/l;->b()Lcom/yandex/bank/core/utils/i;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lvk/e;-><init>(Lcom/yandex/bank/core/utils/i;Lxk/c;)V
+
+    invoke-virtual {p0, v0}, Lcom/yandex/bank/core/presentation/d;->p0(Lvk/e;)V
+
+    return-void
+.end method

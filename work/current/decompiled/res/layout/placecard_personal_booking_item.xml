@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:paddingHorizontal="16.0dip">
+        <ImageView android:id="@id/placecard_personal_booking_image_view" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_marginEnd="16.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textColor="@color/ui_green" android:id="@id/placecard_personal_booking_status_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/placecard_personal_booking_you_are_booked" android:includeFontPadding="false" style="@style/Text14.Medium" />
+            <TextView android:id="@id/placecard_personal_booking_date_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:includeFontPadding="false" style="@style/Text16.Medium" />
+            <TextView android:id="@id/placecard_personal_booking_master_name_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:includeFontPadding="false" style="@style/Text14" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="16.0dip" android:paddingHorizontal="16.0dip">
+        <TextView android:layout_gravity="top" android:id="@id/placecard_personal_booking_services_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" android:layout_marginEnd="16.0dip" style="@style/Text14" />
+        <TextView android:id="@id/placecard_personal_booking_total_price_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" style="@style/Text14.Medium" />
+    </LinearLayout>
+</merge>

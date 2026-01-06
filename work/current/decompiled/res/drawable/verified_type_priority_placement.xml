@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size android:height="20.0sp" android:width="24.0sp" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/mark_priority_superscript_12" android:left="4.0sp" android:right="8.0sp" android:bottom="8.0sp" />
+</layer-list>

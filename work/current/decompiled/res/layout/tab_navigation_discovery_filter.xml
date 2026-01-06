@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:background="@drawable/tab_navigation_discovery_filter_clickable_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="8.0dip" android:paddingVertical="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/discovery_filter_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium.TextPrimary" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/discovery_filter_general_button" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:generalButtonSize="medium" app:generalButtonStyle="secondaryGrey" />
+</merge>

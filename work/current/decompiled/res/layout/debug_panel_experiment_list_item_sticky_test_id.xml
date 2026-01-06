@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/background_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="8.0dip" android:paddingEnd="16.0dip" android:paddingVertical="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Custom value" style="@style/Text12.TextSecondary" />
+        <EditText android:textColorHint="@color/text_secondary" android:id="@id/debug_panel_experiment_list_item_sticky_test_id_edit" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="testId1[;testIdN]" android:imeOptions="actionDone" android:importantForAutofill="no" style="@style/Text16.TextPrimary" />
+    </LinearLayout>
+    <TextView android:layout_gravity="center_vertical" android:id="@id/debug_panel_experiment_list_item_sticky_test_id_apply" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apply" style="@style/Text16.Medium.TextActions" />
+    <TextView android:layout_gravity="center_vertical" android:id="@id/debug_panel_experiment_list_item_sticky_test_id_reset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reset" android:layout_marginStart="8.0dip" style="@style/Text16.Medium.TextActions" />
+</LinearLayout>

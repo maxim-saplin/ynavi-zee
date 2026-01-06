@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="12.0dip" android:paddingVertical="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/promo_scooter_48" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginHorizontal="12.0dip">
+        <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/scooter_promo_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="1" style="@style/Text16.Medium.TextPrimary" />
+        <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@id/scooter_promo_subtitle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="2.0dip" android:text="@string/route_select_scooter_promo_go_subtitle" android:maxLines="1" style="@style/Text14.TextSecondary" />
+    </LinearLayout>
+    <TextView android:id="@id/scooter_promo_button" android:background="@drawable/scooter_promo_notification_button_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/route_select_scooter_promo_button" android:paddingHorizontal="12.0dip" android:paddingVertical="8.0dip" style="@style/Text14.Medium.PrimaryVariant" />
+</merge>

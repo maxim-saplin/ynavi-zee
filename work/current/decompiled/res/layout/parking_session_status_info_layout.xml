@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/parking_32" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip">
+        <TextView android:id="@id/parking_session_status_info_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium" />
+        <TextView android:id="@id/parking_session_status_info_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text14.Grey" />
+    </LinearLayout>
+    <TextView android:layout_gravity="center_vertical" android:id="@id/parking_session_status_info_remaining_time" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text28.Medium" />
+</merge>

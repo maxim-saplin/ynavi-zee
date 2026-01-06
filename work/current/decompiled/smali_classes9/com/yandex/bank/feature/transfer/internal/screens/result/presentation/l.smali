@@ -1,0 +1,95 @@
+.class public abstract synthetic Lcom/yandex/bank/feature/transfer/internal/screens/result/presentation/l;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final synthetic a:[I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    invoke-static {}, Lcom/yandex/bank/core/transfer/utils/domain/entities/TransferStatus;->values()[Lcom/yandex/bank/core/transfer/utils/domain/entities/TransferStatus;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_0
+    sget-object v1, Lcom/yandex/bank/core/transfer/utils/domain/entities/TransferStatus;->SUCCESS:Lcom/yandex/bank/core/transfer/utils/domain/entities/TransferStatus;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v1, Lcom/yandex/bank/core/transfer/utils/domain/entities/TransferStatus;->PROCESSING:Lcom/yandex/bank/core/transfer/utils/domain/entities/TransferStatus;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v1, Lcom/yandex/bank/core/transfer/utils/domain/entities/TransferStatus;->TIMEOUT:Lcom/yandex/bank/core/transfer/utils/domain/entities/TransferStatus;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v1, Lcom/yandex/bank/core/transfer/utils/domain/entities/TransferStatus;->ERROR:Lcom/yandex/bank/core/transfer/utils/domain/entities/TransferStatus;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v1, Lcom/yandex/bank/core/transfer/utils/domain/entities/TransferStatus;->FAILED:Lcom/yandex/bank/core/transfer/utils/domain/entities/TransferStatus;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sput-object v0, Lcom/yandex/bank/feature/transfer/internal/screens/result/presentation/l;->a:[I
+
+    return-void
+.end method

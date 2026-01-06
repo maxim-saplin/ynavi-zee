@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextureView android:id="@id/camera_preview_texture" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/image_search_crop" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/image_search_gallery_preview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <com.yandex.imagesearch.ManualFocusIndicatorView android:id="@id/focus_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/image_search_camera_mode_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/content_camera_controls" />
+    <include layout="@layout/permission_view" />
+    <include layout="@layout/imagesearch_error_view" />
+    <include layout="@layout/capture_progress" />
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="right" android:id="@id/image_search_help_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:scaleType="centerInside" app:srcCompat="@drawable/image_search_help_button" />
+    <FrameLayout android:id="@id/image_search_camera_mode_overlay_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

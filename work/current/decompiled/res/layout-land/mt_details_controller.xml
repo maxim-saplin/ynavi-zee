@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="@dimen/routes_panel_width" android:layout_height="fill_parent" android:elevation="@dimen/routes_panel_elevation" android:outlineProvider="bounds">
+        <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="noHideDescendants">
+            <include layout="@layout/mt_details_header" />
+        </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+        <View android:background="@drawable/common_divider_horizontal_impl" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/mt_details_controller_recycler" android:tag="@string/change_handler_bottom_panel_tag" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr">
+        <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/routes_panel_width" app:overland_fleets_ids="0,1">
+            <include layout="@layout/control_chunk_indoor" />
+            <include layout="@layout/control_chunk_ruler" />
+            <include layout="@layout/control_chunk_layers_menu" />
+            <include layout="@layout/control_chunk_transport_priority" />
+            <include layout="@layout/control_chunk_traffic" />
+            <include layout="@layout/control_chunk_carparks" />
+            <include layout="@layout/control_chunk_panorama" />
+            <include layout="@layout/control_chunk_weather" />
+            <include layout="@layout/control_chunk_tilt_toggle" />
+            <include layout="@layout/control_chunk_zoom" />
+            <include layout="@layout/control_chunk_position" />
+        </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:id="@id/mt_details_controller_dialog_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:elevation="5.0dip" />
+</com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout>

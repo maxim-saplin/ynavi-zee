@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonSettingsContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_fragment_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout style="@style/SettingsCommonSection">
+            <ru.yandex.maps.appkit.customview.LinkPreference android:id="@id/settings_map_map_type" custom:title="@string/settings_title_map_type" style="@style/SettingsLinkPreference" />
+            <ru.yandex.maps.appkit.customview.LinkPreference android:id="@id/settings_map_road_events" custom:title="@string/settings_road_events" style="@style/SettingsLinkPreference" />
+        </LinearLayout>
+        <LinearLayout style="@style/SettingsCommonSection">
+            <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/settings_map_show_zoom_buttons" custom:checked="true" custom:summary="@string/settings_show_zoom_buttons" style="@style/MultiSwitchPreferenceBlock" />
+            <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/settings_map_show_ruler" custom:checked="false" custom:summary="@string/settings_show_ruler" style="@style/MultiSwitchPreferenceBlock" />
+            <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/settings_map_map_rotation" custom:checked="true" custom:summary="@string/settings_map_rotation" style="@style/MultiSwitchPreferenceBlock" />
+            <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/settings_map_use_volume_buttons_for_zooming" custom:checked="true" custom:details="@string/settings_use_volume_buttons_for_zooming_details" custom:summary="@string/settings_use_volume_buttons_for_zooming" style="@style/MultiSwitchPreferenceBlock" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/settings_map_compass_container" style="@style/SettingsCommonSection">
+            <TextView android:id="@id/settings_map_compass" android:focusable="true" android:clickable="true" android:text="@string/settings_compass_calibration" style="@style/SettingsLinkPreferenceCommonFlatTextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

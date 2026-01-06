@@ -1,0 +1,25 @@
+.class public final Liq2/q0;
+.super Liq2/c;
+.source "SourceFile"
+
+
+# static fields
+.field public static final b:Liq2/q0;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Liq2/q0;
+
+    const-string v1, "permissions"
+
+    sget-object v2, Liq2/s0;->b:Liq2/s0;
+
+    invoke-direct {v0, v2, v1}, Liq2/c;-><init>(Liq2/c;Ljava/lang/String;)V
+
+    sput-object v0, Liq2/q0;->b:Liq2/q0;
+
+    return-void
+.end method

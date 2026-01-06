@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="48.0dip" android:width="84.0dip" android:viewportWidth="84.0" android:viewportHeight="48.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <path android:fillColor="@drawable/$reward_badge_yndx_48_v2025__0" android:pathData="M58.78 43.9c2.66-2.84 10.03-7.43 18.05-0.43c-4.3 4.77-11.7 6.39-18.05 0.43z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_48_v2025__1" android:pathData="M67.56 36.39c2.17-6.92 9.32-9.23 15.08-5.79c-1.53 6-8.67 9.72-15.08 5.79z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_48_v2025__2" android:pathData="M73 27.51c-0.93-8.1 4.29-12.53 10.65-12.13c1.47 7.14-3.89 12.44-10.66 12.13z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_48_v2025__3" android:pathData="M73.43 17c-4.58-6.36-3.69-11.83 2.67-16.4c4.58 6.35 3.69 11.82-2.67 16.4z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_48_v2025__4" android:pathData="M25.22 43.9c-2.66-2.84-10.03-7.43-18.05-0.43c4.3 4.77 11.7 6.39 18.05 0.43z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_48_v2025__5" android:pathData="M16.44 36.39c-2.17-6.92-9.32-9.23-15.08-5.79c1.52 6 8.67 9.72 15.08 5.79z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_48_v2025__6" android:pathData="M11 27.51c0.93-8.1-4.29-12.53-10.65-12.13c-1.47 7.14 3.89 12.44 10.66 12.13z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_48_v2025__7" android:pathData="M10.57 17c4.58-6.36 3.69-11.83-2.67-16.4C3.32 6.95 4.21 12.42 10.57 17z" />
+        <path android:fillColor="@drawable/$reward_badge_yndx_48_v2025__8" android:pathData="M42 2c-9.94 0-18 8.06-18 18c0 4.96 2.02 9.46 5.27 12.72c3.26 3.26 10.93 7.98 11.38 12.93C40.72 46.4 41.26 47 42 47c0.74 0 1.28-0.6 1.35-1.35c0.45-4.95 8.11-9.66 11.37-12.92C57.98 29.46 60 24.96 60 20c0-9.94-8.06-18-18-18z" />
+        <path android:fillColor="#ffffffff" android:pathData="M42 26.16c-3.4 0-6.16-2.76-6.16-6.16c0-3.4 2.76-6.16 6.16-6.16c3.4 0 6.16 2.76 6.16 6.16c0 3.4-2.76 6.16-6.16 6.16z" />
+    </group>
+</vector>

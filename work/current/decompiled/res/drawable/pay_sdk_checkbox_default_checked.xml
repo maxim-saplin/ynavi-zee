@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="18.0dip" android:width="18.0dip" android:viewportWidth="18.0" android:viewportHeight="18.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?pay_sdk_checkboxDefaultColor" android:pathData="M3,0L15,0A3,3 0,0 1,18 3L18,15A3,3 0,0 1,15 18L3,18A3,3 0,0 1,0 15L0,3A3,3 0,0 1,3 0z" />
+    <path android:fillColor="?pay_sdk_checkboxDefaultIconColor" android:pathData="M7.93,10.855L12.701,6.084C12.986,5.799 13.449,5.799 13.734,6.084C14.019,6.369 14.019,6.831 13.734,7.117L7.93,12.92L4.85,9.84C4.565,9.555 4.565,9.093 4.85,8.808C5.135,8.523 5.597,8.523 5.882,8.808L7.93,10.855Z" />
+</vector>

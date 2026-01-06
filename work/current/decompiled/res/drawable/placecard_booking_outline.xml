@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/background_panel_pressed"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners android:radius="16.0dip" />
+            <stroke android:width="1.0dip" android:color="@color/bg_separator" />
+            <solid android:color="@color/bg_primary" />
+        </shape>
+    </item>
+</ripple>

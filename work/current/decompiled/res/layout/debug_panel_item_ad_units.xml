@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@id/item_text" android:background="@drawable/debug_panel_item_navigation_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawableRight="@drawable/debug_panel_icon_arrow_navigate" android:layout_marginHorizontal="@dimen/debug_panel_space_medium_large_negative" android:layout_marginVertical="@dimen/debug_panel_space_small_negative" android:paddingHorizontal="@dimen/debug_panel_space_medium_large" android:paddingVertical="@dimen/debug_panel_space_small" style="@style/DebugPanelText.Body1"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

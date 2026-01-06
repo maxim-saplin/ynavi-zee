@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/tanker_small_text_size" android:textColor="@color/tanker_price_filter" android:gravity="center" android:background="@drawable/tanker_bg_price_filter" android:layout_width="fill_parent" android:layout_height="39.0dip" style="@style/TankerTextRegular"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/expanded_appbar" android:background="@color/bg_primary" android:paddingTop="8.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.multiplatform.bookmarks.common.BookmarkIconView android:id="@id/bookmarks_folder_header_icon" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="16.0dip" />
+    <TextView android:gravity="center" android:id="@id/bookmarks_folder_big_header_title_view" android:tag="@string/tag_header_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginHorizontal="46.0dip" style="@style/Text20.Medium.TextPrimary" />
+    <TextView android:gravity="center" android:id="@id/bookmark_folder_header_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginHorizontal="32.0dip" style="@style/Text14" />
+    <TextView android:gravity="center" android:id="@id/bookmarks_folder_header_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginHorizontal="32.0dip" style="@style/Text14.TextSecondary" />
+    <ru.yandex.yandexmaps.multiplatform.bookmarks.common.FolderAuthorView android:id="@id/bookmarks_folder_header_author" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" />
+</LinearLayout>

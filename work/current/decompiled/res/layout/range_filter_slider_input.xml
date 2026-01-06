@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.search.internal.results.filters.rangefilters.controller.delegates.input.RangeFilterHistogramView android:id="@id/histogram_view" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_marginBottom="25.0dip" android:layout_marginHorizontal="18.0dip" />
+        <com.google.android.material.slider.RangeSlider android:theme="@style/FilterSliderTheme" android:layout_gravity="bottom" android:id="@id/rangeSlider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:stepSize="1.0" app:labelBehavior="gone" app:thumbColor="@color/buttons_color_bg" app:thumbRadius="14.0dip" app:tickColor="@color/transparent" app:trackColorInactive="@color/bg_separator" />
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="6.0dip">
+        <ru.yandex.yandexmaps.search.internal.results.filters.rangefilters.controller.delegates.input.RangeFilterInputView android:id="@id/filter_input_min_price" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <View android:layout_gravity="bottom" android:background="@drawable/interval_filter_input_separator" android:layout_width="12.0dip" android:layout_height="2.0dip" android:layout_marginBottom="23.0dip" android:layout_marginHorizontal="14.0dip" />
+        <ru.yandex.yandexmaps.search.internal.results.filters.rangefilters.controller.delegates.input.RangeFilterInputView android:id="@id/filter_input_max_price" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+</merge>

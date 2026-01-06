@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:id="@id/creditAccountShimmer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="24.0dip" app:layout_constraintBottom_toBottomOf="@id/horizontalLineBalance">
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="160.0dip" android:layout_height="16.0dip" app:bank_sdk_cornerRadius="8.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="8.0dip" app:bank_sdk_cornerRadius="8.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="290.0dip" android:layout_height="20.0dip" android:layout_marginTop="8.0dip" app:bank_sdk_cornerRadius="8.0dip" />
+        </LinearLayout>
+        <androidx.constraintlayout.widget.Constraints android:id="@id/horizontalLineBalance" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.4" />
+        <com.yandex.bank.widgets.common.SkeletonView android:id="@id/recyclerItem2" android:layout_width="fill_parent" android:layout_height="@dimen/bank_sdk_credit_account_shimmer_recycler_item_height" android:layout_marginTop="12.0dip" android:layout_marginHorizontal="16.0dip" app:bank_sdk_cornerRadius="24.0dip" app:layout_constraintTop_toBottomOf="@id/recyclerItem1" />
+        <com.yandex.bank.widgets.common.SkeletonView android:id="@id/recyclerItem3" android:layout_width="fill_parent" android:layout_height="@dimen/bank_sdk_credit_account_shimmer_recycler_item_height" android:layout_marginTop="12.0dip" android:layout_marginHorizontal="16.0dip" app:bank_sdk_cornerRadius="24.0dip" app:layout_constraintTop_toBottomOf="@id/recyclerItem2" />
+        <com.yandex.bank.widgets.common.SkeletonView android:id="@id/recyclerItem1" android:layout_width="fill_parent" android:layout_height="@dimen/bank_sdk_credit_account_shimmer_recycler_item_height" android:layout_marginTop="34.0dip" android:layout_marginHorizontal="16.0dip" app:bank_sdk_cornerRadius="24.0dip" app:layout_constraintBottom_toTopOf="@id/recyclerItem2" app:layout_constraintTop_toBottomOf="@id/horizontalLineBalance" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>

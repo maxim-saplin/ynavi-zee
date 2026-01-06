@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="@dimen/routes_panel_width" android:layout_height="fill_parent" android:elevation="@dimen/routes_panel_elevation" android:outlineProvider="bounds"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.common.views.NavigationBarView android:id="@id/routes_extra_suggest_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:colorTheme="light" />
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/routes_extra_suggest_recycler" android:background="@color/background_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

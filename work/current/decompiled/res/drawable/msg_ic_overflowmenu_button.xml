@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="48.0dip" android:width="42.0dip" android:viewportWidth="42.0" android:viewportHeight="48.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?messagingCommonIconsPrimaryColor" android:pathData="M20 18.75C20.9665 18.75 21.75 17.9665 21.75 17C21.75 16.0335 20.9665 15.25 20 15.25C19.0335 15.25 18.25 16.0335 18.25 17C18.25 17.9665 19.0335 18.75 20 18.75Z" android:fillType="evenOdd" />
+    <path android:fillColor="?messagingCommonIconsPrimaryColor" android:pathData="M20 32.75C20.9665 32.75 21.75 31.9665 21.75 31C21.75 30.0335 20.9665 29.25 20 29.25C19.0335 29.25 18.25 30.0335 18.25 31C18.25 31.9665 19.0335 32.75 20 32.75Z" android:fillType="evenOdd" />
+    <path android:fillColor="?messagingCommonIconsPrimaryColor" android:pathData="M21.75 24C21.75 24.9665 20.9665 25.75 20 25.75C19.0335 25.75 18.25 24.9665 18.25 24C18.25 23.0335 19.0335 22.25 20 22.25C20.9665 22.25 21.75 23.0335 21.75 24Z" android:fillType="evenOdd" />
+</vector>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/container_content" android:background="?tankerBackground" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.tankerapp.android.sdk.navigator.view.widgets.TitleHeaderView android:id="@id/headerView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout android:id="@id/offersFl" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/tanker_basic_padding" app:layout_constraintBottom_toTopOf="@id/bannerFl" app:layout_constraintTop_toBottomOf="@id/headerView">
+        <ru.tankerapp.android.sdk.navigator.view.views.fueloffers.OffersRecyclerView android:id="@id/recyclerView" android:background="@drawable/tanker_background_panel_round" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tanker_basic_padding" android:layout_marginRight="@dimen/tanker_basic_padding" android:overScrollMode="never" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/bannerFl" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/chooseFuelTv" app:layout_constraintTop_toBottomOf="@id/offersFl" />
+    <TextView android:textSize="@dimen/tanker_medium_text_size" android:textColor="@color/tanker_textColorAlpha60" android:id="@id/chooseFuelTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tanker_basic_padding" android:text="@string/tanker_select_offer" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" style="@style/TankerTextMedium" />
+    <FrameLayout android:id="@id/bankContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

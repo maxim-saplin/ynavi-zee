@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/debug_panel_item_navigation_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/debug_panel_space_medium_large_negative" android:layout_marginVertical="@dimen/debug_panel_space_small_negative" android:paddingHorizontal="@dimen/debug_panel_space_medium_large" android:paddingVertical="@dimen/debug_panel_space_small"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="left|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/DebugPanelText.Body1" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/debug_panel_space_large">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/debug_panel_ad_unit_format" style="@style/DebugPanelText.Body2" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/debug_panel_ad_unit_id" style="@style/DebugPanelText.Body2" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="?debug_panel_label_primary" android:id="@id/item_ad_unit_format" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/DebugPanelText.Body2" />
+                <TextView android:textColor="?debug_panel_label_primary" android:id="@id/item_ad_unit_id" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/DebugPanelText.Body2" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/debug_panel_icon_arrow_navigate" />
+</FrameLayout>

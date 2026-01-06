@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messaging_settings_group_contacts" style="@style/Messaging.Settings.Text.Group" />
+    <View android:background="@drawable/msg_divider_settings_group" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/msg_divider_settings_items" android:showDividers="middle">
+        <TextView android:id="@id/messaging_profile_contacts_sync_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_address_book_button_text" style="@style/Messaging.Settings.Item.Text" />
+        <com.yandex.bricks.BrickSlotView android:id="@id/profile_sync_contacts_setting" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.yandex.bricks.BrickSlotView android:id="@id/profile_purge_contacts" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

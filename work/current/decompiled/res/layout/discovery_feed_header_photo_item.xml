@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.RoundedImageView android:id="@id/dscvr_header_photo" android:layout_width="fill_parent" android:layout_height="188.0dip" android:scaleType="centerCrop" android:adjustViewBounds="true" app:cornerRadius="4.0dip" />
+    <include android:id="@id/dscvr_header_photo_progress" layout="@layout/discovery_feed_base_progress" />
+    <include android:id="@id/dscvr_header_photo_retry" layout="@layout/discovery_feed_base_retry_button" />
+    <TextView android:textColor="@color/text_white_bg" android:id="@id/dscvr_header_photo_rubric" android:background="@drawable/common_ui_rubric_badge_background" android:paddingTop="4.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:textAllCaps="true" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" android:layout_marginStart="12.0dip" android:letterSpacing="@dimen/common_text_all_caps_spacing" style="@style/Text10.Bold" />
+</FrameLayout>

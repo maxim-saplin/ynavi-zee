@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/span_datetime_from_time" android:background="@drawable/span_datetime_filter_date_background" android:layout_width="72.0dip" android:layout_height="48.0dip" android:text="9-41" style="@style/Text16.Medium" />
+    <TextView android:layout_gravity="center_vertical" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="–" android:importantForAccessibility="noHideDescendants" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" style="@style/Text16.Medium" />
+    <TextView android:gravity="center" android:id="@id/span_datetime_to_time" android:background="@drawable/span_datetime_filter_date_background" android:layout_width="72.0dip" android:layout_height="48.0dip" android:text="12-13" style="@style/Text16.Medium" />
+    <TextView android:gravity="center" android:id="@id/span_datetime_date" android:background="@drawable/span_datetime_filter_date_background" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="Сегодня" android:layout_marginStart="16.0dip" style="@style/Text16.Medium" />
+</merge>

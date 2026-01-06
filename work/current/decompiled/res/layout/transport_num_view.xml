@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/transport_num_view_transport_icon" android:focusable="true" android:layout_width="20.0dip" android:layout_height="fill_parent" android:scaleType="centerInside" app:tint="@color/icons_primary" />
+    <androidx.recyclerview.widget.RecyclerView android:orientation="horizontal" android:id="@id/transport_num_view_items" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="2.0dip" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <ImageView android:id="@id/transport_num_view_others_micro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.3" android:layout_marginStart="-3.0dip" app:srcCompat="@drawable/transit_snippet_more_20" />
+    <TextView android:textColor="@color/text_primary_variant" android:gravity="center" android:id="@id/transport_num_view_others" android:background="@drawable/mt_transport_icon_background" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="20.0dip" android:lines="1" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" android:layout_marginStart="2.0dip" android:backgroundTint="@color/buttons_secondary" style="@style/Text12.Medium" />
+</merge>

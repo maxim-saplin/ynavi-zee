@@ -1,0 +1,228 @@
+{
+    "templates": {
+        "header_button": {
+            "type": "image",
+            "height": {
+                "type": "fixed",
+                "value": 24
+            },
+            "margins": {
+                "top": 8,
+                "bottom": 8,
+                "left": 8,
+                "right": 8
+            },
+            "width": {
+                "type": "fixed",
+                "value": 24
+            },
+            "$image_url": "imageURL"
+        }
+    },
+    "card": {
+        "log_id": "payment_sdk_card",
+        "variables": [
+            {
+                "type": "string",
+                "name": "challenger_screen_currentState",
+                "value": "inactive"
+            },
+            {
+                "type": "boolean",
+                "name": "isLightTheme",
+                "value": 1
+            }
+        ],
+        "variable_triggers": [
+            {
+                "actions": [
+                    {
+                        "log_id": "payment_sdk_challenger_screen_sms_footer_active",
+                        "url": "div-action://set_state?state_id=0/sms_footer_state/@{challenger_screen_currentState}"
+                    }
+                ],
+                "condition": "@{challenger_screen_currentState == 'active'}",
+                "mode": "on_variable"
+            },
+            {
+                "actions": [
+                    {
+                        "log_id": "payment_sdk_challenger_screen_sms_footer_inactive",
+                        "url": "div-action://set_state?state_id=0/sms_footer_state/@{challenger_screen_currentState}"
+                    }
+                ],
+                "condition": "@{challenger_screen_currentState == 'inactive'}",
+                "mode": "on_variable"
+            },
+            {
+                "actions": [
+                    {
+                        "log_id": "payment_sdk_challenger_screen_sms_footer_error_too_many_attempts",
+                        "url": "div-action://set_state?state_id=0/sms_footer_state/@{challenger_screen_currentState}"
+                    }
+                ],
+                "condition": "@{challenger_screen_currentState == 'too_many_attempts'}",
+                "mode": "on_variable"
+            }
+        ],
+        "states": [
+            {
+                "state_id": 0,
+                "div": {
+                    "type": "container",
+                    "background": [
+                        {
+                            "type": "solid",
+                            "color": "@{isLightTheme ? '#FFFFFF' : '#000000'}"
+                        }
+                    ],
+                    "border": {
+                        "corners_radius": {
+                            "top-left": 24,
+                            "top-right": 24
+                        }
+                    },
+                    "content_alignment_vertical": "top",
+                    "height": {
+                        "type": "match_parent"
+                    },
+                    "items": [
+                        {
+                            "type": "gallery",
+                            "height": {
+                                "type": "match_parent"
+                            },
+                            "items": [
+                                {
+                                    "type": "header_button",
+                                    "imageURL": "@{isLightTheme ? 'local-image://close_light' : 'local-image://close_dark'}",
+                                    "accessibility": {
+                                        "type": "button"
+                                    },
+                                    "margins": {
+                                        "top": 22,
+                                        "right": 20
+                                    },
+                                    "alignment_horizontal": "right",
+                                    "actions": [
+                                        {
+                                            "log_id": "payment_sdk_card_input_screen_header_close",
+                                            "url": "payment-sdk://close"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "text",
+                                    "alignment_horizontal": "left",
+                                    "font_family": "display",
+                                    "font_size": 32,
+                                    "font_weight": "medium",
+                                    "line_height": 34,
+                                    "margins": {
+                                        "top": 30,
+                                        "bottom": 12,
+                                        "left": 24,
+                                        "right": 24
+                                    },
+                                    "text_alignment_horizontal": "left",
+                                    "text_color": "@{isLightTheme ? '#000000' : '#FFFFFF'}"
+                                },
+                                {
+                                    "type": "text",
+                                    "alignment_horizontal": "left",
+                                    "font_size": 16,
+                                    "font_weight": "regular",
+                                    "margins": {
+                                        "bottom": 28,
+                                        "left": 24,
+                                        "right": 24
+                                    },
+                                    "text_alignment_horizontal": "left",
+                                    "text_color": "@{isLightTheme ? '#000000' : '#FFFFFF'}"
+                                },
+                                {
+                                    "type": "custom",
+                                    "custom_type": "challengerTextField",
+                                    "margins": {
+                                        "bottom": 28,
+                                        "left": 24,
+                                        "right": 24
+                                    }
+                                },
+                                {
+                                    "type": "state",
+                                    "default_state_id": "inactive",
+                                    "id": "sms_footer_state",
+                                    "states": [
+                                        {
+                                            "state_id": "active",
+                                            "div": {
+                                                "type": "text",
+                                                "actions": [
+                                                    {
+                                                        "log_id": "payment_sdk_challenger_screen_resend_sms",
+                                                        "url": "payment-sdk://resend_sms"
+                                                    }
+                                                ],
+                                                "alignment_horizontal": "left",
+                                                "font_size": 16,
+                                                "margins": {
+                                                    "bottom": 24,
+                                                    "left": 24,
+                                                    "right": 24
+                                                },
+                                                "text_alignment_horizontal": "left",
+                                                "text_color": "@{isLightTheme ? '#37948C' : '#37948C'}"
+                                            }
+                                        },
+                                        {
+                                            "state_id": "inactive",
+                                            "div": {
+                                                "type": "text",
+                                                "alignment_horizontal": "left",
+                                                "font_size": 16,
+                                                "margins": {
+                                                    "bottom": 24,
+                                                    "left": 24,
+                                                    "right": 24
+                                                },
+                                                "text_alignment_horizontal": "left",
+                                                "text_color": "@{isLightTheme ? '#33000000' : '#40FFFFFF'}"
+                                            }
+                                        },
+                                        {
+                                            "state_id": "too_many_attempts",
+                                            "div": {
+                                                "type": "text",
+                                                "alignment_horizontal": "left",
+                                                "font_size": 16,
+                                                "margins": {
+                                                    "bottom": 24,
+                                                    "left": 24,
+                                                    "right": 24
+                                                },
+                                                "text_alignment_horizontal": "left",
+                                                "text_color": "@{isLightTheme ? '#FFFF4C52' : '#FFFF4D52'}"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "orientation": "vertical"
+                        }
+                    ],
+                    "orientation": "vertical",
+                    "paddings": {
+                        "top": 0,
+                        "bottom": 0,
+                        "left": 0,
+                        "right": 0
+                    },
+                    "width": {
+                        "type": "match_parent"
+                    }
+                }
+            }
+        ]
+    }
+}

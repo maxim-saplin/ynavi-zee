@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="14.0dip" android:textColor="@color/alicekit_palette_text_primary_v2" android:id="@id/context_menu_item" android:background="@drawable/context_menu_item_ripple" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:drawablePadding="8.0dip" android:fontFamily="@font/ya_medium" android:paddingHorizontal="16.0dip" android:paddingVertical="12.0dip" android:lineHeight="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

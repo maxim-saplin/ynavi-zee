@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView android:id="@id/circular_categories_recycler" android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:translationZ="-1.0dip" android:paddingHorizontal="8.0dip" android:paddingVertical="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

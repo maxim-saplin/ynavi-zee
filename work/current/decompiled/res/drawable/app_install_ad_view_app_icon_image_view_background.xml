@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/transparent" />
+    <corners android:radius="8.0dip" />
+    <stroke android:width="@dimen/app_install_ad_view_app_icon_image_view_stroke_width" android:color="#10000000" />
+</shape>

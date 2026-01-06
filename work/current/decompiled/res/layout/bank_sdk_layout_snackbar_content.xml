@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/snackBarRoot" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center" android:background="@drawable/bank_sdk_background_snackbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="8.0dip" android:paddingHorizontal="@dimen/bank_sdk_snackbar_padding_horizontal" android:paddingVertical="@dimen/bank_sdk_snackbar_padding_vertical">
+        <TextView android:textColor="?bankColor_textIcon_primaryInverted" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Widget.Bank.Text.Body2" />
+        <TextView android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/text" style="@style/Widget.Bank.Text.Caption1.PrimaryColor.Inverted" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

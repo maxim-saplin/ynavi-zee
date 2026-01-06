@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:padding="12.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="92.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/snippet_explanation_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+        <ImageView android:id="@id/snippet_explanation_icon" android:layout_width="wrap_content" android:layout_height="16.0dip" android:scaleType="center" android:layout_marginEnd="4.0dip" />
+        <TextView android:id="@id/snippet_explanation" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.Medium" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/snippet_title_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="6.0dip" />
+        <TextView android:id="@id/snippet_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium" />
+        <Space android:id="@id/snippet_additional_icon_spacer" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="8.0dip" android:layout_weight="1.0" />
+        <Space android:id="@id/snippet_additional_icon_spacer_eco_design" android:layout_width="8.0dip" android:layout_height="fill_parent" />
+        <ImageView android:id="@id/snippet_title_additional_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Space android:id="@id/snippet_secondary_title_spacer" android:layout_width="0.0dip" android:layout_height="fill_parent" android:minWidth="8.0dip" android:layout_weight="1.0" />
+        <TextView android:id="@id/snippet_title_secondary_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/snippet_details" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginTop="8.0dip" />
+</merge>

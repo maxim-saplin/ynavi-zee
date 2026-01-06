@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?colorBackgroundFloating" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/layout_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.core.widget.NestedScrollView android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Passport.Widget.Redesign.ScrollView">
+            <com.yandex.passport.internal.widget.BoundedFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:passport_maxWidth="@dimen/passport_screen_max_width">
+                <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/passport_authsdk_top_margin" android:paddingBottom="84.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Passport.Widget.Redesign.ScrollableContent">
+                    <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <de.hdodenhof.circleimageview.CircleImageView android:id="@id/image_app_icon" android:layout_width="76.0dip" android:layout_height="76.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="62.0dip" android:contentDescription="@null" app:civ_border_color="#7fd4d8e0" app:civ_border_width="1.0dip" />
+                        <de.hdodenhof.circleimageview.CircleImageView android:id="@id/image_avatar" android:background="?passportCircleBackground" android:padding="6.0dip" android:layout_width="88.0dip" android:layout_height="88.0dip" android:layout_marginLeft="@dimen/passport_authsdk_avatar_margin_left" android:contentDescription="@null" />
+                        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="right|bottom" android:background="?passportCircleBackground" android:padding="4.0dip" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="2.0dip" android:contentDescription="@null" app:srcCompat="?passportIcLogoYa" />
+                    </FrameLayout>
+                    <TextView android:textAppearance="@style/Passport.TextAppearance.Redesign.Message" android:layout_gravity="center" android:id="@id/text_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/passport_auth_sdk_message" />
+                    <Button android:textColor="?android:textColorSecondary" android:layout_gravity="center_horizontal" android:id="@id/button_other_account" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginTop="4.0dip" android:text="@string/passport_sdk_other_user_button" style="@style/Passport.Widget.Redesign.Button.Secondary" />
+                    <TextView android:textAppearance="@style/Passport.TextAppearance.Redesign.Message" android:textSize="14.0sp" android:id="@id/text_app_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="56.0dip" android:text="@string/passport_sdk_ask_access" android:lineSpacingMultiplier="1.29" />
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_permissions" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+                </LinearLayout>
+            </com.yandex.passport.internal.widget.BoundedFrameLayout>
+        </androidx.core.widget.NestedScrollView>
+        <com.yandex.passport.internal.widget.BoundedFrameLayout android:layout_gravity="bottom" android:background="?colorBackgroundFloating" android:paddingLeft="24.0dip" android:paddingTop="20.0dip" android:paddingRight="24.0dip" android:paddingBottom="20.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:passport_maxWidth="@dimen/passport_screen_max_width">
+            <Button android:ellipsize="end" android:id="@id/button_accept" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/passport_sdk_ask_access_allow_button" android:maxLines="1" android:elevation="4.0dip" style="@style/Passport.Widget.Redesign.Button.Primary" />
+        </com.yandex.passport.internal.widget.BoundedFrameLayout>
+        <ImageView android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginBottom="84.0dip" android:src="@drawable/passport_auth_sdk_bottom_shaddow" android:contentDescription="@null" />
+    </FrameLayout>
+    <com.yandex.passport.internal.widget.BoundedFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:passport_maxWidth="@dimen/passport_screen_max_width">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textAppearance="@style/Passport.TextAppearance.Redesign.Message" android:gravity="center" android:id="@id/text_error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/passport_margin_16" android:text="@string/passport_sdk_unknown_error" />
+            <Button android:id="@id/button_retry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/passport_reg_try_again" android:elevation="4.0dip" style="@style/Passport.Widget.Redesign.Button.Primary" />
+        </LinearLayout>
+    </com.yandex.passport.internal.widget.BoundedFrameLayout>
+    <androidx.appcompat.widget.AppCompatImageButton android:id="@id/button_decline" android:background="?passportBackButtonBg" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="16.0dip" android:scaleType="center" android:layout_marginStart="20.0dip" android:elevation="6.0dip" app:elevation="6.0dip" app:srcCompat="?passportBackButtonIcon" />
+    <FrameLayout android:id="@id/progress" android:background="?passportProgressBackgroundColor" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</FrameLayout>

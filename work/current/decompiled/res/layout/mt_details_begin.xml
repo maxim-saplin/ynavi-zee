@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/mt_details_accessibility_invisible_node_heading" android:focusable="true" android:layout_width="fill_parent" android:layout_height="1.0dip" android:importantForAccessibility="yes" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="15.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip">
+        <View android:id="@id/mt_details_stop_ellipse" android:background="@drawable/mt_stop_ellipse" android:layout_width="8.0dip" android:layout_height="8.0dip" android:contentDescription="@string/accessibility_routes_route_begin" android:layout_marginStart="30.0dip" />
+        <TextView android:id="@id/mt_details_start_point_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:lineSpacingExtra="4.0sp" android:layout_marginStart="14.0dip" style="@style/Text16.Medium" />
+        <TextView android:id="@id/mt_details_begin_departure_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" style="@style/Text12.Grey" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,613 @@
+{
+  "palette": {
+    "dark": [
+      {
+        "color": "#0F1119",
+        "name": "paywall.background"
+      },
+      {
+        "color": "#CCFFFFFF",
+        "name": "paywall.title"
+      },
+      {
+        "color": "#191830",
+        "name": "paywall.base_container.background"
+      }
+    ],
+    "light": [
+      {
+        "color": "#FFFFFF",
+        "name": "paywall.background"
+      },
+      {
+        "color": "#CC000000",
+        "name": "paywall.title"
+      },
+      {
+        "color": "#F2F0FF",
+        "name": "paywall.base_container.background"
+      }
+    ]
+  },
+  "templates": {
+    "alice_tooltip": {
+      "type": "container",
+      "items": [
+        {
+          "type": "tooltip_block",
+          "margins": {
+            "top": 7
+          }
+        }
+      ],
+      "orientation": "overlap",
+      "width": {
+        "type": "wrap_content"
+      },
+      "default_state_id": "top"
+    },
+    "tooltip_block": {
+      "type": "text",
+      "background": [
+        {
+          "type": "solid",
+          "$color": "tintColor"
+        }
+      ],
+      "border": {
+        "corner_radius": 10
+      },
+      "font_size": 13,
+      "font_size_unit": "dp",
+      "font_weight": "regular",
+      "line_height": 16,
+      "paddings": {
+        "top": 8,
+        "bottom": 8,
+        "left": 12,
+        "right": 12
+      },
+      "text_alignment_horizontal": "center",
+      "text_alignment_vertical": "center",
+      "width": {
+        "type": "wrap_content"
+      },
+      "$text": "textValue",
+      "$text_color": "textColor"
+    },
+    "list_item": {
+      "type": "container",
+      "orientation": "horizontal",
+      "content_alignment_vertical": "center",
+      "items": [
+        {
+          "type": "image",
+          "image_url": "empty://",
+          "$preview": "list_item_icon",
+          "width": {
+            "type": "fixed",
+            "value": 24
+          },
+          "height": {
+            "type": "fixed",
+            "value": 24
+          }
+        },
+        {
+          "type": "text",
+          "$text": "list_item_title",
+          "$text_color": "list_item_text_color",
+          "font_size": 13,
+          "line_height": 16,
+          "font_weight": "bold",
+          "text_alignment_horizontal": "left",
+          "paddings": {
+            "top": 8,
+            "bottom": 8
+          },
+          "margins": {
+            "left": 12
+          },
+          "width": {
+            "type": "match_parent"
+          },
+          "$ranges": "ranges_actions",
+          "$images": "images_icon"
+        }
+      ]
+    }
+  },
+  "card": {
+    "log_id": "alice_v2_div_paywall",
+    "states": [
+      {
+        "state_id": 0,
+        "div": {
+          "type": "container",
+          "visibility_action": {
+            "log_id": "paywall_shown"
+          },
+          "background": [
+            {
+              "type": "solid",
+              "color": "@{paywall.background}"
+            }
+          ],
+          "height": {
+            "type": "match_parent"
+          },
+          "paddings": {
+            "top": 16
+          },
+          "items": [
+            {
+              "type": "container",
+              "id": "title",
+              "width": {
+                "type": "match_parent"
+              },
+              "orientation": "horizontal",
+              "content_alignment_vertical": "center",
+              "margins": {
+                "left": 16,
+                "right": 16
+              },
+              "items": [
+                {
+                  "type": "image",
+                  "image_url": "empty://",
+                  "alignment_horizontal": "left",
+                  "action_animation": {
+                    "name": "native"
+                  },
+                  "paddings": {
+                    "top": 5,
+                    "bottom": 5,
+                    "left": 5,
+                    "right": 5
+                  },
+                  "tint_color": "@{paywall.title}",
+                  "accessibility": {
+                    "type": "button",
+                    "mode": "merge",
+                    "description": "Закрыть"
+                  },
+                  "action": {
+                    "log_id": "paywall_button_close",
+                    "url": "div-paywall://close"
+                  },
+                  "preview": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAD1SURBVHgB7ZhtCoMwEESHXtS5eY6QI1gLDhSJNuomWek+CBQKu+/98AOBIAiCIPgDpuXk5aT19+P2fAbOX6dFxLTZkWFI3gy3jpgK8xMMYWGBVcS0M5swhrCP6CYvCLuI7vKCuB8xTF4Q1yOGywvifIQbeUHUR7iTF8TvCLfygtiPcC8viLLoI+QF8WB5QXSUf8Ge+eJ/Lti7YGufE0OpkXcbcXSrJJxHHMkLwmlEjbwgnEWckReEk4gr8oIYHHFHXhCDIizkBdE5wlJeEJ0iWsgLokNEQht5wcL8pl/mCHu42ZFgCNeBGW3f59lpTxAEQRD44A3X6S4WsFycCQAAAABJRU5ErkJggg==",
+                  "width": {
+                    "type": "fixed",
+                    "value": 34
+                  },
+                  "height": {
+                    "type": "fixed",
+                    "value": 34
+                  }
+                },
+                {
+                  "type": "text",
+                  "text": "Алиса нового поколения",
+                  "margins": {
+                    "right": 24
+                  },
+                  "text_color": "@{paywall.title}",
+                  "font_size": 16,
+                  "line_height": 20,
+                  "font_weight": "bold",
+                  "text_alignment_horizontal": "center",
+                  "width": {
+                    "type": "match_parent"
+                  },
+                  "accessibility": {
+                    "description": "Голосовой помощник нового поколения",
+                    "type": "header"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "gallery",
+              "id": "inner_content",
+              "orientation": "vertical",
+              "height": {
+                "type": "match_parent"
+              },
+              "items": [
+                {
+                  "type": "container",
+                  "id": "subtitle",
+                  "margins": {
+                    "top": 24
+                  },
+                  "paddings": {
+                    "left": 45,
+                    "right": 45
+                  },
+                  "items": [
+                    {
+                      "type": "text",
+                      "text": "Новая версия Алисы с привычным набором функций всё так же доступна бесплатно.\nЧтобы расширить её возможности, подключите опцию Алиса Про.",
+                      "text_color": "#919CB5",
+                      "font_size": 13,
+                      "line_height": 16,
+                      "font_weight": "regular",
+                      "text_alignment_horizontal": "center",
+                      "accessibility": {
+                        "description": "Новая версия Голосового помощника с привычным набором функций всё так же доступна бесплатно. Чтобы расширить её возможности, подключите опцию Про."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "id": "promo",
+                  "margins": {
+                    "top": 20
+                  },
+                  "paddings": {
+                    "left": "@{is_portrait ? 24 : 200}",
+                    "right": "@{is_portrait ? 24 : 200}"
+                  },
+                  "items": [
+                    {
+                      "type": "container",
+                      "id": "pro_container",
+                      "border": {
+                        "corner_radius": 24
+                      },
+                      "paddings": {
+                        "top": 32,
+                        "bottom": 24,
+                        "left": 16,
+                        "right": 16
+                      },
+                      "background": [
+                        {
+                          "type": "radial_gradient",
+                          "center_x": {
+                            "type": "relative",
+                            "value": 1
+                          },
+                          "center_y": {
+                            "type": "relative",
+                            "value": 0
+                          },
+                          "radius": {
+                            "type": "relative",
+                            "value": "farthest_side"
+                          },
+                          "colors": [
+                            "#55FFC2",
+                            "#32BBE8",
+                            "#7A55FF"
+                          ]
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "text",
+                          "text": "Опция Алиса Про",
+                          "text_color": "#FFFFFF",
+                          "font_size": 20,
+                          "line_height": 24,
+                          "font_weight": "bold",
+                          "text_alignment_horizontal": "center",
+                          "width": {
+                            "type": "match_parent"
+                          },
+                          "accessibility": {
+                            "description": "Опция Про для голосового помощника",
+                            "type": "text"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "text": "Тексты креативнее и точнее, новые сценарии для детей",
+                          "text_color": "#FFFFFF",
+                          "font_size": 13,
+                          "line_height": 16,
+                          "font_weight": "regular",
+                          "text_alignment_horizontal": "center",
+                          "margins": {
+                            "top": 8
+                          },
+                          "width": {
+                            "type": "match_parent"
+                          }
+                        },
+                        {
+                          "type": "container",
+                          "id": "list_items",
+                          "margins": {
+                            "top": 12
+                          },
+                          "items": [
+                            {
+                              "type": "list_item",
+                              "list_item_icon": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH3SURBVHgB7ZftbcIwEIad/EBCgEQ3YISyAWxQJmg7QdsJmk7QdoKyQdggI8AGsEEi8fWP9L0qVMY4zgeBONI9kpVgbHjPuntzEYJhGIZhGIaxiv1+/7jZbMLtdruke9NaR1gGhN87jjOXpqJOp3OXtt4VFoHTHkC8L8/hc2TaY00AJP5wOAS4HcjzmPsWthPHcR/5PseIleGJJgChvioetfAlmgDEvmtO3hdNQCd+t9stKaXy/kZtNgqxD7iojrPCGLfb7VXOn6knAPJ6XAKIlU86cl13WEQ8cXMbPXq9Ip54LiqeuGkAaV6PnH/D03YmbKcWry/SWJmAu3zW4vUkXP5TBDESBUmxy7mogDw1cFJsyGE/cZFcQOgLLp48l9jlRFRAZgBUYMpUn1yECjJrL3k99p+kSRmvN5EZQLfbneLUP5TpPzcxBUHfQfyPMh1h36Qq8UQuG+31el5KEH4YhmeP/aNd6rweB7IQdYHcn2qKMZDXJK3x0trWGEEEGnH/qaJrja8pvnAvRCnTarXo1E+cCH2MR6eP8apsmeEpW4nj6CjVzCUFGmAMTOtQAwsU7DjrvfYSSvVC5CJkhWSJaWuOXn9N8UTpZo6CIEvE7ZnAqr3exMXvA+v1eoT8V51oWKtdFgXO9ESvgnCbkO4FwzAMwzD5+AVClN8m+xa+owAAAABJRU5ErkJggg==",
+                              "list_item_text_color": "#FFFFFF",
+                              "images_icon": [
+                                {
+                                  "start": 46,
+                                  "url": "https://yastatic.net/s3/home/yandex-app/div_fullscreen/ic_help_tooltip_white.png",
+                                  "accessibility": {
+                                    "type": "button",
+                                    "mode": "merge",
+                                    "description": "Подробнее"
+                                  }
+                                }
+                              ],
+                              "tooltips": [
+                                {
+                                  "id": "tooltip_in_pro_container",
+                                  "div": {
+                                    "textValue": "Одна из самых сильных языковых\nмоделей, работающих специально\nдля русскоязычной аудитории",
+                                    "accessibility": {
+                                      "description": "Одна из самых сильных языковых моделей, работающих специально для русскоязычной аудитории",
+                                      "type": "text",
+                                      "mode": "merge"
+                                    },
+                                    "tintColor": "#2F2F32",
+                                    "textColor": "#FFFFFF",
+                                    "paddings": {
+                                      "left": 4,
+                                      "right": 4
+                                    },
+                                    "type": "alice_tooltip"
+                                  },
+                                  "duration": 7000,
+                                  "position": "bottom",
+                                  "offset": {
+                                    "y": {
+                                      "value": -5
+                                    },
+                                    "x": {
+                                      "value": 0
+                                    }
+                                  }
+                                }
+                              ],
+                              "ranges_actions": [
+                                {
+                                  "start": 45,
+                                  "end": 47,
+                                  "actions": [
+                                    {
+                                      "log_id": "show_tooltip_in_pro_container",
+                                      "url": "div-action://show_tooltip?id=tooltip_in_pro_container"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "list_item_title": "YandexGPT 3 Pro: более точные и полные ответы   "
+                            },
+                            {
+                              "type": "list_item",
+                              "list_item_icon": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH3SURBVHgB7ZftbcIwEIad/EBCgEQ3YISyAWxQJmg7QdsJmk7QdoKyQdggI8AGsEEi8fWP9L0qVMY4zgeBONI9kpVgbHjPuntzEYJhGIZhGIaxiv1+/7jZbMLtdruke9NaR1gGhN87jjOXpqJOp3OXtt4VFoHTHkC8L8/hc2TaY00AJP5wOAS4HcjzmPsWthPHcR/5PseIleGJJgChvioetfAlmgDEvmtO3hdNQCd+t9stKaXy/kZtNgqxD7iojrPCGLfb7VXOn6knAPJ6XAKIlU86cl13WEQ8cXMbPXq9Ip54LiqeuGkAaV6PnH/D03YmbKcWry/SWJmAu3zW4vUkXP5TBDESBUmxy7mogDw1cFJsyGE/cZFcQOgLLp48l9jlRFRAZgBUYMpUn1yECjJrL3k99p+kSRmvN5EZQLfbneLUP5TpPzcxBUHfQfyPMh1h36Qq8UQuG+31el5KEH4YhmeP/aNd6rweB7IQdYHcn2qKMZDXJK3x0trWGEEEGnH/qaJrja8pvnAvRCnTarXo1E+cCH2MR6eP8apsmeEpW4nj6CjVzCUFGmAMTOtQAwsU7DjrvfYSSvVC5CJkhWSJaWuOXn9N8UTpZo6CIEvE7ZnAqr3exMXvA+v1eoT8V51oWKtdFgXO9ESvgnCbkO4FwzAMwzD5+AVClN8m+xa+owAAAABJRU5ErkJggg==",
+                              "list_item_text_color": "#FFFFFF",
+                              "list_item_title": "Все основные сценарии Алисы",
+                              "accessibility": {
+                                "description": "Все основные сценарии Голосового помощника",
+                                "type": "text",
+                                "mode": "merge"
+                              }
+                            },
+                            {
+                              "type": "list_item",
+                              "list_item_icon": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH3SURBVHgB7ZftbcIwEIad/EBCgEQ3YISyAWxQJmg7QdsJmk7QdoKyQdggI8AGsEEi8fWP9L0qVMY4zgeBONI9kpVgbHjPuntzEYJhGIZhGIaxiv1+/7jZbMLtdruke9NaR1gGhN87jjOXpqJOp3OXtt4VFoHTHkC8L8/hc2TaY00AJP5wOAS4HcjzmPsWthPHcR/5PseIleGJJgChvioetfAlmgDEvmtO3hdNQCd+t9stKaXy/kZtNgqxD7iojrPCGLfb7VXOn6knAPJ6XAKIlU86cl13WEQ8cXMbPXq9Ip54LiqeuGkAaV6PnH/D03YmbKcWry/SWJmAu3zW4vUkXP5TBDESBUmxy7mogDw1cFJsyGE/cZFcQOgLLp48l9jlRFRAZgBUYMpUn1yECjJrL3k99p+kSRmvN5EZQLfbneLUP5TpPzcxBUHfQfyPMh1h36Qq8UQuG+31el5KEH4YhmeP/aNd6rweB7IQdYHcn2qKMZDXJK3x0trWGEEEGnH/qaJrja8pvnAvRCnTarXo1E+cCH2MR6eP8apsmeEpW4nj6CjVzCUFGmAMTOtQAwsU7DjrvfYSSvVC5CJkhWSJaWuOXn9N8UTpZo6CIEvE7ZnAqr3exMXvA+v1eoT8V51oWKtdFgXO9ESvgnCbkO4FwzAMwzD5+AVClN8m+xa+owAAAABJRU5ErkJggg==",
+                              "list_item_text_color": "#FFFFFF",
+                              "list_item_title": "Игры, квесты и родительский контроль"
+                            },
+                            {
+                              "type": "list_item",
+                              "list_item_icon": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH3SURBVHgB7ZftbcIwEIad/EBCgEQ3YISyAWxQJmg7QdsJmk7QdoKyQdggI8AGsEEi8fWP9L0qVMY4zgeBONI9kpVgbHjPuntzEYJhGIZhGIaxiv1+/7jZbMLtdruke9NaR1gGhN87jjOXpqJOp3OXtt4VFoHTHkC8L8/hc2TaY00AJP5wOAS4HcjzmPsWthPHcR/5PseIleGJJgChvioetfAlmgDEvmtO3hdNQCd+t9stKaXy/kZtNgqxD7iojrPCGLfb7VXOn6knAPJ6XAKIlU86cl13WEQ8cXMbPXq9Ip54LiqeuGkAaV6PnH/D03YmbKcWry/SWJmAu3zW4vUkXP5TBDESBUmxy7mogDw1cFJsyGE/cZFcQOgLLp48l9jlRFRAZgBUYMpUn1yECjJrL3k99p+kSRmvN5EZQLfbneLUP5TpPzcxBUHfQfyPMh1h36Qq8UQuG+31el5KEH4YhmeP/aNd6rweB7IQdYHcn2qKMZDXJK3x0trWGEEEGnH/qaJrja8pvnAvRCnTarXo1E+cCH2MR6eP8apsmeEpW4nj6CjVzCUFGmAMTOtQAwsU7DjrvfYSSvVC5CJkhWSJaWuOXn9N8UTpZo6CIEvE7ZnAqr3exMXvA+v1eoT8V51oWKtdFgXO9ESvgnCbkO4FwzAMwzD5+AVClN8m+xa+owAAAABJRU5ErkJggg==",
+                              "list_item_text_color": "#FFFFFF",
+                              "list_item_title": "История чата хранится бессрочно"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "text": "Попробовать",
+                          "text_color": "#CC000000",
+                          "font_size": 14,
+                          "line_height": 16,
+                          "font_weight": "bold",
+                          "text_alignment_horizontal": "center",
+                          "border": {
+                            "corner_radius": 160
+                          },
+                          "action_animation": {
+                            "name": "native"
+                          },
+                          "accessibility": {
+                            "type": "button",
+                            "mode": "merge",
+                            "description": "Попробовать Про"
+                          },
+                          "action": {
+                            "log_id": "paywall_button_try_alice_pro",
+                            "url": "https://plus.yandex.ru/home?service_name=alice_pro&utm_source=app_search&retpath=dialog://?type=alice"
+                          },
+                          "background": [
+                            {
+                              "type": "solid",
+                              "color": "#FFFFFF"
+                            }
+                          ],
+                          "paddings": {
+                            "top": 16,
+                            "bottom": 16
+                          },
+                          "margins": {
+                            "top": 24,
+                            "right": 30,
+                            "left": 30
+                          },
+                          "width": {
+                            "type": "match_parent"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "id": "base_container",
+                      "border": {
+                        "corner_radius": 24
+                      },
+                      "paddings": {
+                        "top": 32,
+                        "bottom": 24,
+                        "left": 16,
+                        "right": 16
+                      },
+                      "margins": {
+                        "top": 12
+                      },
+                      "background": [
+                        {
+                          "type": "solid",
+                          "color": "@{paywall.base_container.background}"
+                        }
+                      ],
+                      "items": [
+                        {
+                          "type": "text",
+                          "text": "Алиса",
+                          "text_color": "@{paywall.title}",
+                          "font_size": 20,
+                          "line_height": 24,
+                          "font_weight": "bold",
+                          "text_alignment_horizontal": "center",
+                          "width": {
+                            "type": "match_parent"
+                          },
+                          "accessibility": {
+                            "description": "Голосовой помощник"
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "text": "Бесплатный доступ, привычный набор функций, генерация текстов и идей",
+                          "text_color": "#919CB5",
+                          "font_size": 13,
+                          "line_height": 16,
+                          "font_weight": "regular",
+                          "text_alignment_horizontal": "center",
+                          "margins": {
+                            "top": 8
+                          },
+                          "width": {
+                            "type": "match_parent"
+                          }
+                        },
+                        {
+                          "type": "container",
+                          "id": "list_items",
+                          "margins": {
+                            "top": 12
+                          },
+                          "items": [
+                            {
+                              "type": "list_item",
+                              "list_item_icon": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJGSURBVHgB7ZdNUsJAEIW7UVlzhBwBb6A3wPJ3p5xA3SlQZawScCecQNxZCAU3gCNwBI7AGoqM3REoGMJkEmKI5XwboMmE7k7PmweAwWAwGAwGw/8FIYEUL8Q1CKgJgBEi2OUmfmy6NgUJo3AuskJAg5LP0EeL3tdU1yeqAPtKWDQTHSk8Uq1JTAGc/NiBHo2OtRynJ1BXrduHBGDnRGY8dTtvrXwh4LnawuSP0DgN7/SSXQk6UK+00PZbu/MCChfiiTqdWwkidCttvNNZv9MCZsnbUniYHkMeNNnZOfB4KnKYWlOcobMHx6+fOARNdlIAaz39cG+m9fNERtM9OAySPBP7CM21fjl5xnEgHzR5JtYCFFp/X21jF0IQ6zkQVutV+BYQxFj53OeNOr2u9W1/rVfhO0KUuL1krBqlM3EEAWG5pLWyrg90tV6FbwEopM1GG5BVBDQpXYpbL60nuTyBCNB5AvdSiAvquGriA2s9qYs834G1XoVvAZUvbPBGk8IWbcieqgj+LpVyPc4C/LHGJ1Elz2jJqGuqvIvosJOUr5/LpZfWU0MGECHa5wAXQftBVqDs5GDVDrjW2EPrXbkMqfUqAh1k5Rbe0Bj0l2PU5aPiuViMimuNPZLXscZhCOyFuMPUdR6PrHQnm26WWZNLtsZNjERxvAhl5h54g3qNyTqD9ASO7S6O4JcI7UY1iohULjexlZ32ssUzYkme2fr/AFsLOp17UvgwarncxNZ2+qWFfXrJUyuGs4MqH1fyBoPBYDD8eb4B3sb9mHrWD4MAAAAASUVORK5CYII=",
+                              "images_icon": [
+                                {
+                                  "start": 61,
+                                  "url": "https://yastatic.net/s3/home/yandex-app/div_fullscreen/ic_help_tooltip_grey.png",
+                                  "accessibility": {
+                                    "type": "button",
+                                    "mode": "merge",
+                                    "description": "Подробнее"
+                                  }
+                                }
+                              ],
+                              "tooltips": [
+                                {
+                                  "id": "tooltip_in_base_container",
+                                  "div": {
+                                    "textValue": "Языковая модель, которая лучше\nудерживает контекст диалога,\nгенерирует тексты и реже отправляет\nв Поиск",
+                                    "accessibility": {
+                                      "description": "Языковая модель, которая лучше удерживает контекст диалога, генерирует тексты и реже отправляет в Поиск",
+                                      "type": "text",
+                                      "mode": "merge"
+                                    },
+                                    "tintColor": "#2F2F32",
+                                    "textColor": "#FFFFFF",
+                                    "paddings": {
+                                      "left": 4,
+                                      "right": 4
+                                    },
+                                    "type": "alice_tooltip"
+                                  },
+                                  "duration": 8000,
+                                  "position": "bottom",
+                                  "offset": {
+                                    "y": {
+                                      "value": -5
+                                    },
+                                    "x": {
+                                      "value": 0
+                                    }
+                                  }
+                                }
+                              ],
+                              "ranges_actions": [
+                                {
+                                  "start": 59,
+                                  "end": 61,
+                                  "actions": [
+                                    {
+                                      "log_id": "show_tooltip_in_base_container",
+                                      "url": "div-action://show_tooltip?id=tooltip_in_base_container"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "list_item_text_color": "@{paywall.title}",
+                              "list_item_title": "YandexGPT: больше не нужно запускать навык «Давай придумаем»   "
+                            },
+                            {
+                              "type": "list_item",
+                              "list_item_icon": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJGSURBVHgB7ZdNUsJAEIW7UVlzhBwBb6A3wPJ3p5xA3SlQZawScCecQNxZCAU3gCNwBI7AGoqM3REoGMJkEmKI5XwboMmE7k7PmweAwWAwGAwGw/8FIYEUL8Q1CKgJgBEi2OUmfmy6NgUJo3AuskJAg5LP0EeL3tdU1yeqAPtKWDQTHSk8Uq1JTAGc/NiBHo2OtRynJ1BXrduHBGDnRGY8dTtvrXwh4LnawuSP0DgN7/SSXQk6UK+00PZbu/MCChfiiTqdWwkidCttvNNZv9MCZsnbUniYHkMeNNnZOfB4KnKYWlOcobMHx6+fOARNdlIAaz39cG+m9fNERtM9OAySPBP7CM21fjl5xnEgHzR5JtYCFFp/X21jF0IQ6zkQVutV+BYQxFj53OeNOr2u9W1/rVfhO0KUuL1krBqlM3EEAWG5pLWyrg90tV6FbwEopM1GG5BVBDQpXYpbL60nuTyBCNB5AvdSiAvquGriA2s9qYs834G1XoVvAZUvbPBGk8IWbcieqgj+LpVyPc4C/LHGJ1Elz2jJqGuqvIvosJOUr5/LpZfWU0MGECHa5wAXQftBVqDs5GDVDrjW2EPrXbkMqfUqAh1k5Rbe0Bj0l2PU5aPiuViMimuNPZLXscZhCOyFuMPUdR6PrHQnm26WWZNLtsZNjERxvAhl5h54g3qNyTqD9ASO7S6O4JcI7UY1iohULjexlZ32ssUzYkme2fr/AFsLOp17UvgwarncxNZ2+qWFfXrJUyuGs4MqH1fyBoPBYDD8eb4B3sb9mHrWD4MAAAAASUVORK5CYII=",
+                              "list_item_text_color": "@{paywall.title}",
+                              "list_item_title": "Все основные сценарии Алисы",
+                              "accessibility": {
+                                "description": "Все основные сценарии Голосового помощника",
+                                "mode": "merge"
+                              }
+                            },
+                            {
+                              "type": "list_item",
+                              "list_item_icon": "iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJGSURBVHgB7ZdNUsJAEIW7UVlzhBwBb6A3wPJ3p5xA3SlQZawScCecQNxZCAU3gCNwBI7AGoqM3REoGMJkEmKI5XwboMmE7k7PmweAwWAwGAwGw/8FIYEUL8Q1CKgJgBEi2OUmfmy6NgUJo3AuskJAg5LP0EeL3tdU1yeqAPtKWDQTHSk8Uq1JTAGc/NiBHo2OtRynJ1BXrduHBGDnRGY8dTtvrXwh4LnawuSP0DgN7/SSXQk6UK+00PZbu/MCChfiiTqdWwkidCttvNNZv9MCZsnbUniYHkMeNNnZOfB4KnKYWlOcobMHx6+fOARNdlIAaz39cG+m9fNERtM9OAySPBP7CM21fjl5xnEgHzR5JtYCFFp/X21jF0IQ6zkQVutV+BYQxFj53OeNOr2u9W1/rVfhO0KUuL1krBqlM3EEAWG5pLWyrg90tV6FbwEopM1GG5BVBDQpXYpbL60nuTyBCNB5AvdSiAvquGriA2s9qYs834G1XoVvAZUvbPBGk8IWbcieqgj+LpVyPc4C/LHGJ1Elz2jJqGuqvIvosJOUr5/LpZfWU0MGECHa5wAXQftBVqDs5GDVDrjW2EPrXbkMqfUqAh1k5Rbe0Bj0l2PU5aPiuViMimuNPZLXscZhCOyFuMPUdR6PrHQnm26WWZNLtsZNjERxvAhl5h54g3qNyTqD9ASO7S6O4JcI7UY1iohULjexlZ32ssUzYkme2fr/AFsLOp17UvgwarncxNZ2+qWFfXrJUyuGs4MqH1fyBoPBYDD8eb4B3sb9mHrWD4MAAAAASUVORK5CYII=",
+                              "list_item_text_color": "@{paywall.title}",
+                              "list_item_title": "История запросов хранится 14 дней"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "container",
+                      "id": "scroll_bottom_safe_area",
+                      "height": {
+                        "type": "fixed",
+                        "value": 16
+                      },
+                      "accessibility": {
+                        "mode": "exclude"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

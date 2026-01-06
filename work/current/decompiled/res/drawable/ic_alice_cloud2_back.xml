@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/alicekit_palette_text_and_icon_quaternary" android:pathData="M15.583,5.458C15.906,5.136 15.906,4.614 15.583,4.292C15.261,3.969 14.739,3.969 14.417,4.292L15.583,5.458ZM14.417,19.708C14.739,20.031 15.261,20.031 15.583,19.708C15.906,19.386 15.906,18.864 15.583,18.542L14.417,19.708ZM7.875,12L7.292,11.417C6.969,11.739 6.969,12.261 7.292,12.583L7.875,12ZM14.417,4.292L7.292,11.417L8.458,12.583L15.583,5.458L14.417,4.292ZM7.292,12.583L14.417,19.708L15.583,18.542L8.458,11.417L7.292,12.583Z" />
+</vector>

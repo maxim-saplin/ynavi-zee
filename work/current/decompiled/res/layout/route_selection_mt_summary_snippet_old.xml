@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="16.0dip" android:paddingBottom="18.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:id="@id/mt_summary_minicard_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="3.0sp" android:textAlignment="viewEnd" style="@style/Text18.Medium" />
+            <TextView android:id="@id/mt_summary_minicard_arrival" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="3.0sp" android:textAlignment="viewEnd" android:layout_marginStart="8.0dip" style="@style/Text14.TextSecondary" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/mt_summary_minicard_layout" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+        <TextView android:id="@id/mt_summary_minicard_firstStop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:lineSpacingExtra="3.0sp" style="@style/Text14.Grey" />
+        <TextView android:id="@id/mt_summary_minicard_secondary_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:lineSpacingExtra="3.0sp" style="@style/Text14.Grey" />
+        <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.shutter.LegendItemView android:id="@id/mt_summary_legend_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="4.0dip" />
+        <ru.yandex.yandexmaps.common.views.VectorTintableCompoundsTextView android:id="@id/mt_summary_minicard_alert" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:drawablePadding="8.0dip" android:lineSpacingExtra="3.0sp" app:drawableLeftCompat="@drawable/alert_16" style="@style/Text14.Medium.PrimaryVariant" />
+        <TextView android:id="@id/mt_summary_minicard_details_button" android:background="@drawable/rounded_flat_button_background" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:contentDescription="@string/accessibility_routes_details" android:layout_marginStart="-8.0dip" android:paddingHorizontal="8.0dip" style="@style/Text14.Medium.TextActions" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/mt_summary_minicard_details_button_general" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="6.0dip" app:generalButtonSize="small" app:generalButtonStyle="primary" />
+    </LinearLayout>
+    <View android:id="@id/mt_summary_selection" android:background="@color/icons_actions" android:layout_width="4.0dip" android:layout_height="fill_parent" />
+</merge>

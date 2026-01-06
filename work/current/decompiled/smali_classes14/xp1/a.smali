@@ -1,0 +1,101 @@
+.class public final Lxp1/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ldagger/internal/e;
+
+
+# instance fields
+.field private final a:Lz21/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lz21/a;"
+        }
+    .end annotation
+.end field
+
+.field private final b:Lz21/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lz21/a;"
+        }
+    .end annotation
+.end field
+
+.field private final c:Lz21/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lz21/a;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lz21/a;Lz21/a;Lz21/a;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxp1/a;->a:Lz21/a;
+
+    iput-object p2, p0, Lxp1/a;->b:Lz21/a;
+
+    iput-object p3, p0, Lxp1/a;->c:Lz21/a;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 5
+
+    iget-object v0, p0, Lxp1/a;->a:Lz21/a;
+
+    invoke-interface {v0}, Lz21/a;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/yandex/yandexmaps/app/MapActivity;
+
+    iget-object v1, p0, Lxp1/a;->b:Lz21/a;
+
+    invoke-static {v1}, Ldagger/internal/d;->a(Lz21/a;)Lnv0/a;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lxp1/a;->c:Lz21/a;
+
+    invoke-interface {v2}, Lz21/a;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lru/yandex/multiplatform/profile/communication/api/deps/c;
+
+    new-instance v3, Lsp1/a;
+
+    const/4 v4, 0x2
+
+    invoke-direct {v3, v4}, Lsp1/a;-><init>(I)V
+
+    check-cast v2, Lvv1/c;
+
+    invoke-virtual {v2}, Lvv1/c;->a()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    new-instance v2, Lgh1/e;
+
+    const/16 v4, 0x1a
+
+    invoke-direct {v2, v1, v4}, Lgh1/e;-><init>(Lnv0/a;I)V
+
+    invoke-static {v0, v2}, Ln52/o;->h(Landroid/app/Activity;Lkotlin/jvm/functions/Function0;)V
+
+    :cond_0
+    return-object v3
+.end method

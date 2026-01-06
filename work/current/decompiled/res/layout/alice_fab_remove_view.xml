@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:layout_gravity="top" android:id="@id/alice_fab_remove_curtain" android:background="@drawable/dialog_fab_curtain" android:layout_width="fill_parent" android:layout_height="272.0dip" />
+    <ImageView android:layout_gravity="center|top" android:id="@id/alice_fab_trash" android:layout_width="@dimen/dialog_delete_fab_square_size" android:layout_height="@dimen/dialog_delete_fab_square_size" android:layout_marginTop="@dimen/dialog_delete_fab_icon_vertical_margin" android:scaleType="centerInside" android:contentDescription="@null" app:srcCompat="@drawable/ic_dialog_hide_fab" />
+    <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:layout_gravity="center|top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dialog_delete_fab_text_vertical_margin" android:text="@string/dialog_delete_fab" />
+</FrameLayout>

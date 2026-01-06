@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_marginHorizontal="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.services.navi.service_shutter.delegates.views.NaviServiceShutterCardView android:id="@id/navi_service_shutter_left_cell" android:layout_width="0.0dip" android:layout_height="64.0dip" android:layout_weight="1.0" />
+    <ru.yandex.yandexmaps.services.navi.service_shutter.delegates.views.NaviServiceShutterCardView android:id="@id/navi_service_shutter_right_cell" android:layout_width="0.0dip" android:layout_height="64.0dip" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+</LinearLayout>

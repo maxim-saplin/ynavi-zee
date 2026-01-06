@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Spola framåt %d sekunder</item>
+        <item quantity="one">Spola framåt %d sekund</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Spola tillbaka %d sekunder</item>
+        <item quantity="one">Spola tillbaka %d sekund</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nya aviseringar</item>
+        <item quantity="one">%d ny avisering</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Sista %1$d siffrorna</item>
+        <item quantity="zero">Sista %1$d siffrorna</item>
+        <item quantity="one">Sista %1$d siffran</item>
+        <item quantity="few">Sista %1$d siffrorna</item>
+        <item quantity="many">Sista %1$d siffrorna</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"Du kommer nu att få ett samtal från
+%1$s. Ange de sista %2$d siffrorna i numret."</item>
+        <item quantity="zero">"Du kommer nu att få ett samtal från
+%1$s. Ange de sista %2$d siffrorna i numret."</item>
+        <item quantity="one">"Du kommer nu att få ett samtal från
+%1$s. Ange den sista %2$d siffran i numret."</item>
+        <item quantity="few">"Du kommer nu att få ett samtal från
+%1$s. Ange de sista %2$d siffrorna i numret."</item>
+        <item quantity="many">"Du kommer nu att få ett samtal från
+%1$s. Ange de sista %2$d siffrorna i numret."</item>
+    </plurals>
+</resources>

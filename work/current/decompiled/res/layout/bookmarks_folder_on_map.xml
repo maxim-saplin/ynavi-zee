@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.SwitchPreference custom:checked="false" custom:summary="@string/road_events_show_all" style="@style/MultiSwitchPreferenceBlock" xmlns:custom="http://schemas.android.com/apk/res-auto" />

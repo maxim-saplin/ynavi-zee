@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexnavi.ui.guidance.map_zoom.MapZoomView android:id="@id/map_zoom_view" android:visibility="gone" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.navilib.widget.NaviTextView android:ellipsize="none" android:gravity="center" android:layout_gravity="center" android:id="@id/zoom_value" android:background="@drawable/map_zoom_background" android:padding="@dimen/zoom_map_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Text16.Medium.TextColorBg" />
+</ru.yandex.yandexnavi.ui.guidance.map_zoom.MapZoomView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/background_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="36.0dip" android:paddingEnd="36.0dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:tint="@color/icons_actions" app:srcCompat="@drawable/illustration_offline_36_temp" />
+        <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/routes_offline_info_title" style="@style/Text18" />
+        <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/routes_offline_info_description" style="@style/Text14.Grey" />
+        <TextView android:gravity="center" android:id="@id/button_ok" android:background="@drawable/common_blue_rounded_button_background_impl" android:layout_width="288.0dip" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" android:text="@string/routes_offline_info_ok" android:textAllCaps="true" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" style="@style/Text14.Blue" />
+    </LinearLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

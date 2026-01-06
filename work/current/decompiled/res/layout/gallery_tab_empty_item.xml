@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-64.0dip" android:text="@string/photos_tab_empty_title" style="@style/Text16.Medium.TextPrimary" />
+    <TextView android:gravity="center" android:id="@id/gallery_tab_empty_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/photos_tab_empty_photo_and_video_subtitle" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/Text14.TextSecondary" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/gallery_tab_add_media_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" app:buttonIcon="@drawable/add_photo_24" app:generalButtonSize="big" app:generalButtonStyle="secondaryBlue" app:paddings="16.0dip" app:text="@string/photos_tab_empty_add" />
+</merge>

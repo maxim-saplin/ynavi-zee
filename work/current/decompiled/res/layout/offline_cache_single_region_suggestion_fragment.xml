@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/background_panel_with_border_impl" android:paddingTop="@dimen/offline_cache_suggestion_vertical_padding" android:paddingBottom="@dimen/offline_cache_suggestion_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/offline_cache_suggestion_horizontal_padding" android:paddingEnd="@dimen/offline_cache_suggestion_horizontal_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/offline_cache_suggestion_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text20" />
+    <TextView android:id="@id/offline_cache_suggestion_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Grey" />
+    <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/offline_cache_suggestion_vertical_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/offline_cache_suggestion_cancel_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="@dimen/offline_cache_suggestion_horizontal_padding" app:generalButtonSize="medium" app:generalButtonStyle="transparent" app:text="@string/offline_cache_suggestion_cancel" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/offline_cache_suggestion_download_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:generalButtonSize="medium" app:generalButtonStyle="primary" app:text="@string/offline_cache_dialog_download" />
+    </LinearLayout>
+</LinearLayout>

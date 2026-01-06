@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/big_player_navigator_list" android:background="?music_sdk_helper_background" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/big_player_navigator_fixed_control_container" android:background="?music_sdk_helper_background" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/music_sdk_helper_fixed_control_elevation">
+        <com.yandex.music.sdk.helper.ui.navigator.views.title.NaviTitleView android:id="@id/big_player_navigator_fixed_title" android:layout_width="fill_parent" android:layout_height="38.0dip" android:layout_marginTop="4.0dip" />
+        <com.yandex.music.sdk.helper.ui.navigator.views.control.NaviControlView android:id="@id/big_player_navigator_fixed_control" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.yandex.music.sdk.helper.ui.views.banner.SmallBannerView android:id="@id/big_player_navigator_small_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</merge>

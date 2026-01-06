@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="dark_mode_enabled">true</bool>
+    <bool name="day">false</bool>
+    <bool name="night">true</bool>
+</resources>

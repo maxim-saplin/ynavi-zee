@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/settings_speed_limit_content_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="noHideDescendants" android:layout_marginVertical="16.0dip">
+            <ru.yandex.yandexmaps.multiplatform.settings.ui.internal.controller.SpeedLimitView android:id="@id/settings_speed_limit_urban" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" custom:image="@drawable/settings_speed_limit_within_towns_64x52" />
+            <View android:background="@color/bg_separator" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_weight="0.0" />
+            <ru.yandex.yandexmaps.multiplatform.settings.ui.internal.controller.SpeedLimitView android:id="@id/settings_speed_limit_rural" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" custom:image="@drawable/settings_speed_limit_single_carriageway_64x52" />
+            <View android:background="@color/bg_separator" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_weight="0.0" />
+            <ru.yandex.yandexmaps.multiplatform.settings.ui.internal.controller.SpeedLimitView android:id="@id/settings_speed_limit_expressway" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" custom:image="@drawable/settings_speed_limit_highways_64x52" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" android:layout_marginHorizontal="16.0dip" android:layout_marginVertical="18.0dip">
+            <TextView android:ellipsize="end" android:layout_gravity="start|center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/settings_speed_limit_warning_title" android:maxLines="1" android:layout_weight="1.0" style="@style/Text16.TextPrimary" />
+            <TextView android:layout_gravity="end|center" android:id="@id/settings_speed_limit_warning" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium" />
+        </LinearLayout>
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar android:id="@id/settings_speed_limit_seek_bar" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" android:layout_marginHorizontal="8.0dip" custom:dsb_indicatorElevation="1.0dip" custom:dsb_indicatorPopupEnabled="false" custom:dsb_progressColor="@color/icons_actions" custom:dsb_rippleColor="@color/icons_actions" custom:dsb_scrubberHeight="2.0dip" custom:dsb_thumbSize="@dimen/customview_textthumbseekbar_thumb_size" custom:dsb_trackColor="@color/bg_separator" custom:dsb_trackHeight="2.0dip" />
+        <TextView android:gravity="center|top" android:id="@id/settings_speed_limit_info" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:minHeight="60.0dip" android:importantForAccessibility="yes" android:layout_marginHorizontal="16.0dip" style="@style/Text16.TextPrimaryVariant" />
+    </LinearLayout>
+</FrameLayout>

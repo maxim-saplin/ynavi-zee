@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/chat_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:layout_width="fill_parent" android:layout_height="@dimen/chat_list_item_height" app:srcCompat="@drawable/msg_ic_discovery_placeholder" />
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/shine" android:layout_width="64.0dip" android:layout_height="fill_parent" android:layout_marginLeft="-64.0dip" app:srcCompat="@drawable/msg_bg_shine_gradient" />
+</FrameLayout>

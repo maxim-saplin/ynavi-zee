@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/group_progresseta_container" android:focusable="true" android:clickable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexnavi.ui.guidance.eta.EtaRouteProgressViewImpl android:id="@id/group_progresseta" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale" />
+</FrameLayout>

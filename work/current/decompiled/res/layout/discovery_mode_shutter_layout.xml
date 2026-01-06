@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/shutter_width" android:layout_height="fill_parent" android:layout_marginStart="@dimen/shutter_left_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/text_white" android:gravity="center" android:layout_gravity="center|top" android:id="@id/discovery_geo_description" android:layout_width="wrap_content" android:layout_height="@dimen/tab_navigation_discovery_locality_height" android:drawablePadding="4.0dip" android:alpha="0.0" android:textAlignment="center" app:drawableStartCompat="@drawable/location_filled_16" app:drawableTint="@color/icons_color_bg" style="@style/Text14.Medium" />
+        </FrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <FrameLayout android:paddingTop="@dimen/tab_navigation_discovery_locality_shutter_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.uikit.shutter.TwoAxesSlidingRecyclerView android:id="@id/discovery_mode_shutter" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</FrameLayout>

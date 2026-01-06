@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="end|bottom" android:id="@id/view_selected_badge" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+</merge>

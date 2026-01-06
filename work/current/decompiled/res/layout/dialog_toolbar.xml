@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/alice_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:transitionName="toolbar"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/dialog_toolbar_gap" android:layout_width="fill_parent" android:layout_height="@dimen/top_toolbar_gap_height" android:importantForAccessibility="no" />
+    <androidx.appcompat.widget.Toolbar android:theme="@style/Alice.Toolbar" android:id="@id/dialog_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:contentInsetEnd="0.0dip" app:contentInsetLeft="0.0dip" app:contentInsetRight="0.0dip" app:contentInsetStart="0.0dip" app:contentInsetStartWithNavigation="0.0dip">
+        <include layout="@layout/back_with_counter" />
+        <com.yandex.alice.avatar.AvatarImageView android:id="@id/dialog_toolbar_logo" android:visibility="gone" android:importantForAccessibility="no" style="@style/Alice.Toolbar.Logo" />
+        <com.yandex.alicekit.core.views.FixedProgressBar android:id="@id/dialog_toolbar_progressbar" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" android:indeterminate="true" android:indeterminateDrawable="@drawable/alicenger_anim_spinner" android:contentDescription="@null" android:layerType="software" />
+        <com.yandex.bricks.BrickSlotView android:layout_gravity="end|center" android:id="@id/dialog_toolbar_skill_store_slot" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip" />
+        <include layout="@layout/dialog_toolbar_text" />
+    </androidx.appcompat.widget.Toolbar>
+    <View android:id="@id/dialog_toolbar_shadow" android:background="@drawable/toolbar_divider" android:layout_width="fill_parent" android:layout_height="@dimen/bottom_divider_height" />
+</LinearLayout>

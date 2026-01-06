@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/bookmarks_default_margin" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:padding="@dimen/bookmarks_edit_bookmarks_caption_margin" android:paddingTop="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/yandexmaps_bookmarks_edit_bookmark_title" android:textAllCaps="true" android:letterSpacing="@dimen/common_text_all_caps_spacing" style="@style/Text16.Grey" />
+    <TextView android:id="@id/bookmarks_edit_folder_title" android:background="@drawable/common_clickable_panel_background_no_border_impl" android:padding="@dimen/bookmarks_default_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/common_item_elevation" style="@style/Text18" />
+</LinearLayout>

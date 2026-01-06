@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/dialog_assist_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dialog_item_margin_horizontal" android:layout_marginTop="@dimen/dialog_item_margin_top" android:layout_marginRight="@dimen/dialog_item_margin_big_horizontal_v2"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.alicekit.core.views.TightTextView android:textColor="@color/alicekit_palette_text_and_icon_primary" android:id="@id/allou_dialog_text" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/dialog_item_max_width" android:textIsSelectable="true" style="@style/Alice.Text.Dialog" />
+    <ru.yandex.searchplugin.dialog.ui.LostChildrenFixRecyclerView android:id="@id/actions_assist" android:background="@drawable/chat_actions_background" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

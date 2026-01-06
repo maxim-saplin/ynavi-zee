@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="60.0dip" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="30.0dip" android:textColor="@color/tanker_text_primary" android:id="@id/titleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tanker_basic_padding" android:text="@string/tanker_business_account" android:layout_marginStart="@dimen/tanker_basic_padding" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/TankerTextBold" />
+            <ru.tankerapp.android.sdk.navigator.view.views.stories.StoriesPreView android:id="@id/storyRecyclerView" android:paddingLeft="@dimen/tanker_basic_padding" android:paddingRight="@dimen/tanker_basic_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_marginTop="24.0dip" app:layout_constraintTop_toBottomOf="@id/phoneTv" app:storyHeight="@dimen/tanker_refueller_story_preview_height" app:storyWidth="@dimen/tanker_refueller_story_preview_width" />
+            <ru.tankerapp.ui.ListItemComponent android:id="@id/selectPaymentMethodView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" app:itemTitle="Карта для списаний" />
+            <View android:background="@color/tanker_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="@dimen/tanker_basic_padding" />
+            <ru.tankerapp.ui.ListItemComponent android:id="@id/emailView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:itemTitle="Почта для отчетов" />
+            <View android:background="@color/tanker_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="@dimen/tanker_basic_padding" />
+            <ru.tankerapp.ui.ListItemComponent android:id="@id/usersView" android:paddingTop="@dimen/tanker_basic_padding_min" android:paddingBottom="@dimen/tanker_basic_padding_min" android:layout_width="fill_parent" android:layout_height="wrap_content" app:itemSubtitle="Чтобы их заправки были оплачены с карты, привязанной к вашему бизнес-аккаунту." app:itemTitle="0 участников" />
+            <View android:background="@color/tanker_divider" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+            <ru.tankerapp.ui.ListItemComponent android:id="@id/landingView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:itemSubtitle="Отчеты для бухгалтерии и больше людей в аккаунте" app:itemTitle="Для большой компании" />
+            <View android:background="@color/tanker_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="@dimen/tanker_basic_padding" />
+            <ru.tankerapp.ui.ListItemComponent android:id="@id/refuelingHistory" android:layout_width="fill_parent" android:layout_height="wrap_content" app:itemTitle="@string/title_activity_history" />
+            <View android:background="@color/tanker_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="@dimen/tanker_basic_padding" />
+            <ru.tankerapp.ui.ListItemComponent android:id="@id/settingsView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:itemTitle="Настройки" />
+            <View android:background="@color/tanker_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="@dimen/tanker_basic_padding" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include android:visibility="gone" layout="@layout/tanker_item_loading" />
+</FrameLayout>

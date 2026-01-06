@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_gravity="center" android:id="@id/header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/offline_caches_title" style="@style/Text20.Medium" />
+    <ImageView android:layout_gravity="start|center" android:id="@id/offline_cache_downloads_header_settings_button" android:background="@drawable/common_ripple_radius_40" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/settings_24" android:contentDescription="@string/offline_caches_settings" app:tint="@color/icons_additional" />
+    <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end|center" android:id="@id/offline_cache_downloads_header_close_button" android:background="@drawable/common_ripple_radius_40" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</merge>

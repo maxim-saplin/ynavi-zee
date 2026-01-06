@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/msg_ic_message_typing_in_progress"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target android:name="first" android:animation="@anim/point_oscillation_no_delay" />
+    <target android:name="second" android:animation="@anim/point_oscillation_average_delay" />
+    <target android:name="third" android:animation="@anim/point_oscillation_huge_delay" />
+</animated-vector>

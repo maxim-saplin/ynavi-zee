@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messaging_settings_group_notifications" style="@style/Messaging.Settings.Text.Group" />
+    <View android:background="@drawable/msg_divider_settings_group" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/notification_off_banner" android:background="@drawable/msg_bg_settings_action_button" android:padding="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/notifications_disabled_by_status_message" android:layout_marginHorizontal="12.0dip" android:layout_marginVertical="16.0dip" style="@style/Messaging.BannerText" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/msg_divider_settings_items" android:showDividers="middle">
+        <androidx.appcompat.widget.SwitchCompat android:id="@id/profile_notifications_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_notification_settings_switch_text" style="@style/Messaging.Settings.Switch" />
+        <androidx.appcompat.widget.SwitchCompat android:id="@id/profile_notifications_sound_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_notification_settings_switch_sound_text" style="@style/Messaging.Settings.Switch" />
+        <androidx.appcompat.widget.SwitchCompat android:id="@id/profile_notifications_vibrate_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_notification_settings_switch_vibrate_text" style="@style/Messaging.Settings.Switch" />
+    </LinearLayout>
+</LinearLayout>

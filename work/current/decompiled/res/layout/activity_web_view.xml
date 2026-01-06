@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/container" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.pichillilorenzo.flutter_inappwebview.pull_to_refresh.PullToRefreshLayout android:id="@id/pullToRefresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.pichillilorenzo.flutter_inappwebview.in_app_webview.InAppWebView android:id="@id/webView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.pichillilorenzo.flutter_inappwebview.pull_to_refresh.PullToRefreshLayout>
+    <ProgressBar android:id="@id/progressBar" android:layout_width="fill_parent" android:layout_height="5.0dip" android:max="100" android:progress="0" style="@android:style/Widget.Holo.ProgressBar.Horizontal" />
+</RelativeLayout>

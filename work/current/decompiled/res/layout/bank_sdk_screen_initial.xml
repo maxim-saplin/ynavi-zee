@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?bankColor_background_primary" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.material.progressindicator.CircularProgressIndicator android:layout_gravity="center" android:id="@id/initialProgress" android:visibility="gone" android:layout_width="@dimen/bank_sdk_size_progress_indicator" android:layout_height="@dimen/bank_sdk_size_progress_indicator" style="@style/BankSdk.Widget.WidgetsCommon.CircularProgressIndicatorLoader" />
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/initialProgressDescription" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" style="@style/Widget.Bank.Text.Headline2" />
+    </LinearLayout>
+    <com.yandex.bank.widgets.common.ErrorView android:id="@id/errorView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

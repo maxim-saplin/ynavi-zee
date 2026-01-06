@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="64.0dip" android:elevation="6.0dip" app:cardCornerRadius="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <ImageView android:id="@id/order_tracking_card_icon" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginStart="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:id="@id/order_tracking_card_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" app:layout_constraintBottom_toTopOf="@id/order_tracking_card_subtitle" app:layout_constraintStart_toEndOf="@id/order_tracking_card_icon" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" style="@style/Text16.Medium.BlackWhite" />
+        <TextView android:id="@id/order_tracking_card_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="@id/order_tracking_card_title" app:layout_constraintTop_toBottomOf="@id/order_tracking_card_title" style="@style/Text14.Grey" />
+        <androidx.constraintlayout.widget.Barrier android:id="@id/barrier" android:layout_width="wrap_content" android:layout_height="wrap_content" app:barrierDirection="end" app:constraint_referenced_ids="order_tracking_card_subtitle,order_tracking_card_title" />
+        <FrameLayout android:id="@id/order_tracking_card_additional_info_container" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/barrier" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

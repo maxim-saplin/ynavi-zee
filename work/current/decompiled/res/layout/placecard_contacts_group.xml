@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:focusable="false" android:layout_width="fill_parent" android:layout_height="32.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <ImageView android:id="@id/placecard_contacts_group_icon_view" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/call_24" app:tint="@color/icons_additional" />
+        <TextView android:id="@id/placecard_contacts_group_title" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/placecard_contacts_group_title" android:includeFontPadding="false" android:importantForAccessibility="yes" android:layout_marginStart="16.0dip" style="@style/Text14.Medium.BlackDarkGrey" />
+    </LinearLayout>
+    <ru.yandex.yandexmaps.placecard.items.contacts.ContactGroupItemView android:id="@id/placecard_contacts_phone_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textColor="@color/text_actions" android:gravity="center_vertical" android:id="@id/placecard_contacts_booking_button_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/placecard_or_book_online" android:paddingStart="56.0dip" android:paddingVertical="12.0dip" style="@style/ClickableText.Text14.Medium.TextActions" />
+    <ru.yandex.yandexmaps.placecard.items.contacts.ContactGroupItemView android:id="@id/placecard_contacts_site_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="end" android:orientation="horizontal" android:id="@id/placecard_contacts_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="56.0dip" android:paddingVertical="12.0dip">
+        <TextView android:textAppearance="@style/Text14.Grey" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/contacts_empty" android:layout_weight="1.0" android:importantForAccessibility="yes" android:fontFamily="@font/font_regular" />
+        <TextView android:id="@id/placecard_contacts_add_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/placecard_working_hours_add" android:paddingHorizontal="16.0dip" style="@style/ClickableText.Text14.Medium.TextActions" />
+    </LinearLayout>
+    <ru.yandex.yandexmaps.placecard.items.contacts.HorizontalScrollViewEndFade android:orientation="horizontal" android:id="@id/social_layout_container" android:scrollbars="none" android:fadingEdgeLength="40.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="64.0dip" android:overScrollMode="never" android:requiresFadingEdge="horizontal" android:layout_marginStart="56.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/social_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </ru.yandex.yandexmaps.placecard.items.contacts.HorizontalScrollViewEndFade>
+</merge>

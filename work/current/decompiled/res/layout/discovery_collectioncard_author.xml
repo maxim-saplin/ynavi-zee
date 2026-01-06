@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:background="@color/bg_separator" android:layout_width="@dimen/discovery_collection_card_author_icon_size" android:layout_height="@dimen/discovery_collection_card_author_icon_size" app:cornerRadius="@dimen/infinite">
+        <ru.yandex.yandexmaps.common.views.RoundedImageView android:layout_gravity="center" android:id="@id/collection_card_author_avatar" android:background="@drawable/circle_background" android:layout_width="38.0dip" android:layout_height="38.0dip" android:scaleType="centerInside" app:cornerRadius="@dimen/infinite" />
+    </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="12.0dip">
+        <TextView android:id="@id/collection_card_author_label" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text14.Regular.Secondary" />
+        <TextView android:id="@id/collection_card_author_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text14.Medium.TextPrimary" />
+    </LinearLayout>
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="center_vertical" android:id="@id/collection_card_author_subscribe_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</merge>

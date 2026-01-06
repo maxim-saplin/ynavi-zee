@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="23.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/requisiteChipsLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/bank_sdk_transfer_requisite_legal_nds_title" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" style="@style/Widget.Bank.Text.Body1.Secondary" />
+    <com.yandex.bank.widgets.common.chip.ChipListView android:id="@id/requisiteChips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" />
+</LinearLayout>

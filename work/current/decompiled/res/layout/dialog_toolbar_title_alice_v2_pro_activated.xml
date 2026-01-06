@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/dialog_toolbar_title_root" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:id="@id/dialog_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Alice.Toolbar.Text_V2" />
+        <include layout="@layout/alice_model_chooser_chevron" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/dialog_toolbar_status_text_size" android:textColor="@color/alicekit_palette_text_secondary_v2" android:id="@id/dialog_toolbar_label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="2.0dip" app:drawableEndCompat="@drawable/alice_2_warning" style="@style/Alice.Toolbar.Status" />
+</LinearLayout>

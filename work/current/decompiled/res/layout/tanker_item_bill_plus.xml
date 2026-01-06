@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/tanker_small_text_size" android:textColor="@color/tanker_textColorAlpha100" android:gravity="center_vertical" android:id="@id/title" android:layout_width="0.0dip" android:layout_height="@dimen/tanker_bill_item" app:layout_constraintEnd_toStartOf="@id/plusBadgeView" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/TankerTextRegular" />
+    <ru.tankerapp.android.sdk.navigator.view.views.plus.PlusBadgeView android:id="@id/plusBadgeView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="@dimen/tanker_basic_padding_two" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

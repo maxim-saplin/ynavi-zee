@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <ru.yandex.yandexmaps.multiplatform.bookmarks.common.BookmarkIconView android:id="@id/yandexmaps_bookmarks_folder_icon_view" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+        <TextView android:ellipsize="end" android:id="@id/bookmarks_folder_list_item_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" android:layout_marginHorizontal="16.0dip" style="@style/Text16.TextPrimary" />
+        <ImageView android:id="@id/bookmarks_folder_list_check_view" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+    </LinearLayout>
+    <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:id="@id/bookmarks_folder_list_item_comment_frame" android:background="@drawable/bookmarks_text_comment_outline_shape" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" app:cornerRadius="8.0dip">
+        <ru.yandex.yandexmaps.common.views.EllipsizableExpandableTextView android:textColorHint="@color/common_hint" android:id="@id/bookmarks_folder_list_item_comment" android:background="@drawable/common_ripple_with_transparent_background" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/bookmarks_folder_add_bookmark_description" android:maxLines="4" android:paddingHorizontal="12.0dip" android:paddingVertical="12.0dip" style="@style/Text14.TextPrimary" />
+    </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+</merge>

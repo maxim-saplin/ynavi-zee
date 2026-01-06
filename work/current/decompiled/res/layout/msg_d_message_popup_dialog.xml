@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/reactions_chooser_height">
+            <com.yandex.bricks.BrickSlotView android:layout_gravity="center|top" android:id="@id/messaging_reactions_slot" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/popup_dialog_message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:maxLines="1" android:singleLine="true" android:paddingHorizontal="16.0dip" style="@style/Messaging.MessagePopupText" />
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/popup_dialog_info" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:paddingHorizontal="16.0dip" style="@style/Messaging.ChatPreviewText" />
+        <View android:id="@id/popup_dialog_separator" android:background="?messagingCommonBackgroundSecondaryColor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/chat_separator_size" android:layout_marginTop="15.0dip" />
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/chat_message_menu" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/message_reactions" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_reply" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_reply" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_show_thread" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_message_discuss" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_reply_in_thread" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_message_discuss" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_forward" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_forward" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_copy" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_copy" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_added_to_saved_messages" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add_to_saved" android:textAllCaps="false" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_change_starred_status" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_message_make_starred" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_pin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_pin" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_download" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_save" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_copy_link" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_message_copy_link" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_share" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_share" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_select" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_select" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_revote" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messenger_message_menu_revote" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_edit" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_edit" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_delete" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_delete" style="@style/Messaging.MessagePopupDestructiveButton" />
+            <TextView android:id="@id/message_retry" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_retry_send" style="@style/Messaging.MessagePopupButton" />
+            <TextView android:id="@id/message_cancel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_delete" style="@style/Messaging.MessagePopupDestructiveButton" />
+            <TextView android:id="@id/report" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messenger_report" style="@style/Messaging.MessagePopupDestructiveButton" />
+            <TextView android:id="@id/hide" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messenger_hide" style="@style/Messaging.MessagePopupDestructiveButton" />
+            <TextView android:id="@id/block_user" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/contact_info_block_and_hide" style="@style/Messaging.MessagePopupDestructiveButton" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

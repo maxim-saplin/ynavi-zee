@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/placecard_full_address_text" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" style="@style/Text14" />
+    <TextView android:id="@id/placecard_full_address_additional_info" android:paddingTop="4.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" style="@style/Text14.Grey" />
+    <TextView android:id="@id/placecard_full_address_show_entrances" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/placecard_full_address_show_entrances" android:importantForAccessibility="yes" style="@style/ClickableText.Small" />
+</merge>

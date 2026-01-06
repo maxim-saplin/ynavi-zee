@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/plaque_sdk_plaque_notification_count_background" />
+    <corners android:radius="@dimen/plaque_sdk_plaque_notification_corner_radius" />
+</shape>

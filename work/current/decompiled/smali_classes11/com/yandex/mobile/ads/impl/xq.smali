@@ -1,0 +1,38 @@
+.class public interface abstract Lcom/yandex/mobile/ads/impl/xq;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/yandex/mobile/ads/impl/xq$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static final a:Lcom/yandex/mobile/ads/impl/xq$a;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-object v0, Lcom/yandex/mobile/ads/impl/xq$a;->a:Lcom/yandex/mobile/ads/impl/xq$a;
+
+    sput-object v0, Lcom/yandex/mobile/ads/impl/xq;->a:Lcom/yandex/mobile/ads/impl/xq$a;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract a()Lcom/yandex/mobile/ads/impl/ys1;
+.end method
+
+.method public abstract a(Lcom/yandex/mobile/ads/impl/ys1;)V
+.end method
+
+.method public abstract clear()V
+.end method

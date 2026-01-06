@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="@dimen/routes_panel_width" android:layout_height="fill_parent">
+        <FrameLayout android:background="@color/background_panel" android:layout_width="@dimen/routes_panel_width" android:layout_height="fill_parent" android:elevation="@dimen/routes_panel_elevation" android:outlineProvider="bounds">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/routes_start_recycler" android:background="@color/background_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:id="@id/routes_start_input_block" android:background="@color/background_panel" android:layout_width="fill_parent" android:layout_height="56.0dip" android:elevation="1.0dip">
+                    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/routes_start_input_icon" android:layout_width="48.0dip" android:layout_height="56.0dip" android:scaleType="center" />
+                        <TextView android:textSize="8.0sp" android:textStyle="bold" android:textColor="@color/text_white_black" android:layout_gravity="center" android:id="@id/routes_start_input_icon_index" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </FrameLayout>
+                    <EditText android:textColorHint="@color/common_hint" android:id="@id/routes_start_input" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:inputType="textNoSuggestions" android:imeOptions="actionSearch|flagNoExtractUi" android:paddingEnd="2.0dip" style="@style/Text16" />
+                    <ImageView android:id="@id/routes_start_clear" android:layout_width="56.0dip" android:layout_height="56.0dip" android:scaleType="center" android:tint="@color/icons_primary" android:contentDescription="@string/accessibility_routes_clear_input" app:srcCompat="@drawable/clear_16" />
+                </LinearLayout>
+                <FrameLayout android:id="@id/routes_start_search_container" android:background="@color/background_panel" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/routes_start_search_recycler" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                    <TextView android:gravity="center" android:id="@id/routes_start_suggest_empty_results" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/suggest_results_no_data" style="@style/Text16.Grey" />
+                    <TextView android:gravity="center_horizontal" android:id="@id/routes_start_search_empty_results" android:paddingTop="24.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/routes_start_search_empty_results" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/Text16.Grey" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/routes_start_search_error_block" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <TextView android:gravity="center_horizontal" android:paddingBottom="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/search_list_info_common_error" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/Text16.Grey" />
+                        <TextView android:gravity="center" android:id="@id/routes_start_search_retry" android:background="@drawable/common_blue_stroke_stadium_background_clickable" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/search_list_info_error_retry" android:textAllCaps="true" android:paddingStart="55.0dip" android:paddingEnd="55.0dip" android:letterSpacing="@dimen/common_text_all_caps_spacing" style="@style/Text16.Medium.Blue" />
+                    </LinearLayout>
+                    <ru.yandex.yandexmaps.common.views.ErrorView android:id="@id/routes_start_search_error_view" android:layout_width="fill_parent" android:layout_height="24.0dip" android:text="@string/common_network_error" android:elevation="1.0dip" app:clearable="false" app:retryable="false" />
+                    <ru.yandex.yandexmaps.designsystem.loader.LoaderView android:layout_gravity="center" android:id="@id/routes_start_search_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:ymaps_progressSize="large" />
+                </FrameLayout>
+            </LinearLayout>
+            <ImageView android:layout_gravity="end" android:id="@id/routes_start_swap_waypoints" android:background="@drawable/common_button_circular_background" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/routes_waypoint_button" android:contentDescription="@string/accessibility_routes_swap_waypoints" android:layout_marginEnd="8.0dip" app:srcCompat="@drawable/revert_24" />
+        </FrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <FrameLayout android:id="@id/routes_start_dialog_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/routes_start_controls_landscape" />
+</com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout>

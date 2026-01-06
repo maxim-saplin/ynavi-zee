@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="64.0dip">
+        <com.facebook.shimmer.ShimmerFrameLayout android:layout_gravity="center" android:background="@drawable/shimmer_background" android:layout_width="185.0dip" android:layout_height="24.0dip" style="@style/CommonShimmer" />
+        <ImageView android:layout_gravity="end|center" android:id="@id/collection_card_loading_close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/close_24" android:layout_marginEnd="16.0dip" app:tint="@color/icons_additional" />
+    </FrameLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout android:background="@drawable/shimmer_background" android:layout_width="fill_parent" android:layout_height="24.0dip" android:layout_marginTop="27.0dip" android:layout_marginStart="14.0dip" android:layout_marginEnd="34.0dip" style="@style/CommonShimmer" />
+    <com.facebook.shimmer.ShimmerFrameLayout android:background="@drawable/shimmer_background" android:layout_width="fill_parent" android:layout_height="24.0dip" android:layout_marginTop="15.0dip" android:layout_marginStart="14.0dip" android:layout_marginEnd="34.0dip" style="@style/CommonShimmer" />
+    <com.facebook.shimmer.ShimmerFrameLayout android:background="@drawable/shimmer_background" android:layout_width="fill_parent" android:layout_height="24.0dip" android:layout_marginTop="12.0dip" android:layout_marginStart="14.0dip" android:layout_marginEnd="34.0dip" style="@style/CommonShimmer" />
+</merge>

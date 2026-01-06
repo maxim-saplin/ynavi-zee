@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_gravity="center" android:id="@id/user_card_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Text20.Medium.TextPrimary" />
+        <ImageView android:layout_gravity="end" android:id="@id/user_card_close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/close_24" android:contentDescription="@string/common_close_button" app:tint="@color/icons_additional" />
+    </LinearLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/user_card_address_shimmer" android:background="@drawable/shimmer_background" android:layout_width="fill_parent" android:layout_height="16.0dip" android:layout_marginTop="4.0dip" style="@style/CommonShimmer" />
+    <TextView android:id="@id/user_card_address_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text16.TextPrimary" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+        <TextView android:id="@id/user_card_coordinates_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="4.0dip" style="@style/Text16.TextSecondary" />
+        <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/user_card_coordinates_shimmer" android:background="@drawable/shimmer_background" android:layout_width="0.0dip" android:layout_height="16.0dip" android:layout_weight="1.0" style="@style/CommonShimmer" />
+        <TextView android:id="@id/user_card_coordinates_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.TextSecondary" />
+        <ImageView android:id="@id/user_card_coordinates_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/copy" android:layout_marginStart="4.0dip" />
+    </LinearLayout>
+</merge>

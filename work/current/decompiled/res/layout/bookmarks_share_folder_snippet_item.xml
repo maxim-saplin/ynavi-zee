@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip" android:paddingVertical="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/bookmarks_share_rounded_rectangle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="12.0dip" android:paddingVertical="16.0dip">
+        <ru.yandex.yandexmaps.multiplatform.bookmarks.common.BookmarkIconView android:id="@id/bookmarks_share_folder_snippet_icon" android:layout_width="32.0dip" android:layout_height="32.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip">
+            <TextView android:id="@id/bookmarks_share_folder_snippet_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" style="@style/Text16.Medium" />
+            <TextView android:id="@id/bookmarks_share_folder_snippet_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:includeFontPadding="false" style="@style/Text14.TextSecondary" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

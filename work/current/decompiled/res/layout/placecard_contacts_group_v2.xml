@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center_vertical" android:id="@id/placecard_contacts_group_title" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="8.0dip" android:text="@string/placecard_contacts_group_title" android:paddingStart="16.0dip" style="@style/Text16.Medium" />
+    <ru.yandex.yandexmaps.placecard.items.contacts.v2.ContactGroupItemViewV2 android:id="@id/placecard_contacts_phone_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/placecard_messengers_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ru.yandex.yandexmaps.placecard.items.contacts.v2.ContactGroupItemViewV2 android:id="@id/placecard_contacts_site_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/placecard_contacts_empty" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="56.0dip" android:layout_height="56.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/placecard_contacts_booking_button_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/call_24" app:tint="@color/icons_actions" />
+        </FrameLayout>
+        <TextView android:layout_gravity="center_vertical" android:id="@id/placecard_contacts_add_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/placecard_contacts_group_add_phone" style="@style/Text16.Medium.TextActions" />
+    </LinearLayout>
+    <ru.yandex.yandexmaps.placecard.items.contacts.HorizontalScrollViewEndFade android:orientation="horizontal" android:id="@id/social_layout_container" android:scrollbars="none" android:fadingEdgeLength="40.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="64.0dip" android:overScrollMode="never" android:requiresFadingEdge="horizontal" android:layout_marginStart="16.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/social_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </ru.yandex.yandexmaps.placecard.items.contacts.HorizontalScrollViewEndFade>
+</merge>

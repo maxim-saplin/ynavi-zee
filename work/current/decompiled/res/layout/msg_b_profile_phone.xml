@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/messaging_profile_phone_clickable_container" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Messaging.Settings.Item"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/messaging_profile_phone_header_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_change_phone_number_text" style="@style/Messaging.Settings.Text" />
+    <TextView android:textColor="?messagingCommonTextSecondaryColor" android:id="@id/messaging_profile_current_phone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Messaging.Settings.Text.Secondary" />
+    <TextView android:id="@id/messaging_profile_phone_authorize_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/profile_authorize_phone_number_text" style="@style/Messaging.Settings.Text" />
+</LinearLayout>

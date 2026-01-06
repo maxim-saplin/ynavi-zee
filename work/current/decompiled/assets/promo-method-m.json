@@ -1,0 +1,230 @@
+{
+    "templates": {},
+    "card": {
+        "log_id": "payment_sdk_card",
+        "variables": [
+            {
+                "type": "string",
+                "name": "promo_method_banner_m_saleText",
+                "value": "Скидка 5 ₽/10л"
+            },
+            {
+                "type": "string",
+                "name": "promo_method_banner_m_description",
+                "value": "Откройте карту и оплачивайте топливо со скидкой"
+            },
+            {
+                "type": "string",
+                "name": "promo_method_banner_m_state",
+                "value": "open"
+            },
+            {
+                "type": "string",
+                "name": "promo_method_banner_m_buttonText",
+                "value": "Открыть"
+            }
+        ],
+        "variable_triggers": [
+            {
+                "actions": [
+                    {
+                        "log_id": "change_button_state",
+                        "url": "div-action://set_state?state_id=0/button_selector/method"
+                    }
+                ],
+                "condition": "@{promo_method_banner_m_state == 'method'}",
+                "mode": "on_variable"
+            },
+            {
+                "actions": [
+                    {
+                        "log_id": "change_button_state",
+                        "url": "div-action://set_state?state_id=0/button_selector/open"
+                    }
+                ],
+                "condition": "@{promo_method_banner_m_state == 'open'}",
+                "mode": "on_variable"
+            }
+        ],
+        "states": [
+            {
+                "state_id": 0,
+                "div": {
+                    "type": "container",
+                    "background": [
+                        {
+                            "type": "solid",
+                            "color": "@{isLightTheme ? '#FFFFFF' : '#202020'}"
+                        }
+                    ],
+                    "border": {
+                        "corner_radius": 32
+                    },
+                    "height": {
+                        "type": "wrap_content"
+                    },
+                    "items": [
+                        {
+                            "type": "image",
+                            "alignment_vertical": "center",
+                            "height": {
+                                "unit": "dp",
+                                "type": "fixed",
+                                "value": 24
+                            },
+                            "image_url": "@{isLightTheme ? 'local-image://yandexPayCard_light' : 'local-image://yandexPayCard_dark'}",
+                            "margins": {
+                                "left": 20,
+                                "right": 12
+                            },
+                            "width": {
+                                "unit": "dp",
+                                "type": "fixed",
+                                "value": 36
+                            }
+                        },
+                        {
+                            "type": "container",
+                            "height": {
+                                "type": "match_parent"
+                            },
+                            "items": [
+                                {
+                                    "type": "container",
+                                    "alignment_vertical": "center",
+                                    "height": {
+                                        "type": "wrap_content"
+                                    },
+                                    "items": [
+                                        {
+                                            "type": "text",
+                                            "font_size": 16,
+                                            "font_size_unit": "sp",
+                                            "font_weight": "medium",
+                                            "height": {
+                                                "type": "match_parent"
+                                            },
+                                            "text": "@{promo_method_banner_m_saleText}",
+                                            "text_alignment_vertical": "center",
+                                            "text_color": "@{isLightTheme ? '#DB000000' : '#E0FFFFFF'}",
+                                            "width": {
+                                                "type": "match_parent",
+                                                "weight": 3
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "font_size": 14,
+                                            "font_size_unit": "sp",
+                                            "font_weight": "regular",
+                                            "height": {
+                                                "type": "match_parent"
+                                            },
+                                            "text": "@{promo_method_banner_m_description}",
+                                            "text_alignment_vertical": "center",
+                                            "text_color": "#9C9C9C",
+                                            "width": {
+                                                "type": "match_parent",
+                                                "weight": 5
+                                            }
+                                        }
+                                    ],
+                                    "margins": {
+                                        "top": 12,
+                                        "bottom": 12
+                                    },
+                                    "orientation": "vertical",
+                                    "width": {
+                                        "type": "match_parent"
+                                    }
+                                },
+                                {
+                                    "type": "state",
+                                    "alignment_vertical": "center",
+                                    "default_state_id": "open",
+                                    "height": {
+                                        "type": "wrap_content"
+                                    },
+                                    "id": "button_selector",
+                                    "margins": {
+                                        "left": 16,
+                                        "right": 16
+                                    },
+                                    "states": [
+                                        {
+                                            "state_id": "method",
+                                            "div": {
+                                                "type": "container",
+                                                "items": [
+                                                    {
+                                                        "type": "text",
+                                                        "action": {
+                                                            "log_id": "payment_sdk_promo_method_banner_m_promo_method_banner_m",
+                                                            "url": "promo-sdk://promo_method_banner_m/choose_click"
+                                                        },
+                                                        "alignment_vertical": "center",
+                                                        "font_size": 14,
+                                                        "font_size_unit": "sp",
+                                                        "font_weight": "regular",
+                                                        "height": {
+                                                            "type": "wrap_content"
+                                                        },
+                                                        "text": "@{promo_method_banner_m_buttonText}",
+                                                        "text_alignment_vertical": "center",
+                                                        "text_color": "#9C9C9C",
+                                                        "width": {
+                                                            "type": "wrap_content"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "state_id": "open",
+                                            "div": {
+                                                "type": "container",
+                                                "items": [
+                                                    {
+                                                        "type": "text",
+                                                        "action": {
+                                                            "log_id": "payment_sdk_promo_method_banner_m_promo_method_banner_m",
+                                                            "url": "promo-sdk://promo_method_banner_m/open_click"
+                                                        },
+                                                        "alignment_vertical": "center",
+                                                        "font_size": 14,
+                                                        "font_size_unit": "sp",
+                                                        "font_weight": "regular",
+                                                        "height": {
+                                                            "type": "wrap_content"
+                                                        },
+                                                        "text": "@{promo_method_banner_m_buttonText}",
+                                                        "text_alignment_vertical": "center",
+                                                        "text_color": "#9C9C9C",
+                                                        "width": {
+                                                            "type": "wrap_content"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "width": {
+                                        "type": "wrap_content"
+                                    }
+                                }
+                            ],
+                            "orientation": "horizontal",
+                            "width": {
+                                "type": "match_parent"
+                            }
+                        }
+                    ],
+                    "orientation": "horizontal",
+                    "width": {
+                        "type": "match_parent"
+                    }
+                }
+            }
+        ]
+    }
+}

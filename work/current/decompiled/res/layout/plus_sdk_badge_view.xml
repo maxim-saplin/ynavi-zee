@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.plus.home.badge.widget.CashbackAmountView android:id="@id/plus_badge_cashback_view" android:paddingTop="@dimen/plus_sdk_cashback_teaser_padding" android:layout_width="wrap_content" android:layout_height="@dimen/plus_sdk_cashback_teaser_height" android:importantForAccessibility="yes" android:paddingStart="@dimen/plus_sdk_mu_1" android:paddingEnd="@dimen/plus_sdk_mu_1" app:plus_sdk_cashbackTextColor="@color/plus_sdk_white" app:plus_sdk_cashbackTextFontFamily="?plus_sdk_fontFamily_medium" app:plus_sdk_cashbackTextSize="@dimen/plus_sdk_cashback_text_size" app:plus_sdk_enableGradientMode="true" app:plus_sdk_shadowColor="@color/plus_sdk_purple" app:plus_sdk_shadowRadius="@dimen/plus_sdk_cashback_gradient_shadow_radius" />
+</merge>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.plus.home.feature.webviews.internal.toolbar.WebViewToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:importantForAccessibility="yes" />
+    <FrameLayout android:id="@id/progress_bar_layout" android:background="?backgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="noHideDescendants">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PlusSDK.Widget.ProgressBar" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/error_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" style="@style/PlusSDK.Widget.WebViewError" />
+    <FrameLayout android:id="@id/smart_webview_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no">
+        <com.yandex.plus.webview.api.WebViewContainer android:id="@id/plus_smart_web_view_contracts_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="yes" />
+        <View android:id="@id/pull_out_line_icon" android:importantForAccessibility="no" style="@style/PlusSDK.Widget.OutlineIcon.Smart" />
+    </FrameLayout>
+</merge>

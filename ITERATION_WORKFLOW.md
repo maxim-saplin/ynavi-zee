@@ -2,10 +2,16 @@
 
 This is the fast loop for a **new APK attempt** (same app, different version). Use a unique `<apk_tag>` per base APK.
 
+## Current working tree (recommended)
+
+If you are iterating on the known-good current state, start from:
+- `work/current/decompiled/`
+- Build artifact: `builds/current/out_signed.apk`
+
 Suggested folders:
-- `inputs/<apk_tag>/base.apk`
-- `work/<apk_tag>/decompiled/`
-- `builds/<apk_tag>/out_signed.apk`
+- `inputs/current/base.apk`
+- `work/current/decompiled/`
+- `builds/current/out_signed.apk`
 
 ## 1) Decompile (one-time per base APK)
 ```bash
@@ -25,6 +31,11 @@ zsh build_apk.sh -inputFolder work/<apk_tag>/decompiled -outputFile builds/<apk_
 ```
 - Script requires an empty output directory; choose a fresh `<tag>` (e.g., timestamp).
 - Signed artifact will be `<outputFile>` with `_signed.apk` suffix.
+
+For the single evolving workspace, the canonical command is:
+```bash
+zsh build_apk.sh -inputFolder work/current/decompiled -outputFile builds/current/out.apk
+```
 
 ## 4) Install on emulator/device
 ```bash
@@ -48,6 +59,10 @@ adb logcat -d | egrep -i "AndroidRuntime|FATAL EXCEPTION|signature|mismatch|pass
 ```
 - For targeted strings: `adb logcat -d | grep -i <keyword> | tail -n 200`.
 - Clear before a run for clean signals: `adb logcat -c`.
+
+Success criteria (smoke):
+- `adb shell pidof <package.name>` returns a PID
+- `adb shell dumpsys activity activities | grep -E \"topResumedActivity|mResumedActivity\"` shows your app activity
 
 ## 6.1) Triage guide (what to do next)
 - Native crash early (SIGSEGV/abort): look for a custom loader/hook (often via `AppComponentFactory`) and stub it; if needed escalate to native patching.

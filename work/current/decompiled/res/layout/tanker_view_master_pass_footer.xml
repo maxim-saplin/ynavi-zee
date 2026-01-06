@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/tanker_basic_padding" android:paddingTop="24.0dip" android:paddingRight="@dimen/tanker_basic_padding" android:paddingBottom="@dimen/tanker_basic_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/tanker_basic_text_size" android:textColor="@color/tanker_text_secondary" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/master_pass_intro" style="@style/TankerTextRegular" />
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:layout_width="120.0dip" android:layout_height="30.0dip" android:layout_marginTop="@dimen/tanker_basic_padding" android:src="@drawable/tanker_ic_masterpass" />
+</LinearLayout>

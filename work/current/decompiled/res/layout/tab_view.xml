@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:textColor="@color/common_shutter_tab_text_color_selector" android:layout_gravity="center_vertical" android:id="@id/tab_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" style="@style/Text14.Medium" />
+        <TextView android:id="@id/tab_counter" android:background="@drawable/rounded_tab_counter_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" android:layout_marginStart="4.0dip" android:paddingHorizontal="6.0dip" android:paddingVertical="3.0dip" style="@style/Text12.Medium.TextSecondary" />
+    </LinearLayout>
+    <View android:id="@id/tab_bottom_line" android:background="@drawable/tab_bottom_line_background" android:layout_width="0.0dip" android:layout_height="4.0dip" android:layout_marginBottom="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</merge>

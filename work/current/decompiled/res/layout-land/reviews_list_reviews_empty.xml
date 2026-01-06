@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/bg_primary" android:paddingTop="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/reviews_tab_empty_title" style="@style/Text16.Medium.TextPrimary" />
+    <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/reviews_tab_empty_subtitle" style="@style/Text14.TextSecondary" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/reviews_tab_rating_stars_container" android:layout_width="fill_parent" android:layout_height="64.0dip" android:layout_marginTop="24.0dip">
+        <include android:id="@id/reviews_tab_rating_star_1" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/rating_star" />
+        <include android:id="@id/reviews_tab_rating_star_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" layout="@layout/rating_star" />
+        <include android:id="@id/reviews_tab_rating_star_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" layout="@layout/rating_star" />
+        <include android:id="@id/reviews_tab_rating_star_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" layout="@layout/rating_star" />
+        <include android:id="@id/reviews_tab_rating_star_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" layout="@layout/rating_star" />
+    </LinearLayout>
+</LinearLayout>

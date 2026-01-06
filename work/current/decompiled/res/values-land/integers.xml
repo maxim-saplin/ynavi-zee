@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="control_fleet_id_logotype_default">2</integer>
+    <integer name="control_fleet_id_stub_for_promo_object">3</integer>
+    <integer name="control_heaviness_position">1</integer>
+    <integer name="control_heaviness_traffic">2</integer>
+    <item type="integer" name="gallery_span_count">@integer/gallery_span_count_landscape</item>
+    <integer name="maxlines_cornerballoon_nextstreet">0</integer>
+    <integer name="mtrl_calendar_header_orientation">0</integer>
+    <integer name="mtrl_calendar_selection_text_lines">6</integer>
+    <integer name="navi_scenario_focus_point_y_offset_percents">17</integer>
+</resources>

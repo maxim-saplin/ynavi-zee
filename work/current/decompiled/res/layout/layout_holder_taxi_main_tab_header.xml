@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/background_panel" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.maps.uikit.atomicviews.snippet.back.BackButtonView android:layout_gravity="start|top" android:id="@id/button_taxi_main_tab_back" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+    <TextView android:ellipsize="end" android:gravity="center" android:layout_gravity="top" android:id="@id/text_taxi_main_tab_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" android:layout_marginEnd="16.0dip" style="@style/Text20.Medium" />
+</LinearLayout>

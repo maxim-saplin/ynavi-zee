@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="font" name="font_bold">@font/ys_text_bold</item>
+    <item type="font" name="font_heavy">@font/ys_heavy</item>
+    <item type="font" name="font_logo">@font/ys_logo</item>
+    <item type="font" name="font_medium">@font/ys_medium</item>
+    <item type="font" name="font_onboarding_title">@font/ys_medium</item>
+    <item type="font" name="font_regular">@font/ys_regular</item>
+</resources>

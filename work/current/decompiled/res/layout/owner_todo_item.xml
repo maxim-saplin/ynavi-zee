@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:foreground="?selectableItemBackground"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="@dimen/placecard_owner_todo_size" android:layout_height="@dimen/placecard_owner_todo_size">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginHorizontal="12.0dip">
+            <ImageView android:id="@id/placecard_owner_todo_title_icon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:scaleType="center" android:layout_marginEnd="6.0dip" />
+            <TextView android:textAppearance="@style/Text16.Medium.TextPrimary" android:ellipsize="end" android:id="@id/placecard_owner_todo_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" />
+            <ImageView android:id="@id/placecard_owner_todo_title_shevron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/disclosure_16" app:tint="@color/text_black_white" />
+        </LinearLayout>
+        <ru.yandex.yandexmaps.placecard.items.easylkb.todos.OwnerTodoContentTextView android:textAppearance="@style/Text14.Medium.PrimaryVariant" android:ellipsize="end" android:id="@id/placecard_owner_todo_content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="8.0dip" android:layout_weight="1.0" android:lineSpacingExtra="0.0sp" android:textDirection="inherit" android:textAlignment="viewStart" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" />
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/bottom_accessory" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/bottom_accessory_image_button" android:background="@drawable/placecard_owner_todo_image_button_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:layout_marginHorizontal="12.0dip" android:paddingVertical="3.0dip">
+                <ImageView android:layout_gravity="center" android:id="@id/bottom_accessory_image_button_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+            </FrameLayout>
+            <TextView android:ellipsize="end" android:id="@id/bottom_accessory_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:maxLines="3" android:layout_marginHorizontal="12.0dip" />
+            <TextView android:textAppearance="@style/Text14.Medium" android:textColor="@color/unique_lkb_widget_review_text" android:layout_gravity="bottom" android:id="@id/bottom_accessory_text_button" android:background="@drawable/placecard_owner_todo_review_counter_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:layout_marginHorizontal="12.0dip" android:paddingHorizontal="8.0dip" android:paddingVertical="4.0dip" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

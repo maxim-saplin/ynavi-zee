@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.PoiLabelView android:layout_gravity="start" android:id="@id/mt_label_on_map_stop_name" android:layout_width="wrap_content" android:layout_height="wrap_content" app:poiLabel_align="left" app:poiLabel_ellipsize="true" app:poiLabel_fontFamily="medium" app:poiLabel_maxNumberOfLines="3" app:poiLabel_multipleLineMaxLength="16" app:poiLabel_oneLineMaxLength="24" app:poiLabel_strokeColor="@color/bg_primary" app:poiLabel_strokeWidth="10.0" app:poiLabel_textColor="@color/text_primary_variant" app:poiLabel_textSize="12.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

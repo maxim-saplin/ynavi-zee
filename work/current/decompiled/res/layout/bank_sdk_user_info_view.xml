@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bank_sdk_menu_user_photo_margin_top"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/userAvatarImageView" android:background="@drawable/bank_sdk_bg_plus_ring" android:layout_width="@dimen/bank_sdk_menu_user_photo_size" android:layout_height="@dimen/bank_sdk_menu_user_photo_size" android:scaleType="fitCenter" android:importantForAccessibility="no" />
+    <TextView android:gravity="center" android:id="@id/userFullNameTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bank_sdk_menu_user_name_margin_top" style="@style/Widget.Bank.Text.Headline2" />
+    <TextView android:ellipsize="middle" android:layout_gravity="center" android:id="@id/userEmailTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" android:contentDescription="@string/bank_sdk_menu_accessibility_button_open_profile" style="@style/Widget.Bank.Text.Body2" />
+</LinearLayout>

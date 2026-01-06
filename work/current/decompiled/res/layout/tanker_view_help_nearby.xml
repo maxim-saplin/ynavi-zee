@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/iconIv" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ru.tankerapp.ui.uimode.TankerTextView android:textSize="@dimen/tanker_text_size_17" android:textColor="@color/tanker_textColorAlpha100" android:ellipsize="end" android:id="@id/titleTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" style="@style/TankerTextMedium" />
+        <ru.tankerapp.ui.uimode.TankerTextView android:textSize="@dimen/tanker_mini_text_size" android:textColor="@color/tanker_textColorAlpha40" android:ellipsize="end" android:id="@id/subtitleTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:lines="1" android:singleLine="true" style="@style/TankerTextRegular" />
+    </LinearLayout>
+    <ru.tankerapp.ui.uimode.TankerImageView android:id="@id/iconIv" android:layout_width="28.0dip" android:layout_height="28.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:id="@id/online_org_feature_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_weight="1.0" style="@style/Text14.Regular.TextPrimaryVariant" />
+    <TextView android:ellipsize="end" android:id="@id/online_org_feature_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Text14.Regular" />
+</merge>

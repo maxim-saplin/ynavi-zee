@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="16.0dip" style="@style/CommonShimmer"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/placecard_owner_todo_size">
+        <View android:background="@drawable/placecard_owner_todo_background" android:layout_width="@dimen/placecard_owner_todo_size" android:layout_height="fill_parent" android:layout_marginStart="16.0dip" />
+        <View android:background="@drawable/placecard_owner_todo_background" android:layout_width="@dimen/placecard_owner_todo_size" android:layout_height="fill_parent" android:layout_marginStart="8.0dip" />
+        <View android:background="@drawable/placecard_owner_todo_background" android:layout_width="@dimen/placecard_owner_todo_size" android:layout_height="fill_parent" android:layout_marginStart="8.0dip" />
+        <View android:background="@drawable/placecard_owner_todo_background" android:layout_width="@dimen/placecard_owner_todo_size" android:layout_height="fill_parent" android:layout_marginStart="8.0dip" />
+    </LinearLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

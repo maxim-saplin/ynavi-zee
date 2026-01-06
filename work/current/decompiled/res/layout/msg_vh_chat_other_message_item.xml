@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.messaging.internal.view.chat.ChatItemLinearLayout android:orientation="horizontal" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/timeline_message_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ViewStub android:id="@id/reply" android:layout="@layout/msg_reply_layout" android:inflatedId="@id/reply" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="12.0dip" />
+        <ViewStub android:id="@id/forwarded_message" android:layout="@layout/msg_forwarded_message" android:inflatedId="@id/forwarded_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:paddingStart="10.0dip" android:paddingEnd="12.0dip" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.yandex.messaging.views.AppCompatEmojiTextView android:textSize="@dimen/timeline_message_text_size" android:textColor="?messagingIncomingPrimaryColor" android:layout_gravity="bottom" android:id="@id/chat_message_text" android:paddingTop="6.0dip" android:paddingBottom="9.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:lineSpacingExtra="0.0sp" android:lineSpacingMultiplier="1.0" android:textIsSelectable="true" android:fontFamily="@font/ya_regular" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+            <include layout="@layout/msg_message_status_and_time" />
+        </FrameLayout>
+        <ViewStub android:id="@id/default_url_preview_container_stub" android:inflatedId="@id/url_preview_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/video_url_preview_container_stub" android:inflatedId="@id/video_url_preview_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/chat_url_preview_container_stub" android:inflatedId="@id/chat_url_preview_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/message_url_preview_container_stub" android:inflatedId="@id/message_url_preview_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/user_url_preview_container_stub" android:inflatedId="@id/user_url_preview_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ViewStub android:id="@id/small_default_url_preview_container_stub" android:inflatedId="@id/small_url_preview_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/chat_actions" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/msg_chat_error_icon_layout" />
+</com.yandex.messaging.internal.view.chat.ChatItemLinearLayout>

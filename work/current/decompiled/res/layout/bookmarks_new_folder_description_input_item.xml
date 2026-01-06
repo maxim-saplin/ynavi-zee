@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_primary" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bookmarks_new_folder_description" android:paddingVertical="12.0dip" style="@style/Text14.Medium" />
+    <EditText android:gravity="top" android:id="@id/bookmarks_new_folder_bookmark_description" android:background="@drawable/bookmarks_edit_text_shape" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="64.0dip" android:maxLines="5" android:maxLength="400" android:imeOptions="actionDone|flagNoExtractUi" android:textCursorDrawable="@drawable/blue_cursor" android:paddingHorizontal="12.0dip" android:paddingVertical="16.0dip" style="@style/Text14" />
+</LinearLayout>

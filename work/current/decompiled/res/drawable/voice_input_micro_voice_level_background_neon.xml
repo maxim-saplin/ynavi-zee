@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="75.0dip" android:width="76.0dip" android:viewportWidth="76.0" android:viewportHeight="75.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$voice_input_micro_voice_level_background_neon__0" android:pathData="M38 0c20.513 0 37.143 16.629 37.143 37.143 0 20.513-16.63 37.143-37.143 37.143S0.857 57.656 0.857 37.143C0.857 16.629 17.487 0 38 0zm-7 30.617C31 25.858 34.069 22 37.855 22c3.786 0 6.855 3.858 6.855 8.617v3.446c0 4.759-3.069 8.617-6.855 8.617-3.786 0-6.855-3.858-6.855-8.617v-3.446z" android:fillType="evenOdd" />
+</vector>

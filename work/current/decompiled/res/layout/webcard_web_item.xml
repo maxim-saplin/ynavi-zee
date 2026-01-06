@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.webcard.internal.recycler.blocks.web.WebContentFrameLayout android:gravity="center" android:id="@id/web_content_root" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end" android:id="@id/webcard_close_button" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="8.0dip" />
+</FrameLayout>

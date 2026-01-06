@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="271.0dip" android:width="271.0dip" android:viewportWidth="271.0" android:viewportHeight="271.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?bankColor_internal_transparent" android:pathData="M1,48V25C1,11.75 11.75,1 25,1H48" android:strokeColor="?bankColor_textIcon_primaryStaticInverted" android:strokeWidth="2.0" />
+    <path android:fillColor="?bankColor_internal_transparent" android:pathData="M270,48V25C270,11.75 259.26,1 246,1H223" android:strokeColor="?bankColor_textIcon_primaryStaticInverted" android:strokeWidth="2.0" />
+    <path android:fillColor="?bankColor_internal_transparent" android:pathData="M48,270L25,270C11.75,270 1,259.26 1,246L1,223" android:strokeColor="?bankColor_textIcon_primaryStaticInverted" android:strokeWidth="2.0" />
+    <path android:fillColor="?bankColor_internal_transparent" android:pathData="M223,270L246,270C259.26,270 270,259.26 270,246L270,223" android:strokeColor="?bankColor_textIcon_primaryStaticInverted" android:strokeWidth="2.0" />
+</vector>

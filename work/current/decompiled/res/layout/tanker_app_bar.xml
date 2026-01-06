@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout android:background="?tankerBackgroundColor" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/tankerToolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetEnd="?actionBarSize" app:contentInsetStart="0.0dip" app:contentInsetStartWithNavigation="0.0dip" app:navigationIcon="@drawable/tanker_ic_back" app:title="@null">
+        <TextView android:textSize="@dimen/tanker_medium_text_size" android:textColor="@color/tanker_textColorAlpha100" android:gravity="center" android:id="@id/tankerToolbarTitleTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" style="@style/TankerTextMedium" />
+    </androidx.appcompat.widget.Toolbar>
+</com.google.android.material.appbar.AppBarLayout>

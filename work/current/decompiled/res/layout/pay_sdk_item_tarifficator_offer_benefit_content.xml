@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="@dimen/pay_sdk_margin_small"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/benefit_item_image" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginTop="@dimen/pay_sdk_margin_small" android:src="@drawable/pay_sdk_ic_check" android:tint="?pay_sdk_primaryTextColor" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textColor="?pay_sdk_primaryTextColor" android:id="@id/benefit_item_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:textAlignment="viewStart" android:layout_marginStart="@dimen/pay_sdk_margin_middle" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toEndOf="@id/benefit_item_image" app:layout_constraintTop_toTopOf="parent" style="@style/PaySDK.TextAppearance.Body2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

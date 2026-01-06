@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.bricks.HideableCoordinatorLayout android:id="@id/alice_cloud2_view_container" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.alice.ui.cloud2.FrameLayoutMaxWidth android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/alice_cloud2_sheet" android:focusable="true" android:clickable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:maxWidth="@dimen/alice_compact_text_width_limit" />
+    <ViewStub android:layout_gravity="bottom" android:id="@id/alice_cloud2_footer_view_stub" android:layout="@layout/alice_cloud2_footer_layout" android:inflatedId="@id/alice_cloud2_footer_view" android:layout_width="fill_parent" android:layout_height="@dimen/alice_cloud2_fake_input_height" app:layout_behavior="com.yandex.alice.ui.cloud2.AliceCloud2FooterBehavior" />
+</com.yandex.bricks.HideableCoordinatorLayout>

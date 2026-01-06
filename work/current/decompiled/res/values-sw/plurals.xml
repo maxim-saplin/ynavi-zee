@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Sogeza mbele haraka kwa sekunde %d</item>
+        <item quantity="one">Sogeza mbele haraka kwa sekunde %d</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Rudisha nyuma kwa sekunde %d</item>
+        <item quantity="one">Rudisha nyuma kwa sekunde %d</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">Arifa %d mpya</item>
+        <item quantity="one">Arifa %d mpya</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Tarakimu %1$d za mwisho</item>
+        <item quantity="zero">Tarakimu %1$d za mwisho</item>
+        <item quantity="one">Tarakimu %1$d ya mwisho</item>
+        <item quantity="few">Tarakimu %1$d za mwisho</item>
+        <item quantity="many">Tarakimu %1$d za mwisho</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"Sasa utapokea simu kutoka
+%1$s. Weka tarakimu %2$d za mwisho za nambari hii."</item>
+        <item quantity="zero">"Sasa utapokea simu kutoka
+%1$s. Weka tarakimu %2$d za mwisho za nambari hii."</item>
+        <item quantity="one">"Sasa utapokea simu kutoka
+%1$s. Weka tarakimu %2$d ya mwisho ya nambari hii."</item>
+        <item quantity="few">"Sasa utapokea simu kutoka
+%1$s. Weka tarakimu %2$d za mwisho za nambari hii."</item>
+        <item quantity="many">"Sasa utapokea simu kutoka
+%1$s. Weka tarakimu %2$d za mwisho za nambari hii."</item>
+    </plurals>
+</resources>

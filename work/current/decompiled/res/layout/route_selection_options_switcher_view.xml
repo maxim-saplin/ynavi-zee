@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:layout_gravity="start|center" android:orientation="vertical" android:id="@id/route_selection_options_switch_two_lines_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="noHideDescendants">
+            <TextView android:id="@id/route_selection_options_switch_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.TextPrimary" />
+            <TextView android:ellipsize="end" android:id="@id/route_selection_options_switch_description" android:paddingTop="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.TextSecondary" />
+        </LinearLayout>
+        <TextView android:layout_gravity="start|center" android:id="@id/route_selection_options_switch_single_line_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.TextPrimary" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.SwitchCompat android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/route_selection_options_switch" android:layout_width="wrap_content" android:layout_height="fill_parent" android:importantForAccessibility="no" android:layout_marginStart="16.0dip" />
+    </FrameLayout>
+</merge>

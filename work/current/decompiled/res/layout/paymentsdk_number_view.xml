@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/paymentsdk_number_view_cursor" android:background="?paymentsdk_cvv_input_text_color" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="32.0dip" android:layout_marginEnd="2.0dip" app:layout_constraintStart_toStartOf="parent" />
+    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="?paymentsdk_cvv_input_text_color" android:gravity="center" android:id="@id/paymentsdk_number_view_number" android:visibility="invisible" android:layout_width="18.0dip" android:layout_height="26.0dip" android:text="1" app:layout_constraintStart_toEndOf="@id/paymentsdk_number_view_cursor" />
+</androidx.constraintlayout.widget.ConstraintLayout>

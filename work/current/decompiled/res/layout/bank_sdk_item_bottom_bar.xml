@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iconView" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginTop="5.0dip" android:scaleType="center" android:importantForAccessibility="no" android:backgroundTintMode="src_atop" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="@color/bank_sdk_bank_tab" />
+    <TextView android:textColor="@color/bank_sdk_bank_tab" android:id="@id/subText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:includeFontPadding="false" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/iconView" style="@style/Widget.Bank.Text.Caption3" />
+</merge>

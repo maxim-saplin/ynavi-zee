@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">በ%d ሰከንዶች በፍጥነት ወደፊት ያሳልፉ</item>
+        <item quantity="one">በ%d ሰከንዶች በፍጥነት ወደፊት ያሳልፉ</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">በ%d ሰከንዶች ወደኋላ ይመልሱ</item>
+        <item quantity="one">በ%d ሰከንዶች ወደኋላ ይመልሱ</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d አዲስ ማሳወቂያዎች</item>
+        <item quantity="one">%d አዲስ ማሳወቂያዎች</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">የመጨረሻ %1$d አሃዞች</item>
+        <item quantity="zero">የመጨረሻ %1$d አሃዞች</item>
+        <item quantity="one">የመጨረሻ %1$d አሃዝ</item>
+        <item quantity="few">የመጨረሻ %1$d አሃዞች</item>
+        <item quantity="many">የመጨረሻ %1$d አሃዞች</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"አሁን ከ
+%1$sጥሪ ይደርስዎታል። የዚህን ቁጥር የመጨረሻዎቹን %2$d አሃዞች ያስገቡ።"</item>
+        <item quantity="zero">"አሁን ከ
+%1$sጥሪ ይደርስዎታል። የዚህን ቁጥር የመጨረሻዎቹን %2$d አሃዞች ያስገቡ።"</item>
+        <item quantity="one">"አሁን ከ
+%1$s ጥሪ ይደርስዎታል። የዚህን ቁጥር የመጨረሻውን %2$d አሃዝ ያስገቡት።"</item>
+        <item quantity="few">"አሁን ከ
+%1$sጥሪ ይደርስዎታል። የዚህን ቁጥር የመጨረሻዎቹን %2$d አሃዞች ያስገቡ።"</item>
+        <item quantity="many">"አሁን ከ
+%1$sጥሪ ይደርስዎታል። የዚህን ቁጥር የመጨረሻዎቹን %2$d አሃዞች ያስገቡ።"</item>
+    </plurals>
+</resources>

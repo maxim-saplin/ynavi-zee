@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="#1effffff"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:topLeftRadius="@dimen/passport_next_button_corner_radius_small" android:topRightRadius="@dimen/passport_next_button_corner_radius_small" android:bottomLeftRadius="@dimen/passport_next_button_corner_radius_small" android:bottomRightRadius="@dimen/passport_next_button_corner_radius_small" />
+            <solid android:color="@color/passport_social_button_light_bg" />
+            <stroke android:width="@dimen/passport_next_button_stroke_width_thin" android:color="@color/passport_next_horizontal_divider_light" />
+        </shape>
+    </item>
+</ripple>

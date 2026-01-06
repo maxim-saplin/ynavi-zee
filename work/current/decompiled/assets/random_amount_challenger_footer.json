@@ -1,0 +1,39 @@
+{
+    "div": {
+        "type": "text",
+        "alignment_horizontal": "left",
+        "font_size": 16,
+        "images": [
+            {
+                "url": "@{isLightTheme ? 'local-image://link_light' : 'local-image://link_dark'}",
+                "height": {
+                    "type": "fixed",
+                    "value": 12
+                },
+                "width": {
+                    "type": "fixed",
+                    "value": 12
+                },
+                "tint_color": "@{isLightTheme ? '#24A8E0' : '#366387'}"
+            }
+        ],
+        "margins": {
+            "bottom": 24,
+            "left": 24,
+            "right": 24
+        },
+        "ranges": [
+            {
+                "text_color": "@{isLightTheme ? '#24A8E0' : '#366387'}",
+                "actions": [
+                    {
+                        "log_id": "payment_sdk_challenger_screen_bank_open",
+                        "url": "payment-sdk://bank_open"
+                    }
+                ]
+            }
+        ],
+        "text_alignment_horizontal": "left",
+        "text_color": "@{isLightTheme ? '#33000000' : '#40FFFFFF'}"
+    }
+}

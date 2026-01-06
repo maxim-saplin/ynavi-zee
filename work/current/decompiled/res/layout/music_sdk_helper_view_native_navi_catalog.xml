@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.music.sdk.helper.ui.navigator.smartradio.SmartRadioView android:id="@id/navi_catalog_view_smart_radio" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/music_sdk_helper_view_navi_catalog_radio_wave_height" />
+    <com.yandex.music.sdk.helper.ui.navigator.views.branding.catalog.NaviBrandingView android:id="@id/navi_catalog_view_branding" android:layout_width="fill_parent" android:layout_height="@dimen/music_sdk_helper_view_branding_navi_height" />
+    <com.yandex.music.sdk.helper.ui.navigator.catalog.CatalogPlayerView android:id="@id/navi_catalog_view_player" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/music_sdk_helper_view_navi_catalog_player_height" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/navi_catalog_view_recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/navi_catalog_view_paywall_stub" android:layout="@layout/music_sdk_helper_view_navi_catalog_paywall" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/navi_catalog_view_loginwall_stub" android:layout="@layout/music_sdk_helper_view_navi_catalog_loginwall" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ViewStub android:id="@id/navi_catalog_view_error_stub" android:layout="@layout/music_sdk_helper_view_navi_catalog_error" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

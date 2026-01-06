@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:animateLayoutChanges="true">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/ThemeOverlay.AppCompat.Light" android:id="@id/toolbar" android:background="@color/passport_alto" android:layout_width="fill_parent" android:layout_height="wrap_content" app:navigationIcon="@drawable/passport_back_light_redesign" />
+        <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Title" android:gravity="center" android:id="@id/passportTextview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="Override experiment values" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <ImageButton android:id="@id/btn_experiments_shown_hidden" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/passport_ic_down_arrow_dark" android:contentDescription="experiments_shown_hidden" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/passportTextview" app:layout_constraintTop_toTopOf="@id/passportTextview" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recycler_flags" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <Button android:id="@id/button_more" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="More" />
+        <LinearLayout android:orientation="vertical" android:id="@id/layout_more" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+            <View android:background="@color/passport_black" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Experiments local cache: " />
+            <TextView android:id="@id/passport_experiments_dump" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <View android:background="@color/passport_black" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="key: " />
+                <EditText android:id="@id/passport_experiment_key" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="enter key here" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="value: " />
+                <EditText android:id="@id/passport_experiment_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="enter value here" />
+            </LinearLayout>
+            <Button android:id="@id/passport_experiments_update_key_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Update value for the key" />
+            <View android:background="@color/passport_black" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" />
+            <Button android:id="@id/passport_experiments_clear_cache_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear all local data" />
+            <View android:background="@color/passport_black" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ToggleButton android:id="@id/passport_experiments_environment_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textOn="Production environment" android:textOff="Testing environment" />
+                <TextView android:textSize="12.0sp" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Environment will not be saved after restart" android:paddingStart="8.0dip" />
+            </LinearLayout>
+            <Button android:id="@id/passport_experiments_network_update_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Start updating from the network" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

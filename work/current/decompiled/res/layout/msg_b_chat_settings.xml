@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/messaging_user_rights" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messaging_edit_chat_user_rights_section" style="@style/Messaging.Settings.Text.Group" />
+        <ImageView android:layout_gravity="end|center" android:id="@id/loading_indicator" android:layout_width="32.0dip" android:layout_height="32.0dip" android:contentDescription="@null" android:layout_marginEnd="12.0dip" app:srcCompat="@drawable/msg_anim_chat_settings_spinner" />
+    </FrameLayout>
+    <View android:background="@drawable/msg_divider_settings_group" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/msg_divider_settings_items" android:showDividers="middle">
+        <com.yandex.messaging.ui.chatinfo.editchat.ChatSettingsSwitch android:id="@id/write_messages_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:css_icon="@drawable/msg_ic_send_outline" app:css_label="@string/messaging_edit_chat_user_rights_write_message" />
+        <com.yandex.messaging.ui.chatinfo.editchat.ChatSettingsSwitch android:id="@id/write_threads" android:layout_width="fill_parent" android:layout_height="wrap_content" app:css_icon="@drawable/msg_ic_thread" app:css_label="@string/messaging_edit_chat_user_rights_discuss" />
+        <com.yandex.messaging.ui.chatinfo.editchat.ChatSettingsSwitch android:id="@id/edit_messages_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:css_icon="@drawable/msg_ic_edit" app:css_label="@string/messaging_edit_chat_user_rights_edit_message" />
+        <com.yandex.messaging.ui.chatinfo.editchat.ChatSettingsSwitch android:id="@id/write_important_messages_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:css_icon="@drawable/msg_ic_star_outline" app:css_label="@string/messaging_edit_chat_user_rights_write_important_message" />
+        <com.yandex.messaging.ui.chatinfo.editchat.ChatSettingsSwitch android:id="@id/pin_messages_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:css_icon="@drawable/msg_ic_pin" app:css_label="@string/messaging_edit_chat_user_rights_pin_message" />
+        <com.yandex.messaging.ui.chatinfo.editchat.ChatSettingsSwitch android:id="@id/add_users_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:css_icon="@drawable/msg_ic_participant_count" app:css_label="@string/messaging_edit_chat_user_rights_add_user" />
+        <com.yandex.messaging.ui.chatinfo.editchat.ChatSettingsSwitch android:id="@id/start_meetings" android:layout_width="fill_parent" android:layout_height="wrap_content" app:css_icon="@drawable/msg_ic_video_call" app:css_label="@string/messaging_edit_chat_user_rights_start_meetings" />
+        <com.yandex.messaging.ui.chatinfo.editchat.ChatSettingsSwitch android:id="@id/edit_chat_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:css_icon="@drawable/msg_ic_info" app:css_label="@string/messaging_edit_chat_user_rights_edit_info" />
+        <ViewStub android:id="@id/extra_rights" android:layout="@layout/msg_b_chat_settings_extra_rights" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:textColor="?messagingCommonTextSecondaryColor" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messaging_edit_chat_user_rights_descrition" style="@style/Messaging.Settings.Item.Text" />
+</LinearLayout>

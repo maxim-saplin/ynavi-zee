@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/temporary_subscribers_back_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_24" app:tint="@color/icons_additional" />
+    <TextView android:gravity="center" android:id="@id/temporary_subscribers_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Text20.Medium.TextPrimary" />
+    <ImageView android:id="@id/temporary_subscribers_close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/close_24" app:tint="@color/icons_additional" />
+</merge>

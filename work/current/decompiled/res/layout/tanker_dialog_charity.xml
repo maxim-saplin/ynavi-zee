@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?tankerBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.tankerapp.android.sdk.navigator.view.widgets.webview.WebViewWrapper android:id="@id/webView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/tankerHelpNearbyLoadingView" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/tanker_item_loading" />
+</LinearLayout>

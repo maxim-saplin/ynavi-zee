@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.navi.ride.api.NaviRideTouchLayout android:id="@id/navi_service_touch_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr">
+        <FrameLayout android:id="@id/paddings_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:id="@id/navi_service_interactive_ui_mode_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" app:ignore_shore_tags="search">
+                    <ru.yandex.yandexmaps.controls.views.MapControlsServiceNameView android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/navi_service_controller_service_name" android:layout_width="wrap_content" android:layout_height="80.0dip" android:text="@string/tab_navigation_tab_navi_title" android:paddingStart="30.0dip" android:paddingEnd="30.0dip" app:layout_fleet_id="2" app:layout_floating="drifting_up" app:layout_heaviness="0" />
+                    <include layout="@layout/control_chunk_profile_business" />
+                    <include layout="@layout/control_chunk_stub_for_promo_object" />
+                    <ru.yandex.yandexmaps.controls.traffic.ControlTraffic android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" app:layout_clearance="@dimen/control_default_clearance" app:layout_fleet_id="0" app:layout_floating="drifting_up" app:layout_heaviness="0" app:layout_shadow_size_to_ignore="@dimen/control_default_shadow_size_to_ignore" app:visibleWhenInactive="true" />
+                    <include layout="@layout/control_chunk_carparks_priority" />
+                    <include layout="@layout/control_chunk_weather" />
+                    <include layout="@layout/control_chunk_surge" />
+                    <include layout="@layout/control_chunk_zoom" />
+                    <include layout="@layout/control_chunk_position" />
+                    <ru.yandex.yandexmaps.controls.views.FrameLayoutControl android:id="@id/navi_service_control_back_ghost" android:layout_width="0.0dip" android:layout_height="64.0dip" app:layout_clearance="@dimen/control_default_clearance" app:layout_fleet_id="1" app:layout_floating="drifting_down" app:layout_heaviness="0" app:layout_shadow_size_to_ignore="@dimen/control_default_shadow_size_to_ignore" />
+                    <include layout="@layout/control_chunk_panorama_stub" />
+                </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+                <include layout="@layout/navi_service_controller_toolbar_landscape" />
+            </LinearLayout>
+            <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:layout_width="fill_parent" android:layout_height="fill_parent" app:ignore_shore_tags="search">
+                <ru.yandex.yandexmaps.controls.back.service.ControlBackService android:layout_gravity="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4.0dip" app:badge="false" app:layout_clearance="@dimen/control_default_clearance" app:layout_fleet_id="1" app:layout_floating="drifting_down" app:layout_heaviness="1" app:layout_shadow_size_to_ignore="@dimen/control_default_shadow_size_to_ignore" />
+                <ru.yandex.yandexmaps.services.navi.NaviServiceControlsRow android:orientation="horizontal" android:id="@id/navi_service_vanishing_controls" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/navi_service_vanishing_controls_margin_start" app:layout_clearance="@dimen/control_default_clearance" app:layout_fleet_id="1" app:layout_floating="anchored" app:layout_heaviness="1" app:layout_shadow_size_to_ignore="@dimen/control_default_shadow_size_to_ignore">
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ru.yandex.yandexmaps.controls.addroadevent.ControlAddRoadEvent android:id="@id/navi_service_add_road_event" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" />
+                        <ru.yandex.yandexmaps.controls.voicesearch.ControlVoiceSearch android:id="@id/navi_service_open_voice_search" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <ru.yandex.yandexmaps.controls.music.ControlMusic android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+                    </LinearLayout>
+                    <include android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/control_chunk_ruler" />
+                </ru.yandex.yandexmaps.services.navi.NaviServiceControlsRow>
+            </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+            <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:id="@id/navi_service_not_interactive_ui_mode_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="end" android:layout_gravity="end" android:orientation="vertical" android:id="@id/not_interactive_ui_mode_inner_container" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_fleet_id="1" app:layout_floating="drifting_up" app:layout_heaviness="0">
+                    <ru.yandex.yandexnavi.ui.guidance.speed.SpeedGroup android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12.0dip" />
+                    <ru.yandex.yandexnavi.ui.guidance.nextcamera.NextCameraViewImpl android:id="@id/navi_service_next_camera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" />
+                </LinearLayout>
+            </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+        </FrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <ViewStub android:id="@id/promo_object_view_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/navi_service_over_eta" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/navi_service_toolbar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent">
+            <include layout="@layout/navi_service_controller_toolbar_portrait" />
+        </FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/suggest_and_order_container" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/navi_service_suggest_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent">
+                <ru.yandex.yandexmaps.suggest.floating.FloatingSuggestView android:id="@id/navi_service_suggest" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" />
+            </FrameLayout>
+            <ru.yandex.yandexmaps.common.views.DimmingBlockerView android:id="@id/navi_order_dimming" android:background="@color/bw_black_alpha40" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <FrameLayout android:id="@id/navi_service_order_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/navi_service_suggest_container" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ru.yandex.yandexmaps.services.navi.automatic_switching.AutomaticFreeDriveModeView android:layout_gravity="bottom" android:id="@id/navi_service_automatic_freedrive_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="8.0dip" app:layout_constraintBottom_toTopOf="@id/navi_service_toolbar_container" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" />
+        <FrameLayout android:id="@id/ad_banner_container" android:clipChildren="false" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:layout_marginHorizontal="@dimen/guidance_controls_margin_end" app:layout_constraintBottom_toTopOf="@id/navi_service_toolbar_container" app:layout_constraintLeft_toLeftOf="parent" style="@style/GuidanceAdBanner" />
+        <ru.yandex.yandexmaps.common.views.controls.MapControlsLinearLayoutRect android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/navi_service_loader" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginBottom="16.0dip" android:paddingHorizontal="16.0dip" app:layout_constraintBottom_toTopOf="@id/navi_service_toolbar_container" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent">
+            <ru.yandex.yandexmaps.designsystem.loader.LoaderView android:layout_gravity="center_vertical" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" app:ymaps_inProgress="true" />
+            <TextView android:textColor="@color/text_primary" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/navi_service_loading" style="@style/Text14.Medium" />
+        </ru.yandex.yandexmaps.common.views.controls.MapControlsLinearLayoutRect>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ru.yandex.yandexmaps.uikit.shutter.ShutterView android:id="@id/navi_service_shutter" android:tag="@string/change_handler_bottom_panel_tag" style="@style/ShutterCommonLayoutParams" />
+    <com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:id="@id/gas_stations_search_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:id="@id/slave_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ru.yandex.yandexmaps.guidance.internal.view.parking.suggest.ParkingSuggestBannerView android:id="@id/parking_suggest_banner" android:visibility="gone" android:layout_height="fill_parent" style="@style/ShutterCommonLayoutParams" />
+</ru.yandex.yandexmaps.navi.ride.api.NaviRideTouchLayout>

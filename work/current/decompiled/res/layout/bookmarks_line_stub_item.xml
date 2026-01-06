@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="90.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.shimmer.ShimmerFrameLayout android:background="@drawable/bookmarks_line_stub_background" android:layout_width="172.0dip" android:layout_height="16.0dip" android:layout_marginTop="28.0dip" android:layout_marginStart="16.0dip" style="@style/CommonShimmer" />
+    <com.facebook.shimmer.ShimmerFrameLayout android:background="@drawable/bookmarks_line_stub_background" android:layout_width="84.0dip" android:layout_height="12.0dip" android:layout_marginTop="54.0dip" android:layout_marginStart="16.0dip" style="@style/CommonShimmer" />
+</merge>

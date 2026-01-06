@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="start|center" android:background="@color/reviews_business_reply_divider" android:layout_width="16.0dip" android:layout_height="1.0dip" />
+    <TextView android:textColor="@color/reviews_business_reply_show" android:layout_gravity="start|center" android:id="@id/reviews_comments_count" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/reviews_business_reply_show_reply" android:layout_marginStart="24.0dip" style="@style/Text14.Medium" />
+</merge>

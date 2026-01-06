@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="13.0sp" android:textColor="?plus_sdk_textColor" android:id="@id/service_info_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textSize="13.0sp" android:textColor="?plus_sdk_textColor" android:id="@id/service_info_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="true" android:layout_marginStart="@dimen/plus_sdk_mu_1" />
+</merge>

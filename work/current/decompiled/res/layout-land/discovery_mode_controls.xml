@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:id="@id/tab_navigation_controls" android:paddingBottom="@dimen/map_controls_bottom_offset" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:overland_fleets_ids="@string/controls_default_overland_fleets_ids">
+            <include layout="@layout/control_chunk_profile_business" />
+            <include layout="@layout/control_chunk_zoom" />
+            <include layout="@layout/control_chunk_position" />
+        </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+    </FrameLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

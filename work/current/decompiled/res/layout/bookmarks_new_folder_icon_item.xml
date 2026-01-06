@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/bookmarks_new_folder_add_description_button" android:background="@color/bg_primary" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="18.0dip" />
+    <include layout="@layout/bookmarks_new_folder_icon" />
+    <View android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="16.0dip" />
+</LinearLayout>

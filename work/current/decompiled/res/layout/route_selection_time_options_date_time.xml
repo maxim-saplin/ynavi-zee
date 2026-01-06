@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/time_options_day_name" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/route_select_time_options_day" android:textAllCaps="true" android:importantForAccessibility="yes" android:paddingStart="8.0dip" android:letterSpacing="0.1" android:accessibilityTraversalBefore="@id/time_options_day_value" style="@style/Text10.LightGrey.Bold" />
+    <TextView android:id="@id/time_options_day_value" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/time_options_day_name" android:layout_marginEnd="16.0dip" style="@style/Text16" />
+    <TextView android:id="@id/time_options_time_value" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBaseline="@id/time_options_day_value" android:layout_marginEnd="16.0dip" android:layout_toEndOf="@id/time_options_day_value" style="@style/Text16" />
+    <TextView android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/route_select_time_options_time" android:textAllCaps="true" android:importantForAccessibility="yes" android:paddingStart="8.0dip" android:layout_alignStart="@id/time_options_time_value" android:letterSpacing="0.1" android:accessibilityTraversalAfter="@id/time_options_day_value" style="@style/Text10.LightGrey.Bold" />
+</merge>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/music_sdk_helper_ic_repeat_one_disabled_dark" />
+    <item android:drawable="@drawable/music_sdk_helper_ic_repeat_one_inactive_dark" android:state_activated="true" />
+    <item android:drawable="@drawable/music_sdk_helper_ic_repeat_one_active_dark" />
+</selector>

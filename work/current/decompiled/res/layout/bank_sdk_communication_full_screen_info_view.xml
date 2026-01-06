@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Widget.Bank.Text.Headline2.Bold" />
+    <TextView android:id="@id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" style="@style/Widget.Bank.Text.Body1" />
+    <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/infoList" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</merge>

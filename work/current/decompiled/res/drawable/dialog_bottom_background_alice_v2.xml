@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="bottom" android:bottom="@dimen/dialog_list_margin">
+        <shape android:shape="rectangle">
+            <size android:height="11.0dip" />
+            <gradient android:startColor="@color/alicenger_background_alice_v2" android:endColor="@color/alicekit_palette_background_primary_transparent" android:angle="90.0" />
+        </shape>
+    </item>
+    <item android:gravity="bottom">
+        <shape android:shape="rectangle">
+            <size android:height="@dimen/dialog_list_margin" />
+            <solid android:color="@color/alicenger_background_alice_v2" />
+        </shape>
+    </item>
+</layer-list>

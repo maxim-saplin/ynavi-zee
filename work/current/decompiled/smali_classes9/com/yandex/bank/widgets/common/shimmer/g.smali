@@ -1,0 +1,184 @@
+.class public final Lcom/yandex/bank/widgets/common/shimmer/g;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlinx/coroutines/flow/i;
+
+
+# instance fields
+.field final synthetic b:J
+
+.field final synthetic c:Lkotlinx/coroutines/flow/i;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlinx/coroutines/flow/i;"
+        }
+    .end annotation
+.end field
+
+.field final synthetic d:Lcom/yandex/bank/widgets/common/shimmer/h;
+
+
+# direct methods
+.method public constructor <init>(JLkotlinx/coroutines/flow/i;Lcom/yandex/bank/widgets/common/shimmer/h;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lcom/yandex/bank/widgets/common/shimmer/g;->b:J
+
+    iput-object p3, p0, Lcom/yandex/bank/widgets/common/shimmer/g;->c:Lkotlinx/coroutines/flow/i;
+
+    iput-object p4, p0, Lcom/yandex/bank/widgets/common/shimmer/g;->d:Lcom/yandex/bank/widgets/common/shimmer/h;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 5
+
+    instance-of v0, p2, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p2
+
+    check-cast v0, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;
+
+    iget v1, v0, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;->label:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;->label:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;
+
+    invoke-direct {v0, p0, p2}, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;-><init>(Lcom/yandex/bank/widgets/common/shimmer/g;Lkotlin/coroutines/Continuation;)V
+
+    :goto_0
+    iget-object p2, v0, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;->result:Ljava/lang/Object;
+
+    sget-object v1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    iget v2, v0, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;->label:I
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    if-eqz v2, :cond_3
+
+    if-eq v2, v4, :cond_2
+
+    if-ne v2, v3, :cond_1
+
+    invoke-static {p2}, Lkotlin/b;->a(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    iget-object p1, v0, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;->L$0:Ljava/lang/Object;
+
+    check-cast p1, Lcom/yandex/bank/widgets/common/shimmer/g;
+
+    invoke-static {p2}, Lkotlin/b;->a(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {p2}, Lkotlin/b;->a(Ljava/lang/Object;)V
+
+    if-eqz p1, :cond_6
+
+    iget-wide p1, p0, Lcom/yandex/bank/widgets/common/shimmer/g;->b:J
+
+    iput-object p0, v0, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;->L$0:Ljava/lang/Object;
+
+    iput v4, v0, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;->label:I
+
+    invoke-static {p1, p2, v0}, Lkotlinx/coroutines/h0;->s(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_4
+
+    return-object v1
+
+    :cond_4
+    move-object p1, p0
+
+    :goto_1
+    iget-object p2, p1, Lcom/yandex/bank/widgets/common/shimmer/g;->c:Lkotlinx/coroutines/flow/i;
+
+    new-instance v2, Lcom/yandex/bank/widgets/common/shimmer/i;
+
+    iget-object p1, p1, Lcom/yandex/bank/widgets/common/shimmer/g;->d:Lcom/yandex/bank/widgets/common/shimmer/h;
+
+    invoke-static {p1}, Lcom/yandex/bank/widgets/common/shimmer/h;->a(Lcom/yandex/bank/widgets/common/shimmer/h;)Lcom/yandex/bank/widgets/common/shimmer/n;
+
+    move-result-object p1
+
+    invoke-direct {v2, p1}, Lcom/yandex/bank/widgets/common/shimmer/m;-><init>(Lcom/yandex/bank/widgets/common/shimmer/n;)V
+
+    const/4 p1, 0x0
+
+    iput-object p1, v0, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;->L$0:Ljava/lang/Object;
+
+    iput v3, v0, Lcom/yandex/bank/widgets/common/shimmer/ShimmerHandlerImpl$startShimmerFlow$1$1$emit$1;->label:I
+
+    invoke-interface {p2, v2, v0}, Lkotlinx/coroutines/flow/i;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_5
+
+    return-object v1
+
+    :cond_5
+    :goto_2
+    sget-object p1, Lm31/d0;->a:Lm31/d0;
+
+    return-object p1
+
+    :cond_6
+    sget-object p1, Lm31/d0;->a:Lm31/d0;
+
+    return-object p1
+.end method
+
+.method public final bridge synthetic emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    invoke-virtual {p0, p1, p2}, Lcom/yandex/bank/widgets/common/shimmer/g;->a(ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

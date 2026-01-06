@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.common.views.pin.taxi.internal.PinSlot android:id="@id/pin_slot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" />
+    <androidx.appcompat.widget.AppCompatTextView android:ellipsize="middle" android:id="@id/source_on_map_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-2.0dip" android:singleLine="true" android:layout_marginStart="2.0dip" android:letterSpacing="0.01" style="@style/Text12" />
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/source_on_map_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_marginStart="2.0dip" style="@style/Text14.Medium" />
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/source_on_map_trail" android:padding="@dimen/source_on_map_padding" android:visibility="gone" android:layout_width="@dimen/address_on_map_size" android:layout_height="@dimen/address_on_map_size" />
+</merge>

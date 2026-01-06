@@ -1,0 +1,21 @@
+.class public final Lh32/c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final a:Lh32/c;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lh32/c;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lh32/c;->a:Lh32/c;
+
+    return-void
+.end method

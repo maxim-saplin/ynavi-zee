@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="48.0dip" android:layout_height="62.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="end|top" android:id="@id/discovery_card_item_small_secondary_avatars" android:background="@drawable/tab_navigation_discovery_card_secondary_avatars_background" android:layout_width="36.0dip" android:layout_height="36.0dip" />
+    <ImageView android:layout_gravity="end|top" android:id="@id/discovery_card_item_small_secondary_avatar_1" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginTop="4.0dip" android:layout_marginEnd="14.0dip" />
+    <ImageView android:layout_gravity="end|top" android:id="@id/discovery_card_item_small_secondary_avatar_2" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginTop="16.0dip" android:layout_marginEnd="4.0dip" />
+    <View android:layout_gravity="end|top" android:id="@id/discovery_card_item_large_secondary_avatar_background" android:background="@drawable/tab_navigation_discovery_card_avatar_badge_background_circle" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" />
+    <ImageView android:layout_gravity="end|top" android:id="@id/discovery_card_item_large_secondary_avatar" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_margin="2.0dip" />
+    <View android:layout_gravity="start|bottom" android:id="@id/discovery_card_item_large_primary_avatar_background" android:background="@drawable/tab_navigation_discovery_card_avatar_badge_background_circle" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+    <ImageView android:layout_gravity="start|bottom" android:id="@id/discovery_card_item_large_primary_avatar" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_marginBottom="2.0dip" android:layout_marginStart="2.0dip" />
+    <ImageView android:layout_gravity="start|bottom" android:id="@id/discovery_card_item_avatars_badge_icon" android:visibility="visible" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginStart="24.0dip" />
+</FrameLayout>

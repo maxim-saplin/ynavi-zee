@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/Text18.TextPrimary" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:textDirection="locale" android:layout_marginStart="@dimen/settings_double_indent" android:layout_marginEnd="@dimen/settings_double_indent" />
+    <ru.yandex.yandexmaps.designsystem.items.segmented.SegmentedItemView android:id="@id/segmented_control" android:layout_width="fill_parent" android:layout_height="80.0dip" />
+    <TextView android:textAppearance="@style/Text18.TextPrimaryVariant" android:gravity="center_horizontal" android:id="@id/description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="18.0dip" android:textDirection="locale" android:layout_marginStart="@dimen/settings_double_indent" android:layout_marginEnd="@dimen/settings_double_indent" />
+</LinearLayout>

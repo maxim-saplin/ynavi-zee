@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bank_sdk_dashboard_error_view_icon_size">50.0dip</dimen>
+    <dimen name="bank_sdk_qr_error_view_icon_size">50.0dip</dimen>
+    <dimen name="bank_sdk_qr_preview_size">211.0dip</dimen>
+    <dimen name="bank_sdk_savings_close_deposit_chart_height">273.0dip</dimen>
+    <dimen name="onboarding_button_vertical_margin">24.0dip</dimen>
+    <dimen name="onboarding_horizontal_interval">24.0dip</dimen>
+</resources>

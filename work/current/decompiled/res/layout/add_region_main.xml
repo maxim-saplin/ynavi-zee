@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="23.0dip" android:paddingBottom="26.0dip" android:layout_width="fill_parent" android:layout_height="180.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/layers_add_region_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/layers_add_region_default_title" android:maxLines="1" style="@style/Text18" />
+    <TextView android:gravity="center" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/layers_add_region_description" style="@style/Text14.Grey" />
+    <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <Button android:gravity="center" android:id="@id/layers_add_region_button" android:background="@drawable/stadium_yellow_stroke_button_clickable_background" android:layout_width="wrap_content" android:layout_height="48.0dip" android:text="@string/layers_add_region_button_text" android:textAllCaps="true" android:paddingStart="43.0dip" android:paddingEnd="43.0dip" android:letterSpacing="@dimen/common_text_all_caps_spacing" style="@style/Text14.Medium" />
+</LinearLayout>

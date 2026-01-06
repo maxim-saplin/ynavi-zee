@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:id="@id/price_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Text14.TextPrimary" />
+    <ImageView android:layout_gravity="bottom" android:id="@id/dash_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/snippet_price_dash_line" android:layout_marginStart="8.0dip" />
+    <TextView android:id="@id/price_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" style="@style/Text14.Medium.TextActions" />
+</merge>

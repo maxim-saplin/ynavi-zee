@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.mobile.ads.nativeads.NativeAdView android:id="@id/alice_ad_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.yandex.mobile.ads.nativeads.MediaView android:id="@id/alice_ad_media" android:layout_width="0.0dip" android:layout_height="152.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_percent="0.66" />
+        <View android:id="@id/alice_ad_gradient" android:background="@drawable/alice_ad_gradient" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/alice_ad_title" android:layout_width="0.0dip" android:layout_height="fill_parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintWidth_percent="0.66" style="@style/AliceBannerAdTextStyle" />
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/alice_ad_body" android:layout_width="0.0dip" android:layout_height="fill_parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintWidth_percent="0.66" style="@style/AliceBannerAdTextStyle" />
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/alice_ad_domain" android:layout_width="0.0dip" android:layout_height="fill_parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintWidth_percent="0.66" style="@style/AliceBannerAdTextStyle" />
+        <View android:id="@id/alice_ad_warning_background" android:background="#26000000" android:layout_width="fill_parent" android:layout_height="12.0dip" app:layout_constraintBottom_toBottomOf="parent" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/alice_ad_sponsor_age_container" android:background="@drawable/alice_banner_ad_sponsor_background" android:layout_width="wrap_content" android:layout_height="12.0dip" android:paddingStart="4.0dip" android:paddingEnd="4.0dip" android:layout_marginStart="12.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent">
+            <TextView android:id="@id/alice_ad_sponsored" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/AliceAdFooterTextStyle" />
+            <TextView android:id="@id/alice_ad_sponsored_age_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text=" • " style="@style/AliceAdFooterTextStyle" />
+            <TextView android:id="@id/alice_ad_age" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/AliceAdFooterTextStyle" />
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:gravity="end|center" android:id="@id/alice_ad_warning" android:layout_width="0.0dip" android:layout_height="12.0dip" android:layout_marginStart="12.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/alice_ad_sponsor_age_container" style="@style/AliceAdFooterTextStyle" />
+        <ImageView android:id="@id/alice_ad_feedback" android:padding="4.0dip" android:layout_width="32.0dip" android:layout_height="32.0dip" android:contentDescription="@string/alice_ad_feedback" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.yandex.mobile.ads.nativeads.NativeAdView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CommonAppTheme" parent="@style/Platform.V29.CommonAppTheme" />
+    <style name="Platform.V29.CommonAppTheme" parent="@style/Platform.CommonAppTheme">
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:isLightTheme">false</item>
+    </style>
+</resources>

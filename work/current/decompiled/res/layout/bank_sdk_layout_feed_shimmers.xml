@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:paddingTop="@dimen/bank_sdk_toolbar_height" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/bank_sdk_item_feed_filters_shimmer" />
+    <include layout="@layout/bank_sdk_item_feed_list_title_shimmer" />
+    <include layout="@layout/bank_sdk_item_feed_list_entry_shimmer" />
+    <include layout="@layout/bank_sdk_item_feed_list_entry_shimmer" />
+    <include layout="@layout/bank_sdk_item_feed_list_entry_shimmer" />
+    <include layout="@layout/bank_sdk_item_feed_list_entry_shimmer" />
+    <include layout="@layout/bank_sdk_item_feed_list_entry_shimmer" />
+</androidx.appcompat.widget.LinearLayoutCompat>

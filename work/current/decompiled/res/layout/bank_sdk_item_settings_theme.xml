@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bank_sdk_settings_item_top_margin" android:layout_marginBottom="@dimen/bank_sdk_settings_item_bottom_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.feature.settings.internal.view.SettingsThemeView android:id="@id/lightTheme" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:bank_sdk_theme_preview_image="@drawable/bank_sdk_light_theme_preview" app:bank_sdk_theme_title="@string/bank_sdk_settings_theme_light_title" />
+    <com.yandex.bank.feature.settings.internal.view.SettingsThemeView android:id="@id/darkTheme" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:bank_sdk_theme_preview_image="@drawable/bank_sdk_dark_theme_preview" app:bank_sdk_theme_title="@string/bank_sdk_settings_theme_dark_title" />
+    <com.yandex.bank.feature.settings.internal.view.SettingsThemeView android:id="@id/systemTheme" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:bank_sdk_theme_preview_image="@drawable/bank_sdk_system_theme_preview" app:bank_sdk_theme_title="@string/bank_sdk_settings_theme_system_title" />
+</LinearLayout>

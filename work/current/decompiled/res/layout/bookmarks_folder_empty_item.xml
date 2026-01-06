@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bookmarks_folder_empty_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="32.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="32.0dip" android:layout_height="32.0dip" android:src="@drawable/bookmark_filled_24" app:tint="@color/icons_actions" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/bookmarks_folder_add_favorite_place" style="@style/Text16.Medium" />
+    <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/bookmarks_folder_add_favorite_place_desc" style="@style/Text14" />
+</LinearLayout>

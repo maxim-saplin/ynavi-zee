@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.alice.ui.cloud2.AliceCloud2NestedScrollView android:orientation="vertical" android:id="@id/alice_cloud2_scroller" android:paddingTop="@dimen/alice_cloud2_bottom_sheet_top_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:id="@id/alice_cloud2_scrollable_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.yandex.alice.ui.cloud2.AliceCloud2NestedScrollView>
+    <com.yandex.alice.oknyx.OknyxView android:layout_gravity="right|top" android:id="@id/alice_oknyx" android:layout_width="@dimen/alice_cloud2_oknyx_size" android:layout_height="@dimen/alice_cloud2_oknyx_size" android:layout_marginTop="@dimen/alice_cloud2_oknyx_top_margin_without_prev" android:layout_marginEnd="2.0dip" android:accessibilityTraversalBefore="@id/alice_cloud2_scroller" app:baseSizeToViewSizeRatio="0.6" />
+    <FrameLayout android:layout_gravity="right|top" android:id="@id/quark_oknyx_container" android:layout_width="@dimen/alice_cloud2_oknyx_size" android:layout_height="@dimen/alice_cloud2_oknyx_size" android:layout_marginTop="@dimen/alice_cloud2_oknyx_top_margin_without_prev" android:layout_marginEnd="2.0dip" />
+    <ImageView android:layout_gravity="right" android:id="@id/alice_cloud2_silent_button" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="43.0dip" android:layout_marginRight="79.0dip" android:scaleType="center" android:contentDescription="@string/alice_cloud2_silent_button_description" android:accessibilityTraversalBefore="@id/alice_oknyx" app:srcCompat="@drawable/alice_cloud2_silent_button" />
+    <View android:layout_gravity="center|top" android:id="@id/alice_cloud2_bs_handle" android:background="@drawable/alice_cloud2_bs_handle" android:layout_width="37.0dip" android:layout_height="5.0dip" android:layout_marginTop="8.0dip" />
+</merge>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/bw_white" />
+            <size android:height="20.0dip" android:width="20.0dip" />
+        </shape>
+    </item>
+    <item android:left="2.0dip" android:top="2.0dip" android:right="2.0dip" android:bottom="2.0dip">
+        <shape android:shape="oval">
+            <solid android:color="@color/routes_waypoint_pin_via_background" />
+        </shape>
+    </item>
+</layer-list>

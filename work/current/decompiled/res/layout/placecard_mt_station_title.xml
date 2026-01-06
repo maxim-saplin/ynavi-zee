@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/text_station_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.TextPrimary" />
+    <ru.yandex.yandexmaps.common.views.VectorTintableCompoundsTextView android:id="@id/text_station_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:layout_marginStart="3.0dip" app:drawableLeftCompat="@drawable/pedestrian_16" app:drawableTintCompat="@color/text_actions" style="@style/Text14.Medium.TextActions" />
+</merge>

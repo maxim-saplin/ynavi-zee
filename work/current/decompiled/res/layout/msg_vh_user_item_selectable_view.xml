@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="?messagingCommonSettingsItemColor" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.messaging.internal.avatar.AvatarImageView android:id="@id/user_item_selectable_avatar" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_margin="12.0dip" app:avatarPadding="0.0dip" app:avatarTextSize="16.0sp" app:placeholderBackground="@drawable/msg_bg_user_item_selectable_placeholder" />
+    <com.yandex.messaging.views.AppCompatEmojiTextView android:layout_gravity="center_vertical" android:id="@id/user_item_display_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" style="@style/Messaging.ChatUserItemDisplayNameText" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/user_item_checked" android:visibility="invisible" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginRight="16.0dip" app:srcCompat="@drawable/msg_chat_user_checkbox_checked" />
+</LinearLayout>

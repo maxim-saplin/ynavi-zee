@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginVertical="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.SkeletonView android:id="@id/title" android:layout_width="201.0dip" android:layout_height="20.0dip" app:bank_sdk_cornerRadius="@dimen/bank_sdk_transfer_settings_item_skeleton_corner_radius" />
+    <com.yandex.bank.widgets.common.SkeletonView android:id="@id/subtitlePart1" android:layout_width="248.0dip" android:layout_height="12.0dip" android:layout_marginTop="12.0dip" app:bank_sdk_cornerRadius="@dimen/bank_sdk_transfer_settings_item_skeleton_corner_radius" />
+    <com.yandex.bank.widgets.common.SkeletonView android:id="@id/subtitlePart2" android:layout_width="218.0dip" android:layout_height="12.0dip" android:layout_marginTop="8.0dip" app:bank_sdk_cornerRadius="@dimen/bank_sdk_transfer_settings_item_skeleton_corner_radius" />
+    <com.yandex.bank.widgets.common.SkeletonView android:id="@id/subtitlePart3" android:layout_width="148.0dip" android:layout_height="12.0dip" android:layout_marginTop="8.0dip" app:bank_sdk_cornerRadius="@dimen/bank_sdk_transfer_settings_item_skeleton_corner_radius" />
+</LinearLayout>

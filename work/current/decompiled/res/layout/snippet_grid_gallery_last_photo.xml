@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="188.0dip" android:layout_height="188.0dip" android:foreground="@drawable/common_clickable_background_no_border_impl"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.RoundedImageView android:id="@id/placecard_gallery_last_photo_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="@drawable/rounded_foreground" android:scaleType="centerCrop" app:cornerRadius="@dimen/common_card_photo_corners_radius" />
+    <ru.yandex.yandexmaps.common.views.VectorTintableCompoundsTextView android:textColor="@color/bw_white" android:gravity="center" android:layout_gravity="center" android:id="@id/placecard_gallery_count" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="8.0dip" app:drawableTintCompat="@color/icons_color_bg" app:drawableTopCompat="@drawable/gallery_24" style="@style/Text14.Medium" />
+</FrameLayout>

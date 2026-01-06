@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/tanker_background_car_info" android:paddingLeft="@dimen/tanker_basic_padding_10" android:paddingRight="@dimen/tanker_basic_padding_10" android:layout_width="@dimen/tanker_car_number_width" android:layout_height="@dimen/tanker_car_info_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tanker_ic_car_plus" />
+        <TextView android:textSize="@dimen/tanker_text_size_13" android:textColor="@color/tanker_car_info_text_light" android:id="@id/markTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tanker_car_info_menu_add_car_title" android:layout_marginStart="@dimen/tanker_basic_padding_half" style="@style/TankerTextRegular" />
+    </LinearLayout>
+</FrameLayout>

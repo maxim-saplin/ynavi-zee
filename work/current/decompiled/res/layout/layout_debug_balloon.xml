@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@drawable/debug_balloon_background" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/debug_balloon_view_params_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.yandex.navilib.widget.NaviTextView android:id="@id/score_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.yandex.navilib.widget.NaviTextView android:id="@id/optional_penalty_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.yandex.navilib.widget.NaviTextView android:id="@id/mandatory_penalty_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.yandex.navilib.widget.NaviTextView android:id="@id/internal_overlap_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.yandex.navilib.widget.NaviTextView android:id="@id/total_overlap_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

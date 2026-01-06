@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/attach_item_stub" android:clipChildren="true" android:clipToPadding="true" android:layout_width="@dimen/attach_preview_tile_width" android:layout_height="@dimen/attach_preview_tile_height" android:foreground="?android:selectableItemBackground" app:cardCornerRadius="@dimen/attach_image_radius" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.cardview.widget.CardView>

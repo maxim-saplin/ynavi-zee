@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="32.0dip" android:width="32.0dip" android:viewportWidth="32.0" android:viewportHeight="32.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="#fffd5c8a" android:pathData="M16 29.333C8.636 29.333 2.667 23.364 2.667 16S8.636 2.667 16 2.667 29.333 8.636 29.333 16 23.364 29.333 16 29.333zM17.667 16l-5.334-6.667H16L21.333 16 16 22.667h-3.667L17.667 16z" android:fillType="evenOdd" />
+    <path android:fillColor="@drawable/$futuris_right_arrow_bro__0" android:pathData="M16 29.333C8.636 29.333 2.667 23.364 2.667 16S8.636 2.667 16 2.667 29.333 8.636 29.333 16 23.364 29.333 16 29.333zM17.667 16l-5.334-6.667H16L21.333 16 16 22.667h-3.667L17.667 16z" android:fillType="evenOdd" />
+</vector>

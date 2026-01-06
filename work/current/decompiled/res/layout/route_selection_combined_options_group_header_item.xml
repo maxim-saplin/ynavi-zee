@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/text_secondary" android:id="@id/header_title" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" style="@style/Text16.Medium" />
+</merge>

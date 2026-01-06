@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:focusable="true" android:focusableInTouchMode="true" android:clickable="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.viewpager.widget.ViewPager android:id="@id/content_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/interface_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/editor_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/render_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/text_sticker_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</merge>

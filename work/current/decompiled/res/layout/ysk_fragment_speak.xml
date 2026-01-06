@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?ysk_dialog_background_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/wait_a_second_text" android:paddingLeft="@dimen/ysk_text_with_ellipsis_left_padding" android:text="@string/ysk_gui_moment" style="@style/YSKTheme.MainText.Gray" />
+    <ru.yandex.speechkit.gui.WaveTextView android:id="@id/speak_text" android:paddingLeft="@dimen/ysk_text_with_ellipsis_left_padding" android:visibility="gone" android:layout_height="@dimen/ysk_speak_text_height" android:text="@string/ysk_gui_speak" style="@style/YSKTheme.MainText" />
+    <ru.yandex.speechkit.gui.AutoResizeTextView android:layout_gravity="top" android:id="@id/partial_result_text" android:paddingLeft="@dimen/ysk_small_text_side_padding" android:paddingTop="@dimen/ysk_small_text_side_padding" android:paddingRight="@dimen/ysk_small_text_side_padding" android:paddingBottom="@dimen/ysk_small_text_side_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/ysk_zero" style="@style/YSKTheme.MainText" />
+    <ru.yandex.speechkit.gui.CircleView android:layout_gravity="center|bottom" android:id="@id/speak_ripple" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

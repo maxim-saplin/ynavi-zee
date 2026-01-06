@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/cancel_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" app:generalButtonSize="big" app:generalButtonStyle="secondaryGrey" app:text="@string/filter_reset" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/apply_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="12.0dip" app:generalButtonSize="big" app:generalButtonStyle="primary" app:text="@string/filters_dialog_apply" />
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="@string/tag_description" android:background="@drawable/common_ripple_with_primary_background" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/bookmarks_folder_resolved_item" />
+    <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:id="@id/bookmarks_folder_bookmark_comment_container" android:background="@color/bg_additional" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16.0dip" android:paddingHorizontal="12.0dip" android:paddingVertical="12.0dip" app:cornerRadius="8.0dip">
+        <ru.yandex.yandexmaps.common.views.EllipsizingTextView android:textColor="@color/text_primary" android:gravity="top" android:id="@id/bookmarks_folder_bookmark_comment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="4" />
+    </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+</LinearLayout>

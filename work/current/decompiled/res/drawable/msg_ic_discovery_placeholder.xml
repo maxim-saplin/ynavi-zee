@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="84.0dip" android:width="376.0dip" android:autoMirrored="true" android:viewportWidth="376.0" android:viewportHeight="84.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?messagingCommonBackgroundColor" android:pathData="M0.442,0h375v84h-375z" />
+    <path android:fillColor="?messagingCommonDividerColor" android:pathData="M12.442,83h351v1h-351z" android:strokeAlpha="0.75" android:fillAlpha="0.75" />
+    <path android:fillColor="?messagingCommonBackgroundSecondaryColor" android:pathData="M39.442,12L39.442,12A30,30 0,0 1,69.442 42L69.442,42A30,30 0,0 1,39.442 72L39.442,72A30,30 0,0 1,9.442 42L9.442,42A30,30 0,0 1,39.442 12z" />
+    <path android:fillColor="?messagingCommonBackgroundSecondaryColor" android:pathData="M85.442,15L211.442,15A7,7 0,0 1,218.442 22L218.442,22A7,7 0,0 1,211.442 29L85.442,29A7,7 0,0 1,78.442 22L78.442,22A7,7 0,0 1,85.442 15z" />
+    <path android:fillColor="?messagingCommonBackgroundSecondaryColor" android:pathData="M83.442,37L293.442,37A5,5 0,0 1,298.442 42L298.442,42A5,5 0,0 1,293.442 47L83.442,47A5,5 0,0 1,78.442 42L78.442,42A5,5 0,0 1,83.442 37z" />
+    <path android:fillColor="?messagingCommonBackgroundSecondaryColor" android:pathData="M83.442,57L273.442,57A5,5 0,0 1,278.442 62L278.442,62A5,5 0,0 1,273.442 67L83.442,67A5,5 0,0 1,78.442 62L78.442,62A5,5 0,0 1,83.442 57z" />
+    <path android:fillColor="?messagingCommonBackgroundSecondaryColor" android:pathData="M327.442,42C327.442,32.059 335.501,24 345.442,24C355.384,24 363.442,32.059 363.442,42C363.442,51.941 355.384,60 345.442,60C335.501,60 327.442,51.941 327.442,42Z" />
+</vector>

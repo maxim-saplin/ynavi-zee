@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="24.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="152.0dip">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/main_menu_login_title" style="@style/Text16.Medium" />
+        <TextView android:paddingTop="4.0dip" android:paddingBottom="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/main_menu_login_description" style="@style/Text14.Medium.Grey" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/profile_login_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:generalButtonStyle="primary" app:text="@string/main_menu_login_button_text" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="end|bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:contentDescription="@null" android:layout_marginEnd="16.0dip" app:srcCompat="@drawable/login_pic_148" />
+</FrameLayout>

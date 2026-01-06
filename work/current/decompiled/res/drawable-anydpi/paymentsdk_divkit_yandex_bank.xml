@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="22.0dip" android:width="32.0dip" android:viewportWidth="32.0" android:viewportHeight="22.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$paymentsdk_divkit_yandex_bank__0" android:pathData="M-0.5,5.867C-0.5,3.813 -0.5,2.786 -0.1,2.002C0.251,1.312 0.812,0.751 1.502,0.4C2.286,0 3.313,0 5.367,0H26.633C28.687,0 29.714,0 30.498,0.4C31.188,0.751 31.749,1.312 32.1,2.002C32.5,2.786 32.5,3.813 32.5,5.867V16.133C32.5,18.187 32.5,19.214 32.1,19.998C31.749,20.688 31.188,21.249 30.498,21.6C29.714,22 28.687,22 26.633,22H5.367C3.313,22 2.286,22 1.502,21.6C0.812,21.249 0.251,20.688 -0.1,19.998C-0.5,19.214 -0.5,18.187 -0.5,16.133V5.867Z" />
+    <path android:fillColor="#ffffffff" android:pathData="M17.42,6.216H16.404C14.541,6.216 13.561,7.16 13.561,8.552C13.561,10.125 14.238,10.863 15.63,11.807L16.779,12.581L13.476,17.517H11.008L13.972,13.101C12.266,11.879 11.31,10.693 11.31,8.685C11.31,6.168 13.064,4.45 16.392,4.45H19.695V17.505H17.42V6.216Z" android:fillAlpha="0.98" />
+</vector>

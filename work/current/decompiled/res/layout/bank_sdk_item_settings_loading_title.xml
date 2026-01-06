@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.bank.widgets.common.SkeletonView android:id="@id/headerTitle" android:layout_width="216.0dip" android:layout_height="34.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="12.0dip" app:bank_sdk_cornerRadius="@dimen/bank_sdk_transfer_settings_item_skeleton_corner_radius"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

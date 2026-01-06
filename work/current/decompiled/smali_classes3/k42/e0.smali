@@ -1,0 +1,268 @@
+.class public final Lk42/e0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field private final a:Lcom/yandex/mapkit/geometry/PolylinePosition;
+
+.field private final b:Z
+
+.field private final c:Ljava/lang/String;
+
+.field private final d:I
+
+.field private final e:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Lcom/yandex/mapkit/geometry/PolylinePosition;Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lk42/e0;->a:Lcom/yandex/mapkit/geometry/PolylinePosition;
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lk42/e0;->b:Z
+
+    iput-object p2, p0, Lk42/e0;->c:Ljava/lang/String;
+
+    iput p3, p0, Lk42/e0;->d:I
+
+    iput-object p4, p0, Lk42/e0;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()I
+    .locals 1
+
+    iget v0, p0, Lk42/e0;->d:I
+
+    return v0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lk42/e0;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final c()Lcom/yandex/mapkit/geometry/PolylinePosition;
+    .locals 1
+
+    iget-object v0, p0, Lk42/e0;->a:Lcom/yandex/mapkit/geometry/PolylinePosition;
+
+    return-object v0
+.end method
+
+.method public final d()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lk42/e0;->e:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lk42/e0;->b:Z
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lk42/e0;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lk42/e0;
+
+    iget-object v1, p0, Lk42/e0;->a:Lcom/yandex/mapkit/geometry/PolylinePosition;
+
+    iget-object v3, p1, Lk42/e0;->a:Lcom/yandex/mapkit/geometry/PolylinePosition;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lk42/e0;->b:Z
+
+    iget-boolean v3, p1, Lk42/e0;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lk42/e0;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lk42/e0;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lk42/e0;->d:I
+
+    iget v3, p1, Lk42/e0;->d:I
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lk42/e0;->e:Ljava/lang/String;
+
+    iget-object p1, p1, Lk42/e0;->e:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lk42/e0;->a:Lcom/yandex/mapkit/geometry/PolylinePosition;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lk42/e0;->b:Z
+
+    invoke-static {v0, v1, v2}, Landroidx/camera/camera2/internal/i3;->e(IIZ)I
+
+    move-result v0
+
+    iget-object v2, p0, Lk42/e0;->c:Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    move v2, v3
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lk42/e0;->d:I
+
+    invoke-static {v2, v0, v1}, Lcom/yandex/bank/widgets/common/z3;->a(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Lk42/e0;->e:Ljava/lang/String;
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    :goto_1
+    add-int/2addr v0, v3
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 7
+
+    iget-object v0, p0, Lk42/e0;->a:Lcom/yandex/mapkit/geometry/PolylinePosition;
+
+    iget-boolean v1, p0, Lk42/e0;->b:Z
+
+    iget-object v2, p0, Lk42/e0;->c:Ljava/lang/String;
+
+    iget v3, p0, Lk42/e0;->d:I
+
+    iget-object v4, p0, Lk42/e0;->e:Ljava/lang/String;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "MtGuidanceStop(polylinePosition="
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", isNewSegment="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", lineName="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", color="
+
+    const-string v1, ", stopName="
+
+    invoke-static {v3, v2, v0, v1, v5}, Landroidx/compose/foundation/t0;->z(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v0, ")"
+
+    invoke-static {v4, v0, v5}, Landroidx/camera/camera2/internal/i3;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

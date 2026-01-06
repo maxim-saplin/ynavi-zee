@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.shutter.header.ToolbarView android:id="@id/route_selection_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.shutter.header.RouteTabsView android:layout_width="fill_parent" android:layout_height="@dimen/route_type_tabs_carousel_height" />
+</merge>

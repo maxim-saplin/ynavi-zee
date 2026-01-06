@@ -1,0 +1,867 @@
+{
+    "templates": {
+        "bind_button": {
+            "type": "text",
+            "background": [
+                {
+                    "type": "solid",
+                    "$color": "colorForBackground"
+                }
+            ],
+            "border": {
+                "corner_radius": 16
+            },
+            "font_family": "display",
+            "font_size": 18,
+            "font_size_unit": "sp",
+            "font_weight": "medium",
+            "height": {
+                "type": "fixed",
+                "value": 56,
+                "unit": "dp"
+            },
+            "line_height": 20,
+            "margins": {
+                "unit": "dp",
+                "left": 12,
+                "right": 12,
+                "bottom": 12
+            },
+            "max_lines": 1,
+            "paddings": {
+                "top": 8,
+                "bottom": 8,
+                "start": 20,
+                "end": 20,
+                "unit": "dp"
+            },
+            "text_alignment_horizontal": "center",
+            "text_alignment_vertical": "center",
+            "width": {
+                "type": "match_parent"
+            },
+            "$text": "buttonText",
+            "$text_color": "colorForText"
+        },
+        "header_button": {
+            "type": "image",
+            "height": {
+                "type": "fixed",
+                "value": 24
+            },
+            "margins": {
+                "top": 8,
+                "bottom": 8,
+                "left": 8,
+                "right": 8
+            },
+            "width": {
+                "type": "fixed",
+                "value": 24
+            },
+            "$image_url": "imageURL"
+        }
+    },
+    "card": {
+        "log_id": "payment_sdk_card",
+        "variables": [
+            {
+                "type": "boolean",
+                "name": "card_input_screen_is_payment",
+                "value": 0
+            },
+            {
+                "type": "string",
+                "name": "card_input_screen_nfc_visibility",
+                "value": "gone"
+            },
+            {
+                "type": "string",
+                "name": "card_input_screen_button_state",
+                "value": "number"
+            },
+            {
+                "type": "string",
+                "name": "card_input_screen_anim_div_state",
+                "value": "gone"
+            },
+            {
+                "type": "string",
+                "name": "card_input_screen_back_button_div_state",
+                "value": "invisible"
+            },
+            {
+                "type": "string",
+                "name": "card_input_screen_checkbox_value",
+                "value": "true"
+            },
+            {
+                "type": "string",
+                "name": "card_input_screen_checkbox_state",
+                "value": "visible"
+            },
+            {
+                "type": "string",
+                "name": "card_input_screen_error_state",
+                "value": "none"
+            },
+            {
+                "type": "string",
+                "name": "card_input_screen_error_div_visibility",
+                "value": "gone"
+            },
+            {
+                "type": "string",
+                "name": "card_input_screen_pay_button_text",
+                "value": "pay 10000p"
+            },
+            {
+                "type": "number",
+                "name": "safe_area_inset_top",
+                "value": 0
+            },
+            {
+                "type": "number",
+                "name": "safe_area_inset_bottom",
+                "value": 0
+            },
+            {
+                "type": "number",
+                "name": "safe_area_inset_left",
+                "value": 0
+            },
+            {
+                "type": "number",
+                "name": "safe_area_inset_right",
+                "value": 0
+            }
+        ],
+        "variable_triggers": [
+            {
+                "actions": [
+                    {
+                        "log_id": "payment_sdk_card_input_screen_bind_button_change_state",
+                        "url": "div-action://set_state?state_id=0/bind_button_state/@{card_input_screen_button_state}"
+                    }
+                ],
+                "condition": "@{card_input_screen_button_state != ' '}",
+                "mode": "on_variable"
+            },
+            {
+                "actions": [
+                    {
+                        "log_id": "payment_sdk_card_input_screen_checkbox_change_state",
+                        "url": "div-action://set_state?state_id=0/save_checkbox_state/@{card_input_screen_checkbox_value}"
+                    }
+                ],
+                "condition": "@{card_input_screen_checkbox_value != ''}",
+                "mode": "on_variable"
+            },
+            {
+                "actions": [
+                    {
+                        "log_id": "payment_sdk_card_input_screen_error_change_state",
+                        "url": "div-action://set_state?state_id=0/error_text_state/@{card_input_screen_error_state}"
+                    }
+                ],
+                "condition": "@{card_input_screen_error_state != ''}",
+                "mode": "on_variable"
+            },
+            {
+                "actions": [
+                    {
+                        "log_id": "payment_sdk_card_input_screen_error_div_gone",
+                        "url": "div-action://set_variable?name=card_input_screen_error_div_visibility&value=gone"
+                    }
+                ],
+                "condition": "@{card_input_screen_error_state == 'none'}",
+                "mode": "on_condition"
+            },
+            {
+                "actions": [
+                    {
+                        "log_id": "payment_sdk_card_input_screen_error_div_visible",
+                        "url": "div-action://set_variable?name=card_input_screen_error_div_visibility&value=visible"
+                    }
+                ],
+                "condition": "@{card_input_screen_error_state != 'none'}",
+                "mode": "on_condition"
+            }
+        ],
+        "states": [
+            {
+                "state_id": 0,
+                "div": {
+                    "type": "container",
+                    "background": [
+                        {
+                            "type": "solid",
+                            "color": "@{isLightTheme ? '#FFFFFF' : '#121214'}"
+                        }
+                    ],
+                    "border": {
+                        "corners_radius": {
+                            "top-left": 16,
+                            "top-right": 16
+                        }
+                    },
+                    "height": {
+                        "type": "match_parent"
+                    },
+                    "items": [
+                        {
+                            "type": "container",
+                            "content_alignment_vertical": "center",
+                            "height": {
+                                "type": "fixed",
+                                "value": 60
+                            },
+                            "items": [
+                                {
+                                    "type": "header_button",
+                                    "imageURL": "@{isLightTheme ? 'local-image://navbar_back_light' : 'local-image://navbar_back_dark'}",
+                                    "accessibility": {
+                                        "type": "button"
+                                    },
+                                    "visibility": "@{card_input_screen_back_button_div_state}",
+                                    "actions": [
+                                        {
+                                            "log_id": "payment_sdk_card_input_screen_header_back",
+                                            "url": "payment-sdk://back"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "text",
+                                    "alignment_horizontal": "center",
+                                    "font_family": "display",
+                                    "font_size": 18,
+                                    "accessibility": {
+                                        "type": "header"
+                                    },
+                                    "font_size_unit": "sp",
+                                    "font_weight": "medium",
+                                    "line_height": 20,
+                                    "max_lines": 1,
+                                    "text_alignment_horizontal": "center",
+                                    "text_color": "@{isLightTheme ? '#DB000000' : '#E0FFFFFF'}"
+                                },
+                                {
+                                    "type": "header_button",
+                                    "imageURL": "@{isLightTheme ? 'local-image://close_light' : 'local-image://close_dark'}",
+                                    "accessibility": {
+                                        "type": "button"
+                                    },
+                                    "actions": [
+                                        {
+                                            "log_id": "payment_sdk_card_input_screen_header_close",
+                                            "url": "payment-sdk://close"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "margins": {
+                                "left": 16,
+                                "right": 16,
+                                "unit": "dp"
+                            },
+                            "orientation": "horizontal",
+                            "width": {
+                                "type": "match_parent"
+                            }
+                        },
+                        {
+                            "type": "container",
+                            "height": {
+                                "type": "wrap_content"
+                            },
+                            "items": [
+                                {
+                                    "type": "container",
+                                    "background": [
+                                        {
+                                            "type": "solid",
+                                            "color": "@{isLightTheme ? '#E1FAE7' : '#274536'}"
+                                        }
+                                    ],
+                                    "border": {
+                                        "corner_radius": 20
+                                    },
+                                    "height": {
+                                        "type": "wrap_content"
+                                    },
+                                    "items": [
+                                        {
+                                            "type": "text",
+                                            "alignment_horizontal": "left",
+                                            "alignment_vertical": "center",
+                                            "font_family": "display",
+                                            "font_size": 16,
+                                            "font_weight": "regular",
+                                            "height": {
+                                                "type": "wrap_content"
+                                            },
+                                            "text": "card.binding.nfc.title",
+                                            "text_alignment_horizontal": "left",
+                                            "text_alignment_vertical": "center",
+                                            "text_color": "@{isLightTheme ? '#DB000000' : '#E0FFFFFF'}",
+                                            "width": {
+                                                "type": "match_parent"
+                                            }
+                                        },
+                                        {
+                                            "type": "image",
+                                            "alignment_horizontal": "right",
+                                            "alignment_vertical": "center",
+                                            "height": {
+                                                "type": "fixed",
+                                                "value": 26
+                                            },
+                                            "image_url": "@{isLightTheme ? 'local-image://nfc_light' : 'local-image://nfc_dark'}",
+                                            "margins": {
+                                                "left": 14,
+                                                "right": 6,
+                                                "top": 6,
+                                                "bottom": 6,
+                                                "unit": "dp"
+                                            },
+                                            "width": {
+                                                "type": "fixed",
+                                                "value": 26
+                                            }
+                                        }
+                                    ],
+                                    "margins": {
+                                        "top": 16,
+                                        "left": 16,
+                                        "right": 16,
+                                        "unit": "dp"
+                                    },
+                                    "orientation": "horizontal",
+                                    "paddings": {
+                                        "left": 8,
+                                        "right": 8,
+                                        "top": 12,
+                                        "bottom": 12,
+                                        "unit": "dp"
+                                    },
+                                    "width": {
+                                        "type": "match_parent"
+                                    }
+                                },
+                                {
+                                    "type": "text",
+                                    "alignment_horizontal": "center",
+                                    "alignment_vertical": "center",
+                                    "font_family": "display",
+                                    "font_size": 16,
+                                    "font_weight": "regular",
+                                    "height": {
+                                        "type": "wrap_content"
+                                    },
+                                    "margins": {
+                                        "top": 12,
+                                        "left": 16,
+                                        "right": 16,
+                                        "unit": "dp"
+                                    },
+                                    "text": "card.binding.nfc.bottom.text",
+                                    "text_alignment_horizontal": "center",
+                                    "text_alignment_vertical": "center",
+                                    "text_color": "@{isLightTheme ? '#80000000' : '#80FFFFFF'}",
+                                    "width": {
+                                        "type": "match_parent"
+                                    }
+                                }
+                            ],
+                            "orientation": "vertical",
+                            "visibility": "@{card_input_screen_nfc_visibility}",
+                            "width": {
+                                "type": "match_parent"
+                            }
+                        },
+                        {
+                            "type": "custom",
+                            "background": [
+                                {
+                                    "type": "solid",
+                                    "color": "@{isLightTheme ? '#EDEFF2' : '#2E2F33'}"
+                                }
+                            ],
+                            "border": {
+                                "corner_radius": 16
+                            },
+                            "custom_type": "card_input",
+                            "height": {
+                                "type": "wrap_content"
+                            },
+                            "margins": {
+                                "top": 16,
+                                "left": 16,
+                                "right": 16,
+                                "unit": "dp"
+                            },
+                            "paddings": {
+                                "left": 16,
+                                "right": 16,
+                                "unit": "dp"
+                            },
+                            "width": {
+                                "type": "match_parent"
+                            }
+                        },
+                        {
+                            "type": "state",
+                            "default_state_id": "none",
+                            "id": "error_text_state",
+                            "states": [
+                                {
+                                    "state_id": "none",
+                                    "div": {
+                                        "type": "text",
+                                        "text": " "
+                                    }
+                                },
+                                {
+                                    "state_id": "wrong_number",
+                                    "div": {
+                                        "type": "text",
+                                        "font_size": 13,
+                                        "height": {
+                                            "type": "wrap_content"
+                                        },
+                                        "line_height": 16,
+                                        "margins": {
+                                            "top": 12,
+                                            "left": 32,
+                                            "right": 32,
+                                            "unit": "dp"
+                                        },
+                                        "text_alignment_horizontal": "start",
+                                        "text_alignment_vertical": "top",
+                                        "text_color": "#FF4C52",
+                                        "width": {
+                                            "type": "match_parent"
+                                        }
+                                    }
+                                },
+                                {
+                                    "state_id": "wrong_date",
+                                    "div": {
+                                        "type": "text",
+                                        "font_size": 13,
+                                        "height": {
+                                            "type": "wrap_content"
+                                        },
+                                        "line_height": 16,
+                                        "margins": {
+                                            "top": 12,
+                                            "left": 32,
+                                            "right": 32,
+                                            "unit": "dp"
+                                        },
+                                        "text_alignment_horizontal": "start",
+                                        "text_alignment_vertical": "top",
+                                        "text_color": "#FF4C52",
+                                        "width": {
+                                            "type": "match_parent"
+                                        }
+                                    }
+                                },
+                                {
+                                    "state_id": "wrong_cvv",
+                                    "div": {
+                                        "type": "text",
+                                        "font_size": 13,
+                                        "height": {
+                                            "type": "wrap_content"
+                                        },
+                                        "line_height": 16,
+                                        "margins": {
+                                            "top": 12,
+                                            "left": 32,
+                                            "right": 32,
+                                            "unit": "dp"
+                                        },
+                                        "text_alignment_horizontal": "start",
+                                        "text_alignment_vertical": "top",
+                                        "text_color": "#FF4C52",
+                                        "width": {
+                                            "type": "match_parent"
+                                        }
+                                    }
+                                },
+                                {
+                                    "state_id": "wrong_date_cvv",
+                                    "div": {
+                                        "type": "text",
+                                        "font_size": 13,
+                                        "height": {
+                                            "type": "wrap_content"
+                                        },
+                                        "line_height": 16,
+                                        "margins": {
+                                            "top": 12,
+                                            "left": 32,
+                                            "right": 32,
+                                            "unit": "dp"
+                                        },
+                                        "text_alignment_horizontal": "start",
+                                        "text_alignment_vertical": "top",
+                                        "text_color": "#FF4C52",
+                                        "width": {
+                                            "type": "match_parent"
+                                        }
+                                    }
+                                },
+                                {
+                                    "state_id": "card_forbidden_for_service",
+                                    "div": {
+                                        "type": "text",
+                                        "font_size": 13,
+                                        "height": {
+                                            "type": "wrap_content"
+                                        },
+                                        "line_height": 16,
+                                        "margins": {
+                                            "top": 12,
+                                            "left": 32,
+                                            "right": 32,
+                                            "unit": "dp"
+                                        },
+                                        "text_alignment_horizontal": "start",
+                                        "text_alignment_vertical": "top",
+                                        "text_color": "#FF4C52",
+                                        "width": {
+                                            "type": "match_parent"
+                                        }
+                                    }
+                                },
+                                {
+                                    "state_id": "split_card_forbidden_for_service",
+                                    "div": {
+                                        "type": "text",
+                                        "font_size": 13,
+                                        "height": {
+                                            "type": "wrap_content"
+                                        },
+                                        "line_height": 16,
+                                        "margins": {
+                                            "top": 12,
+                                            "left": 32,
+                                            "right": 32,
+                                            "unit": "dp"
+                                        },
+                                        "text_alignment_horizontal": "start",
+                                        "text_alignment_vertical": "top",
+                                        "text_color": "#FF4C52",
+                                        "width": {
+                                            "type": "match_parent"
+                                        }
+                                    }
+                                }
+                            ],
+                            "visibility": "@{card_input_screen_error_div_visibility}"
+                        },
+                        {
+                            "type": "state",
+                            "default_state_id": "true",
+                            "id": "save_checkbox_state",
+                            "states": [
+                                {
+                                    "state_id": "false",
+                                    "div": {
+                                        "type": "container",
+                                        "accessibility": {
+                                            "mode": "merge",
+                                            "type": "button"
+                                        },
+                                        "actions": [
+                                            {
+                                                "log_id": "payment_sdk_card_input_screen_checkbox_checked",
+                                                "url": "payment-sdk://checkbox"
+                                            }
+                                        ],
+                                        "content_alignment_vertical": "center",
+                                        "height": {
+                                            "type": "fixed",
+                                            "value": 26
+                                        },
+                                        "items": [
+                                            {
+                                                "type": "image",
+                                                "accessibility": {
+                                                    "mode": "exclude"
+                                                },
+                                                "height": {
+                                                    "type": "fixed",
+                                                    "value": 26
+                                                },
+                                                "image_url": "@{isLightTheme ? 'local-image://unchecked_light' : 'local-image://unchecked_dark'}",
+                                                "width": {
+                                                    "type": "fixed",
+                                                    "value": 26
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "accessibility": {
+                                                    "mode": "exclude"
+                                                },
+                                                "alignment_horizontal": "start",
+                                                "font_family": "display",
+                                                "font_size": 14,
+                                                "font_size_unit": "sp",
+                                                "font_weight": "regular",
+                                                "line_height": 16,
+                                                "margins": {
+                                                    "left": 12,
+                                                    "unit": "dp"
+                                                },
+                                                "text_alignment_horizontal": "start",
+                                                "text_color": "@{isLightTheme ? '#DB000000' : '#E0FFFFFF'}"
+                                            }
+                                        ],
+                                        "margins": {
+                                            "left": 16,
+                                            "right": 16,
+                                            "top": 16,
+                                            "unit": "dp"
+                                        },
+                                        "orientation": "horizontal",
+                                        "width": {
+                                            "type": "match_parent"
+                                        }
+                                    }
+                                },
+                                {
+                                    "state_id": "true",
+                                    "div": {
+                                        "type": "container",
+                                        "accessibility": {
+                                            "mode": "merge",
+                                            "type": "button"
+                                        },
+                                        "actions": [
+                                            {
+                                                "log_id": "payment_sdk_card_input_screen_checkbox_unchecked",
+                                                "url": "payment-sdk://checkbox"
+                                            }
+                                        ],
+                                        "content_alignment_vertical": "center",
+                                        "height": {
+                                            "type": "fixed",
+                                            "value": 26
+                                        },
+                                        "items": [
+                                            {
+                                                "type": "image",
+                                                "accessibility": {
+                                                    "mode": "exclude"
+                                                },
+                                                "height": {
+                                                    "type": "fixed",
+                                                    "value": 26
+                                                },
+                                                "image_url": "@{isLightTheme ? 'local-image://checked_light' : 'local-image://checked_dark'}",
+                                                "width": {
+                                                    "type": "fixed",
+                                                    "value": 26
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "accessibility": {
+                                                    "mode": "exclude"
+                                                },
+                                                "alignment_horizontal": "start",
+                                                "font_family": "display",
+                                                "font_size": 14,
+                                                "font_size_unit": "sp",
+                                                "font_weight": "regular",
+                                                "line_height": 16,
+                                                "margins": {
+                                                    "left": 12,
+                                                    "unit": "dp"
+                                                },
+                                                "text_alignment_horizontal": "start",
+                                                "text_color": "@{isLightTheme ? '#DB000000' : '#E0FFFFFF'}"
+                                            }
+                                        ],
+                                        "margins": {
+                                            "left": 16,
+                                            "right": 16,
+                                            "top": 16,
+                                            "unit": "dp"
+                                        },
+                                        "orientation": "horizontal",
+                                        "width": {
+                                            "type": "match_parent"
+                                        }
+                                    }
+                                }
+                            ],
+                            "visibility": "@{card_input_screen_checkbox_state}"
+                        },
+                        {
+                            "type": "text",
+                            "height": {
+                                "type": "match_parent",
+                                "weight": 1
+                            },
+                            "text": "1",
+                            "visibility": "invisible",
+                            "width": {
+                                "type": "match_parent"
+                            }
+                        },
+                        {
+                            "type": "container",
+                            "height": {
+                                "type": "wrap_content"
+                            },
+                            "items": [
+                                {
+                                    "type": "state",
+                                    "default_state_id": "number",
+                                    "id": "bind_button_state",
+                                    "states": [
+                                        {
+                                            "state_id": "number",
+                                            "div": {
+                                                "type": "bind_button",
+                                                "colorForText": "@{isLightTheme ? '#33000000' : '#40FFFFFF'}",
+                                                "colorForBackground": "@{isLightTheme ? '#E1E3E8' : '#505259'}"
+                                            }
+                                        },
+                                        {
+                                            "state_id": "continue",
+                                            "div": {
+                                                "type": "bind_button",
+                                                "actions": [
+                                                    {
+                                                        "log_id": "payment_sdk_card_input_screen_continue_bind",
+                                                        "url": "payment-sdk://continue"
+                                                    }
+                                                ],
+                                                "colorForText": "@{isLightTheme ? '#FAFFFFFF' : '#DB000000'}",
+                                                "colorForBackground": "@{isLightTheme ? '#2E2F33' : '#E1E3E8'}"
+                                            }
+                                        },
+                                        {
+                                            "state_id": "loading",
+                                            "div": {
+                                                "type": "bind_button",
+                                                "colorForText": "@{isLightTheme ? '#FAFFFFFF' : '#DB000000'}",
+                                                "colorForBackground": "@{isLightTheme ? '#2E2F33' : '#E1E3E8'}"
+                                            }
+                                        },
+                                        {
+                                            "state_id": "date_cvv",
+                                            "div": {
+                                                "type": "bind_button",
+                                                "colorForText": "@{isLightTheme ? '#33000000' : '#40FFFFFF'}",
+                                                "colorForBackground": "@{isLightTheme ? '#E1E3E8' : '#505259'}"
+                                            }
+                                        },
+                                        {
+                                            "state_id": "date",
+                                            "div": {
+                                                "type": "bind_button",
+                                                "colorForText": "@{isLightTheme ? '#33000000' : '#40FFFFFF'}",
+                                                "colorForBackground": "@{isLightTheme ? '#E1E3E8' : '#505259'}"
+                                            }
+                                        },
+                                        {
+                                            "state_id": "pay",
+                                            "div": {
+                                                "type": "bind_button",
+                                                "actions": [
+                                                    {
+                                                        "log_id": "payment_sdk_card_input_screen_bind_and_pay",
+                                                        "url": "payment-sdk://pay"
+                                                    }
+                                                ],
+                                                "buttonText": "@{card_input_screen_pay_button_text}",
+                                                "colorForText": "@{isLightTheme ? '#FAFFFFFF' : '#DB000000'}",
+                                                "colorForBackground": "@{isLightTheme ? '#2E2F33' : '#E1E3E8'}"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "custom",
+                                    "custom_type": "blur_animated",
+                                    "height": {
+                                        "type": "fixed",
+                                        "value": 56
+                                    },
+                                    "margins": {
+                                        "unit": "dp",
+                                        "left": 12,
+                                        "right": 12
+                                    },
+                                    "visibility": "@{card_input_screen_anim_div_state}",
+                                    "width": {
+                                        "type": "match_parent"
+                                    }
+                                }
+                            ],
+                            "orientation": "overlap",
+                            "width": {
+                                "type": "match_parent"
+                            }
+                        },
+                        {
+                            "type": "text",
+                            "actions": [
+                                {
+                                    "log_id": "payment_sdk_card_input_screen_terms_click",
+                                    "url": "payment-sdk://terms_click"
+                                }
+                            ],
+                            "font_family": "display",
+                            "font_size": 11,
+                            "font_size_unit": "sp",
+                            "font_weight": "regular",
+                            "height": {
+                                "type": "wrap_content"
+                            },
+                            "line_height": 12,
+                            "margins": {
+                                "unit": "dp",
+                                "left": 12,
+                                "right": 12,
+                                "bottom": 12
+                            },
+                            "ranges": [
+                                {
+                                    "start": 24,
+                                    "end": 52,
+                                    "underline": "single"
+                                }
+                            ],
+                            "text_alignment_horizontal": "center",
+                            "text_alignment_vertical": "center",
+                            "text_color": "@{isLightTheme ? '#4D000000' : '#80FFFFFF'}",
+                            "visibility": "@{false ? 'visible' : 'gone' }",
+                            "width": {
+                                "type": "match_parent"
+                            }
+                        }
+                    ],
+                    "orientation": "vertical",
+                    "paddings": {
+                        "bottom": "@{safe_area_inset_bottom}",
+                        "top": "@{safe_area_inset_top}",
+                        "right": "@{safe_area_inset_right}",
+                        "left": "@{safe_area_inset_left}"
+                    },
+                    "width": {
+                        "type": "match_parent"
+                    }
+                }
+            }
+        ]
+    }
+}

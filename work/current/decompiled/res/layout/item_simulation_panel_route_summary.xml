@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/simulation_panel_route_summary_item" android:background="@drawable/simulation_list_item_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:paddingStart="16.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="16.0sp" android:textColor="@color/text_primary" android:layout_gravity="center_vertical" android:id="@id/simulation_panel_route_summary_title_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="16.0sp" android:textColor="@color/text_secondary" android:layout_gravity="center_vertical" android:id="@id/simulation_panel_route_summary_value_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:paddingEnd="9.0dip" />
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/simulation_panel_route_summary_more_icon" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="48.0dip" android:layout_height="40.0dip" android:src="@drawable/ic_more_24" android:tint="@color/ui_blue" android:rotation="90.0" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" />
+</LinearLayout>

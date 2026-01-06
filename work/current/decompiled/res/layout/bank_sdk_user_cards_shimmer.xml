@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space">
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="218.0dip" android:layout_height="32.0dip" android:layout_marginTop="72.0dip" app:bank_sdk_cornerRadius="12.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="108.0dip" android:layout_marginTop="20.0dip">
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" app:bank_sdk_cornerRadius="16.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" app:bank_sdk_cornerRadius="16.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" app:bank_sdk_cornerRadius="16.0dip" />
+        </LinearLayout>
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="109.0dip" android:layout_height="24.0dip" android:layout_marginTop="32.0dip" app:bank_sdk_cornerRadius="16.0dip" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:paddingVertical="18.5dip">
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="40.0dip" android:layout_height="27.0dip" app:bank_sdk_cornerRadius="5.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="219.0dip" android:layout_height="24.0dip" android:layout_marginStart="15.0dip" app:bank_sdk_cornerRadius="8.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="18.5dip">
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="40.0dip" android:layout_height="27.0dip" app:bank_sdk_cornerRadius="5.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="163.0dip" android:layout_height="24.0dip" android:layout_marginStart="15.0dip" app:bank_sdk_cornerRadius="8.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="18.5dip">
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="40.0dip" android:layout_height="27.0dip" app:bank_sdk_cornerRadius="5.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="108.0dip" android:layout_height="24.0dip" android:layout_marginStart="15.0dip" app:bank_sdk_cornerRadius="8.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="18.5dip">
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="40.0dip" android:layout_height="27.0dip" app:bank_sdk_cornerRadius="5.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="162.0dip" android:layout_height="24.0dip" android:layout_marginStart="15.0dip" app:bank_sdk_cornerRadius="8.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="18.5dip">
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="40.0dip" android:layout_height="27.0dip" app:bank_sdk_cornerRadius="5.0dip" />
+            <com.yandex.bank.widgets.common.SkeletonView android:layout_width="108.0dip" android:layout_height="24.0dip" android:layout_marginStart="15.0dip" app:bank_sdk_cornerRadius="8.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>

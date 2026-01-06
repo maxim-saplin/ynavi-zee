@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.guidance.api.toolbar.NaviGuidanceToolbar android:id="@id/navi_service_toolbar" style="@style/MapControlsToolbar"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

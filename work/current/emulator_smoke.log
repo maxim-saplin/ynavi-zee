@@ -1,0 +1,192 @@
+== pidof ==
+13521
+== top activity ==
+    topResumedActivity=ActivityRecord{c9e31d9 u0 ru.yandex.yandexnavi/.core.NavigatorActivity t18}
+== logcat (high-signal tail) ==
+01-06 17:32:01.446   540   636 W PackageParsing: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.FOREGROUND_SERVICE in package: ru.yandex.yandexnavi at: Binary XML file line #175
+01-06 17:32:01.446   540   636 W PackageParsing: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.READ_CONTACTS in package: ru.yandex.yandexnavi at: Binary XML file line #182
+01-06 17:32:01.455   540   591 I PackageManager: Integrity check passed for file:///data/app/vmdl75974036.tmp
+01-06 17:32:01.470   540   591 W PackageParsing: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.FOREGROUND_SERVICE in package: ru.yandex.yandexnavi at: Binary XML file line #175
+01-06 17:32:01.470   540   591 W PackageParsing: Ignoring duplicate uses-permissions/uses-permissions-sdk-m: android.permission.READ_CONTACTS in package: ru.yandex.yandexnavi at: Binary XML file line #182
+01-06 17:32:01.529   540   566 I ActivityManager: Force stopping ru.yandex.yandexnavi appid=10192 user=-1: installPackageLI
+01-06 17:32:01.534   540   566 I ActivityManager: Killing 12851:ru.yandex.yandexnavi:AppMetrica/u0a192 (adj 100): stop ru.yandex.yandexnavi due to installPackageLI
+01-06 17:32:01.536   540   591 I PackageManager: Update package ru.yandex.yandexnavi code path from /data/app/~~5iwgFY7q6ZmFmD6nrbuTCw==/ru.yandex.yandexnavi-Kj9N8goRAPI8iwW0bpvAgg== to /data/app/~~rq5SRO_-06qklzMUl98IEw==/ru.yandex.yandexnavi-TnxZK301ysbZSHES-LRfCQ==; Retain data and using new
+01-06 17:32:01.537   540   566 I ActivityManager: Killing 12791:ru.yandex.yandexnavi/u0a192 (adj 0): stop ru.yandex.yandexnavi due to installPackageLI
+01-06 17:32:01.541   540   566 W ActivityTaskManager: Force removing ActivityRecord{177b983 u0 ru.yandex.yandexnavi/.core.NavigatorActivity t17 f}}: app died, no saved state
+01-06 17:32:01.567   540   566 W InputManager-JNI: Input channel object '845c0dc ru.yandex.yandexnavi/ru.yandex.yandexnavi.core.NavigatorActivity (client)' was disposed without first being removed with the input manager!
+01-06 17:32:01.599   540   702 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(uid/pid:10192/12791, [NetworkRequest [ LISTEN id=271, [ Transports: WIFI Capabilities: NOT_RESTRICTED&TRUSTED&NOT_VPN&FOREGROUND&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ]], android.os.BinderProxy@5ea9b1b)
+01-06 17:32:01.599   540  2173 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(uid/pid:10192/12791, [NetworkRequest [ REQUEST id=275, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ]], android.os.BinderProxy@20874b8)
+01-06 17:32:01.602   540  4218 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(uid/pid:10192/12791, [NetworkRequest [ REQUEST id=273, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ]], android.os.BinderProxy@f79f291)
+01-06 17:32:01.602   540   654 D ConnectivityService: releasing NetworkRequest [ REQUEST id=275, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ] (release request)
+01-06 17:32:01.606   540   654 D ConnectivityService: releasing NetworkRequest [ REQUEST id=273, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ] (release request)
+01-06 17:32:01.616   540   591 I PackageDexOptimizer: Running dexopt (dexoptNeeded=1) on: /data/app/~~rq5SRO_-06qklzMUl98IEw==/ru.yandex.yandexnavi-TnxZK301ysbZSHES-LRfCQ==/base.apk pkg=ru.yandex.yandexnavi isa=arm64 dexoptFlags=boot_complete,profile_guided,public,enable_hidden_api_checks targetFilter=speed-profile oatDir=/data/app/~~rq5SRO_-06qklzMUl98IEw==/ru.yandex.yandexnavi-TnxZK301ysbZSHES-LRfCQ==/oat classLoaderContext=PCL[]{PCL[/system/framework/org.apache.http.legacy.jar]#PCL[/system_ext/framework/androidx.window.extensions.jar]#PCL[/system_ext/framework/androidx.window.sidecar.jar]}
+01-06 17:32:01.617   439   452 V installd: DexInv: --- BEGIN '/data/app/~~rq5SRO_-06qklzMUl98IEw==/ru.yandex.yandexnavi-TnxZK301ysbZSHES-LRfCQ==/base.apk' ---
+01-06 17:32:01.617   439   452 V installd: Running /apex/com.android.art/bin/dex2oat64 in=base.apk out=/data/app/~~rq5SRO_-06qklzMUl98IEw==/ru.yandex.yandexnavi-TnxZK301ysbZSHES-LRfCQ==/oat/arm64/base.odex
+01-06 17:32:01.625   540   566 I ActivityManager: Killing 12992:ru.yandex.yandexnavi:passport/u0a192 (adj 915): stop ru.yandex.yandexnavi due to installPackageLI
+01-06 17:32:01.640   540   704 V ActivityManager: Got obituary of 12791:ru.yandex.yandexnavi
+01-06 17:32:01.645   540   553 V ActivityManager: Got obituary of 12851:ru.yandex.yandexnavi:AppMetrica
+01-06 17:32:01.645   540  4218 V ActivityManager: Got obituary of 12992:ru.yandex.yandexnavi:passport
+01-06 17:32:01.727 13432 13432 W dex2oat64: Mismatch between dex2oat instruction set features to use (ISA: Arm64 Feature string: a53,crc,-lse,-fp16,-dotprod,-sve) and those from CPP defines (ISA: Arm64 Feature string: -a53,-crc,-lse,-fp16,-dotprod,-sve) for the command line:
+01-06 17:32:01.727 13432 13432 W dex2oat64: /apex/com.android.art/bin/dex2oat64 --zip-fd=7 --zip-location=base.apk --oat-fd=8 --oat-location=/data/app/~~rq5SRO_-06qklzMUl98IEw==/ru.yandex.yandexnavi-TnxZK301ysbZSHES-LRfCQ==/oat/arm64/base.odex --input-vdex-fd=-1 --output-vdex-fd=9 --swap-fd=10 --classpath-dir=/data/app/~~rq5SRO_-06qklzMUl98IEw==/ru.yandex.yandexnavi-TnxZK301ysbZSHES-LRfCQ== --class-loader-context=PCL[]{PCL[/system/framework/org.apache.http.legacy.jar]#PCL[/system_ext/framework/androidx.window.extensions.jar]#PCL[/system_ext/framework/androidx.window.sidecar.jar]} --compact-dex-level=none --instruction-set=arm64 --instruction-set-features=default --instruction-set-variant=generic --compiler-filter=speed-profile --compilation-reason=install --max-image-block-size=524288 --resolve-startup-const-strings=true --generate-mini-debug-info --runtime-arg -Xtarget-sdk-version:35 --runtime-arg -Xhidden-api-policy:enabled --runtime-arg -Xms64m --runtime-arg -Xmx512m
+01-06 17:32:01.727 13432 13432 I dex2oat64: /apex/com.android.art/bin/dex2oat64 --input-vdex-fd=-1 --output-vdex-fd=9 --classpath-dir=/data/app/~~rq5SRO_-06qklzMUl98IEw==/ru.yandex.yandexnavi-TnxZK301ysbZSHES-LRfCQ== --class-loader-context=PCL[]{PCL[/system/framework/org.apache.http.legacy.jar]#PCL[/system_ext/framework/androidx.window.extensions.jar]#PCL[/system_ext/framework/androidx.window.sidecar.jar]} --compact-dex-level=none --compiler-filter=speed-profile --compilation-reason=install --max-image-block-size=524288 --resolve-startup-const-strings=true --generate-mini-debug-info
+01-06 17:32:04.067   439   452 V installd: DexInv: --- END '/data/app/~~rq5SRO_-06qklzMUl98IEw==/ru.yandex.yandexnavi-TnxZK301ysbZSHES-LRfCQ==/base.apk' (success) ---
+01-06 17:32:04.517   540   591 I ActivityManager: Force stopping ru.yandex.yandexnavi appid=10192 user=0: pkg removed
+01-06 17:32:04.525   540   555 D CompanionDeviceManagerService: onPackageModified(packageName = ru.yandex.yandexnavi)
+01-06 17:32:04.525   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.packagemonitor.impl.PackageMonitorReceiverImpl$RegisteredReceiver
+01-06 17:32:04.525   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.packagemonitor.backgroundimpl.BackgroundPackageMonitorReceiverImpl$RegisteredReceiver
+01-06 17:32:04.525   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.instantapps.appmanagement.InstantAppRemoveMonitor
+01-06 17:32:04.525   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+01-06 17:32:04.525   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+01-06 17:32:04.525   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.google.android.packageinstaller/com.android.packageinstaller.PackageInstalledReceiver
+01-06 17:32:04.525   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.packagemonitor.impl.PackageMonitorReceiverImpl$RegisteredReceiver
+01-06 17:32:04.525   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.packagemonitor.backgroundimpl.BackgroundPackageMonitorReceiverImpl$RegisteredReceiver
+01-06 17:32:04.525   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+01-06 17:32:04.525   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+01-06 17:32:04.525   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+01-06 17:32:04.527  1463  1463 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_REMOVED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) }
+01-06 17:32:04.578   708   708 D MediaPlayerList: Name of package changed: ru.yandex.yandexnavi
+01-06 17:32:04.638  1440  1440 I MediaProvider: Invalidating LocalCallingIdentity cache for package ru.yandex.yandexnavi. Reason: package android.intent.action.PACKAGE_REMOVED
+01-06 17:32:04.639  1440  1440 I MediaProvider: Invalidating LocalCallingIdentity cache for package ru.yandex.yandexnavi. Reason: package android.intent.action.PACKAGE_ADDED
+01-06 17:32:04.669   540   540 I Telecom : CarModeTracker: Package ru.yandex.yandexnavi is not tracked.: SSH.oR@AQc
+01-06 17:32:04.704  8418  8418 I Finsky:background: [2] IQ: onPackageRemoved ru.yandex.yandexnavi, replacing=true, uninstallingFromPlay=false
+01-06 17:32:04.714  1463  1463 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_ADDED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) }
+01-06 17:32:04.714  1463  1463 I GsaVoiceInteractionSrv: O received Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) }
+01-06 17:32:04.787   540   588 E VerityUtils: Failed to measure fs-verity, errno 1: /data/app/~~rq5SRO_-06qklzMUl98IEw==/ru.yandex.yandexnavi-TnxZK301ysbZSHES-LRfCQ==/base.apk
+01-06 17:32:04.796 13458 13458 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 2000 <<<<<<
+01-06 17:32:04.798  1645  1958 W SearchServiceCore: Abort, client detached.
+01-06 17:32:04.798  1645  1958 W SearchServiceCore: Abort, client detached.
+01-06 17:32:04.799  1645  1958 W SearchServiceCore: Abort, client detached.
+01-06 17:32:04.803  1413 13480 W SQLiteLog: (28) double-quoted string literal: "ru.yandex.yandexnavi"
+01-06 17:32:04.809 13458 13458 I AndroidRuntime: Using default boot image
+01-06 17:32:04.809 13458 13458 I AndroidRuntime: Leaving lock profiling enabled
+01-06 17:32:04.862   540  4094 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+01-06 17:32:04.863   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+01-06 17:32:04.863   540   566 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_REPLACED dat=package:ru.yandex.yandexnavi flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+01-06 17:32:04.963   841   841 D ImsResolver: maybeAddedImsService, packageName: ru.yandex.yandexnavi
+01-06 17:32:05.077 13458 13458 D AndroidRuntime: Calling main entry com.android.commands.monkey.Monkey
+01-06 17:32:05.077 13458 13458 W Monkey  : args: [-p, ru.yandex.yandexnavi, -c, android.intent.category.LAUNCHER, 1]
+01-06 17:32:05.078 13458 13458 W Monkey  :  arg: "ru.yandex.yandexnavi"
+01-06 17:32:05.078 13458 13458 W Monkey  : data="ru.yandex.yandexnavi"
+01-06 17:32:05.112   540  4811 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=ru.yandex.yandexnavi/.core.NavigatorActivity} from uid 2000
+01-06 17:32:05.112   540   588 E VerityUtils: Failed to measure fs-verity, errno 1: /data/app/~~rq5SRO_-06qklzMUl98IEw==/ru.yandex.yandexnavi-TnxZK301ysbZSHES-LRfCQ==/base.apk
+01-06 17:32:05.130   540   567 I ActivityManager: Start proc 13521:ru.yandex.yandexnavi/u0a192 for pre-top-activity {ru.yandex.yandexnavi/ru.yandex.yandexnavi.core.NavigatorActivity}
+01-06 17:32:05.151 13458 13458 I AndroidRuntime: VM exiting with result code 0.
+01-06 17:32:05.337 13521 13521 V GraphicsEnvironment: ANGLE Developer option for 'ru.yandex.yandexnavi' set to: 'default'
+01-06 17:32:05.338 13521 13521 V GraphicsEnvironment: ANGLE GameManagerService for ru.yandex.yandexnavi: false
+01-06 17:32:05.538 13521 13521 I FirebaseCrashlytics: Initializing Firebase Crashlytics 20.0.0 for ru.yandex.yandexnavi
+01-06 17:32:05.647   540   567 I ActivityManager: Start proc 13581:ru.yandex.yandexnavi:AppMetrica/u0a192 for service {ru.yandex.yandexnavi/io.appmetrica.analytics.internal.AppMetricaService}
+01-06 17:32:05.700 13581 13581 V GraphicsEnvironment: ANGLE Developer option for 'ru.yandex.yandexnavi' set to: 'default'
+01-06 17:32:05.701 13581 13581 V GraphicsEnvironment: ANGLE GameManagerService for ru.yandex.yandexnavi: false
+01-06 17:32:05.763 13581 13581 I FirebaseCrashlytics: Initializing Firebase Crashlytics 20.0.0 for ru.yandex.yandexnavi
+01-06 17:32:06.277 13521 13521 D FirebaseSessions: App foregrounded on ru.yandex.yandexnavi
+01-06 17:32:06.277 13521 13521 D FirebaseSessions: Process ru.yandex.yandexnavi is stale
+01-06 17:32:06.278 13521 13549 D FirebaseSessions: Process ru.yandex.yandexnavi is stale
+01-06 17:32:06.286   540   567 I ActivityManager: Start proc 13723:ru.yandex.yandexnavi:passport/u0a192 for content provider {ru.yandex.yandexnavi/com.yandex.passport.internal.provider.InternalProvider}
+01-06 17:32:06.322 13723 13723 V GraphicsEnvironment: ANGLE Developer option for 'ru.yandex.yandexnavi' set to: 'default'
+01-06 17:32:06.322 13723 13723 V GraphicsEnvironment: ANGLE GameManagerService for ru.yandex.yandexnavi: false
+01-06 17:32:06.415 13723 13723 I FirebaseCrashlytics: Initializing Firebase Crashlytics 20.0.0 for ru.yandex.yandexnavi
+01-06 17:32:06.427   540  4094 D ConnectivityService: requestNetwork for uid/pid:10192/13521 activeRequest: null callbackRequest: 277 [NetworkRequest [ REQUEST id=278, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+01-06 17:32:06.433   540   647 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=278, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ]
+01-06 17:32:06.434   540   647 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=278, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ]
+01-06 17:32:06.435   540   647 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=278, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ]
+01-06 17:32:06.514 13521 13788 I Pulse   : Application ru.yandex.yandexnavi:27.0.2 was registered with prefix AMAPS.
+01-06 17:32:06.522  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.526  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.528  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.528  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.530  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.530  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.531  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.532  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.534  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.534  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.535  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.535  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.536  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.536  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.537  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.539  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.541  8342  8354 W Finsky  : [40] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.541  8342  8354 I Finsky  : [40] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.543  8342  8354 W Finsky  : [40] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.543  8342  8354 I Finsky  : [40] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.543  8342  8354 W Finsky  : [40] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.544  8342  8354 I Finsky  : [40] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.545  8342  8354 W Finsky  : [40] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.545  8342  8354 I Finsky  : [40] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.546  8342  8354 W Finsky  : [40] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.547  8342  8354 I Finsky  : [40] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.548  8342  8354 W Finsky  : [40] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.548  8342  8354 I Finsky  : [40] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.548  8342  8354 W Finsky  : [40] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.548  8342  8354 I Finsky  : [40] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.549  8342  8354 W Finsky  : [40] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.549  8342  8354 I Finsky  : [40] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.550  8342  8354 W Finsky  : [40] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.550  8342  8354 I Finsky  : [40] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.550  8342  8354 W Finsky  : [40] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.550  8342  8354 I Finsky  : [40] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.551  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.551  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.551  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.551  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.552  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.552  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.552  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.552  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.552  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.552  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.553  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.553  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.553  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.554  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.554  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.554  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.555  8342  8354 W Finsky  : [40] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.555  8342  8354 I Finsky  : [40] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.555  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.555  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.556  8342  8354 W Finsky  : [40] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.556  8342  8354 I Finsky  : [40] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.557  8342 12093 W Finsky  : [192] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.557  8342 12093 I Finsky  : [192] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.557  8342 12093 W Finsky  : [192] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.558  8342 12093 I Finsky  : [192] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.559  8342 12093 W Finsky  : [192] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.559  8342 12093 I Finsky  : [192] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.560  8342 12093 W Finsky  : [192] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.560  8342 12093 I Finsky  : [192] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.560  8342 12093 W Finsky  : [192] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.561  8342 12093 I Finsky  : [192] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.561  8342 12093 W Finsky  : [192] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.561  8342 12093 I Finsky  : [192] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.562  8342 12093 W Finsky  : [192] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.562  8342 12093 I Finsky  : [192] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.563  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.563  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.563  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.563  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.563  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.563  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.564  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.564  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.564  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.564  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.565  8342  8355 W Finsky  : [41] ru.yandex.yandexnavi: No account found.
+01-06 17:32:06.565  8342  8355 I Finsky  : [41] Billing preferred account via installer for ru.yandex.yandexnavi: [dCNOmK_nSY-12vHzasLXiswzlGT5UHA7jAGYkvmCuQs]
+01-06 17:32:06.566   540  2040 D ConnectivityService: requestNetwork for uid/pid:10192/13521 activeRequest: null callbackRequest: 279 [NetworkRequest [ REQUEST id=280, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+01-06 17:32:06.568   540   647 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=280, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ]
+01-06 17:32:06.568   540   647 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=280, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ]
+01-06 17:32:06.568   540   647 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=280, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10192 RequestorUid: 10192 RequestorPkg: ru.yandex.yandexnavi UnderlyingNetworks: Null] ]
+01-06 17:32:06.642   540   555 I ActivityTaskManager: Displayed ru.yandex.yandexnavi/.core.NavigatorActivity: +1s491ms
+01-06 17:32:06.722 13521 13847 E chromium: [0106/173206.719787:ERROR:variations_seed_loader.cc(37)] Seed missing signature.
+01-06 17:32:06.917   540  3191 W InputManager-JNI: Input channel object '655996f Splash Screen ru.yandex.yandexnavi (client)' was disposed without first being removed with the input manager!
+01-06 17:32:07.036   540   647 I WifiScanRequestProxy: Scan request from ru.yandex.yandexnavi throttled
+01-06 17:32:11.165  1004  1167 I GoogleSignatureVerifier: package info is not set correctly
+01-06 17:32:11.165  1004  1167 I GoogleSignatureVerifier: package info is not set correctly
+01-06 17:32:11.165  1004  1167 I GoogleSignatureVerifier: package info is not set correctly
+01-06 17:32:11.166  1004  1167 I GoogleSignatureVerifier: package info is not set correctly
+01-06 17:32:11.166  1004  1167 I GoogleSignatureVerifier: package info is not set correctly
+01-06 17:32:11.166  1004  1167 I GoogleSignatureVerifier: package info is not set correctly
+01-06 17:32:11.166  1004  1167 I GoogleSignatureVerifier: package info is not set correctly
+01-06 17:32:11.166  1004  1167 I GoogleSignatureVerifier: package info is not set correctly

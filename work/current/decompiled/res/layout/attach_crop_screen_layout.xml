@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.attachments.common.ui.CropableImageView android:id="@id/attach_crop_image" android:background="@color/attach_crop_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <TextView android:textColor="@color/attach_crop_text_color" android:layout_gravity="start" android:id="@id/attach_crop_reject" android:padding="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attach_crop_reject" />
+    <TextView android:textColor="@color/attach_crop_text_color" android:layout_gravity="end" android:id="@id/attach_crop_done" android:padding="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attach_crop_done" />
+</merge>

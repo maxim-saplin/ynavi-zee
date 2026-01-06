@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/notification_root_view" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/notificationTitleIcon" android:layout_width="@dimen/notification_app_icon_size" android:layout_height="@dimen/notification_app_icon_size" />
+        <TextView android:textSize="@dimen/notification_small_text_size" android:textColor="@color/text_primary_variant" android:id="@id/notificationTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/indent_three_quarters" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/redesign_bg_notification_lanes" />
+        <include android:layout_gravity="end|center" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/traffic_light_notification_view" />
+    </LinearLayout>
+    <TextView android:textSize="20.0dip" android:id="@id/titleView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" layout="@layout/redesign_bg_guidance_notification_eta_block" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" layout="@layout/redesign_bg_notification_action_block" />
+</LinearLayout>

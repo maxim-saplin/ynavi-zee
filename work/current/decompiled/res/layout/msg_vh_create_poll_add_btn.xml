@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/msg_bg_new_poll_list_item" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="3.0dip" android:layout_marginBottom="3.0dip" android:layout_marginStart="18.0dip" android:layout_marginEnd="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/messenger_create_poll_new_variant" android:layout_marginStart="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Messaging.PollCreate.AddVariant" />
+    <ImageView android:id="@id/plus_icon" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/msg_ic_poll_plus" />
+</androidx.constraintlayout.widget.ConstraintLayout>

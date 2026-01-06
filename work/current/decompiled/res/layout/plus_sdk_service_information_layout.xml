@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.plus.home.feature.webviews.internal.layout.RoundCornersLinearLayout android:orientation="vertical" android:id="@id/plus_sdk_service_info_container" android:background="?backgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent" app:plus_sdk_topLeftRadius="@dimen/plus_sdk_mu_1_5" app:plus_sdk_topRightRadius="@dimen/plus_sdk_mu_1_5"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.tabs.TabLayout android:id="@id/plus_sdk_tab_layout_service" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="?colorPrimary" android:id="@id/plus_sdk_text_save_and_send_logs" android:padding="@dimen/plus_sdk_mu_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/plus_sdk_service_info_send_button_text" />
+            <ProgressBar android:id="@id/plus_sdk_progress_service" android:visibility="gone" android:layout_width="@dimen/plus_sdk_mu_3" android:layout_height="@dimen/plus_sdk_mu_3" android:layout_marginTop="@dimen/plus_sdk_mu_2" android:layout_marginEnd="@dimen/plus_sdk_mu_2" style="@style/PlusSDK.Widget.ProgressBar" />
+        </FrameLayout>
+        <TextView android:textSize="16.0sp" android:textColor="?colorPrimary" android:id="@id/plus_sdk_text_delete_logs" android:padding="@dimen/plus_sdk_mu_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/plus_sdk_service_info_delete_button_text" />
+    </LinearLayout>
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/plus_sdk_view_pager_service" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</com.yandex.plus.home.feature.webviews.internal.layout.RoundCornersLinearLayout>

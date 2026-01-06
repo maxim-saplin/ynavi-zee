@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/common_divider_horizontal_sub56_impl" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RadioButton android:id="@id/settings_extra_distance_units_kilometers_radio_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_extra_distance_units_km" style="@style/SettingRadioButton" />
+    <RadioButton android:id="@id/settings_extra_distance_units_miles_radio_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_extra_distance_units_miles" style="@style/SettingRadioButton" />
+</RadioGroup>

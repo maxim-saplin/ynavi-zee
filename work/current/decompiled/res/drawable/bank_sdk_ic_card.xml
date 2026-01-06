@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="34.0dip" android:viewportWidth="34.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="#ffffffff" android:pathData="M5,0.5L29,0.5A4.5,4.5 0,0 1,33.5 5L33.5,19A4.5,4.5 0,0 1,29 23.5L5,23.5A4.5,4.5 0,0 1,0.5 19L0.5,5A4.5,4.5 0,0 1,5 0.5z" />
+    <path android:fillColor="#fff79e1b" android:pathData="M26.048,20C28.257,20 30.048,18.209 30.048,16C30.048,13.791 28.257,12 26.048,12C23.839,12 22.048,13.791 22.048,16C22.048,18.209 23.839,20 26.048,20Z" android:strokeColor="#ffffffff" android:strokeWidth="1.5" />
+    <path android:fillColor="#ffeb001b" android:pathData="M20,20C22.209,20 24,18.21 24,16C24,13.791 22.209,12 20,12C17.791,12 16,13.791 16,16C16,18.21 17.791,20 20,20Z" android:strokeColor="#ffffffff" android:strokeWidth="1.5" />
+    <path android:fillColor="#00000000" android:pathData="M5,0.5L29,0.5A4.5,4.5 0,0 1,33.5 5L33.5,19A4.5,4.5 0,0 1,29 23.5L5,23.5A4.5,4.5 0,0 1,0.5 19L0.5,5A4.5,4.5 0,0 1,5 0.5z" android:strokeColor="@drawable/$bank_sdk_ic_card__0" android:strokeWidth="1.0" />
+</vector>

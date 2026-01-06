@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="@drawable/offline_caches_linear_gradient" android:paddingTop="32.0dip" android:paddingBottom="@dimen/onboarding_button_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/onboarding_horizontal_interval">
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/onboarding_offline_cache_request_title" style="@style/OnBoardingTitleStyle" />
+            <TextView android:gravity="center|top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/onboarding_button_vertical_margin" android:text="@string/onboarding_offline_cache_request_description" style="@style/OnBoardingSubTitleStyle" />
+            <include layout="@layout/onboarding_download_offline_cashe_button" />
+            <TextView android:id="@id/offlinecache_download_later_button" android:layout_marginTop="8.0dip" android:text="@string/onboarding_offline_cache_maybe_later_button" style="@style/OnBoardingButton.White" />
+        </LinearLayout>
+    </FrameLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

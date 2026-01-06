@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.shimmer.ShimmerFrameLayout android:layout_gravity="center" android:visibility="visible" android:layout_width="90.0dip" android:layout_height="118.0dip">
+        <View android:layout_gravity="center_vertical" android:background="@drawable/placecard_highlight_stub_element_background" android:layout_width="90.0dip" android:layout_height="118.0dip" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <FrameLayout android:layout_gravity="center" android:background="@drawable/highlight_preview_item_image_stroke_background" android:layout_width="90.0dip" android:layout_height="118.0dip" android:alpha="0.05" />
+</merge>

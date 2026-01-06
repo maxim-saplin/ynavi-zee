@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/navi_service_shutter_super_rubric_title" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/Text16.Medium.TextPrimaryVariant" />
+    <FrameLayout android:layout_gravity="center|bottom" android:id="@id/navi_service_shutter_super_rubric_background" android:background="@drawable/navi_service_shutter_rounded_background" android:layout_width="fill_parent" android:layout_height="48.0dip" app:layout_constraintBottom_toTopOf="@id/navi_service_shutter_super_rubric_title" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/navi_service_shutter_super_rubric_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/navi_service_shutter_super_rubric_background" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</merge>

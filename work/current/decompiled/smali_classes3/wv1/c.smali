@@ -1,0 +1,132 @@
+.class public final Lwv1/c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lru/yandex/yandexmaps/multiplatform/ugc/menu/api/y;
+
+
+# instance fields
+.field private final a:Lm31/h;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lm31/h;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lm31/h;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwv1/c;->a:Lm31/h;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 2
+
+    iget-object v0, p0, Lwv1/c;->a:Lm31/h;
+
+    invoke-interface {v0}, Lm31/h;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/yandex/yandexmaps/multiplatform/debug/panel/api/h;
+
+    sget-object v1, Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/i3;->a:Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/i3;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/i3;->f7()Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/w;
+
+    move-result-object v1
+
+    check-cast v0, Lru/yandex/yandexmaps/multiplatform/debug/panel/internal/experiments/m;
+
+    invoke-virtual {v0, v1}, Lru/yandex/yandexmaps/multiplatform/debug/panel/internal/experiments/m;->b(Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/w;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final b()Z
+    .locals 2
+
+    iget-object v0, p0, Lwv1/c;->a:Lm31/h;
+
+    invoke-interface {v0}, Lm31/h;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/yandex/yandexmaps/multiplatform/debug/panel/api/h;
+
+    sget-object v1, Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/i3;->a:Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/i3;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/i3;->g7()Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/w;
+
+    move-result-object v1
+
+    check-cast v0, Lru/yandex/yandexmaps/multiplatform/debug/panel/internal/experiments/m;
+
+    invoke-virtual {v0, v1}, Lru/yandex/yandexmaps/multiplatform/debug/panel/internal/experiments/m;->b(Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/w;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c()Z
+    .locals 2
+
+    iget-object v0, p0, Lwv1/c;->a:Lm31/h;
+
+    invoke-interface {v0}, Lm31/h;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/yandex/yandexmaps/multiplatform/debug/panel/api/h;
+
+    sget-object v1, Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/i3;->a:Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/i3;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/i3;->h7()Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/w;
+
+    move-result-object v1
+
+    check-cast v0, Lru/yandex/yandexmaps/multiplatform/debug/panel/internal/experiments/m;
+
+    invoke-virtual {v0, v1}, Lru/yandex/yandexmaps/multiplatform/debug/panel/internal/experiments/m;->b(Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/w;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method

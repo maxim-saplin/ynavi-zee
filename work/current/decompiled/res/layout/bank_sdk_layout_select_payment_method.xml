@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/bank_sdk_bottom_sheet_inset_height" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.bank.widgets.common.ToolbarView android:id="@id/select_payment_method_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <com.yandex.bank.widgets.common.paymentmethod.WidgetSbpView android:id="@id/select_payment_method_widget" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/bank_sdk_screen_horizontal_space" android:layout_marginTop="8.0dip" android:layout_marginRight="@dimen/bank_sdk_screen_horizontal_space" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/select_payment_method_recycler" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" />
+</LinearLayout>

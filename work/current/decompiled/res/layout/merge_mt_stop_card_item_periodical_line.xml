@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/common_ripple_with_transparent_background" android:paddingTop="14.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+        <FrameLayout android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/mt_item_periodical_line_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textColor="@color/bw_white" android:gravity="center" android:id="@id/mt_item_periodical_underground_line_number" android:background="@drawable/masstransit_common_generic_transport_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="28.0dip" android:minWidth="28.0dip" android:minHeight="28.0dip" style="@style/Text14.Medium" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_gravity="top" android:id="@id/mt_item_periodical_line_transport" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip" style="@style/Text14.Medium" />
+            <TextView android:gravity="end" android:layout_gravity="end|top" android:id="@id/masstransit_item_periodical_line_main_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" style="@style/Text14.Medium.DarkerGrey" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.StadiumButtonView android:id="@id/stadiumButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:paddingHorizontal="@dimen/bank_sdk_screen_horizontal_space" app:layout_constraintBottom_toBottomOf="parent" />
+    <com.yandex.bank.core.transfer.utils.UnconditionalWidget android:id="@id/widgetView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:animateLayoutChanges="true" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

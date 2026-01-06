@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="16.0dip" android:width="16.0dip" android:viewportWidth="16.0" android:viewportHeight="16.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <group android:name="spinner_rotate" android:pivotX="8.0" android:pivotY="8.0">
+            <path android:fillColor="?messagingCommonBackgroundSecondaryColor" android:pathData="M14.6518,3.5554C15.5308,4.871 16,6.4177 16,8L14,8C14,4.6863 11.3137,2 8,2C4.6863,2 2,4.6863 2,8C2,11.3137 4.6863,14 8,14L8,16C7.9821,16 7.9642,15.9999 7.9463,15.9998C6.3828,15.9893 4.8562,15.5209 3.5554,14.6518C2.2398,13.7727 1.2145,12.5233 0.609,11.0615C0.2139,10.1077 0.0091,9.0914 0.0003,8.0692C0.0001,8.0461 0,8.0231 0,8C0,7.975 0.0001,7.9501 0.0003,7.9252C0.005,7.4285 0.0559,6.931 0.1537,6.4393C0.4624,4.8874 1.2243,3.462 2.3431,2.3431C3.462,1.2243 4.8874,0.4624 6.4393,0.1537C6.953,0.0515 7.473,0.0005 7.9918,0C7.9954,0 7.9991,-0 8.0028,0C9.0474,0.0004 10.087,0.2053 11.0615,0.609C12.5233,1.2145 13.7727,2.2399 14.6518,3.5554Z" android:fillType="evenOdd" />
+        </group>
+    </group>
+</vector>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bookmarks_folder_reorder_bookmark_image" android:layout_width="40.0dip" android:layout_height="40.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginHorizontal="16.0dip">
+        <TextView android:id="@id/bookmarks_folder_reorder_bookmark_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium" />
+        <TextView android:id="@id/bookmarks_folder_reorder_bookmark_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text14.TextSecondary" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/bookmarks_folder_reorder_bookmark_delete_icon" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/trash_24" android:tint="@color/icons_secondary" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/bookmarks_folder_reorder_bookmark_transfer_icon" android:padding="8.0dip" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/transfer_control_24" android:tint="@color/icons_secondary" />
+</merge>

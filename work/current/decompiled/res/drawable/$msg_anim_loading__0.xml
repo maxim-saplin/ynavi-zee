@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:pivotX="12.0" android:pivotY="12.0">
+        <path android:name="cross" android:fillColor="#ffffffff" android:pathData="M12 10.586l2.293-2.293a1 1 0 0 1 1.414 1.414L13.414 12l2.293 2.293a1 1 0 0 1-1.414 1.414L12 13.414l-2.293 2.293a1 1 0 1 1-1.414-1.414L10.586 12 8.293 9.707a1 1 0 0 1 1.414-1.414L12 10.586z" android:fillType="nonZero" />
+        <group android:name="spinner_rotate" android:pivotX="12.0" android:pivotY="12.0">
+            <path android:name="spinner" android:fillColor="#ffffffff" android:pathData="M12 23a1 1 0 0 1 0-2 9 9 0 1 0-9-9 1 1 0 0 1-2 0C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11" android:fillType="nonZero" />
+        </group>
+    </group>
+</vector>

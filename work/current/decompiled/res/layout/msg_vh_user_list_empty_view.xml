@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="?messagingCommonTextPrimaryColor" android:gravity="center" android:id="@id/empty_view_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="32.0dip" android:text="@string/user_list_empty_view_title_corporate" android:fontFamily="@font/ya_bold" />
+    <TextView android:textSize="16.0sp" android:textColor="?messagingCommonTextSecondaryColor" android:gravity="center" android:id="@id/empty_view_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="32.0dip" android:text="@string/user_list_empty_view_subtitle_corporate" android:lineSpacingExtra="4.0sp" android:fontFamily="@font/ya_regular" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:src="@drawable/msg_ic_user_list_empty" />
+</LinearLayout>

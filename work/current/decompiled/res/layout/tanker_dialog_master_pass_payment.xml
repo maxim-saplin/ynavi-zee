@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?tankerBackgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/walletContainer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="@dimen/tanker_basic_padding" app:layout_constraintBottom_toTopOf="@id/tankerPayBtn" app:layout_constraintTop_toTopOf="parent" />
+    <ru.tankerapp.android.sdk.navigator.view.widgets.PaymentButton android:id="@id/tankerPayBtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tanker_basic_padding" android:layout_marginTop="@dimen/tanker_basic_padding" android:layout_marginRight="@dimen/tanker_basic_padding" app:layout_constraintBottom_toTopOf="@id/masterPassFooter" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+    <include android:id="@id/masterPassFooter" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" layout="@layout/tanker_view_master_pass_footer" />
+    <View android:id="@id/blockTouchView" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

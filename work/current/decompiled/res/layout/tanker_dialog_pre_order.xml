@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/barcodeFrame" android:background="@drawable/tanker_bg_rounded" android:paddingTop="@dimen/tanker_basic_padding_half" android:paddingBottom="@dimen/tanker_basic_padding_half" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/tanker_small_text_size" android:textColor="@color/tanker_text_primary" android:gravity="center" android:id="@id/barcodeMessageTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tanker_basic_padding" android:layout_marginStart="@dimen/tanker_basic_padding" android:layout_marginEnd="@dimen/tanker_basic_padding" style="@style/TankerTextMedium" />
+                <ImageView android:id="@id/barcodeIv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tanker_basic_padding" android:minHeight="100.0dip" />
+                <TextView android:textSize="@dimen/tanker_mini_text_size" android:textColor="@color/tanker_text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tanker_basic_padding" android:layout_marginBottom="@dimen/tanker_basic_padding" android:text="@string/tanker_click_to_enlarge" style="@style/TankerTextRegular" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/mainContainer" android:background="@drawable/tanker_bg_top_rounded" android:padding="@dimen/tanker_basic_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tanker_basic_padding_half">
+                <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.0dip">
+                    <ru.tankerapp.ui.TankerCircularProgressView android:layout_gravity="center" android:id="@id/progressIv" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/tanker_ic_payment_processing" />
+                    <ImageView android:layout_gravity="center" android:id="@id/statusIv" android:visibility="invisible" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/tanker_ic_payment_success" />
+                </FrameLayout>
+                <TextView android:textSize="@dimen/tanker_medium_text_size" android:textColor="@color/tanker_textColorAlpha100" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/statusTv" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tanker_basic_padding_10" android:layout_marginBottom="@dimen/tanker_basic_padding" android:textAlignment="center" style="@style/TankerTextRegular" />
+                <ru.tankerapp.android.sdk.navigator.view.widgets.PaymentButton android:id="@id/toBankBtn" android:layout_width="fill_parent" android:layout_height="56.0dip" />
+                <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <Button android:id="@id/sbpCancelBtn" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="@dimen/tanker_basic_padding_half" android:text="@string/tanker_button_cancel_payment" style="@style/TankerButtonTransparentStyle" />
+                    <Button android:textColor="@color/tanker_button_default_link_text" android:id="@id/tankerCancelBtn" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="@dimen/tanker_basic_padding_half" android:text="@string/tanker_btn_cancel" style="@style/TankerButtonDarkStyle" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

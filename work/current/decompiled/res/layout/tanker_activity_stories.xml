@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.tankerapp.android.sdk.navigator.view.views.stories.ui.StoryZoomOutInAnimView android:id="@id/tankerZoomView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/tankerViewPager" android:background="@color/tanker_black" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

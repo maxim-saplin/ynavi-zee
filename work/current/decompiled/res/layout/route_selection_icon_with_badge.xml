@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/main_image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ImageView android:id="@id/cut_drawable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" />
+    <ImageView android:id="@id/image_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" />
+    <TextView android:textSize="14.0dip" android:gravity="center" android:id="@id/badge_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</merge>

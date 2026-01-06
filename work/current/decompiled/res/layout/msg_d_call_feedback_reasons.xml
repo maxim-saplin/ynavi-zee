@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?messagingCommonActionbarColor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/msg_divider_calls_feedback_select_reasons" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="?messagingCallsFeedbackDoneSelectColor" android:gravity="center" android:layout_gravity="end" android:id="@id/done" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/calls_feedback_done_reasons_picking" android:fontFamily="@font/ya_regular" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+        <TextView android:textSize="16.0sp" android:textColor="?messagingCommonTextPrimaryColor" android:layout_gravity="start|center" android:id="@id/feedback_all_reasons_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/calls_feedback_pick_reasons_dialog_title" android:fontFamily="@font/ya_bold" android:layout_marginStart="16.0dip" />
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/all_reasons_list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

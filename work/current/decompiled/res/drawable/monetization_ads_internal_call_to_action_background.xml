@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/monetization_ads_internal_call_to_action_background_light" />
+    <item android:drawable="@drawable/monetization_ads_internal_call_to_action_background_dark" />
+</transition>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/placecard_menu_image_item_container" android:layout_width="120.0dip" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/placecard_menu_image_item_frame" android:layout_width="120.0dip" android:layout_height="120.0dip" android:foreground="@drawable/highlight_preview_item_foreground">
+        <ImageView android:id="@id/placecard_menu_image_item_placeholder" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" android:tint="@color/text_light_grey" />
+        <ImageView android:id="@id/placecard_menu_image_item_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="center" />
+    </FrameLayout>
+    <TextView android:ellipsize="end" android:id="@id/placecard_menu_image_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="2" android:textDirection="inherit" android:textAlignment="viewStart" style="@style/Text14" />
+    <TextView android:ellipsize="end" android:id="@id/placecard_menu_image_item_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" android:textDirection="inherit" style="@style/Text14.Medium" />
+</LinearLayout>

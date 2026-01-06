@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/alicenger_common_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/alice_control_buttons_anchor" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" layout="@layout/alice_dialog" />
+    <Space android:id="@id/alice_control_buttons_anchor" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="@dimen/alice_control_buttons_anchor_margin" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="@id/alice_control_buttons_container" />
+    <FrameLayout android:id="@id/alice_control_buttons_container" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintWidth_max="@dimen/dialog_view_max_width">
+        <ViewStub android:id="@id/alice_dialog_input_stub" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/alice_pager_control_buttons" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/cursors_fade" android:background="@color/bw_black_alpha30" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ru.yandex.yandexmaps.uikit.shutter.ShutterView android:id="@id/cursors_list" android:tag="@string/change_handler_bottom_panel_tag" style="@style/ShutterCommonLayoutParams" />
+</FrameLayout>

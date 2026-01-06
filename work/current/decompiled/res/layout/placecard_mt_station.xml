@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/image_stop_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" />
+    <ru.yandex.yandexmaps.placecard.items.mtstation.MtStationTitleView android:id="@id/station_title_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_weight="1.0" android:layout_marginStart="16.0dip" />
+    <TextView android:id="@id/text_stations_number" android:padding="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="22.0dip" style="@style/Text14.Medium.TextSecondary" />
+    <ImageView android:id="@id/image_group_switcher" android:padding="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/text_secondary" app:srcCompat="@drawable/arrow_down_8" />
+</merge>

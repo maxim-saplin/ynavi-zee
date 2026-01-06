@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:gravity="center" android:layout_gravity="bottom" android:id="@id/onboarding_find_me_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/onboarding_button_vertical_margin" android:fontFamily="@font/font_onboarding_title" android:layout_marginHorizontal="@dimen/onboarding_horizontal_interval" style="@style/OnBoardingTitleStyle" />
+    </FrameLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

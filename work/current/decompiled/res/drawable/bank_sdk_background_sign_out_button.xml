@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <padding android:left="@dimen/bank_sdk_sign_out_button_padding_left" android:top="@dimen/bank_sdk_sign_out_button_padding_top" android:right="@dimen/bank_sdk_sign_out_button_padding_right" android:bottom="@dimen/bank_sdk_sign_out_button_padding_bottom" />
+    <corners android:radius="@dimen/bank_sdk_sign_out_button_cornerradius" />
+    <solid android:color="?bankColor_fill_default_100" />
+</shape>

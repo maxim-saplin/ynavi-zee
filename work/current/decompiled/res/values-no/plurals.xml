@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Siste %1$d tall</item>
+        <item quantity="zero">Siste %1$d tall</item>
+        <item quantity="one">Siste %1$d tall</item>
+        <item quantity="few">Siste %1$d tall</item>
+        <item quantity="many">Siste %1$d tall</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"Du blir oppringt fra 
+%1$s. Skriv inn de siste %2$d tallene i dette numeret."</item>
+        <item quantity="zero">"Du blir oppringt fra 
+%1$s. Skriv inn de siste %2$d tallene i dette numeret."</item>
+        <item quantity="one">"Du blir oppringt fra 
+%1$s. Skriv inn det siste %2$d tallet i dette nummeret."</item>
+        <item quantity="few">"Du blir oppringt fra 
+%1$s. Skriv inn de siste %2$d tallene i dette numeret."</item>
+        <item quantity="many">"Du blir oppringt fra 
+%1$s. Skriv inn de siste %2$d tallene i dette numeret."</item>
+    </plurals>
+</resources>

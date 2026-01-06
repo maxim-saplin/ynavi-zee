@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/top_spacer_view" android:background="?backgroundColor" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/plus_home_web_view_root" android:background="?backgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.yandex.plus.home.feature.webviews.internal.toolbar.WebViewToolbar android:id="@id/plus_home_toolbar" android:layout_width="fill_parent" android:layout_height="@dimen/plus_sdk_component_fullscreen_home_toolbar_height" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <com.yandex.plus.webview.api.WebViewContainer android:id="@id/plus_home_webview_contracts_container" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/plus_sdk_home_barrier" app:layout_constraintTop_toBottomOf="@id/plus_home_toolbar" />
+        <androidx.constraintlayout.widget.Barrier android:id="@id/plus_sdk_home_barrier" android:layout_width="fill_parent" android:layout_height="wrap_content" app:barrierDirection="top" app:constraint_referenced_ids="plus_sdk_home_host_pay_container, plus_sdk_home_native_pay_layout" />
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/plus_sdk_home_host_pay_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" />
+        <include android:layout_gravity="bottom" android:id="@id/plus_sdk_home_native_pay_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" layout="@layout/plus_sdk_native_pay_button" />
+        <FrameLayout android:id="@id/plus_sdk_loading_animation_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="@id/plus_home_webview_contracts_container" app:layout_constraintTop_toTopOf="@id/plus_home_toolbar" />
+        <FrameLayout android:id="@id/plus_home_web_view_error_layout" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/PlusSDK.Widget.WebViewError" />
+        <ViewStub android:id="@id/ssl_error_view_stub" android:layout="@layout/plus_sdk_ssl_error_layout" android:inflatedId="@id/view_stub_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.messaging.internal.view.stickers.StickersView android:id="@id/stickers_viewpager" android:background="?messagingCommonActionbarColor" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/emoji_strip_height" android:layout_marginStart="@dimen/emoji_view_padding" android:layout_marginEnd="@dimen/emoji_view_padding" />
+    <androidx.recyclerview.widget.RecyclerView android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/stickers_strip" android:background="@drawable/msg_bg_emoji_navigation_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/emoji_strip_height" android:paddingStart="@dimen/emoji_view_padding" android:paddingEnd="@dimen/emoji_view_padding" app:tabBackground="@drawable/msg_emoji_circle_background" app:tabIndicatorColor="?messagingCommonAccentColor" app:tabMaxWidth="@dimen/emoji_tab_width" app:tabMode="scrollable" />
+</FrameLayout>

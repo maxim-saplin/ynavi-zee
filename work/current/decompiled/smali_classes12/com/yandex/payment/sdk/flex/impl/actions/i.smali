@@ -1,0 +1,19 @@
+.class public final Lcom/yandex/payment/sdk/flex/impl/actions/i;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# virtual methods
+.method public final serializer()Lkotlinx/serialization/KSerializer;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlinx/serialization/KSerializer;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/yandex/payment/sdk/flex/impl/actions/h;->a:Lcom/yandex/payment/sdk/flex/impl/actions/h;
+
+    return-object v0
+.end method

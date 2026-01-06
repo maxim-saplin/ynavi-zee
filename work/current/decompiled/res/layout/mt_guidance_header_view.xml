@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/search_button" android:background="@drawable/rounded_cross_background" android:visibility="invisible" android:layout_width="@dimen/eta_close_button_size" android:layout_height="@dimen/eta_close_button_size" android:src="@drawable/search_24" android:tint="@color/icons_primary" android:layout_marginStart="@dimen/eta_close_button_padding" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@id/mt_eta_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Text20.Medium" />
+        <TextView android:ellipsize="end" android:layout_gravity="center" android:id="@id/mt_eta_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Text14.Regular.Secondary" />
+    </LinearLayout>
+    <ImageButton android:id="@id/close_button_mt" android:background="@drawable/rounded_cross_background" android:layout_width="@dimen/eta_close_button_size" android:layout_height="@dimen/eta_close_button_size" android:src="@drawable/cross_24" android:tint="@color/icons_primary" android:layout_marginEnd="@dimen/eta_close_button_padding" />
+</merge>

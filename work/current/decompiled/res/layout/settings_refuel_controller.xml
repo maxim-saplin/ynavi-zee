@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonSettingsContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:background="@drawable/background_panel_color_impl" android:divider="@drawable/common_divider_horizontal_impl" android:showDividers="beginning|middle|end" style="@style/SettingsCommonSection">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/settings_refuel_about" android:text="@string/settings_refuel_how_it_works" style="@style/SettingsButton.Item" />
+            <ru.yandex.yandexmaps.designsystem.loader.LoaderView android:layout_gravity="end|center" android:id="@id/settings_refuel_story_loader_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16.0dip" app:ymaps_inProgress="false" app:ymaps_progressSize="small" />
+        </FrameLayout>
+        <Button android:id="@id/settings_refuel_payment" android:text="@string/settings_refuel_payment" style="@style/SettingsButton.Item" />
+        <Button android:id="@id/settings_refuel_wallet" android:text="@string/settings_refuel_wallet" style="@style/SettingsButton.Item" />
+        <Button android:id="@id/settings_refuel_history" android:text="@string/settings_refuel_history" style="@style/SettingsButton.Item" />
+        <Button android:id="@id/settings_refuel_referral" android:text="@string/settings_refuel_referral" style="@style/SettingsButton.Item" />
+        <Button android:id="@id/settings_refuel_business" android:text="@string/settings_refuel_business" style="@style/SettingsButton.Item" />
+        <Button android:id="@id/settings_refuel_help" android:text="@string/settings_refuel_help" style="@style/SettingsButton.Item" />
+        <Button android:id="@id/settings_refuel_feedback" android:text="@string/settings_refuel_feedback" style="@style/SettingsButton.Item" />
+        <Button android:id="@id/settings_refuel_legal" android:text="@string/settings_refuel_legal" style="@style/SettingsButton.Item" />
+    </LinearLayout>
+</ScrollView>

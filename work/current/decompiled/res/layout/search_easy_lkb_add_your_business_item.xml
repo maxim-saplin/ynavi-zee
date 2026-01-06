@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip" android:paddingVertical="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/organization_24" android:tint="@color/icons_primary" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginHorizontal="16.0dip">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/placecard_easy_lkb_add_your_business_title" style="@style/Text16.Medium.TextPrimary" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/placecard_easy_lkb_add_your_business_subtitle" style="@style/Text16.TextSecondary" />
+    </LinearLayout>
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="center_vertical" android:id="@id/easy_lkb_add_your_business_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

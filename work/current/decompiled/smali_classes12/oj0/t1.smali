@@ -1,0 +1,155 @@
+.class public final Loj0/t1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/apollographql/apollo3/api/a;
+
+
+# static fields
+.field public static final a:Loj0/t1;
+
+.field private static final b:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Loj0/t1;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Loj0/t1;->a:Loj0/t1;
+
+    const-string v0, "configuration"
+
+    const-string v1, "darkConfiguration"
+
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkotlin/collections/x;->l([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Loj0/t1;->b:Ljava/util/List;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ly3/g;Lcom/apollographql/apollo3/api/t;)Ljava/lang/Object;
+    .locals 4
+
+    const/4 v0, 0x0
+
+    move-object v1, v0
+
+    :goto_0
+    sget-object v2, Loj0/t1;->b:Ljava/util/List;
+
+    invoke-interface {p1, v2}, Ly3/g;->m4(Ljava/util/List;)I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-eqz v2, :cond_1
+
+    if-eq v2, v3, :cond_0
+
+    new-instance p1, Lnj0/j2;
+
+    invoke-direct {p1, v0, v1}, Lnj0/j2;-><init>(Lnj0/h2;Lnj0/i2;)V
+
+    return-object p1
+
+    :cond_0
+    sget-object v1, Loj0/s1;->a:Loj0/s1;
+
+    sget-object v2, Lcom/apollographql/apollo3/api/e;->a:Lcom/apollographql/apollo3/api/a;
+
+    new-instance v2, Lcom/apollographql/apollo3/api/i0;
+
+    invoke-direct {v2, v1, v3}, Lcom/apollographql/apollo3/api/i0;-><init>(Lcom/apollographql/apollo3/api/a;Z)V
+
+    invoke-virtual {v2, p1, p2}, Lcom/apollographql/apollo3/api/i0;->a(Ly3/g;Lcom/apollographql/apollo3/api/t;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lnj0/i2;
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v0, Loj0/r1;->a:Loj0/r1;
+
+    sget-object v2, Lcom/apollographql/apollo3/api/e;->a:Lcom/apollographql/apollo3/api/a;
+
+    new-instance v2, Lcom/apollographql/apollo3/api/i0;
+
+    invoke-direct {v2, v0, v3}, Lcom/apollographql/apollo3/api/i0;-><init>(Lcom/apollographql/apollo3/api/a;Z)V
+
+    invoke-virtual {v2, p1, p2}, Lcom/apollographql/apollo3/api/i0;->a(Ly3/g;Lcom/apollographql/apollo3/api/t;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnj0/h2;
+
+    goto :goto_0
+.end method
+
+.method public final b(Ly3/h;Lcom/apollographql/apollo3/api/t;Ljava/lang/Object;)V
+    .locals 3
+
+    check-cast p3, Lnj0/j2;
+
+    const-string v0, "configuration"
+
+    invoke-interface {p1, v0}, Ly3/h;->w3(Ljava/lang/String;)Ly3/h;
+
+    sget-object v0, Loj0/r1;->a:Loj0/r1;
+
+    sget-object v1, Lcom/apollographql/apollo3/api/e;->a:Lcom/apollographql/apollo3/api/a;
+
+    new-instance v1, Lcom/apollographql/apollo3/api/i0;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, v2}, Lcom/apollographql/apollo3/api/i0;-><init>(Lcom/apollographql/apollo3/api/a;Z)V
+
+    invoke-virtual {p3}, Lnj0/j2;->a()Lnj0/h2;
+
+    move-result-object v0
+
+    invoke-virtual {v1, p1, p2, v0}, Lcom/apollographql/apollo3/api/i0;->b(Ly3/h;Lcom/apollographql/apollo3/api/t;Ljava/lang/Object;)V
+
+    const-string v0, "darkConfiguration"
+
+    invoke-interface {p1, v0}, Ly3/h;->w3(Ljava/lang/String;)Ly3/h;
+
+    sget-object v0, Loj0/s1;->a:Loj0/s1;
+
+    new-instance v1, Lcom/apollographql/apollo3/api/i0;
+
+    invoke-direct {v1, v0, v2}, Lcom/apollographql/apollo3/api/i0;-><init>(Lcom/apollographql/apollo3/api/a;Z)V
+
+    invoke-virtual {p3}, Lnj0/j2;->b()Lnj0/i2;
+
+    move-result-object p3
+
+    invoke-virtual {v1, p1, p2, p3}, Lcom/apollographql/apollo3/api/i0;->b(Ly3/h;Lcom/apollographql/apollo3/api/t;Ljava/lang/Object;)V
+
+    return-void
+.end method

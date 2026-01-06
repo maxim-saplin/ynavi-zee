@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <inset android:inset="-4.0dip">
+            <vector android:height="40.0dip" android:width="40.0dip" android:viewportWidth="40.0" android:viewportHeight="40.0">
+                <path android:fillColor="@color/alicekit_palette_text_and_icon_quaternary" android:pathData="M9.5 20c0 5.799 4.701 10.5 10.5 10.5S30.5 25.799 30.5 20 25.799 9.5 20 9.5 9.5 14.201 9.5 20zM20 32c-6.627 0-12-5.373-12-12S13.373 8 20 8s12 5.373 12 12-5.373 12-12 12zm2.332-12l-4.892-6h1.935l4.506 5.526L24.268 20l-0.387 0.474L19.375 26H17.44l4.892-6z" android:fillType="evenOdd" />
+            </vector>
+        </inset>
+    </item>
+</layer-list>

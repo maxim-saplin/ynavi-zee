@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="130.0dip" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayout android:id="@id/control_position_combined_compass" android:visibility="gone" android:layout_width="@dimen/control_round_size" android:layout_height="@dimen/control_round_size" android:layout_margin="4.0dip" android:contentDescription="@string/accessibility_control_position_compass">
+            <ru.yandex.yandexmaps.controls.position.ControlPositionCompassView android:layout_gravity="center" android:id="@id/control_position_combined_compass_needle" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+        </ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayout>
+        <ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayout android:id="@id/control_position_combined_find_me" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/accessibility_control_position_idle">
+            <FrameLayout android:layout_margin="@dimen/control_rect_padding" style="@style/ControlRoundImage">
+                <ImageView android:layout_gravity="center" android:id="@id/control_position_combined_no_location" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/location_angle_denied_outlined_48" app:tint="@color/icons_primary" />
+                <ImageView android:layout_gravity="center" android:id="@id/control_position_combined_centering_off_heading_off" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/locaton_angle_filled_48" app:tint="@color/icons_primary" />
+                <ImageView android:layout_gravity="center" android:id="@id/control_position_combined_pinned_centering_off" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/pin_locality_24" app:tint="@color/icons_primary" />
+                <ImageView android:layout_gravity="center" android:id="@id/control_position_combined_centering_on_heading_off" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/locaton_angle_filled_48" app:tint="@color/icons_actions" />
+                <ImageView android:layout_gravity="center" android:id="@id/control_position_combined_centering_on_heading_on" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:rotation="45.0" app:srcCompat="@drawable/locattion_track_filled_48" app:tint="@color/icons_actions" />
+                <ImageView android:layout_gravity="center" android:id="@id/control_position_combined_pinned_centering_on" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/pin_locality_24" app:tint="@color/icons_actions" />
+            </FrameLayout>
+        </ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayout>
+    </LinearLayout>
+</merge>

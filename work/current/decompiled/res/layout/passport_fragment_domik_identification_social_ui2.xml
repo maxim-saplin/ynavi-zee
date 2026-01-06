@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView android:layout_gravity="start" android:id="@id/scroll_social_buttons" android:paddingLeft="@dimen/passport_space_24" android:paddingRight="@dimen/passport_space_24" android:scrollbars="none" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/passport_margin_16" android:overScrollMode="never"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="start" android:orientation="horizontal" android:id="@id/layout_social_buttons" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/button_social_auth_fb" android:contentDescription="@string/passport_am_social_fb" app:srcCompat="@drawable/passport_domik_social_ui2_facebook" style="@style/Passport.Widget.Icon.Social.Ui2" />
+        <ImageView android:id="@id/button_social_auth_gg" android:contentDescription="@string/passport_am_social_google" app:srcCompat="?passportNextSocialIconGoogle" style="@style/Passport.Widget.Icon.Social.Ui2" />
+        <ImageView android:id="@id/button_social_auth_vk" android:contentDescription="@string/passport_am_social_vk" app:srcCompat="@drawable/passport_domik_social_ui2_vkontakte" style="@style/Passport.Widget.Icon.Social.Ui2" />
+        <ImageView android:id="@id/button_social_auth_ok" android:contentDescription="@string/passport_am_social_ok" app:srcCompat="@drawable/passport_domik_social_ui2_odnoklassniki" style="@style/Passport.Widget.Icon.Social.Ui2" />
+        <ImageView android:id="@id/button_social_auth_mr" android:contentDescription="@string/passport_am_social_mailru" app:srcCompat="@drawable/passport_domik_social_ui2_mailru" style="@style/Passport.Widget.Icon.Social.Ui2" />
+        <ImageView android:id="@id/button_social_auth_tw" android:contentDescription="@string/passport_am_social_twitter" app:srcCompat="@drawable/passport_domik_social_ui2_twitter" style="@style/Passport.Widget.Icon.Social.Ui2" />
+        <ImageView android:id="@id/button_social_auth_phone" android:contentDescription="@string/passport_am_social_phone" app:srcCompat="@drawable/passport_domik_social_ui2_phone" style="@style/Passport.Widget.Icon.Social.Ui2" />
+        <ImageView android:id="@id/button_social_auth_more" android:contentDescription="@string/passport_auth_socials_show_button" app:srcCompat="@drawable/passport_domik_social_ui2_more" style="@style/Passport.Widget.Icon.Social.Ui2" />
+    </LinearLayout>
+</HorizontalScrollView>

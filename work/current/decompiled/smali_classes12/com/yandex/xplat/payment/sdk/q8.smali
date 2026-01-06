@@ -1,0 +1,3 @@
+.class public final Lcom/yandex/xplat/payment/sdk/q8;
+.super Ljava/lang/Object;
+.source "SourceFile"

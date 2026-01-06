@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/alice_cloud2_skill_block" android:background="@drawable/alice_cloud2_skill_block_background" android:layout_width="@dimen/alice_cloud2_skill_side_length" android:layout_height="@dimen/alice_cloud2_skill_side_length"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dip" android:textColor="@color/alicekit_palette_text_and_icon_primary" android:ellipsize="end" android:layout_gravity="left|top" android:id="@id/alice_cloud2_skill_block_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="12.0dip" android:maxLines="2" android:singleLine="false" android:fontFamily="@font/ya_medium" />
+    <ImageView android:layout_gravity="left|bottom" android:id="@id/alice_cloud2_skill_block_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

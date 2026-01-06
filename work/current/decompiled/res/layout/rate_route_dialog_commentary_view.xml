@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatEditText android:gravity="top" android:id="@id/commentary_text" android:background="@null" android:layout_width="fill_parent" android:layout_height="80.0dip" android:maxLength="280" android:inputType="textMultiLine" style="@style/Text16.TextPrimary" />
+</merge>

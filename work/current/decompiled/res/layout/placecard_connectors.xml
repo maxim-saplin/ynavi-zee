@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/placecard_connectors_ready" android:visibility="gone" layout="@layout/placecard_connectors_ready" />
+    <include android:id="@id/placecard_connectors_loading_shimmers" layout="@layout/placecard_connectors_loading_shimmer" />
+    <include android:id="@id/placecard_connectors_error" android:visibility="gone" layout="@layout/placecard_connectors_error" />
+</merge>

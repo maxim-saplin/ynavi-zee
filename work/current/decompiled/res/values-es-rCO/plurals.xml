@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Últimos %1$d dígitos</item>
+        <item quantity="zero">Últimos %1$d dígitos</item>
+        <item quantity="one">Último dígito %1$d</item>
+        <item quantity="few">Últimos %1$d dígitos</item>
+        <item quantity="many">Últimos %1$d dígitos</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"Ahora recibirás una llamada de
+%1$s. Ingresa los últimos %2$d dígitos de este número."</item>
+        <item quantity="zero">"Ahora recibirás una llamada de
+%1$s. Ingresa los últimos %2$d dígitos de este número."</item>
+        <item quantity="one">"Ahora recibirás una llamada de
+%1$s. Ingresa el último dígito de este número.%2$d"</item>
+        <item quantity="few">"Ahora recibirás una llamada de
+%1$s. Ingresa los últimos %2$d dígitos de este número."</item>
+        <item quantity="many">"Ahora recibirás una llamada de
+%1$s. Ingresa los últimos %2$d dígitos de este número."</item>
+    </plurals>
+</resources>

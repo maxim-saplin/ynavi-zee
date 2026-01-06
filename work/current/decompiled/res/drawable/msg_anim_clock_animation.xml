@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/msg_ic_message_status_in_progress"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target android:name="minutes" android:animation="@anim/minutes" />
+    <target android:name="seconds" android:animation="@anim/seconds" />
+</animated-vector>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/mt_label_on_map_taxi_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/app_taxi_20" android:scaleType="center" />
+    <TextView android:textColor="@color/text_primary_variant" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/mt_label_on_map_taxi_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mt_route_label_taxi" android:paddingEnd="2.0dip" android:layout_marginStart="2.0dip" style="@style/Text12.Medium" />
+</LinearLayout>

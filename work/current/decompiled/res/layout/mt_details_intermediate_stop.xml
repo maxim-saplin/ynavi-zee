@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/mt_details_intermediate_stop_root" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.common.views.StopEllipseView android:layout_gravity="center" android:id="@id/mt_details_intermediate_stop_ellipse" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_marginStart="30.0dip" />
+    <TextView android:id="@id/mt_details_intermediate_stop_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip" android:lineSpacingExtra="6.0sp" android:layout_marginStart="14.0dip" style="@style/Text14.Grey" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-rotate android:fromDegrees="0.0" android:toDegrees="1080.0" android:pivotX="50.0%" android:pivotY="50.0%"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape android:shape="ring" android:innerRadiusRatio="3.0" android:thicknessRatio="20.0" android:useLevel="false">
+        <size android:height="24.0dip" android:width="24.0dip" />
+        <gradient android:startColor="@color/pay_sdk_transparent" android:endColor="?pay_sdk_progressColor" android:useLevel="false" android:angle="0.0" android:type="sweep" android:centerY="0.5" android:centerColor="@color/pay_sdk_transparent" />
+    </shape>
+</animated-rotate>

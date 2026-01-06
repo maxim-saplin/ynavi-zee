@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.video.player.api.MapsVideoPlayerView android:id="@id/top_gallery_collection_video_player_view" android:background="@color/buttons_secondary" android:layout_width="fill_parent" android:layout_height="fill_parent" app:auto_show="true" app:resize_mode="zoom" app:shutter_background_color="@color/buttons_secondary" app:surface_type="texture_view" app:use_controller="false" />
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/top_gallery_collection_video_thumbnail_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="end|top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:src="@drawable/play_16" app:tint="@color/bw_white" />
+        </FrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+</merge>

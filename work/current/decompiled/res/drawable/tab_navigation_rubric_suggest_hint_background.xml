@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/common_ui_blue" />
+    <corners android:topLeftRadius="@dimen/tab_navigation_rubric_suggest_hint_background_radius" android:topRightRadius="@dimen/tab_navigation_rubric_suggest_hint_background_radius" />
+</shape>

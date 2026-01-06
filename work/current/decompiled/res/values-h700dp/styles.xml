@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BankSdk.Qr.Error.View.Description" parent="@style/Widget.Bank.Text.Body2" />
+    <style name="BankSdk.Qr.Error.View.Title" parent="@style/Widget.Bank.Text.Headline2" />
+    <style name="BankSdk.TransfersDashboard.Error.View.ButtonView" parent="@style/BankSdk.Widget.WidgetsCommon.BankButtonView.Primary.M" />
+    <style name="BankSdk.TransfersDashboard.Error.View.Description" parent="@style/Widget.Bank.Text.Body2" />
+    <style name="BankSdk.TransfersDashboard.Error.View.Title" parent="@style/Widget.Bank.Text.Headline2" />
+    <style name="OnBoardingButton">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">14.0dip</item>
+        <item name="android:paddingBottom">14.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/font_medium</item>
+        <item name="android:paddingStart">16.0dip</item>
+        <item name="android:paddingEnd">16.0dip</item>
+    </style>
+    <style name="OnBoardingSubTitleStyle" parent="@style/Text16.BlackWhite">
+        <item name="android:lineSpacingExtra">2.0dip</item>
+    </style>
+    <style name="OnBoardingTitleStyle" parent="@style/Text24.Bold.BlackWhite">
+        <item name="android:fontFamily">@font/font_onboarding_title</item>
+    </style>
+</resources>

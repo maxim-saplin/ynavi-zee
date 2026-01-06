@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ViewSwitcher android:id="@id/texts_switcher" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@id/image_view" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <com.yandex.bank.widgets.common.TextsHolder android:orientation="vertical" android:id="@id/texts_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/bank_sdk_widget_view_margin" />
+            <com.yandex.bank.widgets.common.TextsHolder android:orientation="vertical" android:id="@id/texts_second" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/bank_sdk_widget_view_margin" />
+        </ViewSwitcher>
+        <androidx.constraintlayout.widget.Barrier android:id="@id/barrier" android:layout_width="wrap_content" android:layout_height="wrap_content" app:barrierDirection="bottom" app:constraint_referenced_ids="texts_switcher,image_view" />
+        <View android:id="@id/delimiter" android:layout_width="fill_parent" android:layout_height="@dimen/bank_sdk_widget_view_delimiter_size" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/barrier" />
+        <TextView android:id="@id/button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_marginBottom="18.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/delimiter" app:layout_goneMarginBottom="4.0dip" style="@style/Widget.Bank.Text.Title1" />
+        <ImageView android:id="@id/image_view" android:layout_width="@dimen/bank_sdk_widget_view_image_size" android:layout_height="@dimen/bank_sdk_widget_view_image_size" android:contentDescription="@null" app:layout_constraintBottom_toTopOf="@id/barrier" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

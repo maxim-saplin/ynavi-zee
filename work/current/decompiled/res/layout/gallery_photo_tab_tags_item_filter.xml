@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/gallery_photo_tab_tags_item_filter_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:generalButtonSize="small" app:generalButtonStyle="accent" app:paddings="8.0dip" app:text="Все фото · 229" />
+</merge>

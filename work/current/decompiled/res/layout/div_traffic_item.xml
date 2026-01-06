@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="42.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/div_traffic_score" android:focusable="false" android:clickable="false" style="@style/Legacy.Traffic.Score" />
+    <TextView android:id="@id/div_traffic_text" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Legacy.Traffic.Text" />
+</LinearLayout>

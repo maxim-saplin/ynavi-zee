@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/placecard_feature_icon" android:visibility="gone" android:layout_width="@dimen/placecard_feature_icon_width" android:layout_height="@dimen/placecard_feature_icon_height" android:tint="@color/icons_secondary" android:paddingEnd="@dimen/placecard_feature_icon_text_padding" />
+    <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/placecard_feature_text" android:paddingTop="@dimen/placecard_extra_feature_item_text_padding" android:paddingBottom="@dimen/placecard_extra_feature_item_text_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/placecard_extra_details_min_height" style="@style/Text14" />
+</merge>

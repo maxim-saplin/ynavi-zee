@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/bg_separator" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <HorizontalScrollView android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip" android:paddingVertical="12.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/collection_action_buttons_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="@drawable/buttons_divider" android:showDividers="middle" />
+    </HorizontalScrollView>
+</merge>

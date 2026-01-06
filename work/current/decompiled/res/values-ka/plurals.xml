@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="PlusPay.Consumable.SpendPoints.Description">
+        <item quantity="other">დახარჯეთ &lt;point> ქულები</item>
+        <item quantity="zero">დახარჯეთ &lt;point> ქულები</item>
+        <item quantity="one">დახარჯეთ &lt;point> ქულები</item>
+        <item quantity="few">დახარჯეთ &lt;point> ქულები</item>
+        <item quantity="many">დახარჯეთ &lt;point> ქულები</item>
+    </plurals>
+    <plurals name="ask_disk_space_files_count">
+        <item quantity="other">%1$d ფაილი</item>
+        <item quantity="one">%1$d ფაილი</item>
+        <item quantity="few">%1$d ფაილი</item>
+    </plurals>
+    <plurals name="calls_feedback_show_all_reasons_button_text">
+        <item quantity="other">%d სხვა მიზეზი…</item>
+        <item quantity="one">%d სხვა მიზეზი…</item>
+        <item quantity="few">%d სხვა მიზეზი…</item>
+    </plurals>
+    <plurals name="channel_subscribers_plural">
+        <item quantity="other">%1$d გამომწერი</item>
+        <item quantity="one">%1$d გამომწერი</item>
+        <item quantity="few">%1$d გამომწერი</item>
+    </plurals>
+    <plurals name="chat_attach_send_files">
+        <item quantity="other">%1$d ფაილის გაგზავნა</item>
+        <item quantity="one">ფაილის გაგზავნა</item>
+        <item quantity="few">%1$d ფაილის გაგზავნა</item>
+    </plurals>
+    <plurals name="chat_attach_send_gif">
+        <item quantity="other">%1$d სურათის გაგზავნა</item>
+        <item quantity="one">სურათის გაგზავნა</item>
+        <item quantity="few">%1$d სურათის გაგზავნა</item>
+    </plurals>
+    <plurals name="chat_attach_send_images">
+        <item quantity="other">%1$d გამოსახულების გაგზავნა</item>
+        <item quantity="one">გამოსახულების გაგზავნა</item>
+        <item quantity="few">%1$d გამოსახულების გაგზავნა</item>
+    </plurals>
+    <plurals name="chat_members_plural">
+        <item quantity="other">%1$d მონაწილე</item>
+        <item quantity="one">%1$d მონაწილე</item>
+        <item quantity="few">%1$d მონაწილე</item>
+    </plurals>
+    <plurals name="chat_status_typing_many">
+        <item quantity="other">%d კრეფს ტექსტს</item>
+        <item quantity="one">%d კრეფს ტექსტს</item>
+        <item quantity="few">%d კრეფს ტექსტს</item>
+    </plurals>
+    <plurals name="chat_threadlist_status">
+        <item quantity="other">%1$d მიმოწერა გაქვთ გამოწერილი</item>
+        <item quantity="one">%1$d მიმოწერა გაქვთ გამოწერილი</item>
+        <item quantity="few">%1$d მიმოწერა გაქვთ გამოწერილი</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d საათით</item>
+        <item quantity="one">%d საათით</item>
+        <item quantity="few">%d საათით</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d წუთით</item>
+        <item quantity="one">%d წუთით</item>
+        <item quantity="few">%d წუთით</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">წინ გადახვევა %d წამით</item>
+        <item quantity="one">წინ გადახვევა %d წამით</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">უკან გადახვევა %d წამით</item>
+        <item quantity="one">უკან გადახვევა %d წამით</item>
+    </plurals>
+    <plurals name="forward_messages_text">
+        <item quantity="other">%1$s შეტყობინების გადაგზავნა</item>
+        <item quantity="one">%1$s შეტყობინების გადაგზავნა</item>
+        <item quantity="few">%1$s შეტყობინების გადაგზავნა</item>
+    </plurals>
+    <plurals name="group_call_participants_count_text">
+        <item quantity="other">%d მონაწილე</item>
+        <item quantity="one">%d მონაწილე</item>
+        <item quantity="few">%d მონაწილე</item>
+    </plurals>
+    <plurals name="international.PlusPay.Consumable.SpendPoints.Description">
+        <item quantity="other">დახარჯეთ &lt;point> ქულები</item>
+        <item quantity="zero">დახარჯეთ &lt;point> ქულები</item>
+        <item quantity="one">დახარჯეთ &lt;point> ქულები</item>
+        <item quantity="two">დახარჯეთ &lt;point> ქულები</item>
+        <item quantity="few">დახარჯეთ &lt;point> ქულები</item>
+        <item quantity="many">დახარჯეთ &lt;point> ქულები</item>
+    </plurals>
+    <plurals name="menu_confirm_delete_messages_plural">
+        <item quantity="other">%1$d შეტყობინების წაშლა</item>
+        <item quantity="one">%1$d შეტყობინების წაშლა</item>
+        <item quantity="few">%1$d შეტყობინების წაშლა</item>
+    </plurals>
+    <plurals name="menu_reactions">
+        <item quantity="other">%s რეაქცია</item>
+        <item quantity="one">%s რეაქცია</item>
+        <item quantity="few">%s რეაქცია</item>
+    </plurals>
+    <plurals name="messaging_chat_search_result">
+        <item quantity="other">%2$d‑დან %1$d დამთხვევა</item>
+        <item quantity="one">%2$d‑დან %1$d დამთხვევა</item>
+        <item quantity="few">%2$d‑დან %1$d დამთხვევა</item>
+    </plurals>
+    <plurals name="messaging_online_minutes_ago">
+        <item quantity="other">ბოლო ვიზიტი: %d წუთის წინ</item>
+        <item quantity="one">ბოლო ვიზიტი: %d წუთის წინ</item>
+        <item quantity="few">ბოლო ვიზიტი: %d წუთის წინ</item>
+    </plurals>
+    <plurals name="messaging_removed_messages_group_plural">
+        <item quantity="other">%d შეტყობინება წაიშალა</item>
+        <item quantity="one">%d შეტყობინება წაიშალა</item>
+        <item quantity="few">%d შეტყობინება წაიშალა</item>
+    </plurals>
+    <plurals name="messaging_thread_counter_label">
+        <item quantity="other">%1$d პასუხი</item>
+        <item quantity="one">%1$d პასუხი</item>
+        <item quantity="few">%1$d პასუხი</item>
+    </plurals>
+    <plurals name="messenger_count_recent_voters">
+        <item quantity="other">%d ხმა</item>
+        <item quantity="one">%d ხმა</item>
+        <item quantity="few">%d ხმა</item>
+    </plurals>
+    <plurals name="messenger_create_poll_max_answers_warn">
+        <item quantity="other">შესაძლებელია კიდევ %d პასუხის დამატება</item>
+        <item quantity="one">შესაძლებელია კიდევ %d პასუხის დამატება</item>
+        <item quantity="few">შესაძლებელია კიდევ %d პასუხის დამატება</item>
+    </plurals>
+    <plurals name="messenger_poll_answers_count">
+        <item quantity="other">%d პასუხი</item>
+        <item quantity="one">%d პასუხი</item>
+        <item quantity="few">%d პასუხი</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d ახალი შეტყობინება</item>
+        <item quantity="one">%d ახალი შეტყობინება</item>
+    </plurals>
+    <plurals name="notification_chat_title_plural">
+        <item quantity="other">%1$s: %2$s ახალი შეტყობინება</item>
+        <item quantity="one">%1$s: %2$s ახალი შეტყობინება</item>
+        <item quantity="few">%1$s: %2$s ახალი შეტყობინება</item>
+    </plurals>
+    <plurals name="notification_new_messages_count">
+        <item quantity="other">%d ახალი შეტყობინება</item>
+        <item quantity="one">%d ახალი შეტყობინება</item>
+        <item quantity="few">%d ახალი შეტყობინება</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Ბოლო %1$d ციფრი</item>
+        <item quantity="zero">Ბოლო %1$d ციფრი</item>
+        <item quantity="one">ბოლო %1$d ციფრი</item>
+        <item quantity="few">Ბოლო %1$d ციფრი</item>
+        <item quantity="many">Ბოლო %1$d ციფრი</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"ახლა თქვენ მიიღებთ ზარს ნომრიდან
+%1$s. შეიყვანეთ ნომრის ბოლო %2$d ციფრი"</item>
+        <item quantity="zero">"ახლა თქვენ მიიღებთ ზარს ნომრიდან
+%1$s. შეიყვანეთ ნომრის ბოლო %2$d ციფრი"</item>
+        <item quantity="one">"ახლა თქვენ მიიღებთ ზარს ნომრიდან
+%1$s. შეიყვანეთ ნომრის ბოლო %2$d ციფრი"</item>
+        <item quantity="few">"ახლა თქვენ მიიღებთ ზარს ნომრიდან
+%1$s. შეიყვანეთ ნომრის ბოლო %2$d ციფრი"</item>
+        <item quantity="many">"ახლა თქვენ მიიღებთ ზარს ნომრიდან
+%1$s. შეიყვანეთ ნომრის ბოლო %2$d ციფრი"</item>
+    </plurals>
+    <plurals name="user_in_groups">
+        <item quantity="other">ჯგუფებში: %s</item>
+        <item quantity="one">ჯგუფში %s</item>
+        <item quantity="few">ჯგუფებში: %s</item>
+    </plurals>
+    <plurals name="user_in_groups_count">
+        <item quantity="other">%d ჯგუფში</item>
+        <item quantity="one">%d ჯგუფში</item>
+        <item quantity="few">%d ჯგუფში</item>
+    </plurals>
+    <plurals name="voice_timelimit_minutes_plural">
+        <item quantity="other">%1$d წუთი.</item>
+        <item quantity="one">%1$d წუთი.</item>
+        <item quantity="few">%1$d წუთი.</item>
+    </plurals>
+</resources>

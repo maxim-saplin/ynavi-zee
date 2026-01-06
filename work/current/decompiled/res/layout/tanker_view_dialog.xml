@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/tankerRootView" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/tankerDimView" android:background="@color/tanker_dimmy_dialog" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+    <FrameLayout android:id="@id/additionalContent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:alpha="0.0" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_gravity="bottom" android:id="@id/bottomDialog" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/scrollableView" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:layout_gravity="center_horizontal" android:id="@id/divider" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" style="@style/TankerDividerView" />
+            <FrameLayout android:id="@id/tankerDialogContentView" android:background="@color/tanker_backgroundColorNew" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

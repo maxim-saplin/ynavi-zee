@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.presentation.common.longtap.LongTapButton android:gravity="center" android:background="@drawable/common_borderless_ripple_background" android:layout_width="0.0dip" android:layout_height="108.0dip" android:text="@string/guidance_via_point_button_pedestrian" android:letterSpacing="@dimen/common_text_all_caps_spacing" app:srcCompat="@drawable/route_via_24" style="@style/Text14.Medium.Blue"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.webcard.internal.recycler.blocks.web.WebContentFrameLayout android:id="@id/fullscreen_webcard_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/fullscreen_webcard_controllers_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end|top" android:id="@id/fullscreen_webcard_close_button" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" app:transparentBackground="false" />
+        </FrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+</FrameLayout>

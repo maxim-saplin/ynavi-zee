@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/id_stickers_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:behavior_hideable="true" app:behavior_peekHeight="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/id_back_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <androidx.recyclerview.widget.RecyclerView android:layout_gravity="bottom" android:id="@id/id_stickers_grid" android:background="@drawable/attach_rounded_stickers_background" android:paddingTop="30.0dip" android:layout_width="fill_parent" android:layout_height="560.0dip" android:paddingStart="18.0dip" android:paddingEnd="18.0dip" />
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="center" android:id="@id/id_error" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attachments_common_stickers_error_downloading" />
+</FrameLayout>

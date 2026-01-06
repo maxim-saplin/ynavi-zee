@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/success_root" android:background="?pay_sdk_primaryBlockColor" android:clipChildren="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.plus.pay.ui.core.internal.tarifficator.ui.success.native.SuccessNativeContentView android:id="@id/success_native_content_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.yandex.plus.pay.ui.common.api.ui.view.ProgressView android:layout_gravity="center" android:id="@id/success_progress_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.yandex.plus.webview.api.WebViewContainer android:id="@id/success_webview_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="passport_icon_yandex_en_big">@drawable/passport_icon_yandex_en_192</item>
+    <item type="drawable" name="passport_icon_yandex_en_small">@drawable/passport_icon_yandex_en_96</item>
+    <item type="drawable" name="passport_icon_yandex_ru_big">@drawable/passport_icon_yandex_ru_192</item>
+    <item type="drawable" name="passport_icon_yandex_ru_small">@drawable/passport_icon_yandex_ru_96</item>
+</resources>

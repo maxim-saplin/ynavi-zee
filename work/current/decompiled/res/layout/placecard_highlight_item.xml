@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/highlight_image_group" android:background="@drawable/highlight_preview_item_background" android:clipToPadding="false" android:layout_width="90.0dip" android:layout_height="118.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/highlight_image" android:layout_width="82.0dip" android:layout_height="110.0dip" android:foreground="@drawable/highlight_preview_item_foreground" android:scaleType="centerCrop" android:importantForAccessibility="no" />
+    </FrameLayout>
+    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/highlight_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" style="@style/Text12.Medium" />
+    <TextView android:ellipsize="end" android:id="@id/highlight_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="1" android:singleLine="true" style="@style/Text12.TextSecondary" />
+</merge>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/tanker_backgroundColorNew" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/tankerAppBar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.tankerapp.ui.TankerToolbar android:id="@id/tankerToolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <ru.tankerapp.android.sdk.navigator.view.widgets.webview.WebViewWrapper android:id="@id/webViewWrapper" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:background="?bankColor_background_primary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space">
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginTop="32.0dip" android:layout_marginEnd="109.0dip" />
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="fill_parent" android:layout_height="18.0dip" android:layout_marginTop="16.0dip" android:layout_marginEnd="54.0dip" />
+        <com.yandex.bank.widgets.common.SkeletonView android:layout_width="fill_parent" android:layout_height="18.0dip" android:layout_marginTop="4.0dip" android:layout_marginEnd="163.0dip" />
+    </LinearLayout>
+    <com.yandex.bank.widgets.common.SkeletonView android:layout_gravity="bottom" android:id="@id/skeletonButton" android:layout_width="fill_parent" android:layout_height="54.0dip" android:layout_marginBottom="22.0dip" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" app:bank_sdk_cornerRadius="14.0dip" />
+</com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/log" android:paddingTop="@dimen/plus_sdk_mu_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/plus_sdk_mu_2"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.plus.home.feature.webviews.internal.serviceinfo.ServiceCommonItem android:id="@id/sessionId" android:layout_width="fill_parent" android:layout_height="wrap_content" app:plus_sdk_titleText="SessionId:" />
+    <com.yandex.plus.home.feature.webviews.internal.serviceinfo.ServiceCommonItem android:id="@id/timestamp" android:layout_width="fill_parent" android:layout_height="wrap_content" app:plus_sdk_titleText="Timestamp:" />
+    <com.yandex.plus.home.feature.webviews.internal.serviceinfo.ServiceCommonItem android:id="@id/tag" android:layout_width="fill_parent" android:layout_height="wrap_content" app:plus_sdk_titleText="Tag:" />
+    <com.yandex.plus.home.feature.webviews.internal.serviceinfo.ServiceCommonItem android:id="@id/level" android:layout_width="fill_parent" android:layout_height="wrap_content" app:plus_sdk_titleText="Level:" />
+    <com.yandex.plus.home.feature.webviews.internal.serviceinfo.ServiceCommonItem android:id="@id/raw_level" android:layout_width="fill_parent" android:layout_height="wrap_content" app:plus_sdk_titleText="Raw level:" />
+    <com.yandex.plus.home.feature.webviews.internal.serviceinfo.ServiceCommonItem android:id="@id/location" android:layout_width="fill_parent" android:layout_height="wrap_content" app:plus_sdk_titleText="Location:" />
+    <com.yandex.plus.home.feature.webviews.internal.serviceinfo.ServiceCommonItem android:id="@id/function" android:layout_width="fill_parent" android:layout_height="wrap_content" app:plus_sdk_titleText="Function:" />
+    <com.yandex.plus.home.feature.webviews.internal.serviceinfo.ServiceCommonItem android:id="@id/thread" android:layout_width="fill_parent" android:layout_height="wrap_content" app:plus_sdk_titleText="Thread:" />
+    <com.yandex.plus.home.feature.webviews.internal.serviceinfo.ServiceCommonItem android:id="@id/thread_sequence" android:layout_width="fill_parent" android:layout_height="wrap_content" app:plus_sdk_titleText="Thread sequence:" />
+    <com.yandex.plus.home.feature.webviews.internal.serviceinfo.ServiceCommonItem android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" app:plus_sdk_titleText="Message:" />
+</LinearLayout>

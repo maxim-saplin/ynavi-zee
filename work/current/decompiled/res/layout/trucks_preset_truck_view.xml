@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/text_preset_truck_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:maxLines="2" android:lines="2" style="@style/Text16.Medium.TextPrimary" />
+        <FrameLayout android:layout_gravity="start" android:layout_width="72.0dip" android:layout_height="34.0dip" android:layout_marginBottom="16.0dip">
+            <ru.yandex.yandexmaps.multiplatform.trucks.common.api.components.TrucksImageView android:layout_gravity="end" android:id="@id/image_truck" android:layout_width="94.0dip" android:layout_height="fill_parent" android:scaleType="fitEnd" />
+        </FrameLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <ru.yandex.yandexmaps.multiplatform.trucks.common.api.components.TrucksSelectableContainer android:id="@id/view_selectable_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

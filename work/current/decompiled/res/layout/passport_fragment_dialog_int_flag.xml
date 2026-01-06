@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/passport_space_20" android:layout_marginTop="@dimen/passport_space_16" android:layout_marginRight="@dimen/passport_space_20" android:hint="Enter numeric value" style="@style/Passport.Widget.TextInputLayout">
+        <com.yandex.passport.internal.ui.PassportTextInputEditText android:id="@id/numeric_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="number" android:imeOptions="actionDone" style="@style/Passport.Widget.EditText.Login" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

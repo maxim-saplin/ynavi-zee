@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/background_white_black_with_top_rounded_corners" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/ar_dialog_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48.0dip" />
+            <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ar_dialog_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/Text18.Medium.BlackDarkGrey" />
+            <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ar_dialog_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/Text14.DarkerGreyDarkGrey" />
+            <Button android:layout_gravity="center_horizontal" android:id="@id/ar_dialog_button_open" android:layout_marginTop="40.0dip" android:text="@string/ar_dialog_button_open" android:layout_marginStart="40.0dip" android:layout_marginEnd="40.0dip" style="@style/CommonLargeYellowButton" />
+            <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/ar_dialog_button_later" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_marginBottom="36.0dip" android:text="@string/ar_dialog_button_later" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/Text14.Medium.DarkerGreyWhite" />
+        </LinearLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <ImageView android:layout_gravity="end|top" android:id="@id/ar_dialog_button_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:tint="@color/icons_additional" android:layout_marginEnd="16.0dip" app:srcCompat="@drawable/close_24" />
+</FrameLayout>

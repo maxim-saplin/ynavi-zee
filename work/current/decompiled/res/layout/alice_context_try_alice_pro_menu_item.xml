@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="left|center" android:orientation="horizontal" android:id="@id/context_menu_item" android:background="@drawable/context_menu_item_ripple" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0dip" android:textColor="@color/alicekit_palette_text_primary_v2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/alice_2_context_menu_try_alice_pro_item" android:fontFamily="@font/ya_medium" android:paddingHorizontal="16.0dip" android:lineHeight="16.0dip" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/ic_alice_pro_badge" android:contentDescription="@null" />
+</LinearLayout>

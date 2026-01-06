@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip" android:paddingVertical="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/section_recycler" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:id="@id/mt_section_alert_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" style="@style/Text14.TextPrimary" />
+</merge>

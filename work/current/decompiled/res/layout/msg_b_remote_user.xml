@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/calls_remote_user_avatar" android:layout_width="58.0dip" android:layout_height="58.0dip" android:contentDescription="@null" android:elevation="6.0dip" />
+    <TextView android:textSize="20.0sp" android:textColor="@color/messenger_common_white" android:gravity="center_horizontal" android:id="@id/calls_remote_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:fontFamily="@font/ya_bold" />
+    <TextView android:textSize="14.0sp" android:textColor="@color/messenger_common_white" android:gravity="center_horizontal" android:id="@id/calls_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:maxLines="1" android:lines="1" android:minLines="1" android:alpha="0.8" android:fontFamily="@font/ya_regular" />
+</LinearLayout>

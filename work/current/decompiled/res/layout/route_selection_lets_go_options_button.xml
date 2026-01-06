@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="@drawable/common_borderless_ripple_background" android:layout_width="@dimen/lets_go_panel_button_width" android:layout_height="@dimen/lets_go_panel_button_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.bottompanel.common.IconWithBadgeView android:layout_gravity="center" android:id="@id/lets_go_options_button_content_collapsed" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.bottompanel.common.IconWithBadgeView android:layout_gravity="center" android:id="@id/lets_go_options_button_content_expanded" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <TextView android:textSize="12.0dip" android:id="@id/lets_go_options_button_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+    </LinearLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@id/lets_go_options_button_shimmer" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonShimmer" />
+</merge>

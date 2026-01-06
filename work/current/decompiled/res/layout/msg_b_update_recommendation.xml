@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:paddingLeft="16.0dip" android:paddingTop="9.0dip" android:paddingRight="12.0dip" android:paddingBottom="9.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="left|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="?messagingCommonTextPrimaryColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/messaging_chat_list_update_recommendation_title_text" android:fontFamily="@font/ya_medium" />
+            <TextView android:textSize="14.0sp" android:textColor="?messagingCommonTextSecondaryColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/messaging_chat_list_update_recommendation_subtitle_text" android:fontFamily="@font/ya_regular" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textColor="?messagingCommonTextSecondaryColor" android:layout_gravity="right|center" android:id="@id/messaging_update_recommendation_button" android:background="@drawable/msg_bg_update_button" android:padding="7.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/messaging_chat_list_update_recommendation_button_text" android:fontFamily="@font/ya_medium" />
+    </FrameLayout>
+    <View android:layout_gravity="bottom" android:background="#ffdfe4eb" android:layout_width="fill_parent" android:layout_height="@dimen/chat_separator_size" />
+</LinearLayout>

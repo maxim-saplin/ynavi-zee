@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/unique_alice" />
+    <corners android:topLeftRadius="@dimen/alice_chat_item_corner_large" android:topRightRadius="@dimen/alice_chat_item_corner_small" android:bottomLeftRadius="@dimen/alice_chat_item_corner_large" android:bottomRightRadius="@dimen/alice_chat_item_corner_small" />
+</shape>

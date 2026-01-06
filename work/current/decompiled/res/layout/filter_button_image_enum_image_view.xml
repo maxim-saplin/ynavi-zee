@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="24.0dip" android:layout_height="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.RoundedImageView android:layout_gravity="center" android:layout_width="@dimen/filter_image_view_image_size" android:layout_height="@dimen/filter_image_view_image_size" android:src="@color/buttons_secondary" app:cornerRadius="8.0dip" />
+    <ru.yandex.yandexmaps.common.views.RoundedImageView android:layout_gravity="center" android:id="@id/filter_button_image_filter_image" android:layout_width="@dimen/filter_image_view_image_size" android:layout_height="@dimen/filter_image_view_image_size" android:scaleType="centerCrop" app:cornerRadius="8.0dip" />
+    <View android:id="@id/search_image_enum_filter_item_boarded_view" android:background="@drawable/search_image_enum_filter_image_foreground" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

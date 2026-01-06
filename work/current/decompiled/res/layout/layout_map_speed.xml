@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexnavi.ui.guidance.speed.SpeedViewImpl android:orientation="vertical" android:id="@id/speedview_guidance" android:clipChildren="false" android:layout_width="@dimen/size_map_speed" android:layout_height="@dimen/size_map_speed"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/view_speed_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.yandex.navilib.widget.NaviTextView android:textColor="@color/text_primary" android:ellipsize="none" android:gravity="center" android:layout_gravity="center" android:id="@id/text_speed_value" android:padding="@dimen/ovelap_speed_speedlimit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" app:fontFamily="@font/ys_text_bold" style="@style/NaviTextBold" />
+</ru.yandex.yandexnavi.ui.guidance.speed.SpeedViewImpl>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/barcodeContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/tanker_medium_text_size" android:textColor="@color/tanker_text_primary" android:gravity="center" android:id="@id/descriptionTv" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/tanker_basic_padding" app:layout_constraintBottom_toTopOf="@id/barcodeFrame" app:layout_constraintEnd_toEndOf="@id/barcodeFrame" app:layout_constraintStart_toStartOf="@id/barcodeFrame" style="@style/TankerTextMedium" />
+    <FrameLayout android:id="@id/barcodeFrame" android:background="@drawable/tanker_barcode_background" android:padding="@dimen/tanker_basic_padding_half" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/tanker_basic_padding" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/cancelButton" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:id="@id/barcodeImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="500.0dip" android:minHeight="150.0dip" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/cancelButton" android:layout_width="50.0dip" android:layout_height="0.0dip" android:layout_margin="@dimen/tanker_basic_padding" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/TankerButtonDarkStyle">
+        <FrameLayout android:layout_gravity="center" android:layout_width="300.0dip" android:layout_height="300.0dip">
+            <TextView android:enabled="true" android:textSize="@dimen/tanker_medium_text_size" android:textColor="@color/tanker_button_default_link_text" android:ellipsize="none" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_close" android:rotation="-90.0" style="@style/TankerTextMedium" />
+        </FrameLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

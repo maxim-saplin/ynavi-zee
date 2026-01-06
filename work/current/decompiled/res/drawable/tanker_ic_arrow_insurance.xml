@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="10.0dip" android:width="6.0dip" android:viewportWidth="6.0" android:viewportHeight="10.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/tanker_insurance" android:pathData="M3.8974,5L0.2177,1.2822C-0.0726,0.9889 -0.0726,0.5133 0.2177,0.22C0.5081,-0.0733 0.9787,-0.0733 1.2691,0.22L6,5L1.2691,9.78C0.9787,10.0733 0.5081,10.0733 0.2177,9.78C-0.0726,9.4867 -0.0726,9.0111 0.2177,8.7178L3.8974,5Z" />
+</vector>

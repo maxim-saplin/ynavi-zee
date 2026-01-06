@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.dialog.options.common.OptionsDialogHeaderView android:id="@id/options_dialog_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:id="@id/options_dialog_spacer" android:background="@color/background_panel" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+    <TextView android:textColor="@color/bw_grey60" android:gravity="start|bottom" android:id="@id/options_dialog_group_header" android:background="@color/bg_additional" android:paddingBottom="8.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="48.0dip" android:text="@string/routes_transport_preferences" android:textAllCaps="true" android:importantForAccessibility="yes" android:textDirection="locale" android:paddingStart="16.0dip" />
+    <ru.yandex.yandexmaps.common.views.MaxHeightSupportedRecyclerView android:id="@id/mt_options_recycler" android:background="@color/background_panel" android:paddingTop="@dimen/common_border_thickness" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

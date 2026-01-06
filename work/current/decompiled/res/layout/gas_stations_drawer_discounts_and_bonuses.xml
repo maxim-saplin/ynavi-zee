@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:background="@color/bg_additional" android:clipChildren="false" android:clipToPadding="false" android:layout_width="130.0dip" android:layout_height="@dimen/gas_stations_drawer_subblock_height" android:paddingHorizontal="@dimen/gas_stations_drawer_card_horizontal_padding" android:paddingVertical="@dimen/gas_stations_drawer_card_vertical_padding" app:cornerRadius="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/discounts_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="40.0dip" style="@style/Text16.Medium" />
+        <ImageView android:id="@id/discounts_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/gas_stations_drawer_card_discounts_vertical_spacing" android:src="@drawable/discount_24" app:tint="@color/icons_primary" />
+    </LinearLayout>
+</ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>

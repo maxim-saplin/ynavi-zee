@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Tua nhanh %d giây</item>
+        <item quantity="one">Tua nhanh %d giây</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Tua lại %d giây</item>
+        <item quantity="one">Tua lại %d giây</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d thông báo mới</item>
+        <item quantity="one">%d thông báo mới</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">%1$d chữ số cuối cùng</item>
+        <item quantity="zero">%1$d chữ số cuối cùng</item>
+        <item quantity="one">%1$d chữ số cuối cùng</item>
+        <item quantity="few">%1$d chữ số cuối cùng</item>
+        <item quantity="many">%1$d chữ số cuối cùng</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"Bây giờ bạn sẽ nhận được một cuộc gọi từ
+%1$s. Nhập %2$d chữ số cuối cùng của số này."</item>
+        <item quantity="zero">"Bây giờ bạn sẽ nhận được một cuộc gọi từ
+%1$s. Nhập %2$d chữ số cuối cùng của số này."</item>
+        <item quantity="one">"Bây giờ bạn sẽ nhận được một cuộc gọi từ
+%1$s. Nhập %2$d chữ số cuối cùng của số này."</item>
+        <item quantity="few">"Bây giờ bạn sẽ nhận được một cuộc gọi từ
+%1$s. Nhập %2$d chữ số cuối cùng của số này."</item>
+        <item quantity="many">"Bây giờ bạn sẽ nhận được một cuộc gọi từ
+%1$s. Nhập %2$d chữ số cuối cùng của số này."</item>
+    </plurals>
+</resources>

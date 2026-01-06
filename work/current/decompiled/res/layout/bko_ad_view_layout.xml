@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/placecard_bko_ad_banner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip">
+        <ImageView android:id="@id/placecard_bko_ad_banner_image" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginEnd="12.0dip" />
+        <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/placecard_bko_ad_banner_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:textDirection="inherit" android:textAlignment="viewStart" style="@style/Text14" />
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_down_8" android:layout_marginStart="8.0dip" app:tint="@color/text_additional" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/placecard_bko_ad_gallery_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/placecard_bko_ad_gallery_title_image" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginEnd="4.0dip" />
+            <TextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/placecard_bko_ad_gallery_title" android:layout_weight="1.0" style="@style/Text14.TextPrimary" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/placecard_bko_ad_gallery_ad_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_serp_list_item_ads" android:paddingStart="16.0dip" style="@style/Text12.TextAdditional" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/placecard_bko_ad_gallery" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/placecard_bko_ad_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" app:generalButtonSize="medium" app:generalButtonStyle="colorBG" />
+</merge>

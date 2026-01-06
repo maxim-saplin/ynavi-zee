@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:id="@id/scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Passport.Widget.Domik.ScrollView">
+        <LinearLayout android:orientation="vertical" android:id="@id/scroll_view_content" android:paddingTop="@dimen/passport_domik_top_padding" android:paddingBottom="@dimen/passport_domik_bottom_scrollable_padding_full" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Space android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:gravity="start" android:id="@id/text_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/passport_space_24" android:layout_marginRight="@dimen/passport_space_24" android:textDirection="anyRtl" android:textAlignment="textStart" style="@style/Passport.Widget.TextView.Message" />
+            <Space android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <com.yandex.passport.internal.widget.ConfirmationCodeInput android:textSize="32.0sp" android:id="@id/input_phone_code" android:layout_width="fill_parent" android:layout_height="@dimen/passport_next_edit_height" android:layout_marginLeft="@dimen/passport_space_20" android:layout_marginTop="@dimen/passport_space_16" android:layout_marginRight="@dimen/passport_space_20" app:passport_codeLength="4" />
+            <TextView android:id="@id/text_error" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/passport_space_24" android:layout_marginRight="@dimen/passport_space_24" style="@style/Passport.Widget.TextView.Error" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:layout_gravity="bottom" android:id="@id/button_next" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/passport_space_20" android:layout_marginRight="@dimen/passport_space_20" android:layout_marginBottom="@dimen/passport_space_24" android:text="@string/passport_reg_next" style="@style/Passport.Widget.Button.Primary" />
+    <ProgressBar android:layout_gravity="bottom" android:id="@id/progress" style="@style/Passport.Widget.Progress" />
+</FrameLayout>

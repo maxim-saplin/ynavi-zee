@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/construction_image_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ru.yandex.yandexmaps.common.views.PoiLabelView android:layout_gravity="center" android:id="@id/construction_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" app:poiLabel_align="center" app:poiLabel_ellipsize="true" app:poiLabel_fontFamily="medium" app:poiLabel_strokeColor="@color/bg_primary" app:poiLabel_strokeWidth="4.0" app:poiLabel_textColor="@color/text_primary_variant" app:poiLabel_textSize="14.0sp" xmlns:app="http://schemas.android.com/apk/res-auto" />
+</LinearLayout>

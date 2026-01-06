@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayout android:layout_gravity="center" android:id="@id/control_position_combined_find_me" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <View android:layout_gravity="center" android:background="@drawable/speedometer_background" android:layout_width="@dimen/speedometer_height" android:layout_height="@dimen/speedometer_height" android:layout_margin="@dimen/control_rect_padding" />
+        <TextView android:layout_gravity="center" android:id="@id/control_speedometer_speed_view" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text20.Bold.Black" />
+    </ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayout>
+</merge>

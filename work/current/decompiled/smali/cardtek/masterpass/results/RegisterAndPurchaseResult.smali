@@ -1,0 +1,92 @@
+.class public Lcardtek/masterpass/results/RegisterAndPurchaseResult;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# instance fields
+.field private card:Lcardtek/masterpass/data/Card;
+
+.field private refNo:Ljava/lang/String;
+
+.field private result:Z
+
+.field private token:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getCard()Lcardtek/masterpass/data/Card;
+    .locals 1
+
+    iget-object v0, p0, Lcardtek/masterpass/results/RegisterAndPurchaseResult;->card:Lcardtek/masterpass/data/Card;
+
+    return-object v0
+.end method
+
+.method public getRefNo()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcardtek/masterpass/results/RegisterAndPurchaseResult;->refNo:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getResult()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcardtek/masterpass/results/RegisterAndPurchaseResult;->result:Z
+
+    return v0
+.end method
+
+.method public getToken()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcardtek/masterpass/results/RegisterAndPurchaseResult;->token:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public setCard(Lcardtek/masterpass/data/Card;)V
+    .locals 0
+
+    iput-object p1, p0, Lcardtek/masterpass/results/RegisterAndPurchaseResult;->card:Lcardtek/masterpass/data/Card;
+
+    return-void
+.end method
+
+.method public setRefNo(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcardtek/masterpass/results/RegisterAndPurchaseResult;->refNo:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setResult(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcardtek/masterpass/results/RegisterAndPurchaseResult;->result:Z
+
+    return-void
+.end method
+
+.method public setToken(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcardtek/masterpass/results/RegisterAndPurchaseResult;->token:Ljava/lang/String;
+
+    return-void
+.end method

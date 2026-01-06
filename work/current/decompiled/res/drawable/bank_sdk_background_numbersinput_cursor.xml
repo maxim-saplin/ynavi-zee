@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?bankColor_textIcon_primary" />
+    <size android:height="@dimen/bank_sdk_height_moneyinput_cursor" android:width="@dimen/bank_sdk_width_moneyinput_cursor" />
+</shape>

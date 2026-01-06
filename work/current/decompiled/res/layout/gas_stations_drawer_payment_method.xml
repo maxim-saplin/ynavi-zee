@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:background="@color/bg_additional" android:clipChildren="false" android:clipToPadding="false" android:layout_width="343.0dip" android:layout_height="64.0dip" android:paddingHorizontal="@dimen/gas_stations_drawer_card_horizontal_padding" android:paddingVertical="@dimen/gas_stations_drawer_card_vertical_padding" app:cornerRadius="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:id="@id/gas_stations_payment_method_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/Text16.Medium" />
+            <TextView android:ellipsize="end" android:id="@id/gas_stations_payment_method_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:singleLine="true" style="@style/Text14" />
+        </LinearLayout>
+        <ImageView android:id="@id/gas_stations_payment_method_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gas_addcard_40" android:maxWidth="@dimen/gas_stations_drawer_card_payment_icon_max_width" android:maxHeight="@dimen/gas_stations_drawer_card_payment_icon_max_height" android:layout_marginStart="12.0dip" app:tint="@color/icons_primary" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/gas_stations_payment_method_specified_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12.0dip">
+            <TextView android:gravity="center" android:id="@id/gas_stations_payment_method_digits" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/gas_stations_drawer_card_payment_icon_to_name_spacing" style="@style/Text16.Medium" />
+            <ImageView android:id="@id/gas_stations_payment_method_icon" android:layout_width="36.0dip" android:layout_height="24.0dip" android:layout_marginStart="12.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>

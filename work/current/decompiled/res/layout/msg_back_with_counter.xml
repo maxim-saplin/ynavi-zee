@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/navigate_up_button" android:background="@drawable/msg_toolbar_button_ripple" android:layout_width="48.0dip" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:id="@id/back_with_counter_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:contentDescription="@string/messenger_accessibility_back" app:srcCompat="@drawable/msg_ic_back" />
+    <com.yandex.messaging.views.CounterTextView android:textSize="12.0dip" android:textColor="?messagingCommonActionbarColor" android:gravity="center" android:layout_gravity="right|top" android:id="@id/unread_counter" android:background="@drawable/msg_bg_toolbar_back_button_counter" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="16.0dip" android:layout_marginTop="8.0dip" android:minWidth="16.0dip" android:fontFamily="@font/ya_medium" />
+</FrameLayout>

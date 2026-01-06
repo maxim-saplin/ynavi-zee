@@ -1,0 +1,198 @@
+.class public Ld03/f;
+.super Lru/yandex/yandexmaps/placecard/items/summary/d;
+.source "SourceFile"
+
+
+# static fields
+.field public static final V2:I
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
+
+    .line 1
+    const/4 v0, 0x0
+
+    const/4 v1, 0x2
+
+    invoke-direct {p0, p1, v0, v1, v0}, Ld03/f;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0, p1, p2}, Lru/yandex/yandexmaps/placecard/items/summary/d;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 4
+    sget p2, Lhi1/i;->interceptable_click_tag:I
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 0
+
+    and-int/lit8 p3, p3, 0x2
+
+    if-eqz p3, :cond_0
+
+    const/4 p2, 0x0
+
+    .line 2
+    :cond_0
+    invoke-direct {p0, p1, p2}, Ld03/f;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public j1()Lru/yandex/maps/uikit/common/recycler/n;
+    .locals 13
+
+    const/4 v0, 0x6
+
+    new-instance v1, Lru/yandex/maps/uikit/common/recycler/n;
+
+    invoke-virtual {p0}, Lru/yandex/yandexmaps/placecard/items/summary/d;->getInternalObserver()Lru/yandex/maps/uikit/common/recycler/c;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lf72/a;->e(Lru/yandex/maps/uikit/common/recycler/c;)Lru/yandex/maps/uikit/common/recycler/l;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lru/yandex/yandexmaps/placecard/items/summary/d;->getInternalObserver()Lru/yandex/maps/uikit/common/recycler/c;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lfd/c;->b(Lru/yandex/maps/uikit/common/recycler/c;)Lru/yandex/maps/uikit/common/recycler/l;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lru/yandex/yandexmaps/placecard/items/summary/d;->getInternalObserver()Lru/yandex/maps/uikit/common/recycler/c;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lru/yandex/yandexmaps/multiplatform/select/route/android/internal/dialog/options/common/f;->b(Lru/yandex/maps/uikit/common/recycler/c;)Lru/yandex/maps/uikit/common/recycler/l;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Lru/yandex/yandexmaps/placecard/items/summary/d;->getInternalObserver()Lru/yandex/maps/uikit/common/recycler/c;
+
+    move-result-object v5
+
+    new-instance v6, Lru/yandex/maps/uikit/common/recycler/l;
+
+    const-class v7, Lg91/a;
+
+    invoke-static {v7}, Lkotlin/jvm/internal/o;->b(Ljava/lang/Class;)Lkotlin/jvm/internal/f;
+
+    move-result-object v7
+
+    sget v8, Lm81/e;->view_type_snippet_rating_with_features:I
+
+    new-instance v9, Lfc1/b;
+
+    const/16 v10, 0x15
+
+    invoke-direct {v9, v10}, Lfc1/b;-><init>(I)V
+
+    invoke-direct {v6, v7, v8, v5, v9}, Lru/yandex/maps/uikit/common/recycler/s;-><init>(Lkotlin/jvm/internal/f;ILru/yandex/maps/uikit/common/recycler/c;Lkotlin/jvm/functions/Function1;)V
+
+    invoke-virtual {p0}, Lru/yandex/yandexmaps/placecard/items/summary/d;->getInternalObserver()Lru/yandex/maps/uikit/common/recycler/c;
+
+    move-result-object v5
+
+    new-instance v7, Lru/yandex/maps/uikit/common/recycler/l;
+
+    const-class v8, Lvy2/e;
+
+    invoke-static {v8}, Lkotlin/jvm/internal/o;->b(Ljava/lang/Class;)Lkotlin/jvm/internal/f;
+
+    move-result-object v8
+
+    sget v9, Lm81/e;->view_type_snippet_bookmark_comment:I
+
+    new-instance v10, Lvu2/q;
+
+    invoke-direct {v10, v0}, Lvu2/q;-><init>(I)V
+
+    invoke-direct {v7, v8, v9, v5, v10}, Lru/yandex/maps/uikit/common/recycler/s;-><init>(Lkotlin/jvm/internal/f;ILru/yandex/maps/uikit/common/recycler/c;Lkotlin/jvm/functions/Function1;)V
+
+    invoke-virtual {p0}, Lru/yandex/yandexmaps/placecard/items/summary/d;->getInternalObserver()Lru/yandex/maps/uikit/common/recycler/c;
+
+    move-result-object v5
+
+    new-instance v8, Lru/yandex/maps/uikit/common/recycler/l;
+
+    const-class v9, Li91/a;
+
+    invoke-static {v9}, Lkotlin/jvm/internal/o;->b(Ljava/lang/Class;)Lkotlin/jvm/internal/f;
+
+    move-result-object v9
+
+    sget v10, Lm81/e;->view_type_snippet_share_button:I
+
+    new-instance v11, Lhz2/k;
+
+    const/16 v12, 0xe
+
+    invoke-direct {v11, v12}, Lhz2/k;-><init>(I)V
+
+    invoke-direct {v8, v9, v10, v5, v11}, Lru/yandex/maps/uikit/common/recycler/s;-><init>(Lkotlin/jvm/internal/f;ILru/yandex/maps/uikit/common/recycler/c;Lkotlin/jvm/functions/Function1;)V
+
+    new-array v0, v0, [Lsk1/b;
+
+    const/4 v5, 0x0
+
+    aput-object v2, v0, v5
+
+    const/4 v2, 0x1
+
+    aput-object v3, v0, v2
+
+    const/4 v2, 0x2
+
+    aput-object v4, v0, v2
+
+    const/4 v2, 0x3
+
+    aput-object v6, v0, v2
+
+    const/4 v2, 0x4
+
+    aput-object v7, v0, v2
+
+    const/4 v2, 0x5
+
+    aput-object v8, v0, v2
+
+    invoke-direct {v1, v0}, Lru/yandex/maps/uikit/common/recycler/n;-><init>([Lsk1/b;)V
+
+    return-object v1
+.end method
+
+.method public final k1()Lru/yandex/yandexmaps/placecard/items/summary/SummaryLayoutManager;
+    .locals 2
+
+    new-instance v0, Lru/yandex/yandexmaps/placecard/items/summary/business/BusinessSummaryLayoutManager;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lru/yandex/yandexmaps/placecard/items/summary/SummaryLayoutManager;-><init>(Landroid/content/Context;)V
+
+    return-object v0
+.end method

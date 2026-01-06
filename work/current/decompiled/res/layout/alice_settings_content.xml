@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/background_container" android:paddingBottom="56.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/alice_enabled_preference" android:layout_marginTop="@dimen/settings_top_padding" custom:checked="true" custom:summary="@string/settings_general_alice" style="@style/SingleSwitchPreferenceBlock" />
+    <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/alice_voice_activation" custom:checked="true" custom:summary="@string/settings_alice_voice_activation" style="@style/SingleSwitchPreferenceBlock" />
+    <ru.yandex.maps.appkit.customview.LinkPreference android:id="@id/alice_voice_activation_phrase" custom:title="@string/settings_alice_voice_activation_phrase" style="@style/SettingsLinkPreference" />
+</LinearLayout>

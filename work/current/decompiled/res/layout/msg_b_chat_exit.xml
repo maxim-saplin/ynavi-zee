@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textColor="?messagingCommonDestructiveColor" android:id="@id/chat_exit_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/exit_chat" style="@style/Messaging.Settings.Item.Text"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

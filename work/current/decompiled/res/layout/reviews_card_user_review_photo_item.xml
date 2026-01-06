@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.RoundedImageView android:id="@id/reviews_card_user_review_photo_item" android:layout_width="@dimen/reviews_card_user_review_media_item_size" android:layout_height="@dimen/reviews_card_user_review_media_item_size" android:scaleType="centerCrop" android:layout_marginStart="4.0dip" android:layout_marginEnd="4.0dip" app:cornerRadius="@dimen/common_card_photo_corners_radius" />
+    <ImageView android:layout_gravity="end|top" android:id="@id/reviews_card_user_review_photo_item_video_marker" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:src="@drawable/play_16" android:layout_marginEnd="12.0dip" app:tint="@color/bw_white" />
+</FrameLayout>

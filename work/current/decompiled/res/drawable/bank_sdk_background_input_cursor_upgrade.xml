@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?bankColor_textIcon_primary" />
+    <size android:height="@dimen/bank_sdk_height_input_cursor_upgrade" android:width="@dimen/bank_sdk_width_input_cursor" />
+    <padding android:top="-2.0dip" android:bottom="-2.0dip" />
+</shape>

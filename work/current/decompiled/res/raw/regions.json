@@ -1,0 +1,112 @@
+[
+  {
+    "region": {"id": 213, "description": "Москва"},
+    "zoomRange": {"min": 6, "max": 23},
+    "boundingBoxes": [
+      {
+        "northEast": {"lon": 39.313003, "lat": 56.436497},
+        "southWest": {"lon": 36.053424, "lat": 54.860106}
+      }
+    ]
+  },
+  {
+    "region": {"id": 2, "description": "Санкт-Петербург"},
+    "zoomRange": {"min": 6, "max": 23},
+    "boundingBoxes": [
+      {
+        "northEast": {"lon": 34.029016, "lat": 61.350077},
+        "southWest": {"lon": 27.581897, "lat": 58.873677}
+      }
+    ]
+  },
+  {
+    "region": {"id": 43, "description": "Казань"},
+    "zoomRange": {"min": 6, "max": 23},
+    "boundingBoxes": [
+      {
+        "northEast": {"lon": 50.928337, "lat": 56.448243},
+        "southWest": {"lon": 47.996196, "lat": 55.032636}
+      }
+    ]
+  },
+  {
+    "region": {"id": 35, "description": "Краснодар"},
+    "zoomRange": {"min": 6, "max": 23},
+    "boundingBoxes": [
+      {
+        "northEast": {"lon": 40.307303, "lat": 45.752134},
+        "southWest": {"lon": 38.074168, "lat": 44.802427}
+      }
+    ]
+  },
+  {
+    "region": {"id": 65, "description": "Новосибирск"},
+    "zoomRange": {"min": 6, "max": 23},
+    "boundingBoxes": [
+      {
+        "northEast": {"lon": 84.869272, "lat": 56.174633},
+        "southWest": {"lon": 80.815317, "lat": 54.017441}
+      }
+    ]
+  },
+  {
+    "region": {"id": 193, "description": "Воронеж"},
+    "zoomRange": {"min": 6, "max": 23},
+    "boundingBoxes": [
+      {
+        "northEast": {"lon": 42.219209, "lat": 52.359771},
+        "southWest": {"lon": 38.084753, "lat": 50.077336}
+      }
+    ]
+  },
+  {
+    "region": {"id": 54, "description": "Екатеринбург"},
+    "zoomRange": {"min": 6, "max": 23},
+    "boundingBoxes": [
+      {
+        "northEast": {"lon": 62.267823, "lat": 57.654071},
+        "southWest": {"lon": 58.829103, "lat": 55.954769}
+      }
+    ]
+  },
+  {
+    "region": {"id": 39, "description": "Ростов-на-Дону"},
+    "zoomRange": {"min": 6, "max": 23},
+    "boundingBoxes": [
+      {
+        "northEast": {"lon": 41.26937, "lat": 47.885924},
+        "southWest": {"lon": 38.215171, "lat": 46.744731}
+      }
+    ]
+  },
+  {
+    "region": {"id": 47, "description": "Нижний Новгород"},
+    "zoomRange": {"min": 6, "max": 23},
+    "boundingBoxes": [
+      {
+        "northEast": {"lon": 45.281586, "lat": 56.836926},
+        "southWest": {"lon": 42.559723, "lat": 55.678345}
+      }
+    ]
+  },
+  {
+    "region": {"id": 239, "description": "Сочи"},
+    "zoomRange": {"min": 6, "max": 23},
+    "boundingBoxes": [
+      {
+        "northEast": {"lon": 40.019837, "lat": 43.694187},
+        "southWest": {"lon": 39.360657, "lat": 43.426542}
+      }
+    ]
+  },
+  {
+    "region": {"id": 51, "description": "Самара"},
+    "zoomRange": {"min": 6, "max": 23},
+    "boundingBoxes": [
+      {
+        "northEast": {"lon": 52.012018, "lat": 54.02241},
+        "southWest": {"lon": 49.603265, "lat": 52.455636}
+      }
+    ]
+  }
+]

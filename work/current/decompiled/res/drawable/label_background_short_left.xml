@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/pin_war_label_background" />
+    <corners android:topLeftRadius="@dimen/label_short_radius" android:bottomLeftRadius="@dimen/label_short_radius" />
+</shape>

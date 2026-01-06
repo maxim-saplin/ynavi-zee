@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.alice.views.AliceRootLayout android:id="@id/alice_root_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/alice_activity_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/alice_root" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.yandex.music.view.MusicPaddingBehaviour">
+        <com.yandex.bricks.HideableCoordinatorLayout android:id="@id/alice_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <View android:id="@id/alice_shadow" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="32.0dip" />
+        <com.yandex.bricks.HideableCoordinatorLayout android:id="@id/alice_fragment_2" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</com.yandex.alice.views.AliceRootLayout>

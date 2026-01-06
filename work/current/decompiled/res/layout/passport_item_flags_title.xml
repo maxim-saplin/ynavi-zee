@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/layout_experiments_test" android:paddingTop="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="@color/passport_black" android:id="@id/tittle_for_flags_of_experiments" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <View android:background="@android:color/darker_gray" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="4.0dip" />
+</androidx.appcompat.widget.LinearLayoutCompat>

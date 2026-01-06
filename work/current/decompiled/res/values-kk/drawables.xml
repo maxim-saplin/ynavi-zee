@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="passport_ic_yandex_auth_dark">@drawable/passport_icon_yandex_ru_big</item>
+    <item type="drawable" name="passport_ic_yandex_auth_light">@drawable/passport_icon_yandex_ru_big</item>
+    <item type="drawable" name="passport_yandex_logo">@drawable/passport_ru_yandex_logo</item>
+</resources>

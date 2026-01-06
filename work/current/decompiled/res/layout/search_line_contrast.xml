@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="@string/interceptable_click_tag" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/search_line_edit_text_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/search_line_icon_block" android:layout_width="56.0dip" android:layout_height="40.0dip">
+                <ImageView android:layout_gravity="center" android:id="@id/search_line_magnifier" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/search_24" app:tint="@color/icons_primary" />
+                <ImageView android:layout_gravity="center" android:id="@id/search_line_back" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/back_24" app:tint="@color/icons_additional" />
+                <ru.yandex.yandexmaps.designsystem.loader.LoaderView android:layout_gravity="center" android:id="@id/search_line_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:ymaps_progressSize="small" />
+            </FrameLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/search_line_inner_container" android:layout_width="0.0dip" android:layout_height="@dimen/search_line_input_height" android:layout_weight="1.0">
+                <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginEnd="-6.0dip">
+                    <EditText android:textColorHint="@color/text_secondary" android:id="@id/search_line_edit_text" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/yandexmaps_search_line_hint" android:maxLines="1" android:lines="1" android:inputType="textNoSuggestions" android:imeOptions="actionSearch|flagNoExtractUi" android:textCursorDrawable="@drawable/blue_cursor" android:textDirection="inherit" android:textAlignment="viewStart" android:paddingStart="12.0dip" android:paddingEnd="2.0dip" style="@style/Text16.Medium" />
+                    <ImageView android:layout_gravity="end|center" android:id="@id/search_line_offline_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="15.0dip" app:srcCompat="@drawable/offline_cloud_16" app:tint="@color/icons_additional" />
+                </FrameLayout>
+                <ImageView android:layout_gravity="center" android:id="@id/voice_search_method_icon" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" android:contentDescription="@string/accessibility_home_screen_voice_search" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" app:srcCompat="@drawable/mic_24" app:tint="@color/icons_primary" />
+                <ImageView android:id="@id/search_line_clear_button" android:background="@drawable/common_button_circular_background" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" app:srcCompat="@drawable/clear_16" app:tint="@color/icons_secondary" />
+            </LinearLayout>
+            <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:id="@id/search_line_close_button" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:gravity="center" android:id="@id/search_line_search_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="80.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:generalButtonSize="big" app:generalButtonStyle="primary" app:text="@string/search_line_perform_search" />
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:gravity="center" android:id="@id/search_line_cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="80.0dip" app:generalButtonSize="big" app:generalButtonStyle="transparent" app:text="@string/search_line_perform_cancel" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/search_results_text_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" android:paddingStart="16.0dip">
+            <ImageView android:layout_gravity="start|center" android:id="@id/search_results_title_back_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:layout_marginEnd="8.0dip" app:srcCompat="@drawable/back_24" app:tint="@color/icons_additional" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/search_results_title" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:importantForAccessibility="yes" style="@style/Text20.Medium" />
+            <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end|center" android:id="@id/search_line_additional_close_button" android:tag="@string/summary_clickable_tag" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+    <Space android:layout_width="fill_parent" android:layout_height="4.0dip" />
+</LinearLayout>

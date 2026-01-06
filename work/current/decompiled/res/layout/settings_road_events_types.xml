@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_marginTop="0.0dip" android:divider="@drawable/settings_section_divider_horizontal_sub72" style="@style/SettingsCommonSection"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/road_events_settings_accident_checkbox" app:checked="true" app:image="@drawable/road_alerts_accident_24" app:summary="@string/road_events_event_type_accident" style="@style/MultiSwitchPreferenceBlock" />
+    <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/road_events_settings_reconstruction_checkbox" app:checked="true" app:image="@drawable/road_alerts_road_works_24" app:summary="@string/road_events_event_type_reconstruction" style="@style/MultiSwitchPreferenceBlock" />
+    <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/road_events_settings_chat_checkbox" app:checked="false" app:image="@drawable/road_alerts_talks_24" app:summary="@string/road_events_event_type_chats" style="@style/MultiSwitchPreferenceBlock" />
+    <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/road_events_settings_closed_checkbox" app:checked="false" app:image="@drawable/road_alerts_stop_24" app:summary="@string/road_events_event_type_closed" style="@style/MultiSwitchPreferenceBlock" />
+    <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/road_events_settings_drawbridge_checkbox" app:checked="false" app:image="@drawable/road_alerts_bridge_24" app:summary="@string/road_events_event_type_drawbridge" style="@style/MultiSwitchPreferenceBlock" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:autoMirrored="true" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <path android:pathData="M4.57 22.13h14.25" android:strokeColor="#26000000" android:strokeWidth="0.75" android:strokeLineCap="round" />
+        <path android:fillColor="#ff42413e" android:pathData="M6.6 22.2c-1 0-1.8-1.61-1.8-3.6S5.6 15 6.6 15h0.01h1.06c1.07 0 1.93 1.61 1.93 3.6s-0.86 3.6-1.93 3.6H6.6z" android:fillType="evenOdd" />
+        <path android:fillColor="#ffedece8" android:pathData="M6.3 16.8a0.9 1.8 0 1 1 0 3.6a0.9 1.8 0 1 1 0-3.6z" />
+        <path android:fillColor="#ff5c5a57" android:pathData="M14.06 18.75h0.56v1.69h-5.8c-0.94 0-1.7-0.76-1.7-1.69H12h2.06z" />
+        <path android:fillColor="#ff21201f" android:pathData="M16.5 15h-2.63L12 18.75c0 0.93 0.76 1.69 1.69 1.69h2.81V15z" />
+        <path android:pathData="M18.3 3.6h-3.9" android:strokeColor="#ffdc9212" android:strokeWidth="1.5" android:strokeLineCap="round" />
+        <path android:fillColor="#fffcb900" android:pathData="M16.12 3.42c-0.08-0.83-0.81-1.43-1.64-1.35c-0.82 0.08-1.43 0.81-1.35 1.64l2.99-0.3zm1.03 10.79L16.12 3.4l-2.99 0.3l1.04 10.78l2.98-0.28z" />
+        <path android:pathData="M13.57 3.6H10.2" android:strokeColor="#ffdc9212" android:strokeWidth="1.5" android:strokeLineCap="round" />
+        <path android:pathData="M15.79 12.34l-0.7-7.32" android:strokeColor="#fffaf9f7" android:strokeWidth="1.13" android:strokeLineCap="round" />
+        <path android:fillColor="#ff42413e" android:pathData="M15.6 22.2c-1 0-1.8-1.61-1.8-3.6s0.8-3.6 1.8-3.6h0.01h1.06c1.07 0 1.93 1.61 1.93 3.6s-0.86 3.6-1.93 3.6H15.6z" android:fillType="evenOdd" />
+        <path android:fillColor="#ffedece8" android:pathData="M15.3 16.8a0.9 1.8 0 1 1 0 3.6a0.9 1.8 0 1 1 0-3.6z" />
+        <path android:pathData="M6.56 18.56h4.54c0.26 0 0.39 0 0.5-0.04c0.1-0.03 0.2-0.09 0.28-0.16c0.09-0.08 0.15-0.2 0.27-0.42l1.91-3.5h3" android:strokeColor="#fffcb900" android:strokeWidth="1.5" android:strokeLineCap="round" />
+    </group>
+</vector>

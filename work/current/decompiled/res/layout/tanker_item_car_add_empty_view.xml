@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/tanker_background_car_info" android:paddingLeft="@dimen/tanker_basic_padding_10" android:paddingTop="@dimen/tanker_basic_padding_half" android:paddingRight="@dimen/tanker_basic_padding_10" android:paddingBottom="@dimen/tanker_basic_padding_half" android:layout_width="@dimen/tanker_car_number_width" android:layout_height="@dimen/tanker_car_info_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/tanker_text_size_13" android:textColor="@color/tanker_car_info_text_light" android:id="@id/markTv" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/tanker_car_info_menu_add_car_title" app:layout_constraintBottom_toBottomOf="@id/tankerCarNumberContainer" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toLeftOf="@id/tankerCarNumberContainer" app:layout_constraintTop_toTopOf="@id/tankerCarNumberContainer" style="@style/TankerTextRegular" />
+    <FrameLayout android:id="@id/tankerCarNumberContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintLeft_toRightOf="@id/markTv" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <include layout="@layout/tanker_view_car_number_light" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/mt_details_pedestrian_icon" android:background="@color/bg_primary" android:layout_width="24.0dip" android:layout_height="24.0dip" android:scaleType="center" app:srcCompat="@drawable/pedestrian_20" app:tint="@color/icons_primary" />
+    <TextView android:layout_gravity="center" android:id="@id/mt_details_pedestrian_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="4.0sp" android:layout_marginStart="8.0dip" style="@style/Text14.Medium.PrimaryVariant" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="@dimen/bank_sdk_item_menu_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/leading_icon" android:layout_width="@dimen/bank_sdk_item_menu_leading_icon_size" android:layout_height="@dimen/bank_sdk_item_menu_leading_icon_size" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:ellipsize="end" android:id="@id/name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:lines="1" android:layout_marginHorizontal="@dimen/bank_sdk_item_menu_name_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/trailing_icon" app:layout_constraintStart_toEndOf="@id/leading_icon" app:layout_constraintTop_toTopOf="parent" style="@style/Widget.Bank.Text.Title1" />
+    <ImageView android:id="@id/trailing_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="?bankColor_textIcon_primary" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.controls.indoor.IndoorRecycler android:id="@id/control_indoor_recycler" android:layout_width="@dimen/control_rect_size" android:layout_height="fill_parent" android:layout_margin="@dimen/control_rect_padding" android:overScrollMode="never" />
+    <ImageView android:id="@id/control_indoor_arrow_up" android:background="@drawable/control_indoor_arrow_up_background_clickable" android:layout_width="@dimen/control_rect_size" android:layout_height="48.0dip" android:layout_margin="@dimen/control_rect_padding" android:scaleType="center" android:contentDescription="@string/accessibility_control_indoor_arrow_up" app:srcCompat="@drawable/arrow_up_8" app:tint="@color/icons_primary" />
+    <ImageView android:layout_gravity="bottom" android:id="@id/control_indoor_arrow_down" android:background="@drawable/control_indoor_arrow_down_background_clickable" android:layout_width="@dimen/control_rect_size" android:layout_height="48.0dip" android:layout_margin="@dimen/control_rect_padding" android:scaleType="center" android:contentDescription="@string/accessibility_control_indoor_arrow_down" app:srcCompat="@drawable/arrow_down_8" app:tint="@color/icons_primary" />
+</merge>

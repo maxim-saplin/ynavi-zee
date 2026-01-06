@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/contentViewGroup" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.tankerapp.android.sdk.navigator.view.widgets.webview.WebViewWrapper android:id="@id/tankerWebView" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

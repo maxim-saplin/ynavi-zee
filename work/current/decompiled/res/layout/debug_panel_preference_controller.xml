@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="@color/text_black" android:ellipsize="end" android:id="@id/debug_panel_preference_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" android:singleLine="true" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/text_grey_dark_grey" android:id="@id/debug_panel_preference_production_value" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/text_grey_dark_grey" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="Debug value:" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/debug_panel_preference_debug_value_field_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="-8.0dip">
+            <EditText android:textColor="@color/text_black" android:id="@id/debug_panel_preference_debug_value_field" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_weight="1.0" android:backgroundTint="@color/icons_additional" />
+            <ImageView android:layout_gravity="end|center" android:id="@id/debug_panel_preference_debug_value_field_clear" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/clear_16" android:tint="@color/icons_additional" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/debug_panel_preference_debug_value_slider_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="@color/text_black" android:layout_gravity="center_horizontal" android:id="@id/debug_panel_preference_debug_value_slider_value" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="@color/text_black" android:layout_gravity="center_vertical" android:id="@id/debug_panel_preference_debug_value_slider_min" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.0" />
+                <SeekBar android:layout_gravity="center_vertical" android:id="@id/debug_panel_preference_debug_value_slider" android:layout_width="wrap_content" android:layout_height="54.0dip" android:layout_weight="1.0" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/text_black" android:layout_gravity="center_vertical" android:id="@id/debug_panel_preference_debug_value_slider_max" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </FrameLayout>
+        <RadioGroup android:id="@id/debug_panel_preference_debug_value_enum_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/debug_panel_preference_reset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:generalButtonStyle="secondaryBlue" app:text="Reset" />
+    </LinearLayout>
+</ScrollView>

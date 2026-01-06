@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/routes_waypoint_item_container" android:background="@drawable/common_clickable_panel_background_no_border_impl" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="56.0dip" android:importantForAccessibility="yes"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="noHideDescendants">
+        <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/routes_waypoint_icon" android:layout_width="48.0dip" android:layout_height="24.0dip" android:scaleType="center" />
+        <TextView android:textSize="10.0sp" android:textStyle="bold" android:textColor="@color/text_white_black" android:layout_gravity="center" android:id="@id/routes_waypoint_index" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <TextView android:textColorHint="@color/common_hint" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/routes_waypoint_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:maxLines="1" android:layout_weight="1.0" android:importantForAccessibility="no" android:textDirection="inherit" android:textAlignment="viewStart" style="@style/Text16.Medium.TextPrimary" />
+    <ImageView android:id="@id/routes_waypoint_clear" android:background="@drawable/common_button_circular_background" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/accessibility_routes_clear_waypoint" android:importantForAccessibility="no" app:srcCompat="@drawable/cross_16" app:tint="@color/routes_waypoint_button" />
+    <ImageView android:id="@id/routes_waypoint_drag" android:layout_width="wrap_content" android:layout_height="fill_parent" android:importantForAccessibility="no" android:paddingStart="8.0dip" android:paddingEnd="16.0dip" app:srcCompat="@drawable/reorder_cells_16" app:tint="@color/routes_waypoint_button" />
+</LinearLayout>

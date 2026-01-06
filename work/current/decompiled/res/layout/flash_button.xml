@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/flash_button_in_actor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="8.0dip" android:scaleType="centerInside" />
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/flash_button_out_actor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="8.0dip" android:scaleType="centerInside" />
+</merge>

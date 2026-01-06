@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="32.0dip" android:width="32.0dip" android:viewportWidth="32.0" android:viewportHeight="32.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$profile_plus_32__0" android:pathData="M16 32c8.84 0 16-7.16 16-16S24.84 0 16 0S0 7.16 0 16s7.16 16 16 16zm0-2c7.73 0 14-6.27 14-14S23.73 2 16 2S2 8.27 2 16s6.27 14 14 14z" android:fillType="evenOdd" />
+</vector>

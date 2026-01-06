@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="16.0dip" android:width="17.0dip" android:viewportWidth="17.0" android:viewportHeight="16.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/passport_text_secondary_light_redesign" android:pathData="M2.7929,5.2929C3.1834,4.9024 3.8166,4.9024 4.2071,5.2929L8.5,9.5858L12.7929,5.2929C13.1834,4.9024 13.8166,4.9024 14.2071,5.2929C14.5976,5.6834 14.5976,6.3166 14.2071,6.7071L9.2071,11.7071C8.8166,12.0976 8.1834,12.0976 7.7929,11.7071L2.7929,6.7071C2.4024,6.3166 2.4024,5.6834 2.7929,5.2929Z" android:fillAlpha="0.8" />
+</vector>

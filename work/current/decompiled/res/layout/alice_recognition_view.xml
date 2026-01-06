@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="bottom" android:id="@id/alice_recognition_view_background" android:background="@drawable/alice_recognition_view_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/alice_recognition_view_bg_gradient_height" android:layout_marginBottom="@dimen/alice_recognition_view_margin_bottom" android:layout_marginStart="@dimen/dialog_item_margin_big_horizontal" android:layout_marginEnd="@dimen/dialog_item_margin_horizontal" layout="@layout/dialog_item_human_imitate" />
+</FrameLayout>

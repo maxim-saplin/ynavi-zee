@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="20.0dip" android:width="20.0dip" android:viewportWidth="20.0" android:viewportHeight="20.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$x5_cashback_logo_20__0" android:pathData="M14.93 4.62H5.06v3.81h9.87V4.62z" />
+    <path android:fillColor="@drawable/$x5_cashback_logo_20__1" android:pathData="M1 15.69V8.44l4.06-3.82v11.07H1z" />
+    <path android:fillColor="@drawable/$x5_cashback_logo_20__2" android:pathData="M19 15.69V8.44l-4.07-3.82v11.07H19z" />
+</vector>

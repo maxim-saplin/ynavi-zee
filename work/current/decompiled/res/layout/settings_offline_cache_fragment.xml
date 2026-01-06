@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonSettingsContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout style="@style/SettingsCommonSection">
+            <ru.yandex.maps.appkit.customview.ProgressLinkPreference android:id="@id/settings_offline_cache_cache_location" custom:title="@string/settings_offline_cache_folder" style="@style/SettingsLinkPreference" />
+            <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/settings_offline_cache_auto_update_preference" custom:checked="true" custom:summary="@string/settings_offline_cache_auto_update" style="@style/MultiSwitchPreferenceBlock" />
+            <ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/settings_offline_cache_wifi_only_preference" custom:checked="false" custom:summary="@string/settings_offline_cache_wifi_only" style="@style/MultiSwitchPreferenceBlock" />
+        </LinearLayout>
+        <Button android:id="@id/settings_clear_offline_cache_button" android:layout_marginTop="@dimen/settings_top_padding" android:text="@string/settings_clear_downloaded_maps" style="@style/SettingsButton" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@id/view_navi_catalog_pay_wall_webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/view_navi_catalog_pay_wall_simplified_frame" android:paddingLeft="32.0dip" android:paddingRight="32.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="32.0sp" android:textStyle="bold" android:textColor="?music_sdk_helper_text_color_primary" android:gravity="center_horizontal" android:id="@id/view_navi_catalog_pay_wall_simplified_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/music_sdk_helper_navi_catalog_pay_wall_title_auto" android:fontFamily="@font/ys_text_regular" />
+        <TextView android:textSize="28.0sp" android:textColor="?music_sdk_helper_text_color_primary" android:gravity="center_horizontal" android:id="@id/view_navi_catalog_pay_wall_simplified_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/music_sdk_helper_navi_catalog_pay_wall_description_auto" android:fontFamily="@font/ys_text_regular" />
+    </LinearLayout>
+    <ViewStub android:layout_gravity="bottom" android:id="@id/view_navi_catalog_pay_wall_debug_frame" android:layout="@layout/music_sdk_helper_view_navi_catalog_paywall_debug" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</FrameLayout>

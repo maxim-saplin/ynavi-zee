@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View android:background="?bankColor_other_separator" android:layout_width="fill_parent" android:layout_height="@dimen/bank_sdk_divider_height" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

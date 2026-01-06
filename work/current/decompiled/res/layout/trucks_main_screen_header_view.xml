@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="20.0dip" android:layoutDirection="locale" android:layout_marginHorizontal="16.0dip">
+        <androidx.appcompat.widget.AppCompatTextView android:layout_gravity="center_vertical" android:id="@id/header_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/trucks_settings_main_screen_header_text" android:layout_weight="1.0" style="@style/Text20.Medium.TextPrimary" />
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center_vertical" android:id="@id/close_button" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/close_24" android:tint="@color/icons_additional" android:layout_marginStart="8.0dip" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <View android:layout_gravity="bottom" android:background="@color/bg_separator" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</merge>

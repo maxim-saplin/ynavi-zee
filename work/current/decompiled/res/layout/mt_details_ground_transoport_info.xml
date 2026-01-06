@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="8.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="68.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.FlowLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:horizontalSpacing="8.0dip" app:verticalSpacing="6.0dip">
+        <TextView android:textColor="@color/bw_white" android:ellipsize="end" android:gravity="center" android:id="@id/mt_details_ground_transport_info_num" android:background="@drawable/mt_transport_icon_background" android:layout_width="wrap_content" android:layout_height="20.0dip" android:maxLines="1" android:importantForAccessibility="no" android:paddingStart="6.0dip" android:paddingEnd="6.0dip" style="@style/Text12.Bold" />
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@id/mt_details_ground_transport_info_type_name" android:layout_width="wrap_content" android:layout_height="20.0dip" android:maxLines="1" style="@style/Text14.Medium.PrimaryVariant" />
+    </ru.yandex.yandexmaps.common.views.FlowLayout>
+    <TextView android:id="@id/mt_details_ground_transport_info_num_route" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="@style/Text14.Grey" />
+</LinearLayout>

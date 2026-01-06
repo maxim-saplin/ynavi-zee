@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/bank_sdk_savings_account_theme_selector_item_background" android:layout_width="58.0dip" android:layout_height="84.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:layout_width="@dimen/bank_sdk_bank_button_view_icon_size" android:layout_height="@dimen/bank_sdk_bank_button_view_icon_size" app:layout_constraintBottom_toTopOf="@id/button" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/bank_sdk_subtract" />
+    <View android:layout_gravity="bottom" android:id="@id/button" android:background="@drawable/bank_sdk_savings_account_theme_selector_item_placeholder_background" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_marginBottom="8.0dip" android:layout_marginHorizontal="8.0dip" app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

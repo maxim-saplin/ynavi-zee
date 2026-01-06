@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="#ffe3e5ed"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector>
+            <item android:state_enabled="true" android:state_pressed="true">
+                <layer-list>
+                    <item>
+                        <shape android:shape="rectangle">
+                            <solid android:color="#00000000" />
+                        </shape>
+                    </item>
+                    <item android:left="2.0dip" android:top="2.0dip" android:right="2.0dip" android:bottom="2.0dip">
+                        <shape android:shape="rectangle">
+                            <solid android:color="@color/passport_bg_button_gray_dark" />
+                            <corners android:radius="8.0dip" />
+                        </shape>
+                    </item>
+                </layer-list>
+            </item>
+            <item android:state_enabled="true" android:state_hovered="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/passport_bg_button_gray_dark" />
+                    <corners android:radius="8.0dip" />
+                </shape>
+            </item>
+            <item android:state_focused="true" android:state_enabled="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/passport_bg_button_gray_dark" />
+                    <corners android:radius="8.0dip" />
+                    <stroke android:width="1.0dip" android:color="#33ffffff" />
+                </shape>
+            </item>
+            <item android:state_enabled="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/passport_bg_button_gray_dark" />
+                    <corners android:radius="8.0dip" />
+                </shape>
+            </item>
+            <item android:state_enabled="false">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/passport_bg_button_gray_dark" />
+                    <corners android:radius="8.0dip" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

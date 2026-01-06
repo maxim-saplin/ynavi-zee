@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font android:font="@font/monetization_ads_internal_font_text_medium" android:fontWeight="400" android:fontStyle="normal" app:font="@font/monetization_ads_internal_font_text_medium" app:fontStyle="normal" app:fontWeight="400" />
+</font-family>

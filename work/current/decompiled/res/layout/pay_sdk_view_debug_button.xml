@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="start|bottom" android:padding="@dimen/pay_sdk_margin_small" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/pay_sdk_margin_large" android:src="@drawable/pay_sdk_ic_debug" android:contentDescription="@string/pay_sdk_debug_button_content_description" app:backgroundTint="?pay_sdk_primaryBlockColor" app:fabSize="mini" app:tint="?pay_sdk_controlContentPrimaryColor"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

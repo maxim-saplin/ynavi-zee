@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:clipChildren="false" android:clipToPadding="false" android:layout_width="@dimen/tanker_story_preview_width" android:layout_height="@dimen/tanker_story_preview_width" app:cardCornerRadius="16.0dip" app:cardElevation="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/tankerIv" android:background="@drawable/tanker_bg_story_preview_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/tankerStubView" android:background="@drawable/tanker_bg_story_preview_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.cardview.widget.CardView>

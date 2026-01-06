@@ -1,0 +1,95 @@
+.class public final Lcom/yandex/mobile/ads/impl/od2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/yandex/mobile/ads/impl/eu;
+
+
+# instance fields
+.field private a:Lcom/yandex/mobile/ads/impl/eu;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/yandex/mobile/ads/impl/qd2;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/yandex/mobile/ads/impl/od2;->a:Lcom/yandex/mobile/ads/impl/eu;
+
+    return-void
+.end method
+
+.method public final onVideoCompleted()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/yandex/mobile/ads/impl/od2;->a:Lcom/yandex/mobile/ads/impl/eu;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lcom/yandex/mobile/ads/impl/eu;->onVideoCompleted()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onVideoError()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/yandex/mobile/ads/impl/od2;->a:Lcom/yandex/mobile/ads/impl/eu;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lcom/yandex/mobile/ads/impl/eu;->onVideoError()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onVideoPaused()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/yandex/mobile/ads/impl/od2;->a:Lcom/yandex/mobile/ads/impl/eu;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lcom/yandex/mobile/ads/impl/eu;->onVideoPaused()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onVideoPrepared()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/yandex/mobile/ads/impl/od2;->a:Lcom/yandex/mobile/ads/impl/eu;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lcom/yandex/mobile/ads/impl/eu;->onVideoPrepared()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onVideoResumed()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/yandex/mobile/ads/impl/od2;->a:Lcom/yandex/mobile/ads/impl/eu;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lcom/yandex/mobile/ads/impl/eu;->onVideoResumed()V
+
+    :cond_0
+    return-void
+.end method

@@ -1,0 +1,308 @@
+.class final Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory$TrucksCarriageIcon;
+.super Lru/yandex/yandexnavi/ui/internal/trucks/BaseTruckIcon;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x11
+    name = "TrucksCarriageIcon"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0010\u0007\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u0082\u0004\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J\u001b\u0010\n\u001a\u000e\u0012\u0004\u0012\u00020\t\u0012\u0004\u0012\u00020\t0\u0008H\u0002\u00a2\u0006\u0004\u0008\n\u0010\u000bJ\u0017\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\r\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008\u000f\u0010\u0010R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0003\u0010\u0011\u00a8\u0006\u0012"
+    }
+    d2 = {
+        "Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory$TrucksCarriageIcon;",
+        "Lru/yandex/yandexnavi/ui/internal/trucks/BaseTruckIcon;",
+        "",
+        "value",
+        "Lru/yandex/yandexnavi/ui/internal/trucks/IconParams;",
+        "params",
+        "<init>",
+        "(Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;ILru/yandex/yandexnavi/ui/internal/trucks/IconParams;)V",
+        "Lkotlin/Pair;",
+        "",
+        "getTextPadding",
+        "()Lkotlin/Pair;",
+        "Landroid/graphics/Canvas;",
+        "canvas",
+        "Lm31/d0;",
+        "drawContent",
+        "(Landroid/graphics/Canvas;)V",
+        "I",
+        "base-ui_release"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x0,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;
+
+.field private final value:I
+
+
+# direct methods
+.method public constructor <init>(Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;ILru/yandex/yandexnavi/ui/internal/trucks/IconParams;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Lru/yandex/yandexnavi/ui/internal/trucks/IconParams;",
+            ")V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory$TrucksCarriageIcon;->this$0:Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;
+
+    invoke-static {p1}, Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;->access$getContext$p(Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;)Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v3, Lru/yandex/yandexnavi/ui/internal/trucks/f;
+
+    const/4 v0, 0x0
+
+    invoke-direct {v3, v0}, Lru/yandex/yandexnavi/ui/internal/trucks/f;-><init>(I)V
+
+    new-instance v4, Lru/yandex/yandexnavi/ui/internal/trucks/d;
+
+    const/4 v0, 0x2
+
+    invoke-direct {v4, p2, v0}, Lru/yandex/yandexnavi/ui/internal/trucks/d;-><init>(II)V
+
+    new-instance v5, Lru/yandex/yandexnavi/ui/internal/trucks/g;
+
+    const/4 v0, 0x0
+
+    invoke-direct {v5, p1, v0}, Lru/yandex/yandexnavi/ui/internal/trucks/g;-><init>(Lru/yandex/yandexnavi/ui/internal/trucks/TruckIconFactory;I)V
+
+    move-object v0, p0
+
+    move-object v2, p3
+
+    invoke-direct/range {v0 .. v5}, Lru/yandex/yandexnavi/ui/internal/trucks/BaseTruckIcon;-><init>(Landroid/content/Context;Lru/yandex/yandexnavi/ui/internal/trucks/IconParams;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
+
+    iput p2, p0, Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory$TrucksCarriageIcon;->value:I
+
+    return-void
+.end method
+
+.method private static final _init_$lambda$0()I
+    .locals 1
+
+    sget v0, Lwl1/b;->alerts_trucks_carriage_24:I
+
+    return v0
+.end method
+
+.method private static final _init_$lambda$1(I)Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "alerts_trucks_carriage_"
+
+    invoke-static {p0, v0}, Lf;->e(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private static final _init_$lambda$2(Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;Landroid/graphics/Paint;)Lm31/d0;
+    .locals 2
+
+    invoke-static {p0}, Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;->access$getContext$p(Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;)Landroid/content/Context;
+
+    move-result-object v0
+
+    const/high16 v1, 0x40a00000    # 5.0f
+
+    invoke-static {v0, v1}, Lru/yandex/yandexnavi/ui/util/extensions/ContextExtensionsKt;->dpToPx(Landroid/content/Context;F)F
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTextSize(F)V
+
+    sget-object v0, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
+
+    invoke-static {p0}, Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;->access$getContext$p(Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;)Landroid/content/Context;
+
+    move-result-object p0
+
+    sget v0, Lwl1/a;->bw_white:I
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getColor(I)I
+
+    move-result p0
+
+    invoke-virtual {p1, p0}, Landroid/graphics/Paint;->setColor(I)V
+
+    sget-object p0, Lm31/d0;->a:Lm31/d0;
+
+    return-object p0
+.end method
+
+.method private final getTextPadding()Lkotlin/Pair;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlin/Pair<",
+            "Ljava/lang/Float;",
+            "Ljava/lang/Float;",
+            ">;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lru/yandex/yandexnavi/ui/internal/trucks/BaseTruckIcon;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const/high16 v1, 0x41680000    # 14.5f
+
+    invoke-static {v0, v1}, Lru/yandex/yandexnavi/ui/util/extensions/ContextExtensionsKt;->dpToPx(Landroid/content/Context;F)F
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lru/yandex/yandexnavi/ui/internal/trucks/BaseTruckIcon;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const/high16 v2, 0x41380000    # 11.5f
+
+    invoke-static {v1, v2}, Lru/yandex/yandexnavi/ui/util/extensions/ContextExtensionsKt;->dpToPx(Landroid/content/Context;F)F
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    new-instance v2, Lkotlin/Pair;
+
+    invoke-direct {v2, v0, v1}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v2
+.end method
+
+.method public static synthetic m(Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;Landroid/graphics/Paint;)Lm31/d0;
+    .locals 0
+
+    invoke-static {p0, p1}, Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory$TrucksCarriageIcon;->_init_$lambda$2(Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory;Landroid/graphics/Paint;)Lm31/d0;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic n(I)Ljava/lang/String;
+    .locals 0
+
+    invoke-static {p0}, Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory$TrucksCarriageIcon;->_init_$lambda$1(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic o()I
+    .locals 1
+
+    invoke-static {}, Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory$TrucksCarriageIcon;->_init_$lambda$0()I
+
+    move-result v0
+
+    return v0
+.end method
+
+
+# virtual methods
+.method public drawContent(Landroid/graphics/Canvas;)V
+    .locals 5
+
+    invoke-direct {p0}, Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory$TrucksCarriageIcon;->getTextPadding()Lkotlin/Pair;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkotlin/Pair;->a()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
+
+    move-result v1
+
+    invoke-virtual {v0}, Lkotlin/Pair;->b()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+
+    move-result v0
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v2
+
+    iget v3, p0, Lru/yandex/yandexnavi/ui/internal/trucks/TrucksCarriageIconFactory$TrucksCarriageIcon;->value:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    filled-new-array {v3}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    const/4 v4, 0x1
+
+    invoke-static {v3, v4}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v3
+
+    const-string v4, "%d"
+
+    invoke-static {v2, v4, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lru/yandex/yandexnavi/ui/internal/trucks/BaseTruckIcon;->getDrawableSize()Lcom/yandex/mapkit/ScreenPoint;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/yandex/mapkit/ScreenPoint;->getY()F
+
+    move-result v3
+
+    sub-float/2addr v3, v0
+
+    invoke-virtual {p0}, Lru/yandex/yandexnavi/ui/internal/trucks/BaseTruckIcon;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v2, v1, v3, v0}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
+    return-void
+.end method

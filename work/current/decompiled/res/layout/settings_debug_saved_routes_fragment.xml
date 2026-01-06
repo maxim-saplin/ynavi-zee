@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonSettingsContainer"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:id="@id/settings_debug_saved_route_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/settings_debug_saved_routes_empty" style="@style/Text20.Medium.Grey" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout style="@style/SettingsCommonSection">
+            <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/settings_debug_saved_route_recycler" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            <ru.yandex.maps.appkit.customview.LinkPreference android:id="@id/settings_debug_saved_route_clear" custom:title="@string/settings_debug_saved_routes_clear" style="@style/SettingsLinkPreference" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

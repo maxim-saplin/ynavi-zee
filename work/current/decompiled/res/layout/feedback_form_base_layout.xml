@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/feedbackForm" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/feedbackFormLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/feedbackFormTitleLayout" android:layout_width="fill_parent" android:layout_height="54.0dip">
+            <androidx.appcompat.widget.AppCompatTextView android:gravity="center_horizontal" android:id="@id/feedbackFormTitleTextView" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginStart="32.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/feedbackFormTitleCloseButton" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <FrameLayout android:id="@id/feedbackFormTitleCloseButton" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:layout_marginEnd="12.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <androidx.appcompat.widget.AppCompatImageView android:id="@id/feedbackFormTitleCloseButtonIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/feedback_ic_close" />
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.core.widget.NestedScrollView android:scrollbarStyle="outsideInset" android:orientation="vertical" android:id="@id/feedbackFormNestedScrollView" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/feedbackFormContainer" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <androidx.appcompat.widget.AppCompatImageView android:id="@id/feedbackFormLogo" android:visibility="visible" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="8.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/feedback_ic_sdk_logo" />
+                <FrameLayout android:id="@id/feedbackPrivacyContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

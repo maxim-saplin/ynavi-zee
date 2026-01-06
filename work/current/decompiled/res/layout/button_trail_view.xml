@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.taxi.widget.RobotoTextView android:textSize="@dimen/component_text_size_caption" android:textColor="@color/component_black" android:layout_gravity="center_vertical" android:id="@id/button_trail_button_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxHeight="@dimen/component_image_holder_size" android:includeFontPadding="false" android:paddingHorizontal="14.0dip" android:paddingVertical="7.0dip" />
+    <ru.yandex.taxi.design.CheckBoxComponent android:layout_gravity="center_vertical" android:id="@id/button_trail_check_box" android:layout_width="@dimen/component_image_holder_size" android:layout_height="@dimen/component_image_holder_size" />
+</merge>

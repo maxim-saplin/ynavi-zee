@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr">
+        <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:paddingTop="@dimen/routes_eco_friendly_guidance_controls_top_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/control_chunk_indoor" />
+            <include layout="@layout/control_chunk_ruler" />
+            <include layout="@layout/control_chunk_layers_menu" />
+            <include layout="@layout/control_chunk_transport_priority" />
+            <include layout="@layout/control_chunk_traffic" />
+            <include layout="@layout/control_chunk_carparks" />
+            <include layout="@layout/control_chunk_panorama" />
+            <include layout="@layout/control_chunk_weather" />
+            <include layout="@layout/control_chunk_tilt_toggle" />
+            <include layout="@layout/control_chunk_zoom" />
+            <include layout="@layout/control_chunk_position" />
+            <include layout="@layout/control_chunk_feedback" />
+        </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ru.yandex.yandexmaps.common.views.NavigationBarView android:id="@id/route_direction_masstransit_navbar" android:tag="@string/change_handler_top_panel_tag" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="72.0dip" custom:hideEmptyCaption="true">
+                <LinearLayout android:layout_gravity="start|center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <Space android:layout_width="1.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                    <TextView android:id="@id/routes_directions_masstransit_directions_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-1.0dip" android:includeFontPadding="false" style="@style/Text20" />
+                    <TextView android:id="@id/routes_directions_masstransit_directions_changes_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" android:includeFontPadding="false" style="@style/Text16.Grey" />
+                    <Space android:layout_width="1.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                </LinearLayout>
+                <ImageButton android:id="@id/reset" android:background="@drawable/common_button_circular_background" android:layout_width="56.0dip" android:layout_height="56.0dip" android:scaleType="center" android:tint="@color/ui_red_night_mode" android:contentDescription="@string/accessibility_routes_close_mt_guidance" custom:srcCompat="@drawable/cross_24" />
+            </ru.yandex.yandexmaps.common.views.NavigationBarView>
+        </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+        <Space android:id="@id/route_masstransit_map_controls_spot" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/pager_container" android:tag="@string/change_handler_bottom_panel_tag" android:background="@drawable/background_panel_color_impl" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.routes.internal.guidance.mt.ui.MtGuidancePagerIndicator android:id="@id/pager_indicator" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="16.0dip" />
+        <ru.yandex.yandexmaps.common.views.recycler.RecyclerViewPager android:id="@id/pager_recycler" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

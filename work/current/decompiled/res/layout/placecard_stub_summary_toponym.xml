@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.shimmer.ShimmerFrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/CommonShimmer">
+        <ru.yandex.yandexmaps.placecard.items.stub.StubToponymSummaryItemView android:id="@id/placecard_stub_summary" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end" android:id="@id/placecard_stub_close_button" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="8.0dip" />
+</merge>

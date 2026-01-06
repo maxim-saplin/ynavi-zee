@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/mt_details_begin_transport_icon" android:background="@drawable/mt_rounded_grey_background" android:layout_width="20.0dip" android:layout_height="20.0dip" android:scaleType="centerCrop" />
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="20.0sp" android:layout_marginStart="10.0dip">
+        <View android:layout_gravity="center" android:id="@id/mt_details_transport_ellipse" android:background="@drawable/mt_stop_ellipse" android:layout_width="8.0dip" android:layout_height="8.0dip" android:tint="@color/ui_green" />
+    </FrameLayout>
+    <TextView android:id="@id/mt_details_begin_transport_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:lineSpacingExtra="4.0sp" android:layout_marginStart="14.0dip" style="@style/Text16.Medium" />
+    <TextView android:id="@id/mt_details_begin_transport_departure_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" style="@style/Text12.Grey" />
+</LinearLayout>

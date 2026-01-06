@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/content_container" android:background="@drawable/background_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar android:id="@id/bookmarks_toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    </LinearLayout>
+    <FrameLayout android:id="@id/bookmark_base_dialog_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

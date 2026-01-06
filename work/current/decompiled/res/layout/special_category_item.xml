@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/common_clickable_background_no_border_impl" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="start|center" android:id="@id/special_category_icon" android:background="@drawable/search_category_background" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:scaleType="centerInside" android:layout_marginStart="12.0dip" />
+    <LinearLayout android:layout_gravity="start|center" android:orientation="vertical" android:paddingTop="17.0dip" android:paddingBottom="17.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="56.0dip" android:layout_marginEnd="16.0dip">
+        <TextView android:ellipsize="end" android:id="@id/special_category_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/Text16" />
+        <TextView android:ellipsize="end" android:id="@id/special_category_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="2" style="@style/Text12.Grey" />
+        <TextView android:id="@id/special_category_ad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_serp_list_item_ads" style="@style/Text10.Grey" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.multiplatform.trucks.common.api.components.TrucksSelectableContainer android:id="@id/view_trucks_selectable_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout android:padding="16.0dip" android:layout_width="156.0dip" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatTextView android:ellipsize="end" android:id="@id/truck_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:minLines="2" android:layout_marginEnd="8.0dip" app:layout_constraintBottom_toTopOf="@id/image_truck_icon" app:layout_constraintEnd_toStartOf="@id/button_edit_truck" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" app:layout_goneMarginEnd="0.0dip" style="@style/Text16.Medium.TextPrimary" />
+            <FrameLayout android:id="@id/button_edit_truck" android:background="@drawable/trucks_edit_badge_background" android:padding="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+                <androidx.appcompat.widget.AppCompatImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/edit_nofill_24" android:tint="@color/icons_primary" />
+            </FrameLayout>
+            <ru.yandex.yandexmaps.multiplatform.trucks.common.api.components.TrucksImageView android:id="@id/image_truck_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/truck_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ru.yandex.yandexmaps.multiplatform.trucks.common.api.components.TrucksSelectableContainer>
+</merge>

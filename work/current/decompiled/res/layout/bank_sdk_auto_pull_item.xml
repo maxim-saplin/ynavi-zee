@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/bank_sdk_screen_horizontal_space" android:paddingVertical="12.0dip" app:bank_sdk_shimmer_auto_start="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/autoPullBankImage" android:layout_width="@dimen/bank_sdk_clickable_icon_size" android:layout_height="@dimen/bank_sdk_clickable_icon_size" android:scaleType="centerInside" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:id="@id/autoPullBankName" android:layout_width="0.0dip" android:layout_height="wrap_content" android:requiresFadingEdge="horizontal" android:paddingStart="12.0dip" android:paddingEnd="14.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="@id/autoPullRemoveButton" app:layout_constraintStart_toEndOf="@id/autoPullBankImage" app:layout_constraintTop_toTopOf="parent" style="@style/Widget.Bank.Text.Body2" />
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/autoPullRemoveButton" android:layout_width="20.0dip" android:layout_height="20.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/bank_sdk_ic_cross_20_gray" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.yandex.bank.widgets.common.shimmer.ShimmerFrameLayout>

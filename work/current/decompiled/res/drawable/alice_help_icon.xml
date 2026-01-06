@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/dialog_left_button_size" android:width="@dimen/dialog_left_button_size" android:viewportWidth="40.0" android:viewportHeight="40.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/alice_bottom_control_buttons_color" android:pathData="M20,10 C14.48,10,10,14.48,10,20 S14.48,30,20,30 S30,25.52,30,20 S25.52,10,20,10 Z M20.9,26.3 L19.1,26.3 L19.1,24.5 L20.9,24.5 L20.9,26.3 Z M22.763,19.325 L21.953,20.153 C21.305,20.81,20.9,21.35,20.9,22.7 L19.1,22.7 L19.1,22.25 C19.1,21.26,19.505,20.36,20.153,19.703 L21.269,18.569 A1.76,1.76,0,0,0,21.8,17.3 C21.8,16.31,20.99,15.5,20,15.5 S18.2,16.31,18.2,17.3 L16.4,17.3 C16.4,15.311,18.011,13.7,20,13.7 S23.6,15.311,23.6,17.3 C23.6,18.092,23.276,18.812,22.763,19.325 Z" />
+</vector>

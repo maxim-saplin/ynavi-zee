@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="10.0dip" android:layout_height="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="center" android:id="@id/tankerHourDotView" android:background="@drawable/tanker_bg_shift_timeline_dot" android:layout_width="8.0dip" android:layout_height="8.0dip" android:layout_marginTop="2.0dip" />
+</FrameLayout>

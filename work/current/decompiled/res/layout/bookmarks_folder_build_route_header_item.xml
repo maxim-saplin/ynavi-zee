@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:orientation="vertical" android:background="@color/background_panel" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="16.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="16.0dip">
+        <TextView android:ellipsize="end" android:id="@id/bookmarks_folder_build_route_header_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/bookmarks_select_folder_header_title_text" android:maxLines="1" android:layout_weight="1.0" style="@style/Text20.Medium" />
+        <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:id="@id/bookmarks_folder_build_route_close_button" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+    </LinearLayout>
+    <TextView android:ellipsize="end" android:id="@id/bookmarks_folder_build_route_header_subtitle" android:paddingTop="8.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bookmarks_select_folder_header_title_text" android:maxLines="1" android:layout_marginHorizontal="16.0dip" style="@style/Text14.TextSecondary" />
+</merge>

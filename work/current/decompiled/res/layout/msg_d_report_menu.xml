@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.alicekit.core.views.BackHandlingLinearLayout android:orientation="vertical" android:id="@id/chat_info_menu" android:background="?messagingCommonActionbarColor" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/bottom_sheet_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/report_inappropriate" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messenger_inappropriate" style="@style/Messaging.MessagePopupButton" />
+    <TextView android:id="@id/report_spam" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messenger_spam" style="@style/Messaging.MessagePopupButton" />
+    <TextView android:id="@id/report_abuse" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messenger_abuse" style="@style/Messaging.MessagePopupButton" />
+    <TextView android:gravity="center_vertical" android:id="@id/report_cancel" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_confirm_cancel" style="@style/Messaging.MessagePopupButton" />
+</com.yandex.alicekit.core.views.BackHandlingLinearLayout>

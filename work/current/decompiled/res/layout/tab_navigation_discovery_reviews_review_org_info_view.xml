@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/text_container" android:background="@drawable/tab_navigation_discover_review_card_ripple_rounded_transparent" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="4.0dip" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip">
+        <TextView android:id="@id/header_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/Text16.Medium.TextPrimary" />
+        <TextView android:id="@id/caption_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="1" android:singleLine="true" style="@style/Text14.TextSecondary" />
+    </LinearLayout>
+    <ru.yandex.yandexmaps.tabnavigation.internal.discovery.shutter.review.TabNavigationReviewsReviewSubscriptionButtonView android:layout_gravity="center" android:id="@id/bookmark_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16.0dip" />
+</LinearLayout>

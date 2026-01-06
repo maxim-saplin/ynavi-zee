@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/tankerToolbarContainer" android:layout_width="fill_parent" android:layout_height="?actionBarSize"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/tanker_toolbar" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:contentInsetEnd="0.0dip" app:contentInsetStart="0.0dip" app:navigationIcon="@drawable/tanker_ic_back" style="@style/TankerTheme" />
+    <TextView android:textSize="@dimen/tanker_medium_text_size" android:textColor="@color/tanker_text_primary" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/tankerToolbarTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lines="1" android:layout_marginStart="36.0dip" android:layout_marginEnd="36.0dip" style="@style/TankerTextMedium" />
+</FrameLayout>

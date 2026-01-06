@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/tanker_address_suggest_divider" />
+    <size android:height="1.0dip" />
+</shape>

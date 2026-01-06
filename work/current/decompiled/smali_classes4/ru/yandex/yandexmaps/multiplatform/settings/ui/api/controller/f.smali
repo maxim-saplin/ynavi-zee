@@ -1,0 +1,34 @@
+.class public final synthetic Lru/yandex/yandexmaps/multiplatform/settings/ui/api/controller/f;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lf21/a;
+
+
+# instance fields
+.field public final synthetic b:Lru/yandex/yandexmaps/multiplatform/settings/ui/api/controller/ScreenSettingsController;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lru/yandex/yandexmaps/multiplatform/settings/ui/api/controller/ScreenSettingsController;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lru/yandex/yandexmaps/multiplatform/settings/ui/api/controller/f;->b:Lru/yandex/yandexmaps/multiplatform/settings/ui/api/controller/ScreenSettingsController;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/multiplatform/settings/ui/api/controller/f;->b:Lru/yandex/yandexmaps/multiplatform/settings/ui/api/controller/ScreenSettingsController;
+
+    invoke-static {v0}, Lru/yandex/yandexmaps/multiplatform/settings/ui/api/controller/ScreenSettingsController;->U0(Lru/yandex/yandexmaps/multiplatform/settings/ui/api/controller/ScreenSettingsController;)V
+
+    return-void
+.end method

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/notification_root_view" android:background="@drawable/drawable_navi_layout_bg_guidance_notification_pre_android_12" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/notificationTitleIcon" android:layout_width="@dimen/notification_app_icon_size" android:layout_height="@dimen/notification_app_icon_size" />
+        <TextView android:textSize="@dimen/notification_small_text_size" android:textColor="@color/text_body_white" android:id="@id/notificationTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/indent_three_quarters" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" layout="@layout/navi_layout_bg_guidance_notification_maneuver_block" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="@dimen/notification_eta_block_left_margin" layout="@layout/navi_layout_bg_guidance_notification_eta_block" />
+    <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="4.0dip" layout="@layout/navi_layout_bg_guidance_notification_actions_buttons" />
+</LinearLayout>

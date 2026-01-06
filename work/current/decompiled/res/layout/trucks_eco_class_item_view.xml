@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_marginBottom="10.0dip" android:text="@string/trucks_settings_main_screen_eco_class_settings_title" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/Text16.TextPrimary" />
+    <HorizontalScrollView android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="12.0dip">
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/button_eco_class_1" android:layout_width="wrap_content" android:layout_height="wrap_content" app:generalButtonSize="big" app:generalButtonStyle="secondaryGrey" app:text="@string/trucks_settings_main_screen_eco_class_1_button_text" />
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/button_eco_class_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" app:generalButtonSize="big" app:generalButtonStyle="secondaryGrey" app:text="@string/trucks_settings_main_screen_eco_class_2_button_text" />
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/button_eco_class_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" app:generalButtonSize="big" app:generalButtonStyle="secondaryGrey" app:text="@string/trucks_settings_main_screen_eco_class_3_button_text" />
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/button_eco_class_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" app:generalButtonSize="big" app:generalButtonStyle="secondaryGrey" app:text="@string/trucks_settings_main_screen_eco_class_4_button_text" />
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/button_eco_class_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" app:generalButtonSize="big" app:generalButtonStyle="secondaryGrey" app:text="@string/trucks_settings_main_screen_eco_class_5_button_text" />
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/button_eco_class_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" app:generalButtonSize="big" app:generalButtonStyle="secondaryGrey" app:text="@string/trucks_settings_main_screen_eco_class_6_button_text" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </HorizontalScrollView>
+</merge>

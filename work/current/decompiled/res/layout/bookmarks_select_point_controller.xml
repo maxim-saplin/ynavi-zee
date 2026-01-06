@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr">
+        <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:layout_width="fill_parent" android:layout_height="fill_parent" app:overland_fleets_ids="@string/controls_default_overland_fleets_ids">
+            <include layout="@layout/control_chunk_ruler" />
+            <include layout="@layout/control_chunk_tilt_toggle" />
+            <include layout="@layout/control_chunk_zoom" />
+            <include layout="@layout/control_chunk_position" />
+        </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <FrameLayout android:id="@id/select_point_integration_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

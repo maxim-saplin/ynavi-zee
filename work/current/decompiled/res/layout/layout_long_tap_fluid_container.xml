@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.longtap.internal.LongTapPanoramaControl android:id="@id/long_tap_panorama_control" android:layout_width="120.0dip" android:layout_height="64.0dip" android:layout_marginStart="12.0dip" app:layout_clearance_bottom="20.0dip" app:layout_floating="drifting_down" app:layout_heaviness="1" />
+</ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>

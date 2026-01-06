@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="?music_sdk_helper_text_color_primary" android:gravity="center" android:id="@id/navi_catalog_alice_title" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="32.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="32.0dip" android:fontFamily="@font/ys_text_regular" />
+    <com.yandex.music.sdk.helper.ui.views.common.VerboseHorizontalScrollView android:layout_gravity="center_horizontal" android:id="@id/navi_catalog_alice_suggestion_scroller" android:scrollbars="none" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fillViewport="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/navi_catalog_alice_root" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.yandex.music.sdk.helper.ui.views.common.VerboseHorizontalScrollView>
+    <Button android:layout_gravity="center_horizontal" android:id="@id/navi_catalog_alice_button" android:background="@drawable/music_sdk_helper_ic_alice" android:layout_width="56.0dip" android:layout_height="56.0dip" android:layout_margin="16.0dip" />
+</merge>

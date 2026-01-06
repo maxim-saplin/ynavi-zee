@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/paymentsdk_prebuilt_card_root_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/paymentsdk_prebuilt_card_binding_layout" android:layout_width="fill_parent" android:layout_height="74.0dip" android:layout_marginTop="20.0dip" android:layoutDirection="ltr">
+            <com.yandex.payment.sdk.ui.view.card.CardNumberInput android:id="@id/paymentsdk_prebuilt_card_number_input" android:layout_width="@dimen/paymentsdk_prebuilt_card_number_input_expanded_width" android:layout_height="fill_parent" />
+            <Space android:id="@id/paymentsdk_prebuilt_card_number_to_scanner_space" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <ImageView android:id="@id/paymentsdk_prebuilt_card_scanner" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginBottom="8.0dip" android:scaleType="fitEnd" android:importantForAccessibility="no" android:paddingHorizontal="2.0dip" android:paddingVertical="4.0dip" app:srcCompat="@drawable/paymentsdk_ic_card_scanner" />
+            <Space android:id="@id/paymentsdk_prebuilt_card_number_to_expiration_date_space" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.yandex.payment.sdk.ui.view.card.ExpirationDateInput android:id="@id/paymentsdk_prebuilt_expiration_date_input" android:visibility="gone" android:layout_width="120.0dip" android:layout_height="fill_parent" />
+            <Space android:id="@id/paymentsdk_prebuilt_expiration_date_to_cvn_space" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.yandex.payment.sdk.ui.view.card.CvnInput android:id="@id/paymentsdk_prebuilt_cvn_input" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <TextView android:textAppearance="@style/PaymentSdkPrebuiltTextAppearance.Error" android:gravity="start|center" android:id="@id/paymentsdk_prebuilt_error_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+    </LinearLayout>
+</merge>

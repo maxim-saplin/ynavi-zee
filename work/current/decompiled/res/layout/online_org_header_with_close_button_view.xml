@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/online_orgs_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginStart="16.0dip" style="@style/Text20.Medium" />
+    <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end" android:id="@id/online_orgs_header_close_button" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="15.0dip" android:layout_marginEnd="16.0dip" />
+</merge>

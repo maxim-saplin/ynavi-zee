@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/navi_guidance_transition_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:id="@id/navi_guidance_controls_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:ignore_shore_tags="toolbar,search">
+        <Space android:id="@id/guidance_search_map_control_ghost" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_clearance="@dimen/control_default_clearance" app:layout_fleet_id="1" app:layout_floating="drifting_down" app:layout_heaviness="0" app:layout_shadow_size_to_ignore="@dimen/control_default_shadow_size_to_ignore" />
+        <Space android:id="@id/navi_guidance_speed_group_ghost" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_fleet_id="0" app:layout_floating="drifting_up" app:layout_heaviness="0" />
+        <include layout="@layout/control_chunk_traffic_priority" />
+        <include layout="@layout/control_chunk_carparks_priority" />
+        <include layout="@layout/control_chunk_panorama" />
+        <include layout="@layout/control_chunk_surge" />
+        <include layout="@layout/control_chunk_zoom" />
+        <include layout="@layout/control_chunk_position" />
+        <include layout="@layout/control_chunk_panorama_stub" />
+        <include layout="@layout/control_chunk_bugreport" />
+    </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+    <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:id="@id/navi_guidance_special_visibility_controls_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:ignore_shore_tags="toolbar,search">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" app:layout_fleet_id="1" app:layout_floating="anchored" app:layout_heaviness="1">
+            <ru.yandex.yandexmaps.controls.addroadevent.ControlAddRoadEvent android:id="@id/guidance_add_road_event" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" />
+            <ru.yandex.yandexmaps.controls.voicesearch.ControlVoiceSearch android:id="@id/guidance_open_voice_search" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ru.yandex.yandexmaps.controls.music.ControlMusic android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+        </LinearLayout>
+    </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+.class public interface abstract Lcom/yandex/mrc/pedestrian/AssignmentListener;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# virtual methods
+.method public abstract onAssignmentChanged(Lcom/yandex/mrc/pedestrian/Assignment;)V
+.end method
+
+.method public abstract onAssignmentError(Lcom/yandex/mrc/pedestrian/Assignment;Lcom/yandex/runtime/Error;)V
+.end method

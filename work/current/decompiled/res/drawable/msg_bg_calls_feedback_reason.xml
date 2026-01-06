@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="?android:colorControlHighlight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector android:shape="rectangle">
+            <item android:state_selected="true" android:drawable="@drawable/msg_bg_calls_feedback_reason_selected" />
+            <item android:state_selected="false" android:drawable="@drawable/msg_bg_calls_feedback_reason_unselected" />
+        </selector>
+    </item>
+</ripple>

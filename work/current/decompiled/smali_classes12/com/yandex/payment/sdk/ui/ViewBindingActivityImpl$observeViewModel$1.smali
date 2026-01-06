@@ -1,0 +1,154 @@
+.class final Lcom/yandex/payment/sdk/ui/ViewBindingActivityImpl$observeViewModel$1;
+.super Lkotlin/jvm/internal/Lambda;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/Lambda;",
+        "Lkotlin/jvm/functions/Function1;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u001c\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\n\u001a\u00020\u0007\"\u0008\u0008\u0000\u0010\u0001*\u00020\u0000\"\u0008\u0008\u0001\u0010\u0003*\u00020\u00022\u000e\u0010\u0006\u001a\n \u0005*\u0004\u0018\u00010\u00040\u0004H\n\u00a2\u0006\u0004\u0008\u0008\u0010\t"
+    }
+    d2 = {
+        "Lcom/yandex/payment/sdk/ui/f;",
+        "VM",
+        "Lz2/a;",
+        "VB",
+        "Lcom/yandex/payment/sdk/ui/s;",
+        "kotlin.jvm.PlatformType",
+        "navResult",
+        "Lm31/d0;",
+        "invoke",
+        "(Lcom/yandex/payment/sdk/ui/s;)V",
+        "<anonymous>"
+    }
+    k = 0x3
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/yandex/payment/sdk/ui/o0;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/yandex/payment/sdk/ui/o0;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lcom/yandex/payment/sdk/ui/o0;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/yandex/payment/sdk/ui/ViewBindingActivityImpl$observeViewModel$1;->this$0:Lcom/yandex/payment/sdk/ui/o0;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    check-cast p1, Lcom/yandex/payment/sdk/ui/s;
+
+    sget-object v0, Lcom/yandex/payment/sdk/ui/n;->a:Lcom/yandex/payment/sdk/ui/n;
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p0, Lcom/yandex/payment/sdk/ui/ViewBindingActivityImpl$observeViewModel$1;->this$0:Lcom/yandex/payment/sdk/ui/o0;
+
+    invoke-virtual {p1}, Lcom/yandex/payment/sdk/ui/e;->O()V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v0, Lcom/yandex/payment/sdk/ui/o;->a:Lcom/yandex/payment/sdk/ui/o;
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget-object p1, p0, Lcom/yandex/payment/sdk/ui/ViewBindingActivityImpl$observeViewModel$1;->this$0:Lcom/yandex/payment/sdk/ui/o0;
+
+    invoke-static {p1, v1}, Lcom/yandex/payment/sdk/ui/o0;->Q(Lcom/yandex/payment/sdk/ui/o0;Z)V
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v0, Lcom/yandex/payment/sdk/ui/q;->a:Lcom/yandex/payment/sdk/ui/q;
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_2
+
+    iget-object p1, p0, Lcom/yandex/payment/sdk/ui/ViewBindingActivityImpl$observeViewModel$1;->this$0:Lcom/yandex/payment/sdk/ui/o0;
+
+    invoke-static {p1, v2}, Lcom/yandex/payment/sdk/ui/o0;->Q(Lcom/yandex/payment/sdk/ui/o0;Z)V
+
+    goto :goto_0
+
+    :cond_2
+    sget-object v0, Lcom/yandex/payment/sdk/ui/p;->a:Lcom/yandex/payment/sdk/ui/p;
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object p1, p0, Lcom/yandex/payment/sdk/ui/ViewBindingActivityImpl$observeViewModel$1;->this$0:Lcom/yandex/payment/sdk/ui/o0;
+
+    invoke-static {p1, v1}, Lcom/yandex/payment/sdk/ui/o0;->R(Lcom/yandex/payment/sdk/ui/o0;Z)V
+
+    goto :goto_0
+
+    :cond_3
+    sget-object v0, Lcom/yandex/payment/sdk/ui/r;->a:Lcom/yandex/payment/sdk/ui/r;
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/l;->n(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lcom/yandex/payment/sdk/ui/ViewBindingActivityImpl$observeViewModel$1;->this$0:Lcom/yandex/payment/sdk/ui/o0;
+
+    invoke-static {p1, v2}, Lcom/yandex/payment/sdk/ui/o0;->R(Lcom/yandex/payment/sdk/ui/o0;Z)V
+
+    :cond_4
+    :goto_0
+    sget-object p1, Lm31/d0;->a:Lm31/d0;
+
+    return-object p1
+.end method

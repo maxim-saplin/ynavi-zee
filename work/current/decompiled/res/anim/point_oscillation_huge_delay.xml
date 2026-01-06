@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:interpolator="@android:anim/linear_interpolator" android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator android:interpolator="@anim/typing_circle_interpolator" android:duration="600" android:startOffset="200" android:repeatCount="infinite" android:repeatMode="restart" android:valueFrom="1f" android:valueTo="1.33f" android:valueType="floatType" android:propertyName="scaleX" />
+    <objectAnimator android:interpolator="@anim/typing_circle_interpolator" android:duration="600" android:startOffset="200" android:repeatCount="infinite" android:repeatMode="restart" android:valueFrom="1f" android:valueTo="1.33f" android:valueType="floatType" android:propertyName="scaleY" />
+</set>

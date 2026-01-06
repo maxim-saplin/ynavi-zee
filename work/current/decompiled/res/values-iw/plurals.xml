@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="PlusPay.Consumable.SpendPoints.Description">
+        <item quantity="other">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="zero">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="one">לבזבז &lt;point> נקודת בונוס</item>
+        <item quantity="few">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="many">לבזבז &lt;point> נקודות בונוס</item>
+    </plurals>
+    <plurals name="ask_disk_space_files_count">
+        <item quantity="other">%1$d קבצים</item>
+        <item quantity="one">%1$d קובץ</item>
+        <item quantity="few">%1$d קבצים</item>
+    </plurals>
+    <plurals name="calls_feedback_show_all_reasons_button_text">
+        <item quantity="other">%d סיבות נוספות…</item>
+        <item quantity="one">%d סיבה נוספת…</item>
+        <item quantity="few">%d סיבות נוספות…</item>
+    </plurals>
+    <plurals name="card_geochats_unseen_messages">
+        <item quantity="other">%1$s הודעות חדשות</item>
+        <item quantity="one">הודעה חדשה %1$s</item>
+        <item quantity="few">%1$s הודעות חדשות</item>
+    </plurals>
+    <plurals name="channel_subscribers_plural">
+        <item quantity="other">%1$d מנויים</item>
+        <item quantity="one">מנוי %1$d</item>
+        <item quantity="few">%1$d מנויים</item>
+    </plurals>
+    <plurals name="chat_attach_confirm_no_size">
+        <item quantity="other">שלח %1$d תמונות</item>
+        <item quantity="one">שלח תמונה %1$d</item>
+        <item quantity="few">שלח %1$d תמונות</item>
+    </plurals>
+    <plurals name="chat_attach_send_files">
+        <item quantity="other">שלח %1$d קבצים</item>
+        <item quantity="one">שלח קובץ</item>
+        <item quantity="few">שלח %1$d קבצים</item>
+    </plurals>
+    <plurals name="chat_attach_send_gif">
+        <item quantity="other">שלח %1$d תמונות</item>
+        <item quantity="one">שלח תמונה</item>
+        <item quantity="few">שלח %1$d תמונות</item>
+    </plurals>
+    <plurals name="chat_attach_send_images">
+        <item quantity="other">שלח %1$d תמונות</item>
+        <item quantity="one">שלח תמונה</item>
+        <item quantity="few">שלח %1$d תמונות</item>
+    </plurals>
+    <plurals name="chat_members_plural">
+        <item quantity="other">%1$d חברים</item>
+        <item quantity="one">חבר %1$d</item>
+        <item quantity="few">%1$d חברים</item>
+    </plurals>
+    <plurals name="chat_status_typing_many">
+        <item quantity="other">%d מקלידים</item>
+        <item quantity="one">%d מקליד/ה</item>
+        <item quantity="few">%d מקלידים</item>
+    </plurals>
+    <plurals name="chat_threadlist_status">
+        <item quantity="other">אתה עוקב %1$d אחרי השרשורים</item>
+        <item quantity="one">אתה עוקב %1$d אחרי השרשור</item>
+        <item quantity="few">אתה עוקב %1$d אחרי השרשורים</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d שעות</item>
+        <item quantity="one">%d שעה</item>
+        <item quantity="few">%d שעות</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d דקות</item>
+        <item quantity="one">דקה %d</item>
+        <item quantity="few">%d דקות</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">הרצה %d שניות קדימה</item>
+        <item quantity="one">הרצה %d שניות קדימה</item>
+        <item quantity="two">הרצה %d שניות קדימה</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">הרצה %d שניות אחורה</item>
+        <item quantity="one">הרצה %d שניות אחורה</item>
+        <item quantity="two">הרצה %d שניות אחורה</item>
+    </plurals>
+    <plurals name="forward_messages_text">
+        <item quantity="other">העבר %1$s הודעות</item>
+        <item quantity="one">העבר הודעה %1$s</item>
+        <item quantity="few">העבר %1$s הודעות</item>
+    </plurals>
+    <plurals name="group_call_participants_count_text">
+        <item quantity="other">%d חברים</item>
+        <item quantity="one">%d חבר</item>
+        <item quantity="few">%d חברים</item>
+    </plurals>
+    <plurals name="international.PlusPay.Consumable.SpendPoints.Description">
+        <item quantity="other">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="zero">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="one">לבזבז &lt;point> נקודת בונוס</item>
+        <item quantity="two">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="few">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="many">לבזבז &lt;point> נקודות בונוס</item>
+    </plurals>
+    <plurals name="menu_confirm_delete_messages_plural">
+        <item quantity="other">מחק %1$d הודעות</item>
+        <item quantity="one">מחק הודעה %1$d</item>
+        <item quantity="few">מחק %1$d הודעות</item>
+    </plurals>
+    <plurals name="menu_reactions">
+        <item quantity="other">%s תגובות</item>
+        <item quantity="one">%s תגובה</item>
+        <item quantity="few">%s תגובות</item>
+    </plurals>
+    <plurals name="messaging_chat_search_result">
+        <item quantity="other">%1$d מתוך %2$d התאמות</item>
+        <item quantity="one">%1$d מתוך התאמה %2$d</item>
+        <item quantity="few">%1$d מתוך %2$d התאמות</item>
+    </plurals>
+    <plurals name="messaging_online_minutes_ago">
+        <item quantity="other">נוכחות אחרונה נצפתה לפני %d דקות</item>
+        <item quantity="one">נוכחות אחרונה נצפתה לפני דקה %d</item>
+        <item quantity="few">נוכחות אחרונה נצפתה לפני %d דקות</item>
+    </plurals>
+    <plurals name="messaging_removed_messages_group_plural">
+        <item quantity="other">%d הודעות נמחקה</item>
+        <item quantity="one">הודעה %d נמחקה</item>
+        <item quantity="few">%d הודעות נמחקה</item>
+    </plurals>
+    <plurals name="messaging_thread_counter_label">
+        <item quantity="other">%1$d תגובות</item>
+        <item quantity="one">%1$d תגובה</item>
+        <item quantity="few">%1$d תגובות</item>
+    </plurals>
+    <plurals name="messenger_count_recent_voters">
+        <item quantity="other">%d הצבעות</item>
+        <item quantity="one">הצבעה %d</item>
+        <item quantity="few">%d הצבעות</item>
+    </plurals>
+    <plurals name="messenger_create_poll_max_answers_warn">
+        <item quantity="other">ניתן להוסיף עוד %d תשובות</item>
+        <item quantity="one">ניתן להוסיף עוד תשובה %d</item>
+        <item quantity="few">ניתן להוסיף עוד %d תשובות</item>
+    </plurals>
+    <plurals name="messenger_poll_answers_count">
+        <item quantity="other">%d תגובות</item>
+        <item quantity="one">%d תגובה</item>
+        <item quantity="few">%d תגובות</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d התראות חדשות</item>
+        <item quantity="one">%d התראות חדשות</item>
+        <item quantity="two">%d התראות חדשות</item>
+    </plurals>
+    <plurals name="notification_chat_title_plural">
+        <item quantity="other">%1$s:‏ %2$s הודעות חדשות</item>
+        <item quantity="one">%1$s: הודעה חדשה %2$s</item>
+        <item quantity="few">%1$s:‏ %2$s הודעות חדשות</item>
+    </plurals>
+    <plurals name="notification_new_messages_count">
+        <item quantity="other">%d הודעות חדשות</item>
+        <item quantity="one">הודעה חדשה %d</item>
+        <item quantity="few">%d הודעות חדשות</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">אחרונות %1$d ספרות</item>
+        <item quantity="zero">אחרונות %1$d ספרות</item>
+        <item quantity="one">אחרונה %1$d ספרה</item>
+        <item quantity="few">אחרונות %1$d ספרות</item>
+        <item quantity="many">אחרונות %1$d ספרות</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"‫כעת תבוצע אליך שיחה של
+%1$s. יש להכניס את הספרות %2$d האחרונות של מספר זה.‬"</item>
+        <item quantity="zero">"‫כעת תבוצע אליך שיחה של
+%1$s. יש להכניס את הספרות %2$d האחרונות של מספר זה.‬"</item>
+        <item quantity="one">"‫כעת תבוצע אליך שיחה של
+%1$s. יש להכניס את הספרה %2$d האחרונה של מספר זה.‬"</item>
+        <item quantity="few">"‫כעת תבוצע אליך שיחה של
+%1$s. יש להכניס את הספרות %2$d האחרונות של מספר זה.‬"</item>
+        <item quantity="many">"‫כעת תבוצע אליך שיחה של
+%1$s. יש להכניס את הספרות %2$d האחרונות של מספר זה.‬"</item>
+    </plurals>
+    <plurals name="user_in_groups">
+        <item quantity="other">%s</item>
+        <item quantity="one">%s</item>
+        <item quantity="few">%s</item>
+    </plurals>
+    <plurals name="user_in_groups_count">
+        <item quantity="other">%d קבוצות</item>
+        <item quantity="one">%d קבוצה</item>
+        <item quantity="few">%d קבוצות</item>
+    </plurals>
+    <plurals name="voice_timelimit_minutes_plural">
+        <item quantity="other">%1$d דקות.</item>
+        <item quantity="one">דקה %1$d.</item>
+        <item quantity="few">%1$d דקות.</item>
+    </plurals>
+</resources>

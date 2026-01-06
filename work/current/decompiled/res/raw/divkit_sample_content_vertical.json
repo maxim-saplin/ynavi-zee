@@ -1,0 +1,104 @@
+{
+  "templates": {
+    "text_block": {
+      "type": "text",
+      "$text": "header",
+      "width": {
+        "type": "match_parent"
+      },
+      "height": {
+        "type": "fixed",
+        "value": 150
+      },
+      "border": {
+        "corner_radius": 6
+      },
+      "background": [
+        {
+          "type": "solid",
+          "color": "@{getColorFromDict( palette, app_theme, 'background_color')}"
+        }
+      ],
+      "font_size": 20,
+      "text_alignment_vertical": "center",
+      "text_alignment_horizontal": "center",
+      "text_color": "@{getColorFromDict(palette, app_theme, 'text_color')}"
+    }
+  },
+  "card": {
+    "log_id": "card",
+    "variables": [
+      {
+        "name": "palette",
+        "type": "dict",
+        "value": {
+          "light": {
+            "text_color": "#000000",
+            "background_color": "#dadada"
+          },
+          "dark": {
+            "text_color": "#ffffff",
+            "background_color": "#6a6a6a"
+          }
+        }
+      }
+    ],
+    "states": [
+      {
+        "state_id": 0,
+        "div": {
+          "type": "gallery",
+          "orientation": "vertical",
+          "width": {
+            "type": "match_parent"
+          },
+          "height": {
+            "type": "fixed",
+            "value": 600
+          },
+          "paddings": {
+            "left": 16,
+            "top": 16,
+            "right": 16,
+            "bottom": 16
+          },
+          "restrict_parent_scroll": 1,
+          "items": [
+            {
+              "type": "text_block",
+              "header": "Item 1"
+            },
+            {
+              "type": "text_block",
+              "header": "Item 2"
+            },
+            {
+              "type": "text_block",
+              "header": "Item 3"
+            },
+            {
+              "type": "text_block",
+              "header": "Item 4"
+            },
+            {
+              "type": "text_block",
+              "header": "Item 5"
+            },
+            {
+              "type": "text_block",
+              "header": "Item 6"
+            },
+            {
+              "type": "text_block",
+              "header": "Item 7"
+            },
+            {
+              "type": "text_block",
+              "header": "Item 8"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

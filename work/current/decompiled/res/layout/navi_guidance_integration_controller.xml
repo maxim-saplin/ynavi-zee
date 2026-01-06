@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.navi.ride.api.NaviRideTouchLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.navi.ride.api.NaviRideTouchLayout android:id="@id/navi_guidance_controls_touch_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include layout="@layout/navi_guidance_ruler" />
+            <include layout="@layout/navi_guidance_controls" />
+        </ru.yandex.yandexmaps.navi.ride.api.NaviRideTouchLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <FrameLayout android:id="@id/navi_guidance_search_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/navi_guidance_dialog_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/guidance_transition_suggest_black_screen" android:background="#4d000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ru.yandex.yandexmaps.common.views.ShutterImitationFrameLayout android:layout_gravity="bottom" android:id="@id/guidance_transition_suggest_shutter" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.yandex.yandexnavi.ui.guidance.dialog.GuidanceDialogWidgetViewImpl android:id="@id/guidance_transition_suggest_dialog" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" />
+    </ru.yandex.yandexmaps.common.views.ShutterImitationFrameLayout>
+</ru.yandex.yandexmaps.navi.ride.api.NaviRideTouchLayout>

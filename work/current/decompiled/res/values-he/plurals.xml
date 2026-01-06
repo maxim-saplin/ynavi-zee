@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="PlusPay.Consumable.SpendPoints.Description">
+        <item quantity="other">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="zero">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="one">לבזבז &lt;point> נקודת בונוס</item>
+        <item quantity="few">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="many">לבזבז &lt;point> נקודות בונוס</item>
+    </plurals>
+    <plurals name="international.PlusPay.Consumable.SpendPoints.Description">
+        <item quantity="other">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="zero">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="one">לבזבז &lt;point> נקודת בונוס</item>
+        <item quantity="two">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="few">לבזבז &lt;point> נקודות בונוס</item>
+        <item quantity="many">לבזבז &lt;point> נקודות בונוס</item>
+    </plurals>
+</resources>

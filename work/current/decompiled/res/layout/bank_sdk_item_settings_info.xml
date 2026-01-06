@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/itemRoot" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/bank_sdk_transfer_settings_item_title_margin_end"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="?bankColor_textIcon_primary" android:gravity="start" android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bank_sdk_transfer_settings_item_title_margin_top" app:layout_constraintBottom_toTopOf="@id/subtitle" app:layout_constraintTop_toTopOf="parent" style="@style/Widget.Bank.Text.Title1" />
+    <TextView android:textColor="?bankColor_textIcon_secondary" android:gravity="start" android:id="@id/subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bank_sdk_transfer_settings_item_subtitle_margin_top" app:layout_constraintTop_toBottomOf="@id/title" style="@style/Widget.Bank.Text.Body2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

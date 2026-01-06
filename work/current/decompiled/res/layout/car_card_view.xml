@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:clipChildren="false" android:clipToPadding="false" android:layout_width="40.0dip" android:layout_height="40.0dip">
+        <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:id="@id/parking_payment_car_item_icon_background" android:clipChildren="false" android:clipToPadding="false" android:layout_width="40.0dip" android:layout_height="40.0dip" app:cornerRadius="8.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/parking_payment_car_item_icon" android:layout_width="24.0dip" android:layout_height="fill_parent" android:src="@drawable/yandexmaps_rubrics_transit_car_24" />
+        </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+        <ImageView android:layout_gravity="end|top" android:id="@id/selected_badge" android:background="@drawable/selected_badge_background" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="-8.0dip" android:src="@drawable/mark_actual_24" android:layout_marginEnd="-8.0dip" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip">
+        <TextView android:id="@id/parking_payment_car_item_car_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="@style/Text14.Grey" />
+        <TextView android:id="@id/parking_payment_car_item_car_number" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium" />
+    </LinearLayout>
+    <FrameLayout android:layout_gravity="center_vertical" android:id="@id/car_options_button" android:layout_width="40.0dip" android:layout_height="40.0dip">
+        <ImageView android:layout_gravity="center" android:layout_width="24.0dip" android:layout_height="wrap_content" app:srcCompat="@drawable/more_16" app:tint="@color/icons_secondary" />
+    </FrameLayout>
+</merge>

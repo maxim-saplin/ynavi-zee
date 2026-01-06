@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.designsystem.loader.LoaderView android:layout_gravity="center" android:id="@id/customview_user_input_progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" app:ymaps_progressSize="small" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/customview_user_input_background" android:background="@drawable/customview_user_input_background" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <EditText android:textSize="16.0sp" android:textColorHint="@color/common_hint" android:gravity="center_vertical" android:id="@id/customview_user_input_edit" android:background="@android:color/transparent" android:paddingTop="16.0dip" android:paddingBottom="20.0dip" android:saveEnabled="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLength="100" android:layout_weight="1.0" android:inputType="textCapSentences" style="@style/Text18" />
+        <ImageButton android:id="@id/customview_user_input_clear_button" android:background="@android:color/transparent" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/common_button_size" android:layout_marginBottom="6.0dip" android:scaleType="center" android:tint="@color/icons_secondary" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" app:srcCompat="@drawable/clear_16" />
+    </LinearLayout>
+</merge>

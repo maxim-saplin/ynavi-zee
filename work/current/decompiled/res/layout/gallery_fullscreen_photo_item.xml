@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/gallery_background_photo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="@color/black_alpha_80" android:scaleType="centerCrop" />
+    <ru.yandex.yandexmaps.gallery.internal.fullscreen.ZoomableImageView android:id="@id/gallery_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

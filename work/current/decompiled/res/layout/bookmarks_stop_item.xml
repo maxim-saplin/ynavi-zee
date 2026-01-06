@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:gravity="start" android:layout_gravity="start|bottom" android:id="@id/stop_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginEnd="24.0dip" style="@style/Text20.Medium" />
+        <ImageView android:layout_gravity="end|center" android:id="@id/bookmarks_trailing_icon_view" android:background="?selectableItemBackgroundBorderless" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/more_16" android:importantForAccessibility="no" app:tint="@color/icons_secondary" />
+    </FrameLayout>
+    <ru.yandex.yandexmaps.common.views.VectorTintableCompoundsTextView android:textColor="@color/bw_grey60" android:layout_gravity="start" android:id="@id/distance_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:maxLines="1" app:drawableLeftCompat="@drawable/location_16" app:drawableTint="@color/bw_grey60" style="@style/Text14.Medium" />
+</merge>

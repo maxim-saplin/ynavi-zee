@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="?messagingCommonTextPrimaryColor" android:layout_gravity="start|center" android:id="@id/group_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/ya_regular" android:layout_marginStart="16.0dip" />
+    <TextView android:textSize="16.0sp" android:textColor="?messagingCommonAccentColor" android:gravity="center" android:layout_gravity="end|center" android:id="@id/group_action" android:background="?selectableItemBackground" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/global_search_clear_recents" android:fontFamily="@font/ya_regular" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+</FrameLayout>

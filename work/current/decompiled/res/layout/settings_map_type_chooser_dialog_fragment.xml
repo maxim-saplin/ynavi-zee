@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/common_divider_horizontal_sub56_impl" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RadioButton android:id="@id/settings_chooser_map_type_map" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/main_menu_map_type_map" style="@style/SettingRadioButton" />
+    <RadioButton android:id="@id/settings_chooser_map_type_satellite" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/main_menu_map_type_satellite" style="@style/SettingRadioButton" />
+    <RadioButton android:id="@id/settings_chooser_map_type_hybrid" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/main_menu_map_type_hybrid" style="@style/SettingRadioButton" />
+</RadioGroup>

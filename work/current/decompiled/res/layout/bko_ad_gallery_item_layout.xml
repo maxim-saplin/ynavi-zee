@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bko_ad_gallery_item_image_item_image" android:layout_width="96.0dip" android:layout_height="96.0dip" android:scaleType="center" />
+    <TextView android:ellipsize="end" android:id="@id/bko_ad_gallery_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:maxLines="2" style="@style/Text14.TextPrimary" />
+    <TextView android:ellipsize="end" android:id="@id/bko_ad_gallery_item_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" style="@style/Text14.PrimaryVariant" />
+</merge>

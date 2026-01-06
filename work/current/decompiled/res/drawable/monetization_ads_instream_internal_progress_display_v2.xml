@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <solid android:color="@color/monetization_ads_internal_instream_progress_bar_color" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

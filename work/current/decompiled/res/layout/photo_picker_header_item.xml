@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:ellipsize="end" android:id="@id/photo_picker_header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_picker_header_title" android:maxLines="1" style="@style/Text20.Medium" />
+        <TextView android:ellipsize="end" android:id="@id/photo_picker_header_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/photo_picker_header_title" android:maxLines="1" style="@style/Text14.TextSecondary" />
+    </LinearLayout>
+    <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end|top" android:id="@id/photo_picker_close_view" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+</merge>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/contentView" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/tanker_tanker_header_text_size" android:textColor="@color/tanker_red_common" android:id="@id/totalSumTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tanker_basic_padding" style="@style/TankerTextMedium" />
+    <TextView android:textSize="@dimen/tanker_small_text_size" android:textColor="@color/tanker_text_primary" android:gravity="center_horizontal" android:id="@id/subtitleTv" android:padding="@dimen/tanker_basic_padding_v2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tanker_total_debt" android:layout_marginStart="@dimen/tanker_basic_padding" android:layout_marginEnd="@dimen/tanker_basic_padding" style="@style/TankerTextRegular" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/debtsRv" android:paddingLeft="@dimen/tanker_basic_padding" android:paddingRight="@dimen/tanker_basic_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tanker_basic_padding_8" android:layout_marginBottom="@dimen/tanker_basic_padding_8" />
+</LinearLayout>

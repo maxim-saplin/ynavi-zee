@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:id="@id/mt_snippet_pedestrian_with_via_points_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" android:adjustViewBounds="false" android:layout_marginEnd="4.0dip" app:srcCompat="@drawable/pedestrian_20" />
+    <include layout="@layout/mt_snippet_via_point" />
+    <TextView android:layout_gravity="center_vertical" android:id="@id/mt_snippet_pedestrian_with_via_points_point_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4.0dip" style="@style/Text14.Medium.PrimaryVariant" />
+</LinearLayout>

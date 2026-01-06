@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/layout_parking_details_payment" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="70.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_gravity="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/parking_payment_parking_card_details_payment_total_cost_label" style="@style/Text14.Grey" />
+        <TextView android:layout_gravity="end" android:id="@id/text_general_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.Medium" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_gravity="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/parking_payment_parking_card_details_payment_account_subtraction_label" style="@style/Text14.Grey" />
+        <TextView android:layout_gravity="end" android:id="@id/text_parking_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.Medium" />
+    </FrameLayout>
+</FrameLayout>

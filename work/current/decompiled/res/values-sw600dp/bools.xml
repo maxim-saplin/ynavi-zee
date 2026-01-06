@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="isTablet">true</bool>
+    <bool name="is_tablet">true</bool>
+    <bool name="paymentsdk_is_tablet">true</bool>
+    <bool name="tablet">true</bool>
+    <bool name="tanker_is_tablet">true</bool>
+    <bool name="videoPlayer_isTablet">true</bool>
+    <bool name="ysk_is_tablet">true</bool>
+</resources>

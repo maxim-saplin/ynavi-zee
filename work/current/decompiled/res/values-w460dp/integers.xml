@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="large_categories_columns_amount">4</integer>
+</resources>

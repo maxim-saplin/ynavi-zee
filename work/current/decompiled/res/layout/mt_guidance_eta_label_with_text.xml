@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="22.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/mt_guidance_label_num_first_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="22.0dip" android:text="Выход" android:paddingEnd="4.0dip" style="@style/Text14.Medium.TextPrimaryVariant" />
+    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/mt_guidance_label_num" android:background="@drawable/mt_guidance_label_background" android:layout_width="wrap_content" android:layout_height="22.0dip" android:maxWidth="85.0dip" android:minWidth="22.0dip" android:maxLines="1" android:paddingHorizontal="5.0dip" style="@style/Text14.Medium.TextColorBg" />
+</LinearLayout>

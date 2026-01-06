@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/notificationEtaBlock" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="25.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/notification_text_size" android:textStyle="bold" android:textColor="@color/text_body_white" android:id="@id/remainingDistanceView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/NaviTextBold" />
+    <TextView android:textSize="@dimen/notification_text_size" android:textStyle="bold" android:textColor="@color/text_body_white" android:gravity="center" android:id="@id/remainingTimeView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/NaviTextBold" />
+    <TextView android:textSize="@dimen/notification_text_size" android:textStyle="bold" android:textColor="@color/text_body_white" android:gravity="end" android:id="@id/timeOfArrivalView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/NaviTextBold" />
+</LinearLayout>

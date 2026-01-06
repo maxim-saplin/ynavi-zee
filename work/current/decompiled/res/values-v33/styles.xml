@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SplashAppTheme" parent="@style/BaseSplashAppTheme">
+        <item name="android:statusBarColor">@color/splash_screen_background</item>
+        <item name="android:navigationBarColor">@color/splash_screen_background</item>
+        <item name="android:windowLightStatusBar">@bool/day</item>
+        <item name="android:windowLightNavigationBar">@bool/day</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowSplashScreenBrandingImage">@drawable/logo_text_splash_12_android</item>
+        <item name="android:windowSplashScreenBehavior">icon_preferred</item>
+    </style>
+</resources>

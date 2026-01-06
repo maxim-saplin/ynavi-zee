@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView android:textSize="14.0sp" android:textColor="@color/alicekit_palette_text_and_icon_secondary" android:ellipsize="end" android:id="@id/chat_action_text" android:background="@drawable/futuris_chat_action_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" android:textIsSelectable="false" android:textAllCaps="true" android:fontFamily="@font/ya_medium" android:paddingHorizontal="13.0dip" android:paddingVertical="8.0dip" app:textAllCaps="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

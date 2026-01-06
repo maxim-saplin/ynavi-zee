@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/mainContainer" android:background="@drawable/paymentsdk_bg_challenger_input" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:fitsSystemWindows="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="18.0dip" android:paddingEnd="20.0dip">
+        <EditText android:textSize="0.0sp" android:id="@id/editCodeReal" android:background="@null" android:layout_width="1.0dip" android:layout_height="1.0dip" android:cursorVisible="false" android:inputType="number" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/llCodeWrapper" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <View android:id="@id/cursor0" android:background="#db000000" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="32.0dip" android:layout_marginEnd="1.0dip" />
+            <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="#db000000" android:textColorHint="#4d000000" android:gravity="center" android:id="@id/code1" android:layout_width="18.0dip" android:layout_height="26.0dip" android:hint="0" android:maxLength="1" android:layout_marginEnd="2.0dip" />
+            <View android:id="@id/cursor1" android:background="#db000000" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="32.0dip" android:layout_marginEnd="1.0dip" />
+            <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="#db000000" android:textColorHint="#4d000000" android:gravity="center" android:id="@id/code2" android:layout_width="18.0dip" android:layout_height="26.0dip" android:hint="0" android:layout_marginEnd="4.0dip" />
+            <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="#db000000" android:textColorHint="#4d000000" android:gravity="center" android:id="@id/code3" android:layout_width="18.0dip" android:layout_height="26.0dip" android:hint="," android:maxLength="1" android:layout_marginEnd="2.0dip" />
+            <View android:id="@id/cursor2" android:background="#db000000" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="32.0dip" android:layout_marginEnd="1.0dip" />
+            <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="#db000000" android:textColorHint="#4d000000" android:gravity="center" android:id="@id/code4" android:layout_width="18.0dip" android:layout_height="26.0dip" android:hint="0" android:layout_marginEnd="2.0dip" />
+            <View android:id="@id/cursor3" android:background="#db000000" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="32.0dip" android:layout_marginEnd="1.0dip" />
+            <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="#db000000" android:textColorHint="#4d000000" android:gravity="center" android:id="@id/code5" android:layout_width="18.0dip" android:layout_height="26.0dip" android:hint="0" android:maxLength="1" android:layout_marginEnd="1.0dip" />
+            <View android:id="@id/cursor4" android:background="#db000000" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="32.0dip" android:layout_marginEnd="2.0dip" />
+            <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="#db000000" android:textColorHint="#4d000000" android:gravity="center" android:id="@id/code7" android:layout_width="18.0dip" android:layout_height="26.0dip" android:hint="0" android:maxLength="1" android:layout_marginEnd="1.0dip" />
+            <View android:id="@id/cursor7" android:background="#db000000" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="32.0dip" android:layout_marginEnd="2.0dip" />
+            <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="#db000000" android:textColorHint="#4d000000" android:gravity="center" android:id="@id/code8" android:layout_width="18.0dip" android:layout_height="26.0dip" android:hint="0" android:maxLength="1" android:layout_marginEnd="1.0dip" />
+            <View android:id="@id/cursor8" android:background="#db000000" android:visibility="invisible" android:layout_width="1.0dip" android:layout_height="32.0dip" android:layout_marginEnd="2.0dip" />
+            <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="#ffff4c52" android:textColorHint="#4d000000" android:gravity="center" android:id="@id/code6" android:layout_width="18.0dip" android:layout_height="26.0dip" android:hint="₽" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/blur" android:background="@drawable/paymentsdk_divkit_loading_blur" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="0.0dip" android:layout_alignTop="@id/mainContainer" android:layout_alignBottom="@id/mainContainer" />
+</merge>

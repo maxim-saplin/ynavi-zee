@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet android:duration="@integer/animation_duration" android:transitionOrdering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <changeBounds />
+    <changeTransform />
+    <changeClipBounds />
+    <changeImageTransform />
+    <targets>
+        <target android:targetId="@id/transition_image" />
+    </targets>
+</transitionSet>

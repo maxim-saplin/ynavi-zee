@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/futuris_onboarding_fragment_root_view" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="@dimen/futuris_onboarding_margins_horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <requestFocus />
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/futuris_onboarding_app_bar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="0.0dip" app:elevation="0.0dip" app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior">
+        <include layout="@layout/futuris_onboarding_appbar_content_kz" />
+        <Space android:layout_width="fill_parent" android:layout_height="@dimen/futuris_searchapp_kz_content_space_height" app:layout_scrollFlags="scroll|exitUntilCollapsed|snap" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:gravity="bottom" android:id="@id/futuris_onboarding_content_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <include layout="@layout/futuris_onboarding_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

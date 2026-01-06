@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/bank_web_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView android:id="@id/bank_web_card_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/pay_sdk_margin_giant" app:shapeAppearance="@style/PaySdk.Shape.BottomSheet">
+        <com.yandex.plus.webview.api.WebViewContainer android:id="@id/bank_web_webview_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.yandex.plus.pay.ui.common.api.ui.view.ProgressView android:layout_gravity="center" android:id="@id/bank_web_progress_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

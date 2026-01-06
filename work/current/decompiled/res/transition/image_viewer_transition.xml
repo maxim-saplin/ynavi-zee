@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fade android:duration="@integer/animation_duration"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <targets>
+        <target android:excludeId="@id/transition_image" />
+        <target android:excludeId="@id/view_pager" />
+    </targets>
+</fade>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatRatingBar android:id="@id/star_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:stepSize="0.5" android:isIndicator="true" android:progressTint="@color/icons_rating" android:backgroundTint="@color/icons_rating" style="?android:ratingBarStyleSmall" />
+        <TextView android:id="@id/date_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" android:layout_marginStart="8.0dip" style="@style/Text14.Regular.Secondary" />
+    </LinearLayout>
+    <TextView android:textColor="@color/text_primary" android:ellipsize="end" android:id="@id/review_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:maxLines="3" style="@style/Text16.Regular.TextPrimaryVariant" />
+</merge>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="@string/change_handler_bottom_panel_tag" android:background="@color/bw_black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.mirrors.internal.views.preview.PreviewPager android:id="@id/mirrors_preview_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ru.yandex.yandexmaps.mirrors.internal.views.CloseButtonView android:layout_gravity="end|top" android:id="@id/mirrors_preview_close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginEnd="20.0dip" />
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip">
+                <ru.yandex.yandexmaps.mirrors.internal.views.PhotosCounterView android:layout_gravity="center_horizontal" android:id="@id/mirrors_preview_upload_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <FrameLayout android:id="@id/mirrors_preview_slider_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+                    <ru.yandex.yandexmaps.mirrors.internal.views.preview.PreviewSlider android:layout_gravity="center_vertical" android:id="@id/mirrors_preview_slider" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <ImageView android:layout_gravity="center" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/selected_mirror_112x48" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+</FrameLayout>

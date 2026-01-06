@@ -1,0 +1,68 @@
+.class public final Lru/yandex/yandexmaps/app/di/modules/vr;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ldagger/internal/e;
+
+
+# instance fields
+.field private final a:Lz21/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lz21/a;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lz21/a;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lru/yandex/yandexmaps/app/di/modules/vr;->a:Lz21/a;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/app/di/modules/vr;->a:Lz21/a;
+
+    invoke-interface {v0}, Lz21/a;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lru/yandex/yandexmaps/app/di/components/p10;
+
+    sget-object v1, Lru/yandex/yandexmaps/app/di/modules/tr;->Companion:Lru/yandex/yandexmaps/app/di/modules/sr;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lru/yandex/yandexmaps/multiplatform/rate/route/api/o;->Companion:Lru/yandex/yandexmaps/multiplatform/rate/route/api/m;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lru/yandex/yandexmaps/multiplatform/rate/route/internal/di/e;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v1, v0}, Lru/yandex/yandexmaps/multiplatform/rate/route/internal/di/e;->b(Lru/yandex/yandexmaps/app/di/components/p10;)V
+
+    invoke-virtual {v1}, Lru/yandex/yandexmaps/multiplatform/rate/route/internal/di/e;->a()Lru/yandex/yandexmaps/multiplatform/rate/route/internal/di/h;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lru/yandex/yandexmaps/multiplatform/rate/route/internal/di/h;->b()Lru/yandex/yandexmaps/multiplatform/rate/route/api/o;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lf72/a;->c(Ljava/lang/Object;)V
+
+    return-object v0
+.end method

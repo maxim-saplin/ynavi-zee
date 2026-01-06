@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/storiesRoot" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.core.stories.StoriesComponentView android:id="@id/storiesView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.yandex.bank.widgets.common.ErrorView android:id="@id/errorView" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.progressindicator.CircularProgressIndicator android:id="@id/progress" android:visibility="gone" android:layout_width="@dimen/bank_sdk_progress_indicator_size" android:layout_height="@dimen/bank_sdk_progress_indicator_size" android:indeterminate="true" app:indicatorColor="?bankColor_button_primaryNormal" app:indicatorSize="@dimen/bank_sdk_progress_indicator_size" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:trackThickness="@dimen/bank_sdk_progress_indicator_thickness" />
+    <include android:id="@id/shimmer45" android:visibility="gone" layout="@layout/bank_sdk_stories_shimmer_45" />
+    <include android:id="@id/shimmer100" android:visibility="gone" layout="@layout/bank_sdk_stories_shimmer_100" />
+</androidx.constraintlayout.widget.ConstraintLayout>

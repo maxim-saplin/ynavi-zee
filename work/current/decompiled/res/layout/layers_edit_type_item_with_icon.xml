@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/common_clickable_panel_background_no_border_impl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/layers_edit_types_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:scaleType="center" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+    <CheckBox android:ellipsize="end" android:id="@id/layers_edit_types_check_box" android:background="@null" android:clickable="false" android:layout_width="0.0dip" android:maxLines="2" android:layout_weight="1.0" android:paddingStart="0.0dip" style="@style/SettingsCheckbox" />
+</LinearLayout>

@@ -1,0 +1,63 @@
+.class final synthetic Lcom/yandex/bank/feature/transactions/impl/ui/screens/list/TransactionsFragment$getViewBinding$1$2;
+.super Lkotlin/jvm/internal/FunctionReferenceImpl;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function0;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/FunctionReferenceImpl;",
+        "Lkotlin/jvm/functions/Function0;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    k = 0x3
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
+
+    check-cast v0, Lcom/yandex/bank/feature/transactions/impl/ui/screens/list/g;
+
+    invoke-virtual {v0}, Lcom/yandex/bank/core/mvp/g;->T()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/yandex/bank/feature/transactions/impl/ui/screens/list/d;
+
+    invoke-virtual {v1}, Lcom/yandex/bank/feature/transactions/impl/ui/screens/list/d;->d()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/yandex/bank/feature/transactions/impl/ui/screens/list/g;->i0(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/yandex/bank/feature/transactions/impl/ui/screens/list/g;->i0(Z)V
+
+    :goto_0
+    sget-object v0, Lm31/d0;->a:Lm31/d0;
+
+    return-object v0
+.end method

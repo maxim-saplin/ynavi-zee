@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/navigationSliderRoot" android:background="?bankColor_background_primary" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/fullViewportStubView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/childNavigationContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/grip" layout="@layout/bank_sdk_grip_view" />
+    <ImageView android:id="@id/slideableViewBackButton" android:focusable="true" android:clickable="true" android:layout_width="@dimen/bank_sdk_clickable_icon_size" android:layout_height="@dimen/bank_sdk_clickable_icon_size" android:layout_marginTop="@dimen/bank_sdk_back_button_margin_top" android:scaleType="center" android:contentDescription="@string/bank_sdk_common_accessability_back_title" android:layout_marginStart="@dimen/bank_sdk_slideable_view_back_button_margin_start" app:srcCompat="@drawable/bank_sdk_ic_arrow_short_back" app:tint="?bankColor_textIcon_primary" />
+    <FrameLayout android:id="@id/bankSdkBottomSheetDialogContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+    <View android:layout_gravity="center|top" android:id="@id/bankSdkSnackbarAnchor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+    <FrameLayout android:id="@id/passportWebViewContainer" android:layout_width="1.0px" android:layout_height="1.0px" />
+</FrameLayout>

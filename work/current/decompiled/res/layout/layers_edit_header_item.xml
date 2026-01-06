@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/background_panel" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:ellipsize="end" android:id="@id/layers_edit_types_title" android:padding="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" style="@style/Text18.Medium" />
+    <ImageView android:id="@id/layers_edit_types_close_button" android:layout_width="52.0dip" android:layout_height="fill_parent" android:foreground="@drawable/common_ripple_secondary_radius_24" android:src="@drawable/close_24" android:scaleType="centerInside" android:contentDescription="@string/common_close_button" app:tint="@color/icons_additional" />
+</LinearLayout>

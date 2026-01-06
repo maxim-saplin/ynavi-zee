@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:layout_width="fill_parent" android:layout_height="fill_parent" app:overland_fleets_ids="@string/controls_default_overland_fleets_ids"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/control_chunk_back_simple" />
+    <include layout="@layout/control_chunk_position" />
+</ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>

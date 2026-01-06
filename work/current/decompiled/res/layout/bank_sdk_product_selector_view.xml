@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/productVewIcon" android:layout_width="20.0dip" android:layout_height="20.0dip" android:importantForAccessibility="no" app:srcCompat="@drawable/bank_sdk_ic_bank_placeholder" />
+    <TextView android:id="@id/productViewTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" style="@style/Widget.Bank.Text.Body2" />
+</merge>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/fragment_shadow" />
+    <item android:gravity="center|top">
+        <shape android:shape="rectangle">
+            <size android:height="4.0dip" android:width="48.0dip" />
+            <solid android:color="@color/alicekit_palette_background_color_v2" />
+            <corners android:radius="2.0dip" />
+        </shape>
+    </item>
+    <item android:gravity="center|top" android:top="12.0dip">
+        <shape>
+            <solid android:color="@color/alicekit_palette_background_color_v2" />
+            <corners android:topLeftRadius="@dimen/top_toolbar_corner_radius" android:topRightRadius="@dimen/top_toolbar_corner_radius" />
+        </shape>
+    </item>
+</layer-list>

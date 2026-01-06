@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/frame_to_scale" android:layout_width="@dimen/circle_buttons_frame_size" android:layout_height="@dimen/circle_buttons_frame_size" />
+    <ru.yandex.taxi.design.AutoLetterSpacingTextView android:gravity="center|top" android:layout_gravity="center|top" android:id="@id/circle_button_title" android:paddingLeft="2.0dip" android:paddingRight="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="72.0dip" android:layout_marginBottom="@dimen/go_design_s_space" style="@style/CircleButtonDescription" />
+    <ru.yandex.taxi.widget.RobotoTextView android:textSize="13.0dip" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/circle_button_badge" android:background="@drawable/bg_notification_badge" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="18.0dip" android:minWidth="18.0dip" android:maxLines="1" android:elevation="8.0dip" app:robotoFontStyle="bold" />
+</merge>

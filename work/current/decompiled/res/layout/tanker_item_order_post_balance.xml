@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/tankerAppLogoIv" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/tanker_app_logo" android:layout_marginStart="10.0dip" app:layout_constraintBottom_toBottomOf="@id/tankerDotsContainer" app:layout_constraintStart_toStartOf="parent" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tankerDotsContainer" android:background="@drawable/tanker_bg_order_post_message" android:padding="24.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="4.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toEndOf="@id/tankerAppLogoIv" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_percent="0.7">
+        <TextView android:textSize="@dimen/tanker_medium_text_size" android:textColor="@color/tanker_textColorAlpha100" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tanker_available_balance" style="@style/TankerTextRegular" />
+        <TextView android:textSize="@dimen/tanker_tanker_header_text_size" android:textColor="@color/tanker_textColorAlpha100" android:id="@id/tankerBalanceTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tanker_basic_padding_half" style="@style/TankerTextBold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

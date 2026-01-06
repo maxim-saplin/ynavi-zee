@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="80.0dip" android:width="80.0dip" android:viewportWidth="80.0" android:viewportHeight="80.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$map_placemark_pan_vision_80__0" android:pathData="M48.49 31.51l19.8-19.79C61.05 4.48 51.05 0 40 0C28.96 0 18.96 4.48 11.72 11.72l19.8 19.79C33.69 29.34 36.69 28 40 28c3.32 0 6.32 1.34 8.49 3.51z" android:fillType="evenOdd" />
+</vector>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/customview_link_preference_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/settings_notifications_cameras" android:layout_weight="1.0" style="@style/Text16" />
+    <ru.yandex.yandexmaps.designsystem.loader.LoaderView android:gravity="center" android:id="@id/customview_link_preference_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" app:ymaps_goneWhenNotInProgress="true" />
+    <TextView android:id="@id/customview_link_preference_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_notifications_on" android:layout_marginStart="4.0dip" style="@style/Text16.Grey" />
+</merge>

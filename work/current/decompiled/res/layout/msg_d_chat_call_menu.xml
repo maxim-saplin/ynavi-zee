@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/chat_call_menu" android:background="?messagingCommonActionbarColor" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="?messagingCommonDividerColor" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <TextView android:id="@id/chat_call_menu_audio_call" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/audio_call" style="@style/Messaging.MessagePopupButton" />
+        <TextView android:id="@id/chat_call_menu_video_call" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/video_call" style="@style/Messaging.MessagePopupButton" />
+    </LinearLayout>
+</ScrollView>

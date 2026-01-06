@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/tanker_fuel_column" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@drawable/tanker_divider_station" android:layout_width="fill_parent" android:layout_height="32.0dip" />
+    <View android:background="@drawable/tanker_divider_station" android:layout_width="fill_parent" android:layout_height="32.0dip" android:layout_marginTop="4.0dip" android:rotation="180.0" />
+</LinearLayout>

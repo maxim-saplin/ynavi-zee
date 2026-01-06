@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/dialog_toolbar_title" android:background="@drawable/alice_2_title_background_pro_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="10.0dip" android:paddingVertical="4.0dip" style="@style/Alice.Toolbar.Text_Pro_unsubscribed" />
+</merge>

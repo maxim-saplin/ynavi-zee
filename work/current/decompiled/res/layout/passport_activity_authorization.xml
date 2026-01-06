@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/passport_activity_authorization_layout" android:background="@color/passport_transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAutofill="noExcludeDescendants"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/frame_content" android:background="@color/passport_transparent" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.yandex.passport.internal.widget.KeyboardDetectorLayout android:id="@id/keyboard_detector" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <androidx.coordinatorlayout.widget.CoordinatorLayout android:background="@color/passport_transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.yandex.passport.internal.widget.BoundedFrameLayout android:layout_gravity="center" android:id="@id/container" android:background="@color/passport_transparent" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:passport_maxWidth="@dimen/passport_screen_max_width" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <com.yandex.passport.internal.widget.NotTouchableToolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" />
+        <androidx.appcompat.widget.AppCompatImageButton android:id="@id/passport_button_up" android:background="?passportBackButtonBg" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="16.0dip" android:scaleType="center" android:layout_marginStart="20.0dip" android:elevation="6.0dip" app:elevation="6.0dip" app:srcCompat="?passportBackButtonIcon" />
+    </FrameLayout>
+    <com.yandex.passport.internal.widget.ErrorView android:id="@id/view_permanent_error" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:passport_anchor="@id/container" />
+    <com.yandex.passport.internal.widget.TemporaryErrorView android:id="@id/view_temporary_error" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:passport_anchor="@id/container" />
+</FrameLayout>

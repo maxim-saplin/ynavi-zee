@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/pay_sdk_switch_height" android:width="@dimen/pay_sdk_switch_height" />
+    <stroke android:width="@dimen/pay_sdk_switch_thumb_padding" android:color="@color/pay_sdk_transparent" />
+    <solid android:color="@color/pay_sdk_white" />
+</shape>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView android:gravity="center" android:id="@id/plus_panel_buy_title_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:importantForAccessibility="no" android:layout_marginHorizontal="12.0dip" style="@style/PlusSDK.Widget.TextView.Panel.BuyPlus.Title" />
+    <androidx.appcompat.widget.AppCompatTextView android:gravity="center" android:id="@id/plus_panel_buy_subtitle_text_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:importantForAccessibility="no" android:layout_marginHorizontal="12.0dip" style="@style/PlusSDK.Widget.TextView.Panel.BuyPlus.Subtitle" />
+    <androidx.appcompat.widget.AppCompatTextView android:textAppearance="@style/PlusSDK.TextAppearance.Panel.BuyPlus.Button" android:gravity="center" android:id="@id/plus_panel_buy_action_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_marginBottom="12.0dip" android:minHeight="@dimen/plus_sdk_panel_buy_button_min_height" android:importantForAccessibility="yes" android:layout_marginHorizontal="12.0dip" />
+</merge>

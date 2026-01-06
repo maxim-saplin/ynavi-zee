@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator android:interpolator="@android:anim/accelerate_interpolator" android:duration="250" android:valueFrom="M700,700L700,700" android:valueTo="M700,600L700,800" android:valueType="pathType" android:propertyName="pathData" />
+    <objectAnimator android:interpolator="@android:anim/decelerate_interpolator" android:duration="250" android:startOffset="250" android:valueFrom="M700,600L700,800" android:valueTo="M700,400L700,1000" android:valueType="pathType" android:propertyName="pathData" />
+    <objectAnimator android:interpolator="@android:anim/accelerate_interpolator" android:duration="250" android:startOffset="500" android:valueFrom="M700,400L700,1000" android:valueTo="M700,500L700,900" android:valueType="pathType" android:propertyName="pathData" />
+    <objectAnimator android:interpolator="@android:anim/decelerate_interpolator" android:duration="250" android:startOffset="750" android:valueFrom="M700,500L700,900" android:valueTo="M700,700L700,700" android:valueType="pathType" android:propertyName="pathData" />
+</set>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:paddingHorizontal="16.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textColor="@color/ui_green" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/placecard_hotels_booking_widget_header" android:includeFontPadding="false" style="@style/Text16.Medium" />
+            <TextView android:id="@id/placecard_hotel_widget_dates_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="8.0dip" android:includeFontPadding="false" style="@style/Text16.Medium" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/placecard_hotel_widget_rooms" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <HorizontalScrollView android:orientation="horizontal" android:scrollbars="none" android:fadingEdgeLength="40.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never" android:requiresFadingEdge="horizontal">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingVertical="16.0dip">
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/placecard_hotel_widget_details_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" app:generalButtonSize="medium" app:generalButtonStyle="secondaryBlue" app:text="@string/placecard_hotels_booking_widget_details_button" />
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/placecard_hotel_widget_calendar_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="16.0dip" app:generalButtonSize="medium" app:generalButtonStyle="secondaryBlue" app:text="@string/placecard_hotels_booking_widget_calendar_button" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</merge>

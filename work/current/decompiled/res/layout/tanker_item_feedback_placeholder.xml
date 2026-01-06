@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="73.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.tankerapp.ui.TankerSkeletonView android:layout_gravity="bottom" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginStart="@dimen/tanker_basic_padding" app:tankerSkeletonBackground="@drawable/tanker_bg_round_placeholder" />
+    <ru.tankerapp.ui.TankerSkeletonView android:layout_gravity="bottom" android:layout_width="171.0dip" android:layout_height="fill_parent" android:layout_marginStart="6.0dip" app:tankerSkeletonBackground="@drawable/tanker_bg_feedback_message_placeholder" />
+</LinearLayout>

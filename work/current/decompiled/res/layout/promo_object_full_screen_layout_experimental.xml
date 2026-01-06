@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/promo_object_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.yandexmaps.map.tabs.promoobject.PromoObjectView android:id="@id/promo_object_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

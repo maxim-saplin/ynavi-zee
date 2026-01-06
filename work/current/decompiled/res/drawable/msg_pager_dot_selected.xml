@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="3.0dip" android:right="3.0dip">
+        <shape android:shape="oval" android:innerRadius="0.0dip" android:thickness="4.0dip">
+            <solid android:color="@color/messenger_common_white" />
+        </shape>
+    </item>
+</layer-list>

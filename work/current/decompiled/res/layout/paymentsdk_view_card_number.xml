@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.textfield.TextInputLayout android:theme="@style/PaymentsdkTextInput" android:textColorHint="?android:textColorSecondary" android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:errorTextColor="?paymentsdk_errorInputColor" app:hintTextAppearance="@style/PaymentsdkTextAppearance.Payments.Hint">
+        <com.google.android.material.textfield.TextInputEditText android:textSize="16.0sp" android:id="@id/field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/paymentsdk_card_number_title" android:inputType="number" android:imeOptions="actionNext|flagNoExtractUi" android:textCursorDrawable="@drawable/paymentsdk_cursor" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageView android:id="@id/payments_ic_camera" android:background="?selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" app:srcCompat="@drawable/paymentsdk_ic_camera" />
+</merge>

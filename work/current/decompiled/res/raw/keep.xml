@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/notifications_yandex_map_logo*,
+                @drawable/notifications_yangomaps_logo*,
+                @drawable/notifications_app_logo*,
+                @drawable/alternativeballoon_*,
+                @drawable/ic_re_*,
+                @drawable/poi_alerts_*,
+                @drawable/pin_alerts_*,
+                @drawable/camera_dot,
+                @drawable/context_lane_*,
+                @drawable/context_ra_*,
+                @drawable/navi_*,
+                @drawable/overview_route_flags_*,
+                @drawable/roadsign_ic_*,
+                @drawable/rubrics_*,
+                @drawable/evetnt_cargo,
+                @drawable/evetnt_cargo_finish,
+                @drawable/map_parking_large,
+                @drawable/map_parking_poi,
+                @drawable/gas_station_pin_green_big_traffic_off,
+                @drawable/pre_camera_dot,
+                @drawable/selected_gas_station_pin,
+                @drawable/route_trafficlight"
+    tools:shrinkMode="safe"
+    />

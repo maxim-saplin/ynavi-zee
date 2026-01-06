@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.common.views.recycler.RecyclerViewPager android:id="@id/features_tab_accessibility_photos" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="72.0dip" android:layout_marginTop="16.0dip" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+    <TextView android:id="@id/features_tab_accessibility_last_photo_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginVertical="8.0dip" style="@style/Text14.TextSecondary" />
+</merge>

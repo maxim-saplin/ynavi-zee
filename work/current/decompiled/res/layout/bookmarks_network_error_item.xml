@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_transport_network_error_hint_text" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/Text16.DarkGrey" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="center" android:id="@id/retry_stops_loading_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="24.0dip" app:generalButtonSize="medium" app:generalButtonStyle="secondaryBlue" app:paddings="32.0dip" app:text="@string/my_transport_network_error_button_text" style="@style/Text16.Medium" />
+</merge>

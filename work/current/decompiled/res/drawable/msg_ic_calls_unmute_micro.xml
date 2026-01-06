@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/calls_controls_color" android:pathData="M9,5C9,3.3431 10.3431,2 12,2C13.6569,2 15,3.3431 15,5V12C15,13.6569 13.6569,15 12,15C10.3431,15 9,13.6569 9,12V5ZM13,5V12C13,12.5523 12.5523,13 12,13C11.4477,13 11,12.5523 11,12V5C11,4.4477 11.4477,4 12,4C12.5523,4 13,4.4477 13,5Z" android:fillType="evenOdd" />
+    <path android:fillColor="@color/calls_controls_color" android:pathData="M6,11C6.5523,11 7,11.4477 7,12C7,14.7614 9.2386,17 12,17C14.7614,17 17,14.7614 17,12C17,11.4477 17.4477,11 18,11C18.5523,11 19,11.4477 19,12C19,15.5265 16.3923,18.4439 13,18.9291V21C13,21.5523 12.5523,22 12,22C11.4477,22 11,21.5523 11,21V18.9291C7.6077,18.4439 5,15.5265 5,12C5,11.4477 5.4477,11 6,11Z" />
+</vector>

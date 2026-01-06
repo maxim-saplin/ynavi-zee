@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/taxi_comment_card_fade" android:background="@color/bw_black_alpha80" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="0.0dip" />
+    <ru.yandex.yandexmaps.uikit.shutter.ShutterView android:id="@id/comment_shutter_view" android:tag="@string/change_handler_bottom_panel_tag" android:layout_width="@dimen/taxi_all_cards_width" android:layout_marginLeft="0.0dip" style="@style/ShutterCommonLayoutParams" />
+</com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout>

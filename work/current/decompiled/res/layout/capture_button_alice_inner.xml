@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:layout_gravity="center" android:id="@id/capture_button_wait_background" android:layout_width="@dimen/capture_button_container_size" android:layout_height="@dimen/capture_button_container_size" layout="@layout/capture_button_dynamic_background" />
+    <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/image_search_capture_button" android:background="@drawable/capture_button_background" android:padding="@dimen/capture_button_inner_padding" android:layout_width="@dimen/capture_button_size" android:layout_height="@dimen/capture_button_size" android:layout_margin="16.0dip" android:scaleType="center" android:contentDescription="@null" app:srcCompat="@drawable/capture_button_ring" />
+</merge>

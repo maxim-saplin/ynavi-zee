@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messaging_choose_organizations_dialog_title" style="@style/Messaging.Settings.Text.Group" />
+    <View android:background="@drawable/msg_divider_settings_group" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/organizations_recycler" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

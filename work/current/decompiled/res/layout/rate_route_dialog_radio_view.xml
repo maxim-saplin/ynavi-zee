@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/radio_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Text16.TextPrimary" />
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/radio_image" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/radio_on_24" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</merge>

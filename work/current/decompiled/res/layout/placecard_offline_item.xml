@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:background="@drawable/rounded8_nostroke_rectangle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:backgroundTint="@color/bg_additional" android:layout_marginHorizontal="16.0dip" android:layout_marginVertical="12.0dip" android:paddingHorizontal="16.0dip" android:paddingVertical="12.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/placecard_offline_item_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/icons_actions" android:layout_marginEnd="16.0dip" app:srcCompat="@drawable/offline_cloud_16" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/placecard_offline_item_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/Text14" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/placecard_offline_item_reload_container" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="8.0dip">
+            <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:tint="@color/icons_additional" app:srcCompat="@drawable/common_divider" />
+            <Space android:layout_width="16.0dip" android:layout_height="fill_parent" />
+            <TextView android:layout_gravity="center_vertical" android:id="@id/placecard_offline_item_reload_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/placecard_offline_reconnect_button" style="@style/ClickableText.Text14.Medium.TextActions" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.common.views.EllipsizingTextView android:layout_gravity="start|center" android:id="@id/placecard_header_caption" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="1" android:drawablePadding="8.0dip" android:layout_weight="1.0" android:importantForAccessibility="yes" android:textDirection="inherit" android:textAlignment="viewStart" android:layout_marginStart="16.0dip" style="@style/Text20.Medium" />
+    <ru.yandex.maps.uikit.atomicviews.snippet.share.ShareButtonView android:layout_gravity="end|center" android:id="@id/placecard_header_share_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:paddingStart="16.0dip" android:paddingEnd="8.0dip" android:paddingVertical="16.0dip" />
+    <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end|center" android:id="@id/placecard_header_close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:paddingStart="8.0dip" android:paddingEnd="16.0dip" android:paddingVertical="16.0dip" />
+</merge>

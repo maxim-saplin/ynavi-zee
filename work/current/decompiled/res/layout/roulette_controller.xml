@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/aim_40" />
+    <ru.yandex.yandexmaps.common.views.controls.MapControlsImageButton android:layout_gravity="end|center" android:id="@id/roulette_add_button" android:background="@null" android:layout_width="56.0dip" android:layout_height="56.0dip" android:contentDescription="@string/roulette_accessibility_add" app:fillBackground="@color/roulette_add_button_background" app:srcCompat="@drawable/zoom_in_40" app:tint="@color/roulette_add_button_tint" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="@dimen/shutter_width" android:layout_height="wrap_content" android:layout_marginStart="@dimen/shutter_left_margin">
+        <TextView android:id="@id/roulette_hint" android:background="@drawable/roulette_hint_background" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/roulette_hint_message" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/Text14.Medium.WhiteBlack" />
+        <FrameLayout android:background="@color/roulette_panel_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="start|center" android:id="@id/roulette_undo_button" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/roulette_accessibility_undo" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+            <TextView android:gravity="center" android:id="@id/roulette_total_distance_text" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" android:layout_marginStart="56.0dip" android:layout_marginEnd="56.0dip" style="@style/Text20.Medium" />
+            <ImageView android:layout_gravity="end|center" android:id="@id/roulette_close_button" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/roulette_accessibility_close" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:srcCompat="@drawable/close_24" app:tint="@color/roulette_close_button" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

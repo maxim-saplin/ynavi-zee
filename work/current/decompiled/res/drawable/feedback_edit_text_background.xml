@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <layer-list>
+            <item android:drawable="@color/common_ui_blue" />
+            <item android:drawable="@color/background_panel" android:bottom="2.0dip" />
+        </layer-list>
+    </item>
+    <item android:state_focused="true">
+        <layer-list>
+            <item android:drawable="@color/common_ui_blue" />
+            <item android:drawable="@color/background_panel" android:bottom="2.0dip" />
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:drawable="@color/common_border" />
+            <item android:drawable="@color/background_panel" android:bottom="1.0dip" />
+        </layer-list>
+    </item>
+</selector>

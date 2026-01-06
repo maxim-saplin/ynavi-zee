@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="26.0dip" android:viewportWidth="26.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:pathData="M25,12C25,15.976 24.021,18.654 22.172,20.36C20.305,22.083 17.355,23 13,23C8.646,23 5.696,22.082 3.828,20.358C1.978,18.651 1,15.974 1,12C1,8.026 1.977,5.349 3.827,3.641C5.693,1.918 8.644,1 13,1C17.356,1 20.306,1.917 22.173,3.64C24.022,5.346 25,8.024 25,12Z" android:strokeColor="@color/alicekit_palette_text_and_icon_primary" android:strokeWidth="2.0" />
+    <path android:fillColor="@color/alicekit_palette_text_and_icon_primary" android:pathData="M8.5,16L18.5,16A1.5,1.5 0,0 1,20 17.5L20,17.5A1.5,1.5 0,0 1,18.5 19L8.5,19A1.5,1.5 0,0 1,7 17.5L7,17.5A1.5,1.5 0,0 1,8.5 16z" />
+    <path android:fillColor="@color/alicekit_palette_text_and_icon_primary" android:pathData="M6.5,11L7.5,11A1.5,1.5 0,0 1,9 12.5L9,12.5A1.5,1.5 0,0 1,7.5 14L6.5,14A1.5,1.5 0,0 1,5 12.5L5,12.5A1.5,1.5 0,0 1,6.5 11z" />
+    <path android:fillColor="@color/alicekit_palette_text_and_icon_primary" android:pathData="M6.5,6L7.5,6A1.5,1.5 0,0 1,9 7.5L9,7.5A1.5,1.5 0,0 1,7.5 9L6.5,9A1.5,1.5 0,0 1,5 7.5L5,7.5A1.5,1.5 0,0 1,6.5 6z" />
+    <path android:fillColor="@color/alicekit_palette_text_and_icon_primary" android:pathData="M12.5,11L13.5,11A1.5,1.5 0,0 1,15 12.5L15,12.5A1.5,1.5 0,0 1,13.5 14L12.5,14A1.5,1.5 0,0 1,11 12.5L11,12.5A1.5,1.5 0,0 1,12.5 11z" />
+    <path android:fillColor="@color/alicekit_palette_text_and_icon_primary" android:pathData="M12.5,6L13.5,6A1.5,1.5 0,0 1,15 7.5L15,7.5A1.5,1.5 0,0 1,13.5 9L12.5,9A1.5,1.5 0,0 1,11 7.5L11,7.5A1.5,1.5 0,0 1,12.5 6z" />
+    <path android:fillColor="@color/alicekit_palette_text_and_icon_primary" android:pathData="M18.5,11L19.5,11A1.5,1.5 0,0 1,21 12.5L21,12.5A1.5,1.5 0,0 1,19.5 14L18.5,14A1.5,1.5 0,0 1,17 12.5L17,12.5A1.5,1.5 0,0 1,18.5 11z" />
+    <path android:fillColor="@color/alicekit_palette_text_and_icon_primary" android:pathData="M18.5,6L19.5,6A1.5,1.5 0,0 1,21 7.5L21,7.5A1.5,1.5 0,0 1,19.5 9L18.5,9A1.5,1.5 0,0 1,17 7.5L17,7.5A1.5,1.5 0,0 1,18.5 6z" />
+</vector>

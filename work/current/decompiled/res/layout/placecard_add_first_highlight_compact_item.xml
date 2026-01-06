@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <include layout="@layout/placecard_add_highlight_compact" />
+    </FrameLayout>
+    <TextView android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/highlight_add_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/placecard_highlights_add" android:maxLines="1" style="@style/Text12.Medium" />
+</merge>

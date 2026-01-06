@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/placecard_fuel_prices_lot_name" android:background="@drawable/placecard_fuel_prices_lot_background" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:minHeight="32.0dip" android:maxLines="1" android:singleLine="true" style="@style/Text14.Medium.PrimaryVariant" />
+    <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/placecard_fuel_prices_lot_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="20.0dip" style="@style/Text16.Medium.BlackWhite" />
+</LinearLayout>

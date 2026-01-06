@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:visibility="gone" android:clipChildren="true" android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/join_suggest" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:textSize="14.0dip" android:id="@id/join_suggest_button" android:background="@drawable/msg_bg_chat_join_suggest_button" android:layout_width="118.0dip" android:layout_height="40.0dip" android:layout_marginRight="12.0dip" android:foreground="?android:selectableItemBackground" android:text="@string/chat_site_comments_join_suggest_button_enabled" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:textAllCaps="false" android:layout_marginEnd="12.0dip" android:layout_alignParentEnd="true" style="?android:borderlessButtonStyle" />
+        <TextView android:textSize="14.0sp" android:textColor="?messagingCommonTextPrimaryColor" android:id="@id/join_suggest_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="20.0dip" android:text="@string/chat_site_comments_join_suggest_text" android:layout_toLeftOf="@id/join_suggest_button" android:layout_centerVertical="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="20.0dip" android:layout_toStartOf="@id/join_suggest_button" />
+        <View android:background="?messagingCommonDividerColor" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</FrameLayout>

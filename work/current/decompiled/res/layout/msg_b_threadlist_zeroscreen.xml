@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:gravity="center" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/msg_b_threadlist_zeroscreen_panel" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/horizontal_guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.6" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/vertical_guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.6" />
+    <include layout="@layout/msg_b_threadlist_zeroscreen_description" />
+</androidx.constraintlayout.widget.ConstraintLayout>

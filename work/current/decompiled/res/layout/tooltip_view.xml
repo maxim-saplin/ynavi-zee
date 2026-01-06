@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@id/tooltip_view_recycler_container" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ImageView android:id="@id/tooltip_view_close_button" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cross_16" android:layout_weight="0.0" android:contentDescription="@string/common_close_button" android:layout_marginStart="8.0dip" app:tint="@color/icons_additional" />
+    </LinearLayout>
+</merge>

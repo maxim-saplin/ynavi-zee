@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?tankerPanelColor" android:layout_width="fill_parent" android:layout_height="@dimen/tanker_default_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/tanker_medium_text_size" android:textColor="@color/tanker_textColorAlpha80" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/card_add" android:singleLine="true" android:layout_marginStart="@dimen/tanker_basic_padding" android:layout_marginEnd="@dimen/tanker_basic_padding" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" style="@style/TankerTextRegular" />
+    <View android:id="@id/divider" android:background="@drawable/tanker_divider" android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_marginTop="24.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/account_upgrade_container" android:background="@drawable/profile_account_upgrade_background" android:clipChildren="true" android:clipToPadding="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:clipToOutline="true">
+        <LinearLayout android:orientation="vertical" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="12.0dip" android:paddingEnd="80.0dip">
+            <TextView android:id="@id/account_upgrade_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.Medium" />
+            <TextView android:id="@id/account_upgrade_subtitle" android:paddingTop="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.Regular" />
+        </LinearLayout>
+        <ru.yandex.yandexmaps.common.views.RoundedImageView android:layout_gravity="end|bottom" android:id="@id/account_upgrade_ya_icon" android:layout_width="66.0dip" android:layout_height="62.0dip" android:layout_marginTop="-4.0dip" android:src="@drawable/yandex_shape" android:scaleType="matrix" app:cornerRadius="12.0dip" />
+    </FrameLayout>
+</FrameLayout>

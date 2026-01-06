@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="ask_disk_space_files_count">
+        <item quantity="other">%1$d файл</item>
+        <item quantity="one">%1$d файл</item>
+        <item quantity="few">%1$d файл</item>
+        <item quantity="many">%1$d файл</item>
+    </plurals>
+    <plurals name="calls_feedback_show_all_reasons_button_text">
+        <item quantity="other">Дагы %d себеп…</item>
+        <item quantity="one">Дагы %d себеп…</item>
+        <item quantity="few">Дагы %d себеп…</item>
+        <item quantity="many">Дагы %d себеп…</item>
+    </plurals>
+    <plurals name="channel_subscribers_plural">
+        <item quantity="other">%1$d жазылуучу</item>
+        <item quantity="one">%1$d жазылуучу</item>
+        <item quantity="few">%1$d жазылуучу</item>
+        <item quantity="many">%1$d жазылуучу</item>
+    </plurals>
+    <plurals name="chat_attach_send_files">
+        <item quantity="other">%1$d файл жөнөтүү</item>
+        <item quantity="one">Файл жөнөтүү</item>
+        <item quantity="few">%1$d файл жөнөтүү</item>
+        <item quantity="many">%1$d файл жөнөтүү</item>
+    </plurals>
+    <plurals name="chat_attach_send_gif">
+        <item quantity="other">%1$d сүрөттү жөнөтүү</item>
+        <item quantity="one">Сүрөттү жөнөтүү</item>
+        <item quantity="few">%1$d сүрөттү жөнөтүү</item>
+        <item quantity="many">%1$d сүрөттү жөнөтүү</item>
+    </plurals>
+    <plurals name="chat_attach_send_images">
+        <item quantity="other">%1$d сүрөттү жөнөтүү</item>
+        <item quantity="one">Сүрөттү жөнөтүү</item>
+        <item quantity="few">%1$d сүрөттү жөнөтүү</item>
+        <item quantity="many">%1$d сүрөттү жөнөтүү</item>
+    </plurals>
+    <plurals name="chat_members_plural">
+        <item quantity="other">%1$d катышуучу</item>
+        <item quantity="one">%1$d катышуучу</item>
+        <item quantity="few">%1$d катышуучу</item>
+        <item quantity="many">%1$d катышуучу</item>
+    </plurals>
+    <plurals name="chat_status_typing_many">
+        <item quantity="other">%d терип жатышат</item>
+        <item quantity="one">%d терип жатат</item>
+        <item quantity="few">%d терип жатышат</item>
+        <item quantity="many">%d терип жатышат</item>
+    </plurals>
+    <plurals name="chat_threadlist_status">
+        <item quantity="other">%1$d тредге жазылгансыз</item>
+        <item quantity="one">%1$d тредге жазылгансыз</item>
+        <item quantity="few">%1$d тредге жазылгансыз</item>
+        <item quantity="many">%1$d тредге жазылгансыз</item>
+    </plurals>
+    <plurals name="duration_hours">
+        <item quantity="other">%d саатка</item>
+        <item quantity="one">%d саатка</item>
+        <item quantity="few">%d саатка</item>
+        <item quantity="many">%d саатка</item>
+    </plurals>
+    <plurals name="duration_minutes">
+        <item quantity="other">%d мүнөткө</item>
+        <item quantity="one">%d мүнөткө</item>
+        <item quantity="few">%d мүнөткө</item>
+        <item quantity="many">%d мүнөткө</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">%d секунд алдыга түрдүрүү</item>
+        <item quantity="one">%d секунд алдыга түрдүрүү</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">%d секунд артка түрдүрүү</item>
+        <item quantity="one">%d секунд артка түрдүрүү</item>
+    </plurals>
+    <plurals name="forward_messages_text">
+        <item quantity="other">%1$s билдирүүнү башкаларга жөнөтүү</item>
+        <item quantity="one">%1$s билдирүүнү башкаларга жөнөтүү</item>
+        <item quantity="few">%1$s билдирүүнү башкаларга жөнөтүү</item>
+        <item quantity="many">%1$s билдирүүнү башкаларга жөнөтүү</item>
+    </plurals>
+    <plurals name="group_call_participants_count_text">
+        <item quantity="other">%d катышуучу</item>
+        <item quantity="one">%d катышуучу</item>
+        <item quantity="few">%d катышуучу</item>
+        <item quantity="many">%d катышуучу</item>
+    </plurals>
+    <plurals name="menu_confirm_delete_messages_plural">
+        <item quantity="other">%1$d билдирүүнү өчүрүү</item>
+        <item quantity="one">%1$d билдирүүнү өчүрүү</item>
+        <item quantity="few">%1$d билдирүүнү өчүрүү</item>
+        <item quantity="many">%1$d билдирүүнү өчүрүү</item>
+    </plurals>
+    <plurals name="menu_reactions">
+        <item quantity="other">%s реакция</item>
+        <item quantity="one">%s реакция</item>
+        <item quantity="few">%s реакция</item>
+        <item quantity="many">%s реакция</item>
+    </plurals>
+    <plurals name="messaging_chat_search_result">
+        <item quantity="other">%2$d ичинен %1$d дал келди</item>
+        <item quantity="one">%2$d ичинен %1$d дал келди</item>
+        <item quantity="few">%2$d ичинен %1$d дал келди</item>
+        <item quantity="many">%2$d ичинен %1$d дал келди</item>
+    </plurals>
+    <plurals name="messaging_online_minutes_ago">
+        <item quantity="other">%d мүнөт мурда болгон</item>
+        <item quantity="one">%d мүнөт мурда болгон</item>
+        <item quantity="few">%d мүнөт мурда болгон</item>
+        <item quantity="many">%d мүнөт мурда болгон</item>
+    </plurals>
+    <plurals name="messaging_removed_messages_group_plural">
+        <item quantity="other">%d билдирүү өчүрүлдү</item>
+        <item quantity="one">%d билдирүү өчүрүлдү</item>
+        <item quantity="few">%d билдирүү өчүрүлдү</item>
+        <item quantity="many">%d билдирүү өчүрүлдү</item>
+    </plurals>
+    <plurals name="messaging_thread_counter_label">
+        <item quantity="other">%1$d жооп</item>
+        <item quantity="one">%1$d жооп</item>
+        <item quantity="few">%1$d жооп</item>
+        <item quantity="many">%1$d жооп</item>
+    </plurals>
+    <plurals name="messenger_count_recent_voters">
+        <item quantity="other">%d добуш</item>
+        <item quantity="one">%d добуш</item>
+        <item quantity="few">%d добуш</item>
+        <item quantity="many">%d добуш</item>
+    </plurals>
+    <plurals name="messenger_create_poll_max_answers_warn">
+        <item quantity="other">Дагы %d жооп кошууга болот</item>
+        <item quantity="one">Дагы %d жооп кошууга болот</item>
+        <item quantity="few">Дагы %d жооп кошууга болот</item>
+        <item quantity="many">Дагы %d жооп кошууга болот</item>
+    </plurals>
+    <plurals name="messenger_poll_answers_count">
+        <item quantity="other">%d жооп</item>
+        <item quantity="one">%d жооп</item>
+        <item quantity="few">%d жооп</item>
+        <item quantity="many">%d жооп</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d жаңы билдирме</item>
+        <item quantity="one">%d жаңы билдирме</item>
+    </plurals>
+    <plurals name="notification_chat_title_plural">
+        <item quantity="other">%1$s: %2$s жаңы билдирүү</item>
+        <item quantity="one">%1$s: %2$s жаңы билдирүү</item>
+        <item quantity="few">%1$s: %2$s жаңы билдирүү</item>
+        <item quantity="many">%1$s: %2$s жаңы билдирүү</item>
+    </plurals>
+    <plurals name="notification_new_messages_count">
+        <item quantity="other">%d жаңы билдирүү</item>
+        <item quantity="one">%d жаңы билдирүү</item>
+        <item quantity="few">%d жаңы билдирүү</item>
+        <item quantity="many">%d жаңы билдирүү</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Акыркы %1$d санды</item>
+        <item quantity="zero">Акыркы %1$d санды</item>
+        <item quantity="one">Акыркы %1$d санды</item>
+        <item quantity="few">Акыркы %1$d санды</item>
+        <item quantity="many">Акыркы %1$d санды</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"Азыр сизге %1$s номеринен телефон
+чалуу келет. Номердин акыркы %2$d санын киргизиңиз"</item>
+        <item quantity="zero">"Азыр сизге %1$s номеринен телефон
+чалуу келет. Номердин акыркы %2$d санын киргизиңиз"</item>
+        <item quantity="one">"Азыр сизге %1$s номеринен телефон
+чалуу келет. Номердин акыркы %2$d санын киргизиңиз"</item>
+        <item quantity="few">"Азыр сизге %1$s номеринен телефон
+чалуу келет. Номердин акыркы %2$d санын киргизиңиз"</item>
+        <item quantity="many">"Азыр сизге %1$s номеринен телефон
+чалуу келет. Номердин акыркы %2$d санын киргизиңиз"</item>
+    </plurals>
+    <plurals name="user_in_groups">
+        <item quantity="other">%s топторунда</item>
+        <item quantity="one">%s тобунда</item>
+        <item quantity="few">%s топторунда</item>
+        <item quantity="many">%s топторунда</item>
+    </plurals>
+    <plurals name="user_in_groups_count">
+        <item quantity="other">%d топто</item>
+        <item quantity="one">%d топто</item>
+        <item quantity="few">%d топто</item>
+        <item quantity="many">%d топто</item>
+    </plurals>
+    <plurals name="voice_timelimit_minutes_plural">
+        <item quantity="other">%1$d мүнөт.</item>
+        <item quantity="one">%1$d мүнөт.</item>
+        <item quantity="few">%1$d мүнөт.</item>
+        <item quantity="many">%1$d мүнөт.</item>
+    </plurals>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/soundBgView" android:background="@drawable/tanker_background_sound_button" android:layout_width="48.0dip" android:layout_height="48.0dip" />
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/soundActionIv" android:background="@android:color/transparent" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/tanker_ic_volume_off" android:scaleType="center" android:adjustViewBounds="true" android:tint="@color/tanker_grey_95" />
+</FrameLayout>

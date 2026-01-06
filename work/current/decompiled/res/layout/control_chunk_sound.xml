@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.controls.sound.ControlSound android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" app:layout_clearance="@dimen/control_default_clearance" app:layout_fleet_id="0" app:layout_floating="drifting_up" app:layout_heaviness="3" app:layout_shadow_size_to_ignore="@dimen/control_default_shadow_size_to_ignore"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

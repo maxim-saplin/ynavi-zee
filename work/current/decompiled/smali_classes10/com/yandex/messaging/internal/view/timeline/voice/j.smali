@@ -1,0 +1,214 @@
+.class public final Lcom/yandex/messaging/internal/view/timeline/voice/j;
+.super Lcom/yandex/messaging/internal/view/timeline/voice/e;
+.source "SourceFile"
+
+
+# static fields
+.field private static final A0:I
+
+.field public static final z0:Lcom/yandex/messaging/internal/view/timeline/voice/i;
+
+
+# instance fields
+.field private final y0:Landroid/view/View;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/yandex/messaging/internal/view/timeline/voice/i;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/yandex/messaging/internal/view/timeline/voice/j;->z0:Lcom/yandex/messaging/internal/view/timeline/voice/i;
+
+    sget v0, Lcom/yandex/messaging/r0;->msg_vh_chat_other_voice_message:I
+
+    sput v0, Lcom/yandex/messaging/internal/view/timeline/voice/j;->A0:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/yandex/messaging/internal/view/timeline/m5;)V
+    .locals 2
+
+    invoke-virtual {p1}, Lcom/yandex/messaging/internal/view/timeline/m5;->g()Landroid/view/ViewGroup;
+
+    move-result-object v0
+
+    sget v1, Lcom/yandex/messaging/r0;->msg_vh_chat_other_voice_message:I
+
+    invoke-static {v0, v1}, Lcom/yandex/alicekit/core/utils/q0;->c(Landroid/view/ViewGroup;I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0, p1}, Lcom/yandex/messaging/internal/view/timeline/voice/e;-><init>(Landroid/view/View;Lcom/yandex/messaging/internal/view/timeline/m5;)V
+
+    iget-object p1, p0, Landroidx/recyclerview/widget/e4;->itemView:Landroid/view/View;
+
+    sget v0, Lcom/yandex/messaging/p0;->timeline_message_container:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/yandex/messaging/internal/view/timeline/voice/j;->y0:Landroid/view/View;
+
+    return-void
+.end method
+
+.method public static final synthetic q1()I
+    .locals 1
+
+    sget v0, Lcom/yandex/messaging/internal/view/timeline/voice/j;->A0:I
+
+    return v0
+.end method
+
+
+# virtual methods
+.method public final A(Landroid/graphics/Canvas;Lcom/yandex/messaging/ui/timeline/b0;ZZ)V
+    .locals 3
+
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/yandex/messaging/internal/view/timeline/h;->A(Landroid/graphics/Canvas;Lcom/yandex/messaging/ui/timeline/b0;ZZ)V
+
+    invoke-virtual {p0}, Lcom/yandex/messaging/internal/view/timeline/voice/e;->o1()Landroid/view/ViewGroup;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/view/View;->getVisibility()I
+
+    move-result p3
+
+    if-nez p3, :cond_0
+
+    iget-object p3, p0, Landroidx/recyclerview/widget/e4;->itemView:Landroid/view/View;
+
+    invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p3
+
+    const/4 v0, 0x1
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    invoke-static {v0, v1, p3}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    invoke-virtual {p0}, Lcom/yandex/messaging/internal/view/timeline/h;->V0()Landroid/view/ViewGroup;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Lcom/yandex/messaging/internal/view/timeline/h;->V0()Landroid/view/ViewGroup;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/View;->getRight()I
+
+    move-result v1
+
+    invoke-static {p2, p4}, Lcom/yandex/messaging/ui/timeline/b0;->h(Lcom/yandex/messaging/ui/timeline/b0;Z)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p2
+
+    iget-object p4, p0, Landroidx/recyclerview/widget/e4;->itemView:Landroid/view/View;
+
+    invoke-virtual {p4}, Landroid/view/View;->getLayoutDirection()I
+
+    move-result p4
+
+    invoke-virtual {p2, p4}, Landroid/graphics/drawable/Drawable;->setLayoutDirection(I)Z
+
+    add-int/2addr v0, p3
+
+    invoke-virtual {p0}, Lcom/yandex/messaging/internal/view/timeline/voice/e;->o1()Landroid/view/ViewGroup;
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Landroid/view/View;->getTop()I
+
+    move-result p4
+
+    add-int/2addr p4, p3
+
+    sub-int/2addr v1, p3
+
+    invoke-virtual {p0}, Lcom/yandex/messaging/internal/view/timeline/voice/e;->o1()Landroid/view/ViewGroup;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/View;->getBottom()I
+
+    move-result v2
+
+    sub-int/2addr v2, p3
+
+    invoke-virtual {p2, v0, p4, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final I0()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final R0()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final S(Lcom/yandex/messaging/internal/storage/a1;Lcom/yandex/messaging/internal/view/timeline/n;)V
+    .locals 2
+
+    invoke-super {p0, p1, p2}, Lcom/yandex/messaging/internal/view/timeline/voice/e;->S(Lcom/yandex/messaging/internal/storage/a1;Lcom/yandex/messaging/internal/view/timeline/n;)V
+
+    invoke-virtual {p1}, Lcom/yandex/messaging/internal/storage/a1;->N()D
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/yandex/messaging/internal/storage/a1;->g()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Lcom/yandex/messaging/internal/view/timeline/y4;
+
+    invoke-direct {p2, v0, v1, p1}, Lcom/yandex/messaging/internal/view/timeline/y4;-><init>(DLjava/lang/String;)V
+
+    iput-object p2, p0, Lcom/yandex/messaging/internal/view/timeline/l5;->m:Lcom/yandex/messaging/internal/view/timeline/b5;
+
+    return-void
+.end method
+
+.method public final S0()Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lcom/yandex/messaging/internal/view/timeline/voice/j;->y0:Landroid/view/View;
+
+    return-object v0
+.end method

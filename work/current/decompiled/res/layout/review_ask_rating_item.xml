@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/review_ask_rating_background" android:padding="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:layout_marginBottom="40.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/review_ask_rating_title" style="@style/Text14.Regular" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/review_ask_rating_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:weightSum="5.0">
+            <include android:id="@id/review_ask_rating_star_1" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/rating_star" />
+            <include android:id="@id/review_ask_rating_star_2" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/rating_star" />
+            <include android:id="@id/review_ask_rating_star_3" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/rating_star" />
+            <include android:id="@id/review_ask_rating_star_4" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/rating_star" />
+            <include android:id="@id/review_ask_rating_star_5" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/rating_star" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

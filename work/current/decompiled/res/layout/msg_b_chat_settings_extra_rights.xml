@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/msg_divider_settings_items" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.messaging.ui.chatinfo.editchat.ChatSettingsSwitch android:id="@id/send_stickers_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:css_icon="@drawable/msg_ic_stickers_stub" app:css_label="Отправлять стикеры" />
+    <com.yandex.messaging.ui.chatinfo.editchat.ChatSettingsSwitch android:id="@id/send_reactions_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:css_icon="@drawable/msg_ic_chat_input_emoji_show" app:css_label="Ставить реакции" />
+</LinearLayout>

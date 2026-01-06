@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/rounded_horizontal_snippet_background_wrapper_left_cutoff" />
+    <item android:drawable="@drawable/rounded_horizontal_snippet_selected_background" android:top="@dimen/rounded_horizontal_snippet_selected_background_wrapper_padding" android:right="@dimen/rounded_horizontal_snippet_selected_background_wrapper_padding" android:bottom="@dimen/rounded_horizontal_snippet_selected_background_wrapper_padding" />
+</layer-list>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="108.0dip" android:width="108.0dip" android:viewportWidth="108.0" android:viewportHeight="108.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <path android:fillColor="@drawable/$logo_navigator_icon_foreground_108__0" android:pathData="M73.46 34.47l-45 18.77l19.69 7.23l7.03 20.21l18.28-46.2z" android:fillType="evenOdd" />
+        <path android:fillColor="#ffffcc00" android:pathData="M73.45 34.47l-26 26.72l7.73 19.5l18.27-46.22z" android:fillType="evenOdd" />
+        <path android:fillColor="#ffeba704" android:pathData="M46.74 61.9l8.44 18.78l-2.81-24.55l-23.9-2.89l18.27 8.67z" android:fillType="evenOdd" />
+    </group>
+</vector>

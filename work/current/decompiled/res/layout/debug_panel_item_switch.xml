@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Switch android:id="@id/item_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="36.0dip" style="@style/DebugPanelText.Body1"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

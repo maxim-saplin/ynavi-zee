@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/mirrors_close_button_image" android:background="@drawable/close_button_background" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="center" app:srcCompat="@drawable/cross_24" app:tint="@color/bw_grey80" />
+</merge>

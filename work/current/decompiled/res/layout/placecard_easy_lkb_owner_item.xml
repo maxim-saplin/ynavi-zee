@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:background="@color/buttons_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cornerRadius="12.0dip">
+        <LinearLayout android:orientation="horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/organization_24" android:tint="@color/icons_color_bg" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginHorizontal="16.0dip">
+                <TextView android:id="@id/easy_lkb_owner_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/placecard_easy_lkb_become_owner_title" style="@style/Text16.Medium.TextColorBg" />
+                <TextView android:id="@id/easy_lkb_owner_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/placecard_easy_lkb_become_owner_subtitle" style="@style/Text14.Regular.TextColorBg" />
+            </LinearLayout>
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/easy_lkb_owner_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+</merge>

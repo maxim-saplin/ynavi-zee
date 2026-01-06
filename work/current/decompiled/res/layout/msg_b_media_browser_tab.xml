@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?messagingCommonBackgroundColor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/media_browser_recycler_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+    <include android:id="@id/media_browser_no_data_screen" layout="@layout/msg_v_media_browser_empty_screen" />
+    <include android:id="@id/media_browser_search_empty_screen" layout="@layout/msg_v_media_browser_search_no_result" />
+    <ImageView android:id="@id/media_browser_skeleton_shine" android:visibility="gone" android:layout_width="64.0dip" android:layout_height="fill_parent" android:layout_marginLeft="-64.0dip" app:srcCompat="@drawable/msg_bg_shine_gradient" />
+    <FrameLayout android:id="@id/media_browser_skeleton_fading" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Messaging.MediaBrowser.SkeletonFading" />
+</FrameLayout>

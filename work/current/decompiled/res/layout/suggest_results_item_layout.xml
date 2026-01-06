@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/common_clickable_panel_background_no_border_impl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:paddingVertical="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:clipChildren="false" android:layout_width="46.0dip" android:layout_height="40.0dip" android:layout_marginHorizontal="9.0dip">
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/suggest_primary_image" android:layout_width="32.0dip" android:layout_height="32.0dip" android:scaleType="center" />
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="end|bottom" android:id="@id/suggest_secondary_image" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:scaleType="center" android:translationY="1.0dip" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="16.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:ellipsize="end" android:id="@id/suggest_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="2" android:layout_weight="1.0" android:lineSpacingExtra="3.0sp" android:textAlignment="viewStart" style="@style/Text16.TextPrimaryVariant" />
+            <TextView android:id="@id/suggest_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="12.0dip" style="@style/Text14.TextSecondary" />
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:id="@id/suggest_subtitle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:maxLines="2" android:lineSpacingExtra="1.0sp" style="@style/Text14.Regular.Secondary" />
+    </LinearLayout>
+</LinearLayout>

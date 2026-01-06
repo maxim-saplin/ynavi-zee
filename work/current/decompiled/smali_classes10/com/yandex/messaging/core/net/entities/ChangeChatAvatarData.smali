@@ -1,0 +1,21 @@
+.class public Lcom/yandex/messaging/core/net/entities/ChangeChatAvatarData;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public data:Lcom/yandex/messaging/core/net/entities/ChatData;
+    .annotation runtime Lcom/squareup/moshi/Json;
+        name = "chat"
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="32.0dip" android:importantForAccessibility="no" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <ImageView android:id="@id/placecard_working_hours_icon_view" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/time_24" android:importantForAccessibility="no" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="@color/icons_additional" />
+        <TextView android:id="@id/placecard_working_hours_title" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/placecard_working_hours_title" android:includeFontPadding="false" android:importantForAccessibility="yes" android:layout_marginStart="16.0dip" style="@style/Text14.Medium.BlackDarkGrey" />
+    </LinearLayout>
+    <FrameLayout android:id="@id/placecard_working_hours_info_container" android:focusable="false" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="56.0dip" android:paddingEnd="16.0dip" android:paddingVertical="12.0dip">
+        <TextView android:gravity="start|center" android:layout_gravity="start|center" android:id="@id/placecard_working_hours_today_view" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="yes" style="@style/Text14.TextPrimary" />
+        <LinearLayout android:layout_gravity="end|center" android:id="@id/placecard_working_hours_show_all" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="yes">
+            <TextView android:id="@id/placecard_working_hours_all_days_view" android:focusable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/placecard_working_hours_schedule" android:includeFontPadding="false" android:importantForAccessibility="yes" android:layout_marginEnd="8.0dip" style="@style/Text14.Medium.TextSecondary" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/placecard_working_hours_switcher_view" android:focusable="false" android:layout_width="16.0dip" android:layout_height="16.0dip" android:scaleType="center" android:importantForAccessibility="no" app:srcCompat="@drawable/arrow_down_8" app:tint="@color/icons_additional" />
+        </LinearLayout>
+    </FrameLayout>
+    <TextView android:textAppearance="@style/Text14.Attention" android:id="@id/placecard_working_hours_additional_info" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="56.0dip" android:paddingEnd="16.0dip" />
+</merge>

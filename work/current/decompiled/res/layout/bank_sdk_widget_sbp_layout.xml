@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bank_sdk_widget_sbp_background" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/widget_sbp_text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:drawableRight="@drawable/bank_sdk_ic_arrow_forward" android:drawablePadding="4.0dip" style="@style/Widget.Bank.Text.Title2" />
+    <TextView android:id="@id/widget_sbp_text_secondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" style="@style/Widget.Bank.Text.Caption1.PrimaryColor" />
+</LinearLayout>

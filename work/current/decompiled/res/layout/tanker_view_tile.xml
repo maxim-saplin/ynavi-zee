@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/tankerMenuContainer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.tankerapp.ui.uimode.TankerImageView android:id="@id/backgroundIv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" />
+    <ru.tankerapp.ui.uimode.TankerImageView android:layout_gravity="end|bottom" android:id="@id/bottomRightIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" />
+    <ru.tankerapp.ui.uimode.TankerImageView android:layout_gravity="start|bottom" android:id="@id/bottomLeftIv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical" android:id="@id/titleContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tanker_basic_padding_v2" android:layout_marginRight="@dimen/tanker_basic_padding_v2">
+        <ru.tankerapp.ui.uimode.TankerTextView android:textSize="@dimen/tanker_small_text_size" android:textColor="@color/tanker_text_primary" android:ellipsize="end" android:id="@id/tankerTitleTv" android:paddingTop="@dimen/tanker_basic_padding_v2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="5" style="@style/TankerTextMedium" />
+        <ru.tankerapp.ui.uimode.TankerTextView android:textSize="@dimen/tanker_mini_text_size" android:textColor="@color/tanker_text_secondary" android:id="@id/tankerSubtitleTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:maxLines="3" />
+    </LinearLayout>
+    <ru.tankerapp.ui.uimode.TankerImageView android:layout_gravity="end|bottom" android:id="@id/iconIv" android:layout_width="28.0dip" android:layout_height="28.0dip" android:layout_marginBottom="@dimen/tanker_basic_padding_v2" android:layout_marginEnd="@dimen/tanker_basic_padding_v2" />
+    <ru.tankerapp.ui.uimode.TankerTextView android:textSize="@dimen/tanker_text_size_8" android:layout_gravity="start|bottom" android:id="@id/tankerAdvertTv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/tanker_basic_padding_v2" android:paddingVertical="@dimen/tanker_basic_padding_min" />
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayoutRect android:layout_gravity="center_vertical" android:padding="@dimen/control_rect_padding" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="start|center" android:id="@id/control_profile_plus_icon" android:src="@drawable/profile_plus_32" android:scaleType="center" style="@style/ControlRectImage" />
+        <ImageView android:layout_gravity="start|center" android:id="@id/control_profile_menu_icon" android:scaleType="center" android:contentDescription="@string/accessibility_home_screen_menu" style="@style/ControlRectImage" />
+        <ImageView android:layout_gravity="start|center" android:id="@id/control_profile_menu_dot" android:visibility="gone" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginBottom="11.0dip" android:contentDescription="@null" android:layout_marginStart="30.0dip" />
+    </ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayoutRect>
+</merge>

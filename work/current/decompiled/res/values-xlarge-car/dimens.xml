@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="pay_sdk_checkout_content_percent">0.5</item>
+    <item type="dimen" name="pay_sdk_mobile_content_scale_factor">2.25</item>
+</resources>

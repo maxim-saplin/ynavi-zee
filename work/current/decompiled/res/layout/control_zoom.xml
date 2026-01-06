@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.common.views.controls.FrameLayoutClickAndHold android:id="@id/control_zoom_in_touch_zone" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/accessibility_control_zoom_in">
+            <ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayoutRect android:padding="@dimen/control_rect_padding" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/control_rect_margin_between">
+                <ImageView android:id="@id/control_zoom_in" android:clickable="false" android:importantForAccessibility="no" app:srcCompat="@drawable/zoom_in_48" app:tint="@color/icons_primary" style="@style/ControlRectImage" />
+            </ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayoutRect>
+        </ru.yandex.yandexmaps.common.views.controls.FrameLayoutClickAndHold>
+        <ru.yandex.yandexmaps.common.views.controls.FrameLayoutClickAndHold android:id="@id/control_zoom_out_touch_zone" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/accessibility_control_zoom_out">
+            <ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayoutRect android:padding="@dimen/control_rect_padding" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/control_rect_margin_between">
+                <ImageView android:id="@id/control_zoom_out" android:clickable="false" android:importantForAccessibility="no" app:srcCompat="@drawable/zoom_out_48" app:tint="@color/icons_primary" style="@style/ControlRectImage" />
+            </ru.yandex.yandexmaps.common.views.controls.MapControlsFrameLayoutRect>
+        </ru.yandex.yandexmaps.common.views.controls.FrameLayoutClickAndHold>
+    </LinearLayout>
+</merge>

@@ -1,0 +1,38 @@
+.class public final Lcom/yandex/promosdk/di/modules/a0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ldagger/internal/e;
+
+
+# instance fields
+.field private final a:Lcom/yandex/promosdk/di/modules/z;
+
+
+# direct methods
+.method public constructor <init>(Lcom/yandex/promosdk/di/modules/z;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/yandex/promosdk/di/modules/a0;->a:Lcom/yandex/promosdk/di/modules/z;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lcom/yandex/promosdk/di/modules/a0;->a:Lcom/yandex/promosdk/di/modules/z;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lbu0/a;
+
+    invoke-direct {v0}, Lbu0/a;-><init>()V
+
+    return-object v0
+.end method

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" android:paddingHorizontal="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/image_route_point_type" android:layout_width="16.0dip" android:layout_height="16.0dip" />
+    <TextView android:textColorHint="@color/text_secondary" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/text_route_point_title" android:layout_width="0.0dip" android:layout_height="40.0dip" android:singleLine="true" android:layout_weight="1.0" android:layout_marginStart="16.0dip" android:paddingHorizontal="12.0dip" style="@style/Text14.Medium" />
+</LinearLayout>

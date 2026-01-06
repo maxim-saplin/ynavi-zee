@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:background="@color/bg_additional" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="12.0dip" android:foreground="?selectableItemBackground" android:layout_marginHorizontal="16.0dip" android:paddingVertical="12.0dip" app:cornerRadius="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/offline_caches_search_cities" android:drawablePadding="8.0dip" app:drawableStartCompat="@drawable/search_16" app:drawableTint="@color/icons_secondary" style="@style/Text14.Medium.TextSecondary" />
+    </LinearLayout>
+</ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>

@@ -1,0 +1,3 @@
+.class public final Lru/yandex/yandexmaps/placecard/controllers/geoobject/navigation/q;
+.super Ljava/lang/Object;
+.source "SourceFile"

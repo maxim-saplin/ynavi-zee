@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/appBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/statContainer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ru.tankerapp.android.sdk.navigator.view.views.order.history.ui.OrderStatisticProgressView android:id="@id/currentStatisticView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <ru.tankerapp.android.sdk.navigator.view.views.order.history.ui.OrderStatisticProgressView android:id="@id/totalStatisticView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <ru.tankerapp.ui.ListItemComponent android:id="@id/splitView" android:background="@drawable/tanker_bg_debt_split" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tanker_basic_padding_half" android:layout_marginBottom="@dimen/tanker_basic_padding_half" android:layout_marginStart="@dimen/tanker_basic_padding" android:layout_marginEnd="@dimen/tanker_basic_padding" android:elevation="6.0dip" app:subtitleTextSize="@dimen/tanker_mini_text_size" app:subtitle_TextColor="@color/tanker_textColorAlpha100" app:titleStyle="@style/TankerTextMedium" app:titleTextSize="@dimen/tanker_basic_text_size" app:title_TextColor="@color/tanker_textColorAlpha100" />
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

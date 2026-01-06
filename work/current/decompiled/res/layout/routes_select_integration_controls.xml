@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/route_selection_indoor_control" />
+        <include layout="@layout/control_chunk_indoor_dock" />
+        <include layout="@layout/control_chunk_ruler" />
+        <include layout="@layout/control_chunk_layers_menu" />
+        <include layout="@layout/control_chunk_transport_priority" />
+        <include layout="@layout/control_chunk_traffic_priority" />
+        <include layout="@layout/control_chunk_carparks_priority" />
+        <include layout="@layout/control_chunk_panorama" />
+        <include layout="@layout/control_chunk_weather" />
+        <include layout="@layout/control_chunk_tilt_toggle" />
+        <include layout="@layout/control_chunk_surge" />
+        <include layout="@layout/control_chunk_zoom" />
+        <include layout="@layout/control_chunk_position" />
+    </ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pay_sdk_closing_item_description_top_margin">6.0dip</dimen>
+    <dimen name="pay_sdk_closing_item_edge_radius">14.0dip</dimen>
+    <dimen name="pay_sdk_closing_item_logo_size">60.0dip</dimen>
+    <dimen name="pay_sdk_closing_item_middle_top_margin">16.0dip</dimen>
+    <dimen name="pay_sdk_closing_item_padding_vertical">36.0dip</dimen>
+    <dimen name="pay_sdk_closing_item_spacing_size">8.0dip</dimen>
+    <dimen name="pay_sdk_closing_item_width">186.0dip</dimen>
+    <dimen name="pay_sdk_closing_view_condition_bottom_margin">24.0dip</dimen>
+</resources>

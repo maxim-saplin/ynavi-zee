@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginStart="@dimen/controls_escape_from_shutter_margin" app:layout_clearance="8.0dip" app:layout_dock_for="@id/control_indoor" app:layout_fleet_id="2" app:layout_floating="drifting_up" app:layout_heaviness="0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

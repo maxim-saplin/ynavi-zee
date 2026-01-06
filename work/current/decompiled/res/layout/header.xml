@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="start" android:id="@id/friend_card_back_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_24" app:tint="@color/icons_additional" />
+    <TextView android:layout_gravity="center" android:id="@id/friend_card_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text20.Medium.TextPrimary" />
+    <ImageView android:layout_gravity="end" android:id="@id/friend_card_close_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/close_24" app:tint="@color/icons_additional" />
+</merge>

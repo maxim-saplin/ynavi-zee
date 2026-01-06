@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton android:gravity="center" android:layout_gravity="center" android:id="@id/image_status_button" android:background="@drawable/msg_bg_image_status" android:padding="@dimen/chat_image_bubble_offsets" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

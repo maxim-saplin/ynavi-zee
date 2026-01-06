@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:layout_gravity="start|bottom" android:id="@id/gas_stations_drawer_section_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:paddingHorizontal="16.0dip" android:paddingVertical="8.0dip" style="@style/Text16.Medium" />
+</FrameLayout>

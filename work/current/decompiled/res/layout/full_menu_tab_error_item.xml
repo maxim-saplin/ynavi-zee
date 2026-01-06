@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingTop="64.0dip" android:paddingBottom="64.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="32.0dip" android:paddingEnd="32.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/stories_loading_error_text" style="@style/Text14.BlackWhite" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/retry_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" app:generalButtonSize="medium" app:generalButtonStyle="secondaryBlue" app:text="@string/ymcab_error_retry" />
+</LinearLayout>

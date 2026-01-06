@@ -1,0 +1,148 @@
+.class public final Lcom/yandex/payment/sdk/flex/impl/actions/f;
+.super Lhw0/a;
+.source "SourceFile"
+
+
+# annotations
+.annotation runtime Ln41/h;
+.end annotation
+
+
+# static fields
+.field public static final Companion:Lcom/yandex/payment/sdk/flex/impl/actions/e;
+
+.field private static final c:[Lkotlinx/serialization/KSerializer;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "[",
+            "Lkotlinx/serialization/KSerializer;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field private final a:J
+
+.field private final b:Lhw0/a;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    const/4 v0, 0x0
+
+    new-instance v1, Lcom/yandex/payment/sdk/flex/impl/actions/e;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    sput-object v1, Lcom/yandex/payment/sdk/flex/impl/actions/f;->Companion:Lcom/yandex/payment/sdk/flex/impl/actions/e;
+
+    new-instance v1, Ln41/b;
+
+    const-class v2, Lhw0/a;
+
+    invoke-static {v2}, Lkotlin/jvm/internal/o;->b(Ljava/lang/Class;)Lkotlin/jvm/internal/f;
+
+    move-result-object v2
+
+    new-array v3, v0, [Lkotlinx/serialization/KSerializer;
+
+    invoke-direct {v1, v2, v3}, Ln41/b;-><init>(Lkotlin/jvm/internal/f;[Lkotlinx/serialization/KSerializer;)V
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Lkotlinx/serialization/KSerializer;
+
+    const/4 v3, 0x0
+
+    aput-object v3, v2, v0
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sput-object v2, Lcom/yandex/payment/sdk/flex/impl/actions/f;->c:[Lkotlinx/serialization/KSerializer;
+
+    return-void
+.end method
+
+.method public constructor <init>(IJLhw0/a;)V
+    .locals 2
+
+    and-int/lit8 v0, p1, 0x3
+
+    const/4 v1, 0x3
+
+    if-ne v1, v0, :cond_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p2, p0, Lcom/yandex/payment/sdk/flex/impl/actions/f;->a:J
+
+    iput-object p4, p0, Lcom/yandex/payment/sdk/flex/impl/actions/f;->b:Lhw0/a;
+
+    return-void
+
+    :cond_0
+    sget-object p2, Lcom/yandex/payment/sdk/flex/impl/actions/d;->a:Lcom/yandex/payment/sdk/flex/impl/actions/d;
+
+    invoke-virtual {p2}, Lcom/yandex/payment/sdk/flex/impl/actions/d;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object p2
+
+    invoke-static {p2, p1, v1}, Luh1/g;->m(Lkotlinx/serialization/descriptors/SerialDescriptor;II)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public static final synthetic a()[Lkotlinx/serialization/KSerializer;
+    .locals 1
+
+    sget-object v0, Lcom/yandex/payment/sdk/flex/impl/actions/f;->c:[Lkotlinx/serialization/KSerializer;
+
+    return-object v0
+.end method
+
+.method public static final synthetic d(Lcom/yandex/payment/sdk/flex/impl/actions/f;Lkotlinx/serialization/encoding/e;Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
+    .locals 4
+
+    sget-object v0, Lcom/yandex/payment/sdk/flex/impl/actions/f;->c:[Lkotlinx/serialization/KSerializer;
+
+    iget-wide v1, p0, Lcom/yandex/payment/sdk/flex/impl/actions/f;->a:J
+
+    const/4 v3, 0x0
+
+    invoke-interface {p1, p2, v3, v1, v2}, Lkotlinx/serialization/encoding/e;->encodeLongElement(Lkotlinx/serialization/descriptors/SerialDescriptor;IJ)V
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object p0, p0, Lcom/yandex/payment/sdk/flex/impl/actions/f;->b:Lhw0/a;
+
+    invoke-interface {p1, p2, v1, v0, p0}, Lkotlinx/serialization/encoding/e;->encodeSerializableElement(Lkotlinx/serialization/descriptors/SerialDescriptor;ILn41/i;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()Lhw0/a;
+    .locals 1
+
+    iget-object v0, p0, Lcom/yandex/payment/sdk/flex/impl/actions/f;->b:Lhw0/a;
+
+    return-object v0
+.end method
+
+.method public final c()J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/yandex/payment/sdk/flex/impl/actions/f;->a:J
+
+    return-wide v0
+.end method

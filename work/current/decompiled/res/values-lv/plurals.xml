@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Pārtīt uz priekšu par %d sekundēm</item>
+        <item quantity="zero">Pārtīt uz priekšu par %d sekundēm</item>
+        <item quantity="one">Pārtīt uz priekšu par %d sekundi</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Attīt atpakaļ par %d sekundēm</item>
+        <item quantity="zero">Attīt atpakaļ par %d sekundēm</item>
+        <item quantity="one">Attīt atpakaļ par %d sekundi</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d jauni paziņojumi</item>
+        <item quantity="zero">%d jaunu paziņojumu</item>
+        <item quantity="one">%d jauns paziņojums</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Pēdējie %1$d cipari</item>
+        <item quantity="zero">Pēdējie %1$d cipari</item>
+        <item quantity="one">Pēdējais %1$d cipars</item>
+        <item quantity="few">Pēdējie %1$d cipari</item>
+        <item quantity="many">Pēdējie %1$d cipari</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"Jums tūlīt zvanīs no tālruņa numura
+%1$s. Ievadiet pēdējos %2$d numura ciparus"</item>
+        <item quantity="zero">"Jums tūlīt zvanīs no tālruņa numura
+%1$s. Ievadiet pēdējos %2$d numura ciparus"</item>
+        <item quantity="one">"Jums tūlīt zvanīs no tālruņa numura
+%1$s. Ievadiet pēdējo %2$d numura ciparu"</item>
+        <item quantity="few">"Jums tūlīt zvanīs no tālruņa numura
+%1$s. Ievadiet pēdējos %2$d numura ciparus"</item>
+        <item quantity="many">"Jums tūlīt zvanīs no tālruņa numura
+%1$s. Ievadiet pēdējos %2$d numura ciparus"</item>
+    </plurals>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dialog_human_image_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dialog_item_margin_big_horizontal" android:layout_marginTop="@dimen/dialog_item_margin_top" android:layout_marginRight="@dimen/dialog_item_margin_horizontal"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.searchplugin.dialog.ui.ResizingImageView android:layout_gravity="right|bottom" android:id="@id/dialog_item_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dialog_item_background_human_image" android:scaleType="fitCenter" android:maxWidth="@dimen/dialog_item_image_max_size" android:maxHeight="@dimen/dialog_item_image_max_size" android:minWidth="@dimen/dialog_item_image_min_size" android:minHeight="@dimen/dialog_item_image_min_size" android:contentDescription="@null" />
+    <ImageView android:layout_gravity="right|bottom" android:id="@id/dialog_image_crop_button" android:background="@null" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_crop" android:contentDescription="@null" />
+</FrameLayout>

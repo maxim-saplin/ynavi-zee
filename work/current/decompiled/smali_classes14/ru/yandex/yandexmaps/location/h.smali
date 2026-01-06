@@ -1,0 +1,54 @@
+.class public final Lru/yandex/yandexmaps/location/h;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lty1/a;
+
+
+# instance fields
+.field private final a:Lru/yandex/yandexmaps/location/i;
+
+
+# direct methods
+.method public constructor <init>(Lru/yandex/yandexmaps/location/i;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lru/yandex/yandexmaps/location/h;->a:Lru/yandex/yandexmaps/location/i;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getLocation()Lsj1/c;
+    .locals 2
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/location/h;->a:Lru/yandex/yandexmaps/location/i;
+
+    check-cast v0, Lru/yandex/yandexmaps/location/o;
+
+    invoke-virtual {v0}, Lru/yandex/yandexmaps/location/o;->i()Lcom/yandex/mapkit/location/Location;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/yandex/mapkit/location/Location;->getPosition()Lcom/yandex/mapkit/geometry/Point;
+
+    move-result-object v0
+
+    new-instance v1, Lsj1/c;
+
+    invoke-direct {v1, v0}, Lsj1/c;-><init>(Lcom/yandex/mapkit/geometry/Point;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    return-object v1
+.end method

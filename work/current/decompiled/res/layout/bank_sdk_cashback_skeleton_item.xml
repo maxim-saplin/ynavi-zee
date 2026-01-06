@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="168.0dip" android:layout_marginStart="24.0dip" android:layout_marginEnd="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.SkeletonView android:layout_width="160.0dip" android:layout_height="20.0dip" app:bank_sdk_cornerRadius="@dimen/bank_sdk_text_skeleton_radius" />
+    <com.yandex.bank.widgets.common.SkeletonView android:layout_width="260.0dip" android:layout_height="56.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="20.0dip" app:bank_sdk_cornerRadius="@dimen/bank_sdk_balance_text_skeleton_radius" />
+    <include layout="@layout/bank_sdk_category_item_shimmer" />
+    <include layout="@layout/bank_sdk_category_item_shimmer" />
+    <include layout="@layout/bank_sdk_category_item_shimmer" />
+    <include layout="@layout/bank_sdk_category_item_shimmer" />
+    <include layout="@layout/bank_sdk_category_item_shimmer" />
+    <include layout="@layout/bank_sdk_category_item_shimmer" />
+</LinearLayout>

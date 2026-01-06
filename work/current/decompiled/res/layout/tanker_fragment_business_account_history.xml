@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.tankerapp.ui.ListItemComponent android:id="@id/allView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:itemTitle="@string/tanker_business_account_all" />
+        <View android:background="@color/tanker_divider" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+    <include layout="@layout/tanker_item_loading" />
+</FrameLayout>

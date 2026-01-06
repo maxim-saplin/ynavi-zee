@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:maxLevel="0">
+        <shape android:shape="oval">
+            <size android:height="32.0dip" android:width="32.0dip" />
+            <solid android:color="#ff666666" />
+        </shape>
+    </item>
+    <item android:maxLevel="1">
+        <shape android:shape="oval">
+            <size android:height="32.0dip" android:width="32.0dip" />
+            <solid android:color="#ff2185a6" />
+        </shape>
+    </item>
+    <item android:maxLevel="2">
+        <shape android:shape="oval">
+            <size android:height="32.0dip" android:width="32.0dip" />
+            <solid android:color="#ff00a3d9" />
+        </shape>
+    </item>
+    <item android:maxLevel="3">
+        <shape android:shape="oval">
+            <size android:height="32.0dip" android:width="32.0dip" />
+            <solid android:color="#ff5c993d" />
+        </shape>
+    </item>
+    <item android:maxLevel="4">
+        <shape android:shape="oval">
+            <size android:height="32.0dip" android:width="32.0dip" />
+            <solid android:color="#ff8bbf56" />
+        </shape>
+    </item>
+    <item android:maxLevel="5">
+        <shape android:shape="oval">
+            <size android:height="32.0dip" android:width="32.0dip" />
+            <solid android:color="#fff2973d" />
+        </shape>
+    </item>
+    <item android:maxLevel="6">
+        <shape android:shape="oval">
+            <size android:height="32.0dip" android:width="32.0dip" />
+            <solid android:color="#fff2ce61" />
+        </shape>
+    </item>
+    <item android:maxLevel="7">
+        <shape android:shape="oval">
+            <size android:height="32.0dip" android:width="32.0dip" />
+            <solid android:color="#ffbf4343" />
+        </shape>
+    </item>
+    <item android:maxLevel="8">
+        <shape android:shape="oval">
+            <size android:height="32.0dip" android:width="32.0dip" />
+            <solid android:color="#fff26755" />
+        </shape>
+    </item>
+</level-list>

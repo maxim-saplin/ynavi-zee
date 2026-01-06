@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/gallery_background_photo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foreground="@color/black_alpha_70" android:scaleType="centerCrop" />
+    <ru.yandex.yandexmaps.gallery.internal.fullscreen.items.GalleryMapsPlayerView android:id="@id/gallery_video_player_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:auto_show="true" app:bar_height="4.0dip" app:buffered_color="#664d4d4d" app:controller_layout_id="@layout/gallery_fullscreen_video_player_controller" app:hide_on_touch="false" app:played_color="@color/white" app:scrubber_color="#00000000" app:show_buffering="always" app:show_timeout="0" app:surface_type="texture_view" app:touch_target_height="24.0dip" app:unplayed_color="#664d4d4d" app:use_controller="true" />
+</FrameLayout>

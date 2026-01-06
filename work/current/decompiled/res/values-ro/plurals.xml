@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Derulează rapid înainte cu %d de secunde</item>
+        <item quantity="one">Derulează rapid înainte cu %d secundă</item>
+        <item quantity="few">Derulează rapid înainte cu %d secunde</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Derulează înapoi cu %d de secunde</item>
+        <item quantity="one">Derulează înapoi cu %d secundă</item>
+        <item quantity="few">Derulează înapoi cu %d secunde</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d de notificări noi</item>
+        <item quantity="one">%d notificare nouă</item>
+        <item quantity="few">%d notificări noi</item>
+    </plurals>
+    <plurals name="passport_call_code_placeholder">
+        <item quantity="other">Ultimele %1$d cifre</item>
+        <item quantity="zero">Ultimele %1$d cifre</item>
+        <item quantity="one">Ultima %1$d cifră</item>
+        <item quantity="few">Ultimele %1$d cifre</item>
+        <item quantity="many">Ultimele %1$d cifre</item>
+    </plurals>
+    <plurals name="passport_reg_call_message">
+        <item quantity="other">"În scurt timp vei primi un apel de la numărul 
+%1$s. Introdu ultimele %2$d cifre ale acestui număr"</item>
+        <item quantity="zero">"În scurt timp vei primi un apel de la numărul 
+%1$s. Introdu ultimele %2$d cifre ale acestui număr"</item>
+        <item quantity="one">"În scurt timp vei primi un apel de la numărul
+%1$s. Introdu ultima %2$d cifră a acestui număr"</item>
+        <item quantity="few">"În scurt timp vei primi un apel de la numărul 
+%1$s. Introdu ultimele %2$d cifre ale acestui număr"</item>
+        <item quantity="many">"În scurt timp vei primi un apel de la numărul 
+%1$s. Introdu ultimele %2$d cifre ale acestui număr"</item>
+    </plurals>
+</resources>

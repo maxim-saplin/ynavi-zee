@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="72.0dip" android:width="73.0dip" android:viewportWidth="73.0" android:viewportHeight="72.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?bankColor_internal_transparent" android:pathData="M36.5,36m-33,0a33,33 0,1 1,66 0a33,33 0,1 1,-66 0" android:strokeColor="?bankColor_button_invertedStaticNormal" android:strokeWidth="6.0" android:strokeAlpha="0.26" android:fillAlpha="0.4" />
+    <path android:fillColor="?bankColor_button_invertedStaticNormal" android:pathData="M36.5,36m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0" android:fillAlpha="0.98" />
+</vector>

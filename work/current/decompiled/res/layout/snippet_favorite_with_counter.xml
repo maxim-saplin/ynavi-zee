@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/favorite_view" android:layout_width="0.0dip" android:layout_height="fill_parent" android:drawablePadding="8.0dip" android:layout_weight="1.0" style="@style/Text14.Grey" />
+    <TextView android:layout_gravity="end" android:id="@id/more_items_counter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxEms="3" style="@style/Text14.Grey" />
+</merge>

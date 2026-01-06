@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="noHideDescendants">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ru.yandex.yandexmaps.controls.search.SearchLineView android:id="@id/search_integration_search_line" android:layout_width="@dimen/shutter_width" android:layout_height="@dimen/search_line_height" android:layout_marginTop="@dimen/search_line_margin" android:layout_marginStart="@dimen/search_line_margin" android:layout_marginEnd="@dimen/search_line_margin" app:menuButtonEnabled="false" />
+            <include layout="@layout/search_integration_controls" />
+        </FrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <com.bluelinelabs.conductor.ChangeHandlerFrameLayout android:id="@id/main_screen_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.bluelinelabs.conductor.ChangeHandlerFrameLayout android:id="@id/slave_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

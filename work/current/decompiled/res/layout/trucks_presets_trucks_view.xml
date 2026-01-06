@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.multiplatform.trucks.ui.internal.main.components.PresetTruckView android:id="@id/view_preset_light" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ru.yandex.yandexmaps.multiplatform.trucks.ui.internal.main.components.PresetTruckView android:id="@id/view_preset_medium" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip" />
+        <ru.yandex.yandexmaps.multiplatform.trucks.ui.internal.main.components.PresetTruckView android:id="@id/view_preset_large" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</merge>

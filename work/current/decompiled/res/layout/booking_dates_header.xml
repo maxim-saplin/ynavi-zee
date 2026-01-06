@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/background_panel" android:layout_width="fill_parent" android:layout_height="@dimen/common_header_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end|center" android:id="@id/booking_dates_header_close_button" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="8.0dip" />
+    <TextView android:ellipsize="end" android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/placecard_booking_dates_choosing" android:maxLines="1" android:drawablePadding="8.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="52.0dip" style="@style/Text18.Medium" />
+</FrameLayout>

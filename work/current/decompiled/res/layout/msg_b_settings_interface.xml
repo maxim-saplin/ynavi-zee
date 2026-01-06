@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messaging_settings_interface" style="@style/Messaging.Settings.Text.Group" />
+    <View android:background="@drawable/msg_divider_settings_group" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/msg_divider_settings_items" android:showDividers="middle">
+        <com.yandex.bricks.BrickSlotView android:id="@id/profile_theme_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.SwitchCompat android:id="@id/compact_mode_switch" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/messaging_compact_mode" style="@style/Messaging.Settings.Switch" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="top" android:orientation="vertical" android:background="@color/background_panel" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="32.0dip" android:paddingVertical="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:srcCompat="@drawable/login_pic_148" />
+    <TextView android:ellipsize="end" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/profile_with_ugc_authorized_item_title" android:maxLines="1" style="@style/Text20.Medium" />
+    <TextView android:ellipsize="end" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="@string/profile_with_ugc_authorized_item_subtitle" android:maxLines="2" style="@style/Text16.Grey" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/profile_with_ugc_login_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:generalButtonSize="big" app:generalButtonStyle="primary" app:text="@string/profile_with_ugc_authorized_item_button" />
+</LinearLayout>

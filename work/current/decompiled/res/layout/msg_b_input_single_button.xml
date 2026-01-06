@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:layout_gravity="bottom" android:background="?messagingCommonDividerColor" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="@dimen/chat_input_button_height" />
+    <TextView android:textSize="16.0sp" android:textColor="?messagingCommonAccentColor" android:gravity="center" android:layout_gravity="bottom" android:id="@id/messaging_input_button" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/chat_input_button_height" android:foreground="?android:selectableItemBackground" android:textAllCaps="false" android:fontFamily="@font/ya_medium" />
+    <com.yandex.bricks.BrickSlotView android:layout_gravity="bottom" android:id="@id/messaging_input_slot" android:layout_width="fill_parent" android:layout_height="@dimen/chat_input_button_height" />
+</FrameLayout>

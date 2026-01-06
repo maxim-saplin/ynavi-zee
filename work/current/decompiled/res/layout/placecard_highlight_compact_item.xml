@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/highlight_image_group" android:background="@drawable/highlight_compact_preview_item_background" android:clipToPadding="false" android:layout_width="80.0dip" android:layout_height="80.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/highlight_image" android:layout_width="72.0dip" android:layout_height="72.0dip" android:foreground="@drawable/highlight_compact_preview_item_foreground" android:scaleType="centerCrop" />
+    </FrameLayout>
+    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/highlight_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" android:maxEms="15" style="@style/Text12.Medium" />
+</merge>

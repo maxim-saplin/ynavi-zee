@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/cashbackViewLeftText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/bank_sdk_screen_horizontal_space" style="@style/Widget.Bank.Text.Body3" />
+    <ImageView android:id="@id/cashbackViewImage" android:layout_width="14.0dip" android:layout_height="14.0dip" android:importantForAccessibility="no" android:layout_marginHorizontal="4.0dip" />
+    <TextView android:id="@id/cashbackViewRightText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/bank_sdk_screen_horizontal_space" style="@style/Widget.Bank.Text.Body3" />
+</merge>

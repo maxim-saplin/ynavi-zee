@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?tankerBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.tankerapp.android.sdk.navigator.view.widgets.TitleHeaderView android:id="@id/tankerHeaderView" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/tankerRv" android:paddingTop="@dimen/tanker_basic_padding_min" android:paddingBottom="@dimen/tanker_basic_padding_new" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" android:paddingStart="@dimen/tanker_basic_padding_new" android:paddingEnd="@dimen/tanker_basic_padding_new" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</LinearLayout>

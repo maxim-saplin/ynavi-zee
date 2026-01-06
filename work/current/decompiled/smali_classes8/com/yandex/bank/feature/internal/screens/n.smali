@@ -1,0 +1,89 @@
+.class public final Lcom/yandex/bank/feature/internal/screens/n;
+.super Lcom/yandex/bank/core/mvp/g;
+.source "SourceFile"
+
+
+# instance fields
+.field private final k:Lcom/yandex/bank/feature/internal/data/e;
+
+.field private final l:Llm/b;
+
+.field private final m:Lcom/yandex/bank/core/analytics/e;
+
+
+# direct methods
+.method public constructor <init>(Lcom/yandex/bank/feature/internal/data/e;Llm/b;Lcom/yandex/bank/core/analytics/e;Lcom/yandex/bank/feature/internal/screens/q;)V
+    .locals 1
+
+    sget-object v0, Lcom/yandex/bank/feature/internal/screens/MerchantsViewModel$1;->h:Lcom/yandex/bank/feature/internal/screens/MerchantsViewModel$1;
+
+    invoke-direct {p0, v0, p4}, Lcom/yandex/bank/core/mvp/g;-><init>(Lkotlin/jvm/functions/Function0;Lcom/yandex/bank/core/mvp/i;)V
+
+    iput-object p1, p0, Lcom/yandex/bank/feature/internal/screens/n;->k:Lcom/yandex/bank/feature/internal/data/e;
+
+    iput-object p2, p0, Lcom/yandex/bank/feature/internal/screens/n;->l:Llm/b;
+
+    iput-object p3, p0, Lcom/yandex/bank/feature/internal/screens/n;->m:Lcom/yandex/bank/core/analytics/e;
+
+    sget-object p1, Lcom/yandex/bank/feature/internal/screens/MerchantsViewModel$loadData$1;->h:Lcom/yandex/bank/feature/internal/screens/MerchantsViewModel$loadData$1;
+
+    invoke-virtual {p0, p1}, Lcom/yandex/bank/core/mvp/g;->c0(Lkotlin/jvm/functions/Function1;)V
+
+    invoke-virtual {p3}, Lcom/yandex/bank/core/analytics/e;->X3()V
+
+    invoke-static {p0}, Landroidx/lifecycle/w1;->a(Landroidx/lifecycle/v1;)Ln2/a;
+
+    move-result-object p1
+
+    new-instance p2, Lcom/yandex/bank/feature/internal/screens/MerchantsViewModel$loadData$2;
+
+    const/4 p3, 0x0
+
+    invoke-direct {p2, p0, p3}, Lcom/yandex/bank/feature/internal/screens/MerchantsViewModel$loadData$2;-><init>(Lcom/yandex/bank/feature/internal/screens/n;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p4, 0x3
+
+    invoke-static {p1, p3, p3, p2, p4}, Lkotlinx/coroutines/h0;->G(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/i;Lkotlinx/coroutines/CoroutineStart;Lv31/d;I)Lkotlinx/coroutines/l2;
+
+    return-void
+.end method
+
+.method public static final synthetic d0(Lcom/yandex/bank/feature/internal/screens/n;)Lcom/yandex/bank/core/analytics/e;
+    .locals 0
+
+    iget-object p0, p0, Lcom/yandex/bank/feature/internal/screens/n;->m:Lcom/yandex/bank/core/analytics/e;
+
+    return-object p0
+.end method
+
+.method public static final synthetic e0(Lcom/yandex/bank/feature/internal/screens/n;)Lcom/yandex/bank/feature/internal/data/e;
+    .locals 0
+
+    iget-object p0, p0, Lcom/yandex/bank/feature/internal/screens/n;->k:Lcom/yandex/bank/feature/internal/data/e;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final f0(Landroid/net/Uri;)Z
+    .locals 2
+
+    iget-object v0, p0, Lcom/yandex/bank/feature/internal/screens/n;->l:Llm/b;
+
+    check-cast v0, Lpu/c;
+
+    invoke-virtual {v0}, Lpu/c;->v0()Lxn/s;
+
+    move-result-object v0
+
+    const/4 v1, 0x6
+
+    invoke-static {v0, p1, v1}, Lru/yandex/yandexmaps/multiplatform/ordertracking/internal/subscriptionconfig/i;->f(Lxn/s;Landroid/net/Uri;I)Lxn/h;
+
+    move-result-object p1
+
+    instance-of p1, p1, Lxn/f;
+
+    return p1
+.end method

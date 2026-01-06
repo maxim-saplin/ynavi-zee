@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="bottom" android:id="@id/alice_control_buttons" android:background="@drawable/dialog_bottom_background" android:layout_width="fill_parent" android:layout_height="@dimen/dialog_padding_bottom"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.alice.oknyx.OknyxView android:id="@id/alice_oknyx" android:layout_width="@dimen/oknyx_size" android:layout_height="@dimen/oknyx_size" android:layout_centerHorizontal="true" app:baseSizeToViewSizeRatio="0.6" />
+    <FrameLayout android:id="@id/quark_oknyx_container" android:layout_width="@dimen/oknyx_size" android:layout_height="@dimen/oknyx_size" android:layout_centerHorizontal="true" />
+    <ImageButton android:id="@id/alice_help_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/alice_bottom_control_buttons_color" android:layout_centerVertical="true" android:contentDescription="@string/alice_accessibility_help" app:srcCompat="@drawable/alice_help_icon" style="@style/Alice.Buttons" />
+    <ImageButton android:id="@id/alice_keyboard_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:tint="@color/alice_bottom_control_buttons_color" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/alice_accessibility_keyboard" app:srcCompat="@drawable/ic_keyboard" style="@style/Alice.Buttons" />
+    <ImageButton android:id="@id/alice_image_recognizer_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="0.0dip" android:layout_toLeftOf="@id/alice_keyboard_button" android:layout_centerVertical="true" android:contentDescription="@string/alice_accessibility_smartcamera" style="@style/Alice.Buttons" />
+</RelativeLayout>

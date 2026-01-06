@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer android:layout_gravity="end" android:id="@id/controls_container_end" android:paddingTop="@dimen/routes_eco_friendly_guidance_controls_top_padding" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/control_chunk_zoom" />
+    <include layout="@layout/control_chunk_transport_priority" />
+    <include layout="@layout/control_chunk_position" />
+</ru.yandex.yandexmaps.controlsfluidcontainer.api.FluidContainer>

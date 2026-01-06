@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:focusable="true" android:layout_width="wrap_content" android:layout_height="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/text_primary_variant" android:gravity="center" android:layout_gravity="center" android:id="@id/mt_minicard_underground_exit_title" android:layout_width="wrap_content" android:layout_height="20.0dip" android:text="@string/mt_details_exit" android:lines="1" android:textAlignment="center" style="@style/Text14.Medium" />
+    <TextView android:textColor="@color/ui_yellow" android:gravity="center" android:id="@id/mt_minicard_underground_exit_name" android:background="@drawable/mt_transport_icon_background" android:layout_width="wrap_content" android:layout_height="20.0dip" android:minWidth="20.0dip" android:lines="1" android:layout_marginStart="4.0dip" android:backgroundTint="@color/buttons_black_bg" android:paddingHorizontal="6.0dip" style="@style/Text12.Medium" />
+</LinearLayout>

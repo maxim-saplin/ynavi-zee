@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:paddingTop="@dimen/tanker_basic_padding_half" android:paddingBottom="@dimen/tanker_basic_padding" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/backgroundFrame" android:layout_width="60.0dip" android:layout_height="60.0dip">
+        <androidx.appcompat.widget.AppCompatImageView android:layout_gravity="center" android:id="@id/imageView" android:layout_width="24.0dip" android:layout_height="24.0dip" android:scaleType="centerInside" />
+    </FrameLayout>
+    <TextView android:textSize="15.0dip" android:textColor="@color/tanker_textColorAlpha100" android:gravity="center_horizontal" android:id="@id/titleTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" style="@style/TankerTextRegular" />
+</LinearLayout>

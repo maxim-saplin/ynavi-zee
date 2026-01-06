@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:id="@id/select_on_map_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/routes_select_point_on_map_title" android:textAlignment="center" style="@style/Text16.Medium" />
+    <FrameLayout android:paddingTop="8.0dip" android:paddingBottom="20.0dip" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/select_on_map_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minLines="1" style="@style/Text14.Grey" />
+        <ru.yandex.yandexmaps.designsystem.loader.LoaderView android:layout_gravity="center" android:id="@id/select_on_map_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" app:ymaps_progressSize="small" />
+    </FrameLayout>
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="center" android:id="@id/select_on_map_select_button" android:layout_width="fill_parent" android:layout_height="wrap_content" app:generalButtonSize="medium" app:generalButtonStyle="primary" />
+</merge>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.navilib.widget.NaviFrameLayout android:background="@drawable/contextballoon_background_day" android:paddingTop="@dimen/padding_contextballoon_top" android:paddingBottom="@dimen/padding_contextballoon_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/layout_lanes_container" />
+</com.yandex.navilib.widget.NaviFrameLayout>

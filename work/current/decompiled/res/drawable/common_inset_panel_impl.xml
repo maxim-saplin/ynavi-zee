@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/background_panel" />
+    <stroke android:width="@dimen/common_border_thickness" android:color="@color/common_border" />
+    <padding android:left="@dimen/common_border_thickness" android:top="@dimen/common_border_thickness" android:right="@dimen/common_border_thickness" android:bottom="@dimen/common_border_thickness" />
+</shape>

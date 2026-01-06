@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/placecard_full_address_title" android:paddingTop="20.0dip" android:paddingBottom="12.0dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/placecard_full_address_title" android:importantForAccessibility="yes" android:paddingHorizontal="16.0dip" style="@style/Text16.Medium" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/placecard_full_address_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="56.0dip" android:layout_height="56.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/placecard_full_address_icon_view" android:focusable="false" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/point_on_map_24" android:importantForAccessibility="no" app:tint="@color/icons_actions" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" android:paddingEnd="16.0dip">
+            <View android:id="@id/placecard_address_spacer" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="8.0dip" android:importantForAccessibility="no" />
+            <TextView android:ellipsize="end" android:id="@id/placecard_address_first_line" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:importantForAccessibility="yes" android:fontFamily="@font/font_regular" style="@style/Text16.TextPrimary" />
+            <TextView android:ellipsize="end" android:id="@id/placecard_address_second_line" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="8.0dip" android:maxLines="2" android:importantForAccessibility="yes" android:fontFamily="@font/font_regular" style="@style/Text14.TextSecondary" />
+        </LinearLayout>
+    </LinearLayout>
+</merge>

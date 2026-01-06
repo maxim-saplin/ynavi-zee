@@ -1,0 +1,70 @@
+.class public final Ll22/t0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# static fields
+.field public static final b:Ll22/t0;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ll22/t0;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ll22/t0;->b:Ll22/t0;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-static {}, Lru/yandex/yandexmaps/multiplatform/core/environment/ComplianceEnvironment;->values()[Lru/yandex/yandexmaps/multiplatform/core/environment/ComplianceEnvironment;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    aget-object v3, v0, v2
+
+    invoke-virtual {v3}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x1
+
+    invoke-static {v4, p1, v5}, Lkotlin/text/e0;->A(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v3, 0x0
+
+    :goto_1
+    return-object v3
+.end method

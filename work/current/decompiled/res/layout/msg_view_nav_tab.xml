@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:id="@id/tab_text_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:drawableTopCompat="@drawable/msg_ic_chats_selector" style="@style/Messaging.TabText" />
+    <ImageView android:id="@id/dot_indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/msg_ic_dot_indicator" android:contentDescription="@null" app:layout_constraintStart_toStartOf="@id/guideline" app:layout_constraintTop_toTopOf="@id/tab_text_view" style="@style/Messaging.TabBadge" />
+    <com.yandex.messaging.views.BadgeView android:id="@id/tab_badge" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="@id/guideline" app:layout_constraintTop_toTopOf="@id/tab_text_view" style="@style/Messaging.TabBadge" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guideline" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.5" />
+</merge>

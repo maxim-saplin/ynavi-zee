@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="intro_backend_driven_button_font_size">16.0sp</dimen>
+    <dimen name="intro_backend_driven_button_height">56.0dip</dimen>
+    <dimen name="intro_backend_driven_button_margin_bottom">24.0dip</dimen>
+    <dimen name="intro_backend_driven_description_font_size">16.0sp</dimen>
+    <dimen name="intro_backend_driven_horizontal_margin">32.0dip</dimen>
+    <dimen name="intro_backend_driven_image_to_title_vertical_margin">16.0dip</dimen>
+    <dimen name="intro_backend_driven_label_to_label_vertical_margin">16.0dip</dimen>
+    <dimen name="intro_backend_driven_title_font_size">32.0sp</dimen>
+</resources>

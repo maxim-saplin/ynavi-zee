@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.imageview.ShapeableImageView android:id="@id/family_avatar_view_image" android:layout_width="@dimen/plus_sdk_panel_family_avatar_size" android:layout_height="@dimen/plus_sdk_panel_family_avatar_size" android:scaleType="centerCrop" app:shapeAppearanceOverlay="@style/PlusSdkShapeAppearanceOverlay.App.CornerCut" app:srcCompat="@drawable/plus_sdk_ic_family_empty" />
+</FrameLayout>

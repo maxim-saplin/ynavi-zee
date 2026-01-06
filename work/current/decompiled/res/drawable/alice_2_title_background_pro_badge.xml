@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="26.0dip" android:width="126.0dip" android:viewportWidth="100.0" android:viewportHeight="24.0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@drawable/$alice_2_title_background_pro_badge__0" android:pathData="M0,12C0,5.37 5.37,0 12,0H88C94.63,0 100,5.37 100,12V12C100,18.63 94.63,24 88,24H12C5.37,24 0,18.63 0,12V12Z" />
+</vector>

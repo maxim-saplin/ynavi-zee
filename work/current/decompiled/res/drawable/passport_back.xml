@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="28.0dip" android:width="28.0dip" android:viewportWidth="28.0" android:viewportHeight="28.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <path android:fillColor="?colorBackgroundFloating" android:pathData="M0,14a14,14 0 0,1 28,0a14,14 0 0,1 -28,0z" android:fillAlpha="0.7" />
+        <path android:fillColor="?passportIconsColor" android:pathData="M11.74 14.52l5.16 5.04a0.2 0.2 0 0 1 0 0.28l-1.13 1.1a0.2 0.2 0 0 1-0.28 0l-6.43-6.28a0.2 0.2 0 0 1 0-0.28l6.47-6.32a0.2 0.2 0 0 1 0.28 0l1.13 1.1a0.2 0.2 0 0 1 0 0.28l-5.2 5.08z" />
+    </group>
+</vector>

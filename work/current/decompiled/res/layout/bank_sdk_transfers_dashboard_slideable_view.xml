@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.yandex.bank.feature.divkit.api.ui.BankDivViewOld android:id="@id/transfersDashboardDivView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" />
+        <include android:id="@id/transfersDashboardSkeleton" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="30.0dip" layout="@layout/bank_sdk_transfers_dashboard_slideable_view_loading" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="32.0dip">
+            <com.yandex.bank.feature.transfer.version2.internal.screens.dashboard.presentation.view.TransfersDashboardErrorView android:id="@id/transfersDashboardErrorView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

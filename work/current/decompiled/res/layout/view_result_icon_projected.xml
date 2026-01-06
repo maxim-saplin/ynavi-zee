@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/projected_kit_result_icon_background" android:layout_width="@dimen/projected_result_icon_size" android:layout_height="@dimen/projected_result_icon_size"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="@color/text_body_white" android:layout_gravity="center" android:id="@id/projected_result_icons_number_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

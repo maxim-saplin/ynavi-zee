@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="left" android:orientation="horizontal" android:id="@id/mt_label_on_map_icon_container" android:background="@drawable/mt_label_container_background" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ru.yandex.yandexmaps.common.views.PoiLabelView android:layout_gravity="start" android:id="@id/mt_label_on_map_stop_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="2.0dip" app:poiLabel_align="left" app:poiLabel_ellipsize="true" app:poiLabel_fontFamily="medium" app:poiLabel_maxNumberOfLines="3" app:poiLabel_multipleLineMaxLength="16" app:poiLabel_oneLineMaxLength="24" app:poiLabel_strokeColor="@color/bg_primary" app:poiLabel_strokeWidth="10.0" app:poiLabel_textColor="@color/text_primary" app:poiLabel_textSize="12.0sp" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="4.0dip" android:width="12.0dip" android:viewportWidth="12.0" android:viewportHeight="4.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0,0h12v4h-12z" />
+        <path android:fillColor="@color/messaging_balloon_background" android:pathData="M12,0V0H0V0H0.7574C1.553,0 2.3161,0.3161 2.8787,0.8787L5.2929,3.2929C5.6834,3.6834 6.3166,3.6834 6.7071,3.2929L9.1213,0.8787C9.6839,0.3161 10.447,0 11.2426,0H12Z" android:fillType="evenOdd" />
+    </group>
+</vector>

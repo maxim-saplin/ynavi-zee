@@ -1,0 +1,66 @@
+.class public final Lru/yandex/yandexmaps/search/internal/suggest/h1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ls33/e;
+
+
+# instance fields
+.field private final a:Lru/yandex/yandexmaps/search/api/dependencies/r0;
+
+.field private final b:Lio/reactivex/d0;
+
+
+# direct methods
+.method public constructor <init>(Lru/yandex/yandexmaps/search/api/dependencies/r0;Lio/reactivex/d0;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lru/yandex/yandexmaps/search/internal/suggest/h1;->a:Lru/yandex/yandexmaps/search/api/dependencies/r0;
+
+    iput-object p2, p0, Lru/yandex/yandexmaps/search/internal/suggest/h1;->b:Lio/reactivex/d0;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lio/reactivex/r;)Lio/reactivex/r;
+    .locals 3
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/search/internal/suggest/h1;->a:Lru/yandex/yandexmaps/search/api/dependencies/r0;
+
+    const-class v1, Ls63/n;
+
+    invoke-virtual {p1, v1}, Lio/reactivex/r;->ofType(Ljava/lang/Class;)Lio/reactivex/r;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/search/internal/suggest/h1;->b:Lio/reactivex/d0;
+
+    invoke-virtual {p1, v1}, Lio/reactivex/r;->observeOn(Lio/reactivex/d0;)Lio/reactivex/r;
+
+    move-result-object p1
+
+    check-cast v0, Lru/yandex/yandexmaps/integrations/search/v0;
+
+    invoke-virtual {v0, p1}, Lru/yandex/yandexmaps/integrations/search/v0;->a(Lio/reactivex/r;)Lio/reactivex/r;
+
+    move-result-object p1
+
+    sget-object v0, Lru/yandex/yandexmaps/search/internal/suggest/PlatformVoiceSearchEpic$act$1$1;->b:Lru/yandex/yandexmaps/search/internal/suggest/PlatformVoiceSearchEpic$act$1$1;
+
+    new-instance v1, Lru/yandex/yandexmaps/search/internal/suggest/s0;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, v0}, Lru/yandex/yandexmaps/search/internal/suggest/s0;-><init>(ILkotlin/jvm/functions/Function1;)V
+
+    invoke-virtual {p1, v1}, Lio/reactivex/r;->map(Lf21/o;)Lio/reactivex/r;
+
+    move-result-object p1
+
+    return-object p1
+.end method

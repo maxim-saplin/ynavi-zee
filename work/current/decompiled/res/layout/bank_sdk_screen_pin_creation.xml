@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:background="?bankColor_background_primary" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.bank.widgets.common.ToolbarView android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:bank_sdk_title="@string/bank_sdk_card_card_pin_action" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:gravity="center" android:id="@id/textSubtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/bank_sdk_margin_vertical_card_pin_description" android:text="@string/bank_sdk_card_pin_screen_header" android:layout_marginHorizontal="@dimen/bank_sdk_screen_horizontal_space" app:layout_constraintTop_toBottomOf="@id/toolbar" style="@style/Widget.Bank.Text.Body2" />
+    <ViewSwitcher android:id="@id/switcherDots" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/keyboard" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/toolbar" app:layout_constraintVertical_bias="@dimen/bank_sdk_pin_indicators_vertical_bias" app:layout_constraintVertical_chainStyle="packed">
+        <include android:layout_gravity="center|top" android:id="@id/dotsFirst" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/bank_sdk_item_pin_dots_with_description" />
+        <include android:layout_gravity="center|top" android:id="@id/dotsSecond" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/bank_sdk_item_pin_dots_with_description" />
+    </ViewSwitcher>
+    <com.yandex.bank.widgets.common.keyboard.NumberKeyboardView android:id="@id/keyboard" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

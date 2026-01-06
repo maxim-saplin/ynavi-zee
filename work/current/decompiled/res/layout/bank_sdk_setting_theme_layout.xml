@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/theme_preview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/theme_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" style="@style/Widget.Bank.Text.Body3" />
+    <com.yandex.bank.widgets.common.checkbox.CheckBoxView android:id="@id/theme_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" app:bank_sdk_checkBoxSize="medium" app:bank_sdk_colorType="dark" />
+</merge>

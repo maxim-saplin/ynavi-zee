@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewStub android:id="@id/alice_fab_remove_view_stub" android:layout="@layout/alice_fab_remove_view" android:inflatedId="@id/alice_fab_remove_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <ViewStub android:id="@id/alice_fab_container_stub" android:layout="@layout/alice_fab" android:inflatedId="@id/alice_fab_container" android:layout_width="@dimen/dialog_fab_size" android:layout_height="@dimen/dialog_fab_size" />
+    <ViewStub android:id="@id/alice_fab_onboarding_stub" android:layout="@layout/alice_fab_onboarding" android:inflatedId="@id/alice_fab_onboarding" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</merge>

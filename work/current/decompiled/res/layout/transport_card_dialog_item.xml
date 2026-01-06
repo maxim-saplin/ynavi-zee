@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.shimmer.ShimmerFrameLayout android:layout_gravity="center_vertical" android:id="@id/transport_card_shimmer" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="72.0dip" android:layout_marginHorizontal="16.0dip" android:layout_marginVertical="20.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/transport_card_root" android:background="@drawable/transport_card_dialog_item_background" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16.0dip" android:layout_marginVertical="20.0dip">
+        <FrameLayout android:layout_width="44.0dip" android:layout_height="40.0dip">
+            <ImageView android:layout_gravity="start|center" android:id="@id/transport_card_icon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/troika_24" />
+            <ImageView android:layout_gravity="end|top" android:id="@id/transport_card_badge" android:background="@drawable/transport_card_dialog_item_badge" android:padding="1.0dip" android:layout_width="14.0dip" android:layout_height="14.0dip" />
+        </FrameLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingHorizontal="6.0dip">
+            <TextView android:ellipsize="end" android:gravity="start" android:id="@id/transport_card_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:singleLine="true" style="@style/Text16.TextPrimary" />
+            <TextView android:gravity="start" android:id="@id/transport_card_balance" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text14.TextSecondary" />
+        </LinearLayout>
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/transport_card_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

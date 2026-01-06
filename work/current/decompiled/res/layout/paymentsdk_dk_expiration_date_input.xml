@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="start|center" android:orientation="vertical"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="13.0sp" android:textColor="?paymentsdk_prebuilt_divkitInputTitleTextColor" android:id="@id/expiration_date_input_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/paymentsdk_prebuilt_valid_until_input_title" />
+    <EditText android:textSize="20.0sp" android:textStyle="bold" android:textColor="?paymentsdk_prebuilt_divkitCardNumberTextColor" android:textColorHint="?paymentsdk_prebuilt_divkitCardNumberHintColor" android:id="@id/expiration_date_input_text" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:hint="@string/paymentsdk_prebuilt_expiration_date_input_hint" android:inputType="number" android:imeOptions="actionNext|flagNoExtractUi" android:textCursorDrawable="@drawable/paymentsdk_ic_cursor" android:fontFamily="@font/ya_display_regular" android:letterSpacing="0.03" android:autofillHints="" />
+</merge>

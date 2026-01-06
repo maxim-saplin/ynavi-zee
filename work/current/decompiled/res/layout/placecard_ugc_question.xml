@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="@drawable/placecard_ugc_background" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/ugc_question_main_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="16.0dip" app:srcCompat="@drawable/review_24" app:tint="@color/placecard_ugc_icon_tint" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="24.0dip">
+            <TextView android:id="@id/ugc_question_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium.BlackDarkGrey" />
+            <TextView android:id="@id/ugc_question_details" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.Grey" />
+        </LinearLayout>
+        <TextView android:layout_gravity="center_vertical" android:id="@id/ugc_question_yes" android:background="@drawable/common_clickable_background_no_border_impl" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_dialog_button_yes" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" style="@style/Text16.Medium.BlackWhite" />
+        <View android:layout_gravity="center_vertical" android:background="@drawable/ugc_divider_vertical" android:layout_width="1.0dip" android:layout_height="24.0dip" android:layout_marginStart="2.0dip" android:layout_marginEnd="2.0dip" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/ugc_question_no" android:background="@drawable/common_clickable_background_no_border_impl" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_dialog_button_no" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:layout_marginEnd="2.0dip" style="@style/Text16.Medium.BlackWhite" />
+    </LinearLayout>
+</merge>

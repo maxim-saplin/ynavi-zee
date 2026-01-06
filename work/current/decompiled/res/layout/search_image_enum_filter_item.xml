@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/search_image_enum_filter_item_background" android:layout_width="72.0dip" android:layout_height="72.0dip">
+        <ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout android:layout_gravity="center" android:id="@id/search_image_enum_filter_item_rounded_frame_layout" android:layout_width="64.0dip" android:layout_height="64.0dip" app:cornerRadius="12.0dip">
+            <TextView android:textSize="@dimen/search_image_enum_filter_placeholder_text_size" android:textColor="@color/search_image_enum_filter_placeholder_text_color" android:ellipsize="end" android:gravity="center" android:id="@id/search_image_enum_filter_placeholder_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:maxLines="@integer/search_image_enum_filter_placeholder_text_max_lines" android:hyphenationFrequency="normal" style="@style/Text14.Medium" />
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/search_image_enum_filter_item_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        </ru.yandex.yandexmaps.common.views.RoundCornersFrameLayout>
+        <View android:id="@id/search_image_enum_filter_item_boarded_view" android:background="@drawable/search_image_enum_filter_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/search_image_enum_title_text_size" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/search_image_enum_filter_item_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="@integer/search_image_enum_filter_max_lines" android:hyphenationFrequency="normal" style="@style/Text14.Medium" />
+</merge>

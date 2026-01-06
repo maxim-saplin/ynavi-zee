@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.alice.ui.cloud2.FrameLayoutMaxWidth android:layout_gravity="bottom" android:id="@id/alice_cloud2_footer" android:background="@color/alice_background_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/alice_cloud2_fake_input_height" android:contentDescription="@string/alice_cloud2_input_description"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/alice_button_fill_color" android:layout_gravity="center_vertical" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/alice_cloud2_input_hint" android:fontFamily="@font/ya_medium" android:layout_marginStart="28.0dip" />
+    <View android:background="@drawable/alice_cloud2_input_background" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/alice_cloud2_default_horizontal_margin_keyboard" />
+    <View android:background="@color/alice_button_fill_color" android:focusable="false" android:layout_width="fill_parent" android:layout_height="1.0dip" android:alpha="0.3" />
+</com.yandex.alice.ui.cloud2.FrameLayoutMaxWidth>

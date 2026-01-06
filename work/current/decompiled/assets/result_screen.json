@@ -1,0 +1,362 @@
+{
+    "templates": {
+        "header_button": {
+            "type": "image",
+            "height": {
+                "type": "fixed",
+                "value": 24
+            },
+            "margins": {
+                "top": 8,
+                "bottom": 8,
+                "left": 8,
+                "right": 8
+            },
+            "width": {
+                "type": "fixed",
+                "value": 24
+            },
+            "$image_url": "imageURL"
+        },
+        "action_button": {
+            "type": "text",
+            "background": [
+                {
+                    "type": "solid",
+                    "color": "@{isLightTheme ? '#2E2F33' : '#E1E3E8'}"
+                }
+            ],
+            "border": {
+                "corner_radius": 16
+            },
+            "font_size": 18,
+            "font_weight": "medium",
+            "height": {
+                "type": "fixed",
+                "value": 56
+            },
+            "text_alignment_horizontal": "center",
+            "text_alignment_vertical": "center",
+            "text_color": "@{isLightTheme ? '#FAFFFFFF' : '#DB000000'}",
+            "$text": "title"
+        }
+    },
+    "card": {
+        "log_id": "payment_sdk_card",
+        "variables": [
+            {
+                "type": "string",
+                "name": "result_screen_screen_type",
+                "value": "loading"
+            },
+            {
+                "type": "string",
+                "name": "result_screen_identifier",
+                "value": ""
+            },
+            {
+                "type": "boolean",
+                "name": "result_screen_has_back_button",
+                "value": 0
+            },
+            {
+                "type": "boolean",
+                "name": "result_screen_has_close_button",
+                "value": 0
+            },
+            {
+                "type": "string",
+                "name": "result_screen_title_text",
+                "value": ""
+            },
+            {
+                "type": "string",
+                "name": "result_screen_subtitle_text",
+                "value": ""
+            },
+            {
+                "type": "string",
+                "name": "result_screen_main_button_text",
+                "value": ""
+            },
+            {
+                "type": "string",
+                "name": "result_screen_complementary_button_text",
+                "value": ""
+            }
+        ],
+        "variable_triggers": [
+            {
+                "actions": [
+                    {
+                        "log_id": "payment_sdk_result_screen_result_screen_type_changed",
+                        "url": "div-action://set_state?state_id=0/screen_type/@{result_screen_screen_type}"
+                    }
+                ],
+                "condition": "@{result_screen_screen_type != ''}",
+                "mode": "on_variable"
+            }
+        ],
+        "states": [
+            {
+                "state_id": 0,
+                "div": {
+                    "type": "container",
+                    "background": [
+                        {
+                            "type": "solid",
+                            "color": "@{isLightTheme ? '#FFFFFFFF' : '#FF121214'}"
+                        }
+                    ],
+                    "height": {
+                        "type": "match_parent"
+                    },
+                    "items": [
+                        {
+                            "type": "gallery",
+                            "height": {
+                                "type": "match_parent"
+                            },
+                            "items": [
+                                {
+                                    "type": "container",
+                                    "content_alignment_horizontal": "space-between",
+                                    "content_alignment_vertical": "center",
+                                    "height": {
+                                        "type": "fixed",
+                                        "value": 40
+                                    },
+                                    "items": [
+                                        {
+                                            "type": "header_button",
+                                            "imageURL": "@{isLightTheme ? 'local-image://navbar_back_light' : 'local-image://navbar_back_dark'}",
+                                            "actions": [
+                                                {
+                                                    "log_id": "payment_sdk_result_screen_header_view_header_back",
+                                                    "url": "payment-sdk://back"
+                                                }
+                                            ],
+                                            "visibility": "@{result_screen_has_back_button ? 'visible' : 'invisible'}",
+                                            "accessibility": {
+                                                "type": "button",
+                                                "description": "payment.button.title.back"
+                                            }
+                                        },
+                                        {
+                                            "type": "container",
+                                            "content_alignment_horizontal": "center",
+                                            "content_alignment_vertical": "center",
+                                            "items": [
+                                                {
+                                                    "type": "container",
+                                                    "content_alignment_horizontal": "center",
+                                                    "content_alignment_vertical": "center",
+
+                                                    "orientation": "horizontal",
+                                                    "separator": {
+                                                        "style": {
+                                                            "type": "shape_drawable",
+                                                            "color": "#00FFFFFF",
+                                                            "shape": {
+                                                                "type": "rounded_rectangle",
+                                                                "item_width": {
+                                                                    "type": "fixed",
+                                                                    "value": 12
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "orientation": "vertical"
+                                        },
+                                        {
+                                            "type": "header_button",
+                                            "imageURL": "@{isLightTheme ? 'local-image://close_light' : 'local-image://close_dark'}",
+                                            "actions": [
+                                                {
+                                                    "log_id": "payment_sdk_result_screen_header_view_header_close",
+                                                    "url": "payment-sdk://close"
+                                                }
+                                            ],
+                                            "visibility": "@{result_screen_has_close_button ? 'visible' : 'invisible'}",
+                                            "accessibility": {
+                                                "type": "button",
+                                                "description": "payment.button.title.close"
+                                            }
+                                        }
+                                    ],
+                                    "margins": {
+                                        "top": 10,
+                                        "bottom": 10,
+                                        "left": 10,
+                                        "right": 10
+                                    },
+                                    "orientation": "horizontal"
+                                },
+                                {
+                                    "type": "state",
+                                    "id": "screen_type",
+                                    "states": [
+                                        {
+                                            "state_id": "loading",
+                                            "div": {
+                                                "type": "custom",
+                                                "alignment_horizontal": "center",
+                                                "custom_type": "spinner",
+                                                "height": {
+                                                    "type": "fixed",
+                                                    "value": 80
+                                                },
+                                                "margins": {
+                                                    "top": 124
+                                                },
+                                                "width": {
+                                                    "type": "fixed",
+                                                    "value": 80
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "state_id": "success",
+                                            "div": {
+                                                "type": "image",
+                                                "alignment_horizontal": "center",
+                                                "height": {
+                                                    "type": "fixed",
+                                                    "value": 80
+                                                },
+                                                "image_url": "@{isLightTheme ? 'local-image://success_light' : 'local-image://success_dark'}",
+                                                "margins": {
+                                                    "top": 124
+                                                },
+                                                "width": {
+                                                    "type": "fixed",
+                                                    "value": 80
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "state_id": "failure",
+                                            "div": {
+                                                "type": "image",
+                                                "alignment_horizontal": "center",
+                                                "height": {
+                                                    "type": "fixed",
+                                                    "value": 80
+                                                },
+                                                "image_url": "@{isLightTheme ? 'local-image://warning_light' : 'local-image://warning_dark'}",
+                                                "margins": {
+                                                    "top": 124
+                                                },
+                                                "width": {
+                                                    "type": "fixed",
+                                                    "value": 80
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "text",
+                                    "alignment_horizontal": "center",
+                                    "font_size": 26,
+                                    "font_weight": "medium",
+                                    "line_height": 28,
+                                    "margins": {
+                                        "top": 24,
+                                        "bottom": 12,
+                                        "right": 18,
+                                        "left": 18
+                                    },
+                                    "text": "@{result_screen_title_text}",
+                                    "text_alignment_horizontal": "center",
+                                    "text_color": "@{isLightTheme ? '#DB000000' : '#E0FFFFFF'}"
+                                },
+                                {
+                                    "type": "text",
+                                    "alignment_horizontal": "center",
+                                    "font_size": 14,
+                                    "font_weight": "regular",
+                                    "margins": {
+                                        "right": 18,
+                                        "left": 18
+                                    },
+                                    "text": "@{result_screen_subtitle_text}",
+                                    "text_alignment_horizontal": "center",
+                                    "text_color": "@{isLightTheme ? '#DB000000' : '#E0FFFFFF'}"
+                                }
+                            ],
+                            "orientation": "vertical",
+                            "paddings": {
+                                "top": 10,
+                                "right": 6,
+                                "left": 6
+                            },
+                            "width": {
+                                "type": "match_parent"
+                            }
+                        },
+                        {
+                            "type": "container",
+                            "alignment_vertical": "bottom",
+                            "items": [
+                                {
+                                    "type": "action_button",
+                                    "title": "@{result_screen_complementary_button_text}",
+                                    "visibility": "@{result_screen_complementary_button_text == '' ? 'gone' : 'visible'}",
+                                    "actions": [
+                                        {
+                                            "log_id": "payment_sdk_result_screen_complementary_action_button",
+                                            "url": "payment-sdk://secondary_action"
+                                        }
+                                    ],
+                                    "text_color": "@{isLightTheme ? '#1F1F1F' : '#FFFFFF'}",
+                                    "background": [
+                                        {
+                                            "type": "solid",
+                                            "color": "@{isLightTheme ? '#24B4B8CC' : '#1AB4B8CC'}"
+                                        }
+                                    ],
+                                    "margins": {
+                                        "top": 4,
+                                        "bottom": 8
+                                    }
+                                },
+                                {
+                                    "type": "action_button",
+                                    "title": "@{result_screen_main_button_text}",
+                                    "visibility": "@{result_screen_main_button_text == '' ? 'gone' : 'visible'}",
+                                    "actions": [
+                                        {
+                                            "log_id": "payment_sdk_result_screen_main_action_button",
+                                            "url": "payment-sdk://primary_action"
+                                        }
+                                    ],
+                                    "margins": {
+                                        "top": 4,
+                                        "bottom": 8
+                                    }
+                                }
+                            ],
+                            "orientation": "vertical",
+                            "paddings": {
+                                "right": 24,
+                                "left": 24
+                            }
+                        }
+                    ],
+                    "paddings": {
+                        "bottom": "@{safe_area_inset_bottom}",
+                        "top": "@{safe_area_inset_top}",
+                        "right": "@{safe_area_inset_right}",
+                        "left": "@{safe_area_inset_left}"
+                    },
+                    "width": {
+                        "type": "match_parent"
+                    }
+                }
+            }
+        ]
+    }
+}

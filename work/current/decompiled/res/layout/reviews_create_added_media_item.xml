@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.RoundedImageView android:layout_gravity="start|bottom" android:id="@id/create_review_added_photo" android:layout_width="@dimen/reviews_create_added_media_item_size" android:layout_height="@dimen/reviews_create_added_media_item_size" android:foreground="?selectableItemBackground" android:scaleType="centerCrop" app:cornerRadius="12.0dip" />
+    <View android:id="@id/create_review_time_cover_view" android:visibility="gone" android:layout_width="@dimen/reviews_create_added_media_item_size" android:layout_height="@dimen/reviews_create_added_media_item_size" />
+    <TextView android:textColor="@color/text_color_bg" android:layout_gravity="end|bottom" android:id="@id/create_review_video_duration_text_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:layout_marginEnd="16.0dip" style="@style/Text14" />
+    <ImageView android:layout_gravity="end" android:id="@id/create_review_remove_photo" android:background="@drawable/reviews_create_remove_photo" android:layout_width="28.0dip" android:layout_height="28.0dip" android:scaleType="center" app:srcCompat="@drawable/close_24" app:tint="@color/icons_additional" />
+</merge>

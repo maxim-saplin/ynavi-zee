@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="end" android:orientation="vertical" android:background="@color/bg_primary" android:paddingTop="24.0dip" android:paddingBottom="24.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/guidance_panel_elevation"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+        <include layout="@layout/guidance_menu_traffic" />
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <ru.yandex.yandexmaps.common.views.VectorTintableCompoundsTextView android:id="@id/guidance_menu_overview" android:layout_width="@dimen/guidance_menu_item_width" android:layout_height="wrap_content" android:text="@string/guidance_menu_overview" app:drawableTopCompat="@drawable/guidance_menu_overview" style="@style/GuidanceMenuItem" />
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <CheckedTextView android:id="@id/guidance_menu_sound" android:layout_width="@dimen/guidance_menu_item_width" android:layout_height="wrap_content" android:text="@string/guidance_menu_sound_on" android:drawableTop="@drawable/guidance_menu_sound" android:textAlignment="gravity" style="@style/GuidanceMenuItem" />
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:paddingTop="25.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+        <ru.yandex.yandexmaps.common.views.VectorTintableCompoundsTextView android:id="@id/guidance_menu_my_places" android:layout_width="@dimen/guidance_menu_item_width" android:layout_height="wrap_content" android:text="@string/guidance_menu_my_places" app:drawableTopCompat="@drawable/guidance_menu_my_places" style="@style/GuidanceMenuItem" />
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <ru.yandex.yandexmaps.common.views.VectorTintableCompoundsTextView android:id="@id/guidance_menu_add_event" android:layout_width="@dimen/guidance_menu_item_width" android:layout_height="wrap_content" android:text="@string/guidance_menu_add_event" app:drawableTopCompat="@drawable/guidance_menu_add_event" style="@style/GuidanceMenuItem" />
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <ru.yandex.yandexmaps.common.views.VectorTintableCompoundsTextView android:id="@id/guidance_menu_settings" android:layout_width="@dimen/guidance_menu_item_width" android:layout_height="wrap_content" android:text="@string/guidance_menu_settings" app:drawableTopCompat="@drawable/guidance_menu_settings" style="@style/GuidanceMenuItem" />
+        <Space android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0" />
+    </LinearLayout>
+</LinearLayout>

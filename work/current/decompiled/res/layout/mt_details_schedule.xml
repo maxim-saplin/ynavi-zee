@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="68.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/mt_details_schedule_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.Grey" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/mt_details_schedule_arrival_dot" android:visibility="gone" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginStart="4.0dip" android:layout_marginEnd="2.0dip" />
+    <TextView android:textColor="@color/masstransit_arrival" android:id="@id/mt_details_schedule_time_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Text14.Medium" />
+</LinearLayout>

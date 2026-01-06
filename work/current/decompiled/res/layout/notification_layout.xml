@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/notification_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@id/notification_content_container" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/notification_divider_vertical" android:showDividers="middle" android:dividerPadding="0.0dip">
+        <TextView android:gravity="start|center" android:id="@id/notification_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/Text14.Medium.PermanentWhite" />
+        <TextView android:textAppearance="@style/Text14.Medium.TextSecondary" android:gravity="center" android:id="@id/notification_button" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="fill_parent" android:text="@string/common_ok_button" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+    </LinearLayout>
+</merge>

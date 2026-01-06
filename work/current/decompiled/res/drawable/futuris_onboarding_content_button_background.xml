@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/alicekit_palette_fill_12"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <corners android:radius="50.0dip" />
+            <solid android:color="@color/alicekit_palette_fill_12" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="50.0dip" />
+            <solid android:color="@color/alicekit_palette_fill_6" />
+        </shape>
+    </item>
+</ripple>

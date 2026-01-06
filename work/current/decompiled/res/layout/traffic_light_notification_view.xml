@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/traffic_light_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/traffic_light_icon_text_size" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/traffic_light_data" android:background="@drawable/traffic_light_background_green" android:layout_width="@dimen/traffic_light_icon_size" android:layout_height="@dimen/traffic_light_icon_size" android:letterSpacing="-0.05" />
+            <ImageView android:layout_gravity="center" android:id="@id/traffic_light_data_dots" android:visibility="gone" android:layout_width="@dimen/traffic_light_icon_dots_size" android:layout_height="@dimen/traffic_light_icon_dots_size" android:src="@drawable/traffic_light" />
+        </FrameLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@id/traffic_light_view_expanded" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="end" android:orientation="horizontal" android:background="@drawable/traffic_light_expanded_background" android:layout_width="wrap_content" android:layout_height="@dimen/traffic_light_icon_size">
+            <TextView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/traffic_light_data_expanded" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:layout_marginStart="@dimen/traffic_light_icon_expanded_margin_start" style="@style/Text24.Bold" />
+            <FrameLayout android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/traffic_light_icon_expanded_margin_top" android:layout_marginBottom="@dimen/traffic_light_icon_expanded_margin_top" android:layout_marginStart="@dimen/traffic_light_icon_expanded_margin_top" android:layout_marginEnd="@dimen/traffic_light_icon_expanded_margin_top">
+                <ImageView android:layout_gravity="end|center" android:id="@id/traffic_light_expanded" android:background="@drawable/traffic_light_background_green" android:layout_width="@dimen/traffic_light_icon_size_expanded" android:layout_height="@dimen/traffic_light_icon_size_expanded" />
+                <ImageView android:layout_gravity="center" android:id="@id/traffic_light_data_dots_expanded" android:layout_width="@dimen/traffic_light_icon_dots_size_expanded" android:layout_height="@dimen/traffic_light_icon_dots_size_expanded" android:src="@drawable/traffic_light" android:tint="@color/traffic_light_green_primary" />
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="end" android:id="@id/traffic_light_expanded_yellow" android:background="@drawable/traffic_light_background_circle" android:visibility="gone" android:layout_width="@dimen/traffic_light_icon_size" android:layout_height="@dimen/traffic_light_icon_size" android:layout_marginStart="@dimen/traffic_light_icon_expanded_margin_start">
+            <ImageView android:layout_gravity="center" android:background="@drawable/traffic_light_background_yellow" android:layout_width="@dimen/traffic_light_icon_size_expanded" android:layout_height="@dimen/traffic_light_icon_size_expanded" />
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/traffic_light_icon_dots_size_expanded" android:layout_height="@dimen/traffic_light_icon_dots_size_expanded" android:src="@drawable/traffic_light" android:tint="@color/traffic_light_yellow_primary" />
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <EditText android:textColorHint="@color/text_secondary" android:gravity="start|top" android:id="@id/comment_edit_text" android:background="@drawable/background_comment_edit_text" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:minHeight="128.0dip" android:hint="@string/taxi_comment_hint" android:inputType="textLongMessage|textAutoComplete|textMultiLine" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/Text14" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="top" android:id="@id/comment_button" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="12.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:text="@string/taxi_comment_apply" />
+</LinearLayout>

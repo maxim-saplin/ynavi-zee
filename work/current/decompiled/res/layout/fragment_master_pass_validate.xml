@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="?tankerContentBackground" android:paddingLeft="24.0dip" android:paddingTop="24.0dip" android:paddingRight="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="250.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:textSize="@dimen/tanker_medium_text_size" android:id="@id/tankerEditTextWrapper" android:background="@drawable/tanker_background_car_edit" android:padding="@dimen/tanker_basic_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent">
+        <cardtek.masterpass.attributes.MasterPassEditText android:textSize="@dimen/tanker_medium_text_size" android:textColorHint="@color/tanker_textColorAlpha40" android:id="@id/tankerOptEdit" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/mater_pass_enter_code" android:maxLength="6" android:digits="\ 0123456789" app:layout_constraintTop_toTopOf="parent" app:type="4" style="@style/MasterPassEditTextStyle" />
+    </FrameLayout>
+    <ru.tankerapp.ui.TankerSpinnerButton android:textColor="@color/tanker_button_dark_text_color" android:layout_gravity="bottom" android:id="@id/tankerContinueBtn" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_marginTop="@dimen/tanker_basic_padding" android:text="@string/tanker_button_next" app:layout_constraintBottom_toTopOf="@id/masterPassFooter" app:layout_constraintTop_toBottomOf="@id/tankerEditTextWrapper" app:layout_constraintVertical_bias="1.0" app:tankerSpinnerButtonBackground="@drawable/tanker_button_dark" />
+    <include android:id="@id/masterPassFooter" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/tankerContinueBtn" layout="@layout/tanker_view_master_pass_footer" />
+    <FrameLayout android:id="@id/loadingView" android:background="?tankerContentBackground" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <include layout="@layout/tanker_view_loading" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

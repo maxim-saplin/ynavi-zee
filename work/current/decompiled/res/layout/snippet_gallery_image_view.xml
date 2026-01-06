@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="96.0dip" android:layout_height="96.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.maps.uikit.atomicviews.snippet.image.SnippetImageView android:id="@id/snippet_gallery_image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/snippet_gallery_overlay_container" android:background="@color/bw_black_alpha70" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/photo_24" android:tint="@color/icons_color_bg" />
+        <TextView android:textColor="@color/text_color_bg" android:id="@id/snippet_gallery_overlay_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" style="@style/Text14.Medium" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="120.0dip" android:width="120.0dip" android:viewportWidth="120.0" android:viewportHeight="120.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <path android:fillColor="@drawable/$ar_pin_pulse_120__0" android:pathData="M60 120c33.14 0 60-26.86 60-60S93.14 0 60 0S0 26.86 0 60s26.86 60 60 60z" />
+    </group>
+</vector>

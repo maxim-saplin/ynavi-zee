@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@drawable/transit_on_40" android:state_activated="true" />
+    <item android:state_selected="true" android:drawable="@drawable/transit_na_40" android:state_activated="false" />
+    <item android:drawable="@drawable/transit_off_40" />
+</selector>

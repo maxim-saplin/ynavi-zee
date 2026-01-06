@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate android:fromDegrees="90.0" android:toDegrees="90.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape android:shape="line">
+        <size android:width="@dimen/road_events_lane_picker_divider_solid_height" />
+        <stroke android:width="1.5dip" android:color="#ffd0d0d0" />
+    </shape>
+</rotate>

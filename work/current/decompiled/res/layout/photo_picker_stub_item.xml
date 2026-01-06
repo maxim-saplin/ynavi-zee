@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.facebook.shimmer.ShimmerFrameLayout android:background="@drawable/photo_picker_photo_stub_background" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/CommonShimmer" />
+</merge>

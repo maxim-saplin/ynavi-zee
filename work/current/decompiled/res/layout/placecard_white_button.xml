@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="@color/background_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:gravity="center" android:id="@id/placecard_white_button_button" android:background="@drawable/common_button_action_stroked_background" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_margin="16.0dip" android:textAllCaps="true" android:letterSpacing="@dimen/placecard_common_text_all_caps_spacing" style="@style/Text14.Medium.DarkGrey" />
+</merge>

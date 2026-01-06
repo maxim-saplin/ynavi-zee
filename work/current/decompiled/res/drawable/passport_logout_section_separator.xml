@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="54.0dip" android:width="360.0dip" android:viewportWidth="360.0" android:viewportHeight="54.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/passport_logout_background_alt" android:pathData="M0,24h360v6h-360z" />
+    <path android:fillColor="@color/passport_logout_background_alt" android:pathData="M0,24H24C10.75,24 0,13.25 0,0V24Z" android:fillType="evenOdd" />
+    <path android:fillColor="@color/passport_logout_background_alt" android:pathData="M360,24H336C349.26,24 360,13.25 360,0V24Z" android:fillType="evenOdd" />
+    <path android:fillColor="@color/passport_logout_background_alt" android:pathData="M0,30H24C10.75,30 0,40.75 0,54V30Z" android:fillType="evenOdd" />
+    <path android:fillColor="@color/passport_logout_background_alt" android:pathData="M360,30H336C349.26,30 360,40.75 360,54V30Z" android:fillType="evenOdd" />
+</vector>

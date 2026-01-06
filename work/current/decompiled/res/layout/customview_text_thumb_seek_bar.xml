@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:id="@id/custom_view_ctsb_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_notifications_cameras" style="@style/Text16" />
+    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar android:id="@id/custom_view_ctsb_seek_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="24.0dip" app:dsb_indicatorElevation="1.0dip" app:dsb_indicatorPopupEnabled="false" app:dsb_scrubberHeight="2.0dip" app:dsb_thumbSize="@dimen/customview_textthumbseekbar_thumb_size" app:dsb_trackColor="@color/bw_grey90" app:dsb_trackHeight="2.0dip" />
+</merge>

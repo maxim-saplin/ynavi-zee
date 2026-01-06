@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/monetization_ads_internal_rewarded_feedback" android:left="@dimen/monetization_ads_internal_rewarded_control_icon_padding" android:top="@dimen/monetization_ads_internal_rewarded_control_icon_padding" android:right="@dimen/monetization_ads_internal_rewarded_control_icon_padding" android:bottom="@dimen/monetization_ads_internal_rewarded_control_icon_padding" />
+</layer-list>

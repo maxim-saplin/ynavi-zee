@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/routes_underground_exit_label_ellipse" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:src="@drawable/mt_details_underground_exit_ellipse" />
+        <TextView android:textColor="@color/ui_yellow" android:gravity="center" android:id="@id/routes_underground_exit_label_name" android:background="@drawable/mt_details_underground_exit_name_background" android:layout_width="wrap_content" android:layout_height="24.0dip" android:minWidth="24.0dip" android:lines="1" android:paddingHorizontal="6.0dip" style="@style/Text12.Medium" />
+    </LinearLayout>
+    <ru.yandex.yandexmaps.common.views.PoiLabelView android:layout_gravity="start" android:id="@id/mt_label_on_map_stop_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginStart="16.0dip" app:poiLabel_align="left" app:poiLabel_ellipsize="true" app:poiLabel_fontFamily="medium" app:poiLabel_maxNumberOfLines="1" app:poiLabel_strokeColor="@color/bg_primary" app:poiLabel_strokeWidth="7.0" app:poiLabel_text="@string/mt_details_exit" app:poiLabel_textColor="@color/text_primary_variant" app:poiLabel_textSize="14.0sp" />
+</LinearLayout>

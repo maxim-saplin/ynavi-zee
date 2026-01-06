@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end" android:id="@id/placecard_mtthread_header_close_button" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="8.0dip" />
+    <TextView android:ellipsize="end" android:id="@id/placecard_mtthread_header_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:maxLines="1" android:layout_marginStart="16.0dip" android:layout_marginEnd="52.0dip" style="@style/Text18.Medium.TextPrimary" />
+</merge>

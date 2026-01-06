@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="@drawable/mapkit_styling_transport_masstransit_manoeuvre_get_off_table_divider" android:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView android:gravity="center" android:layout_gravity="center" android:layout_width="@dimen/mapkit_styling_transport_masstransit_manoeuvre_get_off_image_size" android:layout_height="@dimen/mapkit_styling_transport_masstransit_manoeuvre_get_off_image_size" android:src="@drawable/mapkit_styling_transport_masstransit_manoeuvre_get_off_image" android:scaleType="fitCenter" />
+        <androidx.appcompat.widget.AppCompatTextView android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:id="@id/text_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="@dimen/mapkit_styling_transport_masstransit_manoeuvre_get_off_time_margin_start" style="@style/MapkitTransportMasstransitManoeuvreTimeText" />
+    </LinearLayout>
+    <com.yandex.mapkit.styling.transportnavigation.TightTextView android:gravity="start" android:layout_gravity="start" android:id="@id/text_stop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/mapkit_styling_transport_masstransit_manoeuvre_get_off_name_max_width" android:maxLines="2" style="@style/MapkitTransportMasstransitManoeuvreNameText" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/text_exit_frame" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mapkit_styling_transport_masstransit_get_off_exit" android:maxLines="1" android:layout_marginEnd="@dimen/mapkit_styling_transport_masstransit_manoeuvre_exit_text_margin_end" style="@style/MapkitTransportMasstransitManoeuvreExitWord" />
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/text_exit_outline" android:padding="@dimen/mapkit_styling_transport_masstransit_manoeuvre_exit_name_outline_size" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/text_exit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/mapkit_styling_transport_masstransit_manoeuvre_get_off_name_max_width" android:minWidth="@dimen/mapkit_styling_transport_masstransit_manoeuvre_exit_name_min_width" android:maxLines="1" android:paddingHorizontal="@dimen/mapkit_styling_transport_masstransit_manoeuvre_exit_name_horizontal_padding" style="@style/MapkitTransportMasstransitManoeuvreExitText" />
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

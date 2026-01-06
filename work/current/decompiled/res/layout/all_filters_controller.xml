@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/all_filters_container" android:background="@color/bw_black_alpha30" android:layout_width="@dimen/shutter_width" android:layout_height="fill_parent" android:layout_marginStart="@dimen/shutter_left_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.uikit.shutter.ShutterView android:id="@id/all_filters_shutter" android:tag="@string/change_handler_bottom_panel_tag" android:paddingTop="@dimen/shutter_top_padding" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:paddingHorizontal="@dimen/shutter_horizontal_padding" />
+    <View android:background="@color/bg_separator" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/filters_action_bar" android:background="@color/bg_primary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="5.0dip" android:paddingHorizontal="16.0dip" android:paddingVertical="12.0dip">
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/reset_filters_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:generalButtonSize="big" app:generalButtonStyle="secondaryGrey" app:text="@string/filters_dialog_clear_all" />
+        <View android:layout_width="12.0dip" android:layout_height="1.0dip" />
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/apply_filters_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:generalButtonSize="big" app:generalButtonStyle="primary" app:text="@string/filters_dialog_apply" />
+    </LinearLayout>
+</LinearLayout>

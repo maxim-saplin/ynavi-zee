@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.multiplatform.parking.payment.android.internal.editcar.components.HintedTextView android:id="@id/car_number_parameter" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/parking_payment_cars_edit_screen_car_number_hint" android:inputType="textCapCharacters" app:always_visible_hint="false" app:heading_text="@string/parking_payment_cars_edit_screen_license_plate" />
+    <ru.yandex.yandexmaps.multiplatform.parking.payment.android.internal.editcar.components.HintedTextView android:id="@id/car_name_parameter" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:hint="@string/parking_payment_cars_edit_screen_car_name_hint" android:inputType="text" app:always_visible_hint="false" app:heading_text="@string/parking_payment_cars_edit_screen_car_name" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/parking_add_car_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" />
+</merge>

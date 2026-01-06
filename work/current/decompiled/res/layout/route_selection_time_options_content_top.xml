@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.dialog.options.common.OptionsDialogHeaderView android:id="@id/dialog_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <ru.yandex.yandexmaps.designsystem.items.segmented.SegmentedItemView android:id="@id/time_options_tabs" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

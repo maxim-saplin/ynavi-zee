@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/debug_panel_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/debug_panel_toolbar" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@id/recycler_view" android:paddingBottom="@dimen/debug_panel_space_medium_large" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="@dimen/debug_panel_space_medium_large" />
+        <androidx.core.widget.ContentLoadingProgressBar android:layout_gravity="center" android:id="@id/loading_view" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:progressBarStyleLarge" />
+    </FrameLayout>
+</LinearLayout>

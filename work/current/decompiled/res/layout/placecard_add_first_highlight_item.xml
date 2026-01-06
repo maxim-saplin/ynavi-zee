@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <include layout="@layout/placecard_add_highlight" />
+    </FrameLayout>
+    <TextView android:layout_gravity="center_horizontal" android:id="@id/highlight_add_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/placecard_highlights_add" style="@style/ClickableText.Text14.Medium.Blue" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="center_horizontal" android:id="@id/highlight_add_details_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" />
+</merge>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="16.0dip" android:width="16.0dip" android:viewportWidth="16.0" android:viewportHeight="16.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$paymentsdk_yandex_services__0" android:pathData="M8.64,12.8L10.2,8H16C16,10.122 15.157,12.157 13.657,13.657C12.157,15.157 10.122,16 8,16C5.878,16 3.843,15.157 2.343,13.657C0.843,12.157 0,10.122 0,8C0,5.878 0.843,3.843 2.343,2.343C3.843,0.843 5.878,0 8,0C8.839,-0 9.674,0.132 10.472,0.391L8.649,6H3.325L2.675,8H8L6.44,12.8H8.64ZM10.849,6L12.376,1.304C14.046,2.395 15.248,4.069 15.748,6H10.849Z" android:fillType="evenOdd" />
+</vector>

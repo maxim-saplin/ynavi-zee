@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list android:paddingTop="14.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap android:gravity="center|top" android:src="@drawable/passport_bottomsheet_pin" android:tint="#ffffffff" android:alpha="0.45" />
+    </item>
+    <item android:top="12.0dip">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/passport_roundabout_background" />
+            <corners android:topLeftRadius="32.0dip" android:topRightRadius="32.0dip" />
+        </shape>
+    </item>
+</layer-list>

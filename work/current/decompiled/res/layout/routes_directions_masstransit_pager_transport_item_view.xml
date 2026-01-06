@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/background_panel_color_impl" android:layout_width="fill_parent" android:layout_height="143.0sp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="27.0sp" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:paddingStart="16.0dip">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="35.0dip" android:importantForAccessibility="noHideDescendants">
+            <ru.yandex.yandexmaps.common.views.FlowLayout android:layout_width="fill_parent" android:layout_height="wrap_content" custom:horizontalSpacing="10.0dip" custom:verticalSpacing="4.0sp">
+                <ru.yandex.yandexmaps.routes.internal.guidance.mt.ui.views.TransportsPanelView android:id="@id/routes_directions_masstransit_summary_pager_item_transports_panel_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:id="@id/routes_directions_masstransit_summary_pager_item_time_and_stops_text_view" android:paddingTop="3.0sp" android:paddingBottom="2.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16" />
+            </ru.yandex.yandexmaps.common.views.FlowLayout>
+        </FrameLayout>
+        <TextView android:ellipsize="end" android:gravity="start|top" android:id="@id/routes_directions_masstransit_summary_pager_item_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="@integer/routes_directions_masstransit_summary_pager_item_description_max_lines_count" style="@style/Text16.Grey" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/background_panel" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/bw_black" android:gravity="center" android:id="@id/debug_panel_experiment_safe_mode_detector" android:background="@color/transit_map_red_dark" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:foreground="?selectableItemBackground" android:minHeight="@dimen/debug_panel_warning_height" android:text="SafeMode enabled!\n Press to disable" />
+        <com.bluelinelabs.conductor.ChangeHandlerFrameLayout android:id="@id/debug_panel_child_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

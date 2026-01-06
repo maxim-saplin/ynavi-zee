@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/tanker_register_number_color" />
+    <corners android:radius="4.0dip" />
+</shape>

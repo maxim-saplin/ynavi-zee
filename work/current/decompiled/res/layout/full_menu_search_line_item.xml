@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/background_panel" android:layout_width="fill_parent" android:layout_height="64.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:layout_gravity="top" android:background="@drawable/common_divider_horizontal_impl" android:layout_width="fill_parent" android:layout_height="@dimen/common_border_thickness" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/full_menu_search_line" android:background="@drawable/full_menu_search_line_background" android:layout_width="fill_parent" android:layout_height="40.0dip" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/icons_secondary" app:srcCompat="@drawable/search_24" />
+        <EditText android:textColorHint="@color/common_hint" android:layout_gravity="center_vertical" android:id="@id/placecard_menu_search_line_item_edit_text" android:background="@color/transparent" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:hint="@string/placecard_menu_search_caption" android:maxLines="1" android:lines="1" android:layout_weight="1.0" android:inputType="textNoSuggestions" android:imeOptions="actionDone|flagNoExtractUi" android:textCursorDrawable="@drawable/blue_cursor" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" style="@style/Text16" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/placecard_menu_search_line_item_clear_button" android:background="@drawable/common_button_circular_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/icons_additional" app:srcCompat="@drawable/clear_16" />
+    </LinearLayout>
+</FrameLayout>

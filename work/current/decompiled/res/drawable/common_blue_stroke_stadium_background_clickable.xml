@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/common_ui_blue_hover"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask" android:left="2.0dip" android:top="2.0dip" android:right="2.0dip" android:bottom="2.0dip">
+        <shape android:shape="rectangle">
+            <corners android:radius="24.0dip" />
+            <size android:height="48.0dip" />
+            <solid android:color="@color/bw_black" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/common_blue_stroke_stadium_background_default" />
+</ripple>

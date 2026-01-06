@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <exclude domain="sharedpref" path="evernote_jobs.xml" />
+    <exclude domain="database" path="evernote_jobs.db" />
+    <exclude domain="database" path="maps_general.db" />
+    <exclude domain="sharedpref" path="upload_tasks.xml" />
+    <exclude domain="sharedpref" path="state.xml" />
+    <exclude domain="sharedpref" path="appsflyer-data" />
+</full-backup-content>

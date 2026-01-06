@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/route_selection_time_options_content_top" />
+    <RelativeLayout android:orientation="horizontal" android:background="@color/background_panel" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="80.0dip">
+        <include layout="@layout/route_selection_time_options_date_time" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/background_panel" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:layout_gravity="center" android:id="@id/time_options_now_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:generalButtonSize="large" app:generalButtonStyle="transparent" app:text="@string/mt_schedule_reset_button" />
+    </LinearLayout>
+</merge>

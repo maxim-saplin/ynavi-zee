@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:background="@color/background_panel" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/placecard_tycoon_post_inner" android:background="@drawable/rounded12_grey_stroke_rectangle_clickable" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="16.0dip">
+        <TextView android:id="@id/placecard_tycoon_post_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="true" style="@style/Text10.Medium" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="28.0dip">
+            <TextView android:ellipsize="end" android:id="@id/placecard_dtycoon_post_content" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="4" android:layout_weight="1.0" style="@style/Text14" />
+            <ImageView android:id="@id/placecard_tycoon_post_image" android:layout_width="88.0dip" android:layout_height="58.0dip" android:layout_marginStart="16.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

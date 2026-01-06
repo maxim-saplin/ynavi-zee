@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/reviews_list_error_container" android:background="@color/ui_red" android:layout_width="fill_parent" android:layout_height="56.0dip" android:paddingStart="16.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_gravity="center" android:id="@id/reviews_list_error_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/common_search_error" android:maxLines="2" android:layout_weight="1.0" style="@style/Text14.Medium.PermanentWhite" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/reviews_list_error_retry" android:background="@null" android:tint="@color/icons_color_bg" app:srcCompat="@drawable/reload_24" style="@style/CommonImageButton" />
+</LinearLayout>

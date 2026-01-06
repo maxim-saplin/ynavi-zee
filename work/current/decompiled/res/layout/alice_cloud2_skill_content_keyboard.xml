@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/alice_cloud2_skill_header" />
+    <LinearLayout android:orientation="vertical" android:id="@id/alice_cloud2_title_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/alice_cloud2_default_margin" android:layout_marginRight="@dimen/alice_cloud2_text_right_margin" android:layout_marginBottom="@dimen/alice_cloud2_text_bottom_space_height" />
+    <LinearLayout android:orientation="vertical" android:id="@id/alice_cloud2_div_container" android:paddingLeft="@dimen/alice_cloud2_div_horizontal_margin" android:paddingRight="@dimen/alice_cloud2_div_horizontal_margin" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/alice_cloud2_main_div_container" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/alice_cloud2_player_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="@dimen/alice_cloud2_default_vertical_margin_keyboard" android:layout_marginStart="@dimen/alice_cloud2_default_margin" android:layout_marginEnd="@dimen/alice_cloud2_default_margin" />
+    <LinearLayout android:orientation="vertical" android:id="@id/alice_cloud2_footer_div_container" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/alice_cloud2_expanding_div_content" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/alice_cloud2_ad_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/alice_cloud2_default_vertical_margin_keyboard" />
+</merge>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="20.0dip" android:width="20.0dip" android:viewportWidth="20.0" android:viewportHeight="20.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?bankColor_textIcon_tetriary" android:pathData="M6.9106,4.7559C6.5851,4.4305 6.5851,3.9029 6.9106,3.5774C7.236,3.252 7.7637,3.252 8.0891,3.5774L13.6278,9.1161C14.116,9.6043 14.116,10.3957 13.6278,10.8839L8.0891,16.4226C7.7637,16.748 7.236,16.748 6.9106,16.4226C6.5851,16.0972 6.5851,15.5695 6.9106,15.2441L12.1547,10L6.9106,4.7559Z" />
+</vector>

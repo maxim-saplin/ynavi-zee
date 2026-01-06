@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:theme="@style/Component.Light" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.taxi.design.ToolbarComponent android:id="@id/superapp_toolbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <FrameLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.yandex.taxi.eatskit.WebContentView android:id="@id/superapp_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

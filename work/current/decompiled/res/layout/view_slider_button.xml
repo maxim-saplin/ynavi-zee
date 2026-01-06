@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/slider_track_container" android:layout_width="fill_parent" android:layout_height="56.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <View android:id="@id/slider_background" android:background="@drawable/bg_slider_main" android:layout_width="fill_parent" android:layout_height="56.0dip" />
+        <ru.yandex.taxi.design.ListItemComponent android:id="@id/slider_component_idle" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="56.0dip" app:component_subtitle_gravity="center_horizontal" app:component_subtitle_text_color="?textOnControl" app:component_title_gravity="center_horizontal" app:component_title_text_color="?textOnControl" />
+        <ru.yandex.taxi.design.ListItemComponent android:id="@id/slider_component_progress" android:background="@color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="56.0dip" app:component_subtitle_gravity="center_horizontal" app:component_subtitle_text_color="?textOnControl" app:component_title_gravity="center_horizontal" app:component_title_text_color="?textOnControl" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/slider_toggle" android:background="@drawable/bg_slider_toggle" android:layout_width="48.0dip" android:layout_height="48.0dip" android:contentDescription="@null" android:importantForAccessibility="no" android:elevation="2.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/slider_toggle_arrow_icon" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:contentDescription="@null" android:importantForAccessibility="no" app:srcCompat="@drawable/ic_arrow_right_24" />
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/slider_toggle_done_icon" android:visibility="gone" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="centerInside" android:contentDescription="@null" android:importantForAccessibility="no" app:srcCompat="@drawable/ic_done_mark" />
+    </FrameLayout>
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="57.0dip" android:width="54.0dip" android:viewportWidth="54.0" android:viewportHeight="57.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$logo_icon_foreground_54__0" android:pathData="M27 4C15.95 4 7 12.95 7 24c0 5.52 2.24 10.52 5.86 14.14C16.46 41.76 25 47 25.5 52.5c0.07 0.82 0.67 1.5 1.5 1.5s1.43-0.68 1.5-1.5C29 47 37.53 41.76 41.15 38.14C44.76 34.52 47 29.52 47 24c0-11.05-8.95-20-20-20z" />
+    <path android:fillColor="#ffffffff" android:pathData="M27 31c3.87 0 7-3.13 7-7s-3.13-7-7-7s-7 3.13-7 7s3.13 7 7 7z" />
+</vector>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/dialog_ad_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/dialog_item_ad_stub" />
+    <include layout="@layout/dialog_item_ad_view" />
+</FrameLayout>

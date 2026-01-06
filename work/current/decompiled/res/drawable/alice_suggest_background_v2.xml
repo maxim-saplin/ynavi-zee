@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="?android:colorControlHighlight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+            <corners android:radius="@dimen/alice_suggest_corner_radius_v2" />
+        </shape>
+    </item>
+    <item android:id="@id/alice_suggest_background_base" android:drawable="@drawable/alice_suggest_background_base_v2" />
+</ripple>

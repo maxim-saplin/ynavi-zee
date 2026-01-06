@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.navilib.widget.NaviLinearLayout android:orientation="horizontal" android:id="@id/lanes_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -2,6 +2,13 @@
 
 Use this doc when you’re starting over with a **different APK version** of the same app.
 
+## Current (known-good for 27.0.2)
+
+- Final signed APK: `builds/current/out_signed.apk`
+- Decompiled working tree (patched): `work/current/decompiled/`
+
+Important: for this app/version we needed a **full resource decode** (no `-r`) to avoid runtime UI inflation failures; and we needed a smali bypass for a Passport signature check (see `DECOMPILE_BUILD_LEARNINGS.md`).
+
 ## 0) Pick a tag and stage the base APK
 
 Pick a unique `<apk_tag>` (examples: `yandexnavi_25.6.2_zeeappstore`, `2026-01-06_a`).

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#ffffffff" />
+            <stroke android:width="@dimen/size_map_projected_speedborder" android:color="#ffff5858" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#ffed2929" />
+            <stroke android:width="@dimen/size_map_projected_speedborder" android:color="#ffff5858" />
+        </shape>
+    </item>
+</transition>

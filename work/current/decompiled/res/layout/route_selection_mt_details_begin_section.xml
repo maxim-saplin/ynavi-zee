@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/mt_details_accessibility_invisible_node_heading" android:focusable="true" android:layout_width="fill_parent" android:layout_height="1.0dip" android:importantForAccessibility="yes" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/mt_details_begin_compass" android:background="@color/background_panel" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/location_transit_line_24" android:contentDescription="@string/accessibility_routes_route_begin" />
+        <TextView android:id="@id/mt_details_start_point_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:lineSpacingExtra="4.0sp" android:layout_marginStart="8.0dip" style="@style/Text16.Medium" />
+        <TextView android:id="@id/mt_details_begin_departure_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" style="@style/Text14.Medium.PrimaryVariant" />
+    </LinearLayout>
+</LinearLayout>

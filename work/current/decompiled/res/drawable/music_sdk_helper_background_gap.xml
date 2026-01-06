@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/music_sdk_helper_scroll_indicator_height" android:width="@dimen/music_sdk_helper_scroll_indicator_width" />
+    <solid android:color="?music_sdk_helper_background" />
+    <corners android:radius="@dimen/music_sdk_helper_scroll_indicator_radius" />
+</shape>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="56.0dip" android:width="57.0dip" android:viewportWidth="57.0" android:viewportHeight="56.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <path android:fillColor="@drawable/$pay_sdk_ic_plus_international__0" android:pathData="M28.5,28m-28,0a28,28 0,1 1,56 0a28,28 0,1 1,-56 0" />
+        <path android:fillColor="#ffffffff" android:pathData="M32.2778,9.7158C31.0577,9.465 29.7942,9.3333 28.4999,9.3333C18.1906,9.3333 9.8333,17.6906 9.8333,27.9999C9.8333,38.3092 18.1906,46.6666 28.4999,46.6666C38.8092,46.6666 47.1666,38.3092 47.1666,27.9999C47.1666,27.6723 47.1581,27.3466 47.1415,27.0231H33.6088L30.9836,39.4991H26.0107L28.6359,27.0231H16.9149L17.9033,22.3183H29.6259L32.2778,9.7158Z" />
+        <path android:fillColor="#ffffffff" android:pathData="M46.2862,22.3183H34.5988L36.9108,11.331C41.3402,13.5704 44.7558,17.5234 46.2862,22.3183Z" />
+    </group>
+</vector>

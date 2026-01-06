@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/image" android:background="@drawable/bank_sdk_round_background" android:layout_width="40.0dip" android:layout_height="40.0dip" android:scaleType="centerInside" android:contentDescription="@null" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="12.0dip" app:layout_constraintBottom_toTopOf="@id/description" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/image" app:layout_constraintTop_toTopOf="@id/image" style="@style/Widget.Bank.Text.Title1" />
+    <TextView android:textColor="?bankColor_textIcon_secondary" android:id="@id/description" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/title" style="@style/Widget.Bank.Text.Caption1.PrimaryColor" />
+</androidx.constraintlayout.widget.ConstraintLayout>

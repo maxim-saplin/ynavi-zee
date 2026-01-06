@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="79.0dip">
+            <ru.yandex.yandexmaps.search.internal.results.onlineorgs.OnlineOrgLogoView android:layout_gravity="start|top" android:id="@id/online_org_logo_image" android:layout_width="62.0dip" android:layout_height="62.0dip" android:layout_marginTop="1.0dip" android:layout_marginStart="1.0dip" />
+            <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="13.0dip">
+                <TextView android:ellipsize="end" android:id="@id/online_org_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-1.0dip" android:maxLines="1" style="@style/Text16.Medium" />
+                <TextView android:ellipsize="end" android:id="@id/online_org_subtitletitle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="1" style="@style/Text14.Medium" />
+                <ru.yandex.maps.uikit.atomicviews.snippet.rating.RatingView android:id="@id/online_org_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <ru.yandex.maps.uikit.atomicviews.snippet.onlineorg.OnlineOrgFeaturesSnippet android:id="@id/online_orgs_features_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/online_org_geoproduct_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+            <ImageView android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginEnd="8.0dip" app:srcCompat="@drawable/mark_ads_16" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textColor="@color/text_success" android:ellipsize="end" android:id="@id/geoproduct_ad_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/font_regular" android:textDirection="inherit" android:textAlignment="viewStart" style="@style/Text14" />
+                <TextView android:textColor="@color/snippet_ad_disclaimer_text_color" android:ellipsize="end" android:id="@id/ad_disclaimers_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="@font/font_regular" android:layout_marginEnd="12.0dip" style="@style/Text12" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/online_org_action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:generalButtonSize="medium" app:generalButtonStyle="secondaryBlue" app:paddings="15.0dip" />
+        </FrameLayout>
+        <TextView android:textColor="@color/snippet_ad_disclaimer_text_color" android:ellipsize="end" android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_serp_list_item_ads" android:maxLines="2" android:fontFamily="@font/font_regular" android:paddingStart="40.0dip" style="@style/Text12" />
+    </LinearLayout>
+</merge>

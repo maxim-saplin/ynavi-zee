@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.attachments.imageviewer.ZoomableImageView android:id="@id/image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.yandex.messaging.internal.view.custom.ProgressIndicator android:layout_gravity="center" android:id="@id/progress_indicator" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@android:color/white" app:layout_constraintBottom_toTopOf="@id/error_text_view" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" />
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/error_text_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/progress_indicator" />
+</androidx.constraintlayout.widget.ConstraintLayout>

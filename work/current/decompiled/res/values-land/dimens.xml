@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_action_bar_default_height_material">48.0dip</dimen>
+    <dimen name="abc_text_size_subtitle_material_toolbar">12.0dip</dimen>
+    <dimen name="abc_text_size_title_material_toolbar">14.0dip</dimen>
+    <dimen name="alice_chat_top_margin">10.0dip</dimen>
+    <dimen name="alice_chat_width">235.0dip</dimen>
+    <dimen name="alice_compact_button_horizontal_margin">32.0dip</dimen>
+    <item type="dimen" name="alice_compact_text_width_limit">@dimen/shutter_width</item>
+    <dimen name="control_left_gravity_left_margin">4.0dip</dimen>
+    <dimen name="control_orientation_dependent_clearance">8.0dip</dimen>
+    <dimen name="control_position_clearance_bottom">4.0dip</dimen>
+    <dimen name="control_toolbar_margin_start">0.0dip</dimen>
+    <dimen name="control_toolbar_margin_top">8.0dip</dimen>
+    <dimen name="controls_escape_from_shutter_margin">336.0dip</dimen>
+    <dimen name="delete_button_layout_margin">4.0dip</dimen>
+    <dimen name="delete_button_margin">12.0dip</dimen>
+    <item type="dimen" name="discovery_loading_card_offset_percent">1.0</item>
+    <dimen name="filter_panel_left_margin">8.0dip</dimen>
+    <dimen name="filter_panel_width">320.0dip</dimen>
+    <dimen name="filters_panel_left_margin">328.0dip</dimen>
+    <dimen name="guidance_next_camera_shutter_padding_bottom">16.0dip</dimen>
+    <dimen name="guidance_next_camera_shutter_padding_top">12.0dip</dimen>
+    <dimen name="guidance_placemark_margin">60.0dip</dimen>
+    <item type="dimen" name="intro_phone_image_bias">0.2</item>
+    <dimen name="map_controls_bottom_offset">0.0dip</dimen>
+    <dimen name="map_controls_top_offset">0.0dip</dimen>
+    <dimen name="material_time_picker_minimum_screen_height">450.0dip</dimen>
+    <dimen name="material_time_picker_minimum_screen_width">600.0dip</dimen>
+    <dimen name="modal_with_nested_recycler_height">260.0dip</dimen>
+    <dimen name="mr_controller_volume_group_list_item_height">61.0dip</dimen>
+    <dimen name="mr_controller_volume_group_list_item_icon_size">18.0dip</dimen>
+    <dimen name="mr_controller_volume_group_list_max_height">132.0dip</dimen>
+    <dimen name="mt_service_unavailable_offline_banner_width">320.0dip</dimen>
+    <dimen name="mtrl_alert_dialog_background_inset_bottom">24.0dip</dimen>
+    <dimen name="mtrl_alert_dialog_background_inset_top">24.0dip</dimen>
+    <dimen name="mtrl_calendar_days_of_week_height">20.0dip</dimen>
+    <dimen name="mtrl_calendar_header_content_padding">4.0dip</dimen>
+    <dimen name="mtrl_calendar_header_height_fullscreen">96.0dip</dimen>
+    <dimen name="mtrl_calendar_header_toggle_margin_bottom">0.0dip</dimen>
+    <dimen name="mtrl_calendar_header_toggle_margin_top">0.0dip</dimen>
+    <dimen name="mtrl_calendar_landscape_header_width">104.0dip</dimen>
+    <dimen name="mtrl_calendar_selection_baseline_to_top_fullscreen">68.0dip</dimen>
+    <dimen name="mtrl_calendar_selection_text_baseline_to_bottom_fullscreen">28.0dip</dimen>
+    <dimen name="mtrl_calendar_selection_text_baseline_to_top">64.0dip</dimen>
+    <dimen name="mtrl_calendar_text_input_padding_top">32.0dip</dimen>
+    <dimen name="mtrl_calendar_title_baseline_to_top">24.0dip</dimen>
+    <dimen name="mtrl_calendar_title_baseline_to_top_fullscreen">32.0dip</dimen>
+    <dimen name="music_sdk_helper_control_margin_side">16.0dip</dimen>
+    <dimen name="music_sdk_helper_control_play_pause_margin">20.0dip</dimen>
+    <dimen name="music_sdk_helper_playback_divider_margin_end">28.0dip</dimen>
+    <dimen name="music_sdk_helper_playback_icon_margin_end">22.0dip</dimen>
+    <dimen name="music_sdk_helper_track_icon_margin_end">22.0dip</dimen>
+    <dimen name="music_sdk_helper_view_branding_navi_height">46.0dip</dimen>
+    <dimen name="music_sdk_helper_view_navi_catalog_radio_flow_bottom_margin">16.0dip</dimen>
+    <dimen name="music_sdk_helper_view_navi_catalog_radio_flow_top_margin">16.0dip</dimen>
+    <dimen name="music_sdk_helper_view_navi_catalog_radio_wave_height">180.0dip</dimen>
+    <dimen name="music_shutter_width">392.0dip</dimen>
+    <dimen name="navi_service_promo_object_container_bottom_margin">34.0dip</dimen>
+    <dimen name="navi_service_promo_object_container_top_margin">32.0dip</dimen>
+    <dimen name="navi_service_vanishing_controls_margin_start">4.0dip</dimen>
+    <dimen name="offline_suggestion_button_padding">20.0dip</dimen>
+    <item type="dimen" name="offline_suggestion_button_width">@dimen/wrap_content</item>
+    <dimen name="offline_suggestion_illustration_bottom_padding">12.0dip</dimen>
+    <dimen name="offline_suggestion_illustration_top_padding">24.0dip</dimen>
+    <dimen name="offline_suggestion_text_padding">8.0dip</dimen>
+    <dimen name="parking_promo_object_margin_bottom">50.0dip</dimen>
+    <dimen name="passport_account_avatar_size">144.0dip</dimen>
+    <dimen name="passport_authsdk_top_margin">8.0dip</dimen>
+    <dimen name="passport_domik_top_padding">4.0dip</dimen>
+    <dimen name="passport_social_top_margin">0.0dip</dimen>
+    <item type="dimen" name="pay_sdk_closing_view_buttons_width_percent">0.4</item>
+    <item type="dimen" name="pay_sdk_presale_content_width_percent">0.55</item>
+    <dimen name="paymentsdk_charity_label_margin_top">0.0dip</dimen>
+    <dimen name="paymentsdk_save_checkbox_margin_top">14.0dip</dimen>
+    <dimen name="pin_additional_bottom_padding">0.0dip</dimen>
+    <dimen name="pin_additional_left_padding">160.0dip</dimen>
+    <dimen name="placecard_geoproduct_details_height">260.0dip</dimen>
+    <dimen name="point_selection_panel_right_padding">8.0dip</dimen>
+    <dimen name="point_selection_panel_width">380.0dip</dimen>
+    <dimen name="point_selection_search_line_margin">0.0dip</dimen>
+    <dimen name="promo_object_container_horizontal_margin">32.0dip</dimen>
+    <dimen name="quick_search_voice_button_margin_left">140.0dip</dimen>
+    <dimen name="quick_search_voice_button_margin_right">260.0dip</dimen>
+    <item type="dimen" name="refuel_card_height">@dimen/match_parent</item>
+    <dimen name="refuel_card_margin_left">8.0dip</dimen>
+    <dimen name="refuel_card_margin_top">10.0dip</dimen>
+    <dimen name="refuel_card_width">320.0dip</dimen>
+    <dimen name="reviews_create_rating_star_margin">0.0dip</dimen>
+    <dimen name="routes_eco_friendly_guidance_controls_top_padding">56.0dip</dimen>
+    <dimen name="routes_mt_details_header_elevation">6.0dip</dimen>
+    <dimen name="routes_panel_elevation">4.0dip</dimen>
+    <dimen name="routes_panel_width">380.0dip</dimen>
+    <dimen name="routes_start_empty_history_top_padding">16.0dip</dimen>
+    <dimen name="search_line_margin">4.0dip</dimen>
+    <dimen name="search_results_error_bottom_margin">8.0dip</dimen>
+    <dimen name="search_results_error_horizontal_margin">16.0dip</dimen>
+    <dimen name="serpless_status_panel_left_margin">332.0dip</dimen>
+    <dimen name="shutter_all_margins">8.0dip</dimen>
+    <dimen name="shutter_horizontal_padding">4.0dip</dimen>
+    <dimen name="shutter_left_margin">4.0dip</dimen>
+    <dimen name="shutter_width">388.0dip</dimen>
+    <dimen name="taxi_all_cards_width">320.0dip</dimen>
+    <dimen name="taxi_pin_additional_left_padding">160.0dip</dimen>
+    <dimen name="trucks_main_screen_actions_panel_left_margin">8.0dip</dimen>
+    <dimen name="trucks_main_screen_actions_panel_width">320.0dip</dimen>
+</resources>

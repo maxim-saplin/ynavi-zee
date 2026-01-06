@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?messagingEmojiCategoryIconColor" android:pathData="M17.5,10l0.5,-3L6,7l0.4,3h11.1zM17.3,12L6.7,12L8,21h8l1.3,-9zM14.2,5l0.8,-3.3a1,1 0,0 1,1 -0.7h4.5a1,1 0,0 1,0 2h-3.7l-0.6,2L18,5a2,2 0,0 1,2 2.3l-2,14a2,2 0,0 1,-2 1.7L8,23a2,2 0,0 1,-2 -1.7l-2,-14A2,2 0,0 1,6 5h8.2z" android:fillType="nonZero" />
+</vector>

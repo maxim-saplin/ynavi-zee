@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:id="@id/reviews_ranking_selector_label" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text14.Medium.Grey" />
+    <ImageView android:id="@id/reviews_ranking_selector_icon" android:layout_width="8.0dip" android:layout_height="8.0dip" android:tint="@color/icons_secondary" android:layout_marginStart="9.0dip" app:srcCompat="@drawable/arrow_down_8" />
+</merge>

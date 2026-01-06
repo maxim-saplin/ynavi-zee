@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/feedbackFormCommentLayout" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView android:gravity="center_horizontal" android:id="@id/feedbackFormCommentStarTextView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="16.0dip" android:text="@string/feedback_star" />
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/feedbackFormCommentTextView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="16.0dip" android:layout_marginStart="6.0dip" />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatEditText android:gravity="start|top" android:id="@id/feedbackFormCommentEditText" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/feedback_write_comment" android:lineSpacingMultiplier="1.25" android:inputType="text" android:imeOptions="actionDone" android:textCursorDrawable="@drawable/feedback_ic_edit_cursor" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/feedbackFormCommentErrorTextView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+</LinearLayout>

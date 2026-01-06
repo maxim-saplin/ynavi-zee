@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/header_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/ai_agent_chat_header_expanded" android:visibility="visible" layout="@layout/ai_agent_chat_header_expanded" />
+    <include android:id="@id/ai_agent_chat_header_collapsed" android:visibility="gone" layout="@layout/ai_agent_chat_header_collapsed" />
+</FrameLayout>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.SwitchPreference android:id="@id/switch_delegate" style="@style/MultiSwitchPreferenceBlock"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

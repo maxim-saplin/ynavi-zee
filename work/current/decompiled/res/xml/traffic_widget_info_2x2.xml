@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider android:minWidth="110.0dip" android:minHeight="110.0dip" android:updatePeriodMillis="0" android:initialLayout="@layout/traffic_widget_initial_layout" android:configure="ru.yandex.yandexmaps.widget.traffic.internal.configuration.TrafficWidgetConfigurationActivity" android:previewImage="@drawable/android_widget_2_2_traffic" android:resizeMode="none" android:initialKeyguardLayout="@layout/traffic_widget_initial_layout" android:widgetCategory="home_screen"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

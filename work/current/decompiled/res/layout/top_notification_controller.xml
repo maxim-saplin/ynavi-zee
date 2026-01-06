@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/top_notification_container" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/top_notification_leading_icon" android:layout_width="16.0dip" android:layout_height="16.0dip" android:scaleType="centerInside" android:layout_marginEnd="8.0dip" />
+            <TextView android:ellipsize="end" android:id="@id/top_notification_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" style="@style/Text14.Medium" />
+            <ImageView android:id="@id/top_notification_trailing_icon" android:layout_width="16.0dip" android:layout_height="16.0dip" android:scaleType="centerInside" android:layout_marginStart="4.0dip" />
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:id="@id/top_notification_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:includeFontPadding="false" style="@style/Text14" />
+    </LinearLayout>
+</ru.yandex.yandexmaps.common.views.insets.PaddingtonView>

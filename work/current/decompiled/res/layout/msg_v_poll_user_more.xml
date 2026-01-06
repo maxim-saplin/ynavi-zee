@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="14.0sp" android:textColor="?messagingCommonTextPrimaryColor" android:id="@id/user_more_text" android:background="@drawable/msg_bg_rounded_secondary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" android:fontFamily="@font/ya_medium" android:paddingHorizontal="12.0dip" android:paddingVertical="9.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

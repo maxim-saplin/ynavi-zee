@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/profile_container" android:background="@color/bw_black_alpha30" android:layout_width="@dimen/shutter_width" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/shutter_left_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ru.yandex.yandexmaps.webcard.integrated.api.ShutterWithWebview android:id="@id/profile_shutter" android:tag="@string/change_handler_bottom_panel_tag" android:paddingTop="@dimen/shutter_top_padding" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="@dimen/shutter_horizontal_padding" />
+    <ru.yandex.yandexmaps.designsystem.tooltips.TooltipTextView android:id="@id/profile_ugc_tooltip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ugc_profile_share_tooltip_text" />
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/attach_camera_container" android:layout_width="@dimen/attach_preview_tile_width" android:layout_height="@dimen/attach_preview_tile_height" android:foreground="?android:selectableItemBackground" android:contentDescription="@string/attachments_chooser_accessibility_make_photo_button" app:cardBackgroundColor="@color/attach_common_warm_extra_light_gray" app:cardCornerRadius="@dimen/attach_image_radius" app:cardElevation="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/attach_camera_darker" android:background="@color/attach_common_black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.3" />
+    <ImageView android:layout_gravity="center" android:id="@id/attach_camera_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" app:srcCompat="@drawable/attach_camera_photo" />
+</androidx.cardview.widget.CardView>

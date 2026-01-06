@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="14.0sp" android:textColor="@color/alicekit_palette_futuris_text_90" android:id="@id/stop_streaming_button" android:background="@drawable/futuris_stop_streaming_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/futuris_stop_streaming_button_text" android:paddingHorizontal="16.0dip" android:paddingVertical="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

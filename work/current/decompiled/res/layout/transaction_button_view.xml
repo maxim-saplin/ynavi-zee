@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.shimmer.ShimmerFrameLayout android:layout_gravity="center" android:id="@id/shimmer_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/image_title_icon" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/reload_24" android:layout_marginEnd="12.0dip" app:tint="@color/bw_white" />
+                <TextView android:layout_gravity="center_vertical" android:id="@id/title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium.WhiteBlack" />
+            </LinearLayout>
+            <TextView android:id="@id/subtitle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:alpha="0.4" style="@style/Text12.WhiteBlack" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</merge>

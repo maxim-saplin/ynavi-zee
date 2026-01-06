@@ -1,0 +1,21 @@
+.class public final Ly02/g;
+.super Ly02/k;
+.source "SourceFile"
+
+
+# static fields
+.field public static final a:Ly02/g;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ly02/g;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ly02/g;->a:Ly02/g;
+
+    return-void
+.end method

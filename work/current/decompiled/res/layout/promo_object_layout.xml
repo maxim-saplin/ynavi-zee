@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/promo_object_image_view" android:background="@android:color/transparent" android:visibility="invisible" android:layout_width="144.0dip" android:layout_height="144.0dip" />
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/promo_object_animation_view" android:layout_width="144.0dip" android:layout_height="144.0dip" app:lottie_autoPlay="true" app:lottie_repeatCount="2" app:lottie_repeatMode="restart" />
+</merge>

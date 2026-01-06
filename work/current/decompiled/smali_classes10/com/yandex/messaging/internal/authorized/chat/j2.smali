@@ -1,0 +1,29 @@
+.class public abstract Lcom/yandex/messaging/internal/authorized/chat/j2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field private static final a:Lcom/yandex/messaging/internal/authorized/chat/k2;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lcom/yandex/messaging/internal/authorized/chat/k2;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/yandex/messaging/internal/authorized/chat/j2;->a:Lcom/yandex/messaging/internal/authorized/chat/k2;
+
+    return-void
+.end method
+
+.method public static bridge synthetic a()Lcom/yandex/messaging/internal/authorized/chat/k2;
+    .locals 1
+
+    sget-object v0, Lcom/yandex/messaging/internal/authorized/chat/j2;->a:Lcom/yandex/messaging/internal/authorized/chat/k2;
+
+    return-object v0
+.end method

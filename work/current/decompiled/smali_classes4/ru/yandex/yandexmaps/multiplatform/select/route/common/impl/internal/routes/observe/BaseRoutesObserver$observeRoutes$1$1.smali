@@ -1,0 +1,180 @@
+.class final Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;
+.super Lkotlin/coroutines/jvm/internal/SuspendLambda;
+.source "SourceFile"
+
+# interfaces
+.implements Lv31/d;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/coroutines/jvm/internal/SuspendLambda;",
+        "Lv31/d;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0012\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0008\u0002\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0003\"\u0008\u0008\u0000\u0010\u0001*\u00020\u0000*\u00020\u0002H\n\u00a2\u0006\u0004\u0008\u0004\u0010\u0005"
+    }
+    d2 = {
+        "Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/a0;",
+        "R",
+        "Lkotlinx/coroutines/CoroutineScope;",
+        "",
+        "<anonymous>",
+        "(Lkotlinx/coroutines/CoroutineScope;)Ljava/util/List;"
+    }
+    k = 0x3
+    mv = {
+        0x2,
+        0x0,
+        0x0
+    }
+.end annotation
+
+.annotation runtime Lp31/c;
+    c = "ru.yandex.yandexmaps.multiplatform.select.route.common.impl.internal.routes.observe.BaseRoutesObserver$observeRoutes$1$1"
+    f = "RoutesObserver.kt"
+    l = {
+        0x26
+    }
+    m = "invokeSuspend"
+.end annotation
+
+
+# instance fields
+.field final synthetic $featureToggles:Lej2/w;
+
+.field final synthetic $it:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field label:I
+
+.field final synthetic this$0:Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/c;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/c;Ljava/util/List;Lej2/w;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->this$0:Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/c;
+
+    iput-object p2, p0, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->$it:Ljava/util/List;
+
+    iput-object p3, p0, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->$featureToggles:Lej2/w;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance p1, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->this$0:Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/c;
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->$it:Ljava/util/List;
+
+    iget-object v2, p0, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->$featureToggles:Lej2/w;
+
+    invoke-direct {p1, v0, v1, v2, p2}, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;-><init>(Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/c;Ljava/util/List;Lej2/w;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lkotlinx/coroutines/CoroutineScope;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;
+
+    sget-object p2, Lm31/d0;->a:Lm31/d0;
+
+    invoke-virtual {p1, p2}, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    sget-object v0, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    iget v1, p0, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->label:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lkotlin/b;->a(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lkotlin/b;->a(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->this$0:Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/c;
+
+    invoke-static {p1}, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/c;->b(Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/c;)Lv31/e;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->$it:Ljava/util/List;
+
+    iget-object v3, p0, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->$featureToggles:Lej2/w;
+
+    iput v2, p0, Lru/yandex/yandexmaps/multiplatform/select/route/common/impl/internal/routes/observe/BaseRoutesObserver$observeRoutes$1$1;->label:I
+
+    invoke-interface {p1, v1, v3, p0}, Lv31/e;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    return-object p1
+.end method

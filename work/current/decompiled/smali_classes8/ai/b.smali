@@ -1,0 +1,33 @@
+.class public final Lai/b;
+.super Lai/g;
+.source "SourceFile"
+
+
+# static fields
+.field public static final g:Lai/a;
+
+.field public static final h:Ljava/lang/String; = "ALICE_ICON_OWNER_PACKAGE_KEY"
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lai/a;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lai/b;->g:Lai/a;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final d()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "com.yandex.alicenger.Alice.OPEN"
+
+    return-object v0
+.end method

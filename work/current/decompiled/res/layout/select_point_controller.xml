@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:id="@id/select_point_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ru.yandex.yandexmaps.controls.search.SearchLineView android:layout_gravity="top" android:id="@id/search_line_view" android:layout_width="@dimen/shutter_width" android:layout_height="@dimen/search_line_height" android:layout_margin="@dimen/point_selection_search_line_margin" app:menuButtonEnabled="false" />
+            <FrameLayout android:layout_gravity="center" android:paddingBottom="@dimen/pin_additional_bottom_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pin_additional_left_padding">
+                <include layout="@layout/select_point_pin" />
+            </FrameLayout>
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:paddingLeft="@dimen/shutter_horizontal_padding" android:layout_width="@dimen/shutter_width" android:layout_height="wrap_content">
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ru.yandex.yandexmaps.controls.back.simple.ControlBackSimple android:layout_gravity="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:layout_marginStart="4.0dip" />
+                    <ru.yandex.yandexmaps.controls.position.combined.ControlPositionCombined android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="4.0dip" />
+                </FrameLayout>
+                <LinearLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/select_point_on_map_panel" android:tag="@string/change_handler_bottom_panel_tag" android:background="@drawable/point_selection_palnel_background" android:paddingTop="20.0dip" android:paddingBottom="24.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/shutter_left_margin" android:elevation="4.0dip" android:paddingHorizontal="16.0dip">
+                    <include layout="@layout/select_point_panel" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+    <FrameLayout android:id="@id/select_point_search_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

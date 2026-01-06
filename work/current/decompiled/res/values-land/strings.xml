@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="controls_default_overland_fleets_ids">0,2</string>
+    <string name="filters_overland_fleet_ids">0</string>
+</resources>

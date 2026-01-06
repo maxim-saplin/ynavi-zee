@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@id/contentContainer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.yandex.bank.widgets.common.ToolbarView android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.yandex.bank.widgets.common.swiperefresh.CustomSwipeRefreshLayout android:id="@id/swipeRefresh" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/transactions" android:paddingBottom="24.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </com.yandex.bank.widgets.common.swiperefresh.CustomSwipeRefreshLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <include android:id="@id/shimmer" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/bank_sdk_layout_transactions_shimmers" />
+    <com.yandex.bank.widgets.common.ErrorView android:id="@id/error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

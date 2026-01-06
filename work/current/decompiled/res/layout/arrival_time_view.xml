@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/arrival_icon" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_centerInParent="true" />
+    <TextView android:layout_gravity="center_vertical" android:id="@id/time_text_typical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4.0dip" style="@style/Text16.Medium" />
+    <TextView android:textColor="@color/masstransit_arrival" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/time_text_arrival" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium" />
+</merge>

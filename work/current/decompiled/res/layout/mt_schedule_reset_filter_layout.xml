@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/loading_error_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:gravity="center" android:id="@id/reset_filter_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="@string/mt_schedule_reset_filters_hint" android:lines="2" style="@style/Text14.BlackWhite" />
+    <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/reset_filter_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:generalButtonSize="medium" app:generalButtonStyle="secondaryBlue" app:text="@string/mt_schedule_reset_filters_button" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/service_placeholder" android:background="?bgMain" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/service_logo_container" layout="@layout/eats_part_logo" />
+    </FrameLayout>
+    <include android:id="@id/error_layout" layout="@layout/eats_content_error" />
+    <include android:id="@id/no_auth_layout" layout="@layout/eats_content_no_auth" />
+</merge>

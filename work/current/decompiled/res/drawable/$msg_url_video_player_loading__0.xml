@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:name="spinner_rotate" android:pivotX="12.0" android:pivotY="12.0">
+        <path android:fillColor="@color/messaging_misc_viewer_icons" android:pathData="M12,5C8.134,5 5,8.134 5,12C5,15.866 8.134,19 12,19C15.866,19 19,15.866 19,12C19,11.4477 19.4477,11 20,11C20.5523,11 21,11.4477 21,12C21,16.9706 16.9706,21 12,21C7.0294,21 3,16.9706 3,12C3,7.0294 7.0294,3 12,3C12.5523,3 13,3.4477 13,4C13,4.5523 12.5523,5 12,5Z" android:fillType="evenOdd" />
+    </group>
+</vector>

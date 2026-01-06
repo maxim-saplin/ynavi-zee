@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/tanker_basic_text_size" android:textColor="@color/tanker_textColorAlpha40" android:id="@id/aboveSubtitleTv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tanker_basic_padding" android:layout_marginTop="@dimen/tanker_basic_padding" android:text="Название" style="@style/TankerTextRegular" />
+        <EditText android:textAppearance="@style/TankerTextRegular" android:textSize="@dimen/tanker_small_text_size" android:textColor="@color/tanker_textColorAlpha100" android:id="@id/nameEt" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tanker_basic_padding" android:layout_marginTop="2.0dip" android:layout_marginBottom="@dimen/tanker_basic_padding" android:text="@string/tanker_business_account" />
+        <View android:background="@color/tanker_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="@dimen/tanker_basic_padding" />
+        <ru.tankerapp.ui.ListItemComponent android:id="@id/emailView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:itemAboveSubtitle="Отчеты и важные письма" />
+        <View android:background="@color/tanker_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="@dimen/tanker_basic_padding" />
+        <ru.tankerapp.ui.ListItemComponent android:id="@id/moneyLimitView" android:layout_width="fill_parent" android:layout_height="wrap_content" app:itemSubtitle="Сколько участники могут тратить в месяц или сутки" app:itemTitle="Лимиты" />
+        <View android:background="@color/tanker_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="@dimen/tanker_basic_padding" />
+    </LinearLayout>
+    <ru.tankerapp.ui.TankerSpinnerButton android:textColor="@color/tanker_button_dark_text_color" android:layout_gravity="bottom" android:id="@id/saveBtn" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_margin="@dimen/tanker_basic_padding" android:text="Сохранить" app:tankerSpinnerButtonBackground="@drawable/tanker_button_dark" />
+    <FrameLayout android:id="@id/blockTouchView" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</FrameLayout>

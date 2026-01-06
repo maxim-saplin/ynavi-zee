@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.yandex.messaging.internal.avatar.AvatarImageView android:id="@id/messaging_toolbar_avatar" android:visibility="gone" android:layout_centerVertical="true" android:importantForAccessibility="no" app:avatarPadding="3.0dip" style="@style/MessagingToolbar.Avatar" />
+    <com.yandex.alicekit.core.views.FixedProgressBar android:id="@id/messaging_toolbar_progressbar" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" android:indeterminate="true" android:indeterminateDrawable="@drawable/msg_anim_spinner" android:contentDescription="@null" android:layerType="software" />
+    <LinearLayout android:orientation="vertical" android:id="@id/status_title_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="6.0dip" android:layout_toEndOf="@id/messaging_toolbar_avatar">
+        <androidx.appcompat.widget.AppCompatTextView android:id="@id/messaging_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="3.0dip" style="@style/MessagingToolbar.Text" />
+        <TextView android:id="@id/messaging_toolbar_status" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/MessagingToolbar.Status" />
+    </LinearLayout>
+</RelativeLayout>

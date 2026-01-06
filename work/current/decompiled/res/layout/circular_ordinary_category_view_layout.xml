@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ordinal_category_container" android:background="@drawable/rounded_grey_flat_button_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="3.0dip" android:paddingVertical="3.0dip">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/ordinal_category_item_icon" android:background="@drawable/circular_category_background" android:layout_width="48.0dip" android:layout_height="48.0dip" android:scaleType="center" android:tint="@color/text_darker_grey" />
+        <TextView android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ordinal_category_item_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:maxLines="2" android:hyphenationFrequency="normal" style="@style/Text12.DarkerGrey.Medium" />
+        <TextView android:ellipsize="end" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ordinal_category_item_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" style="@style/Text10.LightGrey" />
+    </LinearLayout>
+</merge>

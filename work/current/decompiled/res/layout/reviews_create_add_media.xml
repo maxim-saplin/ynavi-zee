@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/create_review_add_media_view" android:background="@drawable/reviews_create_added_photos_choose_background" android:layout_width="fill_parent" android:layout_height="100.0dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/add_photo_24" app:tint="@color/icons_actions" />
+        <TextView android:textColor="@color/text_actions" android:id="@id/create_review_add_media_text_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/photo_picker_header_title" android:layout_marginStart="8.0dip" style="@style/Text14.Medium.TextActions" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yandex.messaging.internal.view.chat.ChatItemLinearLayout android:orientation="horizontal" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="end|bottom" android:orientation="vertical" android:id="@id/timeline_message_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ViewStub android:id="@id/reply" android:layout="@layout/msg_reply_layout" android:inflatedId="@id/reply" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="12.0dip" />
+        <ViewStub android:textColor="?messagingCommonTextSecondaryColor" android:id="@id/forwarded_message" android:layout="@layout/msg_forwarded_message" android:inflatedId="@id/forwarded_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:paddingStart="10.0dip" android:paddingEnd="12.0dip" />
+        <FrameLayout android:layout_gravity="start" android:id="@id/file_layout_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="54.0sp">
+            <include layout="@layout/msg_dialog_file_body" />
+            <include layout="@layout/msg_message_status_and_time" />
+        </FrameLayout>
+    </LinearLayout>
+    <include layout="@layout/msg_chat_error_icon_layout" />
+</com.yandex.messaging.internal.view.chat.ChatItemLinearLayout>

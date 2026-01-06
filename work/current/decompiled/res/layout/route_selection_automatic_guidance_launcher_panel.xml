@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.multiplatform.select.route.android.internal.bottompanel.guidancelauncer.ExtraRoundCornersView android:layout_width="fill_parent" android:layout_height="@dimen/automatic_guidance_launcher_round_corners_radius" />
+    <FrameLayout android:background="@color/bg_additional" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/route_selection_automatic_guidance_launcher_panel_background" android:padding="12.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/automatic_guidance_launcher_panel_separator_height">
+            <TextView android:layout_gravity="center" android:id="@id/automatic_guidance_launcher_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/route_selection_automatic_guidance_launcher_title" style="@style/Text16.Medium.TextPrimaryVariant" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+                <ru.yandex.yandexmaps.designsystem.button.GeneralButtonView android:id="@id/automatic_guidance_launcher_cancel_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="4.0dip" app:generalButtonSize="big" app:generalButtonStyle="secondaryBlue" app:text="@string/route_selection_automatic_guidance_launcher_cancel" />
+                <ru.yandex.yandexmaps.designsystem.button.ProgressGeneralButtonView android:id="@id/automatic_guidance_launcher_go_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="4.0dip" app:generalButtonSize="big" app:generalButtonStyle="primary" app:text="@string/route_selection_automatic_guidance_launcher_go" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</merge>

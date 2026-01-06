@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="passport_activity_horizontal_margin">@dimen/passport_activity_and_button_horizontal_margin</item>
+</resources>

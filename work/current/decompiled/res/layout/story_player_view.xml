@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.exoplayer2.ui.StyledPlayerView android:theme="@style/NoDrawableProgressTheme" android:id="@id/story_player_view_exoplayer_view" android:layout_width="fill_parent" android:layout_height="wrap_content" app:resize_mode="fixed_width" app:surface_type="texture_view" app:use_controller="false" />
+    <ImageView android:id="@id/story_player_view_image_crop" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ru.yandex.yandexmaps.stories.player.internal.view.FixedAspectRatioLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/story_player_view_image_fit" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" />
+    </ru.yandex.yandexmaps.stories.player.internal.view.FixedAspectRatioLayout>
+</FrameLayout>

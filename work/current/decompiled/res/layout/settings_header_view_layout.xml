@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/background_panel_color_impl" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="locale" android:paddingHorizontal="20.0dip" android:paddingVertical="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="center" android:id="@id/header_text" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/offline_caches_title" android:importantForAccessibility="yes" style="@style/Text20.Medium" />
+    <ru.yandex.maps.uikit.atomicviews.snippet.close.CloseButtonView android:layout_gravity="end|center" android:id="@id/header_close_button" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+</FrameLayout>

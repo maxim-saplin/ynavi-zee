@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/dialog_toolbar_title_root" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0sp" android:id="@id/dialog_toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Alice.Toolbar.Text_V2" />
+        <include layout="@layout/alice_model_chooser_chevron" />
+    </LinearLayout>
+</merge>

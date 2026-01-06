@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="@dimen/tanker_car_number_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/tanker_text_color_white" android:layout_gravity="center" android:id="@id/tankerCarText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tanker_header_loading" style="@style/TankerTextMedium" />
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/pay_sdk_shadow" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView android:layout_gravity="center|bottom" android:id="@id/loading_card" android:layout_width="fill_parent" android:layout_height="@dimen/pay_sdk_bottom_sheet_height" app:shapeAppearance="@style/PaySdk.Shape.BottomSheet">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:background="@drawable/pay_sdk_glyph" android:layout_width="34.0dip" android:layout_height="5.0dip" android:layout_marginTop="@dimen/pay_sdk_margin_middle" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.helper.widget.Flow android:orientation="vertical" android:id="@id/loading_texts_flow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/pay_sdk_margin_large" app:constraint_referenced_ids="loading_progress_view, loading_title, loading_text" app:flow_horizontalAlign="center" app:flow_verticalGap="@dimen/pay_sdk_margin_middle" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <com.yandex.plus.pay.ui.common.api.ui.view.ProgressView android:id="@id/loading_progress_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textAppearance="@style/PaySDK.TextAppearance.Title4" android:gravity="center" android:id="@id/loading_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="center" app:layout_constrainedWidth="true" />
+            <TextView android:textAppearance="@style/PaySDK.TextAppearance.Body2" android:textColor="?pay_sdk_primaryTextColor" android:gravity="center" android:id="@id/loading_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="center" app:layout_constrainedWidth="true" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

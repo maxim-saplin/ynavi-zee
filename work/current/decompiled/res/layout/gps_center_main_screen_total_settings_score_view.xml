@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView android:layout_gravity="center" android:id="@id/total_score_settings_title_view" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/Text16.Medium.TextPrimary" />
+        <FrameLayout android:layout_gravity="center" android:id="@id/status_point_view" android:background="@drawable/main_screen_status_drawable" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_marginStart="8.0dip" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.AppCompatTextView android:id="@id/status_subtitle_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" style="@style/Text16.TextSecondary" />
+</merge>

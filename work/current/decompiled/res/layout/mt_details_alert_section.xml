@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.yandex.yandexmaps.common.views.VectorTintableCompoundsTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:drawablePadding="8.0dip" android:layout_marginStart="68.0dip" app:drawableLeftCompat="@drawable/alert_16" style="@style/Text14.Medium.PrimaryVariant"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

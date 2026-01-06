@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ru.yandex.yandexmaps.common.views.controls.MapControlsTextViewRect android:id="@id/pinned_user_location_button" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" app:backgroundCornerRadius="fit_height" app:drawableLeftCompat="@drawable/control_pin_user_location_start_drawable" app:drawableRightCompat="@drawable/control_pin_user_location_end_drawable" app:drawableTintCompat="@color/text_primary_variant" style="@style/Text14.Medium.TextPrimaryVariant" />
+    <ru.yandex.yandexmaps.common.views.controls.MapControlsTextViewRect android:id="@id/unpinned_user_location_button" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" app:backgroundCornerRadius="fit_height" app:drawableLeftCompat="@drawable/control_pin_user_location_start_drawable" app:drawableRightCompat="@drawable/control_pin_user_location_end_drawable" app:drawableTintCompat="@color/text_color_bg" app:fillBackground="@color/icons_actions" style="@style/Text14.Medium.TextColorBg" />
+</merge>

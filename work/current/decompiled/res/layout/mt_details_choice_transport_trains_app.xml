@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/background_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:gravity="center" android:id="@id/mtcard_item_action_button" android:background="@drawable/common_button_action_rounded_rectangle_background" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="24.0dip" android:layout_marginBottom="24.0dip" android:text="@string/common_goto_yandex_trains" android:textAllCaps="true" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" android:letterSpacing="@dimen/common_text_all_caps_spacing" style="@style/Text14.Medium.DarkGrey" />
+</FrameLayout>
