@@ -103,6 +103,10 @@
 
     move-result-object p1
 
+    invoke-static {p1}, Lru/yandex/yandexnavi/zee/ZeeUiScale;->wrapBaseContext(Landroid/content/Context;)Landroid/content/Context;
+
+    move-result-object p1
+
     invoke-super {p0, p1}, Landroid/content/ContextWrapper;->attachBaseContext(Landroid/content/Context;)V
 
     return-void

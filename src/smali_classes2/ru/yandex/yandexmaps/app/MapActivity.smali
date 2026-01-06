@@ -840,6 +840,10 @@
 
     move-result-object p1
 
+    invoke-static {p0, p1}, Lru/yandex/yandexnavi/zee/ZeeUiScale;->applyToConfiguration(Landroid/content/Context;Landroid/content/res/Configuration;)Landroid/content/res/Configuration;
+
+    move-result-object p1
+
     invoke-virtual {p0, p1}, Landroid/view/ContextThemeWrapper;->applyOverrideConfiguration(Landroid/content/res/Configuration;)V
 
     :cond_0
