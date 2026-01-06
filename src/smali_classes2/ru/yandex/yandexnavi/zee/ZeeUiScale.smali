@@ -13,66 +13,124 @@
 .end method
 
 .method public static applyToConfiguration(Landroid/content/Context;Landroid/content/res/Configuration;)Landroid/content/res/Configuration;
-    .locals 4
+    .locals 8
 
+    :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v1
 
-    const-string v1, "zeeapp_ui_scale"
+    const-string v2, "zeeapp_ui_scale"
 
-    const-string v2, "fraction"
+    const-string v3, "fraction"
 
-    invoke-virtual {v0, v1, v2, p0}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0, v2, v3, v1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result p0
+    move-result v1
 
-    if-nez p0, :cond_0
+    if-nez v1, :cond_0
 
     return-object p1
 
     :cond_0
-    const/4 v1, 0x1
-
     const/4 v2, 0x1
 
-    invoke-virtual {v0, p0, v1, v2}, Landroid/content/res/Resources;->getFraction(III)F
+    const/4 v3, 0x1
 
-    move-result p0
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/res/Resources;->getFraction(III)F
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    move-result v4
 
-    cmpl-float v0, p0, v0
+    const/high16 v5, 0x3f800000    # 1.0f
 
-    if-nez v0, :cond_1
+    cmpl-float v6, v4, v5
+
+    if-nez v6, :cond_1
 
     return-object p1
 
     :cond_1
-    new-instance v0, Landroid/content/res/Configuration;
+    const/4 v6, 0x0
 
-    invoke-direct {v0, p1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+    cmpg-float v7, v4, v6
 
-    iget p1, v0, Landroid/content/res/Configuration;->densityDpi:I
+    if-lez v7, :return_orig
 
-    int-to-float p1, p1
+    new-instance v5, Landroid/content/res/Configuration;
 
-    mul-float/2addr p1, p0
+    invoke-direct {v5, p1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
 
-    float-to-int p0, p1
+    iget v6, v5, Landroid/content/res/Configuration;->densityDpi:I
 
-    iput p0, v0, Landroid/content/res/Configuration;->densityDpi:I
+    if-lez v6, :fill_from_ctx
 
-    return-object v0
+    int-to-float v6, v6
+
+    mul-float/2addr v6, v4
+
+    float-to-int v6, v6
+
+    goto :clamp
+
+    :fill_from_ctx
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v6, v0, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    if-lez v6, :return_cfg
+
+    iput v6, v5, Landroid/content/res/Configuration;->densityDpi:I
+
+    return-object v5
+
+    :clamp
+    if-lez v6, :return_cfg
+
+    const/16 v0, 0x78
+
+    if-ge v6, v0, :clamp_hi
+
+    move v6, v0
+
+    :clamp_hi
+    const/16 v0, 0x3c0
+
+    if-le v6, v0, :store
+
+    move v6, v0
+
+    :store
+    iput v6, v5, Landroid/content/res/Configuration;->densityDpi:I
+
+    return-object v5
+
+    :return_cfg
+    return-object v5
+
+    :return_orig
+    return-object p1
+
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    return-object p1
 .end method
 
 .method public static wrapBaseContext(Landroid/content/Context;)Landroid/content/Context;
-    .locals 4
+    .locals 9
 
+    :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -100,43 +158,84 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/res/Resources;->getFraction(III)F
 
-    move-result v0
+    move-result v4
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/high16 v5, 0x3f800000    # 1.0f
 
-    cmpl-float v1, v0, v1
+    cmpl-float v5, v4, v5
 
-    if-nez v1, :cond_1
+    if-nez v5, :cond_1
 
     return-object p0
 
     :cond_1
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/4 v5, 0x0
 
-    move-result-object v1
+    cmpg-float v6, v4, v5
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    if-lez v6, :return_orig
 
-    move-result-object v1
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    new-instance v2, Landroid/content/res/Configuration;
+    move-result-object v6
 
-    invoke-direct {v2, v1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+    iget v7, v6, Landroid/content/res/Configuration;->densityDpi:I
 
-    iget v1, v2, Landroid/content/res/Configuration;->densityDpi:I
+    if-lez v7, :fallback_metrics
 
-    int-to-float v1, v1
+    goto :have_dpi
 
-    mul-float/2addr v1, v0
+    :fallback_metrics
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    float-to-int v0, v1
+    move-result-object v8
 
-    iput v0, v2, Landroid/content/res/Configuration;->densityDpi:I
+    iget v7, v8, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    invoke-virtual {p0, v2}, Landroid/content/Context;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
+    if-lez v7, :return_orig
+
+    :have_dpi
+    new-instance v8, Landroid/content/res/Configuration;
+
+    invoke-direct {v8, v6}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+
+    int-to-float v7, v7
+
+    mul-float/2addr v7, v4
+
+    float-to-int v7, v7
+
+    if-lez v7, :return_orig
+
+    const/16 v0, 0x78
+
+    if-ge v7, v0, :clamp_hi
+
+    move v7, v0
+
+    :clamp_hi
+    const/16 v0, 0x3c0
+
+    if-le v7, v0, :store
+
+    move v7, v0
+
+    :store
+    iput v7, v8, Landroid/content/res/Configuration;->densityDpi:I
+
+    invoke-virtual {p0, v8}, Landroid/content/Context;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
 
     move-result-object p0
 
+    return-object p0
+
+    :return_orig
+    return-object p0
+
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
     return-object p0
 .end method
 

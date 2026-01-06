@@ -844,7 +844,15 @@
 
     move-result-object p1
 
+    :try_start_0
     invoke-virtual {p0, p1}, Landroid/view/ContextThemeWrapper;->applyOverrideConfiguration(Landroid/content/res/Configuration;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    :goto_0
 
     :cond_0
     return-void

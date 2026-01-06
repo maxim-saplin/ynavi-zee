@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:background="?android:attr/colorBackground">
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/zeeapp_letterbox_top" />
+    <FrameLayout android:id="@id/map_activity_root" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1">
+        <FrameLayout android:id="@id/maps_activity_memory_eater" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ru.yandex.maps.appkit.map.MapWithControlsView android:id="@id/activity_search_map_view" android:tag="MAP_WITH_CONTROLS" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="yes" android:accessibilityTraversalBefore="@id/control_position_combined" android:accessibilityTraversalAfter="@id/control_zoom_out_touch_zone" />
+        <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:id="@id/controls_engine_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </ru.yandex.yandexmaps.common.views.insets.PaddingtonView>
+        <FrameLayout android:id="@id/maps_activity_top_notification_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.bluelinelabs.conductor.LTRChangeHandlerFrameLayout android:id="@id/activity_container_controller" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/maps_activity_modal_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/maps_activity_inapps_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/permissions_router_container_id" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/maps_activity_alice_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/map_activity_debug_overlay_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/map_activity_performance_overlays_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <View android:layout_width="fill_parent" android:layout_height="@dimen/zeeapp_letterbox_bottom" />
+</LinearLayout>
