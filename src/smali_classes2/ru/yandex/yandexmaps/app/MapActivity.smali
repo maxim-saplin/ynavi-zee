@@ -1372,6 +1372,53 @@
     invoke-virtual {p0, v0, p1}, Lru/yandex/yandexmaps/app/MapActivity;->H(ZLandroid/content/res/Configuration;)V
 
     :goto_0
+    invoke-direct {p0, p1}, Lru/yandex/yandexmaps/app/MapActivity;->zeeappUpdateLetterboxBg(Landroid/content/res/Configuration;)V
+
+    return-void
+.end method
+
+.method private final zeeappUpdateLetterboxBg(Landroid/content/res/Configuration;)V
+    .locals 6
+
+    const v0, 0x7f0a0fa0
+
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v1
+
+    instance-of v2, v1, Landroid/view/View;
+
+    if-eqz v2, :cond_0
+
+    check-cast v1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x7f060233
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v4
+
+    new-instance v5, Landroid/graphics/drawable/ColorDrawable;
+
+    invoke-direct {v5, v4}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    invoke-virtual {v1, v5}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
     return-void
 .end method
 

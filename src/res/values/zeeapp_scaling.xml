@@ -4,5 +4,5 @@
          Default: 150% (1.5x scaling, everything 1.5x larger).
          Example: 100% for baseline (no scaling), 75% for 0.75x scaling.
     -->
-    <fraction name="zeeapp_ui_scale">150%</fraction>
+    <fraction name="zeeapp_ui_scale">175%</fraction>
 </resources>
