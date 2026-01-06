@@ -1,0 +1,33 @@
+---
+description: Guidelines for creating and managing Cursor rules in this project.
+alwaysApply: false
+---
+# Creating and Managing Rules
+
+This project uses Cursor Project Rules stored in `.cursor/rules/`.
+
+## Format
+All rules must be created as `.mdc` (Markdown with Content) files.
+
+### Frontmatter
+Each rule file must start with a YAML frontmatter block containing:
+- `description`: A clear, concise description of what the rule does. Used by the agent to decide relevance.
+- `globs`: A list of glob patterns (comma-separated if multiple) defining which files trigger this rule.
+- `alwaysApply`: `true` or `false`. Set to `false` by default unless the rule is critical and global.
+
+### Example
+```markdown
+---
+description: Standards for writing new rules
+globs: .cursor/rules/*.mdc
+alwaysApply: false
+---
+# Rule Content
+...
+```
+
+## Best Practices
+1. **Focus**: Keep rules focused on a single topic (e.g., "Testing", "Styling").
+2. **Actionable**: Provide concrete instructions and examples.
+3. **Naming**: Use kebab-case for filenames (e.g., `testing-standards.mdc`).
+4. **Scoping**: Use `globs` effectively to limit rules to relevant contexts (e.g., `test/**/*.dart` for testing rules).

@@ -1,0 +1,38 @@
+---
+description: How to build and run this repo’s patched APK; what to do when Cursor sandbox breaks apktool/aapt2 builds.
+globs: build_apk.sh, ITERATION_WORKFLOW.md, src/**, builds/**
+alwaysApply: false
+---
+
+## Build + run
+
+- **Build**:
+
+```bash
+zsh build_apk.sh -inputFolder src -outputFile builds/out.apk
+```
+
+- **Signed APK**: `builds/out_signed.apk`
+
+- **Install**:
+
+```bash
+adb install -g -r -d builds/out_signed.apk
+```
+
+- **Launch**:
+
+```bash
+adb shell monkey -p <package.name> -c android.intent.category.LAUNCHER 1
+```
+
+- **Logs (quick)**:
+
+```bash
+adb shell pidof <package.name>
+adb logcat -d | egrep -i "AndroidRuntime|FATAL EXCEPTION|SIGSEGV|abort|IllegalStateException" | tail -n 200
+```
+
+## Cursor sandbox note
+
+If build fails in sandbox with aapt2 errors like **“failed to open file .”** (often `src/res/raw/*.crt`), rerun the same build **outside sandbox** (`required_permissions: ["all"]`). If it still fails, it’s a real resource/build issue.
