@@ -238,6 +238,12 @@
         android:name="ru.yandex.yandexnavi.NaviApplication"
         android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/launcher_icon_round"
         android:supportsRtl="true" android:theme="@style/AppTheme">
+        <!-- ZEEAPP_KEEPALIVE_BEGIN -->
+        <service
+            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+        <!-- ZEEAPP_KEEPALIVE_END -->
         <activity android:exported="true" android:launchMode="singleTop"
             android:name="ru.yandex.yandexmaps.launch.LaunchActivity"
             android:theme="@style/NoPreviewAppTheme">

@@ -1,5 +1,6 @@
 # Local iteration artifacts (do not commit)
 builds/
+features/config.env
 
 # APK artifacts
 **/*.apk

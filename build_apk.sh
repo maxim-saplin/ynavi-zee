@@ -22,6 +22,28 @@ if [ -z "$inputFolder" ] || [ -z "$outputFile" ]; then
   usage
 fi
 
+# Repo root (directory of this script)
+repoRoot="$(cd "$(dirname "$0")" && pwd)"
+
+# Apply feature config (in-place) if present
+configFile="$repoRoot/features/config.env"
+if [ ! -f "$configFile" ]; then
+  echo "Error: missing feature config: $configFile"
+  echo "Create it from: $repoRoot/features/config.env.example"
+  exit 1
+fi
+
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "Error: python3 not found (required to apply feature config)"
+  exit 1
+fi
+
+python3 "$repoRoot/tools/apply_feature_config.py" --config "$configFile" --repo-root "$repoRoot"
+if [ $? -ne 0 ]; then
+  echo "Error: Failed to apply feature config."
+  exit 1
+fi
+
 # Ensure the output directory exists
 outputDir=$(dirname "$outputFile")
 mkdir -p "$outputDir"
