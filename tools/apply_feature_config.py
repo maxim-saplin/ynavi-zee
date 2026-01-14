@@ -177,6 +177,36 @@ def apply(config_path: str, repo_root: str) -> None:
         ),
     )
 
+    map_activity = os.path.join(src_dir, "smali_classes2", "ru", "yandex", "yandexmaps", "app", "MapActivity.smali")
+    _toggle_marked_block(
+        map_activity,
+        "# ZEEAPP_KEEPALIVE_BEGIN",
+        "# ZEEAPP_KEEPALIVE_END",
+        cfg.keepalive_enabled,
+        enable_inner=(
+            "    new-instance v1, Landroid/content/Intent;\n"
+            "\n"
+            "    const-class v2, Lru/yandex/yandexnavi/keepalive/KeepAliveService;\n"
+            "\n"
+            "    invoke-direct {v1, v6, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V\n"
+            "\n"
+            "    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I\n"
+            "\n"
+            "    const/16 v3, 0x1a\n"
+            "\n"
+            "    if-lt v2, v3, :cond_keepalive_startService\n"
+            "\n"
+            "    invoke-virtual {v6, v1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
+            "\n"
+            "    goto :goto_keepalive_done\n"
+            "\n"
+            "    :cond_keepalive_startService\n"
+            "    invoke-virtual {v6, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
+            "\n"
+            "    :goto_keepalive_done\n"
+        ),
+    )
+
     print("Applied feature config:")
     print(f"- ZEEAPP_LETTERBOX_TOP_DIP={cfg.letterbox_top_dip}")
     print(f"- ZEEAPP_LETTERBOX_BOTTOM_DIP={cfg.letterbox_bottom_dip}")
