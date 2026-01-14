@@ -55,6 +55,10 @@ adb shell dumpsys activity services | grep -n "ru.yandex.yandexnavi/.keepalive.K
 adb shell dumpsys notification --noredact | grep -n "channel=keepalive"
 ```
 
+Notes:
+- The keepalive service is started from the **launcher activity** (`MapActivity`) so it works for normal icon launches (with or without an active route).
+- Deep-link launches also start it via `LaunchActivity`.
+
 ## More docs
 
 - `features/*.MD` (feature-specific notes)
