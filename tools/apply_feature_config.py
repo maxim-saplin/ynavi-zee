@@ -11,6 +11,7 @@ from dataclasses import dataclass
 class Config:
     letterbox_top_dip: str
     letterbox_bottom_dip: str
+    letterbox_left_dip: str
     ui_scale_percent: str
     keepalive_enabled: bool
 
@@ -50,6 +51,7 @@ def load_config(path: str) -> Config:
     return Config(
         letterbox_top_dip=get("ZEEAPP_LETTERBOX_TOP_DIP"),
         letterbox_bottom_dip=get("ZEEAPP_LETTERBOX_BOTTOM_DIP"),
+        letterbox_left_dip=get("ZEEAPP_LETTERBOX_LEFT_DIP"),
         ui_scale_percent=get("ZEEAPP_UI_SCALE_PERCENT"),
         keepalive_enabled=_bool_from_env(get("ZEEAPP_KEEPALIVE_ENABLED")),
     )
@@ -127,6 +129,7 @@ def apply(config_path: str, repo_root: str) -> None:
     dimens = os.path.join(src_dir, "res", "values", "dimens.xml")
     _replace_xml_value(dimens, "zeeapp_letterbox_top", f"{cfg.letterbox_top_dip}dip")
     _replace_xml_value(dimens, "zeeapp_letterbox_bottom", f"{cfg.letterbox_bottom_dip}dip")
+    _replace_xml_value(dimens, "zeeapp_letterbox_left", f"{cfg.letterbox_left_dip}dip")
 
     # 2) UI scale
     scaling = os.path.join(src_dir, "res", "values", "zeeapp_scaling.xml")
@@ -210,6 +213,7 @@ def apply(config_path: str, repo_root: str) -> None:
     print("Applied feature config:")
     print(f"- ZEEAPP_LETTERBOX_TOP_DIP={cfg.letterbox_top_dip}")
     print(f"- ZEEAPP_LETTERBOX_BOTTOM_DIP={cfg.letterbox_bottom_dip}")
+    print(f"- ZEEAPP_LETTERBOX_LEFT_DIP={cfg.letterbox_left_dip}")
     print(f"- ZEEAPP_UI_SCALE_PERCENT={cfg.ui_scale_percent}")
     print(f"- ZEEAPP_KEEPALIVE_ENABLED={'1' if cfg.keepalive_enabled else '0'}")
 

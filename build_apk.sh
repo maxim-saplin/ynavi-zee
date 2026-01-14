@@ -2,16 +2,21 @@
 
 # Function to display usage
 usage() {
-  echo "Usage: $0 -inputFolder <input_folder> -outputFile <output_file>"
+  echo "Usage: $0 -inputFolder <input_folder> -outputFile <output_file> [-configFile <config_file>]"
   echo "Example: $0 -inputFolder /path/to/input/folder -outputFile /path/to/output/file.apk"
+  echo "Example (explicit config): $0 -inputFolder src -outputFile builds/out.apk -configFile features/config.env"
   exit 1
 }
+
+# Repo root (directory of this script)
+repoRoot="$(cd "$(dirname "$0")" && pwd)"
 
 # Parse command line arguments
 while [[ "$#" -gt 0 ]]; do
   case $1 in
     -inputFolder) inputFolder="$2"; shift ;;
     -outputFile) outputFile="$2"; shift ;;
+    -configFile) configFile="$2"; shift ;;
     *) usage ;;
   esac
   shift
@@ -22,11 +27,15 @@ if [ -z "$inputFolder" ] || [ -z "$outputFile" ]; then
   usage
 fi
 
-# Repo root (directory of this script)
-repoRoot="$(cd "$(dirname "$0")" && pwd)"
+# Default config file (can be overridden by -configFile)
+if [ -z "$configFile" ]; then
+  configFile="$repoRoot/features/config.env"
+fi
+if [[ "$configFile" != /* ]]; then
+  configFile="$repoRoot/$configFile"
+fi
 
 # Apply feature config (in-place) if present
-configFile="$repoRoot/features/config.env"
 if [ ! -f "$configFile" ]; then
   echo "Error: missing feature config: $configFile"
   echo "Create it from: $repoRoot/features/config.env.example"
@@ -43,6 +52,18 @@ if [ $? -ne 0 ]; then
   echo "Error: Failed to apply feature config."
   exit 1
 fi
+
+# Apktool caches intermediates under <inputFolder>/build/ which makes git dirty and can cause
+# stale incremental packaging. Clean it up on exit (success or failure).
+cleanup_build_cache() {
+  if [ -n "$inputFolder" ]; then
+    rm -rf "$inputFolder/build" >/dev/null 2>&1 || true
+  fi
+}
+trap cleanup_build_cache EXIT
+
+# Optional pre-clean to avoid stale incremental output
+cleanup_build_cache
 
 # Ensure the output directory exists
 outputDir=$(dirname "$outputFile")

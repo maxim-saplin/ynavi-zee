@@ -4,7 +4,7 @@
   android:orientation="vertical"
   android:background="@color/bg_surface">
     <View android:layout_width="fill_parent" android:layout_height="@dimen/zeeapp_letterbox_top" />
-    <FrameLayout android:id="@id/map_activity_root" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1">
+    <FrameLayout android:id="@id/map_activity_root" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1" android:layout_marginLeft="@dimen/zeeapp_letterbox_left">
         <FrameLayout android:id="@id/maps_activity_memory_eater" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <ru.yandex.maps.appkit.map.MapWithControlsView android:id="@id/activity_search_map_view" android:tag="MAP_WITH_CONTROLS" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="yes" android:accessibilityTraversalBefore="@id/control_position_combined" android:accessibilityTraversalAfter="@id/control_zoom_out_touch_zone" />
         <ru.yandex.yandexmaps.common.views.insets.PaddingtonView android:layout_width="fill_parent" android:layout_height="fill_parent">
