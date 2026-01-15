@@ -2,6 +2,10 @@
 
 This repo contains a **decompiled Yandex Navigator APK** plus **repeatable patches** (resources + smali) to make it work better on Android 11 in-car head units (UI scaling, letterboxing, keepalive foreground service, etc.).
 
+Focus: modding Yandex Navi to look and work better on Chinese cars with awkward DPI. Tested on **Deepal S05** and **Zeekr 007**.
+
+Important: the current `src/` tree was produced via apktool decompilation and then iterated on. See `WORKFLOW.md` for the decompile commands and the rebuild caveats around signature checks.
+
 ## Repo layout
 
 - `src/`: apktool project (decoded resources + smali) used for building
@@ -11,7 +15,7 @@ This repo contains a **decompiled Yandex Navigator APK** plus **repeatable patch
 
 ## Configure features (build-time)
 
-1) Copy the example config:
+1) (Optional) reset the config from the example:
 
 ```bash
 cp features/config.env.example features/config.env
@@ -20,10 +24,12 @@ cp features/config.env.example features/config.env
 2) Edit `features/config.env`:
 
 - `ZEEAPP_LETTERBOX_TOP_DIP` / `ZEEAPP_LETTERBOX_BOTTOM_DIP`
+- `ZEEAPP_LETTERBOX_LEFT_DIP`
 - `ZEEAPP_UI_SCALE_PERCENT`
 - `ZEEAPP_KEEPALIVE_ENABLED` (`1` or `0`)
+- `ZEEAPP_KEEPALIVE_RECEIVER_EXPORTED_DEBUG` (`1` or `0`)
 
-The build applies these **in-place** to `src/` before building.
+The build applies these **in-place** to `src/` before building (via `tools/apply_feature_config.py`).
 
 ## Build
 
@@ -61,8 +67,5 @@ Notes:
 
 ## More docs
 
+- `WORKFLOW.md` (end-to-end build + iteration)
 - `features/*.MD` (feature-specific notes)
-- `APK_MODIFICATION_GUIDE.md`
-- `ITERATION_WORKFLOW.md`
-- `DECOMPILE_BUILD_LEARNINGS.md`
-
