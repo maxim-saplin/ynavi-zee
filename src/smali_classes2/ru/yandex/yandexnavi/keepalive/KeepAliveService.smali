@@ -259,23 +259,23 @@
 
     invoke-static {p0, v3, v1, v4}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
-    move-result-object v6
+    move-result-object v5
 
-    const-string v7, "gps"
+    const-string v1, "gps"
 
-    const-wide/32 v8, 0xea60
+    const-wide/32 v2, 0xea60
 
-    const/high16 v10, 0x00000000    # 0.0f
+    const/high16 v4, 0x00000000    # 0.0f
 
     :try_start
-    invoke-virtual {v0, v7, v8, v9, v10, v6}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/app/PendingIntent;)V
+    invoke-virtual/range {v0 .. v5}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/app/PendingIntent;)V
     :try_end
     .catchall {:try_start .. :try_end} :catch_all
 
-    const-string v11, "network"
+    const-string v1, "network"
 
     :try_start2
-    invoke-virtual {v0, v11, v8, v9, v10, v6}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/app/PendingIntent;)V
+    invoke-virtual/range {v0 .. v5}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/app/PendingIntent;)V
     :try_end2
     .catchall {:try_start2 .. :try_end2} :catch_all
 

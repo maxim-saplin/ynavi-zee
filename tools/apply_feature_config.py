@@ -14,6 +14,7 @@ class Config:
     letterbox_left_dip: str
     ui_scale_percent: str
     keepalive_enabled: bool
+    keepalive_receiver_exported_debug: bool
 
 
 def _read_env_file(path: str) -> dict[str, str]:
@@ -54,6 +55,9 @@ def load_config(path: str) -> Config:
         letterbox_left_dip=get("ZEEAPP_LETTERBOX_LEFT_DIP"),
         ui_scale_percent=get("ZEEAPP_UI_SCALE_PERCENT"),
         keepalive_enabled=_bool_from_env(get("ZEEAPP_KEEPALIVE_ENABLED")),
+        keepalive_receiver_exported_debug=_bool_from_env(
+            env.get("ZEEAPP_KEEPALIVE_RECEIVER_EXPORTED_DEBUG", "0")
+        ),
     )
 
 
@@ -146,7 +150,43 @@ def apply(config_path: str, repo_root: str) -> None:
             '        <service\n'
             '            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveService"\n'
             '            android:exported="false"\n'
-            '            android:foregroundServiceType="dataSync" />\n'
+            '            android:process=":persistent"\n'
+            '            android:foregroundServiceType="location|dataSync" />\n'
+            '        <receiver\n'
+            '            android:name="ru.yandex.yandexnavi.keepalive.BootKeepAliveReceiver"\n'
+            '            android:exported="false">\n'
+            '            <intent-filter>\n'
+            '                <action android:name="android.intent.action.BOOT_COMPLETED" />\n'
+            '                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />\n'
+            '                <action android:name="android.intent.action.PACKAGE_RESTARTED" />\n'
+            '            </intent-filter>\n'
+            '        </receiver>\n'
+            '        <receiver\n'
+            '            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveTriggerReceiver"\n'
+            f'            android:exported="{"true" if cfg.keepalive_receiver_exported_debug else "false"}">\n'
+            '            <intent-filter>\n'
+            '                <action android:name="ru.yandex.yandexnavi.keepalive.REASSERT" />\n'
+            '            </intent-filter>\n'
+            '        </receiver>\n'
+            '        <service\n'
+            '            android:name="ru.yandex.yandexnavi.keepalive.AnchorNotificationListenerService"\n'
+            '            android:exported="false"\n'
+            '            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">\n'
+            '            <intent-filter>\n'
+            '                <action android:name="android.service.notification.NotificationListenerService" />\n'
+            '            </intent-filter>\n'
+            '        </service>\n'
+            '        <service\n'
+            '            android:name="ru.yandex.yandexnavi.keepalive.AnchorAccessibilityService"\n'
+            '            android:exported="false"\n'
+            '            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">\n'
+            '            <intent-filter>\n'
+            '                <action android:name="android.accessibilityservice.AccessibilityService" />\n'
+            '            </intent-filter>\n'
+            '            <meta-data\n'
+            '                android:name="android.accessibilityservice"\n'
+            '                android:resource="@xml/keepalive_accessibility_service" />\n'
+            '        </service>\n'
         ),
     )
 
@@ -216,6 +256,10 @@ def apply(config_path: str, repo_root: str) -> None:
     print(f"- ZEEAPP_LETTERBOX_LEFT_DIP={cfg.letterbox_left_dip}")
     print(f"- ZEEAPP_UI_SCALE_PERCENT={cfg.ui_scale_percent}")
     print(f"- ZEEAPP_KEEPALIVE_ENABLED={'1' if cfg.keepalive_enabled else '0'}")
+    print(
+        "- ZEEAPP_KEEPALIVE_RECEIVER_EXPORTED_DEBUG="
+        f"{'1' if cfg.keepalive_receiver_exported_debug else '0'}"
+    )
 
 
 def main() -> int:
