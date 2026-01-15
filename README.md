@@ -2,7 +2,10 @@
 
 This repo contains a **decompiled Yandex Navigator APK** plus **repeatable patches** (resources + smali) to make it work better on Android 11 in-car head units (UI scaling, letterboxing, keepalive foreground service, etc.).
 
-Focus: modding Yandex Navi to look and work better on Chinese cars with awkward DPI. Tested on **Deepal S05** and **Zeekr 007**.
+Focus: modding Yandex Navi to look and work better on Chinese cars with awkward DPI. Tested on **Deepal S05** and **Zeekr 007**:
+- `build_deepal.sh`: UI scale 1.75x, map scale 1.3x, aggresive survival in bavkground, padded top and bottom to avoid overlapping system UI
+- `build_zeekr.sh`: : UI scale 1.75x, map scale 1.3x, padded top and bottom, padded left to avoid obstruction by left side panel (static, padding stays no matter if the panel is visible or not)
+
 
 Important: the current `src/` tree was produced via apktool decompilation and then iterated on. See `WORKFLOW.md` for the decompile commands and the rebuild caveats around signature checks.
 

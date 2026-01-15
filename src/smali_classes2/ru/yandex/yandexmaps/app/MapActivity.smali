@@ -1870,6 +1870,8 @@
 
     iput-object v2, v6, Lru/yandex/yandexmaps/app/MapActivity;->c:Lru/yandex/maps/appkit/map/MapWithControlsView;
 
+    invoke-static {v2}, Lru/yandex/yandexnavi/zee/ZeeUiScale;->applyMapScale(Landroid/view/View;)V
+
     invoke-interface {v0}, Lru/yandex/yandexmaps/app/di/components/p10;->Bj()Lru/yandex/yandexmaps/debug/m1;
 
     move-result-object v2

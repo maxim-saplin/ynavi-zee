@@ -5,4 +5,10 @@
          Example: 100% for baseline (no scaling), 75% for 0.75x scaling.
     -->
     <fraction name="zeeapp_ui_scale">175%</fraction>
+
+    <!-- Map content scale factor as a fraction (percentage).
+         Controls the size of map elements (labels, roads, icons) independently of UI density.
+         Default: 100% (baseline).
+    -->
+    <fraction name="zeeapp_map_scale">130%</fraction>
 </resources>

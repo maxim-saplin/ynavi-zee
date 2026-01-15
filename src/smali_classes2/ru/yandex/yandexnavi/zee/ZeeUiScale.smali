@@ -243,3 +243,82 @@
     return-object p0
 .end method
 
+.method public static applyMapScale(Landroid/view/View;)V
+    .locals 7
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "zeeapp_map_scale"
+
+    const-string v4, "fraction"
+
+    invoke-virtual {v1, v3, v4, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v2
+
+    if-nez v2, :cond_res_found
+
+    return-void
+
+    :cond_res_found
+    const/4 v3, 0x1
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v1, v2, v3, v4}, Landroid/content/res/Resources;->getFraction(III)F
+
+    move-result v5
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    cmpl-float v6, v5, v6
+
+    if-nez v6, :cond_check_scale
+
+    return-void
+
+    :cond_check_scale
+    const/4 v6, 0x0
+
+    cmpg-float v6, v5, v6
+
+    if-lez v6, :return_void
+
+    instance-of v6, p0, Lcom/yandex/mapkit/mapview/MapView;
+
+    if-nez v6, :cond_is_mapview
+
+    return-void
+
+    :cond_is_mapview
+    check-cast p0, Lcom/yandex/mapkit/mapview/MapView;
+
+    invoke-virtual {p0}, Lcom/yandex/mapkit/mapview/MapView;->getMapWindow()Lcom/yandex/mapkit/map/MapWindow;
+
+    move-result-object v0
+
+    if-eqz v0, :return_void
+
+    invoke-interface {v0, v5}, Lcom/yandex/mapkit/map/MapWindow;->setScaleFactor(F)V
+
+    :return_void
+    return-void
+
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    return-void
+.end method
+

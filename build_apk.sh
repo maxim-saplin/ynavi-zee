@@ -112,4 +112,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
+# Drop intermediates; keep only the signed artifact (and its idsig if present).
+rm -f "$outputFile" "$alignedApk"
+
 echo "APK built, aligned, and signed successfully: $signedApk"

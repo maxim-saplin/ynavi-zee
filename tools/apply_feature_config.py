@@ -13,6 +13,7 @@ class Config:
     letterbox_bottom_dip: str
     letterbox_left_dip: str
     ui_scale_percent: str
+    map_scale_percent: str
     keepalive_enabled: bool
     keepalive_receiver_exported_debug: bool
 
@@ -54,6 +55,7 @@ def load_config(path: str) -> Config:
         letterbox_bottom_dip=get("ZEEAPP_LETTERBOX_BOTTOM_DIP"),
         letterbox_left_dip=get("ZEEAPP_LETTERBOX_LEFT_DIP"),
         ui_scale_percent=get("ZEEAPP_UI_SCALE_PERCENT"),
+        map_scale_percent=get("ZEEAPP_MAP_SCALE_PERCENT"),
         keepalive_enabled=_bool_from_env(get("ZEEAPP_KEEPALIVE_ENABLED")),
         keepalive_receiver_exported_debug=_bool_from_env(
             env.get("ZEEAPP_KEEPALIVE_RECEIVER_EXPORTED_DEBUG", "0")
@@ -138,6 +140,7 @@ def apply(config_path: str, repo_root: str) -> None:
     # 2) UI scale
     scaling = os.path.join(src_dir, "res", "values", "zeeapp_scaling.xml")
     _replace_xml_value(scaling, "zeeapp_ui_scale", f"{cfg.ui_scale_percent}%")
+    _replace_xml_value(scaling, "zeeapp_map_scale", f"{cfg.map_scale_percent}%")
 
     # 3) Keepalive toggle (manifest + launch hook)
     manifest = os.path.join(src_dir, "AndroidManifest.xml")
@@ -255,6 +258,7 @@ def apply(config_path: str, repo_root: str) -> None:
     print(f"- ZEEAPP_LETTERBOX_BOTTOM_DIP={cfg.letterbox_bottom_dip}")
     print(f"- ZEEAPP_LETTERBOX_LEFT_DIP={cfg.letterbox_left_dip}")
     print(f"- ZEEAPP_UI_SCALE_PERCENT={cfg.ui_scale_percent}")
+    print(f"- ZEEAPP_MAP_SCALE_PERCENT={cfg.map_scale_percent}")
     print(f"- ZEEAPP_KEEPALIVE_ENABLED={'1' if cfg.keepalive_enabled else '0'}")
     print(
         "- ZEEAPP_KEEPALIVE_RECEIVER_EXPORTED_DEBUG="
