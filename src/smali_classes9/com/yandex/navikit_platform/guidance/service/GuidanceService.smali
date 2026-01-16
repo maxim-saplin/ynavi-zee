@@ -132,6 +132,7 @@
 .end method
 
 
+
 # virtual methods
 .method public final a()Lcom/yandex/navikit_platform/guidance/service/foreground/g;
     .locals 1
@@ -308,7 +309,23 @@
 .end method
 
 .method public final onStartCommand(Landroid/content/Intent;II)I
-    .locals 0
+    .locals 3
+
+    invoke-virtual {p0}, Lcom/yandex/navikit_platform/guidance/service/GuidanceService;->a()Lcom/yandex/navikit_platform/guidance/service/foreground/g;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/yandex/navikit_platform/guidance/service/GuidanceService;->b()Lcom/yandex/navikit_platform/guidance/service/h;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/yandex/navikit_platform/guidance/service/f;
+
+    const/4 p1, 0x0
+
+    invoke-direct {v2, v1, p1}, Lcom/yandex/navikit_platform/guidance/service/f;-><init>(Lcom/yandex/navikit_platform/guidance/service/h;I)V
+
+    invoke-interface {v0, v2}, Lcom/yandex/navikit_platform/guidance/service/foreground/g;->b(Lv31/d;)V
 
     const/4 p1, 0x2
 

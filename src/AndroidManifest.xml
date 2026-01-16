@@ -244,9 +244,14 @@
             android:exported="false"
             android:process=":persistent"
             android:foregroundServiceType="location|dataSync" />
+        <service
+            android:name="ru.yandex.yandexnavi.keepalive.UiKeepAliveService"
+            android:exported="false"
+            android:foregroundServiceType="location|dataSync" />
         <receiver
             android:name="ru.yandex.yandexnavi.keepalive.BootKeepAliveReceiver"
-            android:exported="false">
+            android:exported="true"
+            android:process=":persistent">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
@@ -255,7 +260,8 @@
         </receiver>
         <receiver
             android:name="ru.yandex.yandexnavi.keepalive.KeepAliveTriggerReceiver"
-            android:exported="false">
+            android:exported="false"
+            android:process=":persistent">
             <intent-filter>
                 <action android:name="ru.yandex.yandexnavi.keepalive.REASSERT" />
             </intent-filter>

@@ -8,6 +8,8 @@
 
 .field private static final NOTIFICATION_ID:I = 0x1
 
+.field public static sWakeLock:Landroid/os/PowerManager$WakeLock;
+
 
 # direct methods
 .method public constructor <init>()V
@@ -143,7 +145,7 @@
 .end method
 
 .method public onStartCommand(Landroid/content/Intent;II)I
-    .locals 2
+    .locals 5
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->buildNotification()Landroid/app/Notification;
 
@@ -151,11 +153,46 @@
 
     const/4 v1, 0x1
 
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x1d
+
+    if-lt v2, v3, :cond_fg_legacy
+
+    const/16 v2, 0x9
+
+    invoke-virtual {p0, v1, v0, v2}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
+
+    goto :cond_fg_done
+
+    :cond_fg_legacy
     invoke-virtual {p0, v1, v0}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;)V
+
+    :cond_fg_done
+    sget-object v2, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->sWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    if-eqz v2, :cond_wl_end
+
+    invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_wl_clear
+
+    invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->release()V
+
+    :cond_wl_clear
+    const/4 v2, 0x0
+
+    sput-object v2, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->sWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    :cond_wl_end
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->startPassiveLocation()V
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->ensureGuidanceStarted()V
+
+    invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->ensureUiKeepAliveStarted()V
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->scheduleReassert()V
 
@@ -165,7 +202,7 @@
 .end method
 
 .method private final scheduleReassert()V
-    .locals 8
+    .locals 10
 
     const-string v0, "alarm"
 
@@ -183,9 +220,9 @@
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    const-string v3, "ru.yandex.yandexnavi.keepalive.REASSERT"
+    const-string v8, "ru.yandex.yandexnavi.keepalive.REASSERT"
 
-    invoke-virtual {v1, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v1, v8}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const/4 v4, 0x0
 
@@ -203,17 +240,79 @@
 
     move-result-wide v2
 
-    const-wide/32 v4, 0x927c0
+    const-wide/32 v4, 0xea60
 
     add-long/2addr v2, v4
 
     const/4 v1, 0x2
 
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v4, 0x17
+    const/16 v9, 0x17
 
-    if-lt v3, v4, :cond_fallback
+    if-lt v8, v9, :cond_fallback
+
+    invoke-virtual {v0, v1, v2, v3, v7}, Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(IJLandroid/app/PendingIntent;)V
+
+    goto :cond_end
+
+    :cond_fallback
+    invoke-virtual {v0, v1, v2, v3, v7}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
+
+    :cond_end
+    return-void
+.end method
+
+.method private final scheduleReassertSoon()V
+    .locals 10
+
+    const-string v0, "alarm"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/AlarmManager;
+
+    if-eqz v0, :cond_end
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-class v2, Lru/yandex/yandexnavi/keepalive/KeepAliveTriggerReceiver;
+
+    invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v8, "ru.yandex.yandexnavi.keepalive.REASSERT"
+
+    invoke-virtual {v1, v8}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    const/4 v4, 0x1
+
+    const v5, 0x20000000
+
+    const v6, 0x40000000
+
+    or-int v5, v5, v6
+
+    invoke-static {p0, v4, v1, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v7
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    const-wide/32 v4, 0x3a98
+
+    add-long/2addr v2, v4
+
+    const/4 v1, 0x2
+
+    sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v9, 0x17
+
+    if-lt v8, v9, :cond_fallback
 
     invoke-virtual {v0, v1, v2, v3, v7}, Landroid/app/AlarmManager;->setExactAndAllowWhileIdle(IJLandroid/app/PendingIntent;)V
 
@@ -290,7 +389,7 @@
 .end method
 
 .method private final ensureGuidanceStarted()V
-    .locals 3
+    .locals 2
 
     new-instance v0, Landroid/content/Intent;
 
@@ -315,10 +414,38 @@
     return-void
 .end method
 
+.method private final ensureUiKeepAliveStarted()V
+    .locals 3
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lru/yandex/yandexnavi/keepalive/UiKeepAliveService;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x1a
+
+    if-lt v1, v2, :cond_bg
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    goto :cond_end
+
+    :cond_bg
+    invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    :cond_end
+    return-void
+.end method
+
 .method public onTaskRemoved(Landroid/content/Intent;)V
     .locals 0
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->startPassiveLocation()V
+
+    invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->scheduleReassertSoon()V
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->scheduleReassert()V
 
