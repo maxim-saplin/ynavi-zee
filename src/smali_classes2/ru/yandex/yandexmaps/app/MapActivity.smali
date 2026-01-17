@@ -627,8 +627,6 @@
 
     if-eqz p1, :cond_d
 
-    invoke-virtual {p1}, Lru/yandex/yandexmaps/common/insets/c;->d()V
-
     :cond_d
     invoke-virtual {p0}, Lru/yandex/yandexmaps/app/MapActivity;->y()Lru/yandex/yandexmaps/app/d2;
 
@@ -979,11 +977,7 @@
 .end method
 
 .method public final f(Landroid/view/View;Landroidx/core/view/f3;)Landroidx/core/view/f3;
-    .locals 1
-
-    iget-object v0, p0, Lru/yandex/yandexmaps/app/MapActivity;->b:Lru/yandex/yandexmaps/common/utils/i;
-
-    invoke-virtual {v0, p1, p2}, Lru/yandex/yandexmaps/common/utils/i;->f(Landroid/view/View;Landroidx/core/view/f3;)Landroidx/core/view/f3;
+    .locals 0
 
     return-object p2
 .end method
@@ -1931,11 +1925,9 @@
     :cond_14
     invoke-virtual {v6, v1}, Landroidx/appcompat/app/s;->setContentView(Landroid/view/View;)V
 
-    sget v2, Landroidx/core/view/p1;->b:I
+    const/4 v2, 0x0
 
-    invoke-static {v1, v6}, Landroidx/core/view/g1;->o(Landroid/view/View;Landroidx/core/view/i0;)V
-
-    invoke-static {v1}, Landroidx/core/view/e1;->c(Landroid/view/View;)V
+    invoke-static {v1, v2}, Landroidx/core/view/g1;->o(Landroid/view/View;Landroidx/core/view/i0;)V
 
     sget v2, Lru/yandex/yandexmaps/h;->map_activity_root:I
 
@@ -1945,11 +1937,7 @@
 
     check-cast v2, Landroid/widget/FrameLayout;
 
-    new-instance v3, Lru/yandex/yandexmaps/common/insets/c;
-
-    invoke-direct {v3, v6, v2}, Lru/yandex/yandexmaps/common/insets/c;-><init>(Landroidx/appcompat/app/s;Landroid/view/ViewGroup;)V
-
-    invoke-virtual {v3}, Lru/yandex/yandexmaps/common/insets/c;->b()V
+    const/4 v3, 0x0
 
     iput-object v3, v6, Lru/yandex/yandexmaps/app/MapActivity;->j:Lru/yandex/yandexmaps/common/insets/c;
 

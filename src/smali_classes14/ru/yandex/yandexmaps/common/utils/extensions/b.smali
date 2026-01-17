@@ -741,48 +741,11 @@
 .end method
 
 .method public static final L(Landroid/view/View;)I
-    .locals 3
+    .locals 1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 p0, 0x0
 
-    const/16 v1, 0x1e
-
-    const/4 v2, 0x0
-
-    if-lt v0, v1, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    invoke-static {p0}, Lcom/baseflow/permissionhandler/e;->g(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    invoke-static {p0}, Landroid/support/v4/media/session/a0;->n(Landroid/graphics/Insets;)I
-
-    move-result v2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
-
-    move-result v2
-
-    :cond_1
-    :goto_0
-    return v2
+    return p0
 .end method
 
 .method public static final L0(Landroid/app/Activity;Z)V

@@ -199,21 +199,9 @@
 .end method
 
 .method public final onAttachedToWindow()V
-    .locals 4
+    .locals 0
 
     invoke-super {p0}, Landroid/view/ViewGroup;->onAttachedToWindow()V
-
-    invoke-virtual {p0}, Lru/yandex/yandexmaps/common/views/insets/PaddingtonView;->getChild()Landroid/view/View;
-
-    move-result-object v0
-
-    iget v1, p0, Lru/yandex/yandexmaps/common/views/insets/PaddingtonView;->c:I
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x2
-
-    invoke-static {v0, v1, v2, v3}, Lru/yandex/yandexmaps/common/utils/extensions/b;->m1(Landroid/view/View;ILru/yandex/yandexmaps/app/redux/navigation/g1;I)V
 
     return-void
 .end method
@@ -401,19 +389,9 @@
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
 
-    move-result v0
+    move-result p1
 
-    iput v0, p0, Lru/yandex/yandexmaps/common/views/insets/PaddingtonView;->c:I
-
-    new-instance v0, Lqb3/b;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, p0}, Lqb3/b;-><init>(ILjava/lang/Object;)V
-
-    sget v1, Landroidx/core/view/p1;->b:I
-
-    invoke-static {p1, v0}, Landroidx/core/view/g1;->o(Landroid/view/View;Landroidx/core/view/i0;)V
+    iput p1, p0, Lru/yandex/yandexmaps/common/views/insets/PaddingtonView;->c:I
 
     return-void
 
