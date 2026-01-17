@@ -15,6 +15,7 @@ class Config:
     ui_scale_percent: str
     map_scale_percent: str
     keepalive_enabled: bool
+    keepalive_mode: str
     keepalive_receiver_exported_debug: bool
 
 
@@ -42,6 +43,22 @@ def _bool_from_env(v: str) -> bool:
     raise ValueError(f"Invalid boolean value: {v!r} (use 0/1)")
 
 
+def _keepalive_mode_from_env(env: dict[str, str], keepalive_enabled: bool) -> str:
+    if not keepalive_enabled:
+        return "off"
+
+    mode = env.get("ZEEAPP_KEEPALIVE_MODE")
+    if mode is None:
+        return "fgs"
+
+    normalized = mode.strip().lower()
+    if normalized not in ("fgs", "audio", "off"):
+        raise ValueError(
+            "Invalid ZEEAPP_KEEPALIVE_MODE: %r (allowed: fgs, audio, off)" % mode
+        )
+    return normalized
+
+
 def load_config(path: str) -> Config:
     env = _read_env_file(path)
 
@@ -50,13 +67,16 @@ def load_config(path: str) -> Config:
             raise KeyError(f"Missing required key {key} in {path}")
         return env[key]
 
+    keepalive_enabled = _bool_from_env(get("ZEEAPP_KEEPALIVE_ENABLED"))
+
     return Config(
         letterbox_top_dip=get("ZEEAPP_LETTERBOX_TOP_DIP"),
         letterbox_bottom_dip=get("ZEEAPP_LETTERBOX_BOTTOM_DIP"),
         letterbox_left_dip=get("ZEEAPP_LETTERBOX_LEFT_DIP"),
         ui_scale_percent=get("ZEEAPP_UI_SCALE_PERCENT"),
         map_scale_percent=get("ZEEAPP_MAP_SCALE_PERCENT"),
-        keepalive_enabled=_bool_from_env(get("ZEEAPP_KEEPALIVE_ENABLED")),
+        keepalive_enabled=keepalive_enabled,
+        keepalive_mode=_keepalive_mode_from_env(env, keepalive_enabled),
         keepalive_receiver_exported_debug=_bool_from_env(
             env.get("ZEEAPP_KEEPALIVE_RECEIVER_EXPORTED_DEBUG", "0")
         ),
@@ -142,22 +162,24 @@ def apply(config_path: str, repo_root: str) -> None:
     _replace_xml_value(scaling, "zeeapp_ui_scale", f"{cfg.ui_scale_percent}%")
     _replace_xml_value(scaling, "zeeapp_map_scale", f"{cfg.map_scale_percent}%")
 
-    # 3) Keepalive toggle (manifest + launch hook)
-    manifest = os.path.join(src_dir, "AndroidManifest.xml")
-    _toggle_marked_block(
-        manifest,
-        "<!-- ZEEAPP_KEEPALIVE_BEGIN -->",
-        "<!-- ZEEAPP_KEEPALIVE_END -->",
-        cfg.keepalive_enabled,
-        enable_inner=(
+    mode = cfg.keepalive_mode
+    enable_fgs = mode == "fgs"
+    enable_audio = mode == "audio"
+    receiver_exported = "true" if cfg.keepalive_receiver_exported_debug else "false"
+
+    keepalive_manifest_block = ""
+    if enable_fgs:
+        keepalive_manifest_block = (
             '        <service\n'
             '            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveService"\n'
             '            android:exported="false"\n'
             '            android:process=":persistent"\n'
+            '            android:stopWithTask="false"\n'
             '            android:foregroundServiceType="location|dataSync" />\n'
             '        <service\n'
             '            android:name="ru.yandex.yandexnavi.keepalive.UiKeepAliveService"\n'
             '            android:exported="false"\n'
+            '            android:stopWithTask="false"\n'
             '            android:foregroundServiceType="location|dataSync" />\n'
             '        <receiver\n'
             '            android:name="ru.yandex.yandexnavi.keepalive.BootKeepAliveReceiver"\n'
@@ -171,41 +193,52 @@ def apply(config_path: str, repo_root: str) -> None:
             '        </receiver>\n'
             '        <receiver\n'
             '            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveTriggerReceiver"\n'
-            f'            android:exported="{"true" if cfg.keepalive_receiver_exported_debug else "false"}"\n'
+            f'            android:exported="{receiver_exported}"\n'
             '            android:process=":persistent">\n'
             '            <intent-filter>\n'
             '                <action android:name="ru.yandex.yandexnavi.keepalive.REASSERT" />\n'
             '            </intent-filter>\n'
             '        </receiver>\n'
+        )
+    elif enable_audio:
+        keepalive_manifest_block = (
             '        <service\n'
-            '            android:name="ru.yandex.yandexnavi.keepalive.AnchorNotificationListenerService"\n'
+            '            android:name="ru.yandex.yandexnavi.keepalive.AudioKeepAliveService"\n'
             '            android:exported="false"\n'
-            '            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">\n'
+            '            android:stopWithTask="false"\n'
+            '            android:foregroundServiceType="mediaPlayback" />\n'
+            '        <receiver\n'
+            '            android:name="ru.yandex.yandexnavi.keepalive.AudioKeepAliveBootReceiver"\n'
+            '            android:exported="true"\n'
+            '            android:process=":persistent">\n'
             '            <intent-filter>\n'
-            '                <action android:name="android.service.notification.NotificationListenerService" />\n'
+            '                <action android:name="android.intent.action.BOOT_COMPLETED" />\n'
+            '                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />\n'
+            '                <action android:name="android.intent.action.PACKAGE_RESTARTED" />\n'
             '            </intent-filter>\n'
-            '        </service>\n'
-            '        <service\n'
-            '            android:name="ru.yandex.yandexnavi.keepalive.AnchorAccessibilityService"\n'
-            '            android:exported="false"\n'
-            '            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">\n'
+            '        </receiver>\n'
+            '        <receiver\n'
+            '            android:name="ru.yandex.yandexnavi.keepalive.AudioKeepAliveTriggerReceiver"\n'
+            f'            android:exported="{receiver_exported}"\n'
+            '            android:process=":persistent">\n'
             '            <intent-filter>\n'
-            '                <action android:name="android.accessibilityservice.AccessibilityService" />\n'
+            '                <action android:name="ru.yandex.yandexnavi.keepalive.AUDIO_REASSERT" />\n'
             '            </intent-filter>\n'
-            '            <meta-data\n'
-            '                android:name="android.accessibilityservice"\n'
-            '                android:resource="@xml/keepalive_accessibility_service" />\n'
-            '        </service>\n'
-        ),
+            '        </receiver>\n'
+        )
+
+    manifest = os.path.join(src_dir, "AndroidManifest.xml")
+    _set_marked_block_contents(
+        manifest,
+        "<!-- ZEEAPP_KEEPALIVE_BEGIN -->",
+        "<!-- ZEEAPP_KEEPALIVE_END -->",
+        keepalive_manifest_block,
     )
 
     launch = os.path.join(src_dir, "smali_classes14", "ru", "yandex", "yandexmaps", "launch", "LaunchActivity.smali")
-    _toggle_marked_block(
-        launch,
-        "# ZEEAPP_KEEPALIVE_BEGIN",
-        "# ZEEAPP_KEEPALIVE_END",
-        cfg.keepalive_enabled,
-        enable_inner=(
+    keepalive_launch_block = ""
+    if enable_fgs:
+        keepalive_launch_block = (
             "    new-instance v0, Landroid/content/Intent;\n"
             "\n"
             "    const-class v1, Lru/yandex/yandexnavi/keepalive/KeepAliveService;\n"
@@ -246,16 +279,42 @@ def apply(config_path: str, repo_root: str) -> None:
             "    invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
             "\n"
             "    :goto_ui_keepalive_done\n"
-        ),
+        )
+    elif enable_audio:
+        keepalive_launch_block = (
+            "    new-instance v0, Landroid/content/Intent;\n"
+            "\n"
+            "    const-class v1, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;\n"
+            "\n"
+            "    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V\n"
+            "\n"
+            "    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I\n"
+            "\n"
+            "    const/16 v2, 0x1a\n"
+            "\n"
+            "    if-lt v1, v2, :cond_audio_keepalive_startService\n"
+            "\n"
+            "    invoke-virtual {p0, v0}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
+            "\n"
+            "    goto :goto_audio_keepalive_done\n"
+            "\n"
+            "    :cond_audio_keepalive_startService\n"
+            "    invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
+            "\n"
+            "    :goto_audio_keepalive_done\n"
+        )
+
+    _set_marked_block_contents(
+        launch,
+        "# ZEEAPP_KEEPALIVE_BEGIN",
+        "# ZEEAPP_KEEPALIVE_END",
+        keepalive_launch_block,
     )
 
     map_activity = os.path.join(src_dir, "smali_classes2", "ru", "yandex", "yandexmaps", "app", "MapActivity.smali")
-    _toggle_marked_block(
-        map_activity,
-        "# ZEEAPP_KEEPALIVE_BEGIN",
-        "# ZEEAPP_KEEPALIVE_END",
-        cfg.keepalive_enabled,
-        enable_inner=(
+    keepalive_map_block = ""
+    if enable_fgs:
+        keepalive_map_block = (
             "    new-instance v1, Landroid/content/Intent;\n"
             "\n"
             "    const-class v2, Lru/yandex/yandexnavi/keepalive/KeepAliveService;\n"
@@ -296,7 +355,36 @@ def apply(config_path: str, repo_root: str) -> None:
             "    invoke-virtual {v6, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
             "\n"
             "    :goto_ui_keepalive_done\n"
-        ),
+        )
+    elif enable_audio:
+        keepalive_map_block = (
+            "    new-instance v1, Landroid/content/Intent;\n"
+            "\n"
+            "    const-class v2, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;\n"
+            "\n"
+            "    invoke-direct {v1, v6, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V\n"
+            "\n"
+            "    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I\n"
+            "\n"
+            "    const/16 v3, 0x1a\n"
+            "\n"
+            "    if-lt v2, v3, :cond_audio_keepalive_startService\n"
+            "\n"
+            "    invoke-virtual {v6, v1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
+            "\n"
+            "    goto :goto_audio_keepalive_done\n"
+            "\n"
+            "    :cond_audio_keepalive_startService\n"
+            "    invoke-virtual {v6, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
+            "\n"
+            "    :goto_audio_keepalive_done\n"
+        )
+
+    _set_marked_block_contents(
+        map_activity,
+        "# ZEEAPP_KEEPALIVE_BEGIN",
+        "# ZEEAPP_KEEPALIVE_END",
+        keepalive_map_block,
     )
 
     print("Applied feature config:")
@@ -306,6 +394,7 @@ def apply(config_path: str, repo_root: str) -> None:
     print(f"- ZEEAPP_UI_SCALE_PERCENT={cfg.ui_scale_percent}")
     print(f"- ZEEAPP_MAP_SCALE_PERCENT={cfg.map_scale_percent}")
     print(f"- ZEEAPP_KEEPALIVE_ENABLED={'1' if cfg.keepalive_enabled else '0'}")
+    print(f"- ZEEAPP_KEEPALIVE_MODE={cfg.keepalive_mode}")
     print(
         "- ZEEAPP_KEEPALIVE_RECEIVER_EXPORTED_DEBUG="
         f"{'1' if cfg.keepalive_receiver_exported_debug else '0'}"

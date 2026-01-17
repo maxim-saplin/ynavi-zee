@@ -240,16 +240,12 @@
         android:supportsRtl="true" android:theme="@style/AppTheme">
         <!-- ZEEAPP_KEEPALIVE_BEGIN -->
         <service
-            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveService"
+            android:name="ru.yandex.yandexnavi.keepalive.AudioKeepAliveService"
             android:exported="false"
-            android:process=":persistent"
-            android:foregroundServiceType="location|dataSync" />
-        <service
-            android:name="ru.yandex.yandexnavi.keepalive.UiKeepAliveService"
-            android:exported="false"
-            android:foregroundServiceType="location|dataSync" />
+            android:stopWithTask="false"
+            android:foregroundServiceType="mediaPlayback" />
         <receiver
-            android:name="ru.yandex.yandexnavi.keepalive.BootKeepAliveReceiver"
+            android:name="ru.yandex.yandexnavi.keepalive.AudioKeepAliveBootReceiver"
             android:exported="true"
             android:process=":persistent">
             <intent-filter>
@@ -259,32 +255,13 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveTriggerReceiver"
+            android:name="ru.yandex.yandexnavi.keepalive.AudioKeepAliveTriggerReceiver"
             android:exported="false"
             android:process=":persistent">
             <intent-filter>
-                <action android:name="ru.yandex.yandexnavi.keepalive.REASSERT" />
+                <action android:name="ru.yandex.yandexnavi.keepalive.AUDIO_REASSERT" />
             </intent-filter>
         </receiver>
-        <service
-            android:name="ru.yandex.yandexnavi.keepalive.AnchorNotificationListenerService"
-            android:exported="false"
-            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
-            <intent-filter>
-                <action android:name="android.service.notification.NotificationListenerService" />
-            </intent-filter>
-        </service>
-        <service
-            android:name="ru.yandex.yandexnavi.keepalive.AnchorAccessibilityService"
-            android:exported="false"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
-            <intent-filter>
-                <action android:name="android.accessibilityservice.AccessibilityService" />
-            </intent-filter>
-            <meta-data
-                android:name="android.accessibilityservice"
-                android:resource="@xml/keepalive_accessibility_service" />
-        </service>
         <!-- ZEEAPP_KEEPALIVE_END -->
         <activity android:exported="true" android:launchMode="singleTop"
             android:name="ru.yandex.yandexmaps.launch.LaunchActivity"
