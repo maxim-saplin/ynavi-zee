@@ -14,6 +14,8 @@
 # instance fields
 .field private audioTrack:Landroid/media/AudioTrack;
 
+.field private mediaSession:Landroid/media/session/MediaSession;
+
 
 # direct methods
 .method public constructor <init>()V
@@ -68,9 +70,11 @@
 .end method
 
 .method private final buildNotification()Landroid/app/Notification;
-    .locals 5
+    .locals 8
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->ensureChannel()V
+
+    invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->ensureMediaSession()V
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -118,6 +122,29 @@
 
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    const/16 v4, 0x15
+
+    if-lt v3, v4, :cond_media_done
+
+    iget-object v3, p0, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->mediaSession:Landroid/media/session/MediaSession;
+
+    if-eqz v3, :cond_media_done
+
+    new-instance v4, Landroid/app/Notification$MediaStyle;
+
+    invoke-direct {v4}, Landroid/app/Notification$MediaStyle;-><init>()V
+
+    invoke-virtual {v3}, Landroid/media/session/MediaSession;->getSessionToken()Landroid/media/session/MediaSession$Token;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Landroid/app/Notification$MediaStyle;->setMediaSession(Landroid/media/session/MediaSession$Token;)Landroid/app/Notification$MediaStyle;
+
+    invoke-virtual {v0, v4}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
+
+    :cond_media_done
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
     const/16 v4, 0x1f
 
     if-lt v3, v4, :cond_1
@@ -132,8 +159,55 @@
     return-object v0
 .end method
 
+.method private final ensureMediaSession()V
+    .locals 6
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_end
+
+    iget-object v0, p0, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->mediaSession:Landroid/media/session/MediaSession;
+
+    if-nez v0, :cond_end
+
+    new-instance v0, Landroid/media/session/MediaSession;
+
+    const-string v1, "ynavi-keepalive"
+
+    invoke-direct {v0, p0, v1}, Landroid/media/session/MediaSession;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/media/session/MediaSession;->setActive(Z)V
+
+    new-instance v1, Landroid/media/session/PlaybackState$Builder;
+
+    invoke-direct {v1}, Landroid/media/session/PlaybackState$Builder;-><init>()V
+
+    const/4 v2, 0x3
+
+    const-wide/16 v3, 0x0
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    invoke-virtual {v1, v2, v3, v4, v5}, Landroid/media/session/PlaybackState$Builder;->setState(IJF)Landroid/media/session/PlaybackState$Builder;
+
+    invoke-virtual {v1}, Landroid/media/session/PlaybackState$Builder;->build()Landroid/media/session/PlaybackState;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/media/session/MediaSession;->setPlaybackState(Landroid/media/session/PlaybackState;)V
+
+    iput-object v0, p0, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->mediaSession:Landroid/media/session/MediaSession;
+
+    :cond_end
+    return-void
+.end method
+
 .method private final startAudioTrack()V
-    .locals 12
+    .locals 15
 
     iget-object v0, p0, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->audioTrack:Landroid/media/AudioTrack;
 
@@ -185,9 +259,70 @@
     :cond_buf_ok
     move v5, v10
 
+    sget v7, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v9, 0x15
+
+    if-lt v7, v9, :cond_create_legacy
+
+    new-instance v7, Landroid/media/AudioAttributes$Builder;
+
+    invoke-direct {v7}, Landroid/media/AudioAttributes$Builder;-><init>()V
+
+    const/4 v9, 0x1
+
+    invoke-virtual {v7, v9}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
+
+    const/4 v9, 0x2
+
+    invoke-virtual {v7, v9}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
+
+    invoke-virtual {v7}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
+
+    move-result-object v7
+
+    new-instance v9, Landroid/media/AudioFormat$Builder;
+
+    invoke-direct {v9}, Landroid/media/AudioFormat$Builder;-><init>()V
+
+    const/16 v10, 0x1f40
+
+    invoke-virtual {v9, v10}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
+
+    const/4 v10, 0x4
+
+    invoke-virtual {v9, v10}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
+
+    const/4 v10, 0x2
+
+    invoke-virtual {v9, v10}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
+
+    invoke-virtual {v9}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
+
+    move-result-object v9
+
+    move-object v1, v7
+
+    move-object v2, v9
+
+    move v3, v5
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    new-instance v0, Landroid/media/AudioTrack;
+
+    invoke-direct/range {v0 .. v5}, Landroid/media/AudioTrack;-><init>(Landroid/media/AudioAttributes;Landroid/media/AudioFormat;III)V
+
+    goto :goto_track_ready
+
+    :cond_create_legacy
     new-instance v0, Landroid/media/AudioTrack;
 
     invoke-direct/range {v0 .. v6}, Landroid/media/AudioTrack;-><init>(IIIIII)V
+
+    :goto_track_ready
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getState()I
 
@@ -381,6 +516,8 @@
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->ensureChannel()V
 
+    invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->ensureMediaSession()V
+
     return-void
 .end method
 
@@ -391,13 +528,24 @@
 
     iget-object v0, p0, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->audioTrack:Landroid/media/AudioTrack;
 
-    if-eqz v0, :cond_end
+    if-eqz v0, :cond_release_session
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->release()V
 
     const/4 v0, 0x0
 
     iput-object v0, p0, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->audioTrack:Landroid/media/AudioTrack;
+
+    :cond_release_session
+    iget-object v0, p0, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->mediaSession:Landroid/media/session/MediaSession;
+
+    if-eqz v0, :cond_end
+
+    invoke-virtual {v0}, Landroid/media/session/MediaSession;->release()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->mediaSession:Landroid/media/session/MediaSession;
 
     :cond_end
     return-void
