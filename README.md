@@ -1,11 +1,24 @@
 # ynavi-zee
 
-This repo contains a **decompiled Yandex Navigator APK** plus **repeatable patches** (resources + smali) to make it work better on Android 11 in-car head units (UI scaling, letterboxing, keepalive foreground service, etc.).
+This repo contains a **decompiled Yandex Navigator APK** (version 27.0.2 as of time of writing) plus **repeatable patches** (resources + smali) to make it work better on Android 11 in-car head units (UI scaling, letterboxing, keepalive foreground service, etc.).
 
 Focus: modding Yandex Navi to look and work better on Chinese cars with awkward DPI. Tested on **Deepal S05** and **Zeekr 007**:
-- `build_deepal.sh`: UI scale 1.75x, map scale 1.3x, aggresive survival in bavkground, padded top and bottom to avoid overlapping system UI
-- `build_zeekr.sh`: : UI scale 1.75x, map scale 1.3x, padded top and bottom, padded left to avoid obstruction by left side panel (static, padding stays no matter if the panel is visible or not)
+- `build_deepal.sh`: UI scale 1.75x, map scale 1.3x, aggresive survival in background (audio mode, mimicing to be media player to survive beining minimized and still vocing notificaions along the route), padded top and bottom to avoid overlapping system UI
+- `build_zeekr.sh`: : UI scale 1.75x, map scale 1.3x, padded top and bottom, padded left to avoid obstruction by left side panel (static, padding stays no matter if the panel is visible or not), aggresive survival in background (just in case, seems not a problem but enabled in fgs mode while fighitng Deepal OS killing process)
 
+## APKs
+
+**Ready-to-install builds** are available in the [modded_apks/](modded_apks) folder, signed with AOSP debug key (used by default Zeekr OS 6 for it's system apps):
+
+- **[deepal_signed_v10.apk](modded_apks/deepal_signed_v10.apk)** – Deepal S05 preset (UI 1.75x, map 1.3x, top/bottom padding 91dp, audio keepalive)
+- **[zeekr_signed_v10.apk](modded_apks/zeekr_signed_v10.apk)** – Zeekr 007 preset (UI 1.75x, map 1.3x, top 70dp, bottom 10dp, left 480dp, FGS keepalive)
+
+Download and install via ADB or copying to Flash Drive and installing via UI:
+```bash
+adb install -g -r -d modded_apks/deepal_signed_v10.apk
+# or
+adb install -g -r -d modded_apks/zeekr_signed_v10.apk
+```
 
 Important: the current `src/` tree was produced via apktool decompilation and then iterated on. See `WORKFLOW.md` for the decompile commands and the rebuild caveats around signature checks.
 

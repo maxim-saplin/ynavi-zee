@@ -1,0 +1,2 @@
+- Under guidance mode route widgets (e.g. next turn to the left and speed limit and current speed shilds to the right) get shifted down due to letterboxing, see features/ISSUE_WITH_GUIDANCE_OFFSETS.md
+- Theme change in the system updates map color (e.g. from dark to light) but doesn't change controls color, e.g. you can have dark buttons on top of light map
