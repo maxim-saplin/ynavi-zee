@@ -22,6 +22,8 @@ adb install -g -r -d modded_apks/zeekr_signed_v10.apk
 
 Important: the current `src/` tree was produced via apktool decompilation and then iterated on. See `WORKFLOW.md` for the decompile commands and the rebuild caveats around signature checks.
 
+<img width="2560" height="960" alt="image" src="https://github.com/user-attachments/assets/4e988846-5dc8-4b1e-8840-978f7c487522" />
+
 ## Repo layout
 
 - `src/`: apktool project (decoded resources + smali) used for building
