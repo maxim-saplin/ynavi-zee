@@ -389,7 +389,7 @@
 .end method
 
 .method private final ensureGuidanceStarted()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Landroid/content/Intent;
 
