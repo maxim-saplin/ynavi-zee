@@ -169,6 +169,25 @@
     invoke-virtual {p0, v1, v0}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;)V
 
     :cond_fg_done
+    if-eqz p1, :cond_check_delay
+
+    const-string v1, "DELAY_WORK"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_check_delay
+
+    invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->scheduleReassertSoon()V
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_check_delay
     sget-object v2, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->sWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v2, :cond_wl_end

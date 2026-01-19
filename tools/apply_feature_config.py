@@ -3,7 +3,6 @@
 import argparse
 import os
 import re
-import sys
 from dataclasses import dataclass
 
 
@@ -245,6 +244,12 @@ def apply(config_path: str, repo_root: str) -> None:
             "\n"
             "    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V\n"
             "\n"
+            "    const-string v1, \"DELAY_WORK\"\n"
+            "\n"
+            "    const/4 v2, 0x1\n"
+            "\n"
+            "    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;\n"
+            "\n"
             "    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I\n"
             "\n"
             "    const/16 v2, 0x1a\n"
@@ -259,26 +264,6 @@ def apply(config_path: str, repo_root: str) -> None:
             "    invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
             "\n"
             "    :goto_keepalive_done\n"
-            "    new-instance v0, Landroid/content/Intent;\n"
-            "\n"
-            "    const-class v1, Lru/yandex/yandexnavi/keepalive/UiKeepAliveService;\n"
-            "\n"
-            "    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V\n"
-            "\n"
-            "    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I\n"
-            "\n"
-            "    const/16 v2, 0x1a\n"
-            "\n"
-            "    if-lt v1, v2, :cond_ui_keepalive_startService\n"
-            "\n"
-            "    invoke-virtual {p0, v0}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
-            "\n"
-            "    goto :goto_ui_keepalive_done\n"
-            "\n"
-            "    :cond_ui_keepalive_startService\n"
-            "    invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
-            "\n"
-            "    :goto_ui_keepalive_done\n"
         )
     elif enable_audio:
         keepalive_launch_block = (
@@ -321,6 +306,12 @@ def apply(config_path: str, repo_root: str) -> None:
             "\n"
             "    invoke-direct {v1, v6, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V\n"
             "\n"
+            "    const-string v2, \"DELAY_WORK\"\n"
+            "\n"
+            "    const/4 v3, 0x1\n"
+            "\n"
+            "    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;\n"
+            "\n"
             "    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I\n"
             "\n"
             "    const/16 v3, 0x1a\n"
@@ -335,26 +326,6 @@ def apply(config_path: str, repo_root: str) -> None:
             "    invoke-virtual {v6, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
             "\n"
             "    :goto_keepalive_done\n"
-            "    new-instance v1, Landroid/content/Intent;\n"
-            "\n"
-            "    const-class v2, Lru/yandex/yandexnavi/keepalive/UiKeepAliveService;\n"
-            "\n"
-            "    invoke-direct {v1, v6, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V\n"
-            "\n"
-            "    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I\n"
-            "\n"
-            "    const/16 v3, 0x1a\n"
-            "\n"
-            "    if-lt v2, v3, :cond_ui_keepalive_startService\n"
-            "\n"
-            "    invoke-virtual {v6, v1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
-            "\n"
-            "    goto :goto_ui_keepalive_done\n"
-            "\n"
-            "    :cond_ui_keepalive_startService\n"
-            "    invoke-virtual {v6, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
-            "\n"
-            "    :goto_ui_keepalive_done\n"
         )
     elif enable_audio:
         keepalive_map_block = (

@@ -1809,6 +1809,12 @@
 
     invoke-direct {v1, v6, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
+    const-string v2, "DELAY_WORK"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x1a
@@ -1823,26 +1829,6 @@
     invoke-virtual {v6, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     :goto_keepalive_done
-    new-instance v1, Landroid/content/Intent;
-
-    const-class v2, Lru/yandex/yandexnavi/keepalive/UiKeepAliveService;
-
-    invoke-direct {v1, v6, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0x1a
-
-    if-lt v2, v3, :cond_ui_keepalive_startService
-
-    invoke-virtual {v6, v1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
-
-    goto :goto_ui_keepalive_done
-
-    :cond_ui_keepalive_startService
-    invoke-virtual {v6, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-
-    :goto_ui_keepalive_done
     # ZEEAPP_KEEPALIVE_END
 
     invoke-interface {v0}, Lru/yandex/yandexmaps/app/di/components/p10;->i6()Lru/yandex/yandexmaps/resources/c;
