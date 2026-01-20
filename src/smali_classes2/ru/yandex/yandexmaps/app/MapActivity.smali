@@ -842,6 +842,12 @@
 
     move-result-object p1
 
+    # ZEEAPP: do not override night bits in override Configuration
+    # Keep only UI_MODE_TYPE_* bits; clear UI_MODE_NIGHT_* so delegate can apply day/night
+    iget v0, p1, Landroid/content/res/Configuration;->uiMode:I
+    and-int/lit8 v0, v0, 0x0f
+    iput v0, p1, Landroid/content/res/Configuration;->uiMode:I
+
     :try_start_0
     invoke-virtual {p0, p1}, Landroid/view/ContextThemeWrapper;->applyOverrideConfiguration(Landroid/content/res/Configuration;)V
     :try_end_0

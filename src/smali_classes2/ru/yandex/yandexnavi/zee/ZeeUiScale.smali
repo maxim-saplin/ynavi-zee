@@ -64,6 +64,11 @@
 
     invoke-direct {v5, p1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
 
+    # ZEEAPP: ensure night mode remains dynamic; clear UI_MODE_NIGHT bits
+    iget v6, v5, Landroid/content/res/Configuration;->uiMode:I
+    and-int/lit8 v6, v6, 0x0f
+    iput v6, v5, Landroid/content/res/Configuration;->uiMode:I
+
     iget v6, v5, Landroid/content/res/Configuration;->densityDpi:I
 
     if-lez v6, :fill_from_ctx
@@ -202,6 +207,11 @@
     new-instance v8, Landroid/content/res/Configuration;
 
     invoke-direct {v8, v6}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+
+    # ZEEAPP: ensure night mode stays controlled by AppCompat; clear UI_MODE_NIGHT bits
+    iget v6, v8, Landroid/content/res/Configuration;->uiMode:I
+    and-int/lit8 v6, v6, 0x0f
+    iput v6, v8, Landroid/content/res/Configuration;->uiMode:I
 
     int-to-float v7, v7
 
