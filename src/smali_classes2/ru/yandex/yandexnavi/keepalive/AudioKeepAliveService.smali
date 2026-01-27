@@ -74,8 +74,6 @@
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->ensureChannel()V
 
-    invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->ensureMediaSession()V
-
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
@@ -115,34 +113,6 @@
     const/4 v2, -0x2
 
     invoke-virtual {v0, v2}, Landroid/app/Notification$Builder;->setPriority(I)Landroid/app/Notification$Builder;
-
-    const-string v3, "transport"
-
-    invoke-virtual {v0, v3}, Landroid/app/Notification$Builder;->setCategory(Ljava/lang/String;)Landroid/app/Notification$Builder;
-
-    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v4, 0x15
-
-    if-lt v3, v4, :cond_media_done
-
-    iget-object v3, p0, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->mediaSession:Landroid/media/session/MediaSession;
-
-    if-eqz v3, :cond_media_done
-
-    new-instance v4, Landroid/app/Notification$MediaStyle;
-
-    invoke-direct {v4}, Landroid/app/Notification$MediaStyle;-><init>()V
-
-    invoke-virtual {v3}, Landroid/media/session/MediaSession;->getSessionToken()Landroid/media/session/MediaSession$Token;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Landroid/app/Notification$MediaStyle;->setMediaSession(Landroid/media/session/MediaSession$Token;)Landroid/app/Notification$MediaStyle;
-
-    invoke-virtual {v0, v4}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
-
-    :cond_media_done
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x1f
@@ -213,6 +183,24 @@
 
     if-eqz v0, :cond_create
 
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->getState()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_track_state_ok
+
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->release()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->audioTrack:Landroid/media/AudioTrack;
+
+    goto :cond_create
+
+    :cond_track_state_ok
+
     invoke-virtual {v0}, Landroid/media/AudioTrack;->getPlayState()I
 
     move-result v1
@@ -269,11 +257,11 @@
 
     invoke-direct {v7}, Landroid/media/AudioAttributes$Builder;-><init>()V
 
-    const/4 v9, 0x1
+    const/16 v9, 0xc
 
     invoke-virtual {v7, v9}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
 
-    const/4 v9, 0x2
+    const/4 v9, 0x1
 
     invoke-virtual {v7, v9}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
 
@@ -516,8 +504,6 @@
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->ensureChannel()V
 
-    invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->ensureMediaSession()V
-
     return-void
 .end method
 
@@ -576,6 +562,42 @@
     invoke-virtual {p0, v1, v0}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;)V
 
     :cond_fg_done
+    :try_start_ui
+    new-instance v2, Landroid/content/Intent;
+
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+
+    const-string v3, "ru.yandex.yandexnavi"
+
+    const-string v4, "ru.yandex.yandexnavi.keepalive.UiKeepAliveService"
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v2
+
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x1a
+
+    if-lt v3, v4, :cond_start_ui_legacy
+
+    invoke-virtual {p0, v2}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    goto :cond_start_ui_done
+
+    :cond_start_ui_legacy
+    invoke-virtual {p0, v2}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    :cond_start_ui_done
+    :try_end_ui
+    .catch Ljava/lang/Exception; {:try_start_ui .. :try_end_ui} :catch_ui
+
+    goto :after_ui
+
+    :catch_ui
+    move-exception v2
+
+    :after_ui
     sget-object v2, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;->sWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v2, :cond_wl_end
