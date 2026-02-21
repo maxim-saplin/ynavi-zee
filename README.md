@@ -83,7 +83,18 @@ Notes:
 - The keepalive service is started from the **launcher activity** (`MapActivity`) so it works for normal icon launches (with or without an active route).
 - Deep-link launches also start it via `LaunchActivity`.
 
+## HUD / CarApp cluster patches
+
+The `hud` branch carries additional smali patches that enable Phase0 stub-host
+binding and cluster surface rendering on the Zeekr HUD (Display 2). These
+patches bypass the host allowlist, eliminate the AA lock screen, fix SDK 31+
+crash paths, and remove the `ActionStrip` empty-list guard.
+
+See **[MINIMAP.md](MINIMAP.md)** for the full patch inventory, discovery
+timeline, and the working bind strategy.
+
 ## More docs
 
+- `MINIMAP.md` (HUD patch tracker + discoveries)
 - `WORKFLOW.md` (end-to-end build + iteration)
 - `features/*.MD` (feature-specific notes)

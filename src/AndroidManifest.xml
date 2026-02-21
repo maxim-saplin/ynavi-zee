@@ -240,18 +240,18 @@
         android:supportsRtl="true" android:theme="@style/AppTheme">
         <!-- ZEEAPP_KEEPALIVE_BEGIN -->
         <service
-            android:name="ru.yandex.yandexnavi.keepalive.AudioKeepAliveService"
+            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveService"
             android:exported="false"
             android:process=":persistent"
             android:stopWithTask="false"
-            android:foregroundServiceType="mediaPlayback" />
+            android:foregroundServiceType="location|dataSync" />
         <service
             android:name="ru.yandex.yandexnavi.keepalive.UiKeepAliveService"
             android:exported="false"
             android:stopWithTask="false"
             android:foregroundServiceType="location|dataSync" />
         <receiver
-            android:name="ru.yandex.yandexnavi.keepalive.AudioKeepAliveBootReceiver"
+            android:name="ru.yandex.yandexnavi.keepalive.BootKeepAliveReceiver"
             android:exported="true"
             android:process=":persistent">
             <intent-filter>
@@ -261,11 +261,11 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="ru.yandex.yandexnavi.keepalive.AudioKeepAliveTriggerReceiver"
+            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveTriggerReceiver"
             android:exported="false"
             android:process=":persistent">
             <intent-filter>
-                <action android:name="ru.yandex.yandexnavi.keepalive.AUDIO_REASSERT" />
+                <action android:name="ru.yandex.yandexnavi.keepalive.REASSERT" />
             </intent-filter>
         </receiver>
         <!-- ZEEAPP_KEEPALIVE_END -->

@@ -245,11 +245,7 @@
 
     const/4 v4, 0x0
 
-    const v5, 0x20000000
-
-    const v6, 0x40000000
-
-    or-int v5, v5, v6
+    const v5, 0xc000000
 
     invoke-static {p0, v4, v1, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
@@ -307,11 +303,7 @@
 
     const/4 v4, 0x1
 
-    const v5, 0x20000000
-
-    const v6, 0x40000000
-
-    or-int v5, v5, v6
+    const v5, 0xc000000
 
     invoke-static {p0, v4, v1, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
@@ -369,11 +361,7 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x20000000
-
-    const v5, 0x40000000
-
-    or-int v4, v4, v5
+    const v4, 0xc000000
 
     invoke-static {p0, v3, v1, v4}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 

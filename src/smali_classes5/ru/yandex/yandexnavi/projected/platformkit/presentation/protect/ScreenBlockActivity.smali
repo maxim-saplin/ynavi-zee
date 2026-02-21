@@ -106,6 +106,10 @@
 
     invoke-super {p0, p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
+    # PATCHED: Immediately finish ScreenBlockActivity — never show the AA lock screen.
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
+    return-void
+
     invoke-virtual {p0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object p1
