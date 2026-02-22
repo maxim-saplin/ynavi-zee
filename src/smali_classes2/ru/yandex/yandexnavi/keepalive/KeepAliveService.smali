@@ -209,7 +209,9 @@
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->startPassiveLocation()V
 
-    invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->ensureGuidanceStarted()V
+    # ensureGuidanceStarted removed: GuidanceService relies on full app DI init
+    # which is unavailable when started from :persistent process cold.
+    # The app's own code starts it when NavigatorActivity is active.
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->ensureUiKeepAliveStarted()V
 

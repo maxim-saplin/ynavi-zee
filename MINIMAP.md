@@ -150,6 +150,35 @@ build time. The working tree values reflect the Zeekr preset.
 
 ---
 
+### P8 — `KeepAliveService` GuidanceService cold-start crash loop
+
+**File:** `src/smali_classes2/ru/yandex/yandexnavi/keepalive/KeepAliveService.smali`
+
+**What:** Removed the `ensureGuidanceStarted()` call from
+`KeepAliveService.onStartCommand()`. This method called
+`startForegroundService()` for `GuidanceService` from the `:persistent`
+process.
+
+**Why:** On the Zeekr head unit, the OS aggressively kills the main process
+while `:persistent` survives. When `ensureGuidanceStarted()` fired, Android
+cold-started a **new** main process solely for `GuidanceService` — with no
+Activity or Dagger DI graph. The lazy `foregroundStarter` pipeline could not
+resolve in time, so `startForeground()` was never called within the 10-second
+deadline. This produced a repeating cycle every ~30s:
+`ForegroundServiceDidNotStartInTimeException` → ANR → process killed →
+keepalive alarm reasserts → same failure. The loop was not observable on
+emulator because the main process typically stays alive there, so the DI chain
+resolves before the deadline.
+
+`GuidanceService` is now only started by the app's own internal code when the
+main process is fully initialized (e.g., `NavigatorActivity` is active).
+
+**Discovered:** On-car testing 2026-02-22. Logcat showed 5+ consecutive ANRs
+with identical reason: `Context.startForegroundService() did not then call
+Service.startForeground(): ServiceRecord{… GuidanceService}`.
+
+---
+
 ## Key discoveries (chronological)
 
 | Date | Doc | Finding |
