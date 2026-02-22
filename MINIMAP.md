@@ -179,6 +179,39 @@ Service.startForeground(): ServiceRecord{… GuidanceService}`.
 
 ---
 
+### P9 — Yandex Plus paywall / country-gate bypass
+
+**File:** `src/smali_classes5/ru/yandex/yandexnavi/projected/platformkit/domain/usecase/paywall/b.smali`
+
+**What:** Method `a(paywall/b)` originally computed a paywall state via a
+cascade of checks: NavigationSuspended → DriveWall → HasPlus → CanSubscribe →
+NotAvailable (default). Patched to always emit `HasPlus` (`ff3/k` singleton)
+unconditionally, skipping all subscription and country-availability checks.
+
+**Why:** On the Zeekr platform, YNavi's server-side Plus subscription check
+determines the region does not support Yandex Plus projected mode. The session
+emits `NotAvailable` (`ff3/i`), which triggers `wd3/d` to push screen `jh3/d`
+("PLUS_COUNTRY_UNAVAILABLE" `MessageTemplate`) onto the CarApp screen stack.
+This screen never registers a `SurfaceCallback`, so the host never receives a
+surface to render navigation on Display 2.
+
+With this patch:
+- `protect/e` always gets `HasPlus` → `td3/k.a()` sees `false` → creates
+  session component via `protect/f.b()`.
+- `kh3/c.g()` receives a non-null component → creates the landing delegate →
+  pushes the real navigation screens (SurfaceCallback enabled).
+- No paywall/error screen is pushed.
+
+**Discovered:** On-car testing 2026-02-22. Diagnostic flow:
+1. Phase0 CarApp host binds successfully, handshake/lifecycle all OK.
+2. `getTemplate` returns `MessageTemplate` (screen `jh3.d`).
+3. `setSurfaceCallback` never fires → watchdog kills YNavi → no HUD output.
+4. Traced `jh3.d` → `PLUS_COUNTRY_UNAVAILABLE` error screen.
+5. Traced paywall state chain: `paywall/b.a()` → `ff3/i NotAvailable` (default).
+6. Fix: always emit `HasPlus` to bypass the entire gate.
+
+---
+
 ## Key discoveries (chronological)
 
 | Date | Doc | Finding |
