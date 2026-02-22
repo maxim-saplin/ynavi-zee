@@ -11,6 +11,13 @@ usage() {
 # Repo root (directory of this script)
 repoRoot="$(cd "$(dirname "$0")" && pwd)"
 
+# Detect OS for tool binaries
+if [[ "$(uname -s)" == "Linux" ]]; then
+  toolsDir="$repoRoot/linux"
+else
+  toolsDir="$repoRoot"
+fi
+
 # Parse command line arguments
 while [[ "$#" -gt 0 ]]; do
   case $1 in
@@ -90,14 +97,14 @@ if [ $? -ne 0 ]; then
 fi
 
 # Align APK
-./zipalign -p 4 "$outputFile" "$alignedApk"
+"$toolsDir/zipalign" -p 4 "$outputFile" "$alignedApk"
 if [ $? -ne 0 ]; then
   echo "Error: Failed to align APK with zipalign."
   exit 1
 fi
 
 # Sign APK
-./apksigner sign \
+"$toolsDir/apksigner" sign \
   --ks "$keystorePath" \
   --ks-key-alias "$keyAlias" \
   --ks-pass pass:"$keystorePassword" \

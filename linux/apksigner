@@ -1,0 +1,60 @@
+#!/bin/bash
+#
+# apksigner wrapper for Linux — mirrors the macOS SDK script.
+# Locates apksigner.jar in lib/ next to this script and runs it with java.
+# Respects JAVA_HOME if set (e.g. JDK 17).
+
+prog="$0"
+while [ -h "${prog}" ]; do
+    newProg=$(/bin/ls -ld "${prog}")
+    newProg=$(expr "${newProg}" : ".* -> \(.*\)$")
+    if expr "x${newProg}" : 'x/' >/dev/null; then
+        prog="${newProg}"
+    else
+        progdir=$(dirname "${prog}")
+        prog="${progdir}/${newProg}"
+    fi
+done
+oldwd=$(pwd)
+progdir=$(dirname "${prog}")
+cd "${progdir}"
+progdir=$(pwd)
+prog="${progdir}/$(basename "${prog}")"
+cd "${oldwd}"
+
+jarfile=apksigner.jar
+libdir="$progdir"
+
+if [ ! -r "$libdir/$jarfile" ]; then
+    libdir="$libdir/lib"
+fi
+
+if [ ! -r "$libdir/$jarfile" ]; then
+    echo "$(basename "$prog"): can't find $jarfile"
+    exit 1
+fi
+
+# Use JAVA_HOME if set, otherwise fall back to java on PATH
+if [ -n "$JAVA_HOME" ]; then
+    JAVA_CMD="$JAVA_HOME/bin/java"
+else
+    JAVA_CMD="java"
+fi
+
+defaultMx="-Xmx1024M"
+javaOpts=""
+
+while expr "x$1" : 'x-J' >/dev/null; do
+    opt=$(expr "x$1" : 'x-J\(.*\)')
+    javaOpts="${javaOpts} -${opt}"
+    if expr "x${opt}" : "xXmx[0-9]" >/dev/null; then
+        defaultMx="no"
+    fi
+    shift
+done
+
+if [ "${defaultMx}" != "no" ]; then
+    javaOpts="${javaOpts} ${defaultMx}"
+fi
+
+exec "$JAVA_CMD" $javaOpts -jar "$libdir/$jarfile" "$@"
