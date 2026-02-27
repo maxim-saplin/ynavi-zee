@@ -273,24 +273,30 @@
     # ZEEAPP_KEEPALIVE_BEGIN
     new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;
+    const-class v1, Lru/yandex/yandexnavi/keepalive/KeepAliveService;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v1, "DELAY_WORK"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x1a
 
-    if-lt v1, v2, :cond_audio_keepalive_startService
+    if-lt v1, v2, :cond_keepalive_startService
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    goto :goto_audio_keepalive_done
+    goto :goto_keepalive_done
 
-    :cond_audio_keepalive_startService
+    :cond_keepalive_startService
     invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    :goto_audio_keepalive_done
+    :goto_keepalive_done
     # ZEEAPP_KEEPALIVE_END
     invoke-static {p0}, Lfd/a;->e(Landroid/content/Context;)Lru/yandex/yandexmaps/app/p2;
 

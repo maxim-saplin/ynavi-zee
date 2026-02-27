@@ -4,11 +4,20 @@ This repo is optimized for **fast iteration** on a single, already-decompiled wo
 
 ## Prereqs
 
-- **Java** (required for Apktool)
-- **Apktool**
+- **Java** (JDK 17+ recommended, required for Apktool and apksigner)
+- **Apktool 2.12.1** — must match the version used to decompile `src/`.
+  Download from [bitbucket.org/iBotPeaches/apktool](https://bitbucket.org/iBotPeaches/apktool/downloads/).
 - **Android Platform Tools (adb)**
 - **Python 3** (for feature config and resource validation)
-- **Android Build Tools** binaries in repo root: `zipalign`, `apksigner`
+- **`zipalign`** in repo root — the vendored binary is macOS-only. On Linux, copy from your SDK:
+  ```bash
+  cp "$ANDROID_HOME/build-tools/34.0.0/zipalign" ./zipalign
+  ```
+- **`apksigner`** in repo root (shell script wrapping `lib/apksigner.jar` — works cross-platform)
+- **Android API 34 framework** installed into apktool:
+  ```bash
+  apktool if "$ANDROID_HOME/platforms/android-34/android.jar"
+  ```
 
 ## Quick iteration loop (edit → build → install → verify)
 
@@ -30,7 +39,7 @@ Then update values in `features/config.env` (see `features/*.MD` for details).
 ### 3) Build, align, sign
 
 ```bash
-zsh build_apk.sh -inputFolder src -outputFile builds/out.apk
+bash build_apk.sh -inputFolder src -outputFile builds/out.apk
 ```
 
 Outputs:
@@ -72,7 +81,7 @@ python3 validate_resources.py <modded_res_folder> <original_res_folder>
 - **Native crash early (SIGSEGV/abort)**: look for custom loader/hook (often `AppComponentFactory`) and stub it; consider native patching if needed.
 - **Java crash about signature/integrity**: patch the guard in smali.
 - **`applyOverrideConfiguration` crash on OEM ROMs**: wrap it in try/catch (`IllegalStateException`).
-- **Build failures**: try an older Apktool version (e.g., `2.9.3`).
+- **Build failures**: ensure you are using Apktool **2.12.1** (the version used to decompile `src/`) and have installed the API 34 framework (`apktool if`).
 
 ## Upgrading to a new APK version
 
