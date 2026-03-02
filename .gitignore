@@ -7,6 +7,9 @@ src/build/
 **/*.apk
 !modded_apks/*.apk
 
+# Custom Java build output
+custom_java/out/
+
 # Common OS noise
 .DS_Store
 

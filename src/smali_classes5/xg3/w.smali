@@ -19,6 +19,9 @@
 
 .field private final f:Lxg3/i;
 
+# SpeedCam offline injection: static reference to the projected NextCameraView instance
+.field public static sCamera:Lxg3/g;
+
 
 # direct methods
 .method public constructor <init>(Lcom/yandex/navikit/ui/guidance/NextRoadEventPresenter;Lcom/yandex/navikit/ui/guidance/NextCameraPresenter;Lxe3/a;Lse3/a;)V
@@ -39,6 +42,9 @@
     invoke-direct {p1}, Lxg3/g;-><init>()V
 
     iput-object p1, p0, Lxg3/w;->e:Lxg3/g;
+
+    # SpeedCam injection: save xg3/g instance for offline camera push
+    sput-object p1, Lxg3/w;->sCamera:Lxg3/g;
 
     new-instance p1, Lxg3/i;
 

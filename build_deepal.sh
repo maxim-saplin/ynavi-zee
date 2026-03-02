@@ -23,6 +23,9 @@ ZEEAPP_KEEPALIVE_MODE=audio
 ZEEAPP_KEEPALIVE_RECEIVER_EXPORTED_DEBUG=0
 EOF
 
+# Build custom Java (SpeedCamBroadcaster) -> smali and merge into source tree
+bash "$repoRoot/build_custom_java.sh"
+
 bash "$repoRoot/build_apk.sh" \
   -inputFolder "$repoRoot/src" \
   -outputFile "$repoRoot/builds/deepal.apk" \
