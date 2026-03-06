@@ -1,3 +1,2 @@
 #!/bin/bash
-export LD_LIBRARY_PATH="/home/user/Android/Sdk/build-tools/34.0.0/lib64:$LD_LIBRARY_PATH"
-exec "/home/user/Android/Sdk/build-tools/34.0.0/zipalign" "$@"
+exec "/home/user/android-sdk/build-tools/35.0.0/zipalign" "$@"

@@ -1,0 +1,2 @@
+#\!/bin/bash
+exec java -jar "/home/user/src/zee_hud_2/ynavi-zee/tools/baksmali.jar" "$@"
