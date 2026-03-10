@@ -23,7 +23,7 @@ ZEEAPP_KEEPALIVE_MODE=fgs
 ZEEAPP_KEEPALIVE_RECEIVER_EXPORTED_DEBUG=0
 EOF
 
-zsh "$repoRoot/build_apk.sh" \
+bash "$repoRoot/build_apk.sh" \
   -inputFolder "$repoRoot/src" \
   -outputFile "$repoRoot/builds/zeekr.apk" \
   -configFile "$tmpCfg"

@@ -49,15 +49,30 @@ cp features/config.env.example features/config.env
 
 The build applies these **in-place** to `src/` before building (via `tools/apply_feature_config.py`).
 
+## Prerequisites
+
+- **Java** (JDK 17+ recommended)
+- **Apktool 2.12.1** — the `src/` tree was decompiled with this version; older versions will fail.
+  Download from [bitbucket.org/iBotPeaches/apktool](https://bitbucket.org/iBotPeaches/apktool/downloads/).
+- **Python 3** (for feature config)
+- **Android SDK Build Tools** — `zipalign` and `apksigner` are expected in the repo root.
+  The vendored `zipalign` is a **macOS binary**. On Linux, copy or symlink from your SDK:
+  ```bash
+  cp "$ANDROID_HOME/build-tools/34.0.0/zipalign" ./zipalign
+  ```
+  (the vendored `apksigner` is a shell script wrapping `lib/apksigner.jar` — works on any platform)
+- **Android API 34 framework** must be installed into apktool:
+  ```bash
+  apktool if "$ANDROID_HOME/platforms/android-34/android.jar"
+  ```
+
 ## Build
 
 ```bash
-zsh build_apk.sh -inputFolder src -outputFile builds/out.apk
+bash build_apk.sh -inputFolder src -outputFile builds/out.apk
 ```
 
 Outputs:
-- `builds/out.apk`
-- `builds/out_aligned.apk`
 - `builds/out_signed.apk` (install this)
 
 ## Install (ADB)
