@@ -14,8 +14,14 @@ repoRoot="$(cd "$(dirname "$0")" && pwd)"
 # Detect OS for tool binaries
 if [[ "$(uname -s)" == "Linux" ]]; then
   toolsDir="$repoRoot/linux"
+  zipalignBin="$toolsDir/zipalign"
 else
   toolsDir="$repoRoot"
+  if [[ -x "$repoRoot/zipalign.macos" ]]; then
+    zipalignBin="$repoRoot/zipalign.macos"
+  else
+    zipalignBin="$repoRoot/zipalign"
+  fi
 fi
 
 # Parse command line arguments
@@ -97,7 +103,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # Align APK
-"$toolsDir/zipalign" -p 4 "$outputFile" "$alignedApk"
+"$zipalignBin" -p 4 "$outputFile" "$alignedApk"
 if [ $? -ne 0 ]; then
   echo "Error: Failed to align APK with zipalign."
   exit 1

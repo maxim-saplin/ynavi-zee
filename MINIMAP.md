@@ -6,9 +6,13 @@ on top of the `main` branch (Zeekr + Deepal keepalive/letterbox baseline).
 
 Base APK: `yandex-navigator-27-0-2.apk` (YNavi 27.0.2)
 
+> Cold-boot traffic failure resolved (2026-03-12): Phase0 now waits for
+> validated internet via ConnectivityManager, then force-restarts YNavi so
+> MapKit initializes with working DNS. See `docs/35_ONCAR_BIND_DELAY_VALIDATION_PLAN.md`.
+
 ---
 
-## Patch inventory (uncommitted working tree)
+## Patch inventory (`hud` branch)
 
 ### P1 — Host allowlist bypass (`NavigationCarAppService`)
 
