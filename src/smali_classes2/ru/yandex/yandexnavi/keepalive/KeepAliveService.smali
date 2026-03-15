@@ -209,7 +209,9 @@
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->startPassiveLocation()V
 
-    invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->ensureGuidanceStarted()V
+    # ensureGuidanceStarted removed: GuidanceService relies on full app DI init
+    # which is unavailable when started from :persistent process cold.
+    # The app's own code starts it when NavigatorActivity is active.
 
     invoke-direct {p0}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;->ensureUiKeepAliveStarted()V
 
@@ -245,11 +247,7 @@
 
     const/4 v4, 0x0
 
-    const v5, 0x20000000
-
-    const v6, 0x40000000
-
-    or-int v5, v5, v6
+    const v5, 0xc000000
 
     invoke-static {p0, v4, v1, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
@@ -307,11 +305,7 @@
 
     const/4 v4, 0x1
 
-    const v5, 0x20000000
-
-    const v6, 0x40000000
-
-    or-int v5, v5, v6
+    const v5, 0xc000000
 
     invoke-static {p0, v4, v1, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
@@ -369,11 +363,7 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x20000000
-
-    const v5, 0x40000000
-
-    or-int v4, v4, v5
+    const v4, 0xc000000
 
     invoke-static {p0, v3, v1, v4}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
