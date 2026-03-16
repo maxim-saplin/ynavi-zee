@@ -239,35 +239,6 @@
         android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/launcher_icon_round"
         android:supportsRtl="true" android:theme="@style/AppTheme">
         <!-- ZEEAPP_KEEPALIVE_BEGIN -->
-        <service
-            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveService"
-            android:exported="false"
-            android:process=":persistent"
-            android:stopWithTask="false"
-            android:foregroundServiceType="location|dataSync" />
-        <service
-            android:name="ru.yandex.yandexnavi.keepalive.UiKeepAliveService"
-            android:exported="false"
-            android:stopWithTask="false"
-            android:foregroundServiceType="location|dataSync" />
-        <receiver
-            android:name="ru.yandex.yandexnavi.keepalive.BootKeepAliveReceiver"
-            android:exported="true"
-            android:process=":persistent">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
-            </intent-filter>
-        </receiver>
-        <receiver
-            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveTriggerReceiver"
-            android:exported="false"
-            android:process=":persistent">
-            <intent-filter>
-                <action android:name="ru.yandex.yandexnavi.keepalive.REASSERT" />
-            </intent-filter>
-        </receiver>
         <!-- ZEEAPP_KEEPALIVE_END -->
         <activity android:exported="true" android:launchMode="singleTop"
             android:name="ru.yandex.yandexmaps.launch.LaunchActivity"
@@ -1415,22 +1386,8 @@
         <activity android:name="com.yandex.passport.internal.util.StarterActivity"
             android:process="@string/passport_process_name"
             android:theme="@style/PassportNext.Theme.Custom.Transparent" />
-        <activity
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:name="com.yandex.mobile.ads.common.AdActivity"
-            android:theme="@style/MonetizationAdsInternal.AdActivity" />
-        <provider android:authorities="ru.yandex.yandexnavi.MobileAdsInitializeProvider"
-            android:exported="false"
-            android:name="com.yandex.mobile.ads.core.initializer.MobileAdsInitializeProvider" />
-        <activity android:exported="false"
-            android:name="com.yandex.mobile.ads.features.debugpanel.ui.IntegrationInspectorActivity"
-            android:theme="@style/DebugPanelTheme" />
-        <provider android:authorities="ru.yandex.yandexnavi.monetization.ads.inspector.fileprovider"
-            android:exported="false" android:grantUriPermissions="true"
-            android:name="com.yandex.mobile.ads.features.debugpanel.data.local.DebugPanelFileProvider">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/debug_panel_file_paths" />
-        </provider>
+        <!-- ZEEAPP_AD_BANNERS_BEGIN -->
+        <!-- ZEEAPP_AD_BANNERS_END -->
         <activity android:launchMode="singleTop"
             android:name="com.yandex.music.sdk.helper.ui.searchapp.PlayerActivity"
             android:theme="@style/music_sdk_helper_view.light" />

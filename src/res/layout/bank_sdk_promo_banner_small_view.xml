@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/bank_sdk_bg_promo_banner_small_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="128.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.yandex.bank.widgets.common.ImageViewWithAspectRatio android:id="@id/smallBannerImage" android:layout_width="wrap_content" android:layout_height="0.0dip" android:adjustViewBounds="true" android:contentDescription="@null" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:ellipsize="end" android:id="@id/smallBannerMessage" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_marginBottom="26.0dip" android:maxLines="4" android:layout_marginStart="20.0dip" android:layout_marginEnd="52.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Widget.Bank.Text.Title1" />
-    <com.yandex.bank.widgets.common.banners.CloseBannerButtonView android:id="@id/smallBannerCloseButton" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/BankSdk.Widget.WidgetsCommon.CloseBannerButtonView.Banner" />
+<!-- ZEEAPP_PROMO_BANNERS_BEGIN -->
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0.0dip" android:layout_height="0.0dip" android:visibility="gone"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.yandex.bank.widgets.common.ImageViewWithAspectRatio android:id="@id/smallBannerImage" android:layout_width="0.0dip" android:layout_height="0.0dip" android:visibility="gone" />
+    <TextView android:id="@id/smallBannerMessage" android:layout_width="0.0dip" android:layout_height="0.0dip" android:visibility="gone" />
+    <com.yandex.bank.widgets.common.banners.CloseBannerButtonView android:id="@id/smallBannerCloseButton" android:layout_width="0.0dip" android:layout_height="0.0dip" android:visibility="gone" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+<!-- ZEEAPP_PROMO_BANNERS_END -->
