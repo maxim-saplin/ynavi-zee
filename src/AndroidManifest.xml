@@ -239,6 +239,35 @@
         android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/launcher_icon_round"
         android:supportsRtl="true" android:theme="@style/AppTheme">
         <!-- ZEEAPP_KEEPALIVE_BEGIN -->
+        <service
+            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveService"
+            android:exported="false"
+            android:process=":persistent"
+            android:stopWithTask="false"
+            android:foregroundServiceType="location|dataSync" />
+        <service
+            android:name="ru.yandex.yandexnavi.keepalive.UiKeepAliveService"
+            android:exported="false"
+            android:stopWithTask="false"
+            android:foregroundServiceType="location|dataSync" />
+        <receiver
+            android:name="ru.yandex.yandexnavi.keepalive.BootKeepAliveReceiver"
+            android:exported="true"
+            android:process=":persistent">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="ru.yandex.yandexnavi.keepalive.KeepAliveTriggerReceiver"
+            android:exported="false"
+            android:process=":persistent">
+            <intent-filter>
+                <action android:name="ru.yandex.yandexnavi.keepalive.REASSERT" />
+            </intent-filter>
+        </receiver>
         <!-- ZEEAPP_KEEPALIVE_END -->
         <activity android:exported="true" android:launchMode="singleTop"
             android:name="ru.yandex.yandexmaps.launch.LaunchActivity"

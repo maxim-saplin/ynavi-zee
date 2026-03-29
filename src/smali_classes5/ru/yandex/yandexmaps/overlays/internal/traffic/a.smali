@@ -30,6 +30,8 @@
 
     iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/a;->a:Lru/yandex/yandexmaps/overlays/internal/traffic/b;
 
+    invoke-static {v0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+
     invoke-static {v0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->c(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)Ldg2/b;
 
     move-result-object v0
@@ -61,6 +63,10 @@
 
     invoke-interface {p1, v0}, Ldg2/b;->R(Ldg2/a;)V
 
+    iget-object p1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/a;->a:Lru/yandex/yandexmaps/overlays/internal/traffic/b;
+
+    invoke-static {p1}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->e(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+
     :goto_0
     return-void
 .end method
@@ -77,6 +83,10 @@
     sget-object v1, Ldu2/r;->b:Ldu2/r;
 
     invoke-interface {v0, v1}, Ldg2/b;->R(Ldg2/a;)V
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/a;->a:Lru/yandex/yandexmaps/overlays/internal/traffic/b;
+
+    invoke-static {v0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->e(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
 
     return-void
 .end method

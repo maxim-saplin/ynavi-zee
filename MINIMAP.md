@@ -6,9 +6,11 @@ on top of the `main` branch (Zeekr + Deepal keepalive/letterbox baseline).
 
 Base APK: `yandex-navigator-27-0-2.apk` (YNavi 27.0.2)
 
-> Cold-boot traffic failure resolved (2026-03-12): Phase0 now waits for
-> validated internet via ConnectivityManager, then force-restarts YNavi so
-> MapKit initializes with working DNS. See `docs/35_ONCAR_BIND_DELAY_VALIDATION_PLAN.md`.
+> Traffic recovery fix note (2026-03-28): the accepted fix now lives in YNavi
+> smali and is documented in `features/5.traffic_recovery.md`. The earlier
+> Phase0 validated-internet wait plus force-restart flow was a temporary
+> workaround and is now legacy cleanup scope. This is orthogonal to the HUD
+> bind and rebind flow documented below.
 
 ---
 

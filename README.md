@@ -110,8 +110,17 @@ crash paths, and remove the `ActionStrip` empty-list guard.
 See **[MINIMAP.md](MINIMAP.md)** for the full patch inventory, discovery
 timeline, and the working bind strategy.
 
+## Traffic recovery fix
+
+The accepted fix for traffic that stays stale after connectivity returns now
+lives in YNavi smali, not in Phase0. The implementation is documented in
+**[features/5.traffic_recovery.md](features/5.traffic_recovery.md)** and is
+centered on `src/smali_classes5/au2/t0.smali` plus
+`src/smali_classes5/ru/yandex/yandexmaps/overlays/internal/traffic/b.smali`.
+
 ## More docs
 
 - `MINIMAP.md` (HUD patch tracker + discoveries)
+- `features/5.traffic_recovery.md` (accepted traffic recovery fix)
 - `WORKFLOW.md` (end-to-end build + iteration)
 - `features/*.MD` (feature-specific notes)

@@ -9,7 +9,7 @@
 # instance fields
 .field private final a:Ldg2/b;
 
-.field private final b:Lcom/yandex/mapkit/traffic/TrafficLayer;
+.field private b:Lcom/yandex/mapkit/traffic/TrafficLayer;
 
 .field private final c:Lru/yandex/yandexmaps/overlays/api/p;
 
@@ -17,9 +17,19 @@
 
 .field private final e:Lru/yandex/yandexmaps/overlays/internal/traffic/a;
 
+.field private f:Z
+
+.field private g:Z
+
+.field private h:I
+
+.field private i:Lio/reactivex/disposables/b;
+
+.field private final j:Lz21/a;
+
 
 # direct methods
-.method public constructor <init>(Ldg2/b;Lcom/yandex/mapkit/traffic/TrafficLayer;Lru/yandex/yandexmaps/overlays/api/p;Lio/reactivex/d0;)V
+.method public constructor <init>(Ldg2/b;Lcom/yandex/mapkit/traffic/TrafficLayer;Lru/yandex/yandexmaps/overlays/api/p;Lio/reactivex/d0;Lz21/a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -32,6 +42,8 @@
 
     iput-object p4, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->d:Lio/reactivex/d0;
 
+    iput-object p5, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->j:Lz21/a;
+
     new-instance p1, Lru/yandex/yandexmaps/overlays/internal/traffic/a;
 
     invoke-direct {p1, p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/a;-><init>(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
@@ -43,6 +55,8 @@
 
 .method public static b(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
     .locals 1
+
+    invoke-static {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
 
     iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->b:Lcom/yandex/mapkit/traffic/TrafficLayer;
 
@@ -64,6 +78,8 @@
 .method public static final d(Lru/yandex/yandexmaps/overlays/internal/traffic/b;Z)V
     .locals 1
 
+    iput-boolean p1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f:Z
+
     iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->b:Lcom/yandex/mapkit/traffic/TrafficLayer;
 
     invoke-interface {v0, p1}, Lcom/yandex/mapkit/traffic/TrafficLayer;->setTrafficVisible(Z)V
@@ -77,11 +93,224 @@
     goto :goto_0
 
     :cond_0
+    invoke-static {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+
     iget-object p0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->e:Lru/yandex/yandexmaps/overlays/internal/traffic/a;
 
     invoke-interface {v0, p0}, Lcom/yandex/mapkit/traffic/TrafficLayer;->removeTrafficListener(Lcom/yandex/mapkit/traffic/TrafficListener;)V
 
     :goto_0
+    return-void
+.end method
+
+.method public static final synthetic e(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+    .locals 0
+
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->i()V
+
+    return-void
+.end method
+
+.method public static final synthetic f(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+    .locals 0
+
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h()V
+
+    return-void
+.end method
+
+.method public static final synthetic g(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+    .locals 0
+
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->j()V
+
+    return-void
+.end method
+
+.method private final h()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->g:Z
+
+    iput v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h:I
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->i:Lio/reactivex/disposables/b;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->dispose()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->i:Lio/reactivex/disposables/b;
+
+    :cond_0
+    return-void
+.end method
+
+.method private final i()V
+    .locals 2
+
+    iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f:Z
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->g:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->g:Z
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h:I
+
+    const-wide/16 v0, 0x0
+
+    invoke-direct {p0, v0, v1}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->k(J)V
+
+    :cond_0
+    return-void
+.end method
+
+.method private final j()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->i:Lio/reactivex/disposables/b;
+
+    iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->g:Z
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f:Z
+
+    if-nez v0, :cond_0
+
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h()V
+
+    return-void
+
+    :cond_0
+    iget v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h:I
+
+    const/16 v1, 0x18
+
+    if-lt v0, v1, :cond_1
+
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h()V
+
+    return-void
+
+    :cond_1
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h:I
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->a:Ldg2/b;
+
+    sget-object v1, Ldu2/q;->b:Ldu2/q;
+
+    invoke-interface {v0, v1}, Ldg2/b;->R(Ldg2/a;)V
+
+    iget v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_3
+
+    const-wide/16 v0, 0x3a98
+
+    invoke-direct {p0, v0, v1}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->k(J)V
+
+    return-void
+
+    :cond_3
+
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->l()V
+
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h()V
+
+    :cond_2
+    return-void
+.end method
+
+.method private final k(J)V
+    .locals 4
+
+    iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->g:Z
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->i:Lio/reactivex/disposables/b;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lio/reactivex/disposables/b;->dispose()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->i:Lio/reactivex/disposables/b;
+
+    :cond_0
+    new-instance v0, Lru/yandex/yandexmaps/overlays/internal/traffic/TrafficOverlay$recoveryRetry$1;
+
+    invoke-direct {v0, p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/TrafficOverlay$recoveryRetry$1;-><init>(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->d:Lio/reactivex/d0;
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v1, v0, p1, p2, v2}, Lio/reactivex/d0;->d(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->i:Lio/reactivex/disposables/b;
+
+    :cond_2
+    return-void
+.end method
+
+.method private final l()V
+    .locals 3
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->b:Lcom/yandex/mapkit/traffic/TrafficLayer;
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->e:Lru/yandex/yandexmaps/overlays/internal/traffic/a;
+
+    invoke-interface {v0, v1}, Lcom/yandex/mapkit/traffic/TrafficLayer;->removeTrafficListener(Lcom/yandex/mapkit/traffic/TrafficListener;)V
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcom/yandex/mapkit/traffic/TrafficLayer;->setTrafficVisible(Z)V
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->j:Lz21/a;
+
+    invoke-interface {v1}, Lz21/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/app/Activity;
+
+    invoke-virtual {v1}, Landroid/app/Activity;->isFinishing()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v1}, Landroid/app/Activity;->recreate()V
+
+    :cond_0
+
     return-void
 .end method
 
