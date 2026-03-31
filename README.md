@@ -8,16 +8,16 @@ Focus: modding Yandex Navi to look and work better on Chinese cars with awkward 
 
 ## APKs
 
-**Ready-to-install builds** are available in the [modded_apks/](modded_apks) folder, signed with AOSP debug key (used by default Zeekr OS 6 for it's system apps):
+**Ready-to-install builds** are available in the [modded_apks/](modded_apks) folder, signed with AOSP debug key (used by default Zeekr OS 6 for its system apps):
 
-- **[deepal_signed_v10.apk](modded_apks/deepal_signed_v10.apk)** – Deepal S05 preset (UI 1.75x, map 1.3x, top/bottom padding 91dp, audio keepalive)
-- **[zeekr_signed_v10.apk](modded_apks/zeekr_signed_v10.apk)** – Zeekr 007 preset (UI 1.75x, map 1.3x, top 70dp, bottom 10dp, left 480dp, FGS keepalive)
+- **[deepal_signed_v14.apk](modded_apks/deepal_signed_v14.apk)** – Deepal S05 preset (UI 1.75x, map 1.3x, top/bottom padding 91dp, audio keepalive)
+- **[zeekr_signed_v11.apk](modded_apks/zeekr_signed_v11.apk)** – Zeekr 007 preset (UI 1.75x, map 1.3x, top 70dp, bottom 10dp, left 480dp, FGS keepalive)
 
 Download and install via ADB or copying to Flash Drive and installing via UI:
 ```bash
-adb install -g -r -d modded_apks/deepal_signed_v10.apk
+adb install -g -r -d modded_apks/deepal_signed_v14.apk
 # or
-adb install -g -r -d modded_apks/zeekr_signed_v10.apk
+adb install -g -r -d modded_apks/zeekr_signed_v11.apk
 ```
 
 Important: the current `src/` tree was produced via apktool decompilation and then iterated on. See `WORKFLOW.md` for the decompile commands and the rebuild caveats around signature checks.
@@ -115,8 +115,12 @@ timeline, and the working bind strategy.
 The accepted fix for traffic that stays stale after connectivity returns now
 lives in YNavi smali, not in Phase0. The implementation is documented in
 **[features/5.traffic_recovery.md](features/5.traffic_recovery.md)** and is
-centered on `src/smali_classes5/au2/t0.smali` plus
-`src/smali_classes5/ru/yandex/yandexmaps/overlays/internal/traffic/b.smali`.
+centered on
+`src/smali_classes5/ru/yandex/yandexmaps/overlays/internal/traffic/a.smali`,
+and `src/smali_classes5/ru/yandex/yandexmaps/overlays/internal/traffic/b.smali`.
+The controller-owned network callback is part of that recovery path, but its
+exact helper file can vary in dirty local worktrees and is documented more
+carefully in the feature note.
 
 ## More docs
 

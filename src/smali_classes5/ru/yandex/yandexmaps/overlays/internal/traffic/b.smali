@@ -27,6 +27,8 @@
 
 .field private final j:Lz21/a;
 
+.field private k:Landroid/net/ConnectivityManager$NetworkCallback;
+
 
 # direct methods
 .method public constructor <init>(Ldg2/b;Lcom/yandex/mapkit/traffic/TrafficLayer;Lru/yandex/yandexmaps/overlays/api/p;Lio/reactivex/d0;Lz21/a;)V
@@ -86,6 +88,8 @@
 
     if-eqz p1, :cond_0
 
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->m()V
+
     iget-object p0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->e:Lru/yandex/yandexmaps/overlays/internal/traffic/a;
 
     invoke-interface {v0, p0}, Lcom/yandex/mapkit/traffic/TrafficLayer;->addTrafficListener(Lcom/yandex/mapkit/traffic/TrafficListener;)V
@@ -127,6 +131,14 @@
     return-void
 .end method
 
+.method public static final synthetic h(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+    .locals 0
+
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->o()V
+
+    return-void
+.end method
+
 .method private final h()V
     .locals 1
 
@@ -145,6 +157,333 @@
     const/4 v0, 0x0
 
     iput-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->i:Lio/reactivex/disposables/b;
+
+    :cond_0
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->n()V
+
+    return-void
+.end method
+
+.method private final m()V
+    .locals 4
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->k:Landroid/net/ConnectivityManager$NetworkCallback;
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->j:Lz21/a;
+
+    invoke-interface {v0}, Lz21/a;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/Activity;
+
+    const-string v1, "connectivity"
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/net/ConnectivityManager;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetwork()Landroid/net/Network;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v2, 0xc
+
+    invoke-virtual {v1, v2}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/16 v2, 0x10
+
+    invoke-virtual {v1, v2}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->g:Z
+
+    if-eqz v1, :cond_2
+
+    iget-boolean v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f:Z
+
+    if-eqz v1, :cond_2
+
+    const-string v1, "YNaviTraffic"
+
+    const-string v2, "m active validated armed -> refresh"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->q()V
+
+    goto :goto_0
+
+    :cond_2
+
+    const-string v1, "YNaviTraffic"
+
+    const-string v2, "m active validated but idle"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_0
+
+    const-string v1, "YNaviTraffic"
+
+    const-string v2, "m register default callback"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v1, Lru/yandex/yandexmaps/overlays/internal/traffic/d;
+
+    invoke-direct {v1, p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/d;-><init>(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+
+    invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->registerDefaultNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
+
+    iput-object v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->k:Landroid/net/ConnectivityManager$NetworkCallback;
+
+    :goto_0
+    :cond_1
+    return-void
+.end method
+
+.method private final n()V
+    .locals 4
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->k:Landroid/net/ConnectivityManager$NetworkCallback;
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->k:Landroid/net/ConnectivityManager$NetworkCallback;
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->j:Lz21/a;
+
+    invoke-interface {v1}, Lz21/a;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/app/Activity;
+
+    const-string v2, "connectivity"
+
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v2, v1, Landroid/net/ConnectivityManager;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v1, v0}, Landroid/net/ConnectivityManager;->unregisterNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method private final o()V
+    .locals 2
+
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->n()V
+
+    iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->g:Z
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "YNaviTraffic"
+
+    const-string v1, "o callback -> refresh"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->q()V
+
+    goto :goto_0
+
+    :cond_0
+
+    const-string v0, "YNaviTraffic"
+
+    const-string v1, "o callback ignored"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_0
+    return-void
+.end method
+
+.method public final p()V
+    .locals 4
+
+    iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f:Z
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->g:Z
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->j:Lz21/a;
+
+    invoke-interface {v0}, Lz21/a;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/Activity;
+
+    const-string v1, "connectivity"
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/net/ConnectivityManager;
+
+    if-eqz v1, :cond_2
+
+    check-cast v0, Landroid/net/ConnectivityManager;
+
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetwork()Landroid/net/Network;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    const/16 v2, 0xc
+
+    invoke-virtual {v1, v2}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/16 v2, 0x10
+
+    invoke-virtual {v1, v2}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    :cond_0
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->g:Z
+
+    const/4 v1, 0x0
+
+    iput v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h:I
+
+    const-string v1, "YNaviTraffic"
+
+    const-string v2, "p arm waiting for validated network"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->k:Landroid/net/ConnectivityManager$NetworkCallback;
+
+    if-nez v1, :goto_0
+
+    new-instance v1, Lru/yandex/yandexmaps/overlays/internal/traffic/d;
+
+    invoke-direct {v1, p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/d;-><init>(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+
+    invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->registerDefaultNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
+
+    iput-object v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->k:Landroid/net/ConnectivityManager$NetworkCallback;
+
+    goto :goto_1
+
+    :cond_2
+    const-string v0, "YNaviTraffic"
+
+    const-string v1, "p loading ignored"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :goto_0
+    const-string v0, "YNaviTraffic"
+
+    const-string v1, "p reuse existing callback"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
+    return-void
+.end method
+
+.method private final q()V
+    .locals 3
+
+    iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->b:Lcom/yandex/mapkit/traffic/TrafficLayer;
+
+    invoke-interface {v0}, Lcom/yandex/mapkit/traffic/TrafficLayer;->isValid()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "YNaviTraffic"
+
+    const-string v2, "q refresh traffic layer"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->e:Lru/yandex/yandexmaps/overlays/internal/traffic/a;
+
+    invoke-interface {v0, v1}, Lcom/yandex/mapkit/traffic/TrafficLayer;->removeTrafficListener(Lcom/yandex/mapkit/traffic/TrafficListener;)V
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcom/yandex/mapkit/traffic/TrafficLayer;->setTrafficVisible(Z)V
+
+    const/4 v1, 0x1
+
+    invoke-interface {v0, v1}, Lcom/yandex/mapkit/traffic/TrafficLayer;->setTrafficVisible(Z)V
+
+    iget-object v1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->e:Lru/yandex/yandexmaps/overlays/internal/traffic/a;
+
+    invoke-interface {v0, v1}, Lcom/yandex/mapkit/traffic/TrafficLayer;->addTrafficListener(Lcom/yandex/mapkit/traffic/TrafficListener;)V
 
     :cond_0
     return-void
@@ -169,16 +508,20 @@
 
     iput v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h:I
 
-    const-wide/16 v0, 0x0
+    const-string v0, "YNaviTraffic"
 
-    invoke-direct {p0, v0, v1}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->k(J)V
+    const-string v1, "i arm recovery"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->m()V
 
     :cond_0
     return-void
 .end method
 
 .method private final j()V
-    .locals 3
+    .locals 2
 
     const/4 v0, 0x0
 
@@ -186,7 +529,7 @@
 
     iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->g:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     iget-boolean v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f:Z
 
@@ -197,46 +540,15 @@
     return-void
 
     :cond_0
-    iget v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h:I
+    const-string v0, "YNaviTraffic"
 
-    const/16 v1, 0x18
+    const-string v1, "j retry -> refresh"
 
-    if-lt v0, v1, :cond_1
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h()V
-
-    return-void
+    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->q()V
 
     :cond_1
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h:I
-
-    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->a:Ldg2/b;
-
-    sget-object v1, Ldu2/q;->b:Ldu2/q;
-
-    invoke-interface {v0, v1}, Ldg2/b;->R(Ldg2/a;)V
-
-    iget v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_3
-
-    const-wide/16 v0, 0x3a98
-
-    invoke-direct {p0, v0, v1}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->k(J)V
-
-    return-void
-
-    :cond_3
-
-    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->l()V
-
-    invoke-direct {p0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->h()V
-
-    :cond_2
     return-void
 .end method
 
@@ -307,7 +619,13 @@
 
     if-nez v2, :cond_0
 
-    invoke-virtual {v1}, Landroid/app/Activity;->recreate()V
+    const-string v0, "YNaviTraffic"
+
+    const-string v2, "l restart helper"
+
+    invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {v1}, Lru/yandex/yandexmaps/app/m;->a(Landroid/content/Context;)V
 
     :cond_0
 
