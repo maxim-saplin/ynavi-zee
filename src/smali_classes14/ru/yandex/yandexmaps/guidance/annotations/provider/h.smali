@@ -52,7 +52,13 @@
 
 # virtual methods
 .method public final duration(Lcom/yandex/mapkit/annotations/LocalizedPhrase;)D
-    .locals 4
+    .locals 5
+
+    # --- PhraseTrace instrumentation (uses fresh local v4) ---
+    const-string v4, "h.duration"
+
+    invoke-static {v4, p1}, Lcom/zeekr/phase0bridge/PhraseTrace;->log(Ljava/lang/String;Ljava/lang/Object;)V
+    # --- end PhraseTrace ---
 
     iget-object v0, p0, Lru/yandex/yandexmaps/guidance/annotations/provider/h;->a:Lru/yandex/yandexmaps/guidance/annotations/provider/i;
 
@@ -122,7 +128,13 @@
 .end method
 
 .method public final say(Lcom/yandex/mapkit/annotations/LocalizedPhrase;)V
-    .locals 3
+    .locals 4
+
+    # --- PhraseTrace instrumentation (uses fresh local v3) ---
+    const-string v3, "h.say"
+
+    invoke-static {v3, p1}, Lcom/zeekr/phase0bridge/PhraseTrace;->log(Ljava/lang/String;Ljava/lang/Object;)V
+    # --- end PhraseTrace ---
 
     sget-object v0, Lru/yandex/yandexmaps/multiplatform/core/utils/h;->a:Lru/yandex/yandexmaps/multiplatform/core/utils/g;
 

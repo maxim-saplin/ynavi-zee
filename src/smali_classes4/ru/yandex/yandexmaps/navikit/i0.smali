@@ -24,7 +24,13 @@
 
 # virtual methods
 .method public final a(Lru/yandex/yandexmaps/guidance/annotations/provider/h;Lcom/yandex/mapkit/annotations/AnnotationLanguage;)V
-    .locals 1
+    .locals 2
+
+    # --- PhraseTrace instrumentation: speaker REGISTRATION with MapKit native ---
+    const-string v1, "i0.setLocalizedSpeaker"
+
+    invoke-static {v1, p1}, Lcom/zeekr/phase0bridge/PhraseTrace;->log(Ljava/lang/String;Ljava/lang/Object;)V
+    # --- end PhraseTrace ---
 
     iget-object v0, p0, Lru/yandex/yandexmaps/navikit/i0;->a:Lcom/yandex/navikit/guidance/GuidanceConfigurator;
 

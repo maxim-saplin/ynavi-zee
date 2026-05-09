@@ -24,7 +24,13 @@
 
 # virtual methods
 .method public final a(Lru/yandex/yandexmaps/guidance/annotations/provider/h;Lcom/yandex/mapkit/annotations/AnnotationLanguage;)V
-    .locals 2
+    .locals 3
+
+    # --- PhraseTrace instrumentation: eco/transport Annotator setSpeaker ---
+    const-string v2, "ecoB.setSpeaker"
+
+    invoke-static {v2, p1}, Lcom/zeekr/phase0bridge/PhraseTrace;->log(Ljava/lang/String;Ljava/lang/Object;)V
+    # --- end PhraseTrace ---
 
     iget-object v0, p0, Lru/yandex/yandexmaps/guidance/eco/service/resumed/b;->a:Lru/yandex/yandexmaps/guidance/eco/service/resumed/c;
 

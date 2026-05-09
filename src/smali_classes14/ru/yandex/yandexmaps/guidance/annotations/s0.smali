@@ -201,7 +201,13 @@
 
 # virtual methods
 .method public final a(Lru/yandex/yandexmaps/guidance/annotations/l;Lcom/yandex/mapkit/annotations/LocalizedPhrase;)V
-    .locals 2
+    .locals 3
+
+    # --- PhraseTrace instrumentation (non-disruptive: uses fresh local v2) ---
+    const-string v2, "s0.a"
+
+    invoke-static {v2, p2}, Lcom/zeekr/phase0bridge/PhraseTrace;->log(Ljava/lang/String;Ljava/lang/Object;)V
+    # --- end PhraseTrace ---
 
     iget-object v0, p0, Lru/yandex/yandexmaps/guidance/annotations/s0;->e:Ljava/util/Map;
 
@@ -227,7 +233,13 @@
 .end method
 
 .method public final b(Lru/yandex/maps/storiopurgatorium/voice/VoiceMetadata;Lru/yandex/maps/storiopurgatorium/voice/VoiceMetadata;Lcom/yandex/mapkit/annotations/LocalizedPhrase;)Lru/yandex/yandexmaps/guidance/annotations/l;
-    .locals 11
+    .locals 12
+
+    # --- PhraseTrace instrumentation (uses fresh local v11) ---
+    const-string v11, "s0.b"
+
+    invoke-static {v11, p3}, Lcom/zeekr/phase0bridge/PhraseTrace;->log(Ljava/lang/String;Ljava/lang/Object;)V
+    # --- end PhraseTrace ---
 
     iget-object v0, p0, Lru/yandex/yandexmaps/guidance/annotations/s0;->f:Lru/yandex/yandexmaps/guidance/annotations/s;
 
@@ -963,7 +975,13 @@
 .end method
 
 .method public final c(Ljava/util/List;Lru/yandex/maps/storiopurgatorium/voice/VoiceMetadata;)Z
-    .locals 3
+    .locals 4
+
+    # --- PhraseTrace instrumentation (uses fresh local v3) ---
+    const-string v3, "s0.c"
+
+    invoke-static {v3, p1}, Lcom/zeekr/phase0bridge/PhraseTrace;->log(Ljava/lang/String;Ljava/lang/Object;)V
+    # --- end PhraseTrace ---
 
     invoke-virtual {p2}, Lru/yandex/maps/storiopurgatorium/voice/VoiceMetadata;->getRemoteId()Ljava/lang/String;
 
