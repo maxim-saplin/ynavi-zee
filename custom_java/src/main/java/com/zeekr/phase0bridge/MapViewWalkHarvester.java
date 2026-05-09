@@ -82,7 +82,8 @@ public final class MapViewWalkHarvester {
     /** Max time to wait on the IntrospectionListener latch before giving up on a tick. */
     private static final long INTROSPECTION_LATCH_TIMEOUT_MS = 1_500L;
     /** Max time to wait on a main-thread post (e.g. visibleObjects, getMap) before bailing. */
-    private static final long MAIN_THREAD_POST_TIMEOUT_MS = 1_500L;
+    /** Slow x86 emulator can take >1s to drain the main looper; budget generously. */
+    private static final long MAIN_THREAD_POST_TIMEOUT_MS = 10_000L;
 
     /**
      * If true, build IntrospectionFilter with dataSourceNames=null (no data-source
@@ -304,8 +305,11 @@ public final class MapViewWalkHarvester {
             body.run();
             return;
         }
+        final long postT = System.currentTimeMillis();
+        final long[] runT = new long[1];
         final CountDownLatch done = new CountDownLatch(1);
         boolean posted = sMainHandler.post(() -> {
+            runT[0] = System.currentTimeMillis();
             try {
                 body.run();
             } finally {
@@ -318,8 +322,16 @@ public final class MapViewWalkHarvester {
         }
         try {
             if (!done.await(MAIN_THREAD_POST_TIMEOUT_MS, TimeUnit.MILLISECONDS)) {
+                long queued = runT[0] == 0 ? -1 : (runT[0] - postT);
                 Log.w(TAG, "runOnMainAndWait[" + label + "]: timed out after "
-                        + MAIN_THREAD_POST_TIMEOUT_MS + "ms");
+                        + MAIN_THREAD_POST_TIMEOUT_MS + "ms (queued="
+                        + queued + "ms; -1 means body never started)");
+            } else {
+                long queued = runT[0] - postT;
+                long ran = System.currentTimeMillis() - runT[0];
+                if (queued > 500 || ran > 500) {
+                    Log.i(TAG, "runOnMainAndWait[" + label + "]: queued=" + queued + "ms ran=" + ran + "ms");
+                }
             }
         } catch (InterruptedException ie) {
             Thread.currentThread().interrupt();
