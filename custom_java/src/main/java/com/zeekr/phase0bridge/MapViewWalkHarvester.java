@@ -354,18 +354,31 @@ public final class MapViewWalkHarvester {
             Class<?> screenRectClass = Class.forName("com.yandex.mapkit.ScreenRect");
             Class<?> objectTypeClass = Class.forName("com.yandex.mapkit.map.GeoObjectInspectionMetadata$ObjectType");
 
-            List<String> dataSourceNames = null;
-            if (!DEBUG_ALL_LAYERS) {
-                String layerId;
-                try {
-                    Class<?> layerIdsClass = Class.forName("com.yandex.mapkit.map.LayerIds");
-                    Method getRoadEventsLayerId = layerIdsClass.getMethod("getRoadEventsLayerId");
-                    layerId = (String) getRoadEventsLayerId.invoke(null);
-                } catch (Throwable t) {
-                    layerId = "road_events";
-                    Log.w(TAG, "LayerIds.getRoadEventsLayerId failed, falling back to literal: " + layerId);
-                }
-                if (layerId == null || layerId.isEmpty()) layerId = "road_events";
+            // IntrospectionFilter ctor requires NON-null lists (smali asserts).
+            // DEBUG_ALL_LAYERS=true: pass a basket of plausible road-event layer
+            // names so we can see which key the listener returns them under.
+            // false: filter strictly to road events.
+            String layerId;
+            try {
+                Class<?> layerIdsClass = Class.forName("com.yandex.mapkit.map.LayerIds");
+                Method getRoadEventsLayerId = layerIdsClass.getMethod("getRoadEventsLayerId");
+                layerId = (String) getRoadEventsLayerId.invoke(null);
+            } catch (Throwable t) {
+                layerId = "road_events";
+                Log.w(TAG, "LayerIds.getRoadEventsLayerId failed, falling back to literal: " + layerId);
+            }
+            if (layerId == null || layerId.isEmpty()) layerId = "road_events";
+            List<String> dataSourceNames;
+            if (DEBUG_ALL_LAYERS) {
+                List<String> probe = new java.util.ArrayList<>();
+                probe.add(layerId);                  // canonical road events
+                probe.add("road_events");            // literal fallback
+                probe.add("road_events_layer");      // some YNavi versions
+                probe.add("speed_camera");           // long-shot
+                probe.add("speed_cameras");          // long-shot
+                probe.add("camera_alerts");          // long-shot
+                dataSourceNames = probe;
+            } else {
                 dataSourceNames = Collections.singletonList(layerId);
             }
 
@@ -383,8 +396,10 @@ public final class MapViewWalkHarvester {
             Constructor<?> ctor = filterClass.getConstructor(screenRectClass, java.util.List.class, java.util.List.class);
             return ctor.newInstance(null, dataSourceNames, types);
         } catch (Throwable t) {
+            Throwable cause = t.getCause() != null ? t.getCause() : t;
             Log.w(TAG, "buildIntrospectionFilter failed: "
-                    + t.getClass().getSimpleName() + ": " + t.getMessage());
+                    + t.getClass().getSimpleName() + ": " + t.getMessage()
+                    + " | cause=" + cause.getClass().getSimpleName() + ": " + cause.getMessage());
             return null;
         }
     }
