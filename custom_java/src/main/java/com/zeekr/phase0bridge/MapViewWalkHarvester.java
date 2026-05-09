@@ -94,6 +94,7 @@ public final class MapViewWalkHarvester {
     private static final boolean DEBUG_ALL_LAYERS = true;
 
     private static final AtomicBoolean sStarted = new AtomicBoolean(false);
+    private static final AtomicBoolean sLayerIdLogged = new AtomicBoolean(false);
     private static final AtomicInteger sTickCounter = new AtomicInteger(0);
     private static final AtomicInteger sEmittedCounter = new AtomicInteger(0);
 
@@ -368,6 +369,11 @@ public final class MapViewWalkHarvester {
                 Log.w(TAG, "LayerIds.getRoadEventsLayerId failed, falling back to literal: " + layerId);
             }
             if (layerId == null || layerId.isEmpty()) layerId = "road_events";
+            // Log resolved layer ID once per process so we can see what native
+            // LayerIds.getRoadEventsLayerId() returns in this YNavi build.
+            if (sLayerIdLogged.compareAndSet(false, true)) {
+                Log.i(TAG, "resolved roadEventsLayerId=\"" + layerId + "\"");
+            }
             List<String> dataSourceNames;
             if (DEBUG_ALL_LAYERS) {
                 List<String> probe = new java.util.ArrayList<>();
