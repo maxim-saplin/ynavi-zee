@@ -1138,31 +1138,12 @@
 .end method
 
 .method public final y()Z
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lru/yandex/yandexmaps/integrations/projected/i0;->f:Lru/yandex/yandexmaps/multiplatform/debug/panel/api/h;
-
-    sget-object v1, Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/i3;->a:Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/i3;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/i3;->u4()Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/w;
-
-    move-result-object v1
-
-    check-cast v0, Lru/yandex/yandexmaps/multiplatform/debug/panel/internal/experiments/m;
-
-    invoke-virtual {v0, v1}, Lru/yandex/yandexmaps/multiplatform/debug/panel/internal/experiments/m;->b(Lru/yandex/yandexmaps/multiplatform/debug/panel/api/experiments/w;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    xor-int/lit8 v0, v0, 0x1
+    # P11: free-drive force-on. Original read i3.u4() (new_road_alerts_projected_off)
+    # and returned the inverse. Force ON: always return true so the projected/HUD
+    # path believes road alerts are enabled regardless of the experiment flag.
+    const/4 v0, 0x1
 
     return v0
 .end method

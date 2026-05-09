@@ -266,6 +266,10 @@
 
     move-result v3
 
+    # P14a: free-drive force-on. Original gate was freedrive_from_route_and_turn_off
+    # (i3.R2). Force v3=1 so automatic_switching/q0 is always included.
+    const/4 v3, 0x1
+
     if-eqz v3, :cond_0
 
     invoke-interface/range {p20 .. p20}, Lz21/a;->get()Ljava/lang/Object;
@@ -355,6 +359,10 @@
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p2
+
+    # P14b: free-drive force-on. Original gate was freedrive_from_route_and_turn_off
+    # (i3.R2). Force p2=1 so automatic_switching/g0 is always included.
+    const/4 p2, 0x1
 
     if-eqz p2, :cond_0
 

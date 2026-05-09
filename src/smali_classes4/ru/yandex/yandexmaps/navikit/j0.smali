@@ -2466,6 +2466,10 @@
 
     check-cast v0, Lcom/yandex/navikit/guidance/Guidance;
 
+    # --- FreeDrive bridge hook: register broadcaster on the live navikit Guidance ---
+    invoke-static {v0}, Lcom/zeekr/phase0bridge/FreeDriveHook;->hookGuidance(Ljava/lang/Object;)V
+    # --- end FreeDrive bridge hook ---
+
     return-object v0
 .end method
 

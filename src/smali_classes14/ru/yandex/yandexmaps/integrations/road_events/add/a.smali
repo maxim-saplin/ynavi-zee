@@ -44,7 +44,9 @@
 .method public final a()Z
     .locals 1
 
-    iget-boolean v0, p0, Lru/yandex/yandexmaps/integrations/road_events/add/a;->a:Z
+    # P12: free-drive force-on. Original returned cached value of
+    # police_and_traffic_camera_events_enabled. Force ON: always return true.
+    const/4 v0, 0x1
 
     return v0
 .end method

@@ -94,6 +94,11 @@
 
     move-result-object p1
 
+    # P16: free-drive force-on. Original branched on
+    # voice_annotations_experimental_migration (i3.E7). Force non-null so
+    # the experimental voice annotation path is preferred.
+    const/4 p1, 0x1
+
     if-eqz p1, :cond_0
 
     goto :goto_0

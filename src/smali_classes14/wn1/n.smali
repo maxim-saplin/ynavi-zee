@@ -190,7 +190,9 @@
 .method public final f()Z
     .locals 1
 
-    iget-boolean v0, p0, Lwn1/n;->b:Z
+    # P13: free-drive force-on. Original returned newCameraAlert flag (i3.n4 ->
+    # new_camera_alert). Force ON: always return true.
+    const/4 v0, 0x1
 
     return v0
 .end method
