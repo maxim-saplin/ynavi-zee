@@ -3,6 +3,7 @@ package com.zeekr.phase0bridge;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
+import android.os.HandlerThread;
 import android.os.Looper;
 import android.util.Log;
 
@@ -14,12 +15,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Phase 4: walks YNavi's foreground MapView's visibleObjects on the road-events
- * data source and broadcasts each placemark to Phase0 with source=ynavi_layer_walk.
+ * Phase 4 (revised): walks YNavi's foreground MapView's visibleObjects on the
+ * road-events data source and broadcasts each placemark to Phase0 with
+ * source=ynavi_layer_walk.
  *
  * Why this works (and why the off-screen MapWindow attempt B2' didn't):
  *   - MapKit native renders feature placemarks (incl. road events / speed cameras)
@@ -29,15 +33,37 @@ import java.util.concurrent.atomic.AtomicInteger;
  *     foreground, surface-attached MapView. Its Map.visibleObjects(filter, listener)
  *     hands us the live placemarks the user sees on screen.
  *
- * Threading: Map.visibleObjects() and all MapKit-native calls MUST run on the
- * thread that built the MapKit instance — in YNavi's case the main UI thread.
- * Calling them off-thread reliably triggers SIGABRT inside libmaps-mobile (the
- * existing FreeDriveCameraBroadcaster comment documents the same constraint).
+ * Threading (the load-bearing fix vs. the prior revision):
+ *   - Map.visibleObjects(...) and the rest of MapKit's Java API are NOT thread-safe;
+ *     calling them off the MapKit thread (= main UI thread, in YNavi) reliably
+ *     triggers SIGABRT inside libmaps-mobile. (See FreeDriveCameraBroadcaster's
+ *     comment for the same constraint.)
+ *   - The IntrospectionListener.handleVisibleObjects callback is ASYNCHRONOUS —
+ *     it fires AFTER Map.visibleObjects() returns, on (presumably) the MapKit
+ *     thread.
+ *   - Therefore: we drive the tick loop on a dedicated background HandlerThread
+ *     ("MapViewWalk-loop") so we don't pile work onto YNavi's main thread (which
+ *     is already heavily contended at cold start and triggers ANRs). For each
+ *     MapKit call we post a Runnable to the main looper and AWAIT a CountDownLatch
+ *     that the IntrospectionListener proxy counts down on the callback. The
+ *     latch.await() happens on the background loop thread, so the main thread
+ *     stays free.
  *
- * Periodicity: 5s ticks; back off to 30s after 60s of empty walks; reset to 5s
- * the moment a non-empty walk arrives. A bbox heartbeat broadcast goes out on
- * EVERY tick (including empty ones) so Phase0 can drive a future negative-signal
- * tombstone pipeline (cameras-not-seen-in-this-bbox).
+ * Periodicity (revised — friendlier to the slow x86 emulator and YNavi's ANR-prone
+ * cold start):
+ *   - Skip first 30 s of process lifetime — don't tick at all (let YNavi finish
+ *     cold-start without us piling any extra main-thread work onto it).
+ *   - After that, tick every 10 s (was 5 s). Back off to 60 s after 60 s of
+ *     consecutive empty walks. Reset to 10 s on any non-empty walk.
+ *   - These ticks are individually CHEAP (one main-thread frame for visibleObjects
+ *     + the listener callback) but reducing the rate further reduces ANR risk.
+ *
+ * Debug probe:
+ *   - When DEBUG_ALL_LAYERS=true, the IntrospectionFilter is built with
+ *     dataSourceNames=null so we get back ALL data sources, not just _road_events.
+ *     The first walk dumps every key + count to logcat so we can see what YNavi
+ *     actually exposes (the original "_road_events" / "road_events" guess is
+ *     unverified). Set to false once we know the right layer ID.
  */
 public final class MapViewWalkHarvester {
 
@@ -45,18 +71,37 @@ public final class MapViewWalkHarvester {
     private static final String ACTION = "com.zeekr.phase0.SPEEDCAM_DATA";
     private static final String SOURCE_TAG = "ynavi_layer_walk";
 
-    private static final long FAST_TICK_MS = 5_000L;
-    private static final long SLOW_TICK_MS = 30_000L;
+    /** Skip the first N ms of process lifetime — don't tick during YNavi cold-start. */
+    private static final long STARTUP_GRACE_MS = 30_000L;
+    /** Normal cadence between walks once we're past the grace window. */
+    private static final long TICK_INTERVAL_MS = 10_000L;
+    /** Slowed cadence when we've seen nothing for a while. */
+    private static final long SLOW_TICK_MS = 60_000L;
+    /** How long of empty walks (ms) before we slow down. */
     private static final long EMPTY_RUN_BACKOFF_MS = 60_000L;
+    /** Max time to wait on the IntrospectionListener latch before giving up on a tick. */
+    private static final long INTROSPECTION_LATCH_TIMEOUT_MS = 1_500L;
+    /** Max time to wait on a main-thread post (e.g. visibleObjects, getMap) before bailing. */
+    private static final long MAIN_THREAD_POST_TIMEOUT_MS = 1_500L;
+
+    /**
+     * If true, build IntrospectionFilter with dataSourceNames=null (no data-source
+     * filter) so we get all layers and can log what's actually available. The first
+     * walk dumps every key + entry count. Flip to false once we've confirmed the
+     * correct layer ID for road events.
+     */
+    private static final boolean DEBUG_ALL_LAYERS = true;
 
     private static final AtomicBoolean sStarted = new AtomicBoolean(false);
     private static final AtomicInteger sTickCounter = new AtomicInteger(0);
     private static final AtomicInteger sEmittedCounter = new AtomicInteger(0);
 
     private static volatile Context sContext;
-    private static volatile Handler sUiHandler;
+    private static volatile Handler sLoopHandler; // background HandlerThread
+    private static volatile Handler sMainHandler; // main UI looper (MapKit-affine)
+    private static volatile long sStartTimeMs;
     /** Wall clock of the most recent tick that produced >0 placemarks. */
-    private static volatile long sLastNonEmptyMs = System.currentTimeMillis();
+    private static volatile long sLastNonEmptyMs;
 
     private MapViewWalkHarvester() {}
 
@@ -67,11 +112,29 @@ public final class MapViewWalkHarvester {
         }
         if (!sStarted.compareAndSet(false, true)) return;
         sContext = context;
-        sUiHandler = new Handler(Looper.getMainLooper());
-        sUiHandler.post(TICK);
-        Log.i(TAG, "start: harvester scheduled on main looper, fast=" + FAST_TICK_MS + "ms slow=" + SLOW_TICK_MS + "ms");
+        sStartTimeMs = System.currentTimeMillis();
+        sLastNonEmptyMs = sStartTimeMs;
+
+        sMainHandler = new Handler(Looper.getMainLooper());
+
+        HandlerThread loopThread = new HandlerThread("MapViewWalk-loop");
+        loopThread.setDaemon(true);
+        loopThread.start();
+        sLoopHandler = new Handler(loopThread.getLooper());
+
+        // Schedule the first tick after the cold-start grace window.
+        sLoopHandler.postDelayed(TICK, STARTUP_GRACE_MS);
+        Log.i(TAG, "start: harvester scheduled. grace=" + STARTUP_GRACE_MS
+                + "ms tick=" + TICK_INTERVAL_MS + "ms slow=" + SLOW_TICK_MS
+                + "ms debugAllLayers=" + DEBUG_ALL_LAYERS);
     }
 
+    /**
+     * The tick body runs on the background HandlerThread (NOT the main thread).
+     * Inside, it issues main-thread posts for each MapKit call and waits on
+     * latches. This keeps MapKit-thread-affinity intact while leaving the main
+     * thread responsive between calls.
+     */
     private static final Runnable TICK = new Runnable() {
         @Override
         public void run() {
@@ -79,16 +142,17 @@ public final class MapViewWalkHarvester {
             try {
                 walkOnce(tick);
             } catch (Throwable t) {
-                Log.w(TAG, "tick#" + tick + " walkOnce failed: " + t.getClass().getSimpleName() + ": " + t.getMessage());
+                Log.w(TAG, "tick#" + tick + " walkOnce failed: "
+                        + t.getClass().getSimpleName() + ": " + t.getMessage());
             }
             long delay = (System.currentTimeMillis() - sLastNonEmptyMs) > EMPTY_RUN_BACKOFF_MS
                     ? SLOW_TICK_MS
-                    : FAST_TICK_MS;
-            sUiHandler.postDelayed(this, delay);
+                    : TICK_INTERVAL_MS;
+            sLoopHandler.postDelayed(this, delay);
         }
     };
 
-    // ── single walk pass ───────────────────────────────────────────────────
+    // ── single walk pass (runs on the background loop thread) ──────────────
 
     private static void walkOnce(int tick) {
         Object mapView = MapViewCapture.get();
@@ -99,80 +163,178 @@ public final class MapViewWalkHarvester {
             return;
         }
 
-        // mapView.getMap() -> com.yandex.mapkit.map.Map
-        Object map = invokeNoArg(mapView, "getMap");
-        if (map == null) {
-            // Some MapView subclasses route via getMapWindow().getMap()
-            Object mapWindow = invokeNoArg(mapView, "getMapWindow");
-            if (mapWindow != null) map = invokeNoArg(mapWindow, "getMap");
-        }
+        // Resolve the Map. mapView.getMap() must run on the main thread.
+        // If the foreground MapView is being recomposed (Compose detach/attach)
+        // this can transiently return null; we just skip the tick and try again.
+        final Object[] mapHolder = new Object[1];
+        runOnMainAndWait("getMap", () -> {
+            try {
+                Object map = invokeNoArg(mapView, "getMap");
+                if (map == null) {
+                    // Some MapView subclasses route via getMapWindow().getMap()
+                    Object mapWindow = invokeNoArg(mapView, "getMapWindow");
+                    if (mapWindow != null) map = invokeNoArg(mapWindow, "getMap");
+                }
+                mapHolder[0] = map;
+            } catch (Throwable t) {
+                Log.w(TAG, "tick#" + tick + " getMap on main: " + t.getMessage());
+            }
+        });
+        Object map = mapHolder[0];
         if (map == null) {
             if (tick == 1 || tick % 12 == 0) {
-                Log.d(TAG, "tick#" + tick + " getMap() returned null");
+                Log.d(TAG, "tick#" + tick + " getMap() returned null (foreground MapView may be detached)");
             }
             return;
         }
 
-        // Build IntrospectionFilter(rect=null, dataSourceNames=[roadEventsLayerId], types=[POINT])
+        // Build IntrospectionFilter on this thread (no MapKit calls — pure constructor).
         Object filter = buildIntrospectionFilter();
         if (filter == null) {
             Log.w(TAG, "tick#" + tick + " could not build IntrospectionFilter");
             return;
         }
 
-        // Build a proxy IntrospectionListener that captures the result map
+        // Build a proxy IntrospectionListener that captures + signals a latch.
         final List<Object> capturedGeoObjects = new ArrayList<>();
-        Object listener = buildIntrospectionListener(capturedGeoObjects);
+        final Map<String, Integer> layerCounts = new java.util.LinkedHashMap<>();
+        final CountDownLatch latch = new CountDownLatch(1);
+        Object listener = buildIntrospectionListener(capturedGeoObjects, layerCounts, latch);
         if (listener == null) {
             Log.w(TAG, "tick#" + tick + " could not build IntrospectionListener");
             return;
         }
 
-        // Map.visibleObjects(IntrospectionFilter, IntrospectionListener) -> void; listener is invoked synchronously
-        try {
-            Method visibleObjects = findMethod(map.getClass(), "visibleObjects",
-                    "com.yandex.mapkit.map.IntrospectionFilter",
-                    "com.yandex.mapkit.map.IntrospectionListener");
-            if (visibleObjects == null) {
-                Log.w(TAG, "tick#" + tick + " visibleObjects(IntrospectionFilter, IntrospectionListener) not found");
-                return;
+        // Fire visibleObjects(filter, listener) on the main thread (MapKit-affine).
+        // This call returns immediately; the listener fires async on (likely) the
+        // MapKit thread. We await the latch on THIS (background) thread.
+        final Throwable[] callError = new Throwable[1];
+        final Object mapRef = map;
+        final Object filterRef = filter;
+        final Object listenerRef = listener;
+        runOnMainAndWait("visibleObjects", () -> {
+            try {
+                Method visibleObjects = findMethod(mapRef.getClass(), "visibleObjects",
+                        "com.yandex.mapkit.map.IntrospectionFilter",
+                        "com.yandex.mapkit.map.IntrospectionListener");
+                if (visibleObjects != null) {
+                    visibleObjects.invoke(mapRef, filterRef, listenerRef);
+                    return;
+                }
+                // Fallback: try the deprecated overload visibleObjects(ScreenRect, String)
+                // if the new one isn't present (older mapkit versions). This won't
+                // give us a listener-driven flow, but it's the only other option.
+                Log.w(TAG, "tick#" + tick + " visibleObjects(IntrospectionFilter, IntrospectionListener) not found; "
+                        + "no fallback supports the async-listener flow.");
+                latch.countDown(); // unblock the await; we'll just walk empty.
+            } catch (Throwable t) {
+                callError[0] = t;
+                latch.countDown(); // unblock so we don't hang the tick.
             }
-            visibleObjects.invoke(map, filter, listener);
-        } catch (Throwable t) {
-            Log.w(TAG, "tick#" + tick + " visibleObjects call failed: " + t.getClass().getSimpleName() + ": " + t.getMessage());
+        });
+
+        if (callError[0] != null) {
+            Log.w(TAG, "tick#" + tick + " visibleObjects call failed: "
+                    + callError[0].getClass().getSimpleName() + ": " + callError[0].getMessage());
             return;
         }
 
-        // Always send a heartbeat with the visible region bbox so Phase0 can
-        // drive a future negative-signal tombstone pipeline.
+        // Wait for the IntrospectionListener.handleVisibleObjects callback (async!).
+        boolean signalled;
+        try {
+            signalled = latch.await(INTROSPECTION_LATCH_TIMEOUT_MS, TimeUnit.MILLISECONDS);
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
+            Log.w(TAG, "tick#" + tick + " interrupted while awaiting introspection latch");
+            return;
+        }
+        if (!signalled) {
+            Log.w(TAG, "tick#" + tick + " introspection listener did NOT fire within "
+                    + INTROSPECTION_LATCH_TIMEOUT_MS + "ms — async callback may be slow or filter wrong");
+            // Still send a heartbeat so Phase0 sees we ticked.
+            sendHeartbeat(map, tick, 0);
+            return;
+        }
+
+        // Debug dump on the first walk: what data sources DOES the listener see?
+        if (tick == 1) {
+            Log.i(TAG, "walk_keys (tick=1) count=" + layerCounts.size() + " keys=" + layerCounts.keySet());
+            for (Map.Entry<String, Integer> e : layerCounts.entrySet()) {
+                Log.i(TAG, "  layer=" + e.getKey() + " count=" + e.getValue());
+            }
+        }
+
+        // Always send a heartbeat with the visible-region bbox.
+        // getVisibleRegion is a MapKit call → must run on main thread.
         sendHeartbeat(map, tick, capturedGeoObjects.size());
 
         if (capturedGeoObjects.isEmpty()) {
-            if (tick == 1 || tick % 12 == 0) {
-                Log.d(TAG, "tick#" + tick + " walk: 0 placemarks");
+            if (tick == 1 || tick % 6 == 0) {
+                Log.d(TAG, "tick#" + tick + " walk: 0 placemarks (layers=" + layerCounts.keySet() + ")");
             }
             return;
         }
 
         sLastNonEmptyMs = System.currentTimeMillis();
         int total = capturedGeoObjects.size();
-        Log.i(TAG, "tick#" + tick + " walk: " + total + " placemark(s) on _road_events");
+        Log.i(TAG, "tick#" + tick + " walk: " + total + " placemark(s) layers=" + layerCounts);
 
         for (int i = 0; i < total; i++) {
             try {
                 broadcastGeoObject(capturedGeoObjects.get(i), i, total, tick);
             } catch (Throwable t) {
-                Log.w(TAG, "tick#" + tick + " broadcast #" + i + " failed: " + t.getClass().getSimpleName() + ": " + t.getMessage());
+                Log.w(TAG, "tick#" + tick + " broadcast #" + i + " failed: "
+                        + t.getClass().getSimpleName() + ": " + t.getMessage());
             }
+        }
+    }
+
+    // ── main-thread posting helper ─────────────────────────────────────────
+
+    /**
+     * Posts {@code body} to the main looper and blocks the calling (background)
+     * thread until it completes or {@link #MAIN_THREAD_POST_TIMEOUT_MS} elapses.
+     * The body is responsible for any internal awaits (e.g. counting down the
+     * IntrospectionListener latch); this helper only ensures the body itself ran
+     * to completion.
+     */
+    private static void runOnMainAndWait(final String label, final Runnable body) {
+        if (Looper.myLooper() == Looper.getMainLooper()) {
+            // Already on main (shouldn't happen in our design, but defend).
+            body.run();
+            return;
+        }
+        final CountDownLatch done = new CountDownLatch(1);
+        boolean posted = sMainHandler.post(() -> {
+            try {
+                body.run();
+            } finally {
+                done.countDown();
+            }
+        });
+        if (!posted) {
+            Log.w(TAG, "runOnMainAndWait[" + label + "]: post failed");
+            return;
+        }
+        try {
+            if (!done.await(MAIN_THREAD_POST_TIMEOUT_MS, TimeUnit.MILLISECONDS)) {
+                Log.w(TAG, "runOnMainAndWait[" + label + "]: timed out after "
+                        + MAIN_THREAD_POST_TIMEOUT_MS + "ms");
+            }
+        } catch (InterruptedException ie) {
+            Thread.currentThread().interrupt();
         }
     }
 
     // ── IntrospectionFilter / IntrospectionListener construction ───────────
 
     /**
-     * Builds a fresh IntrospectionFilter targeting the road events data source.
-     * Constructor signature (from smali): (ScreenRect rect, List<String> dataSourceNames, List<ObjectType> types).
-     * rect=null means "whole visible area".
+     * Builds a fresh IntrospectionFilter. When DEBUG_ALL_LAYERS=true, dataSourceNames
+     * is left null so the listener returns ALL data sources (we log them on tick #1
+     * to discover the right layer ID). Otherwise we filter to the road-events layer.
+     *
+     * Constructor signature (from smali): (ScreenRect rect, List<String> dataSourceNames,
+     * List<ObjectType> types). rect=null = whole visible area.
      */
     private static Object buildIntrospectionFilter() {
         try {
@@ -180,22 +342,23 @@ public final class MapViewWalkHarvester {
             Class<?> screenRectClass = Class.forName("com.yandex.mapkit.ScreenRect");
             Class<?> objectTypeClass = Class.forName("com.yandex.mapkit.map.GeoObjectInspectionMetadata$ObjectType");
 
-            // Resolve the road-events data source name via the public LayerIds native getter.
-            String layerId;
-            try {
-                Class<?> layerIdsClass = Class.forName("com.yandex.mapkit.map.LayerIds");
-                Method getRoadEventsLayerId = layerIdsClass.getMethod("getRoadEventsLayerId");
-                layerId = (String) getRoadEventsLayerId.invoke(null);
-            } catch (Throwable t) {
-                // Fallback string commonly used by mapkit native; if wrong, the walk just returns 0.
-                layerId = "road_events";
-                Log.w(TAG, "LayerIds.getRoadEventsLayerId failed, falling back to literal: " + layerId);
+            List<String> dataSourceNames = null;
+            if (!DEBUG_ALL_LAYERS) {
+                String layerId;
+                try {
+                    Class<?> layerIdsClass = Class.forName("com.yandex.mapkit.map.LayerIds");
+                    Method getRoadEventsLayerId = layerIdsClass.getMethod("getRoadEventsLayerId");
+                    layerId = (String) getRoadEventsLayerId.invoke(null);
+                } catch (Throwable t) {
+                    layerId = "road_events";
+                    Log.w(TAG, "LayerIds.getRoadEventsLayerId failed, falling back to literal: " + layerId);
+                }
+                if (layerId == null || layerId.isEmpty()) layerId = "road_events";
+                dataSourceNames = Collections.singletonList(layerId);
             }
-            if (layerId == null || layerId.isEmpty()) layerId = "road_events";
 
-            List<String> dataSourceNames = Collections.singletonList(layerId);
-
-            // POINT enum value (placemarks are points)
+            // POINT enum value (placemarks are points). We always pass [POINT] —
+            // returning lines/polygons would just bloat the result map.
             Object pointType;
             try {
                 pointType = objectTypeClass.getField("POINT").get(null);
@@ -208,31 +371,54 @@ public final class MapViewWalkHarvester {
             Constructor<?> ctor = filterClass.getConstructor(screenRectClass, java.util.List.class, java.util.List.class);
             return ctor.newInstance(null, dataSourceNames, types);
         } catch (Throwable t) {
-            Log.w(TAG, "buildIntrospectionFilter failed: " + t.getClass().getSimpleName() + ": " + t.getMessage());
+            Log.w(TAG, "buildIntrospectionFilter failed: "
+                    + t.getClass().getSimpleName() + ": " + t.getMessage());
             return null;
         }
     }
 
     /**
-     * Builds a dynamic-proxy IntrospectionListener that captures handleVisibleObjects(Map<String, List<GeoObject>>).
+     * Builds a dynamic-proxy IntrospectionListener.
+     *
+     * The listener:
+     *   1. Captures GeoObject lists by layer name (for the debug dump).
+     *   2. Flattens all placemarks into {@code capturedGeoObjects} for downstream broadcast.
+     *   3. Counts the latch down so the (background) walk thread can resume.
      */
     @SuppressWarnings({"rawtypes", "unchecked"})
-    private static Object buildIntrospectionListener(final List<Object> capturedGeoObjects) {
+    private static Object buildIntrospectionListener(final List<Object> capturedGeoObjects,
+                                                     final Map<String, Integer> layerCounts,
+                                                     final CountDownLatch latch) {
         try {
             Class<?> listenerClass = Class.forName("com.yandex.mapkit.map.IntrospectionListener");
             InvocationHandler handler = new InvocationHandler() {
                 @Override
                 public Object invoke(Object proxy, Method method, Object[] args) {
-                    if ("handleVisibleObjects".equals(method.getName())
-                            && args != null && args.length == 1
-                            && args[0] instanceof Map) {
-                        Map<?, ?> result = (Map<?, ?>) args[0];
-                        for (Object value : result.values()) {
-                            if (value instanceof List) {
-                                for (Object geoObj : (List<?>) value) {
-                                    if (geoObj != null) capturedGeoObjects.add(geoObj);
+                    try {
+                        if ("handleVisibleObjects".equals(method.getName())
+                                && args != null && args.length == 1
+                                && args[0] instanceof Map) {
+                            Map<?, ?> result = (Map<?, ?>) args[0];
+                            for (Map.Entry<?, ?> entry : result.entrySet()) {
+                                String key = String.valueOf(entry.getKey());
+                                Object value = entry.getValue();
+                                int n = 0;
+                                if (value instanceof List) {
+                                    List<?> list = (List<?>) value;
+                                    n = list.size();
+                                    for (Object geoObj : list) {
+                                        if (geoObj != null) capturedGeoObjects.add(geoObj);
+                                    }
                                 }
+                                layerCounts.put(key, n);
                             }
+                        }
+                    } finally {
+                        // ALWAYS count down — even on unrecognized methods (defensive).
+                        // If MapKit calls our proxy for any reason, we want to unblock
+                        // the waiter rather than hang for the full timeout.
+                        if ("handleVisibleObjects".equals(method.getName())) {
+                            latch.countDown();
                         }
                     }
                     return defaultProxyReturn(proxy, method);
@@ -251,6 +437,10 @@ public final class MapViewWalkHarvester {
     /**
      * Extracts lat/lon, eventId, tags, speedLimit (best-effort) from a GeoObject and
      * broadcasts a SPEEDCAM_DATA intent compatible with Phase0's existing receiver.
+     *
+     * NOTE: GeoObject getters here are mostly POJO-style (no MapKit-thread affinity),
+     * so we run on the background thread. If we hit a SIGABRT here in practice, we
+     * can move this onto the main thread via runOnMainAndWait.
      */
     private static void broadcastGeoObject(Object geoObject, int index, int total, int tick) {
         // GeoObject.getGeometry() -> List<Geometry>; Geometry.getPoint() -> Point(lat, lon)
@@ -366,10 +556,12 @@ public final class MapViewWalkHarvester {
      * Sends a layer-walk heartbeat to Phase0 carrying the visible-region bbox we just
      * sampled. Lets Phase0 build a future negative-signal tombstone pipeline (cameras
      * inside this bbox that the layer walk did NOT see can be aged out).
+     *
+     * getVisibleRegion is a MapKit call → must run on the main thread.
      */
-    private static void sendHeartbeat(Object map, int tick, int seen) {
+    private static void sendHeartbeat(Object map, final int tick, final int seen) {
         if (sContext == null) return;
-        Intent hb = new Intent(ACTION);
+        final Intent hb = new Intent(ACTION);
         hb.setPackage("com.zeekr.phase0");
         hb.putExtra("action", "layer_walk_tick");
         hb.putExtra("source", SOURCE_TAG);
@@ -377,9 +569,11 @@ public final class MapViewWalkHarvester {
         hb.putExtra("walk_tick", tick);
         hb.putExtra("t_ms", System.currentTimeMillis());
 
-        try {
-            Object visibleRegion = invokeNoArg(map, "getVisibleRegion");
-            if (visibleRegion != null) {
+        final Object mapRef = map;
+        runOnMainAndWait("getVisibleRegion", () -> {
+            try {
+                Object visibleRegion = invokeNoArg(mapRef, "getVisibleRegion");
+                if (visibleRegion == null) return;
                 Object topLeft = invokeNoArg(visibleRegion, "getTopLeft");
                 Object topRight = invokeNoArg(visibleRegion, "getTopRight");
                 Object bottomLeft = invokeNoArg(visibleRegion, "getBottomLeft");
@@ -405,10 +599,10 @@ public final class MapViewWalkHarvester {
                     hb.putExtra("sw_lat", swLat);
                     hb.putExtra("sw_lon", swLon);
                 }
+            } catch (Throwable t) {
+                // Heartbeat without bbox is still useful — don't fail the broadcast.
             }
-        } catch (Throwable t) {
-            // Heartbeat without bbox is still useful — don't fail the broadcast.
-        }
+        });
 
         try {
             sContext.sendBroadcast(hb);
