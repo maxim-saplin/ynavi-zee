@@ -283,6 +283,10 @@
 
     iput-object p1, p0, Lru/yandex/maps/appkit/map/MapWithControlsView;->a0:Lcom/yandex/mapkit/map/SizeChangedListener;
 
+    # --- MapViewCapture hook: capture foreground MapView for layer-walk harvester ---
+    invoke-static {p0}, Lcom/zeekr/phase0bridge/MapViewCaptureHook;->hookMapView(Ljava/lang/Object;)V
+    # --- end MapViewCapture hook ---
+
     return-void
 .end method
 
