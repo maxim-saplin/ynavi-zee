@@ -97,6 +97,7 @@ public final class MapViewWalkHarvester {
 
     private static final AtomicBoolean sStarted = new AtomicBoolean(false);
     private static final AtomicBoolean sLayerIdLogged = new AtomicBoolean(false);
+    private static final AtomicBoolean sLayerProbeLogged = new AtomicBoolean(false);
     private static final AtomicInteger sTickCounter = new AtomicInteger(0);
     private static final AtomicInteger sEmittedCounter = new AtomicInteger(0);
 
@@ -378,13 +379,30 @@ public final class MapViewWalkHarvester {
             }
             List<String> dataSourceNames;
             if (DEBUG_ALL_LAYERS) {
+                // Probe every LayerIds.get*LayerId() native getter so we can see
+                // which one (if any) actually contains the camera placemarks.
+                // Logged once per process for diagnosis.
                 List<String> probe = new java.util.ArrayList<>();
-                probe.add(layerId);                  // canonical road events
-                probe.add("road_events");            // literal fallback
-                probe.add("road_events_layer");      // some YNavi versions
-                probe.add("speed_camera");           // long-shot
-                probe.add("speed_cameras");          // long-shot
-                probe.add("camera_alerts");          // long-shot
+                try {
+                    Class<?> layerIdsClass = Class.forName("com.yandex.mapkit.map.LayerIds");
+                    for (Method m : layerIdsClass.getMethods()) {
+                        if (m.getParameterTypes().length == 0
+                                && m.getName().startsWith("get")
+                                && m.getName().endsWith("LayerId")
+                                && m.getReturnType() == String.class) {
+                            try {
+                                String id = (String) m.invoke(null);
+                                if (id != null && !id.isEmpty()) probe.add(id);
+                            } catch (Throwable ignored) {}
+                        }
+                    }
+                } catch (Throwable t) {
+                    Log.w(TAG, "all-layers probe enum failed: " + t.getMessage());
+                }
+                if (probe.isEmpty()) probe.add(layerId);
+                if (sLayerProbeLogged.compareAndSet(false, true)) {
+                    Log.i(TAG, "probe all LayerIds (count=" + probe.size() + ") = " + probe);
+                }
                 dataSourceNames = probe;
             } else {
                 dataSourceNames = Collections.singletonList(layerId);
