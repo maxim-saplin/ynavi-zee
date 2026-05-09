@@ -80,7 +80,9 @@ public final class MapViewWalkHarvester {
     /** How long of empty walks (ms) before we slow down. */
     private static final long EMPTY_RUN_BACKOFF_MS = 60_000L;
     /** Max time to wait on the IntrospectionListener latch before giving up on a tick. */
-    private static final long INTROSPECTION_LATCH_TIMEOUT_MS = 1_500L;
+    /** Native may dispatch the listener several seconds after visibleObjects() returns
+     *  on a backlogged main thread. Match the main-thread post budget. */
+    private static final long INTROSPECTION_LATCH_TIMEOUT_MS = 10_000L;
     /** Max time to wait on a main-thread post (e.g. visibleObjects, getMap) before bailing. */
     /** Slow x86 emulator can take >1s to drain the main looper; budget generously. */
     private static final long MAIN_THREAD_POST_TIMEOUT_MS = 10_000L;
