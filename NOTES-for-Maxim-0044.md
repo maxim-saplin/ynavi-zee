@@ -1,21 +1,26 @@
 # 0044 — ynavi-zee NOTES for Maxim (prep branch)
 
-**Branch:** `0044-publish-prep` (no push until go).
+**Branch:** `0044-publish-prep`. **No APKs in git** — GitHub **draft Releases** only.
 
-## Dual Zeekr APKs — BUILT locally 2026-09-20 ~08:31 Minsk
+## Local binaries (builder machine)
 
-| Role | Letterbox left | Local signed | Intended Release filename |
-|------|----------------|--------------|---------------------------|
-| **DEFAULT margined** | 480dp | `builds/zeekr_signed.apk` (= `builds/zeekr_v12_margined.apk`) | `zeekr_signed_v12.apk` |
-| **OS7+ no margin** | 0dp | `builds/zeekr_os7_signed.apk` (= `builds/zeekr_v12_os7_nomargin.apk`) | `zeekr_signed_v12_os7_nomargin.apk` |
+| Role | Left letterbox | Path |
+|------|----------------|------|
+| DEFAULT margined | 480dp | `builds/zeekr_v12_margined.apk` (= `builds/zeekr_signed.apk`) |
+| OS7+ no margin | 0 | `builds/zeekr_v12_os7_nomargin.apk` (= `builds/zeekr_os7_signed.apk`) |
 
-Also copied to `modded_apks/zeekr_signed_v12*.apk` for LFS/Release staging — **not committed** until your go.
+Scripts: `build_zeekr.sh`, `build_zeekr_os7.sh`.
 
-Build scripts: `build_zeekr.sh`, `build_zeekr_os7.sh`. Post-P1 `hud` tree.
+## Draft Release (test; delete after)
 
-## Release + Actions
-- Workflow: `.github/workflows/release.yml` (`if: false` until go)
-- Tag: `ynavi-zeekr-v12` with both APKs
+```bash
+gh release create ynavi-zeekr-v12 \
+  builds/zeekr_v12_margined.apk#zeekr_signed_v12.apk \
+  builds/zeekr_v12_os7_nomargin.apk#zeekr_signed_v12_os7_nomargin.apk \
+  --repo maxim-saplin/ynavi-zee \
+  --title "ynavi-zeekr-v12 (DRAFT)" \
+  --notes "0044 draft — dual Zeekr variants. Delete after exercise." \
+  --draft
+```
 
-## UI vs CLI
-Install UI after public Release. Until then: `adb install -g -r -d builds/zeekr_signed.apk` (or os7).
+Install (zee-power-toys) points at Release asset URLs for tag `ynavi-zeekr-v12`.
