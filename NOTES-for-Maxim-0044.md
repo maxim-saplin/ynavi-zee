@@ -2,21 +2,20 @@
 
 **Branch:** `0044-publish-prep` (no push until go).
 
-## Dual Zeekr APKs
+## Dual Zeekr APKs — BUILT locally 2026-09-20 ~08:31 Minsk
 
-| File (intended under modded_apks/ + Release) | Build | Left letterbox |
-|-----------------------------------------------|-------|----------------|
-| `zeekr_signed_v12.apk` | `./build_zeekr.sh` → `builds/zeekr_signed.apk` | 480dp — **DEFAULT** |
-| `zeekr_signed_v12_os7_nomargin.apk` | `./build_zeekr_os7.sh` → `builds/zeekr_os7_signed.apk` | 0 — **OS7+** |
+| Role | Letterbox left | Local signed | Intended Release filename |
+|------|----------------|--------------|---------------------------|
+| **DEFAULT margined** | 480dp | `builds/zeekr_signed.apk` (= `builds/zeekr_v12_margined.apk`) | `zeekr_signed_v12.apk` |
+| **OS7+ no margin** | 0dp | `builds/zeekr_os7_signed.apk` (= `builds/zeekr_v12_os7_nomargin.apk`) | `zeekr_signed_v12_os7_nomargin.apk` |
 
-Must be **post-P1** (host allowlist). Old LFS `zeekr_signed_v11.apk` is pre-P1 / bind-broken.
+Also copied to `modded_apks/zeekr_signed_v12*.apk` for LFS/Release staging — **not committed** until your go.
+
+Build scripts: `build_zeekr.sh`, `build_zeekr_os7.sh`. Post-P1 `hud` tree.
 
 ## Release + Actions
-
 - Workflow: `.github/workflows/release.yml` (`if: false` until go)
-- Tag: `ynavi-zeekr-v12` with both APKs as assets
-- Install (zee-power-toys) points at those Release filenames
+- Tag: `ynavi-zeekr-v12` with both APKs
 
 ## UI vs CLI
-
-Install UI only after public Release. Until then: CLI `adb install -g` / `ynavi_prep`.
+Install UI after public Release. Until then: `adb install -g -r -d builds/zeekr_signed.apk` (or os7).
