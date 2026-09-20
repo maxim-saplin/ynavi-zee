@@ -1,0 +1,28 @@
+# 0044 — verify dual Zeekr APKs via LFS + upload as workflow artifacts (NO Release).
+name: ci-publish-prep
+
+on:
+  push:
+    branches: [0044-publish-prep]
+  workflow_dispatch:
+
+jobs:
+  verify-apks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Check dual v12 APKs present
+        run: |
+          set -euo pipefail
+          ls -lh modded_apks/zeekr_signed_v12.apk modded_apks/zeekr_signed_v12_os7_nomargin.apk
+          # sanity: not LFS pointer stubs only
+          test $(stat -c%s modded_apks/zeekr_signed_v12.apk) -gt 1000000
+          test $(stat -c%s modded_apks/zeekr_signed_v12_os7_nomargin.apk) -gt 1000000
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ynavi-zeekr-v12-dual
+          path: |
+            modded_apks/zeekr_signed_v12.apk
+            modded_apks/zeekr_signed_v12_os7_nomargin.apk

@@ -1,31 +1,9 @@
-# 0044 prep — publish Zeekr YNavi dual APKs as a draft Release. Disabled until Maxim go.
-name: release-ynavi-zeekr
-
+name: release
 on:
   workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Release tag'
-        required: true
-        default: 'ynavi-zeekr-v12'
-
 jobs:
   release:
-    if: false  # DISABLED until Maxim go
+    if: false
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v4
-        with:
-          lfs: true
-      - name: Upload Release assets (pre-built under modded_apks/)
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ inputs.tag }}
-          draft: true
-          files: |
-            modded_apks/zeekr_signed_v12.apk
-            modded_apks/zeekr_signed_v12_os7_nomargin.apk
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: echo "Enable after Maxim go — tag ynavi-zeekr-v12"
