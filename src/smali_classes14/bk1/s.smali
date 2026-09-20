@@ -93,13 +93,8 @@
 
     move-result-object p1
 
-    invoke-interface {p0}, Lbk1/o;->V2()Lbk1/i;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lbk1/i;->isManeuverStreetInfoVisible()Z
-
-    move-result v0
+    # ZEE HUD 0055: always enable map-pixel street info on cluster guidance layer
+    const/4 v0, 0x1
 
     invoke-interface {p1, v0}, Lcom/yandex/navikit/guidance_layer/NaviGuidanceLayer;->setManeuverStreetInfoVisible(Z)V
 

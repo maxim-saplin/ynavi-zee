@@ -26,13 +26,11 @@
 .method public final isManeuverStreetInfoVisible()Z
     .locals 1
 
-    iget-object v0, p0, Lru/yandex/yandexnavi/projected/platformkit/di/projectedsession/b1;->a:Lbe3/a;
-
-    check-cast v0, Lru/yandex/yandexmaps/integrations/projected/i0;
-
-    invoke-virtual {v0}, Lru/yandex/yandexmaps/integrations/projected/i0;->B()Z
-
-    move-result v0
+    # ZEE HUD: force map-pixel maneuver street/ETA chrome on cluster surface
+    # (NaviGuidanceLayer.setManeuverStreetInfoVisible). Experiment flag was
+    # often false → no native street label on minimap; power-toys must not
+    # paint a Flutter plate instead (0055 redirect).
+    const/4 v0, 0x1
 
     return v0
 .end method
