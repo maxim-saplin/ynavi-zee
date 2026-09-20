@@ -1,31 +1,22 @@
-# 0044 — ynavi-zee publish notes for Maxim (review, no green)
+# 0044 — ynavi-zee NOTES for Maxim (prep branch)
 
-**Branch tip:** `hud` @ `879c70b3c` (local working tree; **no push** until go).
+**Branch:** `0044-publish-prep` (no push until go).
 
-## What’s wrong today
+## Dual Zeekr APKs
 
-- In-app Install (`zee-power-toys` → `kYnaviAsset`) points at LFS  
-  `modded_apks/zeekr_signed_v11.apk` on `hud`.
-- That APK is **pre-P1** (host allowlist bypass). Bind fails:  
-  `Unrecognized host` → HUD black. Documented in MINIMAP.md §P1 and  
-  `zee-power-toys` `install_targets.dart`.
+| File (intended under modded_apks/ + Release) | Build | Left letterbox |
+|-----------------------------------------------|-------|----------------|
+| `zeekr_signed_v12.apk` | `./build_zeekr.sh` → `builds/zeekr_signed.apk` | 480dp — **DEFAULT** |
+| `zeekr_signed_v12_os7_nomargin.apk` | `./build_zeekr_os7.sh` → `builds/zeekr_os7_signed.apk` | 0 — **OS7+** |
 
-## What works locally (not downloadable)
+Must be **post-P1** (host allowlist). Old LFS `zeekr_signed_v11.apk` is pre-P1 / bind-broken.
 
-| File | Role |
-|------|------|
-| `builds/zeekr_signed.apk` | Post-P1 working build (~202 MB, **gitignored**) |
-| `builds/zeekr_no_keepalive_signed.apk` | Related build — candidate for **OS7+ unpadded**? confirm |
+## Release + Actions
 
-## Staged action (after your go)
+- Workflow: `.github/workflows/release.yml` (`if: false` until go)
+- Tag: `ynavi-zeekr-v12` with both APKs as assets
+- Install (zee-power-toys) points at those Release filenames
 
-1. Copy `builds/zeekr_signed.apk` → `modded_apks/zeekr_signed_v12.apk`
-2. `git lfs track` + commit on `hud` (or tag)
-3. Confirm OS7+ name: publish unpadded variant under a clear path, e.g.  
-   `modded_apks/zeekr_signed_v12_os7_unpadded.apk` (or document that  
-   `zeekr_no_keepalive_signed` **is** that variant)
-4. Tell zee-dev → bump `install_targets.dart` `kYnaviAsset.path` to `v12`
+## UI vs CLI
 
-## Out of scope until go
-
-- LFS push, GitHub Release, claiming Install green for YNavi
+Install UI only after public Release. Until then: CLI `adb install -g` / `ynavi_prep`.
