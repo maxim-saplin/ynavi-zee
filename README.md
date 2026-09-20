@@ -24,6 +24,19 @@ Important: the current `src/` tree was produced via apktool decompilation and th
 
 <img width="2560" height="960" alt="image" src="https://github.com/user-attachments/assets/4e988846-5dc8-4b1e-8840-978f7c487522" />
 
+
+
+## Zeekr variants (Block 0044)
+
+| Variant | Letterbox left | Build script | Clear `builds/` name | Intended `modded_apks/` (Maxim LFS later) |
+|---------|----------------|--------------|----------------------|-------------------------------------------|
+| **DEFAULT margined** | 480 dp | `build_zeekr.sh` | `builds/zeekr_v12_margined.apk` | `modded_apks/zeekr_signed_v12.apk` |
+| **OS7+ no-margin** | 0 dp | `build_zeekr_os7.sh` | `builds/zeekr_v12_os7_nomargin.apk` | `modded_apks/zeekr_signed_v12_os7_nomargin.apk` |
+
+Scripts apply feature config **in place** to `src/` — run **one at a time**.
+Until Maxim publishes v12 LFS, Install UI / CDN still serve **v11** (known
+broken for CarApp host allowlist). See `NOTES-for-Maxim-0044.md`.
+
 ## Repo layout
 
 - `src/`: apktool project (decoded resources + smali) used for building
