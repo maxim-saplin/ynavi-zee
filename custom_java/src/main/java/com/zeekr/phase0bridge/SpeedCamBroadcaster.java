@@ -264,9 +264,31 @@ public final class SpeedCamBroadcaster {
                     Object g = sNaviGuidance;
                     if (g == null) {
                         Log.w(TAG, "ghostPoll: naviGuidance null");
-                    } else if (!shouldBroadcastGhostFeed()) {
-                        if (n[0] % 30 == 0) {
-                            Log.i(TAG, "ghostPoll: skip — user route or navi n=" + n[0]);
+                    } else if (hasUserNaviRoute()) {
+                        // DoD2: while guiding, harvest navikit.route().getEvents (mapkit
+                        // getCurrentRoute alone was mute on Go in reliability cut).
+                        Object route = callInstance(g, "route", new Class<?>[0]);
+                        if (route == null) {
+                            if (n[0] % 30 == 0) {
+                                Log.i(TAG, "naviRoutePoll: route()=null n=" + n[0]);
+                            }
+                        } else {
+                            List<?> events = (List<?>) callInstance(route, "getEvents", new Class<?>[0]);
+                            int size = events == null ? -1 : events.size();
+                            if (n[0] % 10 == 0 || size > 0) {
+                                Log.i(TAG, "naviRoutePoll getEvents size=" + size + " n=" + n[0]);
+                            }
+                            if (size > 0) {
+                                try {
+                                    int fired = broadcastDrivingCamEvents(events);
+                                    if (fired > 0) {
+                                        Log.i(TAG, "broadcastRouteEvents fired count=" + fired
+                                                + " (source=navikit.route getEvents)");
+                                    }
+                                } catch (Throwable t) {
+                                    Log.e(TAG, "naviRoutePoll broadcast error", t);
+                                }
+                            }
                         }
                     } else {
                         Object route = callInstance(g, "freeDriveRoute", new Class<?>[0]);

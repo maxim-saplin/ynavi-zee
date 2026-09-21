@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .registers 1
 
-    .line 664
+    .line 686
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,12 +37,12 @@
         }
     .end annotation
 
-    .line 667
+    .line 689
     invoke-virtual {p2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 669
+    .line 691
     const-string v1, "toString"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -61,7 +61,7 @@
 
     if-nez v1, :cond_34
 
-    .line 670
+    .line 692
     const-string v1, "equals"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -70,7 +70,7 @@
 
     if-nez v1, :cond_34
 
-    .line 671
+    .line 693
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,7 +91,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 673
+    .line 695
     :cond_34
     const-string v1, "onRoadEventsChanged"
 
@@ -101,26 +101,26 @@
 
     if-eqz v0, :cond_46
 
-    .line 675
+    .line 697
     :try_start_3c
     # invokes: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->broadcastRoadEvents()V
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$1400()V
     :try_end_3f
     .catchall {:try_start_3c .. :try_end_3f} :catchall_40
 
-    .line 678
+    .line 700
     goto :goto_46
 
-    .line 676
+    .line 698
     :catchall_40
     move-exception v0
 
-    .line 677
+    .line 699
     const-string v1, "onRoadEventsChanged error"
 
     invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 681
+    .line 703
     :cond_46
     :goto_46
     # invokes: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->defaultProxyReturn(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
