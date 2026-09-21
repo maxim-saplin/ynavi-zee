@@ -707,6 +707,10 @@
 
     invoke-interface {v0, p0}, Lcom/yandex/mapkit/navigation/automotive/Windshield;->addListener(Lcom/yandex/mapkit/navigation/automotive/WindshieldListener;)V
 
+    # --- SpeedCam hook: register broadcaster on the live Windshield (v0) ---
+    invoke-static {v0}, Lcom/zeekr/phase0bridge/SpeedCamHook;->hookWindshield(Ljava/lang/Object;)V
+    # --- end SpeedCam hook ---
+
     invoke-virtual {p0}, Lcom/yandex/mapkit/maps/camera/scenario/navi/internal/assistant/data/DistancesProviderImpl;->onLaneSignChanged()V
 
     invoke-virtual {p0}, Lcom/yandex/mapkit/maps/camera/scenario/navi/internal/assistant/data/DistancesProviderImpl;->onManoeuvresChanged()V

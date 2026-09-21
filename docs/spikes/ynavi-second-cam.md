@@ -1,12 +1,14 @@
-# Spike pointer — YNavi second-cam feed
+# Spike — YNavi second-cam feed (ynavi side)
 
-Full DoD answers + go/no-go live on **zee-power-toys**  
-`spike/ynavi-second-cam` → `docs/spikes/ynavi-second-cam.md` (`0e306e7`).
+Full DoD: **zee-power-toys** `spike/ynavi-second-cam` → `docs/spikes/ynavi-second-cam.md`.
 
-## Tip vs bridge
+## Status (2026-09-21)
 
-- Current **main** tip: **no** `custom_java/` / `SpeedCamBroadcaster` (speedcam-era commit `d13d97e41` is not an ancestor of tip).
-- Revive source: this repo’s `origin/speedcam` (`SpeedCamBroadcaster` + DistancesProvider hook) — route-only Windshield → `com.zeekr.phase0.SPEEDCAM_DATA` with lat/lon/speedLimit/distance/eventId/….
-- Free-drive: **NO-GO** (see toys spike note / zee_hud_2 `_speedcam`).
+Maxim **CONDITIONAL GO** (route-enrich). This spike revives route-only bridge:
 
-If PDM accepts CONDITIONAL GO: revive broadcaster on this spike branch, retarget for toys app id, tip spike APK — **not** main.
+- `custom_java/.../SpeedCamBroadcaster.java` + `SpeedCamHook` → smali via `build_custom_java.sh`
+- Hook in `DistancesProviderImpl.start()` → `SpeedCamHook.hookWindshield(windshield)`
+- Intent: `com.zeekr.phase0.SPEEDCAM_DATA` with `source=ynavi`, `setPackage(com.zeepowertoys.zee_power_toys)`
+- Free-drive broadcasters **not** revived (NO-GO)
+
+Build: `build_zeekr.sh` now runs `build_custom_java.sh` first. Needs local baksmali (`tools/baksmali` wrapper + jar gitignored) and `ANDROID_HOME`.

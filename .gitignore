@@ -14,3 +14,9 @@ modded_apks/
 tmp/
 yandex-navigator*.apk
 Huawei*.apk
+
+# Spike Java→smali build output
+custom_java/out/
+
+tools/baksmali.jar
+custom_java/out/

@@ -25,6 +25,9 @@ ZEEAPP_KEEPALIVE_MODE=fgs
 ZEEAPP_KEEPALIVE_RECEIVER_EXPORTED_DEBUG=0
 EOF
 
+# Spike: compile SpeedCamBroadcaster -> smali into src/
+bash "$repoRoot/build_custom_java.sh"
+
 bash "$repoRoot/build_apk.sh" \
   -inputFolder "$repoRoot/src" \
   -outputFile "$repoRoot/builds/zeekr.apk" \
