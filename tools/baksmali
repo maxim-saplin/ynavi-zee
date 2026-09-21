@@ -1,0 +1,2 @@
+#!/bin/bash
+exec java -jar "$(cd "$(dirname "$0")" && pwd)/baksmali.jar" "$@"
