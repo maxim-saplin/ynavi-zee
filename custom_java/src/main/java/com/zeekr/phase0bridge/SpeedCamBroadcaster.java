@@ -54,6 +54,9 @@ public final class SpeedCamBroadcaster {
     private static Handler sFreeDrivePollHandler;
     private static Runnable sFreeDrivePollRunnable;
     private static String sLastGhostBroadcastSig = "";
+    /** Cross-feed: same MapKit eventId must not SPEEDCAM_DATA twice (ghost + route). */
+    private static final java.util.Set<String> sSentEventIds =
+            java.util.Collections.synchronizedSet(new java.util.HashSet<String>());
 
     // ── public entry point (called from smali) ──────────────────────────
 
@@ -294,7 +297,23 @@ public final class SpeedCamBroadcaster {
         sFreeDrivePollHandler.post(sFreeDrivePollRunnable);
     }
 
-    /** Same as route cam broadcast but separate dedupe sig + feed=freeDriveRoute. */
+    /** Same as route cam broadcast; shared eventId set + feed=freeDriveRoute. */
+
+    /** Stable key for cross-feed dedupe (prefer MapKit eventId). */
+    private static String camEventKey(String eventId, double lat, double lon) {
+        if (eventId != null && !eventId.isEmpty()) return eventId;
+        return String.format(java.util.Locale.US, "%.5f_%.5f", lat, lon);
+    }
+
+    /** @return true if this id was already sent (caller must skip broadcast). */
+    private static boolean alreadySentOrMark(String key) {
+        synchronized (sSentEventIds) {
+            if (sSentEventIds.contains(key)) return true;
+            sSentEventIds.add(key);
+            return false;
+        }
+    }
+
     private static int broadcastGhostCamEvents(List<?> events) throws Exception {
         if (sContext == null || events == null || events.isEmpty()) return 0;
         java.util.ArrayList<Object> cams = new java.util.ArrayList<Object>();
@@ -380,6 +399,11 @@ public final class SpeedCamBroadcaster {
         intent.putExtra("source", SOURCE_TAG);
         intent.putExtra("feed", "freeDriveRoute");
         intent.setPackage(TOYS_PACKAGE);
+        String key = camEventKey(eventId, lat, lon);
+        if (alreadySentOrMark(key)) {
+            Log.d(TAG, "SPEEDCAM_DATA skip duplicate (ghost) id=" + key);
+            return;
+        }
         sContext.sendBroadcast(intent);
         Log.i(TAG, "SPEEDCAM_DATA sent (ghost) id=" + eventId
                 + " lat=" + lat + " lon=" + lon
@@ -786,7 +810,11 @@ public final class SpeedCamBroadcaster {
         intent.putExtra("source", SOURCE_TAG);
         intent.putExtra("feed", "getEvents");
         intent.setPackage(TOYS_PACKAGE);
-
+        String key = camEventKey(eventId, lat, lon);
+        if (alreadySentOrMark(key)) {
+            Log.d(TAG, "SPEEDCAM_DATA skip duplicate (route) id=" + key);
+            return;
+        }
         sContext.sendBroadcast(intent);
         Log.i(TAG, "SPEEDCAM_DATA sent id=" + eventId
                 + " lat=" + lat + " lon=" + lon
