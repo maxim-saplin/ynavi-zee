@@ -6,46 +6,29 @@ Focus: modding Yandex Navi to look and work better on Chinese cars with awkward 
 - `build_deepal.sh`: UI scale 1.75x, map scale 1.3x, aggresive survival in background (audio mode, mimicing to be media player to survive beining minimized and still vocing notificaions along the route), padded top and bottom to avoid overlapping system UI
 - `build_zeekr.sh`: : UI scale 1.75x, map scale 1.3x, padded top and bottom, padded left to avoid obstruction by left side panel (static, padding stays no matter if the panel is visible or not), aggresive survival in background (just in case, seems not a problem but enabled in fgs mode while fighitng Deepal OS killing process)
 
-## APKs
+## Get the Zeekr APKs (GitHub Releases)
 
-## Zeekr APK variants (0044)
+**Install path for [zee-power-toys](https://github.com/maxim-saplin/zee-power-toys):** public Release assets — **not** files from `modded_apks/` in git.
 
-| Variant | Build script | Letterbox left | Install role |
-|---------|--------------|----------------|--------------|
-| **Margined (default)** | `build_zeekr.sh` | 480dp | zee-power-toys Install default |
-| **OS7+ no left margin** | `build_zeekr_os7.sh` | 0dp | Second Install card |
+| Variant | Letterbox left | Release asset |
+|---------|----------------|---------------|
+| **Margined (default)** | 480dp | [`zeekr_v12_margined.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v12/zeekr_v12_margined.apk) |
+| **OS7+ no left margin** | 0dp | [`zeekr_v12_os7_nomargin.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v12/zeekr_v12_os7_nomargin.apk) |
 
-Outputs land in `builds/*_signed.apk`. For publish (Maxim go): copy to
-`modded_apks/zeekr_signed_v12.apk` and `modded_apks/zeekr_signed_v12_os7_nomargin.apk`,
-then draft Release tag `ynavi-zeekr-v12` (workflow `.github/workflows/release.yml`, disabled until go).
+- **Release tag:** [`ynavi-zeekr-v12`](https://github.com/maxim-saplin/ynavi-zee/releases/tag/ynavi-zeekr-v12)
+- **Build locally:** `build_zeekr.sh` (margined) / `build_zeekr_os7.sh` (OS7+) → outputs under `builds/` (gitignored)
 
 ### UI vs CLI
 
 | Path | Use |
 |------|-----|
-| **Install UI** (zee-power-toys) | After public Release assets exist |
-| **CLI** | `adb install -g -r -d builds/…_signed.apk` or `uv run dev/ynavi_prep.py --apk …` until Release |
+| **Install UI** (zee-power-toys) | Downloads the Release assets above |
+| **CLI** | `adb install -g -r -d builds/…_signed.apk` after a local build |
 
-See `NOTES-for-Maxim-0044.md`.
+### Older Deepal / Zeekr builds
 
+Historical Deepal / pre-v12 Zeekr builds may still appear under `modded_apks/` for archival ADB installs. **Prefer the Release assets above** for Zeekr + zee-power-toys.
 
-### Legacy published builds
-
-**Ready-to-install builds** are available in the [modded_apks/](modded_apks) folder, signed with AOSP debug key (used by default Zeekr OS 6 for its system apps):
-
-- **[deepal_signed_v14.apk](modded_apks/deepal_signed_v14.apk)** – Deepal S05 preset (UI 1.75x, map 1.3x, top/bottom padding 91dp, audio keepalive)
-- **[zeekr_signed_v11.apk](modded_apks/zeekr_signed_v11.apk)** – Zeekr 007 preset (UI 1.75x, map 1.3x, top 70dp, bottom 10dp, left 480dp, FGS keepalive)
-
-Download and install via ADB or copying to Flash Drive and installing via UI:
-```bash
-adb install -g -r -d modded_apks/deepal_signed_v14.apk
-# or
-adb install -g -r -d modded_apks/zeekr_signed_v11.apk
-```
-
-Important: the current `src/` tree was produced via apktool decompilation and then iterated on. See `WORKFLOW.md` for the decompile commands and the rebuild caveats around signature checks.
-
-<img width="2560" height="960" alt="image" src="https://github.com/user-attachments/assets/4e988846-5dc8-4b1e-8840-978f7c487522" />
 
 ## Repo layout
 
