@@ -166,9 +166,15 @@
 
     move-result-object v1
 
+    # --- SpeedCam ghost: navikit Guidance + freeDriveRoute ---
+    invoke-static {v1}, Lcom/zeekr/phase0bridge/SpeedCamHook;->hookNaviGuidance(Ljava/lang/Object;)V
+
     invoke-interface {v1}, Lcom/yandex/navikit/guidance/Guidance;->freeDriveRoute()Lcom/yandex/mapkit/directions/driving/DrivingRoute;
 
     move-result-object v1
+
+    invoke-static {v1}, Lcom/zeekr/phase0bridge/SpeedCamHook;->hookFreeDriveRoute(Ljava/lang/Object;)V
+    # --- end SpeedCam ghost ---
 
     check-cast v0, Lru/yandex/yandexmaps/navikit/v0;
 
