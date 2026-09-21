@@ -1,10 +1,8 @@
 # ynavi-zee
 
-This repo contains a **decompiled Yandex Navigator APK** (version 27.0.2 as of time of writing) plus **repeatable patches** (resources + smali) to make it work better on Android 11 in-car head units (UI scaling, letterboxing, keepalive foreground service, etc.).
+Adapted **Yandex Navigator** builds for Chinese Android head units (letterbox, scale, keepalive).
 
-Focus: modding Yandex Navi to look and work better on Chinese cars with awkward DPI. Tested on **Deepal S05** and **Zeekr 007**:
-- `build_deepal.sh`: UI scale 1.75x, map scale 1.3x, aggresive survival in background (audio mode, mimicing to be media player to survive beining minimized and still vocing notificaions along the route), padded top and bottom to avoid overlapping system UI
-- `build_zeekr.sh`: : UI scale 1.75x, map scale 1.3x, padded top and bottom, padded left to avoid obstruction by left side panel (static, padding stays no matter if the panel is visible or not), aggresive survival in background (just in case, seems not a problem but enabled in fgs mode while fighitng Deepal OS killing process)
+**Get installables from [GitHub Releases](https://github.com/maxim-saplin/ynavi-zee/releases/tag/ynavi-zeekr-v12)** — three first-class variants below. Decompiled `src/` + build scripts are for rebuilding those assets; HUD/minimap patch detail lives in [MINIMAP.md](MINIMAP.md), not this landing.
 
 ## Get the APKs (GitHub Releases)
 
@@ -41,7 +39,7 @@ adb install -g -r -d builds/zeekr_os7_signed.apk    # OS7+
 ./build_zeekr_os7.sh  # → builds/zeekr_os7*_signed.apk (OS7+, left=0)
 ```
 
-Upload to Release `ynavi-zeekr-v12` after Maxim go. See `NOTES-for-Maxim-0044.md`.
+Upload to Release `ynavi-zeekr-v12` after a local rebuild (or Actions **release** dispatch).
 
 ### GitHub Actions release
 
