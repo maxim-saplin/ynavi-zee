@@ -1,26 +1,29 @@
-# 0044 — ynavi-zee NOTES for Maxim (prep branch)
+# 0044 — ynavi-zee NOTES for Maxim
 
-**Branch:** `main`. **No APKs in git** (`modded_apks/` untracked) — GitHub **Releases** only.
+**Branch:** `main`. **No APKs in git** — GitHub **Releases** only.
+
+## Release tag / assets
+
+| Tag | Assets |
+|-----|--------|
+| `ynavi-zeekr-v12` | `deepal_v12.apk`, `zeekr_v12_margined.apk`, `zeekr_v12_os7_nomargin.apk` |
+
+Dispatch: Actions → **release** → tag default `ynavi-zeekr-v12`.
 
 ## Local binaries (builder machine)
 
-| Role | Left letterbox | Path |
-|------|----------------|------|
-| DEFAULT margined | 480dp | `builds/zeekr_v12_margined.apk` (= `builds/zeekr_signed.apk`) |
-| OS7+ no margin | 0 | `builds/zeekr_v12_os7_nomargin.apk` (= `builds/zeekr_os7_signed.apk`) |
+| Role | Left letterbox | Path after script |
+|------|----------------|-------------------|
+| Deepal | 0 | `builds/deepal_signed.apk` → rename `deepal_v12.apk` |
+| DEFAULT margined | 480dp | `builds/zeekr_signed.apk` → `zeekr_v12_margined.apk` |
+| OS7+ no margin | 0 | `builds/zeekr_os7_signed.apk` → `zeekr_v12_os7_nomargin.apk` |
 
-Scripts: `build_zeekr.sh`, `build_zeekr_os7.sh`.
+Scripts: `build_deepal.sh`, `build_zeekr.sh`, `build_zeekr_os7.sh` (sequential if same checkout — config mutates `src/`).
 
-## Draft Release (test; delete after)
+## CRITICAL
 
-```bash
-gh release create ynavi-zeekr-v12 \
-  builds/zeekr_v12_margined.apk#zeekr_signed_v12.apk \
-  builds/zeekr_v12_os7_nomargin.apk#zeekr_signed_v12_os7_nomargin.apk \
-  --repo maxim-saplin/ynavi-zee \
-  --title "ynavi-zeekr-v12 (DRAFT)" \
-  --notes "0044 draft — dual Zeekr variants. Delete after exercise." \
-  --draft
-```
+Release `ynavi-zeekr-v12` may have **ZERO assets** (wiped). CI tip alone does not restore them until the **release** workflow runs successfully (or Maxim uploads from local `builds/*.apk`).
 
-Install (zee-power-toys) points at Release asset URLs for tag `ynavi-zeekr-v12`.
+## Secrets
+
+None required for build (AOSP `androiddebugkey.jks` is committed). `GITHUB_TOKEN` is enough for softprops upload.

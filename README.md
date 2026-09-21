@@ -43,6 +43,18 @@ adb install -g -r -d builds/zeekr_os7_signed.apk    # OS7+
 
 Upload to Release `ynavi-zeekr-v12` after Maxim go. See `NOTES-for-Maxim-0044.md`.
 
+### GitHub Actions release
+
+1. Actions → **release** → Run workflow.
+2. Input `tag` (default **`ynavi-zeekr-v12`**).
+3. Matrix builds Deepal / Zeekr padded / Zeekr OS7 on Ubuntu (JDK 17, apktool 2.12.1, SDK build-tools, `apktool if` android-34), signs with committed `androiddebugkey.jks` (AOSP platform debug / alias `platformkey`).
+4. Uploads (clobber/update) assets: `deepal_v12.apk`, `zeekr_v12_margined.apk`, `zeekr_v12_os7_nomargin.apk`.
+
+Push CI (`ci.yml` on `main`): script executables, letterbox greps, `apply_feature_config.py` compile+config load — **no** full apktool (APKs not in git).
+
+**CRITICAL:** a wiped Release tag has zero assets until this workflow (or a local `gh release upload`) repopulates them. Local builder APKs live under `builds/*.apk`.
+
+
 ### Related
 
 | Repo | Role |

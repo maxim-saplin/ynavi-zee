@@ -1,0 +1,46 @@
+# Push CI on main — validate build scripts + feature config (no APK build; APKs not in git).
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - name: Build scripts executable + letterbox presets
+        run: |
+          set -euo pipefail
+          for s in build_deepal.sh build_zeekr.sh build_zeekr_os7.sh build_apk.sh; do
+            test -x "$s" || { echo "::error::$s missing or not executable"; exit 1; }
+          done
+          test -f NOTES-for-Maxim-0044.md
+          test -f tools/apply_feature_config.py
+          test -f features/config.env.example
+          test -f androiddebugkey.jks
+          # Letterbox presets (OS7 left=0, padded left=480, Deepal top/bottom=91)
+          grep -q 'ZEEAPP_LETTERBOX_LEFT_DIP=0' build_zeekr_os7.sh
+          grep -q 'ZEEAPP_LETTERBOX_LEFT_DIP=480' build_zeekr.sh
+          grep -q 'ZEEAPP_LETTERBOX_TOP_DIP=91' build_deepal.sh
+          grep -q 'ZEEAPP_LETTERBOX_BOTTOM_DIP=91' build_deepal.sh
+          echo "APKs are NOT in git — ship via GitHub Releases (tag ynavi-zeekr-v12)."
+      - name: Dry-run feature config (load + compile; no apktool)
+        run: |
+          set -euo pipefail
+          python3 -m py_compile tools/apply_feature_config.py
+          python3 - <<'PY'
+          import importlib.util, sys
+          from pathlib import Path
+          root = Path(".").resolve()
+          spec = importlib.util.spec_from_file_location(
+              "apply_feature_config", root / "tools" / "apply_feature_config.py"
+          )
+          mod = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(mod)
+          cfg = mod.load_config(str(root / "features" / "config.env.example"))
+          print("config ok:", cfg)
+          PY

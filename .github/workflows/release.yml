@@ -1,9 +1,93 @@
+# Build Deepal / Zeekr padded / Zeekr OS7 APKs and upload to a Release tag.
+# Default tag: ynavi-zeekr-v12. Keystore is the committed AOSP androiddebugkey.jks.
 name: release
 on:
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to create/update'
+        required: true
+        default: 'ynavi-zeekr-v12'
+
 jobs:
-  release:
-    if: false
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      # Each matrix job gets a fresh checkout — safe despite in-place src/ mutation.
+      matrix:
+        include:
+          - id: deepal
+            script: ./build_deepal.sh
+            signed: builds/deepal_signed.apk
+            asset: deepal_v12.apk
+          - id: zeekr-padded
+            script: ./build_zeekr.sh
+            signed: builds/zeekr_signed.apk
+            asset: zeekr_v12_margined.apk
+          - id: zeekr-os7
+            script: ./build_zeekr_os7.sh
+            signed: builds/zeekr_os7_signed.apk
+            asset: zeekr_v12_os7_nomargin.apk
     steps:
-      - run: echo "Enable after Maxim go — tag ynavi-zeekr-v12"
+      - uses: actions/checkout@v5
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Set up Android SDK (framework + build-tools)
+        uses: android-actions/setup-android@v4
+      - name: Install platforms / build-tools
+        run: |
+          set -euo pipefail
+          sdkmanager --install "platforms;android-34" "build-tools;34.0.0"
+          # Prefer SDK zipalign on Linux (vendored macOS binary is unusable here).
+          # build_apk.sh already uses linux/zipalign when uname=Linux; keep SDK on PATH as backup.
+          echo "$ANDROID_HOME/build-tools/34.0.0" >> "$GITHUB_PATH"
+      - name: Install apktool 2.12.1
+        run: |
+          set -euo pipefail
+          curl -fsSL -o /tmp/apktool \
+            https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool
+          curl -fsSL -o /tmp/apktool.jar \
+            https://github.com/iBotPeaches/Apktool/releases/download/v2.12.1/apktool_2.12.1.jar
+          sudo mv /tmp/apktool /tmp/apktool.jar /usr/local/bin/
+          sudo chmod +x /usr/local/bin/apktool
+          apktool --version
+      - name: Install Android 34 framework into apktool
+        run: |
+          set -euo pipefail
+          JAR="$ANDROID_HOME/platforms/android-34/android.jar"
+          test -f "$JAR"
+          apktool if "$JAR"
+      - name: Verify Linux build helpers
+        run: |
+          set -euo pipefail
+          test -x linux/zipalign
+          test -x linux/zipalign.bin
+          test -x linux/apksigner
+          test -f androiddebugkey.jks
+          linux/zipalign 2>&1 | head -3 || true
+      - name: Build ${{ matrix.id }}
+        run: |
+          set -euo pipefail
+          chmod +x build_apk.sh build_deepal.sh build_zeekr.sh build_zeekr_os7.sh
+          ${{ matrix.script }}
+          test -f "${{ matrix.signed }}"
+          mkdir -p dist
+          cp "${{ matrix.signed }}" "dist/${{ matrix.asset }}"
+          ls -la dist/
+      - name: Upload Release asset (${{ matrix.asset }})
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: ${{ inputs.tag }}
+          name: ${{ inputs.tag }}
+          files: dist/${{ matrix.asset }}
+          fail_on_unmatched_files: true
+          overwrite_files: true
+          make_latest: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
