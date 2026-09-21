@@ -4128,7 +4128,7 @@
     <dimen name="ysk_zero">0.0dip</dimen>
     <dimen name="zeeapp_letterbox_top">70.0dip</dimen>
     <dimen name="zeeapp_letterbox_bottom">10.0dip</dimen>
-    <dimen name="zeeapp_letterbox_left">0.0dip</dimen>
+    <dimen name="zeeapp_letterbox_left">480.0dip</dimen>
     <dimen name="zoom_map_height">30.0dip</dimen>
     <dimen name="zoom_map_padding">2.0dip</dimen>
     <dimen name="zoom_map_width">50.0dip</dimen>

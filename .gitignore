@@ -10,3 +10,6 @@ modded_apks/
 # Common OS noise
 .DS_Store
 
+
+tmp/
+
