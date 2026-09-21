@@ -30,7 +30,7 @@
         }
     .end annotation
 
-    .line 303
+    .line 329
     iput-object p1, p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$2;->val$n:[I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
 .method public run()V
     .registers 10
 
-    .line 306
+    .line 332
     # getter for: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sFreeDrivePollRunning:Z
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$000()Z
 
@@ -55,7 +55,7 @@
 
     if-nez v0, :cond_24
 
-    .line 307
+    .line 333
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,10 +80,10 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
+    .line 334
     return-void
 
-    .line 311
+    .line 337
     :cond_24
     :try_start_24
     # getter for: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sNaviGuidance:Ljava/lang/Object;
@@ -91,17 +91,17 @@
 
     move-result-object v0
 
-    .line 312
+    .line 338
     if-nez v0, :cond_31
 
-    .line 313
+    .line 339
     const-string v0, "ghostPoll: naviGuidance null"
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_153
 
-    .line 314
+    .line 340
     :cond_31
     # invokes: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->hasUserNaviRoute()Z
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$200()Z
@@ -118,7 +118,7 @@
 
     if-eqz v3, :cond_d5
 
-    .line 317
+    .line 343
     :try_start_3c
     const-string v3, "route"
 
@@ -131,10 +131,10 @@
 
     move-result-object v0
 
-    .line 318
+    .line 344
     if-nez v0, :cond_6b
 
-    .line 319
+    .line 345
     iget-object v0, p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$2;->val$n:[I
 
     aget v0, v0, v2
@@ -143,7 +143,7 @@
 
     if-nez v0, :cond_d3
 
-    .line 320
+    .line 346
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -170,7 +170,7 @@
 
     goto :goto_d3
 
-    .line 323
+    .line 349
     :cond_6b
     new-array v3, v2, [Ljava/lang/Class;
 
@@ -183,7 +183,7 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 324
+    .line 350
     if-nez v0, :cond_78
 
     goto :goto_7c
@@ -193,7 +193,7 @@
 
     move-result v5
 
-    .line 325
+    .line 351
     :goto_7c
     iget-object v3, p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$2;->val$n:[I
 
@@ -205,7 +205,7 @@
 
     if-lez v5, :cond_a8
 
-    .line 326
+    .line 352
     :cond_86
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -241,21 +241,21 @@
     :try_end_a8
     .catchall {:try_start_3c .. :try_end_a8} :catchall_154
 
-    .line 328
+    .line 354
     :cond_a8
     if-lez v5, :cond_d3
 
-    .line 330
+    .line 356
     :try_start_aa
     # invokes: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->broadcastDrivingCamEvents(Ljava/util/List;)I
     invoke-static {v0}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$400(Ljava/util/List;)I
 
     move-result v0
 
-    .line 331
+    .line 357
     if-lez v0, :cond_cc
 
-    .line 332
+    .line 358
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -284,26 +284,26 @@
     :try_end_cc
     .catchall {:try_start_aa .. :try_end_cc} :catchall_cd
 
-    .line 337
+    .line 363
     :cond_cc
     goto :goto_d3
 
-    .line 335
+    .line 361
     :catchall_cd
     move-exception v0
 
-    .line 336
+    .line 362
     :try_start_ce
     const-string v3, "naviRoutePoll broadcast error"
 
     invoke-static {v1, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 340
+    .line 366
     :cond_d3
     :goto_d3
     goto/16 :goto_153
 
-    .line 341
+    .line 367
     :cond_d5
     const-string v3, "freeDriveRoute"
 
@@ -316,10 +316,10 @@
 
     move-result-object v0
 
-    .line 342
+    .line 368
     if-nez v0, :cond_fc
 
-    .line 343
+    .line 369
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -346,7 +346,7 @@
 
     goto :goto_153
 
-    .line 345
+    .line 371
     :cond_fc
     new-array v3, v2, [Ljava/lang/Class;
 
@@ -359,7 +359,7 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 346
+    .line 372
     if-nez v0, :cond_109
 
     goto :goto_10d
@@ -369,7 +369,7 @@
 
     move-result v5
 
-    .line 347
+    .line 373
     :goto_10d
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -403,19 +403,19 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 348
+    .line 374
     if-lez v5, :cond_153
 
-    .line 349
+    .line 375
     # invokes: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->broadcastGhostCamEvents(Ljava/util/List;)I
     invoke-static {v0}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$500(Ljava/util/List;)I
 
     move-result v0
 
-    .line 350
+    .line 376
     if-lez v0, :cond_153
 
-    .line 351
+    .line 377
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -444,16 +444,16 @@
     :try_end_153
     .catchall {:try_start_ce .. :try_end_153} :catchall_154
 
-    .line 359
+    .line 385
     :cond_153
     :goto_153
     goto :goto_16f
 
-    .line 357
+    .line 383
     :catchall_154
     move-exception v0
 
-    .line 358
+    .line 384
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -478,7 +478,7 @@
 
     invoke-static {v1, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 360
+    .line 386
     :goto_16f
     iget-object v0, p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$2;->val$n:[I
 
@@ -488,7 +488,7 @@
 
     aput v1, v0, v2
 
-    .line 361
+    .line 387
     # getter for: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sFreeDrivePollRunning:Z
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$000()Z
 
@@ -503,7 +503,7 @@
 
     if-eqz v0, :cond_18c
 
-    .line 362
+    .line 388
     # getter for: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sFreeDrivePollHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$600()Landroid/os/Handler;
 
@@ -513,7 +513,7 @@
 
     invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 364
+    .line 390
     :cond_18c
     return-void
 .end method

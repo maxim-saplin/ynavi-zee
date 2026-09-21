@@ -30,6 +30,8 @@ public final class SpeedCamBroadcaster {
     private static final String ACTION = "com.zeekr.phase0.SPEEDCAM_DATA";
     private static final String ACTION_STOP_GUIDANCE = "com.zeekr.phase0.STOP_GUIDANCE";
     private static final AtomicBoolean sStopReceiverRegistered = new AtomicBoolean(false);
+    /** After STOP_GUIDANCE, prefer freeDrive until navikit.route() clears. */
+    private static volatile boolean sForceGhostAfterStop;
     /** Power Toys package — setPackage makes the broadcast explicit for Android 12+. */
     private static final String TOYS_PACKAGE = "com.zeepowertoys.zee_power_toys";
     private static final String SOURCE_TAG = "ynavi";
@@ -178,7 +180,20 @@ public final class SpeedCamBroadcaster {
         }
         try {
             callInstance(g, "stop", new Class<?>[0]);
-            Log.i(TAG, "stopUserGuidance: Guidance.stop() invoked");
+            sForceGhostAfterStop = true;
+            Log.i(TAG, "stopUserGuidance: Guidance.stop() invoked; forceGhost=true");
+            // stop() also nulls freeDriveRoute — revive free-drive session
+            try {
+                callInstance(g, "onStart", new Class<?>[0]);
+                Log.i(TAG, "stopUserGuidance: Guidance.onStart() revive freeDrive");
+            } catch (Throwable t2) {
+                try {
+                    callInstance(g, "resume", new Class<?>[0]);
+                    Log.i(TAG, "stopUserGuidance: Guidance.resume() fallback");
+                } catch (Throwable t3) {
+                    Log.w(TAG, "stopUserGuidance: revive freeDrive failed: " + t3.getMessage());
+                }
+            }
         } catch (Throwable t) {
             Log.e(TAG, "stopUserGuidance failed: " + t.getMessage(), t);
         }
@@ -218,7 +233,18 @@ public final class SpeedCamBroadcaster {
         if (g == null) return false;
         try {
             Object r = callInstance(g, "route", new Class<?>[0]);
-            return r != null;
+            if (r == null) {
+                if (sForceGhostAfterStop) {
+                    sForceGhostAfterStop = false;
+                    Log.i(TAG, "hasUserNaviRoute: route cleared after stop");
+                }
+                return false;
+            }
+            if (sForceGhostAfterStop) {
+                // stop() may leave route() non-null briefly — still treat as ghost mode
+                return false;
+            }
+            return true;
         } catch (Throwable t) {
             return false;
         }

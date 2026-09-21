@@ -18,7 +18,7 @@
 .method constructor <init>()V
     .registers 1
 
-    .line 195
+    .line 210
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -29,16 +29,16 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .registers 3
 
-    .line 198
+    .line 213
     const-string p1, "SpeedCamBridge"
 
     const-string p2, "STOP_GUIDANCE broadcast received"
 
     invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 199
+    .line 214
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->stopUserGuidance()V
 
-    .line 200
+    .line 215
     return-void
 .end method
