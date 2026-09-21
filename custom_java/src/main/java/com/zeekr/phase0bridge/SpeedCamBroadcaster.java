@@ -556,6 +556,9 @@ public final class SpeedCamBroadcaster {
     }
 
     private static void startRoadEventsPoller() {
+        // Product lock: Windshield closed — do not poll getRoadEvents (ZEE id spam).
+        Log.i(TAG, "startRoadEventsPoller: SKIP — Windshield closed (ghost+route only)");
+        return;
         sPollRunning = false;
         if (sPollHandler != null && sPollRunnable != null) {
             sPollHandler.removeCallbacks(sPollRunnable);
@@ -844,27 +847,9 @@ public final class SpeedCamBroadcaster {
     }
 
     private static void broadcastRoadEvents() throws Exception {
-        if (sWindshield == null || sContext == null) return;
-
-        List<?> events = (List<?>) callInstance(sWindshield, "getRoadEvents", new Class<?>[0]);
-        if (events == null || events.isEmpty()) {
-            Intent clearIntent = new Intent(ACTION);
-            clearIntent.setPackage(TOYS_PACKAGE);
-            clearIntent.putExtra("count", 0);
-            clearIntent.putExtra("t_ms", System.currentTimeMillis());
-            clearIntent.putExtra("source", SOURCE_TAG);
-            sContext.sendBroadcast(clearIntent);
-            return;
-        }
-
-        for (int i = 0; i < events.size(); i++) {
-            Object upcoming = events.get(i);  // UpcomingRoadEvent
-            try {
-                broadcastSingleEvent(upcoming, i, events.size());
-            } catch (Throwable t) {
-                Log.w(TAG, "Error broadcasting event " + i + ": " + t.getMessage());
-            }
-        }
+        // Product lock: Windshield closed — never SPEEDCAM_DATA from getRoadEvents.
+        // (Old getRoadEvents poll body removed; ghost+route paths remain.)
+        Log.d(TAG, "broadcastRoadEvents: SKIP — Windshield closed");
     }
 
     private static void broadcastSingleEvent(Object upcoming, int index, int total)
@@ -959,9 +944,16 @@ public final class SpeedCamBroadcaster {
             intent.putExtra("speedLimitStatus", speedLimitStatus.toString());
         }
         intent.putExtra("source", SOURCE_TAG);
+        intent.putExtra("feed", "windshield");
         intent.setPackage(TOYS_PACKAGE);
-
+        String key = camEventKey(eventId, lat, lon);
+        if (alreadySentOrMark(key)) {
+            Log.d(TAG, "SPEEDCAM_DATA skip duplicate (windshield) id=" + key);
+            return;
+        }
         sContext.sendBroadcast(intent);
+        Log.i(TAG, "SPEEDCAM_DATA sent (windshield) id=" + eventId
+                + " lat=" + lat + " lon=" + lon + " dist=" + distance);
     }
 
     // ── reflection helpers ──────────────────────────────────────────────
