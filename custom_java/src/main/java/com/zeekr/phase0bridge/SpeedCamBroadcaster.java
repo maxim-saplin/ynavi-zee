@@ -558,51 +558,6 @@ public final class SpeedCamBroadcaster {
     private static void startRoadEventsPoller() {
         // Product lock: Windshield closed — do not poll getRoadEvents (ZEE id spam).
         Log.i(TAG, "startRoadEventsPoller: SKIP — Windshield closed (ghost+route only)");
-        return;
-        sPollRunning = false;
-        if (sPollHandler != null && sPollRunnable != null) {
-            sPollHandler.removeCallbacks(sPollRunnable);
-        }
-        sPollHandler = new Handler(Looper.getMainLooper());
-        sPollRunning = true;
-        final int[] n = {0};
-        Log.i(TAG, "poll: starting on main looper");
-        sPollRunnable = new Runnable() {
-            @Override
-            public void run() {
-                if (!sPollRunning) {
-                    Log.i(TAG, "poll: stopped n=" + n[0]);
-                    return;
-                }
-                try {
-                    Object ws = sWindshield;
-                    if (ws != null && sContext != null) {
-                        List<?> events = (List<?>) callInstance(ws, "getRoadEvents", new Class<?>[0]);
-                        int size = events == null ? -1 : events.size();
-                        Log.i(TAG, "poll getRoadEvents size=" + size
-                                + " ws=" + System.identityHashCode(ws)
-                                + " n=" + n[0]);
-                        if (size > 0) {
-                            try {
-                                broadcastRoadEvents();
-                                Log.i(TAG, "poll: broadcastRoadEvents fired count=" + size);
-                            } catch (Throwable t) {
-                                Log.e(TAG, "poll: broadcastRoadEvents error", t);
-                            }
-                        }
-                    } else {
-                        Log.w(TAG, "poll: ws/ctx null n=" + n[0]);
-                    }
-                } catch (Throwable t) {
-                    Log.w(TAG, "poll error: " + t.getMessage(), t);
-                }
-                n[0]++;
-                if (sPollRunning && sPollHandler != null) {
-                    sPollHandler.postDelayed(this, 1000L);
-                }
-            }
-        };
-        sPollHandler.post(sPollRunnable); // first tick immediately
     }
 
     // ── offline camera injection listener ───────────────────────────────
