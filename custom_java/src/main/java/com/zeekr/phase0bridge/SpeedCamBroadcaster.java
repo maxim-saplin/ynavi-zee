@@ -256,7 +256,7 @@ public final class SpeedCamBroadcaster {
         sFreeDrivePollRunnable = new Runnable() {
             @Override
             public void run() {
-                if (!sFreeDrivePollRunning || n[0] >= 240) {
+                if (!sFreeDrivePollRunning) {
                     Log.i(TAG, "ghostPoll: stopped n=" + n[0]);
                     return;
                 }
@@ -422,7 +422,7 @@ public final class SpeedCamBroadcaster {
         sRoutePollRunnable = new Runnable() {
             @Override
             public void run() {
-                if (!sRoutePollRunning || n[0] >= 180) {
+                if (!sRoutePollRunning) {
                     Log.i(TAG, "routePoll: stopped n=" + n[0]);
                     return;
                 }
@@ -545,7 +545,7 @@ public final class SpeedCamBroadcaster {
         sPollRunnable = new Runnable() {
             @Override
             public void run() {
-                if (!sPollRunning || n[0] >= 180) {
+                if (!sPollRunning) {
                     Log.i(TAG, "poll: stopped n=" + n[0]);
                     return;
                 }
