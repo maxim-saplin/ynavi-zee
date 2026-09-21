@@ -6,42 +6,48 @@ Focus: modding Yandex Navi to look and work better on Chinese cars with awkward 
 - `build_deepal.sh`: UI scale 1.75x, map scale 1.3x, aggresive survival in background (audio mode, mimicing to be media player to survive beining minimized and still vocing notificaions along the route), padded top and bottom to avoid overlapping system UI
 - `build_zeekr.sh`: : UI scale 1.75x, map scale 1.3x, padded top and bottom, padded left to avoid obstruction by left side panel (static, padding stays no matter if the panel is visible or not), aggresive survival in background (just in case, seems not a problem but enabled in fgs mode while fighitng Deepal OS killing process)
 
-## Get the Zeekr APKs (GitHub Releases)
+## Get the APKs (GitHub Releases)
 
-**Install path for [zee-power-toys](https://github.com/maxim-saplin/zee-power-toys):** public Release assets — **not** files from `modded_apks/` in git.
+Adapted Yandex Navi for Chinese head units (Deepal, Zeekr, …). Installables ship on
+**GitHub Releases** only — **not** from `modded_apks/` / base APKs in git.
 
-| Variant | Letterbox left | Release asset |
-|---------|----------------|---------------|
-| **Margined (default)** | 480dp | [`zeekr_v12_margined.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v12/zeekr_v12_margined.apk) |
-| **OS7+ no left margin** | 0dp | [`zeekr_v12_os7_nomargin.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v12/zeekr_v12_os7_nomargin.apk) |
+**Release tag** (historical name; covers all cars):
+[`ynavi-zeekr-v12`](https://github.com/maxim-saplin/ynavi-zee/releases/tag/ynavi-zeekr-v12)
 
-- **Release tag:** [`ynavi-zeekr-v12`](https://github.com/maxim-saplin/ynavi-zee/releases/tag/ynavi-zeekr-v12)
-- **Build locally:** `build_zeekr.sh` (margined) / `build_zeekr_os7.sh` (OS7+) → outputs under `builds/` (gitignored)
+| Variant | Script | Letterbox (T/B/L) | Keepalive | Release asset |
+|---------|--------|-------------------|-----------|---------------|
+| **Deepal** | `build_deepal.sh` | 91 / 91 / 0 | audio | [`deepal_v12.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v12/deepal_v12.apk) |
+| **Zeekr padded** | `build_zeekr.sh` | (preset) / 480 left | FGS | [`zeekr_v12_margined.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v12/zeekr_v12_margined.apk) |
+| **Zeekr OS7+** | `build_zeekr_os7.sh` | (preset) / 0 left | FGS | [`zeekr_v12_os7_nomargin.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v12/zeekr_v12_os7_nomargin.apk) |
 
-### UI vs CLI
+### zee-power-toys Install vs this repo
 
-| Path | Use |
-|------|-----|
-| **Install UI** (zee-power-toys) | Downloads the Release assets above |
-| **CLI** | `adb install -g -r -d builds/…_signed.apk` after a local build |
+| Path | What |
+|------|------|
+| **[zee-power-toys](https://github.com/maxim-saplin/zee-power-toys) Install** | Zeekr **margined** + **OS7** only (minimap companions) — **no Deepal card** |
+| **This repo / CLI** | All three variants via Release download or local `builds/` |
+
+```bash
+adb install -g -r -d builds/deepal_v12.apk          # after local build / rename
+adb install -g -r -d builds/zeekr_signed.apk        # margined
+adb install -g -r -d builds/zeekr_os7_signed.apk    # OS7+
+```
 
 ### Rebuild (no APKs in git)
 
-Zeekr installables ship on **GitHub Releases** only — `modded_apks/` is not tracked.
-
 ```bash
-./build_zeekr.sh      # → builds/zeekr*.apk (margined, left=480)
-./build_zeekr_os7.sh  # → builds/zeekr_os7*.apk (OS7+, left=0)
-./build_deepal.sh     # Deepal preset → builds/
+./build_deepal.sh     # → builds/deepal*_signed.apk  (copy/rename → deepal_v12.apk for Release)
+./build_zeekr.sh      # → builds/zeekr*_signed.apk   (margined, left=480)
+./build_zeekr_os7.sh  # → builds/zeekr_os7*_signed.apk (OS7+, left=0)
 ```
 
-Upload to Release `ynavi-zeekr-v12` (or successor) after Maxim go. See `NOTES-for-Maxim-0044.md`.
+Upload to Release `ynavi-zeekr-v12` after Maxim go. See `NOTES-for-Maxim-0044.md`.
 
 ### Related
 
 | Repo | Role |
 |------|------|
-| [zee-power-toys](https://github.com/maxim-saplin/zee-power-toys) | DHU/HUD app — Install pulls these Releases |
+| [zee-power-toys](https://github.com/maxim-saplin/zee-power-toys) | DHU/HUD app — Install pulls **Zeekr** Release assets only |
 | [zeekr_apk_mod](https://github.com/maxim-saplin/zeekr_apk_mod) | Launcher mod Release `launcher-670` |
 
 ## Repo layout
