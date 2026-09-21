@@ -1,14 +1,11 @@
 .class Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$5;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "SpeedCamBroadcaster.java"
-
-# interfaces
-.implements Ljava/lang/reflect/InvocationHandler;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->attachListener()V
+    value = Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->attachInjectReceiver()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,112 +18,79 @@
 .method constructor <init>()V
     .registers 1
 
-    .line 717
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 693
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
-    .registers 8
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Throwable;
-        }
-    .end annotation
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .registers 5
 
-    .line 720
-    invoke-virtual {p2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
+    .line 696
+    const-string p1, "id"
 
-    move-result-object v0
-
-    .line 722
-    const-string v1, "toString"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    const-string v2, "SpeedCamBridge"
-
-    if-nez v1, :cond_34
-
-    const-string v1, "hashCode"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_34
-
-    .line 723
-    const-string v1, "equals"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_34
-
-    .line 724
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "proxy invoke: "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 726
-    :cond_34
-    const-string v1, "onRoadEventsChanged"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_46
-
-    .line 728
-    :try_start_3c
-    # invokes: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->broadcastRoadEvents()V
-    invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$1100()V
-    :try_end_3f
-    .catchall {:try_start_3c .. :try_end_3f} :catchall_40
-
-    .line 731
-    goto :goto_46
-
-    .line 729
-    :catchall_40
-    move-exception v0
-
-    .line 730
-    const-string v1, "onRoadEventsChanged error"
-
-    invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 734
-    :cond_46
-    :goto_46
-    # invokes: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->defaultProxyReturn(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
-    invoke-static {p1, p2, p3}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$1200(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
+    .line 697
+    const-string v0, "distance"
+
+    invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    .line 698
+    if-nez p1, :cond_10
+
+    const-string p1, "cam"
+
+    .line 699
+    :cond_10
+    if-nez p2, :cond_14
+
+    const-string p2, "?m"
+
+    .line 700
+    :cond_14
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "INJECT_CAMERA: id="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " dist="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "SpeedCamBridge"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 701
+    invoke-static {p1, p2}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->injectCamera(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 702
+    return-void
 .end method

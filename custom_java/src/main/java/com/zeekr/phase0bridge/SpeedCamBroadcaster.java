@@ -171,7 +171,11 @@ public final class SpeedCamBroadcaster {
 
 
 
-    /** End navikit guidance (route()) so ghost freeDrive can resume. */
+    /**
+     * End user route and revive freeDrive — mirrors app cancel path bt2/f.b():
+     * if route()!=null → stop(); then start(null). onStart/resume alone leave
+     * freeDriveRoute=null (0076 FAIL).
+     */
     public static void stopUserGuidance() {
         Object g = sNaviGuidance;
         if (g == null) {
@@ -179,20 +183,61 @@ public final class SpeedCamBroadcaster {
             return;
         }
         try {
-            callInstance(g, "stop", new Class<?>[0]);
             sForceGhostAfterStop = true;
-            Log.i(TAG, "stopUserGuidance: Guidance.stop() invoked; forceGhost=true");
-            // stop() also nulls freeDriveRoute — revive free-drive session
+            // Allow same MapKit cams to re-fire on ghost2 after cancel.
+            synchronized (sSentEventIds) {
+                sSentEventIds.clear();
+            }
+            Object hadRoute = null;
             try {
-                callInstance(g, "onStart", new Class<?>[0]);
-                Log.i(TAG, "stopUserGuidance: Guidance.onStart() revive freeDrive");
-            } catch (Throwable t2) {
-                try {
-                    callInstance(g, "resume", new Class<?>[0]);
-                    Log.i(TAG, "stopUserGuidance: Guidance.resume() fallback");
-                } catch (Throwable t3) {
-                    Log.w(TAG, "stopUserGuidance: revive freeDrive failed: " + t3.getMessage());
-                }
+                hadRoute = callInstance(g, "route", new Class<?>[0]);
+            } catch (Throwable ignored) {}
+            if (hadRoute != null) {
+                callInstance(g, "stop", new Class<?>[0]);
+                Log.i(TAG, "stopUserGuidance: Guidance.stop() invoked; forceGhost=true");
+            } else {
+                Log.i(TAG, "stopUserGuidance: route already null; skip stop(); forceGhost=true");
+            }
+            // Real revive (not onStart theater): start(null) rebuilds freeDriveRoute.
+            Class<?> routeCls = Class.forName(
+                    "com.yandex.mapkit.directions.driving.DrivingRoute");
+            callInstance(g, "start", new Class<?>[]{routeCls}, (Object) null);
+            Object fd = null;
+            try {
+                fd = callInstance(g, "freeDriveRoute", new Class<?>[0]);
+            } catch (Throwable ignored) {}
+            Log.i(TAG, "stopUserGuidance: Guidance.start(null) revive freeDrive"
+                    + " freeDriveRoute=" + (fd == null ? "null" : "ok@"
+                    + Integer.toHexString(System.identityHashCode(fd))));
+            // Native matcher may land async — retry start(null) shortly if still null.
+            if (fd == null) {
+                Handler h = sFreeDrivePollHandler != null
+                        ? sFreeDrivePollHandler
+                        : new Handler(Looper.getMainLooper());
+                h.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            Object g2 = sNaviGuidance;
+                            if (g2 == null) return;
+                            Object cur = callInstance(g2, "freeDriveRoute", new Class<?>[0]);
+                            if (cur != null) {
+                                Log.i(TAG, "stopUserGuidance: freeDrive already up (delayed)");
+                                return;
+                            }
+                            Class<?> rc = Class.forName(
+                                    "com.yandex.mapkit.directions.driving.DrivingRoute");
+                            callInstance(g2, "start", new Class<?>[]{rc}, (Object) null);
+                            Object fd2 = callInstance(g2, "freeDriveRoute", new Class<?>[0]);
+                            Log.i(TAG, "stopUserGuidance: delayed start(null) retry"
+                                    + " freeDriveRoute="
+                                    + (fd2 == null ? "null" : "ok"));
+                        } catch (Throwable t) {
+                            Log.w(TAG, "stopUserGuidance: delayed revive failed: "
+                                    + t.getMessage());
+                        }
+                    }
+                }, 1500L);
             }
         } catch (Throwable t) {
             Log.e(TAG, "stopUserGuidance failed: " + t.getMessage(), t);
