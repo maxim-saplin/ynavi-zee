@@ -25,10 +25,24 @@ Focus: modding Yandex Navi to look and work better on Chinese cars with awkward 
 | **Install UI** (zee-power-toys) | Downloads the Release assets above |
 | **CLI** | `adb install -g -r -d builds/…_signed.apk` after a local build |
 
-### Older Deepal / Zeekr builds
+### Rebuild (no APKs in git)
 
-Historical Deepal / pre-v12 Zeekr builds may still appear under `modded_apks/` for archival ADB installs. **Prefer the Release assets above** for Zeekr + zee-power-toys.
+Zeekr installables ship on **GitHub Releases** only — `modded_apks/` is not tracked.
 
+```bash
+./build_zeekr.sh      # → builds/zeekr*.apk (margined, left=480)
+./build_zeekr_os7.sh  # → builds/zeekr_os7*.apk (OS7+, left=0)
+./build_deepal.sh     # Deepal preset → builds/
+```
+
+Upload to Release `ynavi-zeekr-v12` (or successor) after Maxim go. See `NOTES-for-Maxim-0044.md`.
+
+### Related
+
+| Repo | Role |
+|------|------|
+| [zee-power-toys](https://github.com/maxim-saplin/zee-power-toys) | DHU/HUD app — Install pulls these Releases |
+| [zeekr_apk_mod](https://github.com/maxim-saplin/zeekr_apk_mod) | Launcher mod Release `launcher-670` |
 
 ## Repo layout
 

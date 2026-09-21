@@ -3,9 +3,9 @@ builds/
 features/config.env
 src/build/
 
-# APK artifacts (except modded_apks/)
+# APK artifacts — never commit binaries (Releases / builds/ only)
 **/*.apk
-!modded_apks/*.apk
+modded_apks/
 
 # Common OS noise
 .DS_Store

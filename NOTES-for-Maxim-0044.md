@@ -1,6 +1,6 @@
 # 0044 — ynavi-zee NOTES for Maxim (prep branch)
 
-**Branch:** `0044-publish-prep`. **No APKs in git** — GitHub **draft Releases** only.
+**Branch:** `main`. **No APKs in git** (`modded_apks/` untracked) — GitHub **Releases** only.
 
 ## Local binaries (builder machine)
 
