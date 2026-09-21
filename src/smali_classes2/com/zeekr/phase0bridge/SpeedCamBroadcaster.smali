@@ -8,6 +8,8 @@
 
 .field private static final ACTION_INJECT:Ljava/lang/String; = "com.zeekr.ynavi.INJECT_CAMERA"
 
+.field private static final ACTION_STOP_GUIDANCE:Ljava/lang/String; = "com.zeekr.phase0.STOP_GUIDANCE"
+
 .field private static final SOURCE_TAG:Ljava/lang/String; = "ynavi"
 
 .field private static final TAG:Ljava/lang/String; = "SpeedCamBridge"
@@ -62,6 +64,8 @@
     .end annotation
 .end field
 
+.field private static final sStopReceiverRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
+
 .field private static sWindshield:Ljava/lang/Object;
 
 
@@ -69,57 +73,64 @@
 .method static constructor <clinit>()V
     .registers 3
 
-    .line 37
+    .line 32
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
+    sput-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sStopReceiverRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    .line 39
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
     sput-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 38
+    .line 40
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     sput-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sInjectAttached:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 46
+    .line 48
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     sput-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sGuidanceRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 50
+    .line 52
     const-string v0, ""
 
     sput-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sLastRouteBroadcastSig:Ljava/lang/String;
 
-    .line 52
+    .line 54
     new-instance v2, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v2, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     sput-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sNaviGuidanceRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 56
+    .line 58
     sput-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sLastGhostBroadcastSig:Ljava/lang/String;
 
-    .line 58
+    .line 60
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 59
+    .line 61
     invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
 
     sput-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sSentEventIds:Ljava/util/Set;
 
-    .line 58
+    .line 60
     return-void
 .end method
 
@@ -159,34 +170,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1100()Z
-    .registers 1
-
-    .line 27
-    sget-boolean v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sPollRunning:Z
-
-    return v0
-.end method
-
-.method static synthetic access$1200()Ljava/lang/Object;
-    .registers 1
-
-    .line 27
-    sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sWindshield:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1300()Landroid/content/Context;
-    .registers 1
-
-    .line 27
-    sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1400()V
+.method static synthetic access$1100()V
     .registers 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -200,16 +184,7 @@
     return-void
 .end method
 
-.method static synthetic access$1500()Landroid/os/Handler;
-    .registers 1
-
-    .line 27
-    sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sPollHandler:Landroid/os/Handler;
-
-    return-object v0
-.end method
-
-.method static synthetic access$1600(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+.method static synthetic access$1200(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
     .registers 3
 
     .line 27
@@ -320,12 +295,12 @@
 .method private static alreadySentOrMark(Ljava/lang/String;)Z
     .registers 3
 
-    .line 332
+    .line 379
     sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sSentEventIds:Ljava/util/Set;
 
     monitor-enter v0
 
-    .line 333
+    .line 380
     :try_start_3
     invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -339,18 +314,18 @@
 
     return p0
 
-    .line 334
+    .line 381
     :cond_c
     invoke-interface {v0, p0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 335
+    .line 382
     monitor-exit v0
 
     const/4 p0, 0x0
 
     return p0
 
-    .line 336
+    .line 383
     :catchall_12
     move-exception p0
 
@@ -364,7 +339,7 @@
 .method private static attachInjectReceiver()V
     .registers 5
 
-    .line 613
+    .line 618
     sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sInjectAttached:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -379,28 +354,28 @@
 
     if-nez v0, :cond_12
 
-    .line 614
+    .line 619
     const-string v0, "attachInjectReceiver: already attached"
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 615
+    .line 620
     return-void
 
-    .line 617
+    .line 622
     :cond_12
     new-instance v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$4;
 
     invoke-direct {v0}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$4;-><init>()V
 
-    .line 628
+    .line 633
     new-instance v2, Landroid/content/IntentFilter;
 
     const-string v3, "com.zeekr.ynavi.INJECT_CAMERA"
 
     invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 630
+    .line 635
     :try_start_1e
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -408,7 +383,7 @@
 
     if-lt v3, v4, :cond_2b
 
-    .line 631
+    .line 636
     sget-object v3, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
 
     const/4 v4, 0x2
@@ -417,13 +392,13 @@
 
     goto :goto_30
 
-    .line 633
+    .line 638
     :cond_2b
     sget-object v3, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
 
     invoke-virtual {v3, v0, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 635
+    .line 640
     :goto_30
     const-string v0, "attachInjectReceiver: registered for com.zeekr.ynavi.INJECT_CAMERA"
 
@@ -431,19 +406,19 @@
     :try_end_35
     .catchall {:try_start_1e .. :try_end_35} :catchall_36
 
-    .line 638
+    .line 643
     goto :goto_3c
 
-    .line 636
+    .line 641
     :catchall_36
     move-exception v0
 
-    .line 637
+    .line 642
     const-string v2, "attachInjectReceiver failed"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 639
+    .line 644
     :goto_3c
     return-void
 .end method
@@ -456,22 +431,22 @@
         }
     .end annotation
 
-    .line 683
+    .line 688
     const-string v0, "com.yandex.mapkit.navigation.automotive.WindshieldListener"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 686
+    .line 691
     new-instance v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$5;
 
     invoke-direct {v1}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$5;-><init>()V
 
-    .line 707
+    .line 712
     nop
 
-    .line 708
+    .line 713
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v2
@@ -480,14 +455,14 @@
 
     move-result-object v3
 
-    .line 707
+    .line 712
     invoke-static {v2, v3, v1}, Ljava/lang/reflect/Proxy;->newProxyInstance(Ljava/lang/ClassLoader;[Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
 
     move-result-object v1
 
     sput-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sListenerProxy:Ljava/lang/Object;
 
-    .line 712
+    .line 717
     sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sWindshield:Ljava/lang/Object;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -504,7 +479,7 @@
 
     move-result-object v0
 
-    .line 713
+    .line 718
     sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sWindshield:Ljava/lang/Object;
 
     sget-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sListenerProxy:Ljava/lang/Object;
@@ -515,7 +490,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 714
+    .line 719
     return-void
 .end method
 
@@ -535,7 +510,7 @@
         }
     .end annotation
 
-    .line 740
+    .line 745
     sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
 
     const/4 v1, 0x0
@@ -552,18 +527,18 @@
 
     goto/16 :goto_10a
 
-    .line 742
+    .line 747
     :cond_f
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 743
+    .line 748
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 744
+    .line 749
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -579,12 +554,12 @@
 
     move-result-object v3
 
-    .line 745
+    .line 750
     if-nez v3, :cond_2a
 
     goto :goto_1d
 
-    .line 746
+    .line 751
     :cond_2a
     const-string v4, "getTags"
 
@@ -594,15 +569,15 @@
 
     move-result-object v4
 
-    .line 747
+    .line 752
     nop
 
-    .line 748
+    .line 753
     instance-of v5, v4, Ljava/util/List;
 
     if-eqz v5, :cond_7c
 
-    .line 749
+    .line 754
     check-cast v4, Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -620,7 +595,7 @@
 
     move-result-object v5
 
-    .line 750
+    .line 755
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -629,7 +604,7 @@
 
     move-result-object v5
 
-    .line 751
+    .line 756
     const-string v6, "SPEED"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -646,7 +621,7 @@
 
     if-nez v6, :cond_79
 
-    .line 752
+    .line 757
     const-string v6, "LANE"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -663,7 +638,7 @@
 
     if-nez v6, :cond_79
 
-    .line 753
+    .line 758
     const-string v6, "RADAR"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -674,21 +649,21 @@
 
     goto :goto_79
 
-    .line 757
+    .line 762
     :cond_78
     goto :goto_3d
 
-    .line 754
+    .line 759
     :cond_79
     :goto_79
     nop
 
-    .line 755
+    .line 760
     const/4 v4, 0x1
 
     goto :goto_7d
 
-    .line 759
+    .line 764
     :cond_7c
     move v4, v1
 
@@ -697,11 +672,11 @@
 
     goto :goto_1d
 
-    .line 760
+    .line 765
     :cond_80
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 761
+    .line 766
     const-string v4, "getEventId"
 
     new-array v5, v1, [Ljava/lang/Object;
@@ -710,7 +685,7 @@
 
     move-result-object v3
 
-    .line 762
+    .line 767
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
     move-result v4
@@ -721,7 +696,7 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 763
+    .line 768
     :cond_96
     if-eqz v3, :cond_9d
 
@@ -737,10 +712,10 @@
     :goto_9f
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 764
+    .line 769
     goto/16 :goto_1d
 
-    .line 765
+    .line 770
     :cond_a4
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -750,13 +725,13 @@
 
     return v1
 
-    .line 767
+    .line 772
     :cond_ab
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 768
+    .line 773
     sget-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sLastRouteBroadcastSig:Ljava/lang/String;
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -767,7 +742,7 @@
 
     if-eqz v2, :cond_d0
 
-    .line 769
+    .line 774
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -788,25 +763,25 @@
 
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 770
+    .line 775
     return v1
 
-    .line 772
+    .line 777
     :cond_d0
     sput-object p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sLastRouteBroadcastSig:Ljava/lang/String;
 
-    .line 774
+    .line 779
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result p0
 
-    .line 775
+    .line 780
     nop
 
     :goto_d7
     if-ge v1, p0, :cond_109
 
-    .line 777
+    .line 782
     :try_start_d9
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -816,14 +791,14 @@
     :try_end_e0
     .catchall {:try_start_d9 .. :try_end_e0} :catchall_e1
 
-    .line 780
+    .line 785
     goto :goto_106
 
-    .line 778
+    .line 783
     :catchall_e1
     move-exception v2
 
-    .line 779
+    .line 784
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -858,17 +833,17 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 775
+    .line 780
     :goto_106
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_d7
 
-    .line 782
+    .line 787
     :cond_109
     return p0
 
-    .line 740
+    .line 745
     :cond_10a
     :goto_10a
     return v1
@@ -882,7 +857,7 @@
         }
     .end annotation
 
-    .line 788
+    .line 793
     const/4 v0, 0x0
 
     new-array v1, v0, [Ljava/lang/Object;
@@ -893,22 +868,22 @@
 
     move-result-object v1
 
-    .line 789
+    .line 794
     nop
 
-    .line 790
+    .line 795
     instance-of v2, v1, Ljava/util/List;
 
     const-string v3, ""
 
     if-eqz v2, :cond_3d
 
-    .line 791
+    .line 796
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 792
+    .line 797
     check-cast v1, Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -926,7 +901,7 @@
 
     move-result-object v4
 
-    .line 793
+    .line 798
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
     move-result v5
@@ -937,7 +912,7 @@
 
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 794
+    .line 799
     :cond_30
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -945,10 +920,10 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 795
+    .line 800
     goto :goto_1b
 
-    .line 796
+    .line 801
     :cond_38
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -956,11 +931,11 @@
 
     goto :goto_3e
 
-    .line 790
+    .line 795
     :cond_3d
     move-object v1, v3
 
-    .line 799
+    .line 804
     :goto_3e
     new-array v2, v0, [Ljava/lang/Class;
 
@@ -972,15 +947,15 @@
 
     move-result-object v2
 
-    .line 800
+    .line 805
     nop
 
-    .line 801
+    .line 806
     const-wide/16 v4, 0x0
 
     if-eqz v2, :cond_7b
 
-    .line 802
+    .line 807
     new-array v6, v0, [Ljava/lang/Class;
 
     new-array v7, v0, [Ljava/lang/Object;
@@ -991,7 +966,7 @@
 
     move-result-object v6
 
-    .line 803
+    .line 808
     new-array v7, v0, [Ljava/lang/Class;
 
     new-array v8, v0, [Ljava/lang/Object;
@@ -1002,7 +977,7 @@
 
     move-result-object v2
 
-    .line 804
+    .line 809
     instance-of v7, v6, Ljava/lang/Number;
 
     if-eqz v7, :cond_6c
@@ -1018,7 +993,7 @@
     :cond_6c
     move-wide v6, v4
 
-    .line 805
+    .line 810
     :goto_6d
     instance-of v8, v2, Ljava/lang/Number;
 
@@ -1039,11 +1014,11 @@
 
     goto :goto_7c
 
-    .line 801
+    .line 806
     :cond_7b
     move-wide v6, v4
 
-    .line 809
+    .line 814
     :goto_7c
     const-string v2, "getSpeedLimit"
 
@@ -1053,22 +1028,22 @@
 
     move-result-object v2
 
-    .line 810
+    .line 815
     nop
 
-    .line 811
+    .line 816
     instance-of v8, v2, Ljava/lang/Number;
 
     if-eqz v8, :cond_a8
 
-    .line 812
+    .line 817
     check-cast v2, Ljava/lang/Number;
 
     invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
 
     move-result v2
 
-    .line 813
+    .line 818
     const/4 v8, 0x0
 
     cmpl-float v8, v2, v8
@@ -1081,7 +1056,7 @@
 
     if-gez v8, :cond_a3
 
-    .line 814
+    .line 819
     const v8, 0x40666666    # 3.6f
 
     mul-float/2addr v2, v8
@@ -1092,7 +1067,7 @@
 
     goto :goto_a7
 
-    .line 815
+    .line 820
     :cond_a3
     invoke-static {v2}, Ljava/lang/Math;->round(F)I
 
@@ -1101,11 +1076,11 @@
     :goto_a7
     goto :goto_a9
 
-    .line 811
+    .line 816
     :cond_a8
     move v2, v0
 
-    .line 818
+    .line 823
     :goto_a9
     const-string v8, "getEventId"
 
@@ -1115,14 +1090,14 @@
 
     move-result-object p0
 
-    .line 819
+    .line 824
     if-eqz p0, :cond_b7
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 821
+    .line 826
     :cond_b7
     new-instance p0, Landroid/content/Intent;
 
@@ -1130,54 +1105,54 @@
 
     invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 822
+    .line 827
     const-string v0, "lat"
 
     invoke-virtual {p0, v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 823
+    .line 828
     const-string v0, "lon"
 
     invoke-virtual {p0, v0, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 824
+    .line 829
     const-string v0, "speedLimit"
 
     invoke-virtual {p0, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 825
+    .line 830
     const-string v0, "distance"
 
     const-wide/high16 v8, -0x4010000000000000L    # -1.0
 
     invoke-virtual {p0, v0, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 826
+    .line 831
     const-string v0, "type"
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 827
+    .line 832
     const-string v0, "tags"
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 828
+    .line 833
     const-string v0, "eventId"
 
     invoke-virtual {p0, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 829
+    .line 834
     const-string v0, "index"
 
     invoke-virtual {p0, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 830
+    .line 835
     const-string p1, "count"
 
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 831
+    .line 836
     const-string p1, "t_ms"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1186,31 +1161,31 @@
 
     invoke-virtual {p0, p1, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 832
+    .line 837
     const-string p1, "source"
 
     const-string p2, "ynavi"
 
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 833
+    .line 838
     const-string p1, "feed"
 
     const-string p2, "getEvents"
 
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 834
+    .line 839
     const-string p1, "com.zeepowertoys.zee_power_toys"
 
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 835
+    .line 840
     invoke-static {v3, v4, v5, v6, v7}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->camEventKey(Ljava/lang/String;DD)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 836
+    .line 841
     invoke-static {p1}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->alreadySentOrMark(Ljava/lang/String;)Z
 
     move-result p2
@@ -1219,7 +1194,7 @@
 
     if-eqz p2, :cond_12c
 
-    .line 837
+    .line 842
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1240,16 +1215,16 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 838
+    .line 843
     return-void
 
-    .line 840
+    .line 845
     :cond_12c
     sget-object p1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 841
+    .line 846
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1310,7 +1285,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 844
+    .line 849
     return-void
 .end method
 
@@ -1322,7 +1297,7 @@
         }
     .end annotation
 
-    .line 384
+    .line 431
     const/4 v0, 0x0
 
     new-array v1, v0, [Ljava/lang/Object;
@@ -1333,22 +1308,22 @@
 
     move-result-object v1
 
-    .line 385
+    .line 432
     nop
 
-    .line 386
+    .line 433
     instance-of v2, v1, Ljava/util/List;
 
     const-string v3, ""
 
     if-eqz v2, :cond_3d
 
-    .line 387
+    .line 434
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 388
+    .line 435
     check-cast v1, Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1366,7 +1341,7 @@
 
     move-result-object v4
 
-    .line 389
+    .line 436
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
     move-result v5
@@ -1377,7 +1352,7 @@
 
     invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 390
+    .line 437
     :cond_30
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -1385,10 +1360,10 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 391
+    .line 438
     goto :goto_1b
 
-    .line 392
+    .line 439
     :cond_38
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1396,11 +1371,11 @@
 
     goto :goto_3e
 
-    .line 386
+    .line 433
     :cond_3d
     move-object v1, v3
 
-    .line 394
+    .line 441
     :goto_3e
     new-array v2, v0, [Ljava/lang/Class;
 
@@ -1412,15 +1387,15 @@
 
     move-result-object v2
 
-    .line 395
+    .line 442
     nop
 
-    .line 396
+    .line 443
     const-wide/16 v4, 0x0
 
     if-eqz v2, :cond_7b
 
-    .line 397
+    .line 444
     new-array v6, v0, [Ljava/lang/Class;
 
     new-array v7, v0, [Ljava/lang/Object;
@@ -1431,7 +1406,7 @@
 
     move-result-object v6
 
-    .line 398
+    .line 445
     new-array v7, v0, [Ljava/lang/Class;
 
     new-array v8, v0, [Ljava/lang/Object;
@@ -1442,7 +1417,7 @@
 
     move-result-object v2
 
-    .line 399
+    .line 446
     instance-of v7, v6, Ljava/lang/Number;
 
     if-eqz v7, :cond_6c
@@ -1458,7 +1433,7 @@
     :cond_6c
     move-wide v6, v4
 
-    .line 400
+    .line 447
     :goto_6d
     instance-of v8, v2, Ljava/lang/Number;
 
@@ -1479,11 +1454,11 @@
 
     goto :goto_7c
 
-    .line 396
+    .line 443
     :cond_7b
     move-wide v6, v4
 
-    .line 402
+    .line 449
     :goto_7c
     const-string v2, "getSpeedLimit"
 
@@ -1493,22 +1468,22 @@
 
     move-result-object v2
 
-    .line 403
+    .line 450
     nop
 
-    .line 404
+    .line 451
     instance-of v8, v2, Ljava/lang/Number;
 
     if-eqz v8, :cond_a3
 
-    .line 405
+    .line 452
     check-cast v2, Ljava/lang/Number;
 
     invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
 
     move-result v2
 
-    .line 406
+    .line 453
     const/4 v8, 0x0
 
     cmpl-float v8, v2, v8
@@ -1532,11 +1507,11 @@
 
     goto :goto_a4
 
-    .line 404
+    .line 451
     :cond_a3
     move v2, v0
 
-    .line 408
+    .line 455
     :goto_a4
     const-string v8, "getEventId"
 
@@ -1546,14 +1521,14 @@
 
     move-result-object p0
 
-    .line 409
+    .line 456
     if-eqz p0, :cond_b2
 
     invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 410
+    .line 457
     :cond_b2
     new-instance p0, Landroid/content/Intent;
 
@@ -1561,54 +1536,54 @@
 
     invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 411
+    .line 458
     const-string v0, "lat"
 
     invoke-virtual {p0, v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 412
+    .line 459
     const-string v0, "lon"
 
     invoke-virtual {p0, v0, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 413
+    .line 460
     const-string v0, "speedLimit"
 
     invoke-virtual {p0, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 414
+    .line 461
     const-string v0, "distance"
 
     const-wide/high16 v8, -0x4010000000000000L    # -1.0
 
     invoke-virtual {p0, v0, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 415
+    .line 462
     const-string v0, "type"
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 416
+    .line 463
     const-string v0, "tags"
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 417
+    .line 464
     const-string v0, "eventId"
 
     invoke-virtual {p0, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 418
+    .line 465
     const-string v0, "index"
 
     invoke-virtual {p0, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 419
+    .line 466
     const-string p1, "count"
 
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 420
+    .line 467
     const-string p1, "t_ms"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -1617,31 +1592,31 @@
 
     invoke-virtual {p0, p1, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 421
+    .line 468
     const-string p1, "source"
 
     const-string p2, "ynavi"
 
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 422
+    .line 469
     const-string p1, "feed"
 
     const-string p2, "freeDriveRoute"
 
     invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 423
+    .line 470
     const-string p1, "com.zeepowertoys.zee_power_toys"
 
     invoke-virtual {p0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 424
+    .line 471
     invoke-static {v3, v4, v5, v6, v7}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->camEventKey(Ljava/lang/String;DD)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 425
+    .line 472
     invoke-static {p1}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->alreadySentOrMark(Ljava/lang/String;)Z
 
     move-result p2
@@ -1650,7 +1625,7 @@
 
     if-eqz p2, :cond_127
 
-    .line 426
+    .line 473
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1671,16 +1646,16 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 427
+    .line 474
     return-void
 
-    .line 429
+    .line 476
     :cond_127
     sget-object p1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
 
     invoke-virtual {p1, p0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 430
+    .line 477
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1741,7 +1716,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 433
+    .line 480
     return-void
 .end method
 
@@ -1761,7 +1736,7 @@
         }
     .end annotation
 
-    .line 340
+    .line 387
     sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
 
     const/4 v1, 0x0
@@ -1778,18 +1753,18 @@
 
     goto/16 :goto_f9
 
-    .line 341
+    .line 388
     :cond_f
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 342
+    .line 389
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 343
+    .line 390
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -1805,12 +1780,12 @@
 
     move-result-object v3
 
-    .line 344
+    .line 391
     if-nez v3, :cond_2a
 
     goto :goto_1d
 
-    .line 345
+    .line 392
     :cond_2a
     const-string v4, "getTags"
 
@@ -1820,15 +1795,15 @@
 
     move-result-object v4
 
-    .line 346
+    .line 393
     nop
 
-    .line 347
+    .line 394
     instance-of v5, v4, Ljava/util/List;
 
     if-eqz v5, :cond_7c
 
-    .line 348
+    .line 395
     check-cast v4, Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1846,7 +1821,7 @@
 
     move-result-object v5
 
-    .line 349
+    .line 396
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -1855,7 +1830,7 @@
 
     move-result-object v5
 
-    .line 350
+    .line 397
     const-string v6, "SPEED"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -1872,7 +1847,7 @@
 
     if-nez v6, :cond_79
 
-    .line 351
+    .line 398
     const-string v6, "LANE"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -1889,7 +1864,7 @@
 
     if-nez v6, :cond_79
 
-    .line 352
+    .line 399
     const-string v6, "RADAR"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -1900,21 +1875,21 @@
 
     goto :goto_79
 
-    .line 356
+    .line 403
     :cond_78
     goto :goto_3d
 
-    .line 353
+    .line 400
     :cond_79
     :goto_79
     nop
 
-    .line 354
+    .line 401
     const/4 v4, 0x1
 
     goto :goto_7d
 
-    .line 358
+    .line 405
     :cond_7c
     move v4, v1
 
@@ -1923,11 +1898,11 @@
 
     goto :goto_1d
 
-    .line 359
+    .line 406
     :cond_80
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 360
+    .line 407
     const-string v4, "getEventId"
 
     new-array v5, v1, [Ljava/lang/Object;
@@ -1936,7 +1911,7 @@
 
     move-result-object v3
 
-    .line 361
+    .line 408
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
     move-result v4
@@ -1947,7 +1922,7 @@
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 362
+    .line 409
     :cond_96
     if-eqz v3, :cond_9d
 
@@ -1963,10 +1938,10 @@
     :goto_9f
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 363
+    .line 410
     goto/16 :goto_1d
 
-    .line 364
+    .line 411
     :cond_a4
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -1976,13 +1951,13 @@
 
     return v1
 
-    .line 365
+    .line 412
     :cond_ab
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 366
+    .line 413
     sget-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sLastGhostBroadcastSig:Ljava/lang/String;
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1993,30 +1968,30 @@
 
     if-eqz v2, :cond_bf
 
-    .line 367
+    .line 414
     const-string p0, "broadcastGhostEvents: dedupe skip"
 
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 368
+    .line 415
     return v1
 
-    .line 370
+    .line 417
     :cond_bf
     sput-object p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sLastGhostBroadcastSig:Ljava/lang/String;
 
-    .line 371
+    .line 418
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result p0
 
-    .line 372
+    .line 419
     nop
 
     :goto_c6
     if-ge v1, p0, :cond_f8
 
-    .line 374
+    .line 421
     :try_start_c8
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -2026,14 +2001,14 @@
     :try_end_cf
     .catchall {:try_start_c8 .. :try_end_cf} :catchall_d0
 
-    .line 377
+    .line 424
     goto :goto_f5
 
-    .line 375
+    .line 422
     :catchall_d0
     move-exception v2
 
-    .line 376
+    .line 423
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2068,206 +2043,50 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 372
+    .line 419
     :goto_f5
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_c6
 
-    .line 379
+    .line 426
     :cond_f8
     return p0
 
-    .line 340
+    .line 387
     :cond_f9
     :goto_f9
     return v1
 .end method
 
 .method private static broadcastRoadEvents()V
-    .registers 5
+    .registers 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
         }
     .end annotation
 
-    .line 847
-    sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sWindshield:Ljava/lang/Object;
-
-    if-eqz v0, :cond_85
-
-    sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
-
-    if-nez v1, :cond_a
-
-    goto/16 :goto_85
-
-    .line 849
-    :cond_a
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/Class;
-
-    new-array v3, v1, [Ljava/lang/Object;
-
-    const-string v4, "getRoadEvents"
-
-    invoke-static {v0, v4, v2, v3}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    .line 850
-    if-eqz v0, :cond_5e
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_20
-
-    goto :goto_5e
-
-    .line 860
-    :cond_20
-    nop
-
-    :goto_21
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_5d
-
-    .line 861
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    .line 863
-    :try_start_2b
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    invoke-static {v2, v1, v3}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->broadcastSingleEvent(Ljava/lang/Object;II)V
-    :try_end_32
-    .catchall {:try_start_2b .. :try_end_32} :catchall_33
-
-    .line 866
-    goto :goto_5a
-
-    .line 864
-    :catchall_33
-    move-exception v2
-
-    .line 865
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Error broadcasting event "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, ": "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "SpeedCamBridge"
-
-    invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 860
-    :goto_5a
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_21
-
-    .line 868
-    :cond_5d
-    return-void
-
-    .line 851
-    :cond_5e
-    :goto_5e
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v2, "com.zeekr.phase0.SPEEDCAM_DATA"
-
-    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 852
-    const-string v2, "com.zeepowertoys.zee_power_toys"
-
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 853
-    const-string v2, "count"
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
     .line 854
-    const-string v1, "t_ms"
+    const-string v0, "SpeedCamBridge"
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    const-string v1, "broadcastRoadEvents: SKIP \u2014 Windshield closed"
 
-    move-result-wide v2
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 855
-    const-string v1, "source"
-
-    const-string v2, "ynavi"
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 856
-    sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
-
-    .line 857
-    return-void
-
-    .line 847
-    :cond_85
-    :goto_85
     return-void
 .end method
 
 .method private static broadcastSingleEvent(Ljava/lang/Object;II)V
-    .registers 19
+    .registers 20
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
         }
     .end annotation
 
-    .line 873
+    .line 860
     move-object/from16 v0, p0
 
     move/from16 v1, p1
@@ -2284,10 +2103,12 @@
 
     move-result-object v3
 
-    .line 874
+    .line 861
+    const-string v4, "SpeedCamBridge"
+
     if-nez v3, :cond_2a
 
-    .line 875
+    .line 862
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2306,25 +2127,14 @@
 
     move-result-object v0
 
-    const-string v1, "SpeedCamBridge"
+    invoke-static {v4, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 876
+    .line 863
     return-void
 
-    .line 880
+    .line 867
     :cond_2a
-    const-string v4, "getPosition"
-
-    new-array v5, v2, [Ljava/lang/Object;
-
-    invoke-static {v0, v4, v5}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstanceQuiet(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    .line 883
-    const-string v5, "getEffectiveSpeedLimit"
+    const-string v5, "getPosition"
 
     new-array v6, v2, [Ljava/lang/Object;
 
@@ -2332,8 +2142,8 @@
 
     move-result-object v5
 
-    .line 886
-    const-string v6, "getSpeedLimitStatus"
+    .line 870
+    const-string v6, "getEffectiveSpeedLimit"
 
     new-array v7, v2, [Ljava/lang/Object;
 
@@ -2341,31 +2151,40 @@
 
     move-result-object v6
 
-    .line 889
+    .line 873
+    const-string v7, "getSpeedLimitStatus"
+
+    new-array v8, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v7, v8}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstanceQuiet(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    .line 876
     const-string v0, "getTags"
 
-    new-array v7, v2, [Ljava/lang/Object;
+    new-array v8, v2, [Ljava/lang/Object;
 
-    invoke-static {v3, v0, v7}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstanceQuiet(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v3, v0, v8}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstanceQuiet(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 890
+    .line 877
     nop
 
-    .line 891
-    instance-of v7, v0, Ljava/util/List;
+    .line 878
+    instance-of v8, v0, Ljava/util/List;
 
-    const-string v8, ""
+    const-string v9, ""
 
-    if-eqz v7, :cond_7f
+    if-eqz v8, :cond_7f
 
-    .line 892
-    new-instance v7, Ljava/lang/StringBuilder;
+    .line 879
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 893
+    .line 880
     check-cast v0, Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2375,93 +2194,93 @@
     :goto_5c
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v9
+    move-result v10
 
-    if-eqz v9, :cond_79
+    if-eqz v10, :cond_79
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v9
+    move-result-object v10
 
-    .line 894
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->length()I
+    .line 881
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v10
+    move-result v11
 
-    if-lez v10, :cond_71
+    if-lez v11, :cond_71
 
-    const-string v10, ","
+    const-string v11, ","
 
-    invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 895
+    .line 882
     :cond_71
-    invoke-virtual {v9}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object v9
+    move-result-object v10
 
-    invoke-virtual {v7, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 896
+    .line 883
     goto :goto_5c
 
-    .line 897
+    .line 884
     :cond_79
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    move-object v7, v0
+    move-object v8, v0
 
     goto :goto_80
 
-    .line 891
+    .line 878
     :cond_7f
-    move-object v7, v8
+    move-object v8, v9
 
-    .line 901
+    .line 888
     :goto_80
     new-array v0, v2, [Ljava/lang/Class;
 
-    new-array v9, v2, [Ljava/lang/Object;
+    new-array v10, v2, [Ljava/lang/Object;
 
-    const-string v10, "getLocation"
+    const-string v11, "getLocation"
 
-    invoke-static {v3, v10, v0, v9}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v3, v11, v0, v10}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 902
+    .line 889
     nop
 
-    .line 903
-    const-string v9, "getLongitude"
+    .line 890
+    const-string v10, "getLongitude"
 
-    const-string v10, "getLatitude"
+    const-string v11, "getLatitude"
 
     if-eqz v0, :cond_ae
 
-    .line 904
-    new-array v11, v2, [Ljava/lang/Class;
+    .line 891
+    new-array v12, v2, [Ljava/lang/Class;
 
-    new-array v12, v2, [Ljava/lang/Object;
+    new-array v13, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v10, v11, v12}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v11, v12, v13}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v11
+    move-result-object v12
 
-    check-cast v11, Ljava/lang/Double;
+    check-cast v12, Ljava/lang/Double;
 
-    invoke-virtual {v11}, Ljava/lang/Double;->doubleValue()D
+    invoke-virtual {v12}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v11
+    move-result-wide v12
 
-    .line 905
-    new-array v13, v2, [Ljava/lang/Class;
+    .line 892
+    new-array v14, v2, [Ljava/lang/Class;
 
-    new-array v14, v2, [Ljava/lang/Object;
+    new-array v15, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v9, v13, v14}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v10, v14, v15}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2469,35 +2288,37 @@
 
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v13
+    move-result-wide v14
 
     goto :goto_b1
 
-    .line 903
+    .line 890
     :cond_ae
-    const-wide/16 v11, 0x0
+    const-wide/16 v12, 0x0
 
-    move-wide v13, v11
+    move-wide v14, v12
 
-    .line 909
+    .line 896
     :goto_b1
     const-string v0, "getSpeedLimit"
 
-    new-array v15, v2, [Ljava/lang/Object;
+    move-object/from16 p0, v9
 
-    invoke-static {v3, v0, v15}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstanceQuiet(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+    new-array v9, v2, [Ljava/lang/Object;
+
+    invoke-static {v3, v0, v9}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstanceQuiet(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 910
+    .line 897
     nop
 
-    .line 911
-    instance-of v15, v0, Ljava/lang/Float;
+    .line 898
+    instance-of v9, v0, Ljava/lang/Float;
 
-    if-eqz v15, :cond_ca
+    if-eqz v9, :cond_cc
 
-    .line 912
+    .line 899
     check-cast v0, Ljava/lang/Float;
 
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
@@ -2508,250 +2329,252 @@
 
     move-result v0
 
-    move v15, v0
+    move v9, v0
 
-    goto :goto_cb
+    goto :goto_cd
 
-    .line 911
-    :cond_ca
-    move v15, v2
+    .line 898
+    :cond_cc
+    move v9, v2
 
-    .line 916
-    :goto_cb
+    .line 903
+    :goto_cd
     const-string v0, "getEventId"
 
-    move-object/from16 p0, v8
+    move-object/from16 v16, v4
 
-    new-array v8, v2, [Ljava/lang/Object;
+    new-array v4, v2, [Ljava/lang/Object;
 
-    invoke-static {v3, v0, v8}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstanceQuiet(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v3, v0, v4}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstanceQuiet(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 917
-    if-eqz v0, :cond_dc
+    .line 904
+    if-eqz v0, :cond_df
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v0
 
-    goto :goto_de
+    move-object v3, v0
 
-    :cond_dc
-    move-object/from16 v8, p0
+    goto :goto_e1
 
-    .line 920
-    :goto_de
+    :cond_df
+    move-object/from16 v3, p0
+
+    .line 907
+    :goto_e1
     nop
 
-    .line 921
-    if-eqz v4, :cond_111
+    .line 908
+    if-eqz v5, :cond_114
 
-    .line 922
+    .line 909
     const-string v0, "getPoint"
 
-    new-array v3, v2, [Ljava/lang/Object;
+    new-array v4, v2, [Ljava/lang/Object;
 
-    invoke-static {v4, v0, v3}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstanceQuiet(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v5, v0, v4}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstanceQuiet(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 923
-    if-eqz v0, :cond_10e
+    .line 910
+    if-eqz v0, :cond_111
 
-    .line 925
-    :try_start_eb
-    new-array v3, v2, [Ljava/lang/Class;
-    :try_end_ed
-    .catchall {:try_start_eb .. :try_end_ed} :catchall_10a
+    .line 912
+    :try_start_ee
+    new-array v4, v2, [Ljava/lang/Class;
+    :try_end_f0
+    .catchall {:try_start_ee .. :try_end_f0} :catchall_10d
 
-    move-object/from16 p0, v6
+    move-object/from16 p0, v7
 
-    :try_start_ef
-    new-array v6, v2, [Ljava/lang/Object;
+    :try_start_f2
+    new-array v7, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v10, v3, v6}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v11, v4, v7}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v4
 
-    check-cast v3, Ljava/lang/Double;
+    check-cast v4, Ljava/lang/Double;
 
-    invoke-virtual {v3}, Ljava/lang/Double;->doubleValue()D
+    invoke-virtual {v4}, Ljava/lang/Double;->doubleValue()D
 
-    .line 926
-    new-array v3, v2, [Ljava/lang/Class;
+    .line 913
+    new-array v4, v2, [Ljava/lang/Class;
 
-    new-array v6, v2, [Ljava/lang/Object;
+    new-array v7, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v9, v3, v6}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v10, v4, v7}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Double;
 
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
-    :try_end_107
-    .catchall {:try_start_ef .. :try_end_107} :catchall_108
+    :try_end_10a
+    .catchall {:try_start_f2 .. :try_end_10a} :catchall_10b
 
-    goto :goto_10d
+    goto :goto_110
 
-    .line 927
-    :catchall_108
+    .line 914
+    :catchall_10b
     move-exception v0
 
-    goto :goto_10d
+    goto :goto_110
 
-    :catchall_10a
+    :catchall_10d
     move-exception v0
 
-    move-object/from16 p0, v6
+    move-object/from16 p0, v7
 
-    :goto_10d
-    goto :goto_113
+    :goto_110
+    goto :goto_116
 
-    .line 923
-    :cond_10e
-    move-object/from16 p0, v6
-
-    goto :goto_113
-
-    .line 921
+    .line 910
     :cond_111
-    move-object/from16 p0, v6
+    move-object/from16 p0, v7
 
-    .line 932
-    :goto_113
+    goto :goto_116
+
+    .line 908
+    :cond_114
+    move-object/from16 p0, v7
+
+    .line 919
+    :goto_116
     nop
 
-    .line 933
-    const-wide/high16 v9, -0x4010000000000000L    # -1.0
+    .line 920
+    const-wide/high16 v10, -0x4010000000000000L    # -1.0
 
-    if-eqz v4, :cond_130
+    if-eqz v5, :cond_133
 
-    .line 935
-    :try_start_118
+    .line 922
+    :try_start_11b
     const-string v0, "distanceToFinish"
 
-    new-array v3, v2, [Ljava/lang/Class;
+    new-array v4, v2, [Ljava/lang/Class;
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v4, v0, v3, v2}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v5, v0, v4, v2}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 936
+    .line 923
     instance-of v2, v0, Ljava/lang/Double;
 
-    if-eqz v2, :cond_12d
+    if-eqz v2, :cond_130
 
-    .line 937
+    .line 924
     check-cast v0, Ljava/lang/Double;
 
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v2
-    :try_end_12c
-    .catchall {:try_start_118 .. :try_end_12c} :catchall_12e
+    move-result-wide v4
+    :try_end_12f
+    .catchall {:try_start_11b .. :try_end_12f} :catchall_131
 
-    move-wide v9, v2
+    move-wide v10, v4
 
-    .line 939
-    :cond_12d
-    :goto_12d
-    goto :goto_130
-
-    :catchall_12e
-    move-exception v0
-
-    goto :goto_12d
-
-    .line 943
+    .line 926
     :cond_130
     :goto_130
+    goto :goto_133
+
+    :catchall_131
+    move-exception v0
+
+    goto :goto_130
+
+    .line 930
+    :cond_133
+    :goto_133
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "com.zeekr.phase0.SPEEDCAM_DATA"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 944
+    .line 931
     const-string v2, "lat"
 
-    invoke-virtual {v0, v2, v11, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
+    invoke-virtual {v0, v2, v12, v13}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 945
+    .line 932
     const-string v2, "lon"
 
-    invoke-virtual {v0, v2, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
+    invoke-virtual {v0, v2, v14, v15}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 946
+    .line 933
     const-string v2, "speedLimit"
 
-    invoke-virtual {v0, v2, v15}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v0, v2, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 947
+    .line 934
     const-string v2, "distance"
 
-    invoke-virtual {v0, v2, v9, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
+    invoke-virtual {v0, v2, v10, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 948
+    .line 935
     const-string v2, "type"
-
-    invoke-virtual {v0, v2, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 949
-    const-string v2, "tags"
-
-    invoke-virtual {v0, v2, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 950
-    const-string v2, "eventId"
 
     invoke-virtual {v0, v2, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 951
+    .line 936
+    const-string v2, "tags"
+
+    invoke-virtual {v0, v2, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 937
+    const-string v2, "eventId"
+
+    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 938
     const-string v2, "index"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 952
+    .line 939
     const-string v1, "count"
 
     move/from16 v2, p2
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 953
+    .line 940
     const-string v1, "t_ms"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v4
 
-    invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 955
-    instance-of v1, v5, Ljava/lang/Double;
+    .line 942
+    instance-of v1, v6, Ljava/lang/Double;
 
-    if-eqz v1, :cond_17e
+    if-eqz v1, :cond_181
 
-    .line 956
-    check-cast v5, Ljava/lang/Double;
+    .line 943
+    check-cast v6, Ljava/lang/Double;
 
-    invoke-virtual {v5}, Ljava/lang/Double;->doubleValue()D
+    invoke-virtual {v6}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v1
 
-    const-string v3, "effectiveSpeedLimit"
+    const-string v4, "effectiveSpeedLimit"
 
-    invoke-virtual {v0, v3, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
+    invoke-virtual {v0, v4, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;D)Landroid/content/Intent;
 
-    .line 958
-    :cond_17e
-    if-eqz p0, :cond_189
+    .line 945
+    :cond_181
+    if-eqz p0, :cond_18c
 
-    .line 959
+    .line 946
     const-string v1, "speedLimitStatus"
 
     invoke-virtual/range {p0 .. p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -2760,25 +2583,124 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 961
-    :cond_189
+    .line 948
+    :cond_18c
     const-string v1, "source"
 
     const-string v2, "ynavi"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 962
+    .line 949
+    const-string v1, "feed"
+
+    const-string v2, "windshield"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 950
     const-string v1, "com.zeepowertoys.zee_power_toys"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 964
-    sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
+    .line 951
+    invoke-static {v3, v12, v13, v14, v15}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->camEventKey(Ljava/lang/String;DD)Ljava/lang/String;
 
-    invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+    move-result-object v1
 
-    .line 965
+    .line 952
+    invoke-static {v1}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->alreadySentOrMark(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1c2
+
+    .line 953
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "SPEEDCAM_DATA skip duplicate (windshield) id="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object/from16 v1, v16
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 954
+    return-void
+
+    .line 956
+    :cond_1c2
+    move-object/from16 v1, v16
+
+    sget-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
+
+    invoke-virtual {v2, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+
+    .line 957
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "SPEEDCAM_DATA sent (windshield) id="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, " lat="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v12, v13}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, " lon="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v14, v15}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, " dist="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v10, v11}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 959
     return-void
 .end method
 
@@ -2804,7 +2726,7 @@
         }
     .end annotation
 
-    .line 971
+    .line 965
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -2813,7 +2735,7 @@
 
     move-result-object p1
 
-    .line 972
+    .line 966
     invoke-virtual {p1, p0, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2824,14 +2746,14 @@
 .method private static varargs callInstanceQuiet(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
     .registers 5
 
-    .line 976
+    .line 970
     const/4 v0, 0x0
 
     if-nez p0, :cond_4
 
     return-object v0
 
-    .line 978
+    .line 972
     :cond_4
     :try_start_4
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -2842,18 +2764,18 @@
 
     move-result-object p1
 
-    .line 979
+    .line 973
     if-nez p1, :cond_f
 
     return-object v0
 
-    .line 980
+    .line 974
     :cond_f
     const/4 v1, 0x1
 
     invoke-virtual {p1, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 981
+    .line 975
     invoke-virtual {p1, p0, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2862,18 +2784,18 @@
 
     return-object p0
 
-    .line 982
+    .line 976
     :catchall_18
     move-exception p0
 
-    .line 983
+    .line 977
     return-object v0
 .end method
 
 .method private static camEventKey(Ljava/lang/String;DD)Ljava/lang/String;
     .registers 6
 
-    .line 326
+    .line 373
     if-eqz p0, :cond_9
 
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
@@ -2884,7 +2806,7 @@
 
     return-object p0
 
-    .line 327
+    .line 374
     :cond_9
     sget-object p0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -2912,12 +2834,12 @@
 .method private static defaultProxyReturn(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
     .registers 7
 
-    .line 1047
+    .line 1041
     invoke-virtual {p1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1048
+    .line 1042
     const-string v1, "hashCode"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2936,7 +2858,7 @@
 
     return-object p0
 
-    .line 1049
+    .line 1043
     :cond_15
     const-string v1, "equals"
 
@@ -2970,7 +2892,7 @@
 
     return-object p0
 
-    .line 1050
+    .line 1044
     :cond_2e
     const-string p0, "toString"
 
@@ -2984,20 +2906,20 @@
 
     return-object p0
 
-    .line 1052
+    .line 1046
     :cond_39
     invoke-virtual {p1}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
 
     move-result-object p0
 
-    .line 1053
+    .line 1047
     sget-object p1, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     if-ne p0, p1, :cond_42
 
     return-object v2
 
-    .line 1054
+    .line 1048
     :cond_42
     sget-object p1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
@@ -3009,7 +2931,7 @@
 
     return-object p0
 
-    .line 1055
+    .line 1049
     :cond_4b
     sget-object p1, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
@@ -3021,7 +2943,7 @@
 
     return-object p0
 
-    .line 1056
+    .line 1050
     :cond_54
     sget-object p1, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
@@ -3033,7 +2955,7 @@
 
     return-object p0
 
-    .line 1057
+    .line 1051
     :cond_5d
     sget-object p1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
@@ -3045,7 +2967,7 @@
 
     return-object p0
 
-    .line 1058
+    .line 1052
     :cond_66
     sget-object p1, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
@@ -3059,7 +2981,7 @@
 
     return-object p0
 
-    .line 1059
+    .line 1053
     :cond_71
     sget-object p1, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
@@ -3073,7 +2995,7 @@
 
     return-object p0
 
-    .line 1060
+    .line 1054
     :cond_7b
     sget-object p1, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
@@ -3087,7 +3009,7 @@
 
     return-object p0
 
-    .line 1061
+    .line 1055
     :cond_86
     sget-object p1, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
 
@@ -3099,7 +3021,7 @@
 
     return-object p0
 
-    .line 1062
+    .line 1056
     :cond_8f
     return-object v2
 .end method
@@ -3107,7 +3029,7 @@
 .method private static detachListenerQuiet()V
     .registers 6
 
-    .line 115
+    .line 117
     const-string v0, "SpeedCamBridge"
 
     sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sWindshield:Ljava/lang/Object;
@@ -3120,7 +3042,7 @@
 
     goto :goto_50
 
-    .line 117
+    .line 119
     :cond_b
     :try_start_b
     const-string v1, "com.yandex.mapkit.navigation.automotive.WindshieldListener"
@@ -3129,7 +3051,7 @@
 
     move-result-object v1
 
-    .line 119
+    .line 121
     sget-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sWindshield:Ljava/lang/Object;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -3146,7 +3068,7 @@
 
     move-result-object v1
 
-    .line 120
+    .line 122
     sget-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sWindshield:Ljava/lang/Object;
 
     const/4 v3, 0x1
@@ -3161,21 +3083,21 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 121
+    .line 123
     const-string v1, "detachListenerQuiet: removed prior proxy"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_33
     .catchall {:try_start_b .. :try_end_33} :catchall_34
 
-    .line 124
+    .line 126
     goto :goto_4f
 
-    .line 122
+    .line 124
     :catchall_34
     move-exception v1
 
-    .line 123
+    .line 125
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3200,13 +3122,123 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
+    .line 127
     :goto_4f
     return-void
 
-    .line 115
+    .line 117
     :cond_50
     :goto_50
+    return-void
+.end method
+
+.method private static ensureStopGuidanceReceiver()V
+    .registers 6
+
+    .line 188
+    const-string v0, "SpeedCamBridge"
+
+    sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sStopReceiverRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v2
+
+    if-nez v2, :cond_d
+
+    return-void
+
+    .line 190
+    :cond_d
+    :try_start_d
+    sget-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
+
+    if-nez v2, :cond_17
+
+    invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
+
+    .line 191
+    :cond_17
+    sget-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
+
+    if-nez v2, :cond_1f
+
+    .line 192
+    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 193
+    return-void
+
+    .line 195
+    :cond_1f
+    new-instance v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$1;
+
+    invoke-direct {v1}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$1;-><init>()V
+
+    .line 202
+    new-instance v2, Landroid/content/IntentFilter;
+
+    const-string v4, "com.zeekr.phase0.STOP_GUIDANCE"
+
+    invoke-direct {v2, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    .line 203
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v5, 0x21
+
+    if-lt v4, v5, :cond_38
+
+    .line 204
+    sget-object v4, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
+
+    const/4 v5, 0x2
+
+    invoke-virtual {v4, v1, v2, v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
+
+    goto :goto_3d
+
+    .line 206
+    :cond_38
+    sget-object v4, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
+
+    invoke-virtual {v4, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 208
+    :goto_3d
+    const-string v1, "STOP_GUIDANCE receiver registered"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_42
+    .catchall {:try_start_d .. :try_end_42} :catchall_43
+
+    .line 212
+    goto :goto_4e
+
+    .line 209
+    :catchall_43
+    move-exception v1
+
+    .line 210
+    const-string v2, "ensureStopGuidanceReceiver failed"
+
+    invoke-static {v0, v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 211
+    sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sStopReceiverRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 213
+    :goto_4e
     return-void
 .end method
 
@@ -3225,7 +3257,7 @@
         }
     .end annotation
 
-    .line 999
+    .line 993
     invoke-virtual {p0}, Ljava/lang/Class;->getMethods()[Ljava/lang/reflect/Method;
 
     move-result-object v0
@@ -3243,7 +3275,7 @@
 
     aget-object v5, v0, v3
 
-    .line 1000
+    .line 994
     invoke-virtual {v5}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v6
@@ -3256,13 +3288,13 @@
 
     goto :goto_57
 
-    .line 1001
+    .line 995
     :cond_17
     invoke-virtual {v5}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v6
 
-    .line 1002
+    .line 996
     array-length v7, v6
 
     if-nez p2, :cond_20
@@ -3279,11 +3311,11 @@
 
     goto :goto_57
 
-    .line 1003
+    .line 997
     :cond_24
     nop
 
-    .line 1004
+    .line 998
     move v7, v2
 
     :goto_26
@@ -3291,13 +3323,13 @@
 
     if-ge v7, v8, :cond_54
 
-    .line 1005
+    .line 999
     aget-object v8, p2, v7
 
-    .line 1006
+    .line 1000
     if-nez v8, :cond_37
 
-    .line 1007
+    .line 1001
     aget-object v8, v6, v7
 
     invoke-virtual {v8}, Ljava/lang/Class;->isPrimitive()Z
@@ -3310,7 +3342,7 @@
 
     goto :goto_54
 
-    .line 1008
+    .line 1002
     :cond_37
     aget-object v9, v6, v7
 
@@ -3326,7 +3358,7 @@
 
     aget-object v9, v6, v7
 
-    .line 1009
+    .line 1003
     invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v8
@@ -3337,32 +3369,32 @@
 
     if-nez v8, :cond_51
 
-    .line 1010
+    .line 1004
     move v4, v2
 
     goto :goto_54
 
-    .line 1004
+    .line 998
     :cond_51
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_26
 
-    .line 1013
+    .line 1007
     :cond_54
     :goto_54
     if-eqz v4, :cond_57
 
     return-object v5
 
-    .line 999
+    .line 993
     :cond_57
     :goto_57
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_7
 
-    .line 1015
+    .line 1009
     :cond_5a
     invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredMethods()[Ljava/lang/reflect/Method;
 
@@ -3377,7 +3409,7 @@
 
     aget-object v3, p0, v1
 
-    .line 1016
+    .line 1010
     invoke-virtual {v3}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -3390,13 +3422,13 @@
 
     goto :goto_b3
 
-    .line 1017
+    .line 1011
     :cond_6f
     invoke-virtual {v3}, Ljava/lang/reflect/Method;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v5
 
-    .line 1018
+    .line 1012
     array-length v6, v5
 
     if-nez p2, :cond_78
@@ -3413,11 +3445,11 @@
 
     goto :goto_b3
 
-    .line 1019
+    .line 1013
     :cond_7c
     nop
 
-    .line 1020
+    .line 1014
     move v6, v2
 
     :goto_7e
@@ -3425,13 +3457,13 @@
 
     if-ge v6, v7, :cond_ac
 
-    .line 1021
+    .line 1015
     aget-object v7, p2, v6
 
-    .line 1022
+    .line 1016
     if-nez v7, :cond_8f
 
-    .line 1023
+    .line 1017
     aget-object v7, v5, v6
 
     invoke-virtual {v7}, Ljava/lang/Class;->isPrimitive()Z
@@ -3444,7 +3476,7 @@
 
     goto :goto_ad
 
-    .line 1024
+    .line 1018
     :cond_8f
     aget-object v8, v5, v6
 
@@ -3460,7 +3492,7 @@
 
     aget-object v8, v5, v6
 
-    .line 1025
+    .line 1019
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v7
@@ -3471,12 +3503,12 @@
 
     if-nez v7, :cond_a9
 
-    .line 1026
+    .line 1020
     move v5, v2
 
     goto :goto_ad
 
-    .line 1020
+    .line 1014
     :cond_a9
     add-int/lit8 v6, v6, 0x1
 
@@ -3485,7 +3517,7 @@
     :cond_ac
     move v5, v4
 
-    .line 1029
+    .line 1023
     :goto_ad
     if-eqz v5, :cond_b3
 
@@ -3493,14 +3525,14 @@
 
     return-object v3
 
-    .line 1015
+    .line 1009
     :cond_b3
     :goto_b3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_60
 
-    .line 1031
+    .line 1025
     :cond_b6
     const/4 p0, 0x0
 
@@ -3528,7 +3560,7 @@
         }
     .end annotation
 
-    .line 990
+    .line 984
     :try_start_0
     invoke-virtual {p0, p1, p2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
@@ -3538,28 +3570,28 @@
 
     return-object p0
 
-    .line 991
+    .line 985
     :catch_5
     move-exception v0
 
-    .line 992
+    .line 986
     invoke-virtual {p0, p1, p2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p0
 
-    .line 993
+    .line 987
     const/4 p1, 0x1
 
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 994
+    .line 988
     return-object p0
 .end method
 
 .method private static getApplicationContext()Landroid/content/Context;
     .registers 5
 
-    .line 720
+    .line 725
     const/4 v0, 0x0
 
     :try_start_1
@@ -3569,7 +3601,7 @@
 
     move-result-object v1
 
-    .line 721
+    .line 726
     const-string v2, "currentApplication"
 
     const/4 v3, 0x0
@@ -3580,19 +3612,19 @@
 
     move-result-object v1
 
-    .line 722
+    .line 727
     new-array v2, v3, [Ljava/lang/Object;
 
     invoke-virtual {v1, v0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 723
+    .line 728
     instance-of v2, v1, Landroid/content/Context;
 
     if-eqz v2, :cond_21
 
-    .line 724
+    .line 729
     check-cast v1, Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -3603,15 +3635,15 @@
 
     return-object v0
 
-    .line 728
+    .line 733
     :cond_21
     goto :goto_3f
 
-    .line 726
+    .line 731
     :catchall_22
     move-exception v1
 
-    .line 727
+    .line 732
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3638,7 +3670,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 729
+    .line 734
     :goto_3f
     return-object v0
 .end method
@@ -3646,17 +3678,17 @@
 .method private static hasUserNaviRoute()Z
     .registers 5
 
-    .line 171
+    .line 217
     sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sNaviGuidance:Ljava/lang/Object;
 
-    .line 172
+    .line 218
     const/4 v1, 0x0
 
     if-nez v0, :cond_6
 
     return v1
 
-    .line 174
+    .line 220
     :cond_6
     :try_start_6
     const-string v2, "route"
@@ -3671,7 +3703,7 @@
     :try_end_10
     .catchall {:try_start_6 .. :try_end_10} :catchall_14
 
-    .line 175
+    .line 221
     if-eqz v0, :cond_13
 
     const/4 v1, 0x1
@@ -3679,18 +3711,18 @@
     :cond_13
     return v1
 
-    .line 176
+    .line 222
     :catchall_14
     move-exception v0
 
-    .line 177
+    .line 223
     return v1
 .end method
 
 .method public static injectCamera(Ljava/lang/String;Ljava/lang/String;)V
     .registers 10
 
-    .line 650
+    .line 655
     const-string v0, "SpeedCamBridge"
 
     :try_start_2
@@ -3700,19 +3732,19 @@
 
     move-result-object v1
 
-    .line 651
+    .line 656
     const-string v2, "sCamera"
 
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
-    .line 652
+    .line 657
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 653
+    .line 658
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3721,7 +3753,7 @@
     :try_end_17
     .catchall {:try_start_2 .. :try_end_17} :catchall_b6
 
-    .line 654
+    .line 659
     const/4 v3, 0x2
 
     const-string v4, "updateCamera"
@@ -3730,7 +3762,7 @@
 
     if-nez v1, :cond_7c
 
-    .line 659
+    .line 664
     :try_start_1d
     const-string v1, "injectCamera: sCamera null, trying synthetic xg3/g for validation"
 
@@ -3738,7 +3770,7 @@
     :try_end_22
     .catchall {:try_start_1d .. :try_end_22} :catchall_b6
 
-    .line 661
+    .line 666
     :try_start_22
     const-string v1, "xg3.g"
 
@@ -3746,7 +3778,7 @@
 
     move-result-object v1
 
-    .line 662
+    .line 667
     new-array v6, v5, [Ljava/lang/Class;
 
     invoke-virtual {v1, v6}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
@@ -3759,7 +3791,7 @@
 
     move-result-object v6
 
-    .line 663
+    .line 668
     new-array v3, v3, [Ljava/lang/Class;
 
     const-class v7, Ljava/lang/String;
@@ -3774,14 +3806,14 @@
 
     move-result-object v1
 
-    .line 664
+    .line 669
     filled-new-array {p0, p1}, [Ljava/lang/Object;
 
     move-result-object p1
 
     invoke-virtual {v1, v6, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 665
+    .line 670
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3804,14 +3836,14 @@
     :try_end_5f
     .catchall {:try_start_22 .. :try_end_5f} :catchall_60
 
-    .line 668
+    .line 673
     goto :goto_7b
 
-    .line 666
+    .line 671
     :catchall_60
     move-exception p0
 
-    .line 667
+    .line 672
     :try_start_61
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -3837,11 +3869,11 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 669
+    .line 674
     :goto_7b
     return-void
 
-    .line 671
+    .line 676
     :cond_7c
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -3861,14 +3893,14 @@
 
     move-result-object v2
 
-    .line 673
+    .line 678
     filled-new-array {p0, p1}, [Ljava/lang/Object;
 
     move-result-object v3
 
     invoke-virtual {v2, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 674
+    .line 679
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3901,14 +3933,14 @@
     :try_end_b5
     .catchall {:try_start_61 .. :try_end_b5} :catchall_b6
 
-    .line 677
+    .line 682
     goto :goto_d1
 
-    .line 675
+    .line 680
     :catchall_b6
     move-exception p0
 
-    .line 676
+    .line 681
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3933,7 +3965,7 @@
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 678
+    .line 683
     :goto_d1
     return-void
 .end method
@@ -3950,7 +3982,7 @@
         }
     .end annotation
 
-    .line 1035
+    .line 1029
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     const/4 v1, 0x1
@@ -3971,7 +4003,7 @@
     :goto_c
     return v1
 
-    .line 1036
+    .line 1030
     :cond_d
     sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
@@ -3989,7 +4021,7 @@
     :goto_17
     return v1
 
-    .line 1037
+    .line 1031
     :cond_18
     sget-object v0, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
@@ -4007,7 +4039,7 @@
     :goto_22
     return v1
 
-    .line 1038
+    .line 1032
     :cond_23
     sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
@@ -4025,7 +4057,7 @@
     :goto_2d
     return v1
 
-    .line 1039
+    .line 1033
     :cond_2e
     sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
@@ -4043,7 +4075,7 @@
     :goto_38
     return v1
 
-    .line 1040
+    .line 1034
     :cond_39
     sget-object v0, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
@@ -4061,7 +4093,7 @@
     :goto_43
     return v1
 
-    .line 1041
+    .line 1035
     :cond_44
     sget-object v0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
@@ -4079,7 +4111,7 @@
     :goto_4e
     return v1
 
-    .line 1042
+    .line 1036
     :cond_4f
     sget-object v0, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
 
@@ -4097,7 +4129,7 @@
     :goto_59
     return v1
 
-    .line 1043
+    .line 1037
     :cond_5a
     return v2
 .end method
@@ -4105,20 +4137,20 @@
 .method public static onFreeDriveRoute(Ljava/lang/Object;)V
     .registers 5
 
-    .line 222
+    .line 269
     const-string v0, "SpeedCamBridge"
 
     if-nez p0, :cond_a
 
-    .line 223
+    .line 270
     const-string p0, "onFreeDriveRoute: null route"
 
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
+    .line 271
     return-void
 
-    .line 226
+    .line 273
     :cond_a
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->shouldBroadcastGhostFeed()Z
 
@@ -4126,15 +4158,15 @@
 
     if-nez v1, :cond_16
 
-    .line 227
+    .line 274
     const-string p0, "onFreeDriveRoute: skip \u2014 user route or navi not ready"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
+    .line 275
     return-void
 
-    .line 231
+    .line 278
     :cond_16
     :try_start_16
     sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
@@ -4147,7 +4179,7 @@
 
     sput-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
 
-    .line 232
+    .line 279
     :cond_20
     const-string v1, "getEvents"
 
@@ -4163,7 +4195,7 @@
 
     check-cast p0, Ljava/util/List;
 
-    .line 233
+    .line 280
     if-nez p0, :cond_31
 
     const/4 v1, -0x1
@@ -4175,7 +4207,7 @@
 
     move-result v1
 
-    .line 234
+    .line 281
     :goto_35
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -4197,18 +4229,18 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
+    .line 282
     if-lez v1, :cond_6f
 
-    .line 236
+    .line 283
     invoke-static {p0}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->broadcastGhostCamEvents(Ljava/util/List;)I
 
     move-result p0
 
-    .line 237
+    .line 284
     if-lez p0, :cond_6f
 
-    .line 238
+    .line 285
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4237,15 +4269,15 @@
     :try_end_6f
     .catchall {:try_start_16 .. :try_end_6f} :catchall_70
 
-    .line 244
+    .line 291
     :cond_6f
     goto :goto_8b
 
-    .line 242
+    .line 289
     :catchall_70
     move-exception p0
 
-    .line 243
+    .line 290
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4270,7 +4302,7 @@
 
     invoke-static {v0, v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 245
+    .line 292
     :goto_8b
     return-void
 .end method
@@ -4278,20 +4310,20 @@
 .method public static register(Ljava/lang/Object;)V
     .registers 5
 
-    .line 70
+    .line 72
     const-string v0, "SpeedCamBridge"
 
     if-nez p0, :cond_a
 
-    .line 71
+    .line 73
     const-string p0, "register: null windshield, ignoring"
 
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
+    .line 74
     return-void
 
-    .line 75
+    .line 77
     :cond_a
     sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -4307,7 +4339,7 @@
 
     if-eq v2, p0, :cond_5a
 
-    .line 76
+    .line 78
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4320,7 +4352,7 @@
 
     sget-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sWindshield:Ljava/lang/Object;
 
-    .line 77
+    .line 79
     invoke-static {v2}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v2
@@ -4335,7 +4367,7 @@
 
     move-result-object v1
 
-    .line 78
+    .line 80
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v2
@@ -4348,46 +4380,46 @@
 
     move-result-object v1
 
-    .line 76
+    .line 78
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
+    .line 82
     :try_start_42
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->detachListenerQuiet()V
 
-    .line 81
+    .line 83
     sput-object p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sWindshield:Ljava/lang/Object;
 
-    .line 82
+    .line 84
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->attachListener()V
 
-    .line 83
+    .line 85
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->startRoadEventsPoller()V
 
-    .line 84
+    .line 86
     const-string p0, "register: rebound listener + restarted poller"
 
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_52
     .catchall {:try_start_42 .. :try_end_52} :catchall_53
 
-    .line 87
+    .line 89
     goto :goto_59
 
-    .line 85
+    .line 87
     :catchall_53
     move-exception p0
 
-    .line 86
+    .line 88
     const-string v1, "register: rebind failed"
 
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 88
+    .line 90
     :goto_59
     return-void
 
-    .line 90
+    .line 92
     :cond_5a
     const/4 v2, 0x1
 
@@ -4399,15 +4431,15 @@
 
     if-nez v2, :cond_68
 
-    .line 91
+    .line 93
     const-string p0, "register: already registered (same windshield)"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
+    .line 94
     return-void
 
-    .line 95
+    .line 97
     :cond_68
     :try_start_68
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->getApplicationContext()Landroid/content/Context;
@@ -4416,34 +4448,34 @@
 
     sput-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
 
-    .line 96
+    .line 98
     if-nez v2, :cond_79
 
-    .line 97
+    .line 99
     const-string p0, "register: could not obtain application context"
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
+    .line 100
     invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 99
+    .line 101
     return-void
 
-    .line 101
+    .line 103
     :cond_79
     sput-object p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sWindshield:Ljava/lang/Object;
 
-    .line 102
+    .line 104
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->attachListener()V
 
-    .line 103
+    .line 105
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->attachInjectReceiver()V
 
-    .line 104
+    .line 106
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->startRoadEventsPoller()V
 
-    .line 105
+    .line 107
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4454,7 +4486,7 @@
 
     move-result-object v1
 
-    .line 106
+    .line 108
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p0
@@ -4467,29 +4499,29 @@
 
     move-result-object p0
 
-    .line 105
+    .line 107
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_9e
     .catchall {:try_start_68 .. :try_end_9e} :catchall_9f
 
-    .line 110
+    .line 112
     goto :goto_aa
 
-    .line 107
+    .line 109
     :catchall_9f
     move-exception p0
 
-    .line 108
+    .line 110
     const-string v1, "register: failed to attach listener"
 
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 109
+    .line 111
     sget-object p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 111
+    .line 113
     :goto_aa
     return-void
 .end method
@@ -4497,20 +4529,20 @@
 .method public static registerGuidance(Ljava/lang/Object;)V
     .registers 5
 
-    .line 137
+    .line 139
     const-string v0, "SpeedCamBridge"
 
     if-nez p0, :cond_a
 
-    .line 138
+    .line 140
     const-string p0, "registerGuidance: null"
 
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
+    .line 141
     return-void
 
-    .line 141
+    .line 143
     :cond_a
     sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sGuidanceRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -4526,7 +4558,7 @@
 
     if-eq v2, p0, :cond_48
 
-    .line 142
+    .line 144
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4539,7 +4571,7 @@
 
     sget-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sGuidance:Ljava/lang/Object;
 
-    .line 143
+    .line 145
     invoke-static {v2}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v2
@@ -4554,7 +4586,7 @@
 
     move-result-object v1
 
-    .line 144
+    .line 146
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v2
@@ -4567,19 +4599,19 @@
 
     move-result-object v1
 
-    .line 142
+    .line 144
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
+    .line 147
     sput-object p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sGuidance:Ljava/lang/Object;
 
-    .line 146
+    .line 148
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->startRouteEventsPoller()V
 
-    .line 147
+    .line 149
     return-void
 
-    .line 149
+    .line 151
     :cond_48
     const/4 v2, 0x1
 
@@ -4591,36 +4623,36 @@
 
     if-nez v1, :cond_56
 
-    .line 150
+    .line 152
     const-string p0, "registerGuidance: already registered"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
+    .line 153
     return-void
 
-    .line 154
+    .line 156
     :cond_56
     :try_start_56
     sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
 
     if-nez v1, :cond_60
 
-    .line 155
+    .line 157
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
     sput-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
 
-    .line 157
+    .line 159
     :cond_60
     sput-object p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sGuidance:Ljava/lang/Object;
 
-    .line 158
+    .line 160
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->startRouteEventsPoller()V
 
-    .line 159
+    .line 161
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4631,7 +4663,7 @@
 
     move-result-object v1
 
-    .line 160
+    .line 162
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p0
@@ -4644,29 +4676,29 @@
 
     move-result-object p0
 
-    .line 159
+    .line 161
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_7f
     .catchall {:try_start_56 .. :try_end_7f} :catchall_80
 
-    .line 164
+    .line 166
     goto :goto_8b
 
-    .line 161
+    .line 163
     :catchall_80
     move-exception p0
 
-    .line 162
+    .line 164
     const-string v1, "registerGuidance failed"
 
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 163
+    .line 165
     sget-object p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sGuidanceRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 165
+    .line 167
     :goto_8b
     return-void
 .end method
@@ -4674,20 +4706,20 @@
 .method public static registerNaviGuidance(Ljava/lang/Object;)V
     .registers 5
 
-    .line 195
+    .line 241
     const-string v0, "SpeedCamBridge"
 
     if-nez p0, :cond_a
 
-    .line 196
+    .line 242
     const-string p0, "registerNaviGuidance: null"
 
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
+    .line 243
     return-void
 
-    .line 199
+    .line 245
     :cond_a
     sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sNaviGuidanceRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -4703,21 +4735,21 @@
 
     if-eq v2, p0, :cond_23
 
-    .line 200
+    .line 246
     const-string v1, "registerNaviGuidance: identity change"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
+    .line 247
     sput-object p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sNaviGuidance:Ljava/lang/Object;
 
-    .line 202
+    .line 248
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->startFreeDrivePoller()V
 
-    .line 203
+    .line 249
     return-void
 
-    .line 205
+    .line 251
     :cond_23
     const/4 v2, 0x1
 
@@ -4729,15 +4761,15 @@
 
     if-nez v1, :cond_31
 
-    .line 206
+    .line 252
     const-string p0, "registerNaviGuidance: already registered"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
+    .line 253
     return-void
 
-    .line 210
+    .line 256
     :cond_31
     :try_start_31
     sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
@@ -4750,14 +4782,17 @@
 
     sput-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sContext:Landroid/content/Context;
 
-    .line 211
+    .line 257
     :cond_3b
     sput-object p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sNaviGuidance:Ljava/lang/Object;
 
-    .line 212
+    .line 258
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->startFreeDrivePoller()V
 
-    .line 213
+    .line 259
+    invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->ensureStopGuidanceReceiver()V
+
+    .line 260
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4768,7 +4803,7 @@
 
     move-result-object v1
 
-    .line 214
+    .line 261
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p0
@@ -4781,37 +4816,37 @@
 
     move-result-object p0
 
-    .line 213
+    .line 260
     invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_5a
-    .catchall {:try_start_31 .. :try_end_5a} :catchall_5b
+    :try_end_5d
+    .catchall {:try_start_31 .. :try_end_5d} :catchall_5e
 
-    .line 218
-    goto :goto_66
+    .line 265
+    goto :goto_69
 
-    .line 215
-    :catchall_5b
+    .line 262
+    :catchall_5e
     move-exception p0
 
-    .line 216
+    .line 263
     const-string v1, "registerNaviGuidance failed"
 
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 217
+    .line 264
     sget-object p0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sNaviGuidanceRegistered:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {p0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 219
-    :goto_66
+    .line 266
+    :goto_69
     return-void
 .end method
 
 .method private static shouldBroadcastGhostFeed()Z
     .registers 1
 
-    .line 189
+    .line 235
     sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sNaviGuidance:Ljava/lang/Object;
 
     if-nez v0, :cond_6
@@ -4820,7 +4855,7 @@
 
     return v0
 
-    .line 190
+    .line 236
     :cond_6
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->hasUserNaviRoute()Z
 
@@ -4834,7 +4869,7 @@
 .method private static shouldBroadcastRouteFeed()Z
     .registers 1
 
-    .line 183
+    .line 229
     sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sNaviGuidance:Ljava/lang/Object;
 
     if-nez v0, :cond_6
@@ -4843,7 +4878,7 @@
 
     return v0
 
-    .line 184
+    .line 230
     :cond_6
     invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->hasUserNaviRoute()Z
 
@@ -4855,12 +4890,12 @@
 .method private static startFreeDrivePoller()V
     .registers 3
 
-    .line 248
+    .line 295
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sFreeDrivePollRunning:Z
 
-    .line 249
+    .line 296
     sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sFreeDrivePollHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_e
@@ -4869,10 +4904,10 @@
 
     if-eqz v2, :cond_e
 
-    .line 250
+    .line 297
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 252
+    .line 299
     :cond_e
     new-instance v1, Landroid/os/Handler;
 
@@ -4884,113 +4919,62 @@
 
     sput-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sFreeDrivePollHandler:Landroid/os/Handler;
 
-    .line 253
+    .line 300
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sFreeDrivePollRunning:Z
 
-    .line 254
+    .line 301
     filled-new-array {v0}, [I
 
     move-result-object v0
 
-    .line 255
+    .line 302
     const-string v1, "SpeedCamBridge"
 
     const-string v2, "ghostPoll: starting freeDriveRoute.getEvents"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
-    new-instance v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$1;
+    .line 303
+    new-instance v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$2;
 
-    invoke-direct {v1, v0}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$1;-><init>([I)V
+    invoke-direct {v1, v0}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$2;-><init>([I)V
 
     sput-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sFreeDrivePollRunnable:Ljava/lang/Runnable;
 
-    .line 319
+    .line 366
     sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sFreeDrivePollHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 320
+    .line 367
     return-void
 .end method
 
 .method private static startRoadEventsPoller()V
-    .registers 3
+    .registers 2
 
-    .line 559
-    const/4 v0, 0x0
+    .line 607
+    const-string v0, "SpeedCamBridge"
 
-    sput-boolean v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sPollRunning:Z
+    const-string v1, "startRoadEventsPoller: SKIP \u2014 Windshield closed (ghost+route only)"
 
-    .line 560
-    sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sPollHandler:Landroid/os/Handler;
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz v1, :cond_e
-
-    sget-object v2, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sPollRunnable:Ljava/lang/Runnable;
-
-    if-eqz v2, :cond_e
-
-    .line 561
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    .line 563
-    :cond_e
-    new-instance v1, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    sput-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sPollHandler:Landroid/os/Handler;
-
-    .line 564
-    const/4 v1, 0x1
-
-    sput-boolean v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sPollRunning:Z
-
-    .line 565
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    .line 566
-    const-string v1, "SpeedCamBridge"
-
-    const-string v2, "poll: starting on main looper"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 567
-    new-instance v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$3;
-
-    invoke-direct {v1, v0}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$3;-><init>([I)V
-
-    sput-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sPollRunnable:Ljava/lang/Runnable;
-
-    .line 602
-    sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sPollHandler:Landroid/os/Handler;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 603
+    .line 608
     return-void
 .end method
 
 .method private static startRouteEventsPoller()V
     .registers 3
 
-    .line 436
+    .line 483
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sRoutePollRunning:Z
 
-    .line 437
+    .line 484
     sget-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sRoutePollHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_e
@@ -4999,10 +4983,10 @@
 
     if-eqz v2, :cond_e
 
-    .line 438
+    .line 485
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 440
+    .line 487
     :cond_e
     new-instance v1, Landroid/os/Handler;
 
@@ -5014,35 +4998,111 @@
 
     sput-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sRoutePollHandler:Landroid/os/Handler;
 
-    .line 441
+    .line 488
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sRoutePollRunning:Z
 
-    .line 442
+    .line 489
     filled-new-array {v0}, [I
 
     move-result-object v0
 
-    .line 443
+    .line 490
     const-string v1, "SpeedCamBridge"
 
     const-string v2, "routePoll: starting getEvents on main looper"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 444
-    new-instance v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$2;
+    .line 491
+    new-instance v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$3;
 
-    invoke-direct {v1, v0}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$2;-><init>([I)V
+    invoke-direct {v1, v0}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster$3;-><init>([I)V
 
     sput-object v1, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sRoutePollRunnable:Ljava/lang/Runnable;
 
-    .line 555
+    .line 602
     sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sRoutePollHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 556
+    .line 603
+    return-void
+.end method
+
+.method public static stopUserGuidance()V
+    .registers 5
+
+    .line 174
+    sget-object v0, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->sNaviGuidance:Ljava/lang/Object;
+
+    .line 175
+    const-string v1, "SpeedCamBridge"
+
+    if-nez v0, :cond_c
+
+    .line 176
+    const-string v0, "stopUserGuidance: naviGuidance null"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 177
+    return-void
+
+    .line 180
+    :cond_c
+    :try_start_c
+    const-string v2, "stop"
+
+    const/4 v3, 0x0
+
+    new-array v4, v3, [Ljava/lang/Class;
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-static {v0, v2, v4, v3}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->callInstance(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 181
+    const-string v0, "stopUserGuidance: Guidance.stop() invoked"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1b
+    .catchall {:try_start_c .. :try_end_1b} :catchall_1c
+
+    .line 184
+    goto :goto_37
+
+    .line 182
+    :catchall_1c
+    move-exception v0
+
+    .line 183
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "stopUserGuidance failed: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 185
+    :goto_37
     return-void
 .end method

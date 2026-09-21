@@ -28,6 +28,8 @@ public final class SpeedCamBroadcaster {
 
     private static final String TAG = "SpeedCamBridge";
     private static final String ACTION = "com.zeekr.phase0.SPEEDCAM_DATA";
+    private static final String ACTION_STOP_GUIDANCE = "com.zeekr.phase0.STOP_GUIDANCE";
+    private static final AtomicBoolean sStopReceiverRegistered = new AtomicBoolean(false);
     /** Power Toys package — setPackage makes the broadcast explicit for Android 12+. */
     private static final String TOYS_PACKAGE = "com.zeepowertoys.zee_power_toys";
     private static final String SOURCE_TAG = "ynavi";
@@ -166,6 +168,50 @@ public final class SpeedCamBroadcaster {
 
 
 
+
+    /** End navikit guidance (route()) so ghost freeDrive can resume. */
+    public static void stopUserGuidance() {
+        Object g = sNaviGuidance;
+        if (g == null) {
+            Log.w(TAG, "stopUserGuidance: naviGuidance null");
+            return;
+        }
+        try {
+            callInstance(g, "stop", new Class<?>[0]);
+            Log.i(TAG, "stopUserGuidance: Guidance.stop() invoked");
+        } catch (Throwable t) {
+            Log.e(TAG, "stopUserGuidance failed: " + t.getMessage(), t);
+        }
+    }
+
+    private static void ensureStopGuidanceReceiver() {
+        if (!sStopReceiverRegistered.compareAndSet(false, true)) return;
+        try {
+            if (sContext == null) sContext = getApplicationContext();
+            if (sContext == null) {
+                sStopReceiverRegistered.set(false);
+                return;
+            }
+            android.content.BroadcastReceiver r = new android.content.BroadcastReceiver() {
+                @Override
+                public void onReceive(android.content.Context context, Intent intent) {
+                    Log.i(TAG, "STOP_GUIDANCE broadcast received");
+                    stopUserGuidance();
+                }
+            };
+            android.content.IntentFilter f = new android.content.IntentFilter(ACTION_STOP_GUIDANCE);
+            if (android.os.Build.VERSION.SDK_INT >= 33) {
+                sContext.registerReceiver(r, f, android.content.Context.RECEIVER_EXPORTED);
+            } else {
+                sContext.registerReceiver(r, f);
+            }
+            Log.i(TAG, "STOP_GUIDANCE receiver registered");
+        } catch (Throwable t) {
+            Log.e(TAG, "ensureStopGuidanceReceiver failed", t);
+            sStopReceiverRegistered.set(false);
+        }
+    }
+
     /** True when user started navigation (navikit Guidance.route() non-null). */
     private static boolean hasUserNaviRoute() {
         Object g = sNaviGuidance;
@@ -210,6 +256,7 @@ public final class SpeedCamBroadcaster {
             if (sContext == null) sContext = getApplicationContext();
             sNaviGuidance = naviGuidance;
             startFreeDrivePoller();
+            ensureStopGuidanceReceiver();
             Log.i(TAG, "registerNaviGuidance: freeDrive poller attached g="
                     + System.identityHashCode(naviGuidance));
         } catch (Throwable t) {

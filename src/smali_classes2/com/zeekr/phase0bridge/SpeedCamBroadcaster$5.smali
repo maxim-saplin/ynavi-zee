@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .registers 1
 
-    .line 686
+    .line 691
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,12 +37,12 @@
         }
     .end annotation
 
-    .line 689
+    .line 694
     invoke-virtual {p2}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 691
+    .line 696
     const-string v1, "toString"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -61,7 +61,7 @@
 
     if-nez v1, :cond_34
 
-    .line 692
+    .line 697
     const-string v1, "equals"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -70,7 +70,7 @@
 
     if-nez v1, :cond_34
 
-    .line 693
+    .line 698
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,7 +91,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 695
+    .line 700
     :cond_34
     const-string v1, "onRoadEventsChanged"
 
@@ -101,30 +101,30 @@
 
     if-eqz v0, :cond_46
 
-    .line 697
+    .line 702
     :try_start_3c
     # invokes: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->broadcastRoadEvents()V
-    invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$1400()V
+    invoke-static {}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$1100()V
     :try_end_3f
     .catchall {:try_start_3c .. :try_end_3f} :catchall_40
 
-    .line 700
+    .line 705
     goto :goto_46
 
-    .line 698
+    .line 703
     :catchall_40
     move-exception v0
 
-    .line 699
+    .line 704
     const-string v1, "onRoadEventsChanged error"
 
     invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 703
+    .line 708
     :cond_46
     :goto_46
     # invokes: Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->defaultProxyReturn(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
-    invoke-static {p1, p2, p3}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$1600(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, p2, p3}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->access$1200(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

@@ -7,8 +7,6 @@ import java.lang.reflect.Method;
 
 /**
  * Smali-callable entries.
- * - DistancesProviderImpl.start → hookWindshield(p0) for route getEvents (CONDITIONAL).
- * - navikit h0.onFreeDriveRouteChanged → hookNaviGuidance / hookFreeDriveRoute (ghost workaround).
  */
 public final class SpeedCamHook {
     private static final String TAG = "SpeedCamBridge";
@@ -53,15 +51,19 @@ public final class SpeedCamHook {
         SpeedCamBroadcaster.registerGuidance(guidance);
     }
 
-    /** navikit Guidance — poll freeDriveRoute().getEvents() (labeled ghost). */
     public static void hookNaviGuidance(Object naviGuidance) {
         Log.i(TAG, "SpeedCamHook.hookNaviGuidance() called (ghost freeDrive)");
         SpeedCamBroadcaster.registerNaviGuidance(naviGuidance);
     }
 
-    /** One-shot: DrivingRoute from freeDriveRoute() changed. */
     public static void hookFreeDriveRoute(Object drivingRoute) {
         Log.i(TAG, "SpeedCamHook.hookFreeDriveRoute() called");
         SpeedCamBroadcaster.onFreeDriveRoute(drivingRoute);
+    }
+
+    /** Cancel user guidance → ghost can resume (reliability cancel→ghost2). */
+    public static void stopUserGuidance() {
+        Log.i(TAG, "SpeedCamHook.stopUserGuidance() called");
+        SpeedCamBroadcaster.stopUserGuidance();
     }
 }
