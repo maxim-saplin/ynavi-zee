@@ -39,9 +39,17 @@
     .end annotation
 .end field
 
+.field private final e:Lz21/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lz21/a;"
+        }
+    .end annotation
+.end field
+
 
 # direct methods
-.method public constructor <init>(Lru/yandex/yandexmaps/common/app/s;Lz21/a;Lz21/a;Lz21/a;)V
+.method public constructor <init>(Lru/yandex/yandexmaps/common/app/s;Lz21/a;Lz21/a;Lz21/a;Lz21/a;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -54,13 +62,15 @@
 
     iput-object p1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/c;->d:Lz21/a;
 
+    iput-object p5, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/c;->e:Lz21/a;
+
     return-void
 .end method
 
 
 # virtual methods
 .method public final get()Ljava/lang/Object;
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/c;->a:Lz21/a;
 
@@ -94,9 +104,21 @@
 
     check-cast v3, Lio/reactivex/d0;
 
-    new-instance v4, Lru/yandex/yandexmaps/overlays/internal/traffic/b;
+    iget-object v4, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/c;->e:Lz21/a;
 
-    invoke-direct {v4, v0, v1, v2, v3}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;-><init>(Ldg2/b;Lcom/yandex/mapkit/traffic/TrafficLayer;Lru/yandex/yandexmaps/overlays/api/p;Lio/reactivex/d0;)V
+    move-object v5, v4
 
-    return-object v4
+    move-object v4, v3
+
+    move-object v3, v2
+
+    move-object v2, v1
+
+    move-object v1, v0
+
+    new-instance v0, Lru/yandex/yandexmaps/overlays/internal/traffic/b;
+
+    invoke-direct/range {v0 .. v5}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;-><init>(Ldg2/b;Lcom/yandex/mapkit/traffic/TrafficLayer;Lru/yandex/yandexmaps/overlays/api/p;Lio/reactivex/d0;Lz21/a;)V
+
+    return-object v0
 .end method

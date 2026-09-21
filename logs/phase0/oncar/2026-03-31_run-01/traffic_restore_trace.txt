@@ -1,0 +1,200 @@
+03-31 13:21:01.752 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:03.755 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:05.758 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:07.758 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:09.761 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:11.763 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:13.765 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:15.768 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:17.772 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:19.773 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:21.775 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:23.777 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:25.780 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:27.783 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:29.786 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:31.787 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:33.789 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:35.791 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:37.794 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:39.796 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:41.799 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:43.801 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:45.804 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:47.809 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:49.811 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:51.813 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:53.816 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:55.819 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:57.820 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:21:59.823 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:01.825 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:03.827 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:05.828 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:06.501 I/YNaviTraffic(26221): listener changed non-null
+03-31 13:22:07.832 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:09.834 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:11.840 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:13.845 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:15.847 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:17.848 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:19.850 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:21.852 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:23.856 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:25.857 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:27.860 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:29.861 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:31.864 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:33.867 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:35.871 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:37.873 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:39.875 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:41.878 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:43.880 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:45.881 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:46.772 I/HealthHal-Monitor(  547): 14971 shell        20   0  10G 3.3M 2.7M S  7.4   0.0   0:24.06 logcat -v time -s yandex.maps ActivityThread
+03-31 13:22:47.884 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:49.886 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:51.889 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:53.892 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:55.896 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:57.899 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:22:59.902 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:01.904 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:03.906 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:05.909 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:07.913 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:09.914 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:11.916 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:13.920 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:15.922 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:17.925 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:19.928 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:21.930 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:23.934 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:25.938 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:27.942 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:29.944 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:31.947 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:33.949 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:35.956 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:37.960 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:39.961 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:41.964 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:43.966 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:45.968 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:47.970 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:49.911 D/DnsUtils( 1754): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:23:49.912 D/DnsUtils( 1754): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:23:49.971 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:50.940 D/DnsUtils( 1754): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:23:50.948 D/DnsUtils( 1754): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:23:51.974 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:52.968 D/DnsUtils( 1754): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:23:52.973 D/DnsUtils( 1754): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:23:53.978 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:55.982 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:57.006 D/DnsUtils( 1754): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:23:57.020 D/DnsUtils( 1754): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:23:57.984 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:23:59.385 E/CarSettings20251209-20251209_OptionListFragment( 3495): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:23:59.986 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:01.988 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:03.990 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:04.755 D/FragmentManager(30805): 	at android.app.ActivityThread.handleStartActivity(ActivityThread.java:3732)
+03-31 13:24:04.755 D/FragmentManager(30805): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2253)
+03-31 13:24:04.755 D/FragmentManager(30805): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:05.060 D/DnsUtils( 1754): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:05.064 D/DnsUtils( 1754): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:05.147 D/FragmentManager(30805): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:05.205 I/YNaviTraffic(30805): m register default callback
+03-31 13:24:05.210 I/YNaviTraffic(30805): netCb onAvailable
+03-31 13:24:05.210 I/YNaviTraffic(30805): netCb caps ignored
+03-31 13:24:05.816 I/YNaviTraffic(30805): listener loading
+03-31 13:24:05.992 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:06.851 E/com.yandex.runtime.sensors.internal.LocationSubscription(30805): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:06.862 E/com.yandex.runtime.sensors.internal.LocationSubscription(30805): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:06.865 E/com.yandex.runtime.sensors.internal.LocationSubscription(30805): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:07.419 E/com.yandex.runtime.sensors.internal.LocationSubscription(30805): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:07.464 E/com.yandex.runtime.sensors.internal.LocationSubscription(30805): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:07.488 E/com.yandex.runtime.sensors.internal.LocationSubscription(30805): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:07.519 E/com.yandex.runtime.sensors.internal.LocationSubscription(30805): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:07.536 E/com.yandex.runtime.sensors.internal.LocationSubscription(30805): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:07.541 E/com.yandex.runtime.sensors.internal.LocationSubscription(30805): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:07.996 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:09.998 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:12.001 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:14.006 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:16.009 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:18.012 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:18.414 E/yandex.maps(30805): auto yandex::maps::runtime::network::internal::RetryerByHosts::tryExec: Request timed out
+03-31 13:24:18.418 W/yandex.maps(30805): std::__ndk1::enable_if: Network reinitialization
+03-31 13:24:18.420 W/yandex.maps(30805): std::__ndk1::enable_if: Network reinitialization
+03-31 13:24:18.420 W/yandex.maps(30805): std::__ndk1::enable_if: Network reinitialization
+03-31 13:24:18.432 E/yandex.maps(30805): decltype: The request cannot be processed by any of the hosts.
+03-31 13:24:20.015 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:22.018 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:24.020 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:26.022 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:28.025 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:30.028 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:32.033 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:33.443 E/yandex.maps(30805): auto yandex::maps::runtime::network::internal::RetryerByHosts::tryExec: Request timed out
+03-31 13:24:33.459 E/yandex.maps(30805): decltype: The request cannot be processed by any of the hosts.
+03-31 13:24:34.036 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:36.038 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:38.040 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:40.042 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:41.127 D/DnsUtils( 1754): 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+03-31 13:24:42.044 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:44.047 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:46.050 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:48.052 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:48.478 E/yandex.maps(30805): auto yandex::maps::runtime::network::internal::RetryerByHosts::tryExec: Request timed out
+03-31 13:24:48.509 E/yandex.maps(30805): decltype: The request cannot be processed by any of the hosts.
+03-31 13:24:50.055 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:52.057 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:54.060 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:56.061 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:24:57.235 I/YNaviTraffic(30805): netCb caps validated
+03-31 13:24:57.236 I/YNaviTraffic(30805): o callback ignored
+03-31 13:24:58.064 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:00.067 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:02.069 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:04.070 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:06.074 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:08.076 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:10.081 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:12.085 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:14.088 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:16.090 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:18.092 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:20.095 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:22.103 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:24.106 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:26.109 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:28.111 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:30.114 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:32.116 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:34.117 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:36.120 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:38.122 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:40.125 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:42.128 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:44.132 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:46.136 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:48.138 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:50.140 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:52.142 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:54.145 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:56.147 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:25:58.150 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:26:00.152 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:26:02.153 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:26:04.155 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:26:06.157 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:26:08.159 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:26:10.161 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:26:12.162 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:26:14.164 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25
+03-31 13:26:16.166 D/[251016]CommonUtils( 1898): getApplication by ActivityThread.currentApplication=com.zeekr.multidisplay.service.MultiDisplayApplication@ec23e25

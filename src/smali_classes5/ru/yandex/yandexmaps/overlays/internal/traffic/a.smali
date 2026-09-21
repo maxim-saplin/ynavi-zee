@@ -30,6 +30,8 @@
 
     iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/a;->a:Lru/yandex/yandexmaps/overlays/internal/traffic/b;
 
+    invoke-static {v0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->f(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+
     invoke-static {v0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->c(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)Ldg2/b;
 
     move-result-object v0
@@ -48,6 +50,12 @@
 
     invoke-interface {v0, v1}, Ldg2/b;->R(Ldg2/a;)V
 
+    const-string v0, "YNaviTraffic"
+
+    const-string v1, "listener changed non-null"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_0
 
     :cond_0
@@ -60,6 +68,16 @@
     sget-object v0, Ldu2/r;->b:Ldu2/r;
 
     invoke-interface {p1, v0}, Ldg2/b;->R(Ldg2/a;)V
+
+    iget-object p1, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/a;->a:Lru/yandex/yandexmaps/overlays/internal/traffic/b;
+
+    invoke-static {p1}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->e(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+
+    const-string p1, "YNaviTraffic"
+
+    const-string v0, "listener changed null -> arm"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     return-void
@@ -78,6 +96,16 @@
 
     invoke-interface {v0, v1}, Ldg2/b;->R(Ldg2/a;)V
 
+    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/a;->a:Lru/yandex/yandexmaps/overlays/internal/traffic/b;
+
+    invoke-static {v0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->e(Lru/yandex/yandexmaps/overlays/internal/traffic/b;)V
+
+    const-string v0, "YNaviTraffic"
+
+    const-string v1, "listener expired -> arm"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method
 
@@ -93,6 +121,16 @@
     sget-object v1, Ldu2/q;->b:Ldu2/q;
 
     invoke-interface {v0, v1}, Ldg2/b;->R(Ldg2/a;)V
+
+    iget-object v0, p0, Lru/yandex/yandexmaps/overlays/internal/traffic/a;->a:Lru/yandex/yandexmaps/overlays/internal/traffic/b;
+
+    invoke-virtual {v0}, Lru/yandex/yandexmaps/overlays/internal/traffic/b;->p()V
+
+    const-string v0, "YNaviTraffic"
+
+    const-string v1, "listener loading"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method

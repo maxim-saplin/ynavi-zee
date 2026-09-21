@@ -164,6 +164,14 @@
     .end annotation
 .end field
 
+.field private U:Lz21/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lz21/a;"
+        }
+    .end annotation
+.end field
+
 .field private final a:Lru/yandex/yandexmaps/overlays/api/m;
 
 .field private final b:Lau2/m;
@@ -611,6 +619,20 @@
 
     iput-object v0, p0, Lau2/m;->u:Lz21/a;
 
+    new-instance v1, Lau2/t0;
+
+    invoke-direct {v1, p1}, Lau2/t0;-><init>(Lru/yandex/yandexmaps/overlays/api/m;)V
+
+    invoke-static {v1}, Lfb2/b0;->c(Lz21/a;)Ldagger/internal/k;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ldagger/internal/d;->b(Ldagger/internal/k;)Ldagger/internal/k;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lau2/m;->U:Lz21/a;
+
     iget-object v1, p0, Lau2/m;->j:Lz21/a;
 
     new-instance v2, Lwt2/l;
@@ -893,15 +915,29 @@
 
     iget-object v2, p0, Lau2/m;->q:Lz21/a;
 
+    iget-object v4, p0, Lau2/m;->U:Lz21/a;
+
     invoke-static {}, Lru/yandex/yandexmaps/common/app/r;->a()Lru/yandex/yandexmaps/common/app/s;
 
     move-result-object v3
 
-    new-instance v4, Lru/yandex/yandexmaps/overlays/internal/traffic/c;
+    move-object v5, v4
 
-    invoke-direct {v4, v3, v0, v1, v2}, Lru/yandex/yandexmaps/overlays/internal/traffic/c;-><init>(Lru/yandex/yandexmaps/common/app/s;Lz21/a;Lz21/a;Lz21/a;)V
+    move-object v4, v2
 
-    invoke-static {v4}, Lfb2/b0;->c(Lz21/a;)Ldagger/internal/k;
+    move-object v2, v0
+
+    move-object v6, v1
+
+    move-object v1, v3
+
+    move-object v3, v6
+
+    new-instance v0, Lru/yandex/yandexmaps/overlays/internal/traffic/c;
+
+    invoke-direct/range {v0 .. v5}, Lru/yandex/yandexmaps/overlays/internal/traffic/c;-><init>(Lru/yandex/yandexmaps/common/app/s;Lz21/a;Lz21/a;Lz21/a;Lz21/a;)V
+
+    invoke-static {v0}, Lfb2/b0;->c(Lz21/a;)Ldagger/internal/k;
 
     move-result-object v0
 

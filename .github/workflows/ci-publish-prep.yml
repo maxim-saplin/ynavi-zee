@@ -1,0 +1,22 @@
+# 0044 — prep branch CI. APKs are NOT in git (Maxim); draft Releases carry binaries.
+name: ci-publish-prep
+
+on:
+  push:
+    branches: [0044-publish-prep]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scripts + NOTES present
+        run: |
+          set -euo pipefail
+          test -x build_zeekr.sh
+          test -x build_zeekr_os7.sh
+          test -f NOTES-for-Maxim-0044.md
+          test -f .github/workflows/release.yml
+          grep -q 'ZEEAPP_LETTERBOX_LEFT_DIP=0' build_zeekr_os7.sh
+          grep -q 'ZEEAPP_LETTERBOX_LEFT_DIP=480' build_zeekr.sh

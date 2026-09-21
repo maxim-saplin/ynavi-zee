@@ -1415,22 +1415,8 @@
         <activity android:name="com.yandex.passport.internal.util.StarterActivity"
             android:process="@string/passport_process_name"
             android:theme="@style/PassportNext.Theme.Custom.Transparent" />
-        <activity
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:name="com.yandex.mobile.ads.common.AdActivity"
-            android:theme="@style/MonetizationAdsInternal.AdActivity" />
-        <provider android:authorities="ru.yandex.yandexnavi.MobileAdsInitializeProvider"
-            android:exported="false"
-            android:name="com.yandex.mobile.ads.core.initializer.MobileAdsInitializeProvider" />
-        <activity android:exported="false"
-            android:name="com.yandex.mobile.ads.features.debugpanel.ui.IntegrationInspectorActivity"
-            android:theme="@style/DebugPanelTheme" />
-        <provider android:authorities="ru.yandex.yandexnavi.monetization.ads.inspector.fileprovider"
-            android:exported="false" android:grantUriPermissions="true"
-            android:name="com.yandex.mobile.ads.features.debugpanel.data.local.DebugPanelFileProvider">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/debug_panel_file_paths" />
-        </provider>
+        <!-- ZEEAPP_AD_BANNERS_BEGIN -->
+        <!-- ZEEAPP_AD_BANNERS_END -->
         <activity android:launchMode="singleTop"
             android:name="com.yandex.music.sdk.helper.ui.searchapp.PlayerActivity"
             android:theme="@style/music_sdk_helper_view.light" />

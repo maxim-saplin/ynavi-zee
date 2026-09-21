@@ -100,19 +100,10 @@
 
 # virtual methods
 .method public final c()Li0/c;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Li0/b;
-
-    invoke-direct {v0, p0}, Li0/b;-><init>(Lru/yandex/yandexnavi/projected/platformkit/presentation/service/NavigationCarAppService;)V
-
-    sget v1, Landroidx/car/app/d0;->hosts_allowlist_sample:I
-
-    invoke-virtual {v0, v1}, Li0/b;->a(I)V
-
-    invoke-virtual {v0}, Li0/b;->b()Li0/c;
-
-    move-result-object v0
+    # PATCH: return ALLOW_ALL_HOSTS_VALIDATOR so com.zeekr.phase0 passes handshake
+    sget-object v0, Li0/c;->f:Li0/c;
 
     return-object v0
 .end method

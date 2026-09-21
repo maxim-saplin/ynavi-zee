@@ -1,0 +1,9 @@
+name: release
+on:
+  workflow_dispatch:
+jobs:
+  release:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Enable after Maxim go — tag ynavi-zeekr-v12"

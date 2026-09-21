@@ -1,0 +1,5 @@
+#!/bin/bash
+# zipalign wrapper — sets LD_LIBRARY_PATH so the ELF binary finds libc++.so
+DIR="$(cd "$(dirname "$0")" && pwd)"
+export LD_LIBRARY_PATH="$DIR/lib64${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+exec "$DIR/zipalign.bin" "$@"

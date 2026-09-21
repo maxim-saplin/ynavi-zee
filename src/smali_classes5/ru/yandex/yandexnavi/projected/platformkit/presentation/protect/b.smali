@@ -70,68 +70,10 @@
 
 # virtual methods
 .method public final a(Z)V
-    .locals 2
+    .locals 0
 
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lru/yandex/yandexnavi/projected/platformkit/presentation/protect/b;->b:Landroidx/lifecycle/w;
-
-    invoke-virtual {p1}, Landroidx/lifecycle/w;->getCurrentState()Landroidx/lifecycle/Lifecycle$State;
-
-    move-result-object p1
-
-    sget-object v0, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
-
-    invoke-virtual {p1, v0}, Landroidx/lifecycle/Lifecycle$State;->isAtLeast(Landroidx/lifecycle/Lifecycle$State;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    :cond_0
-    new-instance p1, Landroid/content/Intent;
-
-    iget-object v0, p0, Lru/yandex/yandexnavi/projected/platformkit/presentation/protect/b;->a:Landroid/app/Activity;
-
-    const-class v1, Lru/yandex/yandexnavi/projected/platformkit/presentation/protect/ScreenBlockActivity;
-
-    invoke-direct {p1, v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const/high16 v0, 0x20000
-
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    iget-object v0, p0, Lru/yandex/yandexnavi/projected/platformkit/presentation/protect/b;->a:Landroid/app/Activity;
-
-    invoke-virtual {v0, p1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-
-    sget-object p1, Lod3/c;->a:Lod3/c;
-
-    iget-object v0, p0, Lru/yandex/yandexnavi/projected/platformkit/presentation/protect/b;->a:Landroid/app/Activity;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p1, Landroid/content/Intent;
-
-    const-string v1, "ACTION_OPEN_APP_ON_HEADUNIT"
-
-    invoke-direct {p1, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
-
-    :cond_1
-    iget-object p1, p0, Lru/yandex/yandexnavi/projected/platformkit/presentation/protect/b;->a:Landroid/app/Activity;
-
-    invoke-virtual {p1}, Landroid/app/Activity;->finish()V
-
+    # PATCHED: Skip ScreenBlockActivity launch entirely.
+    # Just return without starting the lock screen or finishing the current activity.
     return-void
 .end method
 

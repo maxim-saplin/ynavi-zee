@@ -1,0 +1,11 @@
+# Creates/updates a DRAFT Release (Maxim: test via draft, delete after exercise).
+# Trigger manually after uploading assets with `gh release upload` from a builder machine,
+# OR use workflow_dispatch with artifacts from a prior job — binaries must NOT live in git.
+name: release-draft-placeholder
+on:
+  workflow_dispatch:
+jobs:
+  note:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Draft Releases are created via gh CLI from local builds/ — see NOTES-for-Maxim-0044.md"

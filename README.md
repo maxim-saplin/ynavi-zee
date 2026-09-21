@@ -8,16 +8,39 @@ Focus: modding Yandex Navi to look and work better on Chinese cars with awkward 
 
 ## APKs
 
-**Ready-to-install builds** are available in the [modded_apks/](modded_apks) folder, signed with AOSP debug key (used by default Zeekr OS 6 for it's system apps):
+## Zeekr APK variants (0044)
 
-- **[deepal_signed_v10.apk](modded_apks/deepal_signed_v10.apk)** – Deepal S05 preset (UI 1.75x, map 1.3x, top/bottom padding 91dp, audio keepalive)
-- **[zeekr_signed_v10.apk](modded_apks/zeekr_signed_v10.apk)** – Zeekr 007 preset (UI 1.75x, map 1.3x, top 70dp, bottom 10dp, left 480dp, FGS keepalive)
+| Variant | Build script | Letterbox left | Install role |
+|---------|--------------|----------------|--------------|
+| **Margined (default)** | `build_zeekr.sh` | 480dp | zee-power-toys Install default |
+| **OS7+ no left margin** | `build_zeekr_os7.sh` | 0dp | Second Install card |
+
+Outputs land in `builds/*_signed.apk`. For publish (Maxim go): copy to
+`modded_apks/zeekr_signed_v12.apk` and `modded_apks/zeekr_signed_v12_os7_nomargin.apk`,
+then draft Release tag `ynavi-zeekr-v12` (workflow `.github/workflows/release.yml`, disabled until go).
+
+### UI vs CLI
+
+| Path | Use |
+|------|-----|
+| **Install UI** (zee-power-toys) | After public Release assets exist |
+| **CLI** | `adb install -g -r -d builds/…_signed.apk` or `uv run dev/ynavi_prep.py --apk …` until Release |
+
+See `NOTES-for-Maxim-0044.md`.
+
+
+### Legacy published builds
+
+**Ready-to-install builds** are available in the [modded_apks/](modded_apks) folder, signed with AOSP debug key (used by default Zeekr OS 6 for its system apps):
+
+- **[deepal_signed_v14.apk](modded_apks/deepal_signed_v14.apk)** – Deepal S05 preset (UI 1.75x, map 1.3x, top/bottom padding 91dp, audio keepalive)
+- **[zeekr_signed_v11.apk](modded_apks/zeekr_signed_v11.apk)** – Zeekr 007 preset (UI 1.75x, map 1.3x, top 70dp, bottom 10dp, left 480dp, FGS keepalive)
 
 Download and install via ADB or copying to Flash Drive and installing via UI:
 ```bash
-adb install -g -r -d modded_apks/deepal_signed_v10.apk
+adb install -g -r -d modded_apks/deepal_signed_v14.apk
 # or
-adb install -g -r -d modded_apks/zeekr_signed_v10.apk
+adb install -g -r -d modded_apks/zeekr_signed_v11.apk
 ```
 
 Important: the current `src/` tree was produced via apktool decompilation and then iterated on. See `WORKFLOW.md` for the decompile commands and the rebuild caveats around signature checks.
@@ -44,6 +67,8 @@ cp features/config.env.example features/config.env
 - `ZEEAPP_LETTERBOX_TOP_DIP` / `ZEEAPP_LETTERBOX_BOTTOM_DIP`
 - `ZEEAPP_LETTERBOX_LEFT_DIP`
 - `ZEEAPP_UI_SCALE_PERCENT`
+- `ZEEAPP_ENABLE_AD_BANNERS` (`1` or `0`)
+- `ZEEAPP_ENABLE_PROMO_BANNERS` (`1` or `0`)
 - `ZEEAPP_KEEPALIVE_ENABLED` (`1` or `0`)
 - `ZEEAPP_KEEPALIVE_RECEIVER_EXPORTED_DEBUG` (`1` or `0`)
 
@@ -98,7 +123,31 @@ Notes:
 - The keepalive service is started from the **launcher activity** (`MapActivity`) so it works for normal icon launches (with or without an active route).
 - Deep-link launches also start it via `LaunchActivity`.
 
+## HUD / CarApp cluster patches
+
+The `hud` branch carries additional smali patches that enable Phase0 stub-host
+binding and cluster surface rendering on the Zeekr HUD (Display 2). These
+patches bypass the host allowlist, eliminate the AA lock screen, fix SDK 31+
+crash paths, and remove the `ActionStrip` empty-list guard.
+
+See **[MINIMAP.md](MINIMAP.md)** for the full patch inventory, discovery
+timeline, and the working bind strategy.
+
+## Traffic recovery fix
+
+The accepted fix for traffic that stays stale after connectivity returns now
+lives in YNavi smali, not in Phase0. The implementation is documented in
+**[features/5.traffic_recovery.md](features/5.traffic_recovery.md)** and is
+centered on
+`src/smali_classes5/ru/yandex/yandexmaps/overlays/internal/traffic/a.smali`,
+and `src/smali_classes5/ru/yandex/yandexmaps/overlays/internal/traffic/b.smali`.
+The controller-owned network callback is part of that recovery path, but its
+exact helper file can vary in dirty local worktrees and is documented more
+carefully in the feature note.
+
 ## More docs
 
+- `MINIMAP.md` (HUD patch tracker + discoveries)
+- `features/5.traffic_recovery.md` (accepted traffic recovery fix)
 - `WORKFLOW.md` (end-to-end build + iteration)
 - `features/*.MD` (feature-specific notes)

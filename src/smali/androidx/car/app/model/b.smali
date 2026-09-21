@@ -123,28 +123,11 @@
 .end method
 
 .method public final b()Landroidx/car/app/model/ActionStrip;
-    .locals 2
-
-    iget-object v0, p0, Landroidx/car/app/model/b;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
+    .locals 1
 
     new-instance v0, Landroidx/car/app/model/ActionStrip;
 
     invoke-direct {v0, p0}, Landroidx/car/app/model/ActionStrip;-><init>(Landroidx/car/app/model/b;)V
 
     return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Action strip must contain at least one action"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

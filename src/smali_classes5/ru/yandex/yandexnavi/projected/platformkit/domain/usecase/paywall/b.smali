@@ -155,71 +155,11 @@
 .method public static a(Lru/yandex/yandexnavi/projected/platformkit/domain/usecase/paywall/b;)Lm31/d0;
     .locals 2
 
+    # Patched P9: always emit HasPlus — bypass Plus country/subscription gate
     iget-object v0, p0, Lru/yandex/yandexnavi/projected/platformkit/domain/usecase/paywall/b;->b:Lff3/m;
-
-    iget-object v1, p0, Lru/yandex/yandexnavi/projected/platformkit/domain/usecase/paywall/b;->c:Lff3/e;
-
-    check-cast v1, Lru/yandex/yandexnavi/projected/platformkit/data/repo/protect/d;
-
-    invoke-virtual {v1}, Lru/yandex/yandexnavi/projected/platformkit/data/repo/protect/d;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object p0, Lff3/h;->a:Lff3/h;
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, p0, Lru/yandex/yandexnavi/projected/platformkit/domain/usecase/paywall/b;->d:Lff3/c;
-
-    check-cast v1, Lru/yandex/yandexnavi/projected/platformkit/data/repo/protect/c;
-
-    invoke-virtual {v1}, Lru/yandex/yandexnavi/projected/platformkit/data/repo/protect/c;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    sget-object p0, Lff3/g;->a:Lff3/g;
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v1, p0, Lru/yandex/yandexnavi/projected/platformkit/domain/usecase/paywall/b;->a:Lge3/b;
-
-    check-cast v1, Lru/yandex/yandexmaps/integrations/projected/l0;
-
-    invoke-virtual {v1}, Lru/yandex/yandexmaps/integrations/projected/l0;->c()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
 
     sget-object p0, Lff3/k;->a:Lff3/k;
 
-    goto :goto_0
-
-    :cond_2
-    iget-object p0, p0, Lru/yandex/yandexnavi/projected/platformkit/domain/usecase/paywall/b;->a:Lge3/b;
-
-    check-cast p0, Lru/yandex/yandexmaps/integrations/projected/l0;
-
-    invoke-virtual {p0}, Lru/yandex/yandexmaps/integrations/projected/l0;->f()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_3
-
-    sget-object p0, Lff3/f;->a:Lff3/f;
-
-    goto :goto_0
-
-    :cond_3
-    sget-object p0, Lff3/i;->a:Lff3/i;
-
-    :goto_0
     check-cast v0, Lru/yandex/yandexnavi/projected/platformkit/data/repo/protect/e;
 
     invoke-virtual {v0, p0}, Lru/yandex/yandexnavi/projected/platformkit/data/repo/protect/e;->c(Lff3/l;)V
