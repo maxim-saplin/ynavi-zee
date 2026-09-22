@@ -2,21 +2,21 @@
 
 Adapted **Yandex Navigator** builds for Chinese Android head units (letterbox, scale, keepalive).
 
-**Get installables from [GitHub Releases](https://github.com/maxim-saplin/ynavi-zee/releases/tag/ynavi-zeekr-v12)** — three first-class variants below. Decompiled `src/` + build scripts are for rebuilding those assets; HUD/minimap patch detail lives in [MINIMAP.md](MINIMAP.md), not this landing.
+**Get installables from [GitHub Releases](https://github.com/maxim-saplin/ynavi-zee/releases/tag/ynavi-zeekr-v27.0.2)** — three first-class variants below. Decompiled `src/` + build scripts are for rebuilding those assets; HUD/minimap patch detail lives in [MINIMAP.md](MINIMAP.md), not this landing.
 
 ## Get the APKs (GitHub Releases)
 
 Adapted Yandex Navi for Chinese head units (Deepal, Zeekr, …). Installables ship on
 **GitHub Releases** only — **not** from `modded_apks/` / base APKs in git.
 
-**Release tag** (historical name; covers all cars):
-[`ynavi-zeekr-v12`](https://github.com/maxim-saplin/ynavi-zee/releases/tag/ynavi-zeekr-v12)
+**Release tag** (upstream Yandex Navi **27.0.2** product bar — not internal mod counter; covers all cars):
+[`ynavi-zeekr-v27.0.2`](https://github.com/maxim-saplin/ynavi-zee/releases/tag/ynavi-zeekr-v27.0.2)
 
 | Variant | Script | Letterbox (T/B/L) | Keepalive | Release asset |
 |---------|--------|-------------------|-----------|---------------|
-| **Deepal** | `build_deepal.sh` | 91 / 91 / 0 | audio | [`deepal_v12.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v12/deepal_v12.apk) |
-| **Zeekr padded** | `build_zeekr.sh` | (preset) / 480 left | FGS | [`zeekr_v12_margined.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v12/zeekr_v12_margined.apk) |
-| **Zeekr OS7+** | `build_zeekr_os7.sh` | (preset) / 0 left | FGS | [`zeekr_v12_os7_nomargin.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v12/zeekr_v12_os7_nomargin.apk) |
+| **Deepal** | `build_deepal.sh` | 91 / 91 / 0 | audio | [`deepal_v27.0.2.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v27.0.2/deepal_v27.0.2.apk) |
+| **Zeekr padded** | `build_zeekr.sh` | (preset) / 480 left | FGS | [`zeekr_v27.0.2_margined.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v27.0.2/zeekr_v27.0.2_margined.apk) |
+| **Zeekr OS7+** | `build_zeekr_os7.sh` | (preset) / 0 left | FGS | [`zeekr_v27.0.2_os7_nomargin.apk`](https://github.com/maxim-saplin/ynavi-zee/releases/download/ynavi-zeekr-v27.0.2/zeekr_v27.0.2_os7_nomargin.apk) |
 
 ### zee-power-toys Install vs this repo
 
@@ -26,7 +26,7 @@ Adapted Yandex Navi for Chinese head units (Deepal, Zeekr, …). Installables sh
 | **This repo / CLI** | All three variants via Release download or local `builds/` |
 
 ```bash
-adb install -g -r -d builds/deepal_v12.apk          # after local build / rename
+adb install -g -r -d builds/deepal_v27.0.2.apk          # after local build / rename
 adb install -g -r -d builds/zeekr_signed.apk        # margined
 adb install -g -r -d builds/zeekr_os7_signed.apk    # OS7+
 ```
@@ -34,19 +34,19 @@ adb install -g -r -d builds/zeekr_os7_signed.apk    # OS7+
 ### Rebuild (no APKs in git)
 
 ```bash
-./build_deepal.sh     # → builds/deepal*_signed.apk  (copy/rename → deepal_v12.apk for Release)
+./build_deepal.sh     # → builds/deepal*_signed.apk  (copy/rename → deepal_v27.0.2.apk for Release)
 ./build_zeekr.sh      # → builds/zeekr*_signed.apk   (margined, left=480)
 ./build_zeekr_os7.sh  # → builds/zeekr_os7*_signed.apk (OS7+, left=0)
 ```
 
-Upload to Release `ynavi-zeekr-v12` after a local rebuild (or Actions **release** dispatch).
+Upload to Release `ynavi-zeekr-v27.0.2` after a local rebuild (or Actions **release** dispatch).
 
 ### GitHub Actions release
 
 1. Actions → **release** → Run workflow.
-2. Input `tag` (default **`ynavi-zeekr-v12`**).
+2. Input `tag` (default **`ynavi-zeekr-v27.0.2`**).
 3. Matrix builds Deepal / Zeekr padded / Zeekr OS7 on Ubuntu (JDK 17, apktool 2.12.1, SDK build-tools, `apktool if` android-34), signs with committed `androiddebugkey.jks` (AOSP platform debug / alias `platformkey`).
-4. Uploads (clobber/update) assets: `deepal_v12.apk`, `zeekr_v12_margined.apk`, `zeekr_v12_os7_nomargin.apk`.
+4. Uploads (clobber/update) assets: `deepal_v27.0.2.apk`, `zeekr_v27.0.2_margined.apk`, `zeekr_v27.0.2_os7_nomargin.apk`.
 
 Push CI (`ci.yml` on `main`): script executables, letterbox greps, `apply_feature_config.py` compile+config load — **no** full apktool (APKs not in git).
 

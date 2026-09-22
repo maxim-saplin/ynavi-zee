@@ -27,7 +27,7 @@ jobs:
           grep -q 'ZEEAPP_LETTERBOX_LEFT_DIP=480' build_zeekr.sh
           grep -q 'ZEEAPP_LETTERBOX_TOP_DIP=91' build_deepal.sh
           grep -q 'ZEEAPP_LETTERBOX_BOTTOM_DIP=91' build_deepal.sh
-          echo "APKs are NOT in git — ship via GitHub Releases (tag ynavi-zeekr-v12)."
+          echo "APKs are NOT in git — ship via GitHub Releases (tag ynavi-zeekr-v27.0.2)."
       - name: Dry-run feature config (load + compile; no apktool)
         run: |
           set -euo pipefail

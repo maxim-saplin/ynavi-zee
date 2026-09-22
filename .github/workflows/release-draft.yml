@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - run: |
-          echo "::error::Use Actions → release (workflow_dispatch, tag default ynavi-zeekr-v12). This placeholder is retired."
+          echo "::error::Use Actions → release (workflow_dispatch, tag default ynavi-zeekr-v27.0.2). This placeholder is retired."
           exit 1

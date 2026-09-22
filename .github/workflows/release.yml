@@ -1,5 +1,5 @@
 # Build Deepal / Zeekr padded / Zeekr OS7 APKs and upload to a Release tag.
-# Default tag: ynavi-zeekr-v12. Keystore is the committed AOSP androiddebugkey.jks.
+# Default tag: ynavi-zeekr-v27.0.2 (upstream versionName). Keystore: committed AOSP androiddebugkey.jks.
 name: release
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ on:
       tag:
         description: 'Release tag to create/update'
         required: true
-        default: 'ynavi-zeekr-v12'
+        default: 'ynavi-zeekr-v27.0.2'
 
 jobs:
   build:
@@ -22,15 +22,15 @@ jobs:
           - id: deepal
             script: ./build_deepal.sh
             signed: builds/deepal_signed.apk
-            asset: deepal_v12.apk
+            asset: deepal_v27.0.2.apk
           - id: zeekr-padded
             script: ./build_zeekr.sh
             signed: builds/zeekr_signed.apk
-            asset: zeekr_v12_margined.apk
+            asset: zeekr_v27.0.2_margined.apk
           - id: zeekr-os7
             script: ./build_zeekr_os7.sh
             signed: builds/zeekr_os7_signed.apk
-            asset: zeekr_v12_os7_nomargin.apk
+            asset: zeekr_v27.0.2_os7_nomargin.apk
     steps:
       - uses: actions/checkout@v5
       - name: Set up JDK 17
