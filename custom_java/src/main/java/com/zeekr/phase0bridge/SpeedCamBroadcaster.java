@@ -307,36 +307,6 @@ public final class SpeedCamBroadcaster {
         return !hasUserNaviRoute();
     }
 
-    /**
-     * Cold Tablet: freeDriveRoute stays null forever unless Guidance.start(null)
-     * runs (0076 cancel path already does this; cold start never did — 0081 sticky).
-     * Safe only when no user route. Rate-limited by caller.
-     */
-    private static void ensureFreeDriveStarted(String reason) {
-        Object g = sNaviGuidance;
-        if (g == null) return;
-        if (hasUserNaviRoute()) return;
-        try {
-            Object fd = null;
-            try {
-                fd = callInstance(g, "freeDriveRoute", new Class<?>[0]);
-            } catch (Throwable ignored) {}
-            if (fd != null) return;
-            Class<?> routeCls = Class.forName(
-                    "com.yandex.mapkit.directions.driving.DrivingRoute");
-            callInstance(g, "start", new Class<?>[]{routeCls}, (Object) null);
-            Object after = null;
-            try {
-                after = callInstance(g, "freeDriveRoute", new Class<?>[0]);
-            } catch (Throwable ignored) {}
-            Log.i(TAG, "ensureFreeDriveStarted(" + reason + "): start(null)"
-                    + " freeDriveRoute=" + (after == null ? "null" : "ok@"
-                    + Integer.toHexString(System.identityHashCode(after))));
-        } catch (Throwable t) {
-            Log.w(TAG, "ensureFreeDriveStarted(" + reason + ") failed: "
-                    + t.getMessage());
-        }
-    }
 
     /** Labeled ghost: navikit Guidance.freeDriveRoute().getEvents() → SPEEDCAM_DATA. */
     public static void registerNaviGuidance(Object naviGuidance) {
@@ -359,8 +329,6 @@ public final class SpeedCamBroadcaster {
             sNaviGuidance = naviGuidance;
             startFreeDrivePoller();
             ensureStopGuidanceReceiver();
-            // 0081: cold Tablet never got start(null) — kick once on hook.
-            ensureFreeDriveStarted("registerNaviGuidance");
             Log.i(TAG, "registerNaviGuidance: freeDrive poller attached g="
                     + System.identityHashCode(naviGuidance));
         } catch (Throwable t) {
@@ -444,11 +412,10 @@ public final class SpeedCamBroadcaster {
                     } else {
                         Object route = callInstance(g, "freeDriveRoute", new Class<?>[0]);
                         if (route == null) {
+                            // Do NOT spam Guidance.start(null) here — yesterday's ghost
+                            // PASS armed freeDrive via MapKit+GPS motion alone; cold
+                            // start(null) spam left freeDriveRoute=null (0081).
                             Log.i(TAG, "ghostPoll: freeDriveRoute=null n=" + n[0]);
-                            // 0081 cold sticky: start(null) until MapKit fills freeDrive.
-                            if (n[0] == 0 || n[0] % 15 == 0) {
-                                ensureFreeDriveStarted("ghostPoll-n=" + n[0]);
-                            }
                         } else {
                             List<?> events = (List<?>) callInstance(route, "getEvents", new Class<?>[0]);
                             int size = events == null ? -1 : events.size();
