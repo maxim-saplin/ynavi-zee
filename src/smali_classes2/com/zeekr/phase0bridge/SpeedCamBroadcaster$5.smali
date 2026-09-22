@@ -18,7 +18,7 @@
 .method constructor <init>()V
     .registers 1
 
-    .line 693
+    .line 730
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -29,32 +29,32 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .registers 5
 
-    .line 696
+    .line 733
     const-string p1, "id"
 
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 697
+    .line 734
     const-string v0, "distance"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 698
+    .line 735
     if-nez p1, :cond_10
 
     const-string p1, "cam"
 
-    .line 699
+    .line 736
     :cond_10
     if-nez p2, :cond_14
 
     const-string p2, "?m"
 
-    .line 700
+    .line 737
     :cond_14
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -88,9 +88,9 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 701
+    .line 738
     invoke-static {p1, p2}, Lcom/zeekr/phase0bridge/SpeedCamBroadcaster;->injectCamera(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 702
+    .line 739
     return-void
 .end method
