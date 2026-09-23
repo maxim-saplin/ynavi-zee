@@ -1811,15 +1811,15 @@
     # ZEEAPP_KEEPALIVE_BEGIN
     new-instance v13, Landroid/content/Intent;
 
-    const-class v14, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;
+    const-class v5, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;
 
-    invoke-direct {v13, v6, v14}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v13, v6, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    sget v14, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v15, 0x1a
 
-    if-lt v14, v15, :cond_audio_keepalive_startService
+    if-lt v5, v15, :cond_audio_keepalive_startService
 
     invoke-virtual {v6, v13}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
