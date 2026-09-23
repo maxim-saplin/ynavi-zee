@@ -21,6 +21,58 @@ class Config:
     keepalive_receiver_exported_debug: bool
 
 
+
+def _mipmap_public_id(src_dir: str, name: str) -> str:
+    """Return hex id for mipmap/<name> from res/values/public.xml (e.g. 0x7f110002)."""
+    public = os.path.join(src_dir, "res", "values", "public.xml")
+    with open(public, encoding="utf-8") as f:
+        text = f.read()
+    m = re.search(
+        rf'<public\s+type="mipmap"\s+name="{re.escape(name)}"\s+id="(0x[0-9a-fA-F]+)"\s*/>',
+        text,
+    )
+    if not m:
+        raise RuntimeError(f"Missing mipmap/{name} in {public}")
+    return m.group(1).lower()
+
+
+def _remap_keepalive_notif_icon(src_dir: str) -> str:
+    """Point KeepAlive* setSmallIcon at this tree's mipmap/launcher_icon.
+
+    v27: 0x7f100002 · v30: 0x7f110002 (0x7f10* is menu on v30 — BadFGS NotFound).
+    """
+    icon_hex = _mipmap_public_id(src_dir, "launcher_icon")
+    patched = 0
+    for root, _dirs, files in os.walk(src_dir):
+        for fn in files:
+            if fn not in (
+                "KeepAliveService.smali",
+                "UiKeepAliveService.smali",
+                "AudioKeepAliveService.smali",
+            ):
+                continue
+            if "yandexnavi/keepalive" not in root.replace("\\", "/"):
+                continue
+            fp = os.path.join(root, fn)
+            with open(fp, encoding="utf-8") as f:
+                body = f.read()
+            new_body, n = re.subn(
+                r"(const v\d+, )0x[0-9a-fA-F]+(\s*\n\s*invoke-virtual \{[^}]+\}, "
+                r"Landroid/app/Notification\$Builder;->setSmallIcon\(I\))",
+                rf"\g<1>{icon_hex}\2",
+                body,
+            )
+            if n:
+                with open(fp, "w", encoding="utf-8") as f:
+                    f.write(new_body)
+                patched += n
+    if patched == 0:
+        raise RuntimeError(
+            f"No KeepAlive setSmallIcon consts found under {src_dir} to remap to {icon_hex}"
+        )
+    return icon_hex
+
+
 def _read_env_file(path: str) -> dict[str, str]:
     if not os.path.exists(path):
         raise FileNotFoundError(f"Config file not found: {path}")
@@ -284,6 +336,9 @@ def apply(config_path: str, repo_root: str) -> None:
     cfg = load_config(config_path)
 
     src_dir = os.path.join(repo_root, "src")
+
+    # 0) KeepAlive FGS notification icon — resolve mipmap/launcher_icon for this tree
+    keepalive_icon = _remap_keepalive_notif_icon(src_dir)
 
     # 1) Letterbox padding
     dimens = os.path.join(src_dir, "res", "values", "dimens.xml")
@@ -771,6 +826,7 @@ def apply(config_path: str, repo_root: str) -> None:
     print(f"- ZEEAPP_ENABLE_PROMO_BANNERS={'1' if cfg.promo_banners_enabled else '0'}")
     print(f"- ZEEAPP_KEEPALIVE_ENABLED={'1' if cfg.keepalive_enabled else '0'}")
     print(f"- ZEEAPP_KEEPALIVE_MODE={cfg.keepalive_mode}")
+    print(f"- ZEEAPP_KEEPALIVE_NOTIF_ICON={keepalive_icon} (mipmap/launcher_icon)")
     print(
         "- ZEEAPP_KEEPALIVE_RECEIVER_EXPORTED_DEBUG="
         f"{'1' if cfg.keepalive_receiver_exported_debug else '0'}"
