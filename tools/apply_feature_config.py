@@ -158,11 +158,14 @@ def _map_this_register(map_activity_path: str) -> str:
 
 
 def _keepalive_map_start_block(mode: str, this_reg: str) -> str:
-    """FGS/audio start block for MapActivity; scratch regs avoid this_reg and v0-v2."""
-    # Prefer high scratch regs so mid-onCreate live values (inflated view in v1, etc.) stay intact.
-    intent_r, tmp_r, flag_r = "v18", "v19", "v20"
+    """FGS/audio start block for MapActivity; scratch regs avoid this_reg + live mid-onCreate values.
+
+    Non-range invoke-* / const/4 only allow v0–v15. Prefer v9–v11 so we do not clobber:
+    v0 (DI), v1 (inflated view on v30), v2 (temp), or this_reg (v3/v6).
+    """
+    intent_r, tmp_r, flag_r = "v9", "v10", "v11"
     if this_reg in (intent_r, tmp_r, flag_r):
-        intent_r, tmp_r, flag_r = "v15", "v16", "v17"
+        intent_r, tmp_r, flag_r = "v12", "v13", "v14"
     if mode == "fgs":
         return (
             f"    new-instance {intent_r}, Landroid/content/Intent;\n"
