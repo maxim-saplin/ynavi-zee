@@ -109,6 +109,115 @@ def _replace_xml_value(file_path: str, name: str, new_value: str) -> None:
             f.write(new_content)
 
 
+
+def _find_smali(src_dir: str, *parts: str) -> str:
+    """Resolve a class under any smali_classes* (v27 Map=smali_classes2, v30 Map=smali_classes3)."""
+    rel = os.path.join(*parts)
+    matches: list[str] = []
+    for name in sorted(os.listdir(src_dir)):
+        if not name.startswith("smali"):
+            continue
+        cand = os.path.join(src_dir, name, rel)
+        if os.path.isfile(cand):
+            matches.append(cand)
+    if not matches:
+        raise FileNotFoundError(
+            f"Missing smali class under {src_dir}/smali*/{'/'.join(parts)}"
+        )
+    if len(matches) > 1:
+        # Prefer the copy that already has keepalive markers when present.
+        marked = [
+            m
+            for m in matches
+            if "# ZEEAPP_KEEPALIVE_BEGIN" in open(m, encoding="utf-8").read()
+        ]
+        if len(marked) == 1:
+            return marked[0]
+        raise RuntimeError(f"Multiple smali hits for {'/'.join(parts)}: {matches}")
+    return matches[0]
+
+
+def _map_this_register(map_activity_path: str) -> str:
+    """Pick the Activity this-pointer used in onCreate near keepalive markers.
+
+    v27 aliases p0 → v6; v30 aliases p0 → v3. Blind v6 paste breaks v30.
+    """
+    with open(map_activity_path, "r", encoding="utf-8") as f:
+        content = f.read()
+    begin = content.find("# ZEEAPP_KEEPALIVE_BEGIN")
+    if begin < 0:
+        raise RuntimeError(f"Missing keepalive markers in {map_activity_path}")
+    # Walk backward to the enclosing onCreate method head.
+    method_head = content.rfind(".method ", 0, begin)
+    window = content[method_head:begin]
+    m = re.search(r"move-object(?:/from16)?\s+(v\d+),\s*p0", window)
+    if not m:
+        # Launch-style onCreate may keep using p0 directly.
+        return "p0"
+    return m.group(1)
+
+
+def _keepalive_map_start_block(mode: str, this_reg: str) -> str:
+    """FGS/audio start block for MapActivity; scratch regs avoid this_reg and v0-v2."""
+    # Prefer high scratch regs so mid-onCreate live values (inflated view in v1, etc.) stay intact.
+    intent_r, tmp_r, flag_r = "v18", "v19", "v20"
+    if this_reg in (intent_r, tmp_r, flag_r):
+        intent_r, tmp_r, flag_r = "v15", "v16", "v17"
+    if mode == "fgs":
+        return (
+            f"    new-instance {intent_r}, Landroid/content/Intent;\n"
+            "\n"
+            f"    const-class {tmp_r}, Lru/yandex/yandexnavi/keepalive/KeepAliveService;\n"
+            "\n"
+            f"    invoke-direct {{{intent_r}, {this_reg}, {tmp_r}}}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V\n"
+            "\n"
+            f'    const-string {tmp_r}, "DELAY_WORK"\n'
+            "\n"
+            f"    const/4 {flag_r}, 0x1\n"
+            "\n"
+            f"    invoke-virtual {{{intent_r}, {tmp_r}, {flag_r}}}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;\n"
+            "\n"
+            f"    sget {tmp_r}, Landroid/os/Build$VERSION;->SDK_INT:I\n"
+            "\n"
+            f"    const/16 {flag_r}, 0x1a\n"
+            "\n"
+            f"    if-lt {tmp_r}, {flag_r}, :cond_keepalive_startService\n"
+            "\n"
+            f"    invoke-virtual {{{this_reg}, {intent_r}}}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
+            "\n"
+            "    goto :goto_keepalive_done\n"
+            "\n"
+            "    :cond_keepalive_startService\n"
+            f"    invoke-virtual {{{this_reg}, {intent_r}}}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
+            "\n"
+            "    :goto_keepalive_done\n"
+        )
+    if mode == "audio":
+        return (
+            f"    new-instance {intent_r}, Landroid/content/Intent;\n"
+            "\n"
+            f"    const-class {tmp_r}, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;\n"
+            "\n"
+            f"    invoke-direct {{{intent_r}, {this_reg}, {tmp_r}}}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V\n"
+            "\n"
+            f"    sget {tmp_r}, Landroid/os/Build$VERSION;->SDK_INT:I\n"
+            "\n"
+            f"    const/16 {flag_r}, 0x1a\n"
+            "\n"
+            f"    if-lt {tmp_r}, {flag_r}, :cond_audio_keepalive_startService\n"
+            "\n"
+            f"    invoke-virtual {{{this_reg}, {intent_r}}}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
+            "\n"
+            "    goto :goto_audio_keepalive_done\n"
+            "\n"
+            "    :cond_audio_keepalive_startService\n"
+            f"    invoke-virtual {{{this_reg}, {intent_r}}}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
+            "\n"
+            "    :goto_audio_keepalive_done\n"
+        )
+    return ""
+
+
 def _set_marked_block_contents(file_path: str, begin: str, end: str, inner: str) -> None:
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
@@ -261,7 +370,7 @@ def apply(config_path: str, repo_root: str) -> None:
         keepalive_manifest_block,
     )
 
-    launch = os.path.join(src_dir, "smali_classes14", "ru", "yandex", "yandexmaps", "launch", "LaunchActivity.smali")
+    launch = _find_smali(src_dir, "ru", "yandex", "yandexmaps", "launch", "LaunchActivity.smali")
     keepalive_launch_block = ""
     if enable_fgs:
         keepalive_launch_block = (
@@ -323,60 +432,13 @@ def apply(config_path: str, repo_root: str) -> None:
         keepalive_launch_block,
     )
 
-    map_activity = os.path.join(src_dir, "smali_classes2", "ru", "yandex", "yandexmaps", "app", "MapActivity.smali")
+    map_activity = _find_smali(src_dir, "ru", "yandex", "yandexmaps", "app", "MapActivity.smali")
+    this_reg = _map_this_register(map_activity)
     keepalive_map_block = ""
     if enable_fgs:
-        keepalive_map_block = (
-            "    new-instance v1, Landroid/content/Intent;\n"
-            "\n"
-            "    const-class v2, Lru/yandex/yandexnavi/keepalive/KeepAliveService;\n"
-            "\n"
-            "    invoke-direct {v1, v6, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V\n"
-            "\n"
-            "    const-string v2, \"DELAY_WORK\"\n"
-            "\n"
-            "    const/4 v3, 0x1\n"
-            "\n"
-            "    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;\n"
-            "\n"
-            "    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I\n"
-            "\n"
-            "    const/16 v3, 0x1a\n"
-            "\n"
-            "    if-lt v2, v3, :cond_keepalive_startService\n"
-            "\n"
-            "    invoke-virtual {v6, v1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
-            "\n"
-            "    goto :goto_keepalive_done\n"
-            "\n"
-            "    :cond_keepalive_startService\n"
-            "    invoke-virtual {v6, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
-            "\n"
-            "    :goto_keepalive_done\n"
-        )
+        keepalive_map_block = _keepalive_map_start_block("fgs", this_reg)
     elif enable_audio:
-        keepalive_map_block = (
-            "    new-instance v1, Landroid/content/Intent;\n"
-            "\n"
-            "    const-class v2, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;\n"
-            "\n"
-            "    invoke-direct {v1, v6, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V\n"
-            "\n"
-            "    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I\n"
-            "\n"
-            "    const/16 v3, 0x1a\n"
-            "\n"
-            "    if-lt v2, v3, :cond_audio_keepalive_startService\n"
-            "\n"
-            "    invoke-virtual {v6, v1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
-            "\n"
-            "    goto :goto_audio_keepalive_done\n"
-            "\n"
-            "    :cond_audio_keepalive_startService\n"
-            "    invoke-virtual {v6, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;\n"
-            "\n"
-            "    :goto_audio_keepalive_done\n"
-        )
+        keepalive_map_block = _keepalive_map_start_block("audio", this_reg)
 
     _set_marked_block_contents(
         map_activity,
