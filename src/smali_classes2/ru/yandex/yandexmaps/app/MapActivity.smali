@@ -1809,24 +1809,24 @@
     invoke-super/range {p0 .. p1}, Landroidx/fragment/app/FragmentActivity;->onCreate(Landroid/os/Bundle;)V
 
     # ZEEAPP_KEEPALIVE_BEGIN
-    new-instance v9, Landroid/content/Intent;
+    new-instance v13, Landroid/content/Intent;
 
-    const-class v10, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;
+    const-class v14, Lru/yandex/yandexnavi/keepalive/AudioKeepAliveService;
 
-    invoke-direct {v9, v6, v10}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v13, v6, v14}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    sget v10, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget v14, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v11, 0x1a
+    const/16 v15, 0x1a
 
-    if-lt v10, v11, :cond_audio_keepalive_startService
+    if-lt v14, v15, :cond_audio_keepalive_startService
 
-    invoke-virtual {v6, v9}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {v6, v13}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     goto :goto_audio_keepalive_done
 
     :cond_audio_keepalive_startService
-    invoke-virtual {v6, v9}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {v6, v13}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     :goto_audio_keepalive_done
     # ZEEAPP_KEEPALIVE_END

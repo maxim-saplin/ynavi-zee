@@ -163,9 +163,11 @@ def _keepalive_map_start_block(mode: str, this_reg: str) -> str:
     Non-range invoke-* / const/4 only allow v0–v15. Prefer v9–v11 so we do not clobber:
     v0 (DI), v1 (inflated view on v30), v2 (temp), or this_reg (v3/v6).
     """
-    intent_r, tmp_r, flag_r = "v9", "v10", "v11"
+    # Avoid v0-v1 and v11-v12: onCreate uses move-result-wide there (VerifyError
+    # "Imprecise Constant vs Long" on Live remaster tip 9be93c7). Prefer v13-v15.
+    intent_r, tmp_r, flag_r = "v13", "v14", "v15"
     if this_reg in (intent_r, tmp_r, flag_r):
-        intent_r, tmp_r, flag_r = "v12", "v13", "v14"
+        intent_r, tmp_r, flag_r = "v4", "v5", "v7"
     if mode == "fgs":
         return (
             f"    new-instance {intent_r}, Landroid/content/Intent;\n"
