@@ -90,6 +90,25 @@ letterbox-only patches are not sufficient. The accepted v30 asset has the
 **Soft / non-blocking:** Deepal / OS7 recut later; full 0097 matrix remains
 with @zee-qa. The hard Zee scale DoD is accepted on this asset.
 
+## ACCEPT (PDM 2026-09-28) — enrich + guidance re-ACCEPT
+
+The scale-LIVE tip was re-checked for cam enrichment and usable guidance
+chrome under the same dens320 / Override 160 SoT. This closes the 0122 enrich
+gate without a code or Live Toys bump.
+
+| Stamp | Value |
+|-------|-------|
+| ynavi tip | `45fada46` |
+| Release asset sha256 | `a000a77f158fcccb87e0c12c1001b0f93f99366341ba9be2fc11daf8509b0e8e` |
+| Evidence | `tmp/qa/0122-enrich-cut-45fada46/` (toys repo) |
+| HOST_SOT | Phys **2560×1600@320** · Override dens **160** · overlay **1024×576@213** |
+| Met | ZeeUiScale LIVE **L=840** / chrome **84 px**; CRT Alien **0.20+60**; F1 lane mute **OFF→ON→OFF**; A2 SPEED enrich; clustering **12/12 + B1 dedupe**; SpeedCamBridge **ghost+route**; guidance rails **84 px** |
+| Live Toys | **1.1.0+27** (hold; no bump) |
+
+**Soft / non-blocking:** Deepal / OS7 later; full-matrix leftovers SKIP;
+navigation shields were not driven. The accepted gate is the Zee scale-LIVE
+enrich and guidance-chrome cut above; no new feature is implied.
+
 ## Soft / still open
 
 - Full 0097 matrix re-cut on new asset (@zee-qa T2)
