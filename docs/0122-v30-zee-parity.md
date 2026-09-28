@@ -67,10 +67,33 @@ gh release upload ynavi-zeekr-v30 \
 | Runtime | cold MapActivity `map_activity_root` **L=840 T=123** (was L=480 T=70) |
 | Asset sha256 | `a000a77f158fcccb87e0c12c1001b0f93f99366341ba9be2fc11daf8509b0e8e` |
 
+## ACCEPT (PDM 2026-09-28) — scale re-ACCEPT
+
+The prior 0122 ACCEPT on ynavi tip `e9fbe330` / asset
+`a1a902270252fb9ec4982e6f3214b7476ea0f3ed9f666be95ba53fae9bcf2348` is
+**soft-rescinded for ZeeUiScale**. It was letterbox/minimap-green but shipped
+baked 175/130 resources without live `wrapBaseContext` callers after R8.
+
+| Stamp | Value |
+|-------|-------|
+| ynavi tip | `45fada46` |
+| Release asset sha256 | `a000a77f158fcccb87e0c12c1001b0f93f99366341ba9be2fc11daf8509b0e8e` |
+| Evidence | `tmp/qa/0122-scale-cut-45fada46/` |
+| DoD | **ZeeUiScale LIVE** — `map_root` **L=840 T=123**; chrome **H=84 px** (=48×1.75) |
+| Live Toys | **1.1.0+27** (no bump) |
+
+**Governing:** `wrapBaseContext` is required; baked scaling XML or
+letterbox-only patches are not sufficient. The accepted v30 asset has the
+`v63` reflection hook, Application `q` direct hook, and MapActivity
+`applyToConfiguration` before `super`.
+
+**Soft / non-blocking:** Deepal / OS7 recut later; full 0097 matrix remains
+with @zee-qa. The hard Zee scale DoD is accepted on this asset.
+
 ## Soft / still open
 
 - Full 0097 matrix re-cut on new asset (@zee-qa T2)
-- Deepal / OS7 Release recut from same hooked tree (hooks shared; letterbox preset differs)
+- Deepal / OS7 Release recut later (hooks shared; letterbox preset differs; non-blocking)
 - P9 paywall port not re-verified this tip
 - Guidance offset (G1) known debt — compare only, not HOLD unless worse than v27
 - Live Toys hold **1.1.0+27** (no Live bump)
