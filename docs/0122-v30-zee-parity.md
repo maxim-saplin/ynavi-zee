@@ -162,7 +162,7 @@ onto `tmp/v30/src/res/drawable/abc_switch_thumb_material.xml` before rebuild.
 
 | Stamp | Value |
 |-------|-------|
-| ynavi tip | `a35688560` |
+| ynavi tip | `b769850f9` |
 | APK | `tmp/v30/builds/ynavi_30.8.1_zeekr_arm64_0122b_signed.apk` |
 | sha256 | `841dac8a892db163329730c7e6a24ff69cc615b5e05b2c2760c7dfcf5fbc9be0` |
 | version | **30.8.1** / vc **739652660** (unchanged) |
