@@ -134,3 +134,39 @@ in this seal. No green inheritance from rescinded asset `a1a90227`.
 - P9 paywall port not re-verified this tip
 - Guidance offset (G1) known debt — compare only, not HOLD unless worse than v27
 - Live Toys hold **1.1.0+27** (no Live bump)
+
+## Tip B (2026-09-29) — Settings SwitchCompat InflateException
+
+**Symptom:** Opening Settings FATAL `InflateException` / `GeneralItemView` /
+`SwitchCompat` / `abc_switch_thumb_material` (`#0x7f080233`) with
+`XmlPullParserException: <item> tag requires a 'drawable' attribute`.
+
+**Root cause (refined vs RCA §B):** In `tmp/v30`, `res/drawable/abc_switch_thumb_material.xml`
+was a `StateListDrawable` whose items used **`android:drawable="@null"`** (stock
+v30 split APK stripped the `abc_btn_switch_to_on_mtrl_*` nine-patches; apktool
+decoded the broken refs as `@null`). Inflating the selector yields drawable id 0
+→ the classic AppCompat wording. ZeeUiScale dens (~280) / `uiMode=car` is the
+live Configuration when Settings opens, but the selector is tip-wide broken
+(dens320 T2 bank also FAIL — `tmp/qa/0122-abc-t2-repro/`).
+
+**Fix:** Replace the `@null` selector with a density-independent oval `<shape>`
+(same resource name / public id `0x7f080233`). SwitchCompat still tints via
+`colorSwitchThumbNormal` / `colorControlActivated`. Track was already `@null` in
+`Base.Widget.AppCompat.CompoundButton.Switch` — left unchanged. No ZeeUiScale
+global change.
+
+**SoT (tracked):** `features/patches/0122b-abc_switch_thumb_material.xml` → copy
+onto `tmp/v30/src/res/drawable/abc_switch_thumb_material.xml` before rebuild.
+
+**Rebuild:** same Mac path as scale tip (apktool 2.12.1 → zipalign → apksigner).
+
+| Stamp | Value |
+|-------|-------|
+| ynavi tip | `a35688560` |
+| APK | `tmp/v30/builds/ynavi_30.8.1_zeekr_arm64_0122b_signed.apk` |
+| sha256 | `841dac8a892db163329730c7e6a24ff69cc615b5e05b2c2760c7dfcf5fbc9be0` |
+| version | **30.8.1** / vc **739652660** (unchanged) |
+| Live Toys | **no bump** |
+| Prove | dens320 (or DHU dens160) open Settings — must **not** FATAL on `abc_switch_thumb_material` |
+
+**Not this tip:** A (HUD surface callback) · C (top pad / paddings inset).

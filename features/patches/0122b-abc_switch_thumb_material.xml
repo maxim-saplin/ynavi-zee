@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 0122B: v30 stock selector used @null (nine-patches stripped from split APK).
+     Shape resolves under any dens / ZeeUiScale / uiMode=car — no density bucket needed. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <size android:width="28.0dip" android:height="28.0dip" />
+    <solid android:color="#ffffffff" />
+</shape>
