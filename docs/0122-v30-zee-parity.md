@@ -52,11 +52,16 @@ java -jar tools/apktool-2.12.1/apktool.jar b tmp/v30/src -o tmp/v30/builds/v30_s
   --out tmp/v30/builds/ynavi_30.8.1_zeekr_arm64_scale_signed.apk \
   --v1-signing-enabled false --v2-signing-enabled true --v3-signing-enabled false \
   tmp/v30/builds/v30_scale_aligned.apk
+mkdir -p tmp/v30/release
+cp tmp/v30/builds/ynavi_30.8.1_zeekr_arm64_0122a_signed.apk \
+  tmp/v30/release/ynavi_30.8.1_zeekr_arm64_signed.apk
+shasum -a 256 tmp/v30/release/ynavi_30.8.1_zeekr_arm64_signed.apk
 gh release upload ynavi-zeekr-v30 \
-  tmp/v30/builds/ynavi_30.8.1_zeekr_arm64_scale_signed.apk \
-  --clobber -R maxim-saplin/ynavi-zee \
-  --name ynavi_30.8.1_zeekr_arm64_signed.apk
+  tmp/v30/release/ynavi_30.8.1_zeekr_arm64_signed.apk \
+  --clobber -R maxim-saplin/ynavi-zee
 ```
+
+Use the accepted signed artifact for the current tip as the `cp` source. `gh release upload` uses the local basename; it has no `--name` option.
 
 ## Scale own-check (2026-09-28 Europe/Minsk)
 
@@ -201,4 +206,19 @@ old epoch from pausing the freshly resumed session.
 | Prove | dens320 overlay displayId=2: `IAppHost.setSurfaceCallback callback=true` → `onSurfaceAvailable SUCCESS`; native overlay shows live map tiles |
 | ACCEPT soft | dens320 callback+tiles **PASS** (PDM/QA FOURPOINT soft) — evidence `tmp/qa/0122a-minimap-prove/` |
 
-**Not this tip:** C (top pad / paddings inset) · release upload.
+**Not this tip:** C (top pad / paddings inset).
+
+## Published (2026-09-29) — v30 Zee asset update
+
+Replaced the existing prerelease asset on `ynavi-zeekr-v30` with the accepted
+0122A build. This updates the asset in place; it does not create a new tag or
+bump the upstream Android version.
+
+| Field | Value |
+|-------|-------|
+| Asset | `ynavi_30.8.1_zeekr_arm64_signed.apk` |
+| SHA-256 | `864bc52fe8adb30504fa49f61a24c67b2d43ef7beeced015ffbd788b7bba3672` |
+| YNavi A tip | `4b3bab9df6e956f3fe74867d31f53d0948ecf835` |
+| Settings fix included | `b769850f9` (`abc_switch_thumb_material` shape) |
+| Version | `30.8.1` / `739652660` (unchanged) |
+| T2 evidence | `0122a-minimap-prove` and `0122b-settings-prove` in zee-power-toys |
