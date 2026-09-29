@@ -190,10 +190,15 @@ old epoch from pausing the freshly resumed session.
 
 | Stamp | Value |
 |-------|-------|
+| ynavi tip | `4b3bab9df6e956f3fe74867d31f53d0948ecf835` |
 | APK | `tmp/v30/builds/ynavi_30.8.1_zeekr_arm64_0122a_signed.apk` |
 | sha256 | `864bc52fe8adb30504fa49f61a24c67b2d43ef7beeced015ffbd788b7bba3672` |
 | version | **30.8.1** / vc **739652660** (unchanged) |
+| Toys code tip | `757db4de13c87cf73a067a253e9ffc5311bc7f82` |
+| Toys docs tip | `6e329fd07d973f29145d7f236ac9824a6042a7af` |
+| Toys debug APK sha256 | `a4e426bc995fc2dcefae3da96d1d430cf136cb8fd51c4164eb57399f34018611` |
 | Live Toys | **no bump** (debug prove build only) |
 | Prove | dens320 overlay displayId=2: `IAppHost.setSurfaceCallback callback=true` → `onSurfaceAvailable SUCCESS`; native overlay shows live map tiles |
+| ACCEPT soft | dens320 callback+tiles **PASS** (PDM/QA FOURPOINT soft) — evidence `tmp/qa/0122a-minimap-prove/` |
 
 **Not this tip:** C (top pad / paddings inset) · release upload.
