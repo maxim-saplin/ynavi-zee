@@ -170,3 +170,30 @@ onto `tmp/v30/src/res/drawable/abc_switch_thumb_material.xml` before rebuild.
 | Prove | dens320 (or DHU dens160) open Settings — must **not** FATAL on `abc_switch_thumb_material` |
 
 **Not this tip:** A (HUD surface callback) · C (top pad / paddings inset).
+
+## Tip A (2026-09-29) — HUD minimap surface callback + tiles
+
+**Symptom / named root cause:** YNavi v30 did not register
+`IAppHost.setSurfaceCallback` for the host session, so Toys never received
+`onSurfaceAvailable` and `MinimapView` stayed empty. Handshake SUCCESS and an
+initial `MessageTemplate` are secondary-only signals, not tile proof.
+
+**Fix:** Port v27 P9 to the v30 obfuscated paywall use case
+`smali_classes9/srn0.d()`: always emit `HasPlus` (`jmr0.a`) into `wmr0`.
+Stock v30 could emit `NotAvailable` and push `PLUS_COUNTRY_UNAVAILABLE`, which
+never creates the cluster Screen and therefore never calls
+`setSurfaceCallback`. SoT: `features/patches/0122a-srn0-p9-hasplus.smali`.
+
+**Host companion:** Toys also skips no-op `minimapScale` cold rebinds and
+abandons superseded teardown before `onAppPause` / `onAppStop`, preventing the
+old epoch from pausing the freshly resumed session.
+
+| Stamp | Value |
+|-------|-------|
+| APK | `tmp/v30/builds/ynavi_30.8.1_zeekr_arm64_0122a_signed.apk` |
+| sha256 | `864bc52fe8adb30504fa49f61a24c67b2d43ef7beeced015ffbd788b7bba3672` |
+| version | **30.8.1** / vc **739652660** (unchanged) |
+| Live Toys | **no bump** (debug prove build only) |
+| Prove | dens320 overlay displayId=2: `IAppHost.setSurfaceCallback callback=true` → `onSurfaceAvailable SUCCESS`; native overlay shows live map tiles |
+
+**Not this tip:** C (top pad / paddings inset) · release upload.
