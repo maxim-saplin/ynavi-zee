@@ -9,8 +9,7 @@ Adapted **Yandex Navigator** builds for Chinese Android head units (letterbox, s
 Adapted Yandex Navi for Chinese head units (Deepal, Zeekr, …). Installables ship on
 **GitHub Releases** only — **not** from `modded_apks/` / base APKs in git.
 
-**Release tag** (upstream Yandex Navi **27.0.2** product bar — not internal mod counter; covers all cars):
-[`ynavi-zeekr-v27.0.2`](https://github.com/maxim-saplin/ynavi-zee/releases/tag/ynavi-zeekr-v27.0.2)
+**Latest stable** (legacy baseline tag — unnumbered): [`ynavi-zeekr-v27.0.2`](https://github.com/maxim-saplin/ynavi-zee/releases/tag/ynavi-zeekr-v27.0.2). **New mod builds** use incremented tags and APK identity `27.0.2+N` — see [docs/0126-release-versioning.md](docs/0126-release-versioning.md).
 
 | Variant | Script | Letterbox (T/B/L) | Keepalive | Release asset |
 |---------|--------|-------------------|-----------|---------------|
@@ -39,14 +38,14 @@ adb install -g -r -d builds/zeekr_os7_signed.apk    # OS7+
 ./build_zeekr_os7.sh  # → builds/zeekr_os7*_signed.apk (OS7+, left=0)
 ```
 
-Upload to Release `ynavi-zeekr-v27.0.2` after a local rebuild (or Actions **release** dispatch).
+Publish a **numbered** release by pushing tag `ynavi-zeekr-v27.0.2+1` (or the next `+N`). CI stamps `versionName` / `versionCode`, builds all variants, attaches `ynavi-release-manifest.json`, and creates an **immutable** GitHub Release (no asset overwrite).
 
 ### GitHub Actions release
 
-1. Actions → **release** → Run workflow.
-2. Input `tag` (default **`ynavi-zeekr-v27.0.2`**).
-3. Matrix builds Deepal / Zeekr padded / Zeekr OS7 on Ubuntu (JDK 17, apktool 2.12.1, SDK build-tools, `apktool if` android-34), signs with committed `androiddebugkey.jks` (AOSP platform debug / alias `platformkey`).
-4. Uploads (clobber/update) assets: `deepal_v27.0.2.apk`, `zeekr_v27.0.2_margined.apk`, `zeekr_v27.0.2_os7_nomargin.apk`.
+1. Commit reproducible source (`src/` for v27).
+2. Push tag `ynavi-zeekr-v<upstream>+<mod_build>` (example: **`ynavi-zeekr-v27.0.2+1`**).
+3. Workflow **release** builds Deepal / Zeekr padded / Zeekr OS7, validates APK metadata against the tag, and uploads assets plus [manifest schema](release/manifest.schema.json).
+4. Dry-run locally: `python3 tools/ynavi_release.py example-manifest --tag ynavi-zeekr-v27.0.2+1`. Optional Actions dispatch: **release** → `validate_only=true`.
 
 Push CI (`ci.yml` on `main`): script executables, letterbox greps, `apply_feature_config.py` compile+config load — **no** full apktool (APKs not in git).
 

@@ -1,0 +1,38 @@
+# Canonical YNavi upstream lines for tag-triggered releases (Block 0126).
+# versionCode at publish time = base_version_code + mod_build (see docs/0126-release-versioning.md).
+
+lines:
+  "27.0.2":
+    channel: stable
+    upstream_version: "27.0.2"
+    base_version_code: 738798690
+    src_dir: src
+    github_prerelease: false
+    make_latest: true
+    variants:
+      - id: deepal
+        script: ./build_deepal.sh
+        signed: builds/deepal_signed.apk
+        asset_template: "deepal_v{version_name}.apk"
+      - id: zeekr-padded
+        script: ./build_zeekr.sh
+        signed: builds/zeekr_signed.apk
+        asset_template: "zeekr_v{version_name}_margined.apk"
+      - id: zeekr-os7
+        script: ./build_zeekr_os7.sh
+        signed: builds/zeekr_os7_signed.apk
+        asset_template: "zeekr_v{version_name}_os7_nomargin.apk"
+
+  "30.8.1":
+    channel: beta
+    upstream_version: "30.8.1"
+    base_version_code: 739652660
+    # Versioned v30 apktool tree (not ignored tmp/v30). Commit when beta CI should ship.
+    src_dir: release/v30/src
+    github_prerelease: true
+    make_latest: false
+    variants:
+      - id: zeekr
+        script: ./release/v30/build_zeekr.sh
+        signed: builds/zeekr_signed.apk
+        asset_template: "ynavi_v{version_name}_zeekr_arm64_signed.apk"

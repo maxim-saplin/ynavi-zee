@@ -1,51 +1,110 @@
-# Build Deepal / Zeekr padded / Zeekr OS7 APKs and upload to a Release tag.
-# Default tag: ynavi-zeekr-v27.0.2 (upstream versionName). Keystore: committed AOSP androiddebugkey.jks.
+# Tag-triggered YNavi releases (Block 0126). Push ynavi-zeekr-v<upstream>+<mod_build>.
+# Immutable: never overwrite an existing release or assets. Keystore: androiddebugkey.jks.
 name: release
 on:
+  push:
+    tags:
+      - "ynavi-zeekr-v*+*"
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Release tag to create/update'
+        description: "Release tag (ynavi-zeekr-v27.0.2+1)"
         required: true
-        default: 'ynavi-zeekr-v27.0.2'
+      validate_only:
+        description: "Parse tag + example manifest only (no build/publish)"
+        type: boolean
+        default: true
 
 jobs:
-  build:
+  resolve:
     runs-on: ubuntu-24.04
-    permissions:
-      contents: write
+    outputs:
+      tag: ${{ steps.meta.outputs.tag }}
+      upstream: ${{ steps.meta.outputs.upstream }}
+      mod_build: ${{ steps.meta.outputs.mod_build }}
+      version_name: ${{ steps.meta.outputs.version_name }}
+      version_code: ${{ steps.meta.outputs.version_code }}
+      channel: ${{ steps.meta.outputs.channel }}
+      src_dir: ${{ steps.meta.outputs.src_dir }}
+      prerelease: ${{ steps.meta.outputs.prerelease }}
+      make_latest: ${{ steps.meta.outputs.make_latest }}
+      matrix: ${{ steps.meta.outputs.matrix }}
+      validate_only: ${{ steps.mode.outputs.validate_only }}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Resolve release mode
+        id: mode
+        run: |
+          set -euo pipefail
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "validate_only=${{ inputs.validate_only }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "validate_only=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Install PyYAML
+        run: pip install --quiet pyyaml
+      - name: Parse tag and build matrix
+        id: meta
+        run: |
+          set -euo pipefail
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            TAG="${GITHUB_REF#refs/tags/}"
+          else
+            TAG="${{ inputs.tag }}"
+          fi
+          python3 tools/ynavi_release.py check-ordering
+          python3 tools/ynavi_release.py ci-resolve "$TAG" --github-output "$GITHUB_OUTPUT"
+      - name: Fail if release already exists (publish mode)
+        if: steps.mode.outputs.validate_only == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TAG="${{ steps.meta.outputs.tag }}"
+          code="$(gh api -H "Accept: application/vnd.github+json" \
+            "/repos/${{ github.repository }}/releases/tags/${TAG}" -i 2>&1 | head -1 | awk '{print $2}')"
+          if [[ "$code" == "200" ]]; then
+            echo "::error::Release ${TAG} already exists — tags are immutable; bump +N."
+            exit 1
+          fi
+          if [[ "$code" != "404" ]]; then
+            echo "::error::Unexpected GitHub API status ${code} for tag ${TAG}"
+            exit 1
+          fi
+          echo "Tag ${TAG} is free to publish."
+
+  validate-only:
+    needs: resolve
+    if: needs.resolve.outputs.validate_only == 'true'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - run: pip install --quiet pyyaml
+      - name: Example manifest (dry-run)
+        run: |
+          python3 tools/ynavi_release.py example-manifest --tag "${{ needs.resolve.outputs.tag }}"
+
+  build:
+    needs: resolve
+    if: needs.resolve.outputs.validate_only == 'false'
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
-      # Each matrix job gets a fresh checkout — safe despite in-place src/ mutation.
       matrix:
-        include:
-          - id: deepal
-            script: ./build_deepal.sh
-            signed: builds/deepal_signed.apk
-            asset: deepal_v27.0.2.apk
-          - id: zeekr-padded
-            script: ./build_zeekr.sh
-            signed: builds/zeekr_signed.apk
-            asset: zeekr_v27.0.2_margined.apk
-          - id: zeekr-os7
-            script: ./build_zeekr_os7.sh
-            signed: builds/zeekr_os7_signed.apk
-            asset: zeekr_v27.0.2_os7_nomargin.apk
+        include: ${{ fromJson(needs.resolve.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v5
       - name: Set up JDK 17
         uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: '17'
+          java-version: "17"
       - name: Set up Android SDK (framework + build-tools)
         uses: android-actions/setup-android@v4
       - name: Install platforms / build-tools
         run: |
           set -euo pipefail
           sdkmanager --install "platforms;android-34" "build-tools;34.0.0"
-          # Prefer SDK zipalign on Linux (vendored macOS binary is unusable here).
-          # build_apk.sh already uses linux/zipalign when uname=Linux; keep SDK on PATH as backup.
           echo "$ANDROID_HOME/build-tools/34.0.0" >> "$GITHUB_PATH"
       - name: Install apktool 2.12.1
         run: |
@@ -67,27 +126,72 @@ jobs:
         run: |
           set -euo pipefail
           test -x linux/zipalign
-          test -x linux/zipalign.bin
           test -x linux/apksigner
           test -f androiddebugkey.jks
-          linux/zipalign 2>&1 | head -3 || true
+      - run: pip install --quiet pyyaml
+      - name: Stamp APK version metadata
+        run: |
+          python3 tools/ynavi_release.py stamp-apktool "${{ needs.resolve.outputs.tag }}" \
+            --src-dir "${{ needs.resolve.outputs.src_dir }}"
       - name: Build ${{ matrix.id }}
         run: |
           set -euo pipefail
-          chmod +x build_apk.sh build_deepal.sh build_zeekr.sh build_zeekr_os7.sh
+          chmod +x build_apk.sh build_deepal.sh build_zeekr.sh build_zeekr_os7.sh release/v30/build_zeekr.sh 2>/dev/null || true
+          chmod +x "${{ matrix.script }}"
           ${{ matrix.script }}
           test -f "${{ matrix.signed }}"
           mkdir -p dist
           cp "${{ matrix.signed }}" "dist/${{ matrix.asset }}"
+      - name: Verify APK metadata matches tag
+        run: |
+          set -euo pipefail
+          OUT="$(aapt dump badging "dist/${{ matrix.asset }}")"
+          echo "$OUT" | grep -F "versionName='${{ needs.resolve.outputs.version_name }}'"
+          echo "$OUT" | grep -F "versionCode='${{ needs.resolve.outputs.version_code }}'"
+      - name: Upload variant artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: apk-${{ matrix.id }}
+          path: dist/${{ matrix.asset }}
+
+  publish:
+    needs: [resolve, build]
+    if: needs.resolve.outputs.validate_only == 'false'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+      - run: pip install --quiet pyyaml
+      - name: Download APK artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          pattern: apk-*
+          merge-multiple: true
+      - name: Assemble dist + manifest
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          shopt -s nullglob
+          for f in artifacts/* artifacts/**/*.apk; do
+            [[ -f "$f" ]] || continue
+            cp "$f" "dist/$(basename "$f")"
+          done
           ls -la dist/
-      - name: Upload Release asset (${{ matrix.asset }})
+          python3 tools/ynavi_release.py write-manifest "${{ needs.resolve.outputs.tag }}" \
+            --dist dist \
+            --git-commit "${{ github.sha }}"
+      - name: Create immutable GitHub Release
         uses: softprops/action-gh-release@v3
         with:
-          tag_name: ${{ inputs.tag }}
-          name: ${{ inputs.tag }}
-          files: dist/${{ matrix.asset }}
+          tag_name: ${{ needs.resolve.outputs.tag }}
+          name: ${{ needs.resolve.outputs.tag }}
+          prerelease: ${{ needs.resolve.outputs.prerelease == 'true' }}
+          make_latest: ${{ needs.resolve.outputs.make_latest == 'true' }}
+          files: |
+            dist/*
           fail_on_unmatched_files: true
-          overwrite_files: true
-          make_latest: true
+          overwrite_files: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
