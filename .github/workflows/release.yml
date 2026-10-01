@@ -5,7 +5,7 @@ name: release
 on:
   push:
     tags:
-      - 'ynavi-zeekr-v*+*'
+      - 'ynavi-zeekr-v*'
   workflow_dispatch:
     inputs:
       tag:
@@ -14,6 +14,7 @@ on:
 
 jobs:
   publish:
+    if: github.event_name == 'workflow_dispatch' || contains(github.ref, '+')
     runs-on: ubuntu-24.04
     permissions:
       contents: write
