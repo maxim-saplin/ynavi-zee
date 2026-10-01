@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/maxim-saplin/ynavi-zee/releases/ynavi-release-manifest.schema.json",
+  "title": "YNavi release manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "channel",
+    "lineId",
+    "upstreamVersionName",
+    "modBuild",
+    "versionName",
+    "versionCode",
+    "tag",
+    "repo",
+    "gitCommit",
+    "assets"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "channel": { "type": "string", "enum": ["stable", "beta"] },
+    "lineId": { "type": "string", "enum": ["v27", "v30"] },
+    "upstreamVersionName": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "modBuild": { "type": "integer", "minimum": 1 },
+    "versionName": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+\\+\\d+$" },
+    "versionCode": { "type": "integer", "minimum": 1 },
+    "tag": { "type": "string", "minLength": 1 },
+    "repo": { "type": "string", "minLength": 1 },
+    "gitCommit": { "type": "string", "minLength": 7 },
+    "prerelease": { "type": "boolean" },
+    "assets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["variant", "filename", "sha256", "versionName", "versionCode"],
+        "properties": {
+          "variant": { "type": "string", "minLength": 1 },
+          "filename": { "type": "string", "pattern": "\\.apk$" },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "versionName": { "type": "string" },
+          "versionCode": { "type": "integer" }
+        }
+      }
+    }
+  }
+}

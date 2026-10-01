@@ -20,3 +20,4 @@ custom_java/out/
 
 tools/baksmali.jar
 custom_java/out/
+__pycache__/

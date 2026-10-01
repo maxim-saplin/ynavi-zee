@@ -1,52 +1,90 @@
-# Build Deepal / Zeekr padded / Zeekr OS7 APKs and upload to a Release tag.
-# Default tag: ynavi-zeekr-v27.0.2 (upstream versionName). Keystore: committed AOSP androiddebugkey.jks.
+# Tag-triggered immutable YNavi releases (Block 0126).
+# Push tag ynavi-zeekr-v<upstream>+<modBuild> (e.g. ynavi-zeekr-v27.0.2+1).
+# Legacy unnumbered tags (ynavi-zeekr-v27.0.2, ynavi-zeekr-v30) are migration baselines — do not republish via this workflow.
 name: release
 on:
+  push:
+    tags:
+      - 'ynavi-zeekr-v*+*'
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Release tag to create/update'
+        description: 'Numbered release tag (ynavi-zeekr-v27.0.2+1 or ynavi-zeekr-v30.8.1+1)'
         required: true
-        default: 'ynavi-zeekr-v27.0.2'
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-24.04
     permissions:
       contents: write
-    strategy:
-      fail-fast: false
-      # Each matrix job gets a fresh checkout — safe despite in-place src/ mutation.
-      matrix:
-        include:
-          - id: deepal
-            script: ./build_deepal.sh
-            signed: builds/deepal_signed.apk
-            asset: deepal_v27.0.2.apk
-          - id: zeekr-padded
-            script: ./build_zeekr.sh
-            signed: builds/zeekr_signed.apk
-            asset: zeekr_v27.0.2_margined.apk
-          - id: zeekr-os7
-            script: ./build_zeekr_os7.sh
-            signed: builds/zeekr_os7_signed.apk
-            asset: zeekr_v27.0.2_os7_nomargin.apk
     steps:
       - uses: actions/checkout@v5
+
+      - name: Resolve release tag
+        id: tag
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "value=${{ inputs.tag }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Parse tag + plan variants
+        id: plan
+        run: |
+          set -euo pipefail
+          python3 tools/release_publish.py parse-tag "${{ steps.tag.outputs.value }}" > /tmp/plan.json
+          python3 - <<'PY'
+          import json, os
+          plan = json.load(open("/tmp/plan.json"))
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"line_id={plan['lineId']}\n")
+              out.write(f"channel={plan['channel']}\n")
+              out.write(f"prerelease={str(plan['prerelease']).lower()}\n")
+              out.write(f"version_name={plan['versionName']}\n")
+              out.write(f"version_code={plan['versionCode']}\n")
+          print(json.dumps(plan, indent=2))
+          PY
+
+      - name: Verify git tag exists (reproducible ref)
+        env:
+          TAG: ${{ steps.tag.outputs.value }}
+        run: |
+          set -euo pipefail
+          git fetch origin "refs/tags/${TAG}:refs/tags/${TAG}" 2>/dev/null || true
+          if ! git rev-parse "${TAG}^{commit}" >/dev/null 2>&1; then
+            echo "::error::Git tag ${TAG} must exist on the commit being built (push the tag before dispatch)."
+            exit 1
+          fi
+          echo "Building commit $(git rev-parse "${TAG}^{commit}") for ${TAG}."
+
+      - name: Refuse existing Release (no clobber)
+        env:
+          TAG: ${{ steps.tag.outputs.value }}
+        run: |
+          set -euo pipefail
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "::error::Release tag $TAG already exists — immutable tags cannot be reused."
+            exit 1
+          fi
+          echo "Tag $TAG is available."
+
       - name: Set up JDK 17
         uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
+
       - name: Set up Android SDK (framework + build-tools)
         uses: android-actions/setup-android@v4
+
       - name: Install platforms / build-tools
         run: |
           set -euo pipefail
           sdkmanager --install "platforms;android-34" "build-tools;34.0.0"
-          # Prefer SDK zipalign on Linux (vendored macOS binary is unusable here).
-          # build_apk.sh already uses linux/zipalign when uname=Linux; keep SDK on PATH as backup.
           echo "$ANDROID_HOME/build-tools/34.0.0" >> "$GITHUB_PATH"
+
       - name: Install apktool 2.12.1
         run: |
           set -euo pipefail
@@ -57,37 +95,75 @@ jobs:
           sudo mv /tmp/apktool /tmp/apktool.jar /usr/local/bin/
           sudo chmod +x /usr/local/bin/apktool
           apktool --version
+
       - name: Install Android 34 framework into apktool
         run: |
           set -euo pipefail
           JAR="$ANDROID_HOME/platforms/android-34/android.jar"
           test -f "$JAR"
           apktool if "$JAR"
+
       - name: Verify Linux build helpers
         run: |
           set -euo pipefail
           test -x linux/zipalign
-          test -x linux/zipalign.bin
           test -x linux/apksigner
           test -f androiddebugkey.jks
-          linux/zipalign 2>&1 | head -3 || true
-      - name: Build ${{ matrix.id }}
+
+      - name: Stamp apktool version metadata
         run: |
           set -euo pipefail
-          chmod +x build_apk.sh build_deepal.sh build_zeekr.sh build_zeekr_os7.sh
-          ${{ matrix.script }}
-          test -f "${{ matrix.signed }}"
-          mkdir -p dist
-          cp "${{ matrix.signed }}" "dist/${{ matrix.asset }}"
-          ls -la dist/
-      - name: Upload Release asset (${{ matrix.asset }})
+          python3 tools/release_publish.py stamp "${{ steps.tag.outputs.value }}"
+
+      - name: Build release variants
+        run: |
+          set -euo pipefail
+          chmod +x build_apk.sh build_deepal.sh build_zeekr.sh build_zeekr_os7.sh build_zeekr_v30.sh build_custom_java.sh
+          python3 - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          plan = json.load(open("/tmp/plan.json"))
+          tag = os.environ["RELEASE_TAG"]
+          version_name = plan["versionName"]
+          dist = Path("dist")
+          dist.mkdir(exist_ok=True)
+          assets = []
+          for v in plan["variants"]:
+              script = v["script"]
+              signed = Path(v["signedOutput"])
+              filename = v["assetTemplate"].format(versionName=version_name)
+              print(f"::group::Build {v['id']} via {script}")
+              subprocess.run(["bash", script], check=True)
+              if not signed.is_file():
+                  raise SystemExit(f"Missing signed output: {signed}")
+              dest = dist / filename
+              dest.write_bytes(signed.read_bytes())
+              assets.append({"variant": v["id"], "filename": filename, "path": str(dest)})
+              print(f"::endgroup::")
+          json.dump(assets, open("/tmp/built-assets.json", "w"), indent=2)
+          PY
+        env:
+          RELEASE_TAG: ${{ steps.tag.outputs.value }}
+
+      - name: Write release manifest
+        run: |
+          set -euo pipefail
+          python3 tools/release_publish.py manifest "${{ steps.tag.outputs.value }}" \
+            --assets-json "$(cat /tmp/built-assets.json)" \
+            --git-commit "${{ github.sha }}" \
+            --output dist/ynavi-release-manifest.json \
+            --aapt "$ANDROID_HOME/build-tools/34.0.0/aapt"
+
+      - name: Create GitHub Release (immutable)
         uses: softprops/action-gh-release@v3
         with:
-          tag_name: ${{ inputs.tag }}
-          name: ${{ inputs.tag }}
-          files: dist/${{ matrix.asset }}
+          tag_name: ${{ steps.tag.outputs.value }}
+          name: ${{ steps.tag.outputs.value }}
+          files: |
+            dist/*
           fail_on_unmatched_files: true
-          overwrite_files: true
-          make_latest: true
+          overwrite_files: false
+          prerelease: ${{ steps.plan.outputs.prerelease == 'true' }}
+          make_latest: ${{ steps.plan.outputs.prerelease != 'true' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

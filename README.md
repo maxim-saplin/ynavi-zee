@@ -9,8 +9,10 @@ Adapted **Yandex Navigator** builds for Chinese Android head units (letterbox, s
 Adapted Yandex Navi for Chinese head units (Deepal, Zeekr, …). Installables ship on
 **GitHub Releases** only — **not** from `modded_apks/` / base APKs in git.
 
-**Release tag** (upstream Yandex Navi **27.0.2** product bar — not internal mod counter; covers all cars):
+**Legacy release tag** (migration baseline — unnumbered):
 [`ynavi-zeekr-v27.0.2`](https://github.com/maxim-saplin/ynavi-zee/releases/tag/ynavi-zeekr-v27.0.2)
+
+**New publishes (0126):** immutable numbered tags such as `ynavi-zeekr-v27.0.2+1` with APK `versionName` `27.0.2+1`, per-build manifest, and CI that refuses to clobber prior releases. See [docs/0126-release-version-contract.md](docs/0126-release-version-contract.md).
 
 | Variant | Script | Letterbox (T/B/L) | Keepalive | Release asset |
 |---------|--------|-------------------|-----------|---------------|
@@ -39,14 +41,20 @@ adb install -g -r -d builds/zeekr_os7_signed.apk    # OS7+
 ./build_zeekr_os7.sh  # → builds/zeekr_os7*_signed.apk (OS7+, left=0)
 ```
 
-Upload to Release `ynavi-zeekr-v27.0.2` after a local rebuild (or Actions **release** dispatch).
+Push a numbered tag (or Actions → **release** dispatch with the same tag string):
+
+```bash
+git tag -a ynavi-zeekr-v27.0.2+1 -m 'YNavi v27 mod build 1'
+git push origin ynavi-zeekr-v27.0.2+1
+```
+
+Optional: Actions → **release-prepare** validates the tag before push.
 
 ### GitHub Actions release
 
-1. Actions → **release** → Run workflow.
-2. Input `tag` (default **`ynavi-zeekr-v27.0.2`**).
-3. Matrix builds Deepal / Zeekr padded / Zeekr OS7 on Ubuntu (JDK 17, apktool 2.12.1, SDK build-tools, `apktool if` android-34), signs with committed `androiddebugkey.jks` (AOSP platform debug / alias `platformkey`).
-4. Uploads (clobber/update) assets: `deepal_v27.0.2.apk`, `zeekr_v27.0.2_margined.apk`, `zeekr_v27.0.2_os7_nomargin.apk`.
+1. Tag `ynavi-zeekr-v<upstream>+<modBuild>` triggers **release** (or dispatch with that tag).
+2. CI stamps `apktool.yml`, builds Deepal / Zeekr padded / Zeekr OS7 (v27) or v30 Zee when `src-v30/` exists, validates APK metadata, writes `ynavi-release-manifest.json`, and creates an **immutable** Release (`overwrite_files: false`).
+3. v30 beta uses tags like `ynavi-zeekr-v30.8.1+1` (prerelease). Do not use ignored `tmp/v30/` as publish SoT.
 
 Push CI (`ci.yml` on `main`): script executables, letterbox greps, `apply_feature_config.py` compile+config load — **no** full apktool (APKs not in git).
 

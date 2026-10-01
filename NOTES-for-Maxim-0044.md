@@ -8,7 +8,7 @@
 |-----|--------|
 | `ynavi-zeekr-v27.0.2` | `deepal_v27.0.2.apk`, `zeekr_v27.0.2_margined.apk`, `zeekr_v27.0.2_os7_nomargin.apk` |
 
-Dispatch: Actions → **release** → tag default `ynavi-zeekr-v27.0.2`.
+Numbered publishes: push tag `ynavi-zeekr-v27.0.2+<modBuild>` (see `docs/0126-release-version-contract.md`). Legacy tag `ynavi-zeekr-v27.0.2` is not republished by CI.
 
 ## Local binaries (builder machine)
 

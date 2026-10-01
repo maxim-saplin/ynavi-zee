@@ -1,0 +1,52 @@
+{
+  "versionCodeRule": "upstreamVersionCode + modBuild",
+  "tagPattern": "^ynavi-zeekr-v{upstreamVersionName}+{modBuild}$",
+  "lines": [
+    {
+      "id": "v27",
+      "upstreamVersionName": "27.0.2",
+      "upstreamVersionCode": 738798690,
+      "channel": "stable",
+      "prerelease": false,
+      "sourceDir": "src",
+      "variants": [
+        {
+          "id": "deepal",
+          "script": "build_deepal.sh",
+          "signedOutput": "builds/deepal_signed.apk",
+          "assetTemplate": "deepal_v{versionName}.apk"
+        },
+        {
+          "id": "zeekr-padded",
+          "script": "build_zeekr.sh",
+          "signedOutput": "builds/zeekr_signed.apk",
+          "assetTemplate": "zeekr_v{versionName}_margined.apk"
+        },
+        {
+          "id": "zeekr-os7",
+          "script": "build_zeekr_os7.sh",
+          "signedOutput": "builds/zeekr_os7_signed.apk",
+          "assetTemplate": "zeekr_v{versionName}_os7_nomargin.apk"
+        }
+      ]
+    },
+    {
+      "id": "v30",
+      "upstreamVersionName": "30.8.1",
+      "upstreamVersionCode": 739652660,
+      "channel": "beta",
+      "prerelease": true,
+      "sourceDirEnv": "YNAVI_V30_SRC",
+      "sourceDirDefault": "src-v30",
+      "sourceDirNote": "Ignored tmp/v30 is not release SoT. Track v30 apktool tree at src-v30/ (or set YNAVI_V30_SRC) before tag publish.",
+      "variants": [
+        {
+          "id": "zeekr-v30",
+          "script": "build_zeekr_v30.sh",
+          "signedOutput": "builds/ynavi_v30_zeekr_signed.apk",
+          "assetTemplate": "ynavi_{versionName}_zeekr_arm64_signed.apk"
+        }
+      ]
+    }
+  ]
+}

@@ -1,11 +1,23 @@
-# Deprecated placeholder — use workflow "release" (workflow_dispatch) instead.
-name: release-draft-placeholder
+# Validate a proposed numbered release tag before `git tag` + push (Block 0126).
+name: release-prepare
 on:
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Proposed tag, e.g. ynavi-zeekr-v27.0.2+1'
+        required: true
+
 jobs:
-  note:
+  validate:
     runs-on: ubuntu-24.04
     steps:
-      - run: |
-          echo "::error::Use Actions → release (workflow_dispatch, tag default ynavi-zeekr-v27.0.2). This placeholder is retired."
-          exit 1
+      - uses: actions/checkout@v5
+      - name: Parse + validate release identity
+        run: |
+          set -euo pipefail
+          python3 tools/release_publish.py parse-tag "${{ inputs.tag }}" | tee /tmp/plan.json
+          echo ""
+          echo "If this looks correct:"
+          echo "  git tag -a '${{ inputs.tag }}' -m 'YNavi release ${{ inputs.tag }}'"
+          echo "  git push origin '${{ inputs.tag }}'"
+          echo "Push triggers the release workflow (build + manifest + immutable GitHub Release)."
