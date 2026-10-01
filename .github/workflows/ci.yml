@@ -27,7 +27,7 @@ jobs:
           grep -q 'ZEEAPP_LETTERBOX_LEFT_DIP=480' build_zeekr.sh
           grep -q 'ZEEAPP_LETTERBOX_TOP_DIP=91' build_deepal.sh
           grep -q 'ZEEAPP_LETTERBOX_BOTTOM_DIP=91' build_deepal.sh
-          echo "APKs are NOT in git — ship via GitHub Releases (tag ynavi-zeekr-v27.0.2)."
+          echo "APKs are NOT in git — ship via numbered GitHub Release tags (ynavi-zeekr-v27.0.2+N)."
       - name: Dry-run feature config (load + compile; no apktool)
         run: |
           set -euo pipefail
@@ -44,3 +44,17 @@ jobs:
           cfg = mod.load_config(str(root / "features" / "config.env.example"))
           print("config ok:", cfg)
           PY
+      - name: Release versioning tests (0126)
+        run: |
+          set -euo pipefail
+          pip install --quiet pyyaml
+          python3 -m py_compile tools/ynavi_release.py
+          python3 tools/test_ynavi_release.py
+          python3 tools/ynavi_release.py check-ordering
+          python3 tools/ynavi_release.py validate-manifest \
+            release/examples/ynavi-release-manifest-v27.0.2+1.json
+          test -f release/lines.yaml
+          test -f release/manifest.schema.json
+          grep -q 'ynavi-zeekr-v\*+\*' .github/workflows/release.yml
+          grep -q 'overwrite_files: false' .github/workflows/release.yml
+          echo "Numbered releases: push tag ynavi-zeekr-v<upstream>+<mod_build> (see docs/0126-release-versioning.md)."

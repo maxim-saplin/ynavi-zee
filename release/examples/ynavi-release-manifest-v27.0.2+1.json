@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "repo": "maxim-saplin/ynavi-zee",
+  "tag": "ynavi-zeekr-v27.0.2+1",
+  "channel": "stable",
+  "upstream_version": "27.0.2",
+  "mod_build": 1,
+  "version_name": "27.0.2+1",
+  "version_code": 738798691,
+  "git_commit": "0000000000000000000000000000000000000000",
+  "assets": [
+    {
+      "variant_id": "deepal",
+      "filename": "deepal_v27.0.2+1.apk",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "version_name": "27.0.2+1",
+      "version_code": 738798691
+    },
+    {
+      "variant_id": "zeekr-padded",
+      "filename": "zeekr_v27.0.2+1_margined.apk",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "version_name": "27.0.2+1",
+      "version_code": 738798691
+    },
+    {
+      "variant_id": "zeekr-os7",
+      "filename": "zeekr_v27.0.2+1_os7_nomargin.apk",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "version_name": "27.0.2+1",
+      "version_code": 738798691
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Deprecated placeholder — use workflow "release" (workflow_dispatch) instead.
+# Retired — numbered releases use tag push → workflow "release" (see docs/0126-release-versioning.md).
 name: release-draft-placeholder
 on:
   workflow_dispatch:
@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - run: |
-          echo "::error::Use Actions → release (workflow_dispatch, tag default ynavi-zeekr-v27.0.2). This placeholder is retired."
+          echo "::error::Push a numbered tag (e.g. ynavi-zeekr-v27.0.2+1) or run Actions → release (workflow_dispatch, validate_only)."
           exit 1
